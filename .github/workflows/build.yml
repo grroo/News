@@ -1,0 +1,96 @@
+name: Build briefing & deploy
+
+on:
+  schedule:
+    # GitHub cron is UTC. Europe/Rome is UTC+1 (winter) or UTC+2 (summer), so we
+    # fire at both candidate UTC hours and let the "Is it time?" step keep only
+    # the run that lands on 07:00 / 13:00 / 19:00 Rome time.
+    - cron: "5 4,5,10,11,16,17 * * *"
+  push:
+    branches: [main]
+    paths: [config.yml, "scripts/**", "site/**", requirements.txt]
+  workflow_dispatch:
+    inputs:
+      mock:
+        description: "Skip the LLM (mock briefings)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: briefing-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Is it time? (07/13/19 Europe/Rome, or manual)
+        id: gate
+        run: |
+          H=$(TZ=Europe/Rome date +%-H)
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$H" = "7" ] || [ "$H" = "13" ] || [ "$H" = "19" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Local hour is $H — not a scheduled slot, skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        if: steps.gate.outputs.run == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Build briefing
+        if: steps.gate.outputs.run == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.mock }}" = "true" ]; then
+            python scripts/build.py --mock
+          else
+            python scripts/build.py
+          fi
+
+      - name: Commit data
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "briefing-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "briefing: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git pull --rebase --autostash origin ${{ github.ref_name }}
+          git push
+
+      - name: Assemble site
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          mkdir -p _site
+          cp -r site/. _site/
+          cp -r data _site/data
+          rm -f _site/data/seen.json
+          touch _site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.gate.outputs.run == 'true'
+        with:
+          path: _site
+
+      - uses: actions/deploy-pages@v4
+        if: steps.gate.outputs.run == 'true'
+        id: deployment

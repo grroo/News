@@ -1,0 +1,131 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Personal briefing — single config file.
+# Edit this file to change what the site covers. You never need to touch code.
+# All entries are public RSS/Atom feeds or public APIs — nothing behind logins.
+# ─────────────────────────────────────────────────────────────────────────────
+
+timezone: Europe/Rome
+language: English            # language of the LLM-written briefings/summaries
+model: claude-sonnet-4-6
+keep_past_briefings: 6
+
+# Cost knobs: candidates sent to the LLM per section (≈70 tokens each) and
+# how many items it should select. Fewer candidates = cheaper.
+max_candidates: 40
+
+# How many items the LLM should select per section
+item_targets:
+  news: 10
+  sport: 8
+  finance: 8
+
+# Only consider items published within this many hours (news/sport/finance).
+# Media uses its own window (media_days) below.
+lookback_hours: 36
+media_days: 3
+
+# ── NEWS ────────────────────────────────────────────────────────────────────
+news_sources:
+  - name: BBC World
+    url: https://feeds.bbci.co.uk/news/world/rss.xml
+  - name: Reuters (via Google News)
+    url: https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en
+  - name: The Guardian World
+    url: https://www.theguardian.com/world/rss
+  - name: ANSA Top News
+    url: https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml
+  - name: Corriere della Sera
+    url: https://xml2.corriereobjects.it/rss/homepage.xml
+  - name: NPR World
+    url: https://feeds.npr.org/1004/rss.xml
+
+# Watched topics → each becomes a Google News RSS query
+watched_topics:
+  - AI
+  - insurance industry
+  - Zurich Insurance
+  - reinsurance
+  - European Central Bank
+  - Milan
+
+# ── SPORT ───────────────────────────────────────────────────────────────────
+sport_teams:
+  - Inter Milan
+  - Italy national football team
+  - Ferrari F1
+
+sport_sites:
+  - name: Gazzetta dello Sport
+    url: https://www.gazzetta.it/rss/home.xml
+  - name: BBC Sport
+    url: https://feeds.bbci.co.uk/sport/rss.xml
+  - name: ESPN FC
+    url: https://www.espn.com/espn/rss/soccer/news
+
+# ── FINANCE ─────────────────────────────────────────────────────────────────
+# Yahoo Finance ticker symbols. Add a label if you want a friendlier name.
+tickers:
+  - symbol: ZURN.SW
+    label: Zurich Insurance
+  - symbol: ALV.DE
+    label: Allianz
+  - symbol: G.MI
+    label: Generali
+  - symbol: MUV2.DE
+    label: Munich Re
+  - symbol: ^STOXX50E
+    label: Euro Stoxx 50
+  - symbol: ^GSPC
+    label: S&P 500
+  - symbol: EURUSD=X
+    label: EUR/USD
+  - symbol: BTC-USD
+    label: Bitcoin
+
+market_news_sources:
+  - name: Il Sole 24 Ore
+    url: https://www.ilsole24ore.com/rss/finanza.xml
+  - name: CNBC Markets
+    url: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  - name: FT Markets (headlines only, via Google News)
+    url: https://news.google.com/rss/search?q=site:ft.com+markets&hl=en-GB&gl=GB&ceid=GB:en
+  - name: Reuters Business (via Google News)
+    url: https://news.google.com/rss/search?q=site:reuters.com+business&hl=en-US&gl=US&ceid=US:en
+
+# ── MEDIA ───────────────────────────────────────────────────────────────────
+# Get channel_id with:  python scripts/youtube_channel_id.py <channel URL>
+youtube_channels:
+  - name: Veritasium
+    channel_id: UCHnyfMqiRRG1u-2MsSQLbXA
+  - name: Bloomberg Originals
+    channel_id: UCUMZ7gohGI9HcU9VNsr2FJQ
+  - name: The Economist
+    channel_id: UC0p5jTq6Xx_DosDFxVXnWaQ
+
+# Get rss_url with:  python scripts/find_podcast_rss.py "show name"
+podcasts:
+  - name: The Daily (NYT)
+    rss_url: https://feeds.simplecast.com/54nAGcIl
+  - name: FT News Briefing
+    rss_url: https://rss.acast.com/ft-news-briefing
+  - name: Huberman Lab
+    rss_url: https://feeds.megaphone.fm/hubermanlab
+  - name: Lex Fridman Podcast
+    rss_url: https://lexfridman.com/feed/podcast/
+
+# ── INTERESTS (free text, read by the LLM when ranking/selecting) ──────────
+interests: |
+  I'm an insurance professional based in Milan, working on the insurer side
+  (commercial lines, broker market, structured finance / SRT, investment
+  portfolios). I follow European politics and macro, central banks, AI and
+  its business impact, and the reinsurance/insurance sector.
+
+  For News: prioritise genuinely big stories (geopolitics, EU, Italy,
+  markets-moving events) and anything on AI, insurance/reinsurance or Milan.
+  Skip celebrity, crime blotter and lifestyle content.
+
+  For Sport: Inter Milan first (transfers, injuries, match reports), then
+  Serie A generally, then F1/Ferrari. Skip betting and gossip.
+
+  For Finance: what moved my tickers and why, European insurers, rates,
+  credit markets. Skip generic "5 stocks to buy" pieces.
