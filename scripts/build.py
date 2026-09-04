@@ -249,6 +249,8 @@ def call_claude(api_key: str, model: str, system: str, user: str, max_tokens: in
             r = requests.post(ANTHROPIC_URL, headers=headers, json=body, timeout=120)
             if r.status_code in (429, 500, 502, 503, 529):
                 raise requests.HTTPError(f"{r.status_code}: {r.text[:200]}")
+            if r.status_code >= 400:  # 400/401/403/404: not retryable, surface the API's message
+                raise RuntimeError(f"Anthropic API {r.status_code}: {r.text[:300]}")
             r.raise_for_status()
             data = r.json()
             return "".join(block.get("text", "") for block in data.get("content", []))
@@ -256,6 +258,8 @@ def call_claude(api_key: str, model: str, system: str, user: str, max_tokens: in
             last_err = e
             log(f"  [claude retry {attempt + 1}] {e}")
             time.sleep(3 * (attempt + 1))
+        except RuntimeError as e:
+            raise
     raise RuntimeError(f"Claude call failed: {last_err}")
 
 
@@ -313,6 +317,7 @@ def llm_section(section: str, items: list[dict], cfg: dict, api_key: str | None,
         log(f"  [llm failed for {section}] {e} → falling back to mock selection")
         out = mock_section(section, items, n)
         out["briefing"] = "(Automatic selection — the LLM call failed this run.) " + out["briefing"]
+        out["error"] = str(e)[:300]
         return out
 
     chosen = []
@@ -442,9 +447,11 @@ def main():
     tz = ZoneInfo(cfg.get("timezone", "Europe/Rome"))
     now = datetime.fromisoformat(args.now).astimezone(timezone.utc) if args.now else datetime.now(timezone.utc)
 
-    api_key = None if args.mock else os.environ.get("ANTHROPIC_API_KEY")
+    api_key = None if args.mock else (os.environ.get("ANTHROPIC_API_KEY") or "").strip() or None
     if api_key is None:
         log("!! No ANTHROPIC_API_KEY (or --mock): producing mock briefings")
+    elif not api_key.startswith("sk-ant-"):
+        log("!! ANTHROPIC_API_KEY is set but does not look like an Anthropic key (expected sk-ant-…)")
 
     fetcher = Fetcher(args.fixtures)
     DATA_DIR.mkdir(exist_ok=True)
