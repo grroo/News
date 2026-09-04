@@ -96,17 +96,16 @@ def chart_json(symbol):
     mapping[url] = f
 
 
-def gnews(query):
-    q = urllib.parse.quote_plus(query)
-    return f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
+sys.path.insert(0, str(ROOT / "scripts"))
+from build import topic_sources  # noqa: E402
 
 
 for s in cfg["news_sources"]:
     rss(s["name"], s["url"], random.sample(HEADLINES["news"], 5))
-for t in cfg["watched_topics"]:
-    rss(f"Topic: {t}", gnews(t), [f"{h} ({t})" for h in random.sample(HEADLINES["news"], 3)])
-for t in cfg["sport_teams"]:
-    rss(f"Team: {t}", gnews(t), [f"{h}" for h in random.sample(HEADLINES["sport"], 4)])
+for src in topic_sources(cfg["watched_topics"], "Topic"):
+    rss(src["name"], src["url"], [f"{h} ({src['name']})" for h in random.sample(HEADLINES["news"], 3)])
+for src in topic_sources(cfg["sport_teams"], "Team"):
+    rss(src["name"], src["url"], random.sample(HEADLINES["sport"], 4))
 for s in cfg["sport_sites"]:
     rss(s["name"], s["url"], random.sample(HEADLINES["sport"], 5))
 for t in cfg["tickers"]:

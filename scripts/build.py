@@ -80,9 +80,24 @@ class Fetcher:
             return None
 
 
-def google_news_rss(query: str, lang: str = "en-US", country: str = "US") -> str:
+_GN_LOCALES = {"en": ("en-US", "US"), "fr": ("fr", "FR"), "it": ("it", "IT"), "de": ("de", "DE"), "es": ("es", "ES")}
+
+
+def google_news_rss(query: str, lang: str = "en") -> str:
+    hl, gl = _GN_LOCALES.get(lang.lower()[:2], ("en-US", "US"))
     q = urllib.parse.quote_plus(query)
-    return f"https://news.google.com/rss/search?q={q}&hl={lang}&gl={country}&ceid={country}:{lang.split('-')[0]}"
+    return f"https://news.google.com/rss/search?q={q}&hl={hl}&gl={gl}&ceid={gl}:{hl.split('-')[0]}"
+
+
+def topic_sources(entries, prefix: str) -> list[dict]:
+    """config entries are plain strings (English query) or {query, lang} dicts."""
+    out = []
+    for e in entries or []:
+        if isinstance(e, dict):
+            out.append({"name": f"{prefix}: {e['query']}", "url": google_news_rss(e["query"], e.get("lang", "en"))})
+        else:
+            out.append({"name": f"{prefix}: {e}", "url": google_news_rss(str(e))})
+    return out
 
 
 def fetch_all(fetcher: Fetcher, sources: list[dict]) -> list[dict]:
@@ -390,14 +405,14 @@ def mark_new(items: list[dict], seen: dict) -> list[dict]:
 def build_news(fetcher, cfg, seen, now):
     log("NEWS")
     sources = list(cfg.get("news_sources", []))
-    sources += [{"name": f"Topic: {t}", "url": google_news_rss(t)} for t in cfg.get("watched_topics", [])]
+    sources += topic_sources(cfg.get("watched_topics"), "Topic")
     items = mark_new(dedupe(within(fetch_all(fetcher, sources), cfg["lookback_hours"], now)), seen)
     return items
 
 
 def build_sport(fetcher, cfg, seen, now):
     log("SPORT")
-    sources = [{"name": f"Team: {t}", "url": google_news_rss(t)} for t in cfg.get("sport_teams", [])]
+    sources = topic_sources(cfg.get("sport_teams"), "Team")
     sources += list(cfg.get("sport_sites", []))
     return mark_new(dedupe(within(fetch_all(fetcher, sources), cfg["lookback_hours"], now)), seen)
 

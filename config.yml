@@ -32,100 +32,138 @@ news_sources:
     url: https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en
   - name: The Guardian World
     url: https://www.theguardian.com/world/rss
+  - name: Le Monde
+    url: https://www.lemonde.fr/rss/une.xml
   - name: ANSA Top News
     url: https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml
   - name: Corriere della Sera
     url: https://xml2.corriereobjects.it/rss/homepage.xml
-  - name: NPR World
-    url: https://feeds.npr.org/1004/rss.xml
 
-# Watched topics → each becomes a Google News RSS query
+# Watched topics → each becomes a Google News RSS query.
+# A plain string searches in English; use {query: ..., lang: fr} for French
+# results (or it for Italian).
 watched_topics:
   - AI
   - insurance industry
   - Zurich Insurance
   - reinsurance
   - European Central Bank
-  - Milan
+  - query: Milano
+    lang: it
 
 # ── SPORT ───────────────────────────────────────────────────────────────────
+# Same format as watched_topics: plain string = English Google News query,
+# {query, lang} = query in that language.
 sport_teams:
-  - Inter Milan
-  - Italy national football team
-  - Ferrari F1
+  - query: PSG
+    lang: fr
+  - query: équipe de France football
+    lang: fr
+  - query: XV de France rugby
+    lang: fr
+  - Champions League
+  - Team Vitality Counter-Strike
 
 sport_sites:
-  - name: Gazzetta dello Sport
-    url: https://www.gazzetta.it/rss/home.xml
-  - name: BBC Sport
-    url: https://feeds.bbci.co.uk/sport/rss.xml
-  - name: ESPN FC
-    url: https://www.espn.com/espn/rss/soccer/news
+  - name: CulturePSG
+    url: https://www.culturepsg.com/news?rss
+  - name: L'Équipe
+    url: https://www.lequipe.fr/rss/actu_rss.xml
+  - name: HLTV
+    url: https://www.hltv.org/rss/news
 
 # ── FINANCE ─────────────────────────────────────────────────────────────────
 # Yahoo Finance ticker symbols. Add a label if you want a friendlier name.
 tickers:
   - symbol: ZURN.SW
     label: Zurich Insurance
-  - symbol: ALV.DE
-    label: Allianz
-  - symbol: G.MI
-    label: Generali
-  - symbol: MUV2.DE
-    label: Munich Re
-  - symbol: ^STOXX50E
-    label: Euro Stoxx 50
-  - symbol: ^GSPC
-    label: S&P 500
-  - symbol: EURUSD=X
-    label: EUR/USD
+  - symbol: SXR8.DE
+    label: S&P 500 (iShares Core)
+  - symbol: XDEW.DE
+    label: S&P 500 Equal Weight (Xtrackers)
+  - symbol: SPYY.DE
+    label: MSCI ACWI (SPDR)
+  - symbol: MEUD.PA
+    label: Stoxx Europe 600 (Amundi)
+  - symbol: AYEM.DE
+    label: MSCI EM IMI (iShares)
+  - symbol: GRID.DE
+    label: Smart Grid (First Trust)
+  - symbol: PPFB.DE
+    label: PPFB
   - symbol: BTC-USD
     label: Bitcoin
+  - symbol: ETH-USD
+    label: Ethereum
 
 market_news_sources:
-  - name: Il Sole 24 Ore
-    url: https://www.ilsole24ore.com/rss/finanza.xml
-  - name: CNBC Markets
-    url: https://www.cnbc.com/id/10000664/device/rss/rss.html
-  - name: FT Markets (headlines only, via Google News)
-    url: https://news.google.com/rss/search?q=site:ft.com+markets&hl=en-GB&gl=GB&ceid=GB:en
   - name: Reuters Business (via Google News)
     url: https://news.google.com/rss/search?q=site:reuters.com+business&hl=en-US&gl=US&ceid=US:en
+  - name: FT Markets (headlines only, via Google News)
+    url: https://news.google.com/rss/search?q=site:ft.com+markets&hl=en-GB&gl=GB&ceid=GB:en
+  - name: CNBC Markets
+    url: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  - name: CoinDesk
+    url: https://www.coindesk.com/arc/outboundfeeds/rss/
+  - name: Ethereum (via Google News)
+    url: https://news.google.com/rss/search?q=Ethereum+OR+DeFi&hl=en-US&gl=US&ceid=US:en
 
 # ── MEDIA ───────────────────────────────────────────────────────────────────
 # Get channel_id with:  python scripts/youtube_channel_id.py <channel URL>
 youtube_channels:
-  - name: Veritasium
-    channel_id: UCHnyfMqiRRG1u-2MsSQLbXA
-  - name: Bloomberg Originals
-    channel_id: UCUMZ7gohGI9HcU9VNsr2FJQ
-  - name: The Economist
-    channel_id: UC0p5jTq6Xx_DosDFxVXnWaQ
+  - name: Wiloo
+    channel_id: UCIJZA6SJ3JjvuOZgYPYOHnA
+  - name: Crypto Currently
+    channel_id: UC9Mq8PDBT2cFf5mj7_fQTgg
+  - name: VisualPolitik EN
+    channel_id: UCT3v6vL2H5HK4loLMc8pmCw
+  - name: Preston Stewart
+    channel_id: UC75suCpChvMVC_9ij7rUpxw
+  - name: Marques Brownlee
+    channel_id: UCBJycsmduvYEL83R_U4JriQ
+  - name: The Christo Files
+    channel_id: UCU64gI8KGwpFyJLwNjfg_mw
 
 # Get rss_url with:  python scripts/find_podcast_rss.py "show name"
+# Note: Sam Harris's "Subscriber Feed" is private (it lives in your Spotify/Apple
+# account). The public feed below carries the free parts of each episode.
 podcasts:
-  - name: The Daily (NYT)
-    rss_url: https://feeds.simplecast.com/54nAGcIl
-  - name: FT News Briefing
-    rss_url: https://rss.acast.com/ft-news-briefing
-  - name: Huberman Lab
-    rss_url: https://feeds.megaphone.fm/hubermanlab
+  - name: Making Sense with Sam Harris
+    rss_url: https://rss.libsyn.com/shows/94577/destinations/480596.xml
+  - name: The DeFi Report
+    rss_url: https://feeds.transistor.fm/the-defi-report
   - name: Lex Fridman Podcast
     rss_url: https://lexfridman.com/feed/podcast/
+  - name: Bankless
+    rss_url: https://feeds.flightcast.com/p83fuj0y0u58o82l41xei7zo.xml
+  - name: Podcast de CulturePSG
+    rss_url: https://feeds.acast.com/public/shows/6286443a34d4a10013fc39a9
+  - name: Dwarkesh Podcast
+    rss_url: https://apple.dwarkesh-podcast.workers.dev/feed.rss
+  - name: The Daily Gwei
+    rss_url: https://feeds.libsyn.com/310739/rss
 
 # ── INTERESTS (free text, read by the LLM when ranking/selecting) ──────────
 interests: |
-  I'm an insurance professional based in Milan, working on the insurer side
+  I'm French, living in Milan, and work in insurance on the insurer side
   (commercial lines, broker market, structured finance / SRT, investment
-  portfolios). I follow European politics and macro, central banks, AI and
-  its business impact, and the reinsurance/insurance sector.
+  portfolios). I read English, French and Italian. Write the briefing in
+  English but feel free to pick French or Italian sources.
 
-  For News: prioritise genuinely big stories (geopolitics, EU, Italy,
-  markets-moving events) and anything on AI, insurance/reinsurance or Milan.
-  Skip celebrity, crime blotter and lifestyle content.
+  For News: prioritise genuinely big stories — geopolitics, France, Italy,
+  the EU, macro and central banks, markets-moving events — plus anything on
+  AI (models, regulation, business impact), the insurance/reinsurance sector
+  and Zurich Insurance. Skip celebrity, crime blotter, lifestyle and
+  "explainer" pieces with no news in them.
 
-  For Sport: Inter Milan first (transfers, injuries, match reports), then
-  Serie A generally, then F1/Ferrari. Skip betting and gossip.
+  For Sport: Paris Saint-Germain first (matches, injuries, transfers, Ligue 1
+  and Champions League), then the France national football team, then the
+  Champions League generally, then the France rugby XV, then Counter-Strike 2
+  (Team Vitality and major tournaments). Skip betting, gossip, and other
+  clubs unless they play PSG or France.
 
-  For Finance: what moved my tickers and why, European insurers, rates,
-  credit markets. Skip generic "5 stocks to buy" pieces.
+  For Finance: what moved my holdings and why — global equities (S&P 500,
+  MSCI ACWI, Europe 600, emerging markets, clean-energy/smart-grid ETFs),
+  Zurich Insurance, and crypto (Bitcoin, Ethereum, DeFi). Rates, the ECB and
+  Fed, credit, and the European insurance sector matter. Skip generic
+  "5 stocks to buy", price-prediction clickbait and memecoin news.
