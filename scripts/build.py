@@ -231,9 +231,10 @@ short briefing.
 
 Rules:
 - Reply by calling the submit_briefing tool (no prose).
-- "briefing": 4-6 sentences on what matters right now for this reader. Concise,
-  neutral, no filler, no repetition of the headlines verbatim. If there is
-  little real news, say so in one or two sentences instead of padding.
+- "briefing": 3-6 bullet points on what matters right now for this reader,
+  most important first. Each bullet is one or two sentences, concise, neutral,
+  no filler, no repetition of the headlines verbatim. If there is little real
+  news, return one bullet saying so instead of padding.
 - "items": pick up to {n} items, most important first. Use the exact "url"
   from the candidates. Each "title" may be cleaned up (remove outlet suffixes),
   each "summary" is ONE sentence, ≤ 25 words, factual.
@@ -250,7 +251,11 @@ BRIEFING_TOOL = {
     "input_schema": {
         "type": "object",
         "properties": {
-            "briefing": {"type": "string", "description": "4-6 sentence briefing paragraph."},
+            "briefing": {
+                "type": "array",
+                "description": "3-6 bullet points, most important first; each one or two sentences.",
+                "items": {"type": "string"},
+            },
             "items": {
                 "type": "array",
                 "items": {
@@ -378,7 +383,10 @@ def llm_section(section: str, items: list[dict], cfg: dict, api_key: str | None,
             "new": src["new"],
             "key": src["key"],
         })
-    return {"briefing": str(data.get("briefing", "")).strip(), "items": chosen}
+    briefing = data.get("briefing", [])
+    if isinstance(briefing, str):  # tolerate a paragraph; split into sentences-as-bullets
+        briefing = [b.strip() for b in re.split(r"(?<=[.!?])\s+", briefing) if b.strip()]
+    return {"briefing": [str(b).strip() for b in briefing if str(b).strip()][:8], "items": chosen}
 
 
 def mock_section(section: str, items: list[dict], n: int) -> dict:

@@ -52,6 +52,14 @@
   .tile .count b { color: var(--new); font-weight: 600; }
   .tile .count.zero b { color: var(--muted); }
   @media (min-width: 560px) { .tile .name { font-size: 30px; } }
+  /* phones: the four tiles fill the screen instead of sitting in the top half */
+  @media (max-width: 559px) {
+    .landing { display: flex; flex-direction: column; min-height: calc(100dvh - 32px - env(safe-area-inset-bottom)); }
+    .landing .grid { flex: 1; grid-template-rows: 1fr 1fr; gap: 14px; }
+    .tile { aspect-ratio: auto; min-height: 150px; padding: 20px; }
+    .tile .name { font-size: 30px; }
+    .tile .count { font-size: 14px; }
+  }
 
   /* section */
   .section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 4px 0 10px; }
@@ -59,6 +67,10 @@
   .brief { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px;
     margin-bottom: 14px; font-size: 16px; line-height: 1.55; }
   .brief.mock { border-style: dashed; color: var(--muted); font-size: 14px; }
+  .brief ul { margin: 0; padding-left: 1.15em; }
+  .brief li { margin: 0 0 8px; }
+  .brief li:last-child { margin-bottom: 0; }
+  .brief li::marker { color: var(--c); }
   .cards { display: flex; flex-direction: column; gap: 10px; }
   .card { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 14px;
     padding: 12px 14px; position: relative; }
@@ -146,7 +158,7 @@
     </header>`;
 
   // ── views ──────────────────────────────────────────────────────────────
-  const landing = b => `
+  const landing = b => `<div class="landing">
     ${headerHTML(b)}
     ${b !== current ? `<div class="banner">Viewing a past briefing from ${esc(fmtLocal(b))}. <a href="#/" style="color:var(--accent)">Back to latest</a></div>` : ''}
     <div class="grid">
@@ -162,7 +174,7 @@
     <footer>
       <span><a href="#/past">Past briefings</a></span>
       <span>${b.mode === 'mock' ? 'mock mode · ' : ''}3×/day · ${esc(b.timezone || '')}</span>
-    </footer>`;
+    </footer></div>`;
 
   const card = it => `
     <a class="card ${seen.has(it.key) ? 'seen' : ''}" href="${esc(it.url)}" target="_blank" rel="noopener" data-key="${esc(it.key)}">
@@ -171,6 +183,12 @@
       ${it.summary ? `<p class="s">${esc(it.summary)}</p>` : ''}
       <p class="m">${it.kind ? `<span class="kind">${esc(it.kind)}</span>` : ''}<span>${esc(it.source)}</span><span>·</span><span>${ago(it.published)}</span>${it.duration_s ? `<span>·</span><span>${dur(it.duration_s)}</span>` : ''}${host(it.url) && host(it.url) !== it.source ? `<span>·</span><span>${esc(host(it.url))}</span>` : ''}</p>
     </a>`;
+
+  const briefHTML = (br, mock, s) => {
+    if (!br || (Array.isArray(br) && !br.length)) return '';
+    const body = Array.isArray(br) ? `<ul>${br.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : esc(br);
+    return `<div class="brief ${mock ? 'mock' : ''}" style="--c:var(--${s})">${body}</div>`;
+  };
 
   const tickers = rows => rows?.length ? `
     <table class="tick"><tbody>${rows.map(r => {
@@ -190,7 +208,7 @@
         <div class="row"><a class="btn" href="${backPath}">← Home</a><button class="btn" data-mark-all="${s}">Mark all read</button></div>
       </div>
       ${s === 'finance' ? tickers(sec.tickers) : ''}
-      ${sec.briefing ? `<div class="brief ${b.mode === 'mock' ? 'mock' : ''}">${esc(sec.briefing)}</div>` : ''}
+      ${briefHTML(sec.briefing, b.mode === 'mock', s)}
       <div class="cards">${sec.items.length ? sec.items.map(card).join('') : '<div class="empty">Nothing new in this window.</div>'}</div>
       <footer><span>${sec.candidate_count ?? sec.items.length} candidates considered</span><span><a href="#/past">Past briefings</a></span></footer>`;
   };
