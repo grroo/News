@@ -173,7 +173,7 @@
     </div>
     <footer>
       <span><a href="#/past">Past briefings</a></span>
-      <span>${b.mode === 'mock' ? 'mock mode · ' : ''}3×/day · ${esc(b.timezone || '')}</span>
+      <span>${b.mode === 'mock' ? 'mock mode · ' : ''}${b.usage?.calls ? `this run $${b.usage.est_cost_usd.toFixed(3)} · ≈$${b.usage.est_month_usd}/mo · ` : ''}${esc((b.model || '').replace('claude-', ''))}</span>
     </footer></div>`;
 
   const card = it => `

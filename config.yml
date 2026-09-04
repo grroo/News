@@ -6,12 +6,12 @@
 
 timezone: Europe/Rome
 language: English            # language of the LLM-written briefings/summaries
-model: claude-sonnet-4-6     # cheaper option: claude-haiku-4-5 (≈3× less); pricier/smarter: claude-opus-4-1
+model: claude-haiku-4-5      # cheapest that does the job. Smarter but ≈3× pricier: claude-sonnet-4-6
 keep_past_briefings: 6
 
 # Cost knobs: candidates sent to the LLM per section (≈70 tokens each) and
 # how many items it should select. Fewer candidates = cheaper.
-max_candidates: 40
+max_candidates: 35
 
 # How many items the LLM should select per section
 item_targets:

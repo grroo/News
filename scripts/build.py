@@ -40,7 +40,12 @@ OUT_PATH = DATA_DIR / "briefing.json"
 
 UA = "Mozilla/5.0 (compatible; personal-briefing/1.0; +https://github.com)"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
-CANDIDATE_SUMMARY_CHARS = 160  # keep the prompt small → keeps cost small
+CANDIDATE_SUMMARY_CHARS = 140  # keep the prompt small → keeps cost small
+
+# USD per million tokens (input, output) — used only for the cost estimate shown on the site.
+PRICES = {"claude-haiku-4-5": (1.0, 5.0), "claude-sonnet-4-6": (3.0, 15.0), "claude-sonnet-4-5": (3.0, 15.0),
+          "claude-opus-4-1": (15.0, 75.0)}
+USAGE = {"calls": 0, "input_tokens": 0, "output_tokens": 0}
 
 log = lambda *a: print(*a, file=sys.stderr, flush=True)  # noqa: E731
 
@@ -235,9 +240,9 @@ Rules:
   most important first. Each bullet is one or two sentences, concise, neutral,
   no filler, no repetition of the headlines verbatim. If there is little real
   news, return one bullet saying so instead of padding.
-- "items": pick up to {n} items, most important first. Use the exact "url"
-  from the candidates. Each "title" may be cleaned up (remove outlet suffixes),
-  each "summary" is ONE sentence, ≤ 25 words, factual.
+- "items": pick up to {n} items, most important first, referenced by the
+  candidate's "id". Each "title" may be cleaned up (remove outlet suffixes),
+  each "summary" is ONE sentence, ≤ 20 words, factual.
 - Prefer items marked new=true, but a still-major story from the last day may
   be kept if nothing newer covers it.
 - Never invent facts, numbers or items not present in the candidates.
@@ -261,11 +266,11 @@ BRIEFING_TOOL = {
                 "items": {
                     "type": "object",
                     "properties": {
-                        "url": {"type": "string", "description": "Exact url of a candidate item."},
+                        "id": {"type": "integer", "description": "The candidate's id."},
                         "title": {"type": "string"},
                         "summary": {"type": "string", "description": "One sentence, <= 25 words."},
                     },
-                    "required": ["url", "title", "summary"],
+                    "required": ["id", "title", "summary"],
                 },
             },
         },
@@ -300,6 +305,10 @@ def call_claude(api_key: str, model: str, system: str, user: str, max_tokens: in
             if r.status_code >= 400:  # 400/401/403/404: not retryable, surface the API's message
                 raise RuntimeError(f"Anthropic API {r.status_code}: {r.text[:300]}")
             data = r.json()
+            u = data.get("usage", {})
+            USAGE["calls"] += 1
+            USAGE["input_tokens"] += u.get("input_tokens", 0)
+            USAGE["output_tokens"] += u.get("output_tokens", 0)
             for block in data.get("content", []):
                 if block.get("type") == "tool_use" and block.get("name") == "submit_briefing":
                     return block["input"]
@@ -326,16 +335,18 @@ def parse_llm_json(text: str) -> dict:
 
 
 def candidates_for_prompt(items: list[dict]) -> list[dict]:
+    """Compact rows: an integer id instead of the (long) url, short summary,
+    time as HH:MM-ago-ish. Every token here is paid 9× a day."""
     return [
         {
-            "url": it["url"],
-            "title": it["title"],
-            "source": it["source"],
-            "published": it["published"][:16] if it.get("published") else None,
-            "new": it["new"],
-            "summary": it["summary"][:CANDIDATE_SUMMARY_CHARS],
+            "id": i,
+            "t": it["title"],
+            "src": it["source"],
+            "at": it["published"][5:16] if it.get("published") else None,
+            "new": int(it["new"]),
+            "s": it["summary"][:CANDIDATE_SUMMARY_CHARS],
         }
-        for it in items
+        for i, it in enumerate(items)
     ]
 
 
@@ -349,7 +360,6 @@ def llm_section(section: str, items: list[dict], cfg: dict, api_key: str | None,
     # newest first, new-before-old, then cap
     items = sorted(items, key=lambda x: x["published"] or "", reverse=True)   # newest first…
     items = sorted(items, key=lambda x: not x["new"])[:cfg.get("max_candidates", 40)]  # …unseen first (stable sort)
-    by_url = {canonical_url(it["url"]): it for it in items}
 
     if api_key is None:
         return mock_section(section, items, n)
@@ -358,7 +368,8 @@ def llm_section(section: str, items: list[dict], cfg: dict, api_key: str | None,
     user = (
         f"SECTION: {section}\n\nREADER INTERESTS:\n{cfg['interests'].strip()}\n\n"
         + (f"CONTEXT:\n{extra_context}\n\n" if extra_context else "")
-        + f"CANDIDATES ({len(items)}):\n{json.dumps(candidates_for_prompt(items), ensure_ascii=False)}"
+        + f"CANDIDATES ({len(items)}; fields: id, t=title, src=source, at=published MM-DDTHH:MM, new=1 if unseen, s=summary):\n"
+        + json.dumps(candidates_for_prompt(items), ensure_ascii=False, separators=(",", ":"))
     )
     try:
         data = call_claude(api_key, cfg.get("model", "claude-sonnet-4-6"), system, user)
@@ -371,8 +382,9 @@ def llm_section(section: str, items: list[dict], cfg: dict, api_key: str | None,
 
     chosen = []
     for sel in data.get("items", [])[:n]:
-        src = by_url.get(canonical_url(sel.get("url", "")))
-        if not src:
+        try:
+            src = items[int(sel.get("id"))]
+        except (TypeError, ValueError, IndexError):
             continue  # guard: never publish an item the LLM made up
         chosen.append({
             "title": (sel.get("title") or src["title"]).strip()[:200],
@@ -463,6 +475,12 @@ def build_media(fetcher, cfg, seen, now):
 
 
 # ── output ──────────────────────────────────────────────────────────────────
+def usage_summary(model: str) -> dict:
+    p_in, p_out = PRICES.get(model, (3.0, 15.0))
+    cost = (USAGE["input_tokens"] * p_in + USAGE["output_tokens"] * p_out) / 1e6
+    return {**USAGE, "est_cost_usd": round(cost, 4), "est_month_usd": round(cost * 3 * 30, 2)}
+
+
 def rotate_past(cfg: dict):
     PAST_DIR.mkdir(parents=True, exist_ok=True)
     if OUT_PATH.exists():
@@ -542,11 +560,12 @@ def main():
         "timezone": cfg.get("timezone", "Europe/Rome"),
         "mode": "mock" if api_key is None else "llm",
         "model": cfg.get("model"),
+        "usage": usage_summary(cfg.get("model", "")),
         "sections": sections,
     }
     OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=1))
     save_seen(seen, now)
-    log(f"wrote {OUT_PATH.relative_to(ROOT)}  mode={out['mode']}")
+    log(f"wrote {OUT_PATH.relative_to(ROOT)}  mode={out['mode']}  usage={out['usage']}")
 
 
 if __name__ == "__main__":
