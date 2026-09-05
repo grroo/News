@@ -38,6 +38,10 @@ news_sources:
     url: https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml
   - name: Corriere della Sera
     url: https://xml2.corriereobjects.it/rss/homepage.xml
+  - name: Corriere Esteri
+    url: https://xml2.corriereobjects.it/rss/esteri.xml
+  - name: Corriere Economia
+    url: https://xml2.corriereobjects.it/rss/economia.xml
 
 # Watched topics → each becomes a Google News RSS query.
 # A plain string searches in English; use {query: ..., lang: fr} for French
@@ -97,16 +101,24 @@ tickers:
     label: Ethereum
 
 market_news_sources:
+  - name: FT
+    url: https://www.ft.com/rss/home
+  - name: FT Markets
+    url: https://www.ft.com/markets?format=rss
+  - name: FT (via Google News)
+    url: https://news.google.com/rss/search?q=site:ft.com&hl=en-GB&gl=GB&ceid=GB:en
   - name: Reuters Business (via Google News)
     url: https://news.google.com/rss/search?q=site:reuters.com+business&hl=en-US&gl=US&ceid=US:en
-  - name: FT Markets (headlines only, via Google News)
-    url: https://news.google.com/rss/search?q=site:ft.com+markets&hl=en-GB&gl=GB&ceid=GB:en
+  - name: Bloomberg (via Google News)
+    url: https://news.google.com/rss/search?q=site:bloomberg.com+markets&hl=en-US&gl=US&ceid=US:en
   - name: CNBC Markets
     url: https://www.cnbc.com/id/10000664/device/rss/rss.html
+  - name: Il Sole 24 Ore Finanza
+    url: https://www.ilsole24ore.com/rss/finanza.xml
+  - name: Les Echos Finance
+    url: https://services.lesechos.fr/rss/les-echos-finance-marches.xml
   - name: CoinDesk
     url: https://www.coindesk.com/arc/outboundfeeds/rss/
-  - name: Ethereum (via Google News)
-    url: https://news.google.com/rss/search?q=Ethereum+OR+DeFi&hl=en-US&gl=US&ceid=US:en
 
 # ── MEDIA ───────────────────────────────────────────────────────────────────
 # Get channel_id with:  python scripts/youtube_channel_id.py <channel URL>
@@ -162,8 +174,10 @@ interests: |
   (Team Vitality and major tournaments). Skip betting, gossip, and other
   clubs unless they play PSG or France.
 
-  For Finance: what moved my holdings and why — global equities (S&P 500,
-  MSCI ACWI, Europe 600, emerging markets, clean-energy/smart-grid ETFs),
-  Zurich Insurance, and crypto (Bitcoin, Ethereum, DeFi). Rates, the ECB and
-  Fed, credit, and the European insurance sector matter. Skip generic
-  "5 stocks to buy", price-prediction clickbait and memecoin news.
+  For Finance: a markets briefing a professional would want — what moved
+  global equities, rates, the ECB and Fed, credit, FX, the European insurance
+  sector and Zurich Insurance, plus big corporate/M&A and macro stories.
+  Prefer FT, Reuters and Bloomberg. My holdings (S&P 500, MSCI ACWI, Europe
+  600, emerging markets, smart-grid ETFs, Bitcoin, Ethereum) are context, not
+  the whole story. Crypto: at most 1-2 items per briefing, only if genuinely
+  notable. Skip "5 stocks to buy", price-prediction clickbait and memecoins.

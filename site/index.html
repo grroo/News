@@ -253,6 +253,19 @@
     if (e.target.closest('[data-theme-toggle]')) toggleTheme();
   });
   window.addEventListener('hashchange', render);
+  // Home-screen apps resume from background with the old page: re-check for a
+  // newer briefing whenever the tab becomes visible again.
+  let lastCheck = Date.now();
+  const refresh = async () => {
+    if (Date.now() - lastCheck < 60000) return;
+    lastCheck = Date.now();
+    try {
+      const fresh = await fetchJSON('data/briefing.json');
+      if (!current || fresh.generated_at !== current.generated_at) { current = fresh; pastIndex = null; render(); }
+    } catch (e) { /* offline: keep what we have */ }
+  };
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') refresh(); });
+  window.addEventListener('pageshow', e => { if (e.persisted) refresh(); });
   render();
 })();
 </script>
