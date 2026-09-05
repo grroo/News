@@ -35,9 +35,9 @@ tests/                         ← offline fixtures for a network-free test run
 
 5. **Run it once.** Repo → *Actions → "Build briefing & deploy" → Run workflow*. About a minute later the site is live at `https://<your-user>.github.io/<repo>/`. Add it to your phone's home screen (Safari: Share → Add to Home Screen) — it has a dark theme-colour and safe-area padding, so it feels like an app.
 
-From then on it runs on its own at 07:00, 13:00 and 19:00 Rome time, and also whenever you push a change to `config.yml`.
+From then on it is scheduled at 07:00, 13:00 and 19:00 in `Europe/Rome`, with daylight saving changes handled by GitHub's timezone-aware schedule. Changes to the config, build scripts, site, requirements, or workflow on `main` also trigger an update.
 
-> GitHub's cron is best-effort: scheduled runs can start 5–15 minutes late during busy periods, and on repos with no commits for 60 days GitHub pauses schedules (a push or a manual run re-enables them).
+> GitHub's cron is best-effort: runs can be delayed or dropped during busy periods, so publication at the exact scheduled minute is not guaranteed. A delayed run still builds and publishes; there is no execution-hour gate. In public repositories, schedules are disabled after 60 days without repository activity. Check Actions if an update is overdue, and use **Run workflow** for an immediate update. See [GitHub's schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 
 ## Editing what it covers
 
@@ -94,7 +94,7 @@ Three runs a day × three LLM calls = 9 calls/day. With 40 candidates per sectio
 | `claude-sonnet-4-6` (default) | $0.02 | **$5–6** |
 | `claude-haiku-4-5` | $0.007 | **$1.5–2** |
 
-To get under €1/month: switch `model` to Haiku **and** lower `max_candidates` to ~25, or drop to two runs a day (edit the hours in the workflow's "Is it time?" step). GitHub Actions minutes and Pages are free for this volume. Check actual pricing at https://www.anthropic.com/pricing — it changes.
+To get under €1/month: switch `model` to Haiku **and** lower `max_candidates` to ~25, or drop to two runs a day (edit the hours in the workflow's `schedule` cron expression). GitHub Actions minutes and Pages are free for this volume. Check actual pricing at https://www.anthropic.com/pricing — it changes.
 
 ## Privacy / data
 
