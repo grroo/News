@@ -13,7 +13,9 @@ scripts/build.py               ← fetch → dedupe → Claude (1 call per secti
 scripts/feeds.py               ← tiny stdlib RSS/Atom parser
 scripts/youtube_channel_id.py  ← channel URL → channel_id
 scripts/find_podcast_rss.py    ← show name → RSS url
-site/index.html                ← the whole site (no framework, no build step)
+site/index.html                ← page layout and styles (no framework)
+site/app.js                    ← views, source links, read tracking, refresh
+site/freshness.js              ← timezone-aware update status
 data/briefing.json             ← current briefing (+ data/past/ keeps the last 6)
 .github/workflows/build.yml    ← cron + manual trigger; commits data/, deploys Pages
 tests/                         ← offline fixtures for a network-free test run
@@ -39,6 +41,26 @@ From then on it is scheduled at 07:00, 13:00 and 19:00 in `Europe/Rome`, with da
 
 > GitHub's cron is best-effort: runs can be delayed or dropped during busy periods, so publication at the exact scheduled minute is not guaranteed. A delayed run still builds and publishes; there is no execution-hour gate. In public repositories, schedules are disabled after 60 days without repository activity. Check Actions if an update is overdue, and use **Run workflow** for an immediate update. See [GitHub's schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 
+## Freshness and sources
+
+The homepage shows a leading headline for each category, the last build time,
+and the next scheduled update in Rome time. An expected update is marked pending
+for 45 minutes, then overdue if no newer briefing has been published. **Refresh**
+checks for a published update; it does not trigger a new paid build. Visible pages
+also check once a minute and when returning from the background.
+
+Open **Sources** to see which feeds responded, returned no articles, needed a
+fallback, or were unavailable. Transient network/server failures are retried.
+L'Équipe uses its current official football feed. Les Échos Finance falls back
+to a Google News search restricted to its finance section if the direct feed
+is inaccessible. Google News items retain the original publisher's RSS name;
+their links may still pass through Google News.
+
+New AI briefing bullets link to the candidate articles cited by the model. Only
+valid candidate IDs become links. Older archived briefings remain readable but
+do not acquire guessed citations. Candidate counters distinguish collected
+articles from those actually reviewed by the model.
+
 ## Editing what it covers
 
 Everything is in `config.yml`. The comments there explain each list. The two tedious bits have helpers:
@@ -55,7 +77,13 @@ python scripts/find_podcast_rss.py "Huberman Lab" "FT News Briefing"
 
 Both print YAML you paste straight into the `youtube_channels:` / `podcasts:` lists. Spotify does not expose RSS, but practically every show on Spotify is also on Apple Podcasts, which is what the finder searches.
 
-The `interests:` block is the whole "algorithm". Write it like a note to a smart assistant: what you care about, what to skip, how to order things. Push, and the next run uses it.
+`source_preferences` reserves candidate slots before the model's limit is applied.
+Sport reserves up to eight slots for CulturePSG and includes at least two new
+CulturePSG articles when available. Direct CulturePSG copies win exact-headline
+deduplication. Already-published articles are not forced back into each edition
+to fill this minimum. Both settings are editable in `config.yml`.
+
+The `interests:` block guides the model's ranking within these candidates. Write it like a note to a smart assistant: what you care about, what to skip, how to order things. Push, and the next run uses it.
 
 ## Running locally
 
@@ -79,9 +107,9 @@ python scripts/build.py --mock --fixtures tests/fixtures
 ## How the build works
 
 1. Fetches every feed in `config.yml` concurrently (watched topics and teams become Google News RSS queries; tickers become Yahoo Finance per-ticker RSS; YouTube channels use the public Atom feed).
-2. Keeps items from the last `lookback_hours` (media: `media_days`), dedupes by canonical URL and by normalised headline (so the same story from two outlets collapses), and marks items as **new** if they were not in `data/seen.json` from a previous run.
+2. Keeps items from the last `lookback_hours` (media: `media_days`), dedupes by canonical URL and by normalised headline (so the same story from two outlets collapses), and marks items as **new** if they have not appeared as an article or a cited source in a previous briefing. The versioned `data/seen.json` records only published items; legacy history is rebuilt from retained editions on the first updated run.
 3. Fetches day-change prices for each ticker (`yfinance`, falling back to Yahoo's chart endpoint).
-4. Sends each of News / Sport / Finance to Claude **once**, with up to `max_candidates` items (title, source, time, ≤160-char summary) plus your `interests`, and asks for strict JSON: a 4–6 sentence briefing and the selected items with one-line summaries. Any item whose URL is not in the candidates is dropped — the model cannot invent stories. If the API call fails, that section falls back to "newest first" and says so.
+4. Sends each of News / Sport / Finance to Claude **once**, with up to `max_candidates` items (title, source, time, ≤160-char summary) plus your `interests`, and asks for structured JSON: concise bullets with supporting candidate IDs and selected items with one-line summaries. Any item whose URL is not in the candidates is dropped — the model cannot invent stories. If the API call fails, that section falls back to "newest first" and says so.
 5. Media is not summarised: newest videos and episodes from the last 3 days, with duration when the feed provides it.
 6. Rotates the previous `briefing.json` into `data/past/` (keeps 6), writes the new one, and the workflow commits `data/` and deploys `site/ + data/` to Pages.
 

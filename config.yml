@@ -13,6 +13,15 @@ keep_past_briefings: 6
 # how many items it should select. Fewer candidates = cheaper.
 max_candidates: 35
 
+# Reserve candidate space before the LLM's limit is applied. Include at least
+# two new CulturePSG stories when available; previously published stories are
+# not forced back into each briefing merely to fill this target.
+source_preferences:
+  sport:
+    CulturePSG:
+      candidate_slots: 8
+      min_new_items: 2
+
 # How many items the LLM should select per section
 item_targets:
   news: 10
@@ -72,7 +81,7 @@ sport_sites:
   - name: CulturePSG
     url: https://www.culturepsg.com/news?rss
   - name: L'Équipe
-    url: https://www.lequipe.fr/rss/actu_rss.xml
+    url: https://dwh.lequipe.fr/api/edito/rss?path=/Football/
   - name: HLTV
     url: https://www.hltv.org/rss/news
 
@@ -117,6 +126,8 @@ market_news_sources:
     url: https://www.ilsole24ore.com/rss/finanza.xml
   - name: Les Echos Finance
     url: https://services.lesechos.fr/rss/les-echos-finance-marches.xml
+    fallback_query: site:lesechos.fr/finance-marches
+    fallback_lang: fr
   - name: CoinDesk
     url: https://www.coindesk.com/arc/outboundfeeds/rss/
 
@@ -173,6 +184,8 @@ interests: |
   Champions League generally, then the France rugby XV, then Counter-Strike 2
   (Team Vitality and major tournaments). Skip betting, gossip, and other
   clubs unless they play PSG or France.
+  CulturePSG is my priority source for PSG football. Prefer its original
+  reporting and match analysis over Google News copies of the same story.
 
   For Finance: a markets briefing a professional would want — what moved
   global equities, rates, the ECB and Fed, credit, FX, the European insurance

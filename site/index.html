@@ -31,7 +31,7 @@
   a { color: inherit; text-decoration: none; }
   main { max-width: 720px; margin: 0 auto; padding: 16px 16px calc(32px + env(safe-area-inset-bottom)); }
 
-  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  header { flex-wrap: wrap; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
   header h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
   header h1 a { display: inline-flex; align-items: center; gap: 8px; }
   .meta { font-size: 13px; color: var(--muted); }
@@ -42,12 +42,15 @@
 
   /* landing */
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .tile { aspect-ratio: 1; border-radius: 18px; background: var(--card); border: 1px solid var(--line);
+  .tile { min-height: 260px; border-radius: 18px; background: var(--card); border: 1px solid var(--line);
     padding: 18px; display: flex; flex-direction: column; justify-content: space-between;
     position: relative; overflow: hidden; transition: transform .08s ease; }
   .tile:active { transform: scale(.98); }
   .tile::before { content: ""; position: absolute; inset: 0 auto auto 0; height: 4px; width: 100%; background: var(--c); }
   .tile .name { font-size: 26px; font-weight: 650; letter-spacing: -0.02em; }
+  .tile .preview { margin: 18px 0; font-size: 18px; line-height: 1.4; }
+  .tile .preview-title { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .tile .preview-source { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; }
   .tile .count { font-size: 13px; color: var(--muted); }
   .tile .count b { color: var(--new); font-weight: 600; }
   .tile .count.zero b { color: var(--muted); }
@@ -56,13 +59,15 @@
   @media (max-width: 559px) {
     .landing { display: flex; flex-direction: column; min-height: calc(100dvh - 32px - env(safe-area-inset-bottom)); }
     .landing .grid { flex: 1; grid-template-rows: 1fr 1fr; gap: 14px; }
-    .tile { aspect-ratio: auto; min-height: 150px; padding: 20px; }
-    .tile .name { font-size: 30px; }
+    .tile { aspect-ratio: auto; min-height: 230px; padding: 16px; }
+    .tile .name { font-size: 24px; }
+    .tile .preview { font-size: 15px; margin: 12px 0; }
+    .section-head { flex-wrap: wrap; gap: 12px; }
     .tile .count { font-size: 14px; }
   }
 
   /* section */
-  .section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 4px 0 10px; }
+  .section-head { gap: 12px; display: flex; align-items: baseline; justify-content: space-between; margin: 4px 0 10px; }
   .section-head h2 { font-size: 26px; margin: 0; letter-spacing: -0.02em; border-bottom: 3px solid var(--c); }
   .brief { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px;
     margin-bottom: 14px; font-size: 16px; line-height: 1.55; }
@@ -97,177 +102,25 @@
   .past a small { color: var(--muted); display: block; }
   .banner { background: var(--card); border: 1px dashed var(--line); color: var(--muted); border-radius: 10px; padding: 8px 12px; font-size: 13px; margin-bottom: 12px; }
   footer { margin-top: 28px; font-size: 12.5px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .freshness { font-size: 13px; color: var(--muted); margin: -4px 0 18px; }
+  .freshness p { margin: 4px 0 0; }
+  .freshness .overdue { color: var(--new); }
+  .btn { min-height: 40px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .citations { display: flex; gap: 6px 12px; flex-wrap: wrap; margin-top: 5px; font-size: 12px; }
+  .citations a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .health { font-size: 13px; color: var(--muted); margin-top: 20px; }
+  .health summary { cursor: pointer; padding: 10px 0; }
+  .health ul { padding-left: 18px; }
+  .health li { margin: 6px 0; }
+  .health .issue { color: var(--new); }
+  .archive-note { margin-top: 0; }
 </style>
 </head>
 <body>
 <main id="app"><div class="empty">Loading…</div></main>
 
-<script>
-(() => {
-  'use strict';
-  const $app = document.getElementById('app');
-  const SECTIONS = ['news', 'sport', 'finance', 'media'];
-  const LABELS = { news: 'News', sport: 'Sport', finance: 'Finance', media: 'Media' };
-  const LS_SEEN = 'briefing.seen.v1', LS_THEME = 'briefing.theme';
-
-  // ── seen state (localStorage only) ─────────────────────────────────────
-  const seen = new Set(JSON.parse(localStorage.getItem(LS_SEEN) || '[]'));
-  const saveSeen = () => localStorage.setItem(LS_SEEN, JSON.stringify([...seen].slice(-2000)));
-  const markSeen = k => { if (k && !seen.has(k)) { seen.add(k); saveSeen(); } };
-
-  // ── theme ──────────────────────────────────────────────────────────────
-  const applyTheme = () => {
-    const t = localStorage.getItem(LS_THEME);
-    if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme;
-  };
-  const toggleTheme = () => {
-    const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-    const cur = localStorage.getItem(LS_THEME) || (dark ? 'dark' : 'light');
-    localStorage.setItem(LS_THEME, cur === 'dark' ? 'light' : 'dark');
-    applyTheme();
-  };
-  applyTheme();
-
-  // ── data ───────────────────────────────────────────────────────────────
-  let current = null, viewing = null, pastIndex = null, shown = null;
-  const fetchJSON = async p => { const r = await fetch(p + '?t=' + Math.floor(Date.now() / 60000)); if (!r.ok) throw new Error(r.status + ' ' + p); return r.json(); };
-  const loadCurrent = async () => current || (current = await fetchJSON('data/briefing.json'));
-  const loadPastIndex = async () => pastIndex || (pastIndex = await fetchJSON('data/past/index.json').catch(() => []));
-
-  // ── helpers ────────────────────────────────────────────────────────────
-  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const ago = iso => {
-    if (!iso) return '';
-    const d = (Date.now() - new Date(iso)) / 60000;
-    if (d < 1) return 'now'; if (d < 60) return Math.round(d) + 'm';
-    if (d < 36 * 60) return Math.round(d / 60) + 'h';
-    return Math.round(d / 1440) + 'd';
-  };
-  const dur = s => s ? (s >= 3600 ? Math.floor(s / 3600) + 'h ' + Math.round((s % 3600) / 60) + 'm' : Math.round(s / 60) + 'm') : '';
-  const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return ''; } };
-  const unseenCount = sec => (sec?.items || []).filter(i => !seen.has(i.key)).length;
-  const fmtLocal = b => b.generated_local || new Date(b.generated_at).toLocaleString();
-
-  const headerHTML = (b, sub) => `
-    <header>
-      <h1><a href="#/">Briefing</a></h1>
-      <div class="row">
-        <span class="meta">${esc(sub ?? ('updated ' + fmtLocal(b)))}</span>
-        <button class="btn" data-theme-toggle title="Toggle dark mode">◐</button>
-      </div>
-    </header>`;
-
-  // ── views ──────────────────────────────────────────────────────────────
-  const landing = b => `<div class="landing">
-    ${headerHTML(b)}
-    ${b !== current ? `<div class="banner">Viewing a past briefing from ${esc(fmtLocal(b))}. <a href="#/" style="color:var(--accent)">Back to latest</a></div>` : ''}
-    <div class="grid">
-      ${SECTIONS.map(s => {
-        const sec = b.sections[s] || { items: [] }, n = unseenCount(sec);
-        const path = b === current ? `#/${s}` : `#/past/${encodeURIComponent(viewing)}/${s}`;
-        return `<a class="tile" style="--c:var(--${s})" href="${path}">
-          <div class="name">${LABELS[s]}</div>
-          <div class="count ${n ? '' : 'zero'}"><b>${n}</b> new · ${sec.items.length} items</div>
-        </a>`;
-      }).join('')}
-    </div>
-    <footer>
-      <span><a href="#/past">Past briefings</a></span>
-      <span>${b.mode === 'mock' ? 'mock mode · ' : ''}${b.usage?.calls ? `this run $${b.usage.est_cost_usd.toFixed(3)} · ≈$${b.usage.est_month_usd}/mo · ` : ''}${esc((b.model || '').replace('claude-', ''))}</span>
-    </footer></div>`;
-
-  const card = it => `
-    <a class="card ${seen.has(it.key) ? 'seen' : ''}" href="${esc(it.url)}" target="_blank" rel="noopener" data-key="${esc(it.key)}">
-      <span class="dot"></span>
-      <p class="t">${esc(it.title)}</p>
-      ${it.summary ? `<p class="s">${esc(it.summary)}</p>` : ''}
-      <p class="m">${it.kind ? `<span class="kind">${esc(it.kind)}</span>` : ''}<span>${esc(it.source)}</span><span>·</span><span>${ago(it.published)}</span>${it.duration_s ? `<span>·</span><span>${dur(it.duration_s)}</span>` : ''}${host(it.url) && host(it.url) !== it.source ? `<span>·</span><span>${esc(host(it.url))}</span>` : ''}</p>
-    </a>`;
-
-  const briefHTML = (br, mock, s) => {
-    if (!br || (Array.isArray(br) && !br.length)) return '';
-    const body = Array.isArray(br) ? `<ul>${br.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : esc(br);
-    return `<div class="brief ${mock ? 'mock' : ''}" style="--c:var(--${s})">${body}</div>`;
-  };
-
-  const tickers = rows => rows?.length ? `
-    <table class="tick"><tbody>${rows.map(r => {
-      const p = r.change_pct, cls = p == null ? '' : p >= 0 ? 'up' : 'down';
-      return `<tr><td>${esc(r.label)}<span class="sym">${esc(r.symbol)}</span></td>
-        <td class="num">${r.price != null ? r.price.toLocaleString(undefined, { maximumFractionDigits: 2 }) : '—'}${r.currency ? ` <span class="sym">${esc(r.currency)}</span>` : ''}</td>
-        <td class="num ${cls}">${p == null ? '—' : (p > 0 ? '+' : '') + p.toFixed(2) + '%'}</td></tr>`;
-    }).join('')}</tbody></table>` : '';
-
-  const section = (b, s) => {
-    const sec = b.sections[s] || { items: [] };
-    const backPath = b === current ? '#/' : `#/past/${encodeURIComponent(viewing)}`;
-    return `
-      ${headerHTML(b)}
-      <div class="section-head" style="--c:var(--${s})">
-        <h2>${LABELS[s]}</h2>
-        <div class="row"><a class="btn" href="${backPath}">← Home</a><button class="btn" data-mark-all="${s}">Mark all read</button></div>
-      </div>
-      ${s === 'finance' ? tickers(sec.tickers) : ''}
-      ${briefHTML(sec.briefing, b.mode === 'mock', s)}
-      <div class="cards">${sec.items.length ? sec.items.map(card).join('') : '<div class="empty">Nothing new in this window.</div>'}</div>
-      <footer><span>${sec.candidate_count ?? sec.items.length} candidates considered</span><span><a href="#/past">Past briefings</a></span></footer>`;
-  };
-
-  const past = (b, idx) => `
-    ${headerHTML(b, 'past briefings')}
-    <div class="past">
-      <a href="#/"><b>Latest</b><small>${esc(fmtLocal(b))}</small></a>
-      ${idx.length ? idx.map(p => `<a href="#/past/${encodeURIComponent(p.file)}">${esc(new Date(p.generated_at).toLocaleString(undefined, { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }))}
-        <small>${SECTIONS.map(s => `${LABELS[s]} ${p.counts?.[s] ?? 0}`).join(' · ')}</small></a>`).join('')
-        : '<div class="empty">No past briefings yet.</div>'}
-    </div>`;
-
-  // ── router ─────────────────────────────────────────────────────────────
-  const render = async () => {
-    try {
-      const b = await loadCurrent();
-      const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decodeURIComponent);
-      if (parts[0] === 'past') {
-        if (!parts[1]) { $app.innerHTML = past(b, await loadPastIndex()); }
-        else {
-          viewing = parts[1];
-          const pb = await fetchJSON('data/past/' + encodeURIComponent(parts[1]));
-          shown = pb; $app.innerHTML = SECTIONS.includes(parts[2]) ? section(pb, parts[2]) : landing(pb);
-        }
-      } else if (SECTIONS.includes(parts[0])) {
-        viewing = null; shown = b; $app.innerHTML = section(b, parts[0]);
-      } else {
-        viewing = null; shown = b; $app.innerHTML = landing(b);
-      }
-      window.scrollTo(0, 0);
-    } catch (e) {
-      $app.innerHTML = `<div class="empty">Could not load the briefing (${esc(e.message)}).<br><small>Has the build workflow run yet?</small></div>`;
-    }
-  };
-
-  $app.addEventListener('click', e => {
-    const c = e.target.closest('.card'); if (c) { markSeen(c.dataset.key); c.classList.add('seen'); return; }
-    const m = e.target.closest('[data-mark-all]');
-    if (m) { const sec = shown?.sections?.[m.dataset.markAll];
-      (sec?.items || []).forEach(i => markSeen(i.key)); render(); return; }
-    if (e.target.closest('[data-theme-toggle]')) toggleTheme();
-  });
-  window.addEventListener('hashchange', render);
-  // Home-screen apps resume from background with the old page: re-check for a
-  // newer briefing whenever the tab becomes visible again.
-  let lastCheck = Date.now();
-  const refresh = async () => {
-    if (Date.now() - lastCheck < 60000) return;
-    lastCheck = Date.now();
-    try {
-      const fresh = await fetchJSON('data/briefing.json');
-      if (!current || fresh.generated_at !== current.generated_at) { current = fresh; pastIndex = null; render(); }
-    } catch (e) { /* offline: keep what we have */ }
-  };
-  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') refresh(); });
-  window.addEventListener('pageshow', e => { if (e.persisted) refresh(); });
-  render();
-})();
-</script>
+<script src="freshness.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

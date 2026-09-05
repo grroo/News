@@ -10,6 +10,7 @@ YouTube Atom with yt:videoId, podcast RSS with itunes:duration, and the Yahoo
 v8 chart JSON.
 """
 import html
+import argparse
 import json
 import random
 import sys
@@ -21,7 +22,9 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "tests" / "fixtures"
+ap = argparse.ArgumentParser()
+ap.add_argument("--output-dir", type=Path, default=ROOT / "tests" / "fixtures")
+OUT = ap.parse_args().output_dir
 OUT.mkdir(parents=True, exist_ok=True)
 cfg = yaml.safe_load((ROOT / "config.yml").read_text())
 random.seed(7)

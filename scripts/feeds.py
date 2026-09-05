@@ -12,6 +12,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from typing import Optional
+from urllib.parse import urlsplit
 
 NS = {
     "atom": "http://www.w3.org/2005/Atom",
@@ -75,8 +76,16 @@ def _text(el: Optional[ET.Element]) -> Optional[str]:
     return el.text if el is not None and el.text else None
 
 
-def parse_feed(raw: bytes, source_name: str) -> list[dict]:
-    """Return a list of normalised item dicts. Never raises on odd feeds; returns []."""
+def safe_url(value: str) -> str:
+    try:
+        p = urlsplit(value.strip())
+        return value.strip() if p.scheme in ("http", "https") and p.netloc else ""
+    except ValueError:
+        return ""
+
+
+def parse_feed(raw: bytes, source_name: str, *, strict: bool = False) -> list[dict]:
+    """Parse items; strict mode distinguishes invalid responses from empty feeds."""
     try:
         root = ET.fromstring(raw)
     except ET.ParseError:
@@ -85,9 +94,13 @@ def parse_feed(raw: bytes, source_name: str) -> list[dict]:
         try:
             root = ET.fromstring(cleaned)
         except ET.ParseError:
+            if strict:
+                raise ValueError("Invalid feed XML")
             return []
 
     tag = root.tag.lower()
+    if strict and tag.rsplit("}", 1)[-1] not in ("feed", "rss", "rdf"):
+        raise ValueError("Response is not an RSS or Atom feed")
     if tag.endswith("feed"):  # Atom
         return [_atom_entry(e, source_name) for e in root.findall("atom:entry", NS)]
     # RSS 2.0 (channel/item); RSS 1.0 (rdf) puts <item> at root level
@@ -113,13 +126,17 @@ def _rss_item(item: ET.Element, source_name: str) -> dict:
         or _text(item.find("content:encoded", NS))
     )
     enclosure = item.find("enclosure")
+    aggregated = urlsplit(safe_url(link)).hostname == "news.google.com"
+    publisher = strip_html(_text(item.find("source")), 100) if aggregated else ""
     return {
         "id": guid.strip(),
         "title": strip_html(_text(item.find("title")), 200),
-        "url": link.strip(),
+        "url": safe_url(link),
         "summary": strip_html(summary),
         "published": published.isoformat() if published else None,
-        "source": source_name,
+        "source": publisher or source_name,
+        "feed_name": source_name,
+        "via": "Google News" if aggregated else None,
         "duration_s": parse_duration(_text(item.find("itunes:duration", NS))),
         "enclosure_url": enclosure.get("url") if enclosure is not None else None,
     }
@@ -142,10 +159,12 @@ def _atom_entry(entry: ET.Element, source_name: str) -> dict:
     return {
         "id": (_text(entry.find("atom:id", NS)) or link).strip(),
         "title": strip_html(_text(entry.find("atom:title", NS)), 200),
-        "url": link.strip(),
+        "url": safe_url(link),
         "summary": strip_html(summary),
         "published": published.isoformat() if published else None,
         "source": source_name,
+        "feed_name": source_name,
+        "via": None,
         "duration_s": None,
         "video_id": video_id,
     }

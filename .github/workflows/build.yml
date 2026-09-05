@@ -8,7 +8,7 @@ on:
       timezone: "Europe/Rome"
   push:
     branches: [main]
-    paths: [config.yml, "scripts/**", "site/**", requirements.txt, .github/workflows/build.yml]
+    paths: [config.yml, "scripts/**", "site/**", "tests/**", requirements.txt, .github/workflows/build.yml]
   workflow_dispatch:
     inputs:
       mock:
@@ -41,6 +41,11 @@ jobs:
 
       - name: Install
         run: pip install -r requirements.txt
+
+      - name: Validate selection and freshness
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+          node --test tests/freshness.test.cjs
 
       - name: Build briefing
         env:
