@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 import re
 import sys
@@ -204,8 +205,9 @@ def price_moves(fetcher: Fetcher, tickers: list[dict]) -> list[dict]:
         try:
             if yf is not None and not fetcher.fixtures:
                 h = yf.Ticker(sym).history(period="5d", interval="1d")
-                if len(h) >= 2:
-                    last, prev = float(h["Close"].iloc[-1]), float(h["Close"].iloc[-2])
+                closes = [float(c) for c in h["Close"].tolist() if c == c]  # drop NaN
+                if len(closes) >= 2:
+                    last, prev = closes[-1], closes[-2]
                     row.update(price=round(last, 2), change_pct=round((last / prev - 1) * 100, 2))
                     try:
                         row["currency"] = yf.Ticker(sym).fast_info.get("currency")
@@ -224,6 +226,12 @@ def price_moves(fetcher: Fetcher, tickers: list[dict]) -> list[dict]:
                                    currency=meta.get("currency"))
         except Exception as e:  # never let one bad ticker kill the run
             log(f"  [price failed] {sym}: {e.__class__.__name__}")
+        for k in ("price", "change_pct"):  # NaN/inf are not valid JSON → null
+            v = row[k]
+            if v is not None and (not isinstance(v, (int, float)) or not math.isfinite(v)):
+                row[k] = None
+        if row["price"] is None:
+            log(f"  [no price] {sym}")
         rows.append(row)
     return rows
 
@@ -487,7 +495,7 @@ def rotate_past(cfg: dict):
         try:
             prev = json.loads(OUT_PATH.read_text())
             stamp = prev["generated_at"].replace(":", "-")
-            (PAST_DIR / f"{stamp}.json").write_text(json.dumps(prev, ensure_ascii=False))
+            (PAST_DIR / f"{stamp}.json").write_text(json.dumps(prev, ensure_ascii=False, allow_nan=False))
         except (json.JSONDecodeError, KeyError):
             pass
     files = sorted(PAST_DIR.glob("*.json"), reverse=True)
@@ -563,7 +571,7 @@ def main():
         "usage": usage_summary(cfg.get("model", "")),
         "sections": sections,
     }
-    OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=1, allow_nan=False))
     save_seen(seen, now)
     log(f"wrote {OUT_PATH.relative_to(ROOT)}  mode={out['mode']}  usage={out['usage']}")
 
