@@ -5,7 +5,7 @@ on:
     # GitHub cron is UTC. Europe/Rome is UTC+1 (winter) or UTC+2 (summer), so we
     # fire at both candidate UTC hours and let the "Is it time?" step keep only
     # the run that lands on 07:00 / 13:00 / 19:00 Rome time.
-    - cron: "5 4,5,10,11,16,17 * * *"
+    - cron: "7 4,5,10,11,16,17 * * *"
   push:
     branches: [main]
     paths: [config.yml, "scripts/**", "site/**", requirements.txt]
