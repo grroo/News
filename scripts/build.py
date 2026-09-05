@@ -489,14 +489,20 @@ def usage_summary(model: str) -> dict:
     return {**USAGE, "est_cost_usd": round(cost, 4), "est_month_usd": round(cost * 3 * 30, 2)}
 
 
+def load_json_lenient(path: Path):
+    """json.loads that turns NaN/Infinity (which Python happily writes but no
+    browser accepts) into null, so an old bad file can still be archived."""
+    return json.loads(path.read_text(), parse_constant=lambda _: None)
+
+
 def rotate_past(cfg: dict):
     PAST_DIR.mkdir(parents=True, exist_ok=True)
     if OUT_PATH.exists():
         try:
-            prev = json.loads(OUT_PATH.read_text())
+            prev = load_json_lenient(OUT_PATH)
             stamp = prev["generated_at"].replace(":", "-")
             (PAST_DIR / f"{stamp}.json").write_text(json.dumps(prev, ensure_ascii=False, allow_nan=False))
-        except (json.JSONDecodeError, KeyError):
+        except (json.JSONDecodeError, KeyError, ValueError):
             pass
     files = sorted(PAST_DIR.glob("*.json"), reverse=True)
     files = [f for f in files if f.name != "index.json"]
@@ -506,7 +512,7 @@ def rotate_past(cfg: dict):
     index = []
     for f in files[:keep]:
         try:
-            j = json.loads(f.read_text())
+            j = load_json_lenient(f)
             index.append({"file": f.name, "generated_at": j["generated_at"],
                           "counts": {k: len(v.get("items", [])) for k, v in j["sections"].items()}})
         except Exception:
