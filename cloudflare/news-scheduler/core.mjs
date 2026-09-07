@@ -45,7 +45,7 @@ export async function tick({now, schedule, state, env, request = fetch, save}) {
   state.checkedAt = new Date(now).toISOString();
   // A successful dispatch is not publication. Always inspect the live Pages data.
   const live = await json(await request(`${env.BRIEFING_URL}?scheduler=${now}`, {
-    cache:'no-store', redirect:'error', signal:AbortSignal.timeout(10000)
+    cache:'no-store', redirect:'manual', signal:AbortSignal.timeout(10000)
   }));
   const generated = Date.parse(live.generated_at);
   if (!Number.isFinite(generated)) throw new Error('Live briefing has no valid timestamp');
@@ -59,7 +59,7 @@ export async function tick({now, schedule, state, env, request = fetch, save}) {
   const headers = {Authorization:`Bearer ${env.GITHUB_TOKEN}`, Accept:'application/vnd.github+json',
     'X-GitHub-Api-Version':'2022-11-28', 'User-Agent':'news-briefing-scheduler'};
   const runs = await json(await request(`${api}/runs?branch=main&per_page=20`, {
-    headers, redirect:'error', signal:AbortSignal.timeout(10000)
+    headers, redirect:'manual', signal:AbortSignal.timeout(10000)
   }));
   if (!Array.isArray(runs.workflow_runs)) throw new Error('GitHub returned no run list');
   const active = runs.workflow_runs.find(r => r.status !== 'completed');
@@ -72,7 +72,7 @@ export async function tick({now, schedule, state, env, request = fetch, save}) {
   const response = await request(`${api}/dispatches`, {
     method:'POST', headers:{...headers,'Content-Type':'application/json'},
     body:JSON.stringify({ref:'main',inputs:{mock:false,scheduled_slot:slot}}),
-    redirect:'error', signal:AbortSignal.timeout(10000)
+    redirect:'manual', signal:AbortSignal.timeout(10000)
   });
   if (!response.ok) throw new Error(`GitHub dispatch HTTP ${response.status}`);
   if (response.body) await response.body.cancel();
