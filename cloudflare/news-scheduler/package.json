@@ -1,0 +1,14 @@
+{
+  "name": "news-briefing-scheduler",
+  "private": true,
+  "scripts": {
+    "types": "wrangler types",
+    "check": "wrangler types && tsc && node --test core.test.mjs",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "7.0.2",
+    "wrangler": "4.129.0"
+  }
+}

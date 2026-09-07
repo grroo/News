@@ -1,0 +1,14 @@
+{
+  "name": "news-briefing-scheduler",
+  "main": "worker.ts",
+  "compatibility_date": "2026-09-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "vars": { "GITHUB_REPO": "grroo/News", "GITHUB_WORKFLOW": "build.yml", "BRIEFING_URL": "https://grroo.github.io/News/data/briefing.json" },
+  "secrets": { "required": ["GITHUB_TOKEN"] },
+  "durable_objects": { "bindings": [{ "name": "SCHEDULER", "class_name": "NewsScheduler" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["NewsScheduler"] }],
+  "observability": { "enabled": true, "head_sampling_rate": 1 }
+}

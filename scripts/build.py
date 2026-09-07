@@ -622,12 +622,7 @@ def rotate_past(cfg: dict):
 
 
 def schedule_metadata() -> dict:
-    # The workflow remains the single source of truth for display times.
-    workflow = yaml.load((ROOT / ".github/workflows/build.yml").read_text(), Loader=yaml.BaseLoader)
-    schedule = workflow["on"]["schedule"][0]
-    minute, hours, *_ = schedule["cron"].split()
-    return {"timezone": schedule["timezone"], "hours": [int(h) for h in hours.split(",")],
-            "minute": int(minute), "grace_minutes": 45}
+    return json.loads((ROOT / "schedule.json").read_text())
 
 
 def main():

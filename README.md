@@ -4,7 +4,7 @@ A static, phone-first news briefing that updates three times a day (07:00, 13:00
 
 - No recommendation algorithm. Selection is done by Claude reading the plain-text `interests` you write in `config.yml`.
 - Only public RSS/Atom feeds and public APIs. Nothing behind paywalls or logins.
-- No server, no database. GitHub Actions builds `data/briefing.json`; GitHub Pages serves it. Read state lives in your browser's localStorage.
+- GitHub Actions builds `data/briefing.json`; GitHub Pages serves it. Read state lives in your browser's localStorage.
 - One config file. You never touch code to change what it covers.
 
 ```
@@ -17,7 +17,9 @@ site/index.html                ← page layout and styles (no framework)
 site/app.js                    ← views, source links, read tracking, refresh
 site/freshness.js              ← timezone-aware update status
 data/briefing.json             ← current briefing (+ data/past/ keeps the last 6)
-.github/workflows/build.yml    ← cron + manual trigger; commits data/, deploys Pages
+.github/workflows/build.yml    ← build + deploy; GitHub cron retained during migration
+schedule.json                 ← Rome update times used by the site and scheduler
+cloudflare/news-scheduler/     ← Cloudflare cron, publication checks, bounded retries
 tests/                         ← offline fixtures for a network-free test run
 ```
 
@@ -40,6 +42,13 @@ tests/                         ← offline fixtures for a network-free test run
 From then on it is scheduled at 07:00, 13:00 and 19:00 in `Europe/Rome`, with daylight saving changes handled by GitHub's timezone-aware schedule. Changes to the config, build scripts, site, requirements, or workflow on `main` also trigger an update.
 
 > GitHub's cron is best-effort: runs can be delayed or dropped during busy periods, so publication at the exact scheduled minute is not guaranteed. A delayed run still builds and publishes; there is no execution-hour gate. In public repositories, schedules are disabled after 60 days without repository activity. Check Actions if an update is overdue, and use **Run workflow** for an immediate update. See [GitHub's schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
+
+## Cloudflare scheduler migration
+
+The Cloudflare scheduler and workflow retry guard are implemented. Cloudflare
+deployment and credential setup must be completed before disabling GitHub cron.
+Follow [the scheduler setup and verification steps](cloudflare/news-scheduler/README.md).
+The shared display and Worker schedule is in `schedule.json`.
 
 ## Freshness and sources
 
