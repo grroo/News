@@ -20,10 +20,15 @@ There is no public endpoint that can start a paid briefing build.
    `grroo`, repository access **Only select repositories → News**, and repository
    permission **Actions: Read and write**. Metadata read is automatic. Set an
    expiry and renew it before expiration. No Contents write permission is needed.
-4. Run `npx wrangler secret put GITHUB_TOKEN` and enter the token at its secure
-   prompt. Alternatively, save it as a **Secret** named `GITHUB_TOKEN` under the
-   deployed Worker's Settings → Variables and Secrets. Never commit the token.
-5. Run `npm run deploy`. Wrangler provisions the SQLite Durable Object and cron.
+4. For an existing Worker, run `npx wrangler secret put GITHUB_TOKEN` and enter
+   the token at its secure prompt. Alternatively, save it as a **Secret** named
+   `GITHUB_TOKEN` under the Worker's Settings → Variables and Secrets, then deploy
+   the new version from Deployments. Saving a version alone does not activate it.
+   Never commit the token.
+5. Run `npm run deploy`. For a brand-new Worker with required secrets, supply
+   `wrangler deploy --secrets-file /path/to/private/secrets.json` with a private
+   file containing `{"GITHUB_TOKEN":"your-token"}`; remove that local file after
+   deployment. Wrangler provisions the SQLite Durable Object and cron.
 6. Allow up to 15 minutes for cron propagation. Confirm `/health` reports
    `configured: true` and a recent `checkedAt`, then verify an actual scheduled
    dispatch reaches `phase: published` and Pages shows the new briefing.
