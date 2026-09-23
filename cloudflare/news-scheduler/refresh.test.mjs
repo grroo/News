@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {signJwt, timingSafeEqual, verifyAccessJwt} from './auth.mjs';
-import {handleRequest, safeReturnUrl} from './http.mjs';
+import {handleRequest, ownerPage, ownerReturnHref, safeReturnUrl} from './http.mjs';
 import {
   advanceScheduled, applyClaim, claimDecision, emptyControl, noteDispatchResult, publicationFor,
   reconcile, requestRefresh, satisfiesHealthySlot,
@@ -72,6 +72,29 @@ function post(key, extra = {}) {
     body: JSON.stringify({idempotency_key: key}),
   });
 }
+
+test('failed publication stays a failure and a terminal job without Pages uses a safe return code', () => {
+  const failure = load('provider-failure-edition.json');
+  assert.equal(failure.quality.overall, 'failed');
+  assert.equal(failure.refresh.outcome, 'generated');
+  const back = 'https://example.test/News/';
+  const published = ownerReturnHref(back, {
+    status: 'failed',
+    request_id: failure.request_ids[0],
+    job_id: 'job_failed_pub',
+    error: 'Provider timeout: socket hang up at api.anthropic.com',
+  });
+  const publishedUrl = new URL(published);
+  assert.equal(publishedUrl.searchParams.get('refresh_error'), 'failed');
+  assert.equal(published.includes('socket'), false);
+  assert.equal(published.includes('anthropic'), false);
+  const before = ownerReturnHref(back, {status: 'expired', request_id: 'req_before', job_id: 'job_before'});
+  assert.equal(new URL(before).searchParams.get('refresh_error'), 'expired');
+  assert.equal(new URL(before).searchParams.has('error'), false);
+  const page = ownerPage(back, back);
+  assert.match(page, /body\.status === 'failed'/);
+  assert.doesNotMatch(page, /refresh_error', body\.error/);
+});
 
 test('shared slot and claim cases match the production decisions', () => {
   for (const c of load('slot-cases.json').cases) {

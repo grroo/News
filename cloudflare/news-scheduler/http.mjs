@@ -29,6 +29,31 @@ function scriptJson(value) {
   return JSON.stringify(value).replace(/</g, '\\u003c');
 }
 
+const SAFE_REFRESH_ERRORS = new Set(['failed', 'expired', 'rate_limited', 'daily_limit', 'concurrent_job']);
+
+export function refreshErrorCode(body) {
+  if (!body || typeof body !== 'object') return '';
+  if (body.status === 'failed' || body.status === 'expired') return body.status;
+  if (typeof body.error === 'string' && SAFE_REFRESH_ERRORS.has(body.error)) return body.error;
+  return '';
+}
+
+export function ownerReturnHref(returnUrl, body = {}) {
+  if (!returnUrl) return '';
+  let url;
+  try {
+    url = new URL(returnUrl);
+  } catch {
+    return '';
+  }
+  if (body.request_id) url.searchParams.set('request', String(body.request_id));
+  if (body.job_id) url.searchParams.set('job', String(body.job_id));
+  const code = refreshErrorCode(body);
+  if (code) url.searchParams.set('refresh_error', code);
+  if (typeof body.retry_after === 'string' && body.retry_after) url.searchParams.set('retry_after', body.retry_after);
+  return url.href;
+}
+
 export function ownerPage(pagesUrl, returnCandidate) {
   const back = safeReturnUrl(returnCandidate, pagesUrl) || safeReturnUrl('', pagesUrl);
   const href = escapeHtml(back || '/');
@@ -56,7 +81,11 @@ function returnHref(body) {
   const url = new URL(RETURN_URL);
   if (body.request_id) url.searchParams.set('request', body.request_id);
   if (body.job_id) url.searchParams.set('job', body.job_id);
-  if (body.error) url.searchParams.set('refresh_error', body.error);
+  const safe = new Set(['failed', 'expired', 'rate_limited', 'daily_limit', 'concurrent_job']);
+  let code = '';
+  if (body.status === 'failed' || body.status === 'expired') code = body.status;
+  else if (safe.has(body.error)) code = body.error;
+  if (code) url.searchParams.set('refresh_error', code);
   if (body.retry_after) url.searchParams.set('retry_after', body.retry_after);
   return url.href;
 }
