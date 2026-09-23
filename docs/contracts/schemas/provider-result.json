@@ -11,10 +11,39 @@
     "model": { "type": "string" },
     "content": {
       "type": "object",
-      "description": "Normalized section payload: briefing bullets and selected items."
+      "required": ["briefing", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "briefing": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["text", "source_ids"],
+            "additionalProperties": false,
+            "properties": {
+              "text": { "type": "string", "minLength": 1 },
+              "source_ids": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 1, "maxItems": 3, "uniqueItems": true }
+            }
+          }
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "summary"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "integer", "minimum": 0 },
+              "title": { "type": "string", "minLength": 1 },
+              "summary": { "type": "string" }
+            }
+          }
+        }
+      }
     },
     "usage": {
       "type": "object",
+      "required": ["attempts", "est_cost_usd", "price_table_version", "unknown"],
       "properties": {
         "input_tokens": { "type": "integer", "minimum": 0 },
         "cached_input_tokens": { "type": "integer", "minimum": 0 },
@@ -26,6 +55,20 @@
         "unknown": { "type": "boolean", "description": "True when the call timed out before usage was reported." }
       }
     },
-    "error": { "type": "string" }
-  }
+    "error": { "type": "string", "minLength": 1 }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "success" } }, "required": ["status"] },
+      "then": {
+        "required": ["content", "usage"],
+        "not": { "required": ["error"] },
+        "properties": { "usage": { "required": ["input_tokens", "output_tokens"] } }
+      }
+    },
+    {
+      "if": { "properties": { "status": { "const": "failed" } }, "required": ["status"] },
+      "then": { "required": ["error", "retryable"] }
+    }
+  ]
 }

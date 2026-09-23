@@ -1,0 +1,231 @@
+{
+  "description": "Reference slot decisions; test-only implementations in Python and JS consume these identical cases.",
+  "cases": [
+    {
+      "name": "healthy generated edition",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": true,
+      "request_id": "req_20260923T110000Z_sched"
+    },
+    {
+      "name": "successful no change at next Rome slot",
+      "fixture": "no-change-result.json",
+      "slot": "2026-09-23T17:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": true,
+      "request_id": "req_20260923T170000Z_sched"
+    },
+    {
+      "name": "observer checked_at is not completion proof",
+      "fixture": "no-change-result.json",
+      "slot": "2026-09-23T17:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": true,
+      "request_id": "req_20260923T170000Z_sched",
+      "set": {
+        "/checked_at": "2026-09-24T21:00:00Z"
+      }
+    },
+    {
+      "name": "degraded last good stays pending",
+      "fixture": "degraded-edition.json",
+      "slot": "2026-09-23T17:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": false
+    },
+    {
+      "name": "all provider calls failed",
+      "fixture": "provider-failure-edition.json",
+      "slot": "2026-09-23T17:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": false
+    },
+    {
+      "name": "legacy archive remains readable but not a new-slot success",
+      "fixture": "archived-edition.json",
+      "slot": "2026-09-05T05:00:00Z",
+      "now": "2026-09-05T05:30:00Z",
+      "expected": false
+    },
+    {
+      "name": "legacy fallback error cannot prove success",
+      "fixture": "archived-edition.json",
+      "slot": "2026-09-05T05:00:00Z",
+      "now": "2026-09-05T05:30:00Z",
+      "expected": false,
+      "set": {
+        "/sections/news/error": "Provider timeout"
+      }
+    },
+    {
+      "name": "failed AI section contradicts overall healthy",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "set": {
+        "/sections/sport/state": "failed",
+        "/sections/sport/items": []
+      }
+    },
+    {
+      "name": "degraded AI section contradicts overall healthy",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "set": {
+        "/sections/sport/state": "degraded"
+      }
+    },
+    {
+      "name": "healthy AI section with provider error",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "set": {
+        "/sections/news/error": "Provider timeout"
+      }
+    },
+    {
+      "name": "missing required AI section",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "delete": [
+        "/sections/sport"
+      ]
+    },
+    {
+      "name": "missing required media section",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "delete": [
+        "/sections/media"
+      ]
+    },
+    {
+      "name": "missing AI success timestamp",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "delete": [
+        "/sections/finance/last_success_at"
+      ]
+    },
+    {
+      "name": "healthy AI section with fallback text",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "set": {
+        "/sections/news/briefing": "Summary unavailable. Showing recent articles instead."
+      }
+    },
+    {
+      "name": "mock output cannot satisfy slot",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "set": {
+        "/mode": "mock",
+        "/quality/overall": "mock"
+      }
+    },
+    {
+      "name": "future source check cannot satisfy slot",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "set": {
+        "/source_checked_at": "2026-09-23T12:00:00Z",
+        "/refresh/completed_at": "2026-09-23T12:00:01Z"
+      }
+    },
+    {
+      "name": "missing source check is invalid v2",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "delete": [
+        "/source_checked_at"
+      ]
+    },
+    {
+      "name": "stale no change recheck",
+      "fixture": "no-change-result.json",
+      "slot": "2026-09-23T17:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": false,
+      "set": {
+        "/source_checked_at": "2026-09-23T11:01:00Z"
+      }
+    },
+    {
+      "name": "completion before source check",
+      "fixture": "no-change-result.json",
+      "slot": "2026-09-23T17:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": false,
+      "set": {
+        "/refresh/completed_at": "2026-09-23T17:01:00Z"
+      }
+    },
+    {
+      "name": "wrong target slot",
+      "fixture": "no-change-result.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": false
+    },
+    {
+      "name": "request not acknowledged",
+      "fixture": "no-change-result.json",
+      "slot": "2026-09-23T17:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": false,
+      "request_id": "req_missing"
+    },
+    {
+      "name": "reused content identity mismatch",
+      "fixture": "no-change-result.json",
+      "slot": "2026-09-23T17:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": false,
+      "set": {
+        "/refresh/reused_edition_id": "another_edition"
+      }
+    },
+    {
+      "name": "unchanged section without provenance",
+      "fixture": "no-change-result.json",
+      "slot": "2026-09-23T17:00:00Z",
+      "now": "2026-09-23T17:30:00Z",
+      "expected": false,
+      "delete": [
+        "/sections/news/reused_edition_id"
+      ]
+    },
+    {
+      "name": "generated content predates slot",
+      "fixture": "healthy-edition.json",
+      "slot": "2026-09-23T11:00:00Z",
+      "now": "2026-09-23T11:30:00Z",
+      "expected": false,
+      "set": {
+        "/generated_at": "2026-09-23T10:50:00Z"
+      }
+    }
+  ]
+}

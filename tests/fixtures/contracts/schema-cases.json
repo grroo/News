@@ -1,0 +1,436 @@
+{
+  "description": "Shared positive and negative JSON Schema cases; each language validates these same instances.",
+  "cases": [
+    {
+      "name": "healthy-edition validates as edition",
+      "schema": "edition",
+      "valid": true,
+      "fixture": "healthy-edition.json"
+    },
+    {
+      "name": "degraded-edition validates as edition",
+      "schema": "edition",
+      "valid": true,
+      "fixture": "degraded-edition.json"
+    },
+    {
+      "name": "provider-failure-edition validates as edition",
+      "schema": "edition",
+      "valid": true,
+      "fixture": "provider-failure-edition.json"
+    },
+    {
+      "name": "no-change-result validates as edition",
+      "schema": "edition",
+      "valid": true,
+      "fixture": "no-change-result.json"
+    },
+    {
+      "name": "archived-edition validates as edition",
+      "schema": "edition",
+      "valid": true,
+      "fixture": "archived-edition.json"
+    },
+    {
+      "name": "v2 edition requires health",
+      "schema": "edition",
+      "valid": false,
+      "fixture": "healthy-edition.json",
+      "delete": [
+        "/quality"
+      ]
+    },
+    {
+      "name": "v2 edition requires identity",
+      "schema": "edition",
+      "valid": false,
+      "fixture": "healthy-edition.json",
+      "delete": [
+        "/edition_id"
+      ]
+    },
+    {
+      "name": "v2 edition requires all sections",
+      "schema": "edition",
+      "valid": false,
+      "fixture": "healthy-edition.json",
+      "delete": [
+        "/sections/sport"
+      ]
+    },
+    {
+      "name": "unchanged section requires provenance",
+      "schema": "edition",
+      "valid": false,
+      "fixture": "no-change-result.json",
+      "delete": [
+        "/sections/news/reused_edition_id"
+      ]
+    },
+    {
+      "name": "scheduled edition requires slot",
+      "schema": "edition",
+      "valid": false,
+      "fixture": "healthy-edition.json",
+      "delete": [
+        "/scheduled_slot"
+      ]
+    },
+    {
+      "name": "invalid future timestamp format",
+      "schema": "edition",
+      "valid": false,
+      "fixture": "healthy-edition.json",
+      "set": {
+        "/generated_at": "tomorrow"
+      }
+    },
+    {
+      "name": "valid provider success",
+      "schema": "provider-result",
+      "valid": true,
+      "instance": {
+        "status": "success",
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "content": {
+          "briefing": [
+            {
+              "text": "Example factual summary.",
+              "source_ids": [
+                0
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 0,
+              "title": "Example",
+              "summary": "Short factual summary."
+            }
+          ]
+        },
+        "usage": {
+          "input_tokens": 100,
+          "cached_input_tokens": 0,
+          "output_tokens": 50,
+          "reasoning_tokens": 0,
+          "attempts": 1,
+          "est_cost_usd": 0.0001,
+          "price_table_version": "2026-09-23",
+          "unknown": false
+        }
+      }
+    },
+    {
+      "name": "valid provider failure",
+      "schema": "provider-result",
+      "valid": true,
+      "instance": {
+        "status": "failed",
+        "provider": "anthropic",
+        "model": "claude-haiku-4-5",
+        "retryable": true,
+        "error": "Provider timeout",
+        "usage": {
+          "attempts": 1,
+          "est_cost_usd": null,
+          "price_table_version": "2026-09-23",
+          "unknown": true
+        }
+      }
+    },
+    {
+      "name": "provider success requires content",
+      "schema": "provider-result",
+      "valid": false,
+      "instance": {
+        "status": "success",
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 100,
+          "cached_input_tokens": 0,
+          "output_tokens": 50,
+          "reasoning_tokens": 0,
+          "attempts": 1,
+          "est_cost_usd": 0.0001,
+          "price_table_version": "2026-09-23",
+          "unknown": false
+        }
+      }
+    },
+    {
+      "name": "provider success requires usage",
+      "schema": "provider-result",
+      "valid": false,
+      "instance": {
+        "status": "success",
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "content": {
+          "briefing": [
+            {
+              "text": "Example factual summary.",
+              "source_ids": [
+                0
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 0,
+              "title": "Example",
+              "summary": "Short factual summary."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "boolean candidate ID is invalid",
+      "schema": "provider-result",
+      "valid": false,
+      "instance": {
+        "status": "success",
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "content": {
+          "briefing": [
+            {
+              "text": "Example factual summary.",
+              "source_ids": [
+                true
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 0,
+              "title": "Example",
+              "summary": "Short factual summary."
+            }
+          ]
+        },
+        "usage": {
+          "input_tokens": 100,
+          "cached_input_tokens": 0,
+          "output_tokens": 50,
+          "reasoning_tokens": 0,
+          "attempts": 1,
+          "est_cost_usd": 0.0001,
+          "price_table_version": "2026-09-23",
+          "unknown": false
+        }
+      }
+    },
+    {
+      "name": "provider failure needs reason",
+      "schema": "provider-result",
+      "valid": false,
+      "instance": {
+        "status": "failed",
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "retryable": true
+      }
+    },
+    {
+      "name": "create response",
+      "schema": "refresh-job",
+      "valid": true,
+      "entrypoint": "createResponse",
+      "instance": {
+        "job_id": "job_01HABC",
+        "status": "accepted",
+        "status_url": "/refresh/job_01HABC",
+        "idempotency_key": "manual-20260923T170001Z",
+        "request_id": "req_20260923T170001Z_manual"
+      }
+    },
+    {
+      "name": "status response",
+      "schema": "refresh-job",
+      "valid": true,
+      "entrypoint": "statusResponse",
+      "instance": {
+        "job_id": "job_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "status": "succeeded",
+        "edition_id": "req_20260923T170001Z_manual",
+        "published_edition_id": "req_20260923T170001Z_manual"
+      }
+    },
+    {
+      "name": "limit response",
+      "schema": "refresh-job",
+      "valid": true,
+      "entrypoint": "limitResponse",
+      "instance": {
+        "error": "rate_limited",
+        "retry_after": "2026-09-23T17:16:00.000Z"
+      }
+    },
+    {
+      "name": "refresh root rejects integer",
+      "schema": "refresh-job",
+      "valid": false,
+      "instance": 42
+    },
+    {
+      "name": "create response requires request mapping",
+      "schema": "refresh-job",
+      "valid": false,
+      "entrypoint": "createResponse",
+      "instance": {
+        "job_id": "job_01HABC",
+        "status": "accepted",
+        "status_url": "/refresh/job_01HABC",
+        "idempotency_key": "manual-20260923T170001Z"
+      }
+    },
+    {
+      "name": "valid durable reservation state",
+      "schema": "reservation",
+      "valid": true,
+      "instance": {
+        "schema_version": 2,
+        "slot": "2026-09-23T17:00:00Z",
+        "phase": "dispatching",
+        "attempts": 1,
+        "daily": {
+          "rome_day": "2026-09-23",
+          "manual_count": 1,
+          "generation_count": 2
+        },
+        "reservation": {
+          "reservation_id": "res_01HABC",
+          "request_id": "req_20260923T170001Z_manual",
+          "request_ids": [
+            "req_20260923T170001Z_manual"
+          ],
+          "idempotency_key": "owner-click-01",
+          "trigger": "manual",
+          "created_at": "2026-09-23T17:01:01Z",
+          "expires_at": "2026-09-23T17:16:01Z",
+          "scope": {
+            "repository": "grroo/News",
+            "workflow": "build.yml",
+            "ref": "refs/heads/main"
+          },
+          "status": "reserved"
+        }
+      }
+    },
+    {
+      "name": "valid claim request",
+      "schema": "reservation",
+      "valid": true,
+      "entrypoint": "claimRequest",
+      "instance": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      }
+    },
+    {
+      "name": "valid claim allowance",
+      "schema": "reservation",
+      "valid": true,
+      "entrypoint": "claimResponse",
+      "instance": {
+        "decision": "allowed",
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual"
+      }
+    },
+    {
+      "name": "valid claim denial",
+      "schema": "reservation",
+      "valid": true,
+      "entrypoint": "claimResponse",
+      "instance": {
+        "decision": "denied",
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "reason": "expired"
+      }
+    },
+    {
+      "name": "dispatch state rejects empty reservation",
+      "schema": "reservation",
+      "valid": false,
+      "instance": {
+        "schema_version": 2,
+        "slot": "2026-09-23T17:00:00Z",
+        "phase": "dispatching",
+        "attempts": 1,
+        "daily": {
+          "rome_day": "2026-09-23",
+          "manual_count": 1,
+          "generation_count": 2
+        },
+        "reservation": {}
+      }
+    },
+    {
+      "name": "claim denial requires reason",
+      "schema": "reservation",
+      "valid": false,
+      "entrypoint": "claimResponse",
+      "instance": {
+        "decision": "denied",
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual"
+      }
+    },
+    {
+      "name": "claim request requires run attempt",
+      "schema": "reservation",
+      "valid": false,
+      "entrypoint": "claimRequest",
+      "instance": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      }
+    },
+    {
+      "name": "lifecycle completed status validates",
+      "schema": "refresh-job",
+      "entrypoint": "statusResponse",
+      "instance": {
+        "job_id": "job_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "status": "succeeded",
+        "edition_id": "req_20260923T170001Z_manual",
+        "published_edition_id": "req_20260923T170001Z_manual"
+      },
+      "valid": true
+    },
+    {
+      "name": "lifecycle no change status validates",
+      "schema": "refresh-job",
+      "entrypoint": "statusResponse",
+      "instance": {
+        "status": "no_change",
+        "published_edition_id": "req_20260923T110000Z_sched",
+        "request_ids": [
+          "req_20260923T170001Z_manual",
+          "req_20260923T170000Z_sched"
+        ],
+        "job_id": "job_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "edition_id": "req_20260923T110000Z_sched"
+      },
+      "valid": true
+    }
+  ]
+}

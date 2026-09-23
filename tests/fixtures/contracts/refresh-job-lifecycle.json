@@ -1,67 +1,95 @@
 {
   "description": "Representative refresh job lifecycle for Worker tests and frontend fixtures.",
-  "idempotency_key": "manual-20260923T130001Z",
-  "request_id": "req_20260923T130001Z_manual",
-  "scheduled_slot": "2026-09-23T13:00:00.000Z",
+  "idempotency_key": "manual-20260923T170001Z",
+  "request_id": "req_20260923T170001Z_manual",
+  "scheduled_slot": null,
   "transitions": [
     {
-      "at": "2026-09-23T13:01:00.000Z",
+      "at": "2026-09-23T17:01:00.000Z",
       "status": "accepted",
       "response": {
         "job_id": "job_01HABC",
         "status": "accepted",
         "status_url": "/refresh/job_01HABC",
-        "idempotency_key": "manual-20260923T130001Z"
+        "idempotency_key": "manual-20260923T170001Z",
+        "request_id": "req_20260923T170001Z_manual"
       }
     },
     {
-      "at": "2026-09-23T13:01:01.000Z",
+      "at": "2026-09-23T17:01:01.000Z",
       "status": "queued",
       "do_phase": "waiting",
       "reservation": {
-        "request_id": "req_20260923T130001Z_manual",
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "manual-20260923T170001Z",
         "trigger": "manual",
-        "scheduled_slot": "2026-09-23T13:00:00.000Z",
-        "reserved_at": "2026-09-23T13:01:01.000Z",
-        "daily_manual_count": 1,
-        "daily_generation_count": 2
+        "created_at": "2026-09-23T17:01:01.000Z",
+        "expires_at": "2026-09-23T17:16:01.000Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "reserved"
       }
     },
     {
-      "at": "2026-09-23T13:01:02.000Z",
+      "at": "2026-09-23T17:01:02.000Z",
       "status": "building",
       "do_phase": "dispatching",
-      "workflow_inputs": { "scheduled_slot": "2026-09-23T13:00:00.000Z", "mock": false, "request_id": "req_20260923T130001Z_manual" }
+      "workflow_inputs": {
+        "mock": false,
+        "request_id": "req_20260923T170001Z_manual",
+        "reservation_id": "res_01HABC"
+      }
     },
     {
-      "at": "2026-09-23T13:03:00.000Z",
+      "at": "2026-09-23T17:03:00.000Z",
       "status": "publishing",
       "do_phase": "build_in_progress",
       "run_id": 123456
     },
     {
-      "at": "2026-09-23T13:04:00.000Z",
+      "at": "2026-09-23T17:04:00.000Z",
       "status": "succeeded",
       "do_phase": "published",
-      "published_edition_id": "req_20260923T130001Z_manual",
-      "live_generated_at": "2026-09-23T13:03:45.000000+00:00"
+      "published_edition_id": "req_20260923T170001Z_manual",
+      "live_generated_at": "2026-09-23T17:03:45.000000+00:00",
+      "response": {
+        "job_id": "job_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "status": "succeeded",
+        "edition_id": "req_20260923T170001Z_manual",
+        "published_edition_id": "req_20260923T170001Z_manual"
+      }
     }
   ],
   "duplicate_request": {
-    "idempotency_key": "manual-20260923T130001Z",
+    "idempotency_key": "manual-20260923T170001Z",
     "response": {
       "job_id": "job_01HABC",
       "status": "building",
-      "status_url": "/refresh/job_01HABC"
+      "status_url": "/refresh/job_01HABC",
+      "request_id": "req_20260923T170001Z_manual"
     }
   },
   "limit_example": {
     "error": "rate_limited",
-    "retry_after": "2026-09-23T13:16:00.000Z"
+    "retry_after": "2026-09-23T17:16:00.000Z"
   },
   "no_change_example": {
     "status": "no_change",
     "published_edition_id": "req_20260923T110000Z_sched",
-    "request_ids": ["req_20260923T130001Z_manual", "req_20260923T130000Z_sched"]
+    "request_ids": [
+      "req_20260923T170001Z_manual",
+      "req_20260923T170000Z_sched"
+    ],
+    "job_id": "job_01HABC",
+    "request_id": "req_20260923T170001Z_manual",
+    "edition_id": "req_20260923T110000Z_sched"
   }
 }

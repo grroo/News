@@ -2,16 +2,31 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/grroo/News/docs/contracts/schemas/edition.json",
   "title": "Briefing edition",
-  "description": "Additive contract for data/briefing.json. Version 1 matches current production; version 2 adds health and request mapping.",
+  "description": "Legacy editions remain readable; version 2 requires health, refresh completion and request mapping.",
   "type": "object",
   "required": ["generated_at", "timezone", "schedule", "mode", "sections"],
   "properties": {
     "schema_version": { "type": "integer", "enum": [1, 2], "default": 1 },
-    "edition_id": { "type": "string", "description": "Stable id for this edition; equals request_id of the generating job when present." },
+    "edition_id": { "type": "string", "minLength": 1, "description": "Stable identity of content; unchanged refreshes retain it." },
     "generated_at": { "type": "string", "format": "date-time" },
     "generated_local": { "type": "string" },
     "checked_at": { "type": "string", "format": "date-time", "description": "Last scheduler/client inspection time; does not imply new content." },
     "source_checked_at": { "type": "string", "format": "date-time" },
+    "refresh": {
+      "type": "object",
+      "required": ["outcome", "completed_at"],
+      "properties": {
+        "outcome": { "type": "string", "enum": ["generated", "no_change"] },
+        "completed_at": { "type": "string", "format": "date-time" },
+        "reused_edition_id": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "outcome": { "const": "no_change" } }, "required": ["outcome"] },
+          "then": { "required": ["reused_edition_id"] }
+        }
+      ]
+    },
     "timezone": { "type": "string" },
     "schedule": {
       "type": "object",
@@ -26,14 +41,16 @@
     "trigger": { "type": "string", "enum": ["scheduled", "manual", "push", "workflow_dispatch"] },
     "request_ids": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1,
+      "uniqueItems": true,
       "description": "All refresh requests coalesced into this edition."
     },
     "scheduled_slot": { "type": "string", "format": "date-time" },
     "quality": {
       "type": "object",
       "properties": {
-        "overall": { "type": "string", "enum": ["healthy", "degraded", "failed", "unchanged", "mock"] }
+        "overall": { "type": "string", "enum": ["healthy", "degraded", "failed", "mock"] }
       }
     },
     "mode": { "type": "string", "enum": ["llm", "mock"] },
@@ -46,6 +63,8 @@
         "type": "object",
         "properties": {
           "state": { "type": "string", "enum": ["healthy", "degraded", "failed", "skipped", "unchanged"] },
+          "reused_edition_id": { "type": "string", "minLength": 1 },
+          "input_fingerprint": { "type": "string", "minLength": 1 },
           "source_checked_at": { "type": "string", "format": "date-time" },
           "last_success_at": { "type": "string", "format": "date-time" },
           "briefing": {},
@@ -54,8 +73,38 @@
           "new_count": { "type": "integer" },
           "reviewed_count": { "type": "integer" },
           "error": { "type": "string" }
-        }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "state": { "const": "unchanged" } }, "required": ["state"] },
+            "then": { "required": ["reused_edition_id", "last_success_at", "input_fingerprint"] }
+          }
+        ]
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "schema_version": { "const": 2 } }, "required": ["schema_version"] },
+      "then": {
+        "required": ["edition_id", "source_checked_at", "trigger", "request_ids", "quality", "refresh"],
+        "properties": {
+          "quality": { "required": ["overall"] },
+          "sections": {
+            "required": ["news", "sport", "finance", "media"],
+            "properties": {
+              "news": { "required": ["state", "items"] },
+              "sport": { "required": ["state", "items"] },
+              "finance": { "required": ["state", "items"] },
+              "media": { "required": ["state", "items"] }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "schema_version": { "const": 2 }, "trigger": { "const": "scheduled" } }, "required": ["schema_version", "trigger"] },
+      "then": { "required": ["scheduled_slot"] }
+    }
+  ]
 }
