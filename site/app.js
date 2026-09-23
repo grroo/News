@@ -134,7 +134,7 @@
     ${healthHTML(b)}
     <footer>
       <span><a href="#/past">Past briefings</a></span>
-      <span>${b.mode === 'mock' ? 'mock mode · ' : ''}${b.usage?.calls ? `this run $${b.usage.est_cost_usd.toFixed(3)} · ≈$${b.usage.est_month_usd}/mo · ` : ''}${esc((b.model || '').replace('claude-', ''))}</span>
+      <span>${b.mode === 'mock' ? 'mock mode · ' : ''}${esc(refresh.formatUsageLine(b.usage))}${esc((b.model || '').replace('claude-', ''))}</span>
     </footer></div>`;
 
   const card = it => `
@@ -155,16 +155,21 @@
     return `<div class="brief ${mock ? 'mock' : ''}" style="--c:var(--${s})">${body}</div>`;
   };
 
-  const tickers = (rows, caption) => rows?.length ? `
+  const tickers = (rows, caption) => {
+    if (!rows?.length) return '';
+    const showQuoteTimes = rows.some(r => r.as_of);
+    return `
     ${caption ? `<p class="tick-caption">${esc(caption)}</p>` : ''}
     <table class="tick" aria-label="Market quotes">
-      <thead><tr><th scope="col">Instrument</th><th scope="col">Price</th><th scope="col">Day change</th></tr></thead>
+      <thead><tr><th scope="col">Instrument</th><th scope="col">Price</th><th scope="col">Day change</th>${showQuoteTimes ? '<th scope="col">Quote time</th>' : ''}</tr></thead>
       <tbody>${rows.map(r => {
       const p = r.change_pct, cls = p == null ? '' : p >= 0 ? 'up' : 'down';
       return `<tr><td>${esc(r.label)}<span class="sym">${esc(r.symbol)}</span></td>
         <td class="num">${r.price != null ? r.price.toLocaleString(undefined, { maximumFractionDigits: 2 }) : '—'}${r.currency ? ` <span class="sym">${esc(r.currency)}</span>` : ''}</td>
-        <td class="num ${cls}">${p == null ? '—' : (p > 0 ? '+' : '') + p.toFixed(2) + '%'}</td></tr>`;
-    }).join('')}</tbody></table>` : '';
+        <td class="num ${cls}">${p == null ? '—' : (p > 0 ? '+' : '') + p.toFixed(2) + '%'}</td>
+        ${showQuoteTimes ? `<td class="num sym">${r.as_of ? esc(refresh.formatShortTime(r.as_of)) : '—'}</td>` : ''}</tr>`;
+    }).join('')}</tbody></table>`;
+  };
 
   const section = (b, s) => {
     const sec = b.sections[s] || { items: [] };

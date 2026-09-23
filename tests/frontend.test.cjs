@@ -57,18 +57,37 @@ test('buildOwnerUrl includes return link', () => {
 test('sectionAgeNote covers stale and unchanged sections', () => {
   const sport = degraded.sections.sport;
   const note = BriefingRefresh.sectionAgeNote(sport, degraded);
-  assert.match(note, /Carried forward|updated/i);
+  assert.match(note, /Carried forward from/i);
+  assert.match(note, /Provider timeout/i);
+  assert.match(note, /11:01|Sep/i);
   const unchanged = BriefingRefresh.sectionAgeNote(noChange.sections.news, noChange);
   assert.match(unchanged, /Unchanged/i);
 });
 
-test('financeCaption distinguishes quote and briefing times', () => {
-  const caption = BriefingRefresh.financeCaption(
-    { quote_checked_at: '2026-09-23T17:04:00.000Z' },
-    { generated_at: '2026-09-23T17:05:00.000Z' },
-  );
+test('financeCaption uses ticker as_of, not source_checked_at', () => {
+  const section = {
+    source_checked_at: '2026-09-23T17:04:30.000000+00:00',
+    tickers: [
+      { as_of: '2026-09-22T22:00:00+00:00' },
+      { as_of: '2026-09-23T00:00:00+00:00' },
+    ],
+  };
+  const caption = BriefingRefresh.financeCaption(section, { generated_at: '2026-09-23T17:05:00.000Z' });
   assert.match(caption, /Quotes/i);
+  assert.doesNotMatch(caption, /17:04/);
   assert.match(caption, /briefing/i);
+  assert.deepEqual(
+    BriefingRefresh.quoteTimesFromTickers(section.tickers),
+    ['2026-09-22T22:00:00+00:00', '2026-09-23T00:00:00+00:00'],
+  );
+});
+
+test('formatUsageLine handles null estimates with positive calls', () => {
+  const failure = load('provider-failure-edition.json');
+  assert.equal(failure.usage.calls, 3);
+  assert.equal(failure.usage.est_cost_usd, null);
+  assert.equal(BriefingRefresh.formatUsageLine(failure.usage), 'cost unavailable · ');
+  assert.doesNotThrow(() => BriefingRefresh.formatUsageLine(failure.usage));
 });
 
 test('storage falls back to memory when localStorage throws', () => {

@@ -99,20 +99,41 @@ var BriefingRefresh = (() => {
     const last = section.last_success_at;
     if (!last || !state || state === 'healthy' || state === 'skipped') return '';
     if (state === 'unchanged') return `Unchanged since ${formatShortTime(last)}`;
-    if (state === 'degraded' && section.error) return `Carried forward — ${section.error}`;
+    if (state === 'degraded' && section.error) {
+      return `Carried forward from ${formatShortTime(last)} — ${section.error}`;
+    }
     if (state === 'degraded' || state === 'failed') {
       return `Section last updated ${formatShortTime(last)}`;
     }
     return '';
   };
 
+  const quoteTimesFromTickers = tickers => {
+    if (!Array.isArray(tickers)) return [];
+    return [...new Set(tickers.map(t => t?.as_of).filter(Boolean))].sort();
+  };
+
   const financeCaption = (section, briefing) => {
     if (!briefing) return '';
-    const quoteAt = section?.quote_checked_at || section?.source_checked_at || briefing.source_checked_at;
+    const times = quoteTimesFromTickers(section?.tickers);
     const briefAt = briefing.generated_at;
-    if (!quoteAt) return briefAt ? `Briefing ${formatShortTime(briefAt)}` : '';
-    if (!briefAt || quoteAt === briefAt) return `Quotes ${formatShortTime(quoteAt)}`;
-    return `Quotes ${formatShortTime(quoteAt)} · briefing ${formatShortTime(briefAt)}`;
+    if (!times.length) return briefAt ? `Briefing ${formatShortTime(briefAt)}` : '';
+    const quoteLabel = times.length === 1
+      ? `Quotes ${formatShortTime(times[0])}`
+      : `Quotes ${formatShortTime(times[0])}–${formatShortTime(times[times.length - 1])}`;
+    if (!briefAt) return quoteLabel;
+    return `${quoteLabel} · briefing ${formatShortTime(briefAt)}`;
+  };
+
+  const finiteAmount = value => (typeof value === 'number' && Number.isFinite(value)) ? value : null;
+
+  const formatUsageLine = usage => {
+    if (!usage?.calls) return '';
+    const run = finiteAmount(usage.est_cost_usd);
+    const month = finiteAmount(usage.est_month_usd);
+    if (run != null && month != null) return `this run $${run.toFixed(3)} · ≈$${month}/mo · `;
+    if (run != null) return `this run $${run.toFixed(3)} · `;
+    return 'cost unavailable · ';
   };
 
   class FetchPoller {
@@ -254,7 +275,10 @@ var BriefingRefresh = (() => {
     buildOwnerUrl,
     resolveStatusUrl,
     sectionAgeNote,
+    quoteTimesFromTickers,
     financeCaption,
+    formatUsageLine,
+    formatShortTime,
     FetchPoller,
     startFetchPoll,
     getActivePoller,
