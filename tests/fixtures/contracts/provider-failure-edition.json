@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "edition_id": "req_20260923T170000Z_fail",
+  "generated_at": "2026-09-23T17:08:00.000000+00:00",
+  "generated_local": "Wed 23 Sep 2026, 19:08",
+  "source_checked_at": "2026-09-23T17:07:30.000000+00:00",
+  "timezone": "Europe/Rome",
+  "schedule": {
+    "timezone": "Europe/Rome",
+    "hours": [7, 13, 19],
+    "minute": 0,
+    "grace_minutes": 45
+  },
+  "trigger": "scheduled",
+  "request_ids": ["req_20260923T170000Z_fail"],
+  "scheduled_slot": "2026-09-23T17:00:00.000Z",
+  "quality": { "overall": "failed" },
+  "mode": "llm",
+  "model": "claude-sonnet-4-6",
+  "feed_health": [],
+  "usage": {
+    "calls": 3,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "est_cost_usd": 0,
+    "est_month_usd": 0
+  },
+  "sections": {
+    "news": {
+      "state": "failed",
+      "error": "Anthropic API 503: service unavailable",
+      "briefing": "Summary unavailable. Showing recent articles instead.",
+      "items": [],
+      "candidate_count": 40,
+      "new_count": 0,
+      "reviewed_count": 0
+    },
+    "sport": {
+      "state": "failed",
+      "error": "Anthropic API 503: service unavailable",
+      "briefing": "Summary unavailable. Showing recent articles instead.",
+      "items": [],
+      "candidate_count": 35,
+      "new_count": 0,
+      "reviewed_count": 0
+    },
+    "finance": {
+      "state": "failed",
+      "error": "Anthropic API 503: service unavailable",
+      "briefing": "Summary unavailable. Showing recent articles instead.",
+      "items": [],
+      "tickers": [],
+      "candidate_count": 30,
+      "new_count": 0,
+      "reviewed_count": 0
+    },
+    "media": {
+      "state": "skipped",
+      "briefing": "",
+      "items": [],
+      "candidate_count": 12,
+      "new_count": 3,
+      "reviewed_count": 0
+    }
+  }
+}

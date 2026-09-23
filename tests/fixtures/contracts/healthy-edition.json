@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "edition_id": "req_20260923T110000Z_sched",
+  "generated_at": "2026-09-23T11:01:17.817774+00:00",
+  "generated_local": "Wed 23 Sep 2026, 13:01",
+  "source_checked_at": "2026-09-23T11:00:45.000000+00:00",
+  "timezone": "Europe/Rome",
+  "schedule": {
+    "timezone": "Europe/Rome",
+    "hours": [7, 13, 19],
+    "minute": 0,
+    "grace_minutes": 45
+  },
+  "trigger": "scheduled",
+  "request_ids": ["req_20260923T110000Z_sched"],
+  "scheduled_slot": "2026-09-23T11:00:00.000Z",
+  "quality": { "overall": "healthy" },
+  "mode": "llm",
+  "model": "claude-sonnet-4-6",
+  "feed_health": [
+    { "name": "BBC World", "section": "news", "status": "ok", "item_count": 27, "reason": null }
+  ],
+  "usage": {
+    "calls": 3,
+    "input_tokens": 13795,
+    "output_tokens": 2479,
+    "est_cost_usd": 0.0786,
+    "est_month_usd": 7.07
+  },
+  "sections": {
+    "news": {
+      "state": "healthy",
+      "source_checked_at": "2026-09-23T11:00:45.000000+00:00",
+      "last_success_at": "2026-09-23T11:01:10.000000+00:00",
+      "briefing": [
+        {
+          "text": "Example healthy bullet with citation.",
+          "sources": [
+            {
+              "key": "abc123",
+              "title": "Example story",
+              "url": "https://example.com/story",
+              "source": "BBC World",
+              "via": null
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "key": "abc123",
+          "title": "Example story",
+          "url": "https://example.com/story",
+          "source": "BBC World",
+          "summary": "Short summary.",
+          "published": "2026-09-23T10:30:00+00:00",
+          "new": true
+        }
+      ],
+      "candidate_count": 40,
+      "new_count": 5,
+      "reviewed_count": 40
+    },
+    "sport": {
+      "state": "healthy",
+      "last_success_at": "2026-09-23T11:01:12.000000+00:00",
+      "briefing": [],
+      "items": [],
+      "candidate_count": 35,
+      "new_count": 2,
+      "reviewed_count": 35
+    },
+    "finance": {
+      "state": "healthy",
+      "last_success_at": "2026-09-23T11:01:15.000000+00:00",
+      "briefing": [],
+      "items": [],
+      "tickers": [],
+      "candidate_count": 30,
+      "new_count": 1,
+      "reviewed_count": 30
+    },
+    "media": {
+      "state": "skipped",
+      "briefing": "",
+      "items": [],
+      "candidate_count": 12,
+      "new_count": 3,
+      "reviewed_count": 0
+    }
+  }
+}

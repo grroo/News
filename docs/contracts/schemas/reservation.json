@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/grroo/News/docs/contracts/schemas/reservation.json",
+  "title": "Durable Object reservation and scheduler state",
+  "type": "object",
+  "required": ["slot", "phase", "attempts"],
+  "properties": {
+    "slot": { "type": "string", "format": "date-time", "description": "Latest due Rome slot in UTC ISO." },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "due",
+        "waiting",
+        "dispatching",
+        "dispatched",
+        "build_in_progress",
+        "published",
+        "needs_github_secret",
+        "attention_needed",
+        "check_failed"
+      ]
+    },
+    "attempts": { "type": "integer", "minimum": 0 },
+    "nextAttempt": { "type": "number", "description": "Unix ms; cooldown before retry." },
+    "checkedAt": { "type": "string", "format": "date-time" },
+    "liveGeneratedAt": { "type": "string", "format": "date-time" },
+    "runId": { "type": ["integer", "null"] },
+    "error": { "type": ["string", "null"] },
+    "reservation": {
+      "type": "object",
+      "description": "Shared gate persisted before external dispatch.",
+      "properties": {
+        "request_id": { "type": "string" },
+        "idempotency_key": { "type": "string" },
+        "trigger": { "type": "string", "enum": ["scheduled", "manual", "workflow_dispatch"] },
+        "scheduled_slot": { "type": "string", "format": "date-time" },
+        "reserved_at": { "type": "string", "format": "date-time" },
+        "daily_manual_count": { "type": "integer", "minimum": 0 },
+        "daily_generation_count": { "type": "integer", "minimum": 0 },
+        "cooldown_until": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

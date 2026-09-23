@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/grroo/News/docs/contracts/schemas/refresh-job.json",
+  "title": "Refresh job API",
+  "description": "Worker POST /refresh and GET /refresh/:id status shapes.",
+  "definitions": {
+    "jobStatus": {
+      "type": "string",
+      "enum": ["accepted", "queued", "building", "publishing", "succeeded", "no_change", "degraded", "failed", "expired"]
+    },
+    "createResponse": {
+      "type": "object",
+      "required": ["job_id", "status", "status_url"],
+      "properties": {
+        "job_id": { "type": "string" },
+        "status": { "$ref": "#/definitions/jobStatus" },
+        "status_url": { "type": "string" },
+        "idempotency_key": { "type": "string" }
+      }
+    },
+    "statusResponse": {
+      "type": "object",
+      "required": ["job_id", "status"],
+      "properties": {
+        "job_id": { "type": "string" },
+        "status": { "$ref": "#/definitions/jobStatus" },
+        "request_id": { "type": "string" },
+        "edition_id": { "type": "string" },
+        "published_edition_id": { "type": "string", "description": "Exact edition now live on Pages for this request." },
+        "scheduled_slot": { "type": "string", "format": "date-time" },
+        "retry_after": { "type": "string", "format": "date-time" },
+        "error": { "type": "string" }
+      }
+    },
+    "limitResponse": {
+      "type": "object",
+      "required": ["error", "retry_after"],
+      "properties": {
+        "error": { "type": "string", "enum": ["rate_limited", "daily_limit", "concurrent_job"] },
+        "retry_after": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

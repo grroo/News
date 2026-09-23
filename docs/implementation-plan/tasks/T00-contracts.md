@@ -12,3 +12,11 @@ Define which state is authoritative in the Durable Object versus persisted pipel
 
 Acceptance: existing Python/JS tests pass; representative fixture output remains equivalent before behavior changes; shared examples are usable by both Python and Worker tests; every downstream task has file ownership and exact interfaces. Astra reviews only the contract, state machine, auth boundary and rollback compatibility, returning blocking issues or approval. Freeze/merge this prerequisite before downstream agents branch. Do not ask Astra to implement extraction or formatting.
 
+## Deliverables (merged location)
+
+- Contract docs: `docs/contracts/` (README + JSON schemas)
+- Shared fixtures: `tests/fixtures/contracts/`
+- Contract tests: `tests/test_contracts.py`, `tests/contracts.test.cjs`
+- Extracted modules: `scripts/llm_provider.py`, `scripts/ingestion.py`, `scripts/prices.py`, `scripts/selection.py` (import paths preserved via `build.py` re-exports)
+- Plan docs: `docs/implementation-plan/`
+

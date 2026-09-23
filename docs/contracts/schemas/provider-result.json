@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/grroo/News/docs/contracts/schemas/provider-result.json",
+  "title": "Normalized provider result",
+  "type": "object",
+  "required": ["status", "provider", "model"],
+  "properties": {
+    "status": { "type": "string", "enum": ["success", "failed"] },
+    "retryable": { "type": "boolean" },
+    "provider": { "type": "string", "enum": ["anthropic", "openai"] },
+    "model": { "type": "string" },
+    "content": {
+      "type": "object",
+      "description": "Normalized section payload: briefing bullets and selected items."
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "input_tokens": { "type": "integer", "minimum": 0 },
+        "cached_input_tokens": { "type": "integer", "minimum": 0 },
+        "output_tokens": { "type": "integer", "minimum": 0 },
+        "reasoning_tokens": { "type": "integer", "minimum": 0 },
+        "attempts": { "type": "integer", "minimum": 1 },
+        "est_cost_usd": { "type": ["number", "null"] },
+        "price_table_version": { "type": "string" },
+        "unknown": { "type": "boolean", "description": "True when the call timed out before usage was reported." }
+      }
+    },
+    "error": { "type": "string" }
+  }
+}
