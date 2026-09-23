@@ -152,5 +152,42 @@ class EditorialSelectionTests(unittest.TestCase):
         self.assertTrue(all("topic:" in row["selection_reason"] for row in first))
 
 
+class DedupeEntityTests(unittest.TestCase):
+    def test_distinct_insurers_stay_separate(self):
+        zurich = item(1, "Reuters", title="Zurich Insurance raises 2026 outlook")
+        allianz = item(2, "Reuters", title="Allianz Insurance raises 2026 outlook")
+        kept = selection._collapse_duplicates([zurich, allianz])
+        self.assertEqual(len(kept), 2)
+
+    def test_distinct_fixtures_stay_separate(self):
+        marseille = item(3, "L'Équipe", title="PSG - Marseille preview")
+        lyon = item(4, "L'Équipe", title="PSG - Lyon preview")
+        kept = selection._collapse_duplicates([marseille, lyon])
+        self.assertEqual(len(kept), 2)
+
+    def test_genuine_syndicated_copy_collapses(self):
+        direct = item(5, "Reuters", title="ECB holds rates steady")
+        wire = item(6, "Reuters", title="ECB holds rates steady - Reuters", via="Google News")
+        kept = selection._collapse_duplicates([direct, wire])
+        self.assertEqual(len(kept), 1)
+        self.assertEqual(kept[0]["title"], "ECB holds rates steady")
+
+    def test_google_copy_with_team_suffix_collapses(self):
+        direct = item(7, "CulturePSG", title="PSG beat Marseille 2-1")
+        google = item(8, "CulturePSG", title="PSG beat Marseille 2-1 - CulturePSG", via="Google News")
+        kept = selection._collapse_duplicates([google, direct])
+        self.assertEqual(len(kept), 1)
+
+
+class FingerprintHandoffTests(unittest.TestCase):
+    def test_fingerprint_fields_include_mode_version_and_order(self):
+        rows = [item(1, title="ECB rates"), item(2, title="France budget")]
+        cfg = {"editorial_selection": True, "selection": {"publisher_cap": 6}}
+        payload = selection.selection_fingerprint_fields(cfg, "news", rows)
+        self.assertEqual(payload["selection_mode"], "editorial")
+        self.assertEqual(payload["selection_version"], selection.SELECTION_VERSION)
+        self.assertEqual(payload["candidate_order"], [row["key"] for row in rows])
+
+
 if __name__ == "__main__":
     unittest.main()
