@@ -1,4 +1,5 @@
 import json
+import os
 import subprocess
 import sys
 import unittest
@@ -17,6 +18,9 @@ from evals.checks import (  # noqa: E402
 )
 from evals.prompts import build_prompts  # noqa: E402
 from evals.run import estimate_cost, load_case, validate_cases  # noqa: E402
+
+HAIKU = {"id": "haiku", "provider": "anthropic", "model": "claude-haiku-4-5"}
+LUNA = {"id": "luna-none", "provider": "openai", "model": "gpt-6-luna", "reasoning_effort": "none"}
 
 
 class EvalChecksTests(unittest.TestCase):
@@ -74,10 +78,45 @@ class EvalHarnessTests(unittest.TestCase):
 
     def test_build_prompts_includes_candidates(self):
         case = load_case("c005")
-        system, user, count = build_prompts(case)
-        self.assertIn("SECTION: news", user)
-        self.assertEqual(count, len(case["candidates"]))
-        self.assertIn("English", system)
+        built = build_prompts(case, HAIKU)
+        self.assertIn("SECTION: news", built["user_prompt"])
+        self.assertEqual(built["candidate_count"], len(case["candidates"]))
+        self.assertIn("English", built["system_prompt_sent"])
+
+    def test_luna_prompt_matches_production_request_builder(self):
+        case = load_case("c001")
+        built = build_prompts(case, LUNA)
+        self.assertIn("JSON object", built["system_prompt_sent"])
+        self.assertNotIn("calling the submit_briefing tool", built["system_prompt_sent"])
+        self.assertEqual(built["request_body"]["instructions"], built["system_prompt_sent"])
+        self.assertNotEqual(built["system_prompt_base"], built["system_prompt_sent"])
+
+    def test_live_run_requires_credentials(self):
+        env = os.environ.copy()
+        env.pop("ANTHROPIC_API_KEY", None)
+        env.pop("OPENAI_API_KEY", None)
+        env["EVAL_LIVE"] = "1"
+        proc = subprocess.run(
+            [sys.executable, str(ROOT / "evals/run.py"), "--live", "--case", "c001", "--profile", "haiku", "--profile", "luna-none", "--output", str(ROOT / "evals/runs/test-missing-creds")],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            env=env,
+        )
+        self.assertEqual(proc.returncode, 2, proc.stdout + proc.stderr)
+        self.assertIn("Missing credentials", proc.stderr)
+
+    def test_dry_run_marks_non_live_status(self):
+        proc = subprocess.run(
+            [sys.executable, str(ROOT / "evals/run.py"), "--case", "c001", "--profile", "haiku", "--output", str(ROOT / "evals/runs/test-dry")],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(proc.returncode, 0, proc.stderr)
+        summary = json.loads(next((ROOT / "evals/runs/test-dry").glob("*/summary.json")).read_text())
+        self.assertEqual(summary["status"], "dry_run")
+        self.assertFalse(summary["live"])
 
     def test_estimate_cost_for_default_matrix(self):
         manifest = json.loads((ROOT / "evals/manifest.json").read_text())

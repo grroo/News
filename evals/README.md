@@ -29,13 +29,15 @@ export EVAL_LIVE=1
 python evals/run.py --live --profile haiku --profile luna-none --case c001
 ```
 
-Default budget cap: **$0.75** (`manifest.json`). The harness refuses to start when the heuristic estimate exceeds the cap.
+Default budget cap: **$0.75** (`manifest.json`). The harness refuses to start when credentials are missing, when the pre-run estimate exceeds the cap, or when recorded spend reaches the cap mid-run. Live runs exit nonzero unless every planned call succeeds (`status: complete` in `summary.json`).
 
 **Do not** run routine production dual-generation. Live quality comparison belongs here, not in `build.py`.
 
 ## Case matrix
 
-Twenty section-level snapshots in `evals/cases/` cover news, sport and finance with English, French and Italian sources, quiet/busy/sparse windows, CulturePSG preference edges, and injection-like candidate text.
+Twenty **section-level** snapshots in `evals/cases/` compose into twenty grouped **editions** in `manifest.json` (`e01`–`e20`, each with news/sport/finance). Mechanical replay uses section cases; a model-switch decision still requires a paid paired live run plus blinded quality review (`quality_status: unverified`).
+
+Replay bundles store the **provider-specific prompt actually sent** (`system_prompt_sent` and redacted `request_body`), not the Anthropic tool instruction alone.
 
 | Profile | Provider | Model | Notes |
 |---|---|---|---|
