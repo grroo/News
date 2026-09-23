@@ -1,0 +1,31 @@
+{
+  "case_id": "c008",
+  "profile_id": "haiku",
+  "result": {
+    "status": "success",
+    "provider": "anthropic",
+    "model": "claude-haiku-4-5",
+    "content": {
+      "briefing": [
+        {"text": "PSG prepare for a busy week with rotation questions.", "source_ids": [0]},
+        {"text": "Ligue 1 title race remains tight after the weekend.", "source_ids": [2]},
+        {"text": "French national teams announce squad updates.", "source_ids": [1]}
+      ],
+      "items": [
+        {"id": 0, "title": "PSG press conference highlights", "summary": "Coach comments on upcoming Ligue 1 fixture."},
+        {"id": 1, "title": "PSG training session notes", "summary": "Squad rotation hints before midweek match."},
+        {"id": 2, "title": "Ligue 1 roundup", "summary": "Summary of weekend Ligue 1 results."}
+      ]
+    },
+    "usage": {
+      "input_tokens": 4200,
+      "output_tokens": 780,
+      "attempts": 1,
+      "est_cost_usd": null,
+      "price_table_version": "unpriced",
+      "unknown": false
+    },
+    "latency_ms": 1800,
+    "provider_request_ids": ["msg_fixture"]
+  }
+}

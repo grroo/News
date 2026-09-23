@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "description": "Twenty section-level snapshots for Haiku vs Luna comparison on identical preselection.",
+  "prompt_policy_version": "2026-09-23-v1",
+  "live_budget_usd": 0.75,
+  "cost_note": "Twenty paired full editions (3 sections each, both providers) project to about $0.58 before retries/judging.",
+  "profiles": [
+    {
+      "id": "haiku",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5"
+    },
+    {
+      "id": "luna-none",
+      "provider": "openai",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "none"
+    },
+    {
+      "id": "luna-low",
+      "provider": "openai",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "case_ids": [
+        "c014",
+        "c019"
+      ]
+    }
+  ],
+  "case_ids": [
+    "c001",
+    "c002",
+    "c003",
+    "c004",
+    "c005",
+    "c006",
+    "c007",
+    "c008",
+    "c009",
+    "c010",
+    "c011",
+    "c012",
+    "c013",
+    "c014",
+    "c015",
+    "c016",
+    "c017",
+    "c018",
+    "c019",
+    "c020"
+  ]
+}
