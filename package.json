@@ -2,7 +2,8 @@
   "name": "news-contract-tests",
   "private": true,
   "scripts": {
-    "test:contracts": "node --test tests/contracts.test.cjs"
+    "test:contracts": "node --test tests/contracts.test.cjs",
+    "test:frontend": "node --test tests/freshness.test.cjs tests/frontend.test.cjs"
   },
   "devDependencies": {
     "ajv": "8.17.1",
