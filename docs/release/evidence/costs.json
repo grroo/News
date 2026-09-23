@@ -1,0 +1,48 @@
+{
+  "review_date": "2026-09-23",
+  "commit": "5aad7f4c4b5083b7525311307b96a0d3f9115c9d",
+  "mean_input_tokens": 13795.285714285714,
+  "mean_output_tokens": 2479,
+  "estimates": {
+    "claude-haiku-4-5": {
+      "usd_per_full_build": 0.026190285714285715,
+      "usd_per_30_day_month": {
+        "3_runs_per_day": 2.357125714285714,
+        "4_runs_per_day": 3.1428342857142852,
+        "6_runs_per_day": 4.714251428571428,
+        "8_runs_per_day": 6.2856685714285705,
+        "13_runs_per_day": 10.214211428571428
+      }
+    },
+    "gpt-6-luna": {
+      "usd_per_full_build": 0.0026190285714285714,
+      "usd_per_30_day_month": {
+        "3_runs_per_day": 0.2357125714285714,
+        "4_runs_per_day": 0.3142834285714286,
+        "6_runs_per_day": 0.4714251428571428,
+        "8_runs_per_day": 0.6285668571428572,
+        "13_runs_per_day": 1.021421142857143
+      }
+    },
+    "gpt-5.6-luna": {
+      "usd_per_full_build": 0.005733857142857143,
+      "usd_per_30_day_month": {
+        "3_runs_per_day": 0.5160471428571428,
+        "4_runs_per_day": 0.6880628571428572,
+        "6_runs_per_day": 1.0320942857142856,
+        "8_runs_per_day": 1.3761257142857144,
+        "13_runs_per_day": 2.236204285714286
+      }
+    }
+  },
+  "assumptions": [
+    "Same token volume across models for comparison, not measured Luna usage",
+    "Standard uncached short-context pricing; no cache writes, discounts, regional uplift, taxes, infrastructure, or retries included",
+    "All three AI sections are regenerated per full build"
+  ],
+  "status": "historical Haiku sample; same-volume Luna projection is UNVERIFIED",
+  "measured_luna_cost_usd": null,
+  "measured_luna_latency_ms": null,
+  "evaluation_live_authorized": false,
+  "t08_default_matrix_estimate_usd": 0.1942
+}

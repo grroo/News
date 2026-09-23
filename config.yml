@@ -9,6 +9,7 @@ language: English            # language of the LLM-written briefings/summaries
 # Rollback is provider anthropic + the model below. Luna is provider openai + gpt-6-luna.
 provider: anthropic
 model: claude-haiku-4-5
+editorial_selection: false # T09 tests cache integration; editorial evaluation still pending
 provider_max_attempts: 2     # includes the first call; the provider owns this retry loop
 provider_timeout_seconds: 120
 prompt_version: 1

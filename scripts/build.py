@@ -50,7 +50,7 @@ from pipeline import (  # noqa: E402
     validate_config,
 )
 from section_cache import GitFeedCache, fingerprint, load_sections, save_sections  # noqa: E402
-from usage_ledger import ledger, section_usage  # noqa: E402
+from usage_ledger import ledger, record_run, section_usage  # noqa: E402
 from prices import price_moves  # noqa: E402
 from selection import (  # noqa: E402
     canonical_url,
@@ -532,6 +532,11 @@ def main():
         feed_cache.save()
         return
     rotate_past(cfg, now, archive_live=outcome == "generated" and OUT_PATH.exists())
+    if not args.mock:
+        run_id = f"{os.environ.get('GITHUB_RUN_ID', current_request)}:{os.environ.get('GITHUB_RUN_ATTEMPT', '1')}"
+        edition["usage"]["recorded_month_to_date"] = record_run(
+            DATA_DIR / "usage-history.json", run_id, checked_at, edition["usage"],
+        )
     text = json.dumps(edition, ensure_ascii=False, indent=1, allow_nan=False)
     atomic_write(OUT_PATH, text)
     if not args.mock:

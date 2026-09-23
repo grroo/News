@@ -1,138 +1,71 @@
 # Personal briefing
 
-A static, phone-first news briefing that updates three times a day (07:00, 13:00, 19:00 Europe/Rome) and replaces doom-scrolling. Four squares — **News · Sport · Finance · Media** — each with a short LLM-written briefing and a handful of selected items linking to the originals.
+A static, phone-first News · Sport · Finance · Media briefing, scheduled for **07:00, 13:00 and 19:00 Europe/Rome**. Python collects public feeds and quotes, selects candidates and asks a provider for structured, cited summaries. GitHub Actions commits data and GitHub Pages serves it. A Cloudflare Worker checks publication and provides a gated owner-refresh service.
 
-- No recommendation algorithm. Selection is done by Claude reading the plain-text `interests` you write in `config.yml`.
-- Only public RSS/Atom feeds and public APIs. Nothing behind paywalls or logins.
-- GitHub Actions builds `data/briefing.json`; GitHub Pages serves it. Read state lives in your browser's localStorage.
-- One config file. You never touch code to change what it covers.
+Production remains **Claude Haiku 4.5**. Luna, protected manual refresh and editorial ranking are separate release gates. The [T09 candidate evidence](docs/release/T09-candidate.md) records completed checks and outstanding blockers; the [staged rollout runbook](docs/operations/T09-rollout.md) is prepared but not executed.
 
-```
-config.yml                     ← everything you edit
-scripts/build.py               ← fetch → dedupe → Claude (1 call per section) → data/briefing.json
-scripts/feeds.py               ← tiny stdlib RSS/Atom parser
-scripts/youtube_channel_id.py  ← channel URL → channel_id
-scripts/find_podcast_rss.py    ← show name → RSS url
-site/index.html                ← page layout and styles (no framework)
-site/app.js                    ← views, source links, read tracking, refresh
-site/freshness.js              ← timezone-aware update status
-data/briefing.json             ← current briefing (+ data/past/ keeps the last 6)
-.github/workflows/build.yml    ← build + deploy; GitHub cron retained during migration
-schedule.json                 ← Rome update times used by the site and scheduler
-cloudflare/news-scheduler/     ← Cloudflare cron, publication checks, bounded retries
-tests/                         ← offline fixtures for a network-free test run
-```
+## Reading and refresh
 
-## Deploy in 10 minutes
+- **Check for updates** reloads the latest published JSON. It makes no AI call. Visible pages also check periodically and on return from the background.
+- **Fetch new briefing**, once enabled, opens the verified Access-protected owner page. Only its explicit authenticated POST requests paid work. The link is disabled until the real hostname and Access policy are proven.
+- Accepted refreshes can return new content, no change, degraded content or failure. Completion requires the exact request ID in live Pages; a successful workflow or unrelated newer edition is insufficient. Coalesced clicks share one publication identity.
+- Limits are one active generation, 15-minute manual cooldown, five manual reservations and eight total generations per Rome day, with capacity retained for remaining scheduled slots. Retries count; a no-change result still used its reservation, but can avoid model calls.
 
-1. **Create the repo.** Push this folder to a new GitHub repository (public or private — Pages works on private repos with GitHub Pro/Team; on a free account use a public repo). Default branch must be `main`.
+## What the timestamps mean
 
-2. **Add the API key secret.** Repo → *Settings → Secrets and variables → Actions → New repository secret*:
-   - Name: `ANTHROPIC_API_KEY`
-   - Value: your key from https://console.anthropic.com
+`generated_at` is content age; `source_checked_at` is a new source check. Reused sections retain `last_success_at`. A failed section can carry older text with an explicit degraded status; it does not become fresh because a file was written. Finance quotes use the source's `as_of` and prior daily-close comparison, independently of the briefing clock. Sources show fallback, stale, empty and unavailable outcomes.
 
-   (Without the secret the workflow still runs and publishes a *mock* briefing — newest items, no LLM text — so you can check the site before spending anything.)
+Source links validate candidate membership, **not factual grounding in complete articles**. The model sees titles and short feed excerpts; paywalls, missing context, inaccurate feed text and unsupported inferences remain possible. Check the original reporting before relying on a claim. Media is not AI summarized.
 
-3. **Turn on Pages.** Repo → *Settings → Pages → Build and deployment → Source: **GitHub Actions***. That's it — no branch to pick.
+Archives retain up to seven days, 40 editions and 8 MB; unchanged content does not create another content archive. Read state is browser-local, with an in-memory fallback when storage is denied. This release does not promise offline reading.
 
-4. **Allow the workflow to commit.** Repo → *Settings → Actions → General → Workflow permissions → **Read and write permissions*** → Save. (Needed so the bot can commit `data/briefing.json` back.)
+## Architecture and contracts
 
-5. **Run it once.** Repo → *Actions → "Build briefing & deploy" → Run workflow*. About a minute later the site is live at `https://<your-user>.github.io/<repo>/`. Add it to your phone's home screen (Safari: Share → Add to Home Screen) — it has a dark theme-colour and safe-area padding, so it feels like an app.
+| Area | Files |
+|---|---|
+| Config and three-slot schedule | `config.yml`, `schedule.json` |
+| Feed/quote ingestion | `scripts/feeds.py`, `ingestion.py`, `prices.py` |
+| Selection, provider and builder | `scripts/selection.py`, `llm_provider.py`, `build.py` |
+| Health, reuse and usage | `scripts/pipeline.py`, `section_cache.py`, `usage_ledger.py` |
+| Workflow claim and publication | `scripts/check_slot.py`, `.github/workflows/` |
+| Owner auth, reservations and scheduler | `cloudflare/news-scheduler/` |
+| Static reading UI | `site/` |
+| Paired provider evaluation | `evals/` |
 
-From then on it is scheduled at 07:00, 13:00 and 19:00 in `Europe/Rome`, with daylight saving changes handled by GitHub's timezone-aware schedule. Changes to the config, build scripts, site, requirements, or workflow on `main` also trigger an update.
+[T00 contracts](docs/contracts/README.md) define identities, authentication, counters, claims and publication. CI is read-only and makes no paid calls. Site changes deploy static content only. Scheduled/authorized generation uses `build.yml`; deployment-only recovery republishes committed current main without calling AI. Missing provider credentials fail, and never silently select mock mode.
 
-> GitHub's cron is best-effort: runs can be delayed or dropped during busy periods, so publication at the exact scheduled minute is not guaranteed. A delayed run still builds and publishes; there is no execution-hour gate. In public repositories, schedules are disabled after 60 days without repository activity. Check Actions if an update is overdue, and use **Run workflow** for an immediate update. See [GitHub's schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
+## Development
 
-## Cloudflare scheduler migration
+Use Python 3.12 and Node 22 or newer:
 
-The Cloudflare scheduler and workflow retry guard are implemented. Cloudflare
-deployment and credential setup must be completed before disabling GitHub cron.
-Follow [the scheduler setup and verification steps](cloudflare/news-scheduler/README.md).
-The shared display and Worker schedule is in `schedule.json`.
-
-## Freshness and sources
-
-The homepage shows a leading headline for each category, the last build time,
-and the next scheduled update in Rome time. An expected update is marked pending
-for 45 minutes, then overdue if no newer briefing has been published. **Refresh**
-checks for a published update; it does not trigger a new paid build. Visible pages
-also check once a minute and when returning from the background.
-
-Open **Sources** to see which feeds responded, returned no articles, needed a
-fallback, or were unavailable. Transient network/server failures are retried.
-L'Équipe uses its current official football feed. Les Échos Finance falls back
-to a Google News search restricted to its finance section if the direct feed
-is inaccessible. Google News items retain the original publisher's RSS name;
-their links may still pass through Google News.
-
-New AI briefing bullets link to the candidate articles cited by the model. Only
-valid candidate IDs become links. Older archived briefings remain readable but
-do not acquire guessed citations. Candidate counters distinguish collected
-articles from those actually reviewed by the model.
-
-## Editing what it covers
-
-Everything is in `config.yml`. The comments there explain each list. The two tedious bits have helpers:
-
-```bash
-pip install -r requirements.txt
-
-# YouTube channel URL / @handle / video URL  →  channel_id
-python scripts/youtube_channel_id.py https://www.youtube.com/@veritasium @lexfridman
-
-# Podcast name  →  public RSS (via the iTunes Search API; add --all to see several matches)
-python scripts/find_podcast_rss.py "Huberman Lab" "FT News Briefing"
+```sh
+python -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.lock
+npm ci --ignore-scripts
+npm ci --ignore-scripts --prefix cloudflare/news-scheduler
+python -m unittest discover -s tests -p 'test_*.py'
+node --test tests/*.test.cjs
+npm run check --prefix cloudflare/news-scheduler
 ```
 
-Both print YAML you paste straight into the `youtube_channels:` / `podcasts:` lists. Spotify does not expose RSS, but practically every show on Spotify is also on Apple Podcasts, which is what the finder searches.
+See [release validation](docs/release/validation.md) for the optional real-Chrome smoke and audit commands. Tests are offline; synthetic JWTs and provider responses are not live authentication or quality evidence.
 
-`source_preferences` reserves candidate slots before the model's limit is applied.
-Sport reserves up to eight slots for CulturePSG and includes at least two new
-CulturePSG articles when available. Direct CulturePSG copies win exact-headline
-deduplication. Already-published articles are not forced back into each edition
-to fill this minimum. Both settings are editable in `config.yml`.
+For a scratch preview, use a disposable checkout so mock data cannot replace your publication:
 
-The `interests:` block guides the model's ranking within these candidates. Write it like a note to a smart assistant: what you care about, what to skip, how to order things. Push, and the next run uses it.
-
-## Running locally
-
-```bash
-pip install -r requirements.txt
-export ANTHROPIC_API_KEY=sk-ant-...      # or omit → mock mode
-python scripts/build.py                  # writes data/briefing.json
-python scripts/build.py --mock           # no LLM, newest items
-cd site && python -m http.server 8000    # then open http://localhost:8000
+```sh
+python tests/make_fixtures.py --output-dir /tmp/news-fixtures
+python scripts/build.py --mock --fixtures /tmp/news-fixtures --now 2026-09-04T17:00:00Z
 ```
 
-The site fetches `data/briefing.json` relative to itself, so for a local preview either symlink `site/data → ../data` or copy the `data/` folder into `site/` (the workflow copies it at deploy time).
+Build the local static directory as the workflows do: copy `site/` and `data/`, remove `seen.json`, `feed-cache.json`, `section-cache.json` and `usage-history.json` from the public copy, then serve it locally. `--mock` is explicit and not a deploy instruction.
 
-Fully offline test (synthetic feeds, no network):
+Edit sources, interests, preferences and limits in `config.yml`. Config changes take effect on the next authorized generation, not on every code push. Keep editorial selection false until its separate evaluation. Model rollback requires both `provider: anthropic` and `model: claude-haiku-4-5`; retain the Anthropic secret.
 
-```bash
-python tests/make_fixtures.py
-python scripts/build.py --mock --fixtures tests/fixtures
-```
+## Costs and privacy
 
-## How the build works
+Provider usage is recorded per run with token buckets, attempts and latency when reported. `data/usage-history.json` keeps 12 UTC months of committed run records independently of article archives. The public month-to-date summary is a **token-priced lower bound**, not an invoice; unknown charges, failed-before-commit workflows and older usage can be absent. Monthly forecasts are labelled projections, never observed spend. See [actual versus projected evidence](docs/release/T09-candidate.md#cost-evidence). No measured Luna saving or latency claim is made.
 
-1. Fetches every feed in `config.yml` concurrently (watched topics and teams become Google News RSS queries; tickers become Yahoo Finance per-ticker RSS; YouTube channels use the public Atom feed).
-2. Keeps items from the last `lookback_hours` (media: `media_days`), dedupes by canonical URL and by normalised headline (so the same story from two outlets collapses), and marks items as **new** if they have not appeared as an article or a cited source in a previous briefing. The versioned `data/seen.json` records only published items; legacy history is rebuilt from retained editions on the first updated run.
-3. Fetches day-change prices for each ticker (`yfinance`, falling back to Yahoo's chart endpoint).
-4. Sends each of News / Sport / Finance to Claude **once**, with up to `max_candidates` items (title, source, time, ≤160-char summary) plus your `interests`, and asks for structured JSON: concise bullets with supporting candidate IDs and selected items with one-line summaries. Any item whose URL is not in the candidates is dropped — the model cannot invent stories. If the API call fails, that section falls back to "newest first" and says so.
-5. Media is not summarised: newest videos and episodes from the last 3 days, with duration when the feed provides it.
-6. Rotates the previous `briefing.json` into `data/past/` (keeps 6), writes the new one, and the workflow commits `data/` and deploys `site/ + data/` to Pages.
+The separate private Mac repository's GitHub Actions allowance issue is documented in the [account investigation](docs/implementation-plan/README.md#where-the-2000-actions-minutes-went). Changing the news model does not restore that allowance. Preserve existing billing controls.
 
-## Cost
-
-Three runs a day × three LLM calls = 9 calls/day. With 40 candidates per section a call is roughly 3.5–4k input tokens and ~600 output tokens.
-
-| model in `config.yml` | ≈ per call | ≈ per month |
-|---|---|---|
-| `claude-sonnet-4-6` (default) | $0.02 | **$5–6** |
-| `claude-haiku-4-5` | $0.007 | **$1.5–2** |
-
-To get under €1/month: switch `model` to Haiku **and** lower `max_candidates` to ~25, or drop to two runs a day (edit the hours in the workflow's `schedule` cron expression). GitHub Actions minutes and Pages are free for this volume. Check actual pricing at https://www.anthropic.com/pricing — it changes.
-
-## Privacy / data
-
-The site stores only two things in your browser: which item keys you have opened (`briefing.seen.v1`) and your light/dark override. Nothing is sent anywhere. Your `interests` text goes to the Anthropic API in each call and to nowhere else; it is committed in `config.yml`, so keep the repo private if you'd rather not publish it.
+This repository is public. Interests, source configuration and committed data are visible in git, including caches/journal even though those files are excluded from Pages. Never put secrets or private preference snapshots in configuration, commits or evaluation fixtures. Interests and selected excerpts are sent to the configured model provider. Browser read/theme/pending-refresh state stays local; requesting refresh contacts the protected Worker. Maintain provider/GitHub/Access credentials and dated model/pricing settings through the operational runbook.

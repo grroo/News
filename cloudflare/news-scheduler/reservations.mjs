@@ -1,7 +1,7 @@
 // Durable Object decisions for reservations, limits, claims and publication.
 // Persistence is the caller's job; these functions only mutate the state object
 // they are given, and they do it before any dispatch is attempted.
-import {dueSlot, romeDay, slotAtHour} from './core.mjs';
+import {dueSlot, romeDay, slotAtHour, slotPublished} from './core.mjs';
 
 export const SCOPE = {repository: 'grroo/News', workflow: 'build.yml', ref: 'refs/heads/main'};
 export const MANUAL_COOLDOWN_MS = 15 * 60 * 1000;
@@ -391,7 +391,20 @@ export function reconcile(state, {now, schedule, runs, runsListed, live}) {
 
 function finishJob(state, job, status, live) {
   job.status = status;
-  if (live?.edition_id) {
+  // All coalesced jobs share the reservation's exact publication identity.
+  // Complete them on failure/expiry as well as successful publication.
+  for (const other of Object.values(state.jobs)) {
+    if (other.job_id !== job.job_id && other.reservation_id === job.reservation_id && ACTIVE.has(other.status)
+        && (['failed', 'expired'].includes(status) || publicationFor(live, other.request_id) === status)) {
+      other.status = status;
+      if (live?.request_ids?.includes(other.request_id) && live.edition_id) {
+        other.edition_id = live.edition_id;
+        other.published_edition_id = live.edition_id;
+      }
+      if (status === 'expired') other.error = 'Publication was not confirmed';
+    }
+  }
+  if (live?.request_ids?.includes(job.request_id) && live.edition_id) {
     job.edition_id = live.edition_id;
     job.published_edition_id = live.edition_id;
   }
@@ -456,9 +469,9 @@ export function advanceScheduled(state, {now, schedule, runs, runsListed, live, 
   }
   state.checkedAt = iso(now);
   const requestId = state.reservation?.request_id;
-  const published = strict
-    ? live && satisfiesHealthySlot(live, slot, now, requestId)
-    : !!(live && Number.isFinite(Date.parse(live.generated_at)) && Date.parse(live.generated_at) >= Date.parse(slot) && Date.parse(live.generated_at) <= now + 60000 && live.mode === 'llm');
+  // T04's migration contract: v2 always uses section health; strict only
+  // disables the legacy fallback. Use the same decision as the legacy cron.
+  const published = slotPublished(live, slot, now, {requestId, strict});
   if (published) {
     state.phase = 'published';
     state.error = null;

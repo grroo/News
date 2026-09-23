@@ -38,9 +38,9 @@ var BriefingRefresh = (() => {
   const isActiveJobStatus = status => ACTIVE_JOB.has(status);
 
   const publicationOutcome = edition => {
-    if (edition?.refresh?.outcome === 'no_change') return 'no_change';
     const quality = edition?.quality?.overall;
     if (quality === 'degraded' || quality === 'failed') return quality;
+    if (edition?.refresh?.outcome === 'no_change') return 'no_change';
     return 'succeeded';
   };
 

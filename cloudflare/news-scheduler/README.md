@@ -135,3 +135,14 @@ claim call's run ID is the identity reconciliation can use. Ask the workflow
 owner to add that run name before relying on refresh in production. Publication
 is the Pages edition whose `request_ids` contain that request, including
 `no_change` and `degraded`. An Actions success alone does not finish the job.
+
+## T09 integration update
+
+The release candidate adds `request_id` to the workflow run name and applies
+v2 section-health rules in the reserved scheduler even before strict migration.
+Matching coalesced jobs terminate together. Use the
+[T09 rollout runbook](../../docs/operations/T09-rollout.md): reservation scheduling
+is enabled and verified first while `REFRESH_ENABLED` remains false. This
+supersedes the simultaneous-enable advice above. The owner route is `/`.
+Real Access path protection and the complete three-slot day are still pending;
+local signed-JWT and browser tests are not live Access evidence.

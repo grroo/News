@@ -62,7 +62,7 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py'
 
       - name: Frontend freshness and contract tests
-        run: node --test tests/freshness.test.cjs tests/contracts.test.cjs tests/frontend.test.cjs
+        run: node --test tests/freshness.test.cjs tests/contracts.test.cjs tests/frontend.test.cjs tests/release.test.cjs
 
       - name: Worker typecheck and tests
         working-directory: cloudflare/news-scheduler

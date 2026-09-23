@@ -1,18 +1,23 @@
-Run the regression suite after installing requirements.txt (Python 3.12 and Node 20+):
+# Offline regression tests
 
-    python -m unittest discover -s tests -p 'test_*.py'
-    node --test tests/freshness.test.cjs
+Use Python 3.12 and Node 22+ with dependencies installed as in the root README:
 
-Tests cover priority-source selection, direct-versus-aggregated copies, publisher
-attribution, validated citation IDs, feed fallback and failure status, migration
-of legacy seen history, an isolated offline build, and Rome freshness status
-through both daylight saving changes. The pipeline test generates fresh fixtures
-from the current config in a temporary directory; no network or API key is used.
-The deployment workflow runs both suites before generating a real briefing.
+```sh
+python -m unittest discover -s tests -p 'test_*.py'
+node --test tests/*.test.cjs
+npm run check --prefix cloudflare/news-scheduler
+```
 
-For manual offline exploration, write fixtures to a scratch directory:
+Set `NEWS_TEST_PYTHON` to the Python 3.12 executable when it is not `python3` on PATH.
+The cross-language release test runs the real guard/builder/provider parser with
+fixture feeds and synthetic HTTP responses; it makes no paid call. Temporary
+build directories are removed. CI runs tests; production generation is separate.
 
-    python tests/make_fixtures.py --output-dir /tmp/briefing-fixtures
-    python scripts/build.py --mock --fixtures /tmp/briefing-fixtures --now 2026-09-04T17:00:00+00:00
+Optional real-browser smoke (Playwright and Chrome installed):
 
-The second command writes mock data/ in your checkout; do not commit that output.
+```sh
+NEWS_PLAYWRIGHT_MODULE=/absolute/path/to/playwright node tests/release/browser.cjs
+```
+
+This tests local UI simulation, not a deployed Access login. Exact coverage and
+pending live checks are in [T09 validation](../docs/release/validation.md).
