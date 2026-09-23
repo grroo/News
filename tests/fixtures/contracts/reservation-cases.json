@@ -1,0 +1,331 @@
+{
+  "description": "Reference outcomes for online, single-run reservation claims.",
+  "cases": [
+    {
+      "name": "first claim",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "reserved"
+      },
+      "claim": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      },
+      "now": "2026-09-23T17:02:00Z",
+      "expected_decision": "allowed"
+    },
+    {
+      "name": "same run and attempt retry after lost response",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "claimed",
+        "claimed_at": "2026-09-23T17:02:00Z",
+        "claimed_run_id": 35869577697,
+        "claimed_run_attempt": 1
+      },
+      "claim": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      },
+      "now": "2026-09-23T17:20:00Z",
+      "expected_decision": "allowed"
+    },
+    {
+      "name": "different run cannot replay",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "claimed",
+        "claimed_at": "2026-09-23T17:02:00Z",
+        "claimed_run_id": 35869577697,
+        "claimed_run_attempt": 1
+      },
+      "claim": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577698,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      },
+      "now": "2026-09-23T17:02:00Z",
+      "expected_decision": "denied",
+      "expected_reason": "claimed_by_other"
+    },
+    {
+      "name": "different attempt of same run cannot regenerate",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "claimed",
+        "claimed_at": "2026-09-23T17:02:00Z",
+        "claimed_run_id": 35869577697,
+        "claimed_run_attempt": 1
+      },
+      "claim": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "run_attempt": 2,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      },
+      "now": "2026-09-23T17:02:00Z",
+      "expected_decision": "denied",
+      "expected_reason": "claimed_by_other"
+    },
+    {
+      "name": "expired before first claim",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "reserved"
+      },
+      "claim": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      },
+      "now": "2026-09-23T17:16:01Z",
+      "expected_decision": "denied",
+      "expected_reason": "expired"
+    },
+    {
+      "name": "request identity mismatch",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "reserved"
+      },
+      "claim": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_wrong",
+        "run_id": 35869577697,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      },
+      "now": "2026-09-23T17:02:00Z",
+      "expected_decision": "denied",
+      "expected_reason": "request_mismatch"
+    },
+    {
+      "name": "cancelled reservation",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "cancelled"
+      },
+      "claim": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      },
+      "now": "2026-09-23T17:02:00Z",
+      "expected_decision": "denied",
+      "expected_reason": "cancelled"
+    },
+    {
+      "name": "ambiguous dispatch with same reservation",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "reserved"
+      },
+      "claim": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      },
+      "now": "2026-09-23T17:02:00Z",
+      "expected_decision": "allowed"
+    },
+    {
+      "name": "unknown reservation identity",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "reserved"
+      },
+      "claim": {
+        "reservation_id": "res_wrong",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/main"
+      },
+      "now": "2026-09-23T17:02:00Z",
+      "expected_decision": "denied",
+      "expected_reason": "unknown"
+    },
+    {
+      "name": "wrong workflow ref cannot claim",
+      "reservation": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "request_ids": [
+          "req_20260923T170001Z_manual"
+        ],
+        "idempotency_key": "owner-click-01",
+        "trigger": "manual",
+        "created_at": "2026-09-23T17:01:01Z",
+        "expires_at": "2026-09-23T17:16:01Z",
+        "scope": {
+          "repository": "grroo/News",
+          "workflow": "build.yml",
+          "ref": "refs/heads/main"
+        },
+        "status": "reserved"
+      },
+      "claim": {
+        "reservation_id": "res_01HABC",
+        "request_id": "req_20260923T170001Z_manual",
+        "run_id": 35869577697,
+        "run_attempt": 1,
+        "repository": "grroo/News",
+        "workflow": "build.yml",
+        "ref": "refs/heads/other"
+      },
+      "now": "2026-09-23T17:02:00Z",
+      "expected_decision": "denied",
+      "expected_reason": "scope_mismatch"
+    }
+  ]
+}

@@ -1,25 +1,31 @@
 {
   "schema_version": 2,
-  "edition_id": "req_20260923T130000Z_unchanged",
+  "edition_id": "req_20260923T110000Z_sched",
   "generated_at": "2026-09-23T11:01:17.817774+00:00",
-  "checked_at": "2026-09-23T13:02:00.000000+00:00",
+  "checked_at": "2026-09-23T17:02:00.000000+00:00",
   "generated_local": "Wed 23 Sep 2026, 13:01",
-  "source_checked_at": "2026-09-23T13:01:50.000000+00:00",
+  "source_checked_at": "2026-09-23T17:01:50.000000+00:00",
   "timezone": "Europe/Rome",
   "schedule": {
     "timezone": "Europe/Rome",
-    "hours": [7, 13, 19],
+    "hours": [
+      7,
+      13,
+      19
+    ],
     "minute": 0,
     "grace_minutes": 45
   },
   "trigger": "scheduled",
   "request_ids": [
     "req_20260923T110000Z_sched",
-    "req_20260923T130000Z_sched",
-    "req_20260923T130001Z_manual"
+    "req_20260923T170000Z_sched",
+    "req_20260923T170001Z_manual"
   ],
-  "scheduled_slot": "2026-09-23T13:00:00.000Z",
-  "quality": { "overall": "unchanged" },
+  "scheduled_slot": "2026-09-23T17:00:00.000Z",
+  "quality": {
+    "overall": "healthy"
+  },
   "mode": "llm",
   "model": "claude-sonnet-4-6",
   "cache": {
@@ -35,9 +41,75 @@
     "est_month_usd": 0
   },
   "sections": {
-    "news": { "state": "unchanged", "last_success_at": "2026-09-23T11:01:10.000000+00:00", "briefing": [], "items": [], "candidate_count": 40, "new_count": 0, "reviewed_count": 0 },
-    "sport": { "state": "unchanged", "last_success_at": "2026-09-23T11:01:12.000000+00:00", "briefing": [], "items": [], "candidate_count": 35, "new_count": 0, "reviewed_count": 0 },
-    "finance": { "state": "unchanged", "last_success_at": "2026-09-23T11:01:15.000000+00:00", "briefing": [], "items": [], "tickers": [], "candidate_count": 30, "new_count": 0, "reviewed_count": 0 },
-    "media": { "state": "skipped", "briefing": "", "items": [], "candidate_count": 12, "new_count": 0, "reviewed_count": 0 }
+    "news": {
+      "state": "unchanged",
+      "last_success_at": "2026-09-23T11:01:10.000000+00:00",
+      "briefing": [
+        {
+          "text": "Example healthy bullet with citation.",
+          "sources": [
+            {
+              "key": "abc123",
+              "title": "Example story",
+              "url": "https://example.com/story",
+              "source": "BBC World",
+              "via": null
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "key": "abc123",
+          "title": "Example story",
+          "url": "https://example.com/story",
+          "source": "BBC World",
+          "summary": "Short summary.",
+          "published": "2026-09-23T10:30:00+00:00",
+          "new": true
+        }
+      ],
+      "candidate_count": 40,
+      "new_count": 0,
+      "reviewed_count": 0,
+      "reused_edition_id": "req_20260923T110000Z_sched",
+      "input_fingerprint": "sha256:example-news"
+    },
+    "sport": {
+      "state": "unchanged",
+      "last_success_at": "2026-09-23T11:01:12.000000+00:00",
+      "briefing": [],
+      "items": [],
+      "candidate_count": 35,
+      "new_count": 0,
+      "reviewed_count": 0,
+      "reused_edition_id": "req_20260923T110000Z_sched",
+      "input_fingerprint": "sha256:example-sport"
+    },
+    "finance": {
+      "state": "unchanged",
+      "last_success_at": "2026-09-23T11:01:15.000000+00:00",
+      "briefing": [],
+      "items": [],
+      "tickers": [],
+      "candidate_count": 30,
+      "new_count": 0,
+      "reviewed_count": 0,
+      "reused_edition_id": "req_20260923T110000Z_sched",
+      "input_fingerprint": "sha256:example-finance"
+    },
+    "media": {
+      "state": "skipped",
+      "briefing": "",
+      "items": [],
+      "candidate_count": 12,
+      "new_count": 0,
+      "reviewed_count": 0
+    }
+  },
+  "refresh": {
+    "outcome": "no_change",
+    "completed_at": "2026-09-23T17:01:55.000000+00:00",
+    "reused_edition_id": "req_20260923T110000Z_sched"
   }
 }

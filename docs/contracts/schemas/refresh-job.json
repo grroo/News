@@ -2,29 +2,35 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/grroo/News/docs/contracts/schemas/refresh-job.json",
   "title": "Refresh job API",
-  "description": "Worker POST /refresh and GET /refresh/:id status shapes.",
-  "definitions": {
+  "description": "Worker POST /refresh and GET /refresh/:id status shapes; validate each endpoint with its $defs entrypoint.",
+  "anyOf": [
+    { "$ref": "#/$defs/createResponse" },
+    { "$ref": "#/$defs/statusResponse" },
+    { "$ref": "#/$defs/limitResponse" }
+  ],
+  "$defs": {
     "jobStatus": {
       "type": "string",
       "enum": ["accepted", "queued", "building", "publishing", "succeeded", "no_change", "degraded", "failed", "expired"]
     },
     "createResponse": {
       "type": "object",
-      "required": ["job_id", "status", "status_url"],
+      "required": ["job_id", "request_id", "status", "status_url"],
       "properties": {
         "job_id": { "type": "string" },
-        "status": { "$ref": "#/definitions/jobStatus" },
+        "request_id": { "type": "string", "minLength": 1 },
+        "status": { "$ref": "#/$defs/jobStatus" },
         "status_url": { "type": "string" },
         "idempotency_key": { "type": "string" }
       }
     },
     "statusResponse": {
       "type": "object",
-      "required": ["job_id", "status"],
+      "required": ["job_id", "request_id", "status"],
       "properties": {
         "job_id": { "type": "string" },
-        "status": { "$ref": "#/definitions/jobStatus" },
-        "request_id": { "type": "string" },
+        "status": { "$ref": "#/$defs/jobStatus" },
+        "request_id": { "type": "string", "minLength": 1 },
         "edition_id": { "type": "string" },
         "published_edition_id": { "type": "string", "description": "Exact edition now live on Pages for this request." },
         "scheduled_slot": { "type": "string", "format": "date-time" },

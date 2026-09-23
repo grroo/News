@@ -1,44 +1,114 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/grroo/News/docs/contracts/schemas/reservation.json",
-  "title": "Durable Object reservation and scheduler state",
+  "title": "Durable Object scheduler state and online workflow claim",
   "type": "object",
   "required": ["slot", "phase", "attempts"],
   "properties": {
-    "slot": { "type": "string", "format": "date-time", "description": "Latest due Rome slot in UTC ISO." },
+    "schema_version": { "type": "integer", "enum": [1, 2] },
+    "slot": { "type": "string", "format": "date-time", "description": "Latest due Rome slot in UTC." },
     "phase": {
       "type": "string",
-      "enum": [
-        "due",
-        "waiting",
-        "dispatching",
-        "dispatched",
-        "build_in_progress",
-        "published",
-        "needs_github_secret",
-        "attention_needed",
-        "check_failed"
-      ]
+      "enum": ["due", "waiting", "dispatching", "dispatched", "build_in_progress", "published", "needs_github_secret", "attention_needed", "check_failed"]
     },
     "attempts": { "type": "integer", "minimum": 0 },
-    "nextAttempt": { "type": "number", "description": "Unix ms; cooldown before retry." },
+    "nextAttempt": { "type": "number", "description": "Unix milliseconds before another dispatch attempt." },
     "checkedAt": { "type": "string", "format": "date-time" },
     "liveGeneratedAt": { "type": "string", "format": "date-time" },
     "runId": { "type": ["integer", "null"] },
     "error": { "type": ["string", "null"] },
+    "daily": {
+      "type": "object",
+      "required": ["rome_day", "manual_count", "generation_count"],
+      "properties": {
+        "rome_day": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "manual_count": { "type": "integer", "minimum": 0 },
+        "generation_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "reservation": { "$ref": "#/$defs/reservation" }
+  },
+  "$defs": {
+    "scope": {
+      "type": "object",
+      "required": ["repository", "workflow", "ref"],
+      "properties": {
+        "repository": { "type": "string", "const": "grroo/News" },
+        "workflow": { "type": "string", "const": "build.yml" },
+        "ref": { "type": "string", "const": "refs/heads/main" }
+      }
+    },
     "reservation": {
       "type": "object",
-      "description": "Shared gate persisted before external dispatch.",
+      "required": ["reservation_id", "request_id", "request_ids", "idempotency_key", "trigger", "created_at", "expires_at", "scope", "status"],
       "properties": {
-        "request_id": { "type": "string" },
-        "idempotency_key": { "type": "string" },
+        "reservation_id": { "type": "string", "minLength": 1 },
+        "request_id": { "type": "string", "minLength": 1 },
+        "request_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
+        "idempotency_key": { "type": "string", "minLength": 1 },
         "trigger": { "type": "string", "enum": ["scheduled", "manual", "workflow_dispatch"] },
         "scheduled_slot": { "type": "string", "format": "date-time" },
-        "reserved_at": { "type": "string", "format": "date-time" },
-        "daily_manual_count": { "type": "integer", "minimum": 0 },
-        "daily_generation_count": { "type": "integer", "minimum": 0 },
-        "cooldown_until": { "type": "string", "format": "date-time" }
+        "created_at": { "type": "string", "format": "date-time" },
+        "expires_at": { "type": "string", "format": "date-time" },
+        "scope": { "$ref": "#/$defs/scope" },
+        "status": { "type": "string", "enum": ["reserved", "claimed", "expired", "cancelled"] },
+        "claimed_at": { "type": "string", "format": "date-time" },
+        "claimed_run_id": { "type": "integer", "minimum": 1 },
+        "claimed_run_attempt": { "type": "integer", "minimum": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "trigger": { "const": "scheduled" } }, "required": ["trigger"] },
+          "then": { "required": ["scheduled_slot"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "claimed" } }, "required": ["status"] },
+          "then": { "required": ["claimed_at", "claimed_run_id", "claimed_run_attempt"] }
+        }
+      ]
+    },
+    "claimRequest": {
+      "type": "object",
+      "required": ["reservation_id", "request_id", "run_id", "run_attempt", "repository", "workflow", "ref"],
+      "properties": {
+        "reservation_id": { "type": "string", "minLength": 1 },
+        "request_id": { "type": "string", "minLength": 1 },
+        "run_id": { "type": "integer", "minimum": 1 },
+        "run_attempt": { "type": "integer", "minimum": 1 },
+        "repository": { "type": "string", "const": "grroo/News" },
+        "workflow": { "type": "string", "const": "build.yml" },
+        "ref": { "type": "string", "const": "refs/heads/main" }
       }
+    },
+    "claimResponse": {
+      "type": "object",
+      "required": ["decision", "reservation_id", "request_id"],
+      "properties": {
+        "decision": { "type": "string", "enum": ["allowed", "denied"] },
+        "reservation_id": { "type": "string", "minLength": 1 },
+        "request_id": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string", "enum": ["unknown", "expired", "scope_mismatch", "request_mismatch", "claimed_by_other", "cancelled"] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "decision": { "const": "denied" } }, "required": ["decision"] },
+          "then": { "required": ["reason"] },
+          "else": { "not": { "required": ["reason"] } }
+        }
+      ]
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "schema_version": { "const": 2 } }, "required": ["schema_version"] },
+      "then": { "required": ["daily"] }
+    },
+    {
+      "if": {
+        "properties": { "schema_version": { "const": 2 }, "phase": { "enum": ["dispatching", "dispatched", "build_in_progress"] } },
+        "required": ["schema_version", "phase"]
+      },
+      "then": { "required": ["reservation"] }
+    }
+  ]
 }

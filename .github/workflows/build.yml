@@ -46,12 +46,14 @@ jobs:
           cache: pip
 
       - name: Install
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements-test.txt
+          npm ci --ignore-scripts
 
       - name: Validate selection and freshness
         run: |
           python -m unittest discover -s tests -p 'test_*.py'
-          node --test tests/freshness.test.cjs cloudflare/news-scheduler/core.test.mjs
+          node --test tests/freshness.test.cjs tests/contracts.test.cjs cloudflare/news-scheduler/core.test.mjs
 
       - name: Check scheduled slot
         id: slot
