@@ -197,6 +197,38 @@ class PriceFallbackTests(unittest.TestCase):
         self.assertEqual(rows[1]["price"], 9.0)
         self.assertEqual(rows[1]["quote_source"], "yfinance")
 
+    def test_malformed_chart_and_out_of_range_time_do_not_abort_later_tickers(self):
+        bad = {"chart": {"result": [{"indicators": ["malformed"]}]}}
+        huge = 10**20
+        ranged_url, ranged = _chart(
+            "BBB",
+            [3.0, 4.0],
+            times=[huge, huge],
+            currency="USD",
+            regularMarketTime=huge,
+            regularMarketPrice=4.0,
+            dataGranularity="1d",
+        )
+        good_url, good = _chart("CCC", [8.0, 9.0], times=[1_600_000_000, 1_600_086_400], currency="EUR", dataGranularity="1d")
+        fetcher = _Fetcher(
+            {
+                "https://query1.finance.yahoo.com/v8/finance/chart/AAA?range=5d&interval=1d": bad,
+                ranged_url: ranged,
+                good_url: good,
+            },
+            fixtures=Path("fixtures"),
+        )
+        self.assertIsNone(prices.quote_from_yahoo_chart(bad))
+        rows = prices.price_moves(fetcher, [{"symbol": "AAA"}, {"symbol": "BBB"}, {"symbol": "CCC"}])
+        self.assertIsNone(rows[0]["price"])
+        self.assertIsNone(rows[0]["as_of"])
+        self.assertIsNone(rows[0]["quote_source"])
+        self.assertEqual(rows[1]["price"], 4.0)
+        self.assertIsNone(rows[1]["as_of"])
+        self.assertEqual(rows[1]["quote_source"], "yahoo_chart")
+        self.assertEqual(rows[2]["price"], 9.0)
+        self.assertEqual(rows[2]["as_of"], datetime.fromtimestamp(1_600_086_400, timezone.utc).isoformat())
+
 
 if __name__ == "__main__":
     unittest.main()
