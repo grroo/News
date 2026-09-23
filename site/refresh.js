@@ -37,6 +37,13 @@ var BriefingRefresh = (() => {
   const isTerminalJobStatus = status => TERMINAL_JOB.has(status);
   const isActiveJobStatus = status => ACTIVE_JOB.has(status);
 
+  const publicationOutcome = edition => {
+    if (edition?.refresh?.outcome === 'no_change') return 'no_change';
+    const quality = edition?.quality?.overall;
+    if (quality === 'degraded' || quality === 'failed') return quality;
+    return 'succeeded';
+  };
+
   const requestAcknowledged = (edition, requestId) => {
     if (!edition || !requestId) return false;
     const ids = edition.request_ids;
@@ -220,8 +227,11 @@ var BriefingRefresh = (() => {
 
       if (edition && requestAcknowledged(edition, ctx.requestId)) {
         this.stop();
-        const outcome = edition.refresh?.outcome === 'no_change' ? 'no_change'
-          : edition.quality?.overall === 'degraded' ? 'degraded' : 'succeeded';
+        const outcome = publicationOutcome(edition);
+        if (outcome === 'failed') {
+          this.onError({ code: 'failed', message: userStatusMessage('failed'), edition });
+          return;
+        }
         this.onComplete({ status: outcome, edition, requestId: ctx.requestId, jobStatus });
         return;
       }
@@ -268,6 +278,7 @@ var BriefingRefresh = (() => {
     userStatusMessage,
     isTerminalJobStatus,
     isActiveJobStatus,
+    publicationOutcome,
     requestAcknowledged,
     unrelatedNewerEdition,
     pollDelayMs,

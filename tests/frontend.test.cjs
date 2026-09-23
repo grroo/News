@@ -59,7 +59,10 @@ test('sectionAgeNote covers stale and unchanged sections', () => {
   const note = BriefingRefresh.sectionAgeNote(sport, degraded);
   assert.match(note, /Carried forward from/i);
   assert.match(note, /Provider timeout/i);
-  assert.match(note, /11:01|Sep/i);
+  const shown = new Date(sport.last_success_at).toLocaleString(undefined, {
+    weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+  });
+  assert.ok(note.includes(shown), `note ${JSON.stringify(note)} should include ${JSON.stringify(shown)}`);
   const unchanged = BriefingRefresh.sectionAgeNote(noChange.sections.news, noChange);
   assert.match(unchanged, /Unchanged/i);
 });
@@ -104,6 +107,34 @@ test('storage falls back to memory when localStorage throws', () => {
     assert.equal(BriefingStorage.isDenied(), true);
   } finally {
     global.localStorage = original;
+  }
+});
+
+test('failed publication and a terminal return without an edition are both failures', async () => {
+  const failure = load('provider-failure-edition.json');
+  assert.equal(failure.quality.overall, 'failed');
+  assert.equal(BriefingRefresh.publicationOutcome(failure), 'failed');
+  const poller = new BriefingRefresh.FetchPoller({
+    maxMs: 5000,
+    fetchFn: async () => ({ ok: true, json: async () => ({ status: 'publishing' }) }),
+    loadBriefing: async () => failure,
+  });
+  const result = await new Promise(resolve => {
+    poller.onComplete = value => resolve({ via: 'complete', ...value });
+    poller.onError = value => resolve({ via: 'error', ...value });
+    poller.start({
+      requestId: failure.request_ids[0],
+      statusUrl: 'https://worker.example/refresh/job_failed',
+    });
+  });
+  assert.equal(result.via, 'error');
+  assert.equal(result.code, 'failed');
+  assert.notEqual(result.status, 'succeeded');
+
+  for (const code of ['failed', 'expired']) {
+    const params = BriefingRefresh.parseReturnParams(`?request=req_before_publish&refresh_error=${code}`);
+    assert.equal(params.refreshError, code);
+    assert.match(BriefingRefresh.userStatusMessage(code), /could not complete|expired/i);
   }
 });
 
