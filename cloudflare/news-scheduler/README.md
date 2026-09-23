@@ -89,7 +89,7 @@ not in git, when you are ready:
 | `ACCESS_TEAM_DOMAIN` | Access team name, without the `.cloudflareaccess.com` suffix |
 | `ACCESS_AUD` | Access application audience tag (AUD) |
 | `OWNER_EMAIL` | The one email allowed to refresh |
-| `PAGES_SITE_URL` | Public briefing origin, used only as the return link |
+| `PAGES_SITE_URL` | Public briefing origin. `?return=` is accepted only when its origin matches this URL |
 | `REFRESH_ENABLED` | `true` only after the Access checks above |
 | `RESERVATION_GATE_ENABLED` | `true` together with refresh, after claim is deployed |
 | `STRICT_SLOT_GATE` | leave `false` until editions are schema v2 |
@@ -112,14 +112,26 @@ Limits, stored before GitHub is called: 15 minutes between manual refreshes,
 five manual requests per Europe/Rome day, eight generation runs per Rome day
 with room left for scheduled slots that have not had a first attempt. Retries
 count. The same idempotency key, or a second request while a reservation is
-still open, joins that reservation instead of dispatching again. A dispatch
-that times out keeps the reservation and is matched to a workflow run before
-another dispatch of that same reservation. Publication is the Pages edition
-whose `request_ids` contain that request, including `no_change` and `degraded`.
-An Actions success alone does not finish the job.
+still open, joins that reservation and keeps its original `request_id`. A new
+click does not invent an ID the workflow will never publish. A job becomes
+succeeded, no-change, or degraded only when live Pages lists that job's own
+request ID.
 
-Reconciliation is reliable when the Actions run name or display title contains
-`request_id`. `build.yml` does not set that name yet; until it does, the Worker
-will bind the reservation only when exactly one `workflow_dispatch` run appears
-in the reservation window. Ask the workflow owner to put `request_id` in
-`run-name` before relying on refresh in production.
+The owner page polls `GET /refresh/:id` on the Worker origin. It does not send
+CORS headers, and `OPTIONS` stays 403, so the public Pages app cannot read
+private status. After the job is terminal, the page returns to the validated
+Pages URL with `request` and `job` query parameters and without a status URL.
+The app then watches the public edition for that exact request ID. A `return`
+value whose origin is not `PAGES_SITE_URL` is ignored.
+
+A dispatch that times out keeps the reservation and the allowance. The Worker
+binds a GitHub run only when `claimed_run_id` matches or the run name or title
+contains `request_id`. A nearby `workflow_dispatch`, including the only one in
+the last 20 runs, is not that reservation. Until a run is identified, the Worker
+does not dispatch again and does not refund. If publication is still missing
+when the confirmation window ends, the job expires and that slot stops retrying.
+`build.yml` does not put `request_id` in `run-name` yet. Until it does, the
+claim call's run ID is the identity reconciliation can use. Ask the workflow
+owner to add that run name before relying on refresh in production. Publication
+is the Pages edition whose `request_ids` contain that request, including
+`no_change` and `degraded`. An Actions success alone does not finish the job.

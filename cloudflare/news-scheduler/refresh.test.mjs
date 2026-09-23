@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {signJwt, timingSafeEqual, verifyAccessJwt} from './auth.mjs';
-import {handleRequest} from './http.mjs';
+import {handleRequest, safeReturnUrl} from './http.mjs';
 import {
   advanceScheduled, applyClaim, claimDecision, emptyControl, noteDispatchResult, publicationFor,
   reconcile, requestRefresh, satisfiesHealthySlot,
@@ -108,8 +108,9 @@ test('repeated and concurrent refreshes dispatch once and limits survive a resta
   assert.equal(h.dispatches.length, 1);
   const second = await (await handleRequest(post('click-2'), h.env, h.deps)).json();
   assert.notEqual(second.job_id, created.job_id);
+  assert.equal(second.request_id, created.request_id);
   assert.equal(h.dispatches.length, 1);
-  assert.deepEqual(h.read().reservation.request_ids.length, 2);
+  assert.deepEqual(h.read().reservation.request_ids, [created.request_id]);
   const restarted = JSON.parse(JSON.stringify(h.read()));
   assert.equal(restarted.daily.manual_count, 1);
   assert.equal(restarted.daily.generation_count, 1);
@@ -231,5 +232,89 @@ test('scheduler collision coalesces into the scheduled reservation', () => {
   assert.equal(manual.dispatch, null);
   assert.equal(manual.coalesced, true);
   assert.equal(manual.state.daily.generation_count, 1);
-  assert.ok(manual.state.reservation.request_ids.length >= 2);
+  assert.equal(manual.state.jobs[manual.body.job_id].request_id, started.state.reservation.request_id);
+  assert.deepEqual(manual.state.reservation.request_ids, [started.state.reservation.request_id]);
+});
+
+test('a coalesced job stays open when Pages lists only the other request id', () => {
+  const first = requestRefresh(emptyControl(), {
+    now, schedule, idempotencyKey: 'a', trigger: 'manual',
+    ids: {job_id: 'job_first', request_id: 'req_first', reservation_id: 'res_1'},
+  });
+  const second = requestRefresh(first.state, {
+    now: now + 1000, schedule, idempotencyKey: 'b', trigger: 'manual',
+    ids: {job_id: 'job_second', request_id: 'req_second'},
+  });
+  assert.equal(second.coalesced, true);
+  assert.equal(second.state.jobs.job_second.request_id, 'req_first');
+  const divergent = second.state;
+  divergent.jobs.job_second.request_id = 'req_second';
+  divergent.reservation.request_ids = ['req_first', 'req_second'];
+  const live = {
+    schema_version: 2, request_ids: ['req_first'], edition_id: 'ed-first', generated_at: new Date(now).toISOString(),
+    quality: {overall: 'healthy'}, refresh: {outcome: 'generated'},
+  };
+  const published = reconcile(divergent, {now: now + 5000, schedule, runs: [], runsListed: true, live});
+  assert.equal(published.state.jobs.job_first.status, 'succeeded');
+  assert.equal(published.state.jobs.job_second.status, 'queued');
+  assert.equal(publicationFor(live, 'req_second'), null);
+});
+
+test('an unrelated or not-yet-listed run does not bind, refund, or dispatch again', () => {
+  const created = requestRefresh(emptyControl(), {
+    now, schedule, idempotencyKey: 'click', trigger: 'manual',
+    ids: {job_id: 'job_1', request_id: 'req_first', reservation_id: 'res_1'},
+  });
+  const state = noteDispatchResult(created.state, 'timeout');
+  const unrelated = {
+    id: 99, status: 'completed', conclusion: 'success', event: 'workflow_dispatch',
+    created_at: new Date(now).toISOString(), name: 'Build briefing & deploy', display_title: 'manual',
+  };
+  const live = {generated_at: slot, schema_version: 2, request_ids: ['req_other'], edition_id: 'other', quality: {overall: 'healthy'}, refresh: {outcome: 'generated'}};
+  const alone = reconcile(state, {now: now + 16 * 60 * 1000, schedule, runsListed: true, runs: [unrelated], live});
+  assert.equal(alone.dispatch, null);
+  assert.equal(alone.state.runId, null);
+  assert.equal(alone.state.jobs.job_1.status, 'queued');
+  assert.equal(alone.state.reservation.status, 'reserved');
+  assert.equal(alone.state.daily.generation_count, 1);
+  const delayed = reconcile(state, {now: now + 16 * 60 * 1000, schedule, runsListed: false, runs: [], live});
+  assert.equal(delayed.dispatch, null);
+  assert.equal(delayed.state.reservation.status, 'reserved');
+  assert.equal(delayed.state.daily.generation_count, 1);
+  const expired = reconcile(state, {now: now + 21 * 60 * 1000, schedule, runsListed: true, runs: [unrelated], live});
+  assert.equal(expired.dispatch, null);
+  assert.equal(expired.state.jobs.job_1.status, 'expired');
+  assert.equal(expired.state.daily.generation_count, 1);
+  const again = advanceScheduled(expired.state, {now: now + 22 * 60 * 1000, schedule, runsListed: true, runs: [unrelated], live, tokenPresent: true, strict: false});
+  assert.equal(again.dispatch, null);
+  assert.equal(again.state.phase, 'attention_needed');
+  const claimed = applyClaim(state, {
+    reservation_id: 'res_1', request_id: 'req_first', run_id: 77, run_attempt: 1,
+    repository: 'grroo/News', workflow: 'build.yml', ref: 'refs/heads/main',
+  }, new Date(now + 1000).toISOString());
+  const bound = reconcile(claimed.state, {
+    now: now + 120000, schedule, runsListed: true, live,
+    runs: [unrelated, {id: 77, status: 'completed', conclusion: 'success', event: 'workflow_dispatch', created_at: new Date(now + 30000).toISOString(), name: 'Build briefing & deploy'}],
+  });
+  assert.equal(bound.state.runId, 77);
+  assert.equal(bound.dispatch.inputs.deploy_only, true);
+  assert.equal(bound.dispatch.inputs.request_id, 'req_first');
+});
+
+test('owner return URL stays on the configured Pages origin', async () => {
+  assert.equal(safeReturnUrl('https://evil.test/steal', 'https://example.test/News/'), '');
+  assert.equal(safeReturnUrl('javascript:alert(1)', 'https://example.test/News/'), '');
+  assert.equal(safeReturnUrl('https://example.test/News/#/', 'https://example.test/News/'), 'https://example.test/News/#/');
+  const h = harness();
+  const rejected = await handleRequest(new Request('https://news.example/?return=' + encodeURIComponent('https://evil.test/steal'), {headers: {'cf-access-jwt-assertion': 'token'}}), h.env, h.deps);
+  const rejectedHtml = await rejected.text();
+  assert.equal(rejected.status, 200);
+  assert.match(rejectedHtml, /https:\/\/example\.test\/News\//);
+  assert.doesNotMatch(rejectedHtml, /evil\.test/);
+  const accepted = await handleRequest(new Request('https://news.example/?return=' + encodeURIComponent('https://example.test/News/#/'), {headers: {'cf-access-jwt-assertion': 'token'}}), h.env, h.deps);
+  const html = await accepted.text();
+  assert.match(html, /https:\/\/example\.test\/News\//);
+  assert.match(html, /searchParams\.set\('request'/);
+  assert.doesNotMatch(html, /searchParams\.set\('status'/);
+  assert.equal(h.dispatches.length, 0);
 });

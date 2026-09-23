@@ -208,8 +208,9 @@ export function requestRefresh(state, {now, schedule, idempotencyKey, trigger = 
   const current = activeJob(state);
   const reservation = openReservation(state);
   if (current && reservation && state.deploy_only_for !== reservation.reservation_id) {
-    const requestId = ids?.request_id || randomId('req_');
-    if (!reservation.request_ids.includes(requestId)) reservation.request_ids.push(requestId);
+    // The workflow was already dispatched with reservation.request_id. A second
+    // click joins that published identity so Pages can acknowledge it.
+    const requestId = reservation.request_id;
     const job = {
       job_id: ids?.job_id || randomId('job_'),
       request_id: requestId,
@@ -311,7 +312,23 @@ export function noteDispatchResult(state, outcome) {
 }
 
 function runMentions(run, requestId) {
+  if (!requestId) return false;
   return `${run.name || ''} ${run.display_title || ''}`.includes(requestId);
+}
+
+function sameRun(run, reservation) {
+  const claimed = reservation?.claimed_run_id;
+  if (!Number.isInteger(claimed) || claimed < 1) return false;
+  return Number(run?.id) === claimed;
+}
+
+function unconfirmed(state, job, live) {
+  finishJob(state, job, 'expired', live);
+  state.phase = 'attention_needed';
+  state.attempts = Math.max(state.attempts || 0, 3);
+  state.error = 'Publication was not confirmed';
+  state.dispatch_ambiguous = false;
+  return {state, dispatch: null};
 }
 
 export function reconcile(state, {now, schedule, runs, runsListed, live}) {
@@ -327,7 +344,9 @@ export function reconcile(state, {now, schedule, runs, runsListed, live}) {
       finishJob(state, job, status, live);
       if (reservation) {
         for (const extra of Object.values(state.jobs)) {
-          if (extra.reservation_id === reservation.reservation_id && ACTIVE.has(extra.status)) finishJob(state, extra, publicationFor(live, extra.request_id) || status, live);
+          if (extra.job_id === job.job_id || extra.reservation_id !== reservation.reservation_id || !ACTIVE.has(extra.status)) continue;
+          const extraStatus = publicationFor(live, extra.request_id);
+          if (extraStatus) finishJob(state, extra, extraStatus, live);
         }
       }
       return {state, dispatch: null};
@@ -335,12 +354,13 @@ export function reconcile(state, {now, schedule, runs, runsListed, live}) {
   }
   if (!reservation || !job) return {state, dispatch: null};
   const started = instant(reservation.created_at);
-  const candidates = runsListed ? (runs || []).filter(run => {
+  const listed = runsListed ? (runs || []) : [];
+  const named = listed.filter(run => {
     const created = Date.parse(run.created_at);
-    return Number.isFinite(created) && created >= started - 5000 && (runMentions(run, reservation.request_id) || run.event === 'workflow_dispatch');
-  }) : [];
-  const named = candidates.filter(run => runMentions(run, reservation.request_id));
-  const chosen = named[0] || (candidates.length === 1 ? candidates[0] : null);
+    return runMentions(run, reservation.request_id) && Number.isFinite(created) && created >= started - 5000;
+  });
+  const claimed = listed.find(run => sameRun(run, reservation));
+  const chosen = claimed || named[0] || null;
   if (chosen) {
     state.runId = chosen.id;
     state.phase = chosen.status === 'completed' ? state.phase : 'build_in_progress';
@@ -358,37 +378,14 @@ export function reconcile(state, {now, schedule, runs, runsListed, live}) {
       state.deploy_only_for = reservation.reservation_id;
       return {state, dispatch: {ref: 'main', inputs: {mock: false, deploy_only: true, reservation_id: reservation.reservation_id, request_id: reservation.request_id, ...(reservation.scheduled_slot ? {scheduled_slot: reservation.scheduled_slot} : {})}}};
     }
-    if (chosen.status === 'completed' && now >= started + PUBLICATION_TIMEOUT_MS) {
-      finishJob(state, job, 'expired', live);
-      state.phase = 'attention_needed';
-      state.error = 'Publication was not confirmed';
-    }
+    if (now >= started + PUBLICATION_TIMEOUT_MS) return unconfirmed(state, job, live);
     return {state, dispatch: null};
   }
-  if (!runsListed) return {state, dispatch: null};
-  if (reservation.status === 'reserved' && instant(reservation.expires_at) <= now) {
-    refund(state, reservation);
-    finishJob(state, job, 'expired', null);
-    state.phase = 'due';
-    state.error = 'Unclaimed reservation expired with no GitHub run';
-    return {state, dispatch: null};
-  }
-  if (state.dispatch_ambiguous && now < state.nextAttempt) {
-    state.phase = 'waiting';
-    return {state, dispatch: null};
-  }
-  if (state.dispatch_ambiguous && now >= state.nextAttempt && reservation.status === 'reserved') {
-    state.phase = 'dispatching';
-    state.nextAttempt = now + MANUAL_COOLDOWN_MS;
-    const inputs = {mock: false, deploy_only: false, reservation_id: reservation.reservation_id, request_id: reservation.request_id};
-    if (reservation.scheduled_slot) inputs.scheduled_slot = reservation.scheduled_slot;
-    return {state, dispatch: {ref: 'main', inputs}};
-  }
-  if (now >= started + PUBLICATION_TIMEOUT_MS) {
-    finishJob(state, job, 'expired', live);
-    state.phase = 'attention_needed';
-    state.error = 'Publication was not confirmed';
-  }
+  // A partial run list, including the first 20 workflow_dispatch rows, does not
+  // prove this reservation has no run. Leave it unresolved until publication
+  // or the confirmation window. Do not refund and do not dispatch again.
+  if (now >= started + PUBLICATION_TIMEOUT_MS) return unconfirmed(state, job, live);
+  state.phase = 'waiting';
   return {state, dispatch: null};
 }
 
@@ -405,16 +402,6 @@ function finishJob(state, job, status, live) {
     state.dispatch_ambiguous = false;
     state.deploy_only_for = null;
   }
-}
-
-function refund(state, reservation) {
-  if (reservation.status === 'claimed') return;
-  reservation.status = 'expired';
-  state.daily.generation_count = Math.max(0, state.daily.generation_count - 1);
-  if (reservation.trigger === 'manual') state.daily.manual_count = Math.max(0, state.daily.manual_count - 1);
-  if (reservation.scheduled_slot) delete state.slot_first_attempt[reservation.scheduled_slot];
-  state.reservations[reservation.reservation_id] = reservation;
-  if (state.reservation?.reservation_id === reservation.reservation_id) state.reservation = null;
 }
 
 export function publicationFor(edition, requestId) {
