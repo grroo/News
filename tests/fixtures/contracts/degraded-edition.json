@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "edition_id": "req_20260923T170000Z_sched",
+  "generated_at": "2026-09-23T17:05:00.000000+00:00",
+  "generated_local": "Wed 23 Sep 2026, 19:05",
+  "source_checked_at": "2026-09-23T17:04:30.000000+00:00",
+  "timezone": "Europe/Rome",
+  "schedule": {
+    "timezone": "Europe/Rome",
+    "hours": [7, 13, 19],
+    "minute": 0,
+    "grace_minutes": 45
+  },
+  "trigger": "scheduled",
+  "request_ids": ["req_20260923T170000Z_sched"],
+  "scheduled_slot": "2026-09-23T17:00:00.000Z",
+  "quality": { "overall": "degraded" },
+  "mode": "llm",
+  "model": "claude-sonnet-4-6",
+  "feed_health": [
+    { "name": "Reuters", "section": "news", "status": "ok", "item_count": 20, "reason": null },
+    { "name": "Les Echos", "section": "finance", "status": "fallback", "item_count": 3, "reason": "HTTP 403" }
+  ],
+  "usage": {
+    "calls": 2,
+    "input_tokens": 9200,
+    "output_tokens": 1800,
+    "est_cost_usd": 0.0546,
+    "est_month_usd": 4.91
+  },
+  "sections": {
+    "news": {
+      "state": "healthy",
+      "last_success_at": "2026-09-23T17:04:55.000000+00:00",
+      "briefing": [{ "text": "Fresh news section.", "sources": [] }],
+      "items": [{ "key": "n1", "title": "Fresh", "url": "https://example.com/n1", "source": "Reuters", "new": true }],
+      "candidate_count": 40,
+      "new_count": 4,
+      "reviewed_count": 40
+    },
+    "sport": {
+      "state": "degraded",
+      "last_success_at": "2026-09-23T11:01:12.000000+00:00",
+      "error": "Provider timeout after one retry",
+      "briefing": [{ "text": "Carried forward from earlier edition.", "sources": [] }],
+      "items": [{ "key": "s_old", "title": "Earlier sport item", "url": "https://example.com/s1", "source": "L'Équipe", "new": false }],
+      "candidate_count": 35,
+      "new_count": 0,
+      "reviewed_count": 0
+    },
+    "finance": {
+      "state": "healthy",
+      "last_success_at": "2026-09-23T17:05:00.000000+00:00",
+      "briefing": [],
+      "items": [],
+      "tickers": [{ "symbol": "SPY", "label": "S&P 500", "price": 550.1, "change_pct": 0.4, "currency": "USD" }],
+      "candidate_count": 28,
+      "new_count": 2,
+      "reviewed_count": 28
+    },
+    "media": {
+      "state": "skipped",
+      "briefing": "",
+      "items": [],
+      "candidate_count": 10,
+      "new_count": 1,
+      "reviewed_count": 0
+    }
+  }
+}

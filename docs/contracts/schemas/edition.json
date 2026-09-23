@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/grroo/News/docs/contracts/schemas/edition.json",
+  "title": "Briefing edition",
+  "description": "Additive contract for data/briefing.json. Version 1 matches current production; version 2 adds health and request mapping.",
+  "type": "object",
+  "required": ["generated_at", "timezone", "schedule", "mode", "sections"],
+  "properties": {
+    "schema_version": { "type": "integer", "enum": [1, 2], "default": 1 },
+    "edition_id": { "type": "string", "description": "Stable id for this edition; equals request_id of the generating job when present." },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "generated_local": { "type": "string" },
+    "checked_at": { "type": "string", "format": "date-time", "description": "Last scheduler/client inspection time; does not imply new content." },
+    "source_checked_at": { "type": "string", "format": "date-time" },
+    "timezone": { "type": "string" },
+    "schedule": {
+      "type": "object",
+      "required": ["timezone", "hours", "minute"],
+      "properties": {
+        "timezone": { "type": "string" },
+        "hours": { "type": "array", "items": { "type": "integer" } },
+        "minute": { "type": "integer" },
+        "grace_minutes": { "type": "integer" }
+      }
+    },
+    "trigger": { "type": "string", "enum": ["scheduled", "manual", "push", "workflow_dispatch"] },
+    "request_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "All refresh requests coalesced into this edition."
+    },
+    "scheduled_slot": { "type": "string", "format": "date-time" },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "overall": { "type": "string", "enum": ["healthy", "degraded", "failed", "unchanged", "mock"] }
+      }
+    },
+    "mode": { "type": "string", "enum": ["llm", "mock"] },
+    "model": { "type": ["string", "null"] },
+    "feed_health": { "type": "array" },
+    "usage": { "type": "object" },
+    "sections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "state": { "type": "string", "enum": ["healthy", "degraded", "failed", "skipped", "unchanged"] },
+          "source_checked_at": { "type": "string", "format": "date-time" },
+          "last_success_at": { "type": "string", "format": "date-time" },
+          "briefing": {},
+          "items": { "type": "array" },
+          "candidate_count": { "type": "integer" },
+          "new_count": { "type": "integer" },
+          "reviewed_count": { "type": "integer" },
+          "error": { "type": "string" }
+        }
+      }
+    }
+  }
+}
