@@ -60,6 +60,7 @@ function healthySlot(edition, slotIso, nowMs, requestId) {
   for (const name of ['news', 'sport', 'finance']) {
     const section = edition.sections[name];
     if (!['healthy', 'unchanged'].includes(section.state) || Object.hasOwn(section, 'error')) return false;
+    if (section.state === 'unchanged' && !section.reused_edition_id) return false;
     if (!Array.isArray(section.briefing) || !Array.isArray(section.items)) return false;
     const succeeded = Date.parse(section.last_success_at);
     if (!Number.isFinite(succeeded) || succeeded > done + 60000) return false;
