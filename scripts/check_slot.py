@@ -10,11 +10,13 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
+import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 LIVE_URL = os.environ.get("LIVE_BRIEFING_URL", "https://grroo.github.io/News/data/briefing.json")
 
 sys.path.insert(0, str(Path(__file__).parent))
+from llm_provider import credential_env_var  # noqa: E402
 from slot_health import satisfies_healthy_slot  # noqa: E402
 
 
@@ -36,14 +38,34 @@ def fresh_legacy(data, slot, now):
 
 
 def slot_satisfied(data, slot, now, *, strict_gate=False, request_id=None, slot_text=None):
+    """v2 editions use the section-health contract even while the strict flag is off.
+
+    The flag only changes migration: when it is on, a pre-v2 edition cannot
+    satisfy a slot. Leave it off until Pages is actually serving v2, so the
+    current legacy file does not look like a missed slot.
+    """
     if not data:
         return False
     slot_iso = slot_text or slot.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
-    if strict_gate:
-        if data.get("schema_version") != 2:
-            return False
+    if data.get("schema_version") == 2:
         return satisfies_healthy_slot(data, slot_iso, now, request_id)
+    if strict_gate:
+        return False
     return fresh_legacy(data, slot, now)
+
+
+def provider_has_credential(root: Path | None = None) -> tuple[bool, str]:
+    """True when the configured provider's secret is present. The value is never returned."""
+    config_root = root or ROOT
+    try:
+        cfg = yaml.safe_load((config_root / "config.yml").read_text()) or {}
+    except (OSError, yaml.YAMLError):
+        cfg = {}
+    provider = cfg.get("provider", "anthropic")
+    if provider not in {"anthropic", "openai"}:
+        provider = "anthropic"
+    name = credential_env_var(provider)
+    return bool((os.environ.get(name) or "").strip()), name
 
 
 def decide(
@@ -61,12 +83,13 @@ def decide(
     mock_requested=False,
     deploy_only=False,
     generate_requested=True,
+    key_name="ANTHROPIC_API_KEY",
 ):
     if deploy_only:
         return False, True, "Deploy committed briefing without generation"
 
     if generate_requested and not has_api_key and not mock_requested:
-        return False, False, "Missing ANTHROPIC_API_KEY; refusing generation"
+        return False, False, f"Missing {key_name}; refusing generation"
 
     if require_reservation and (not reservation_id or not request_id):
         return False, False, "Reservation and request id required for generation"
@@ -165,7 +188,7 @@ def claim_reservation(reservation_id, request_id, run_id, run_attempt, *, post=r
     return True, "Reservation claimed"
 
 
-def write_outputs(build, publish, reason, error=None):
+def write_outputs(build, publish, reason, error=None, scheduled_slot=None):
     output_path = os.environ.get("GITHUB_OUTPUT")
     if not output_path:
         return
@@ -173,6 +196,7 @@ def write_outputs(build, publish, reason, error=None):
         output.write(f"build={'true' if build else 'false'}\n")
         output.write(f"publish={'true' if publish else 'false'}\n")
         output.write(f"reason={reason}\n")
+        output.write(f"scheduled_slot={scheduled_slot or ''}\n")
         if error:
             output.write(f"error={error}\n")
 
@@ -192,8 +216,7 @@ def guard_main():
     deploy_only = os.environ.get("DEPLOY_ONLY", "").lower() in {"1", "true", "yes"}
     generate_requested = os.environ.get("GENERATE_REQUESTED", "true").lower() not in {"0", "false", "no"}
     mock_requested = os.environ.get("MOCK_REQUESTED", "").lower() in {"1", "true", "yes"}
-    api_key = (os.environ.get("ANTHROPIC_API_KEY") or "").strip()
-    has_api_key = bool(api_key)
+    has_api_key, key_name = provider_has_credential()
 
     live = {}
     if slot_text and not deploy_only:
@@ -221,9 +244,10 @@ def guard_main():
         mock_requested=mock_requested,
         deploy_only=deploy_only,
         generate_requested=generate_requested,
+        key_name=key_name,
     )
     print(reason)
-    write_outputs(build, publish, reason)
+    write_outputs(build, publish, reason, scheduled_slot=slot_text)
 
 
 def claim_main():

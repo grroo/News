@@ -18,11 +18,12 @@ Generation commits include `[skip ci]` so they do not trigger a second deploy. S
 |---|---|---|
 | `RESERVATION_GATE_ENABLED` | unset / false | Legacy cron and dispatch without Worker reservation (current production) |
 | `RESERVATION_GATE_ENABLED=true` | after T05 verified | Every paid run requires matching `reservation_id` + `request_id` and a validated claim |
-| `STRICT_SLOT_GATE=true` | after T04 v2 output | Strict per-section slot health; legacy editions never satisfy |
+| `STRICT_SLOT_GATE` unset / false | current production | A v2 edition uses per-section slot health. A legacy edition still uses `generated_at` and `mode=llm` |
+| `STRICT_SLOT_GATE=true` | after Pages is serving a v2 edition | Legacy editions never satisfy a slot |
 
 Do **not** enable strict slot or reservation modes until T04 publishes v2 editions and T05 deploys the claim service.
 
-Provider credentials: the guard currently checks `ANTHROPIC_API_KEY` only. T04 must extend validation and secret wiring for `OPENAI_API_KEY` (Luna) while keeping Anthropic rollback.
+Provider credentials: the guard and the build step follow `config.yml`. Production still checks `ANTHROPIC_API_KEY`. `OPENAI_API_KEY` is passed into the build job so a later Luna switch is a config change. Keep the Anthropic secret for rollback.
 
 ## Prerequisites before cutover
 
@@ -51,7 +52,7 @@ Provider credentials: the guard currently checks `ANTHROPIC_API_KEY` only. T04 m
 3. Run one manual `workflow_dispatch` on `build.yml` with reservation inputs; confirm claim + publication.
 4. Observe at least one Worker-initiated scheduled dispatch succeed end-to-end.
 5. Remove the `schedule:` block from `.github/workflows/build.yml`.
-6. Set `STRICT_SLOT_GATE=true` once T04 emits v2 editions.
+6. Set `STRICT_SLOT_GATE=true` only after the live Pages briefing is schema version 2. Turning it on while Pages still serves a legacy file makes every slot look missed.
 
 ## Mock and deploy-only paths
 

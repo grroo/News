@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {dueSlot,tick} from './core.mjs';
+import {dueSlot,slotPublished,tick} from './core.mjs';
 import {readFileSync} from 'node:fs';
 const schedule = JSON.parse(readFileSync(new URL('../../schedule.json',import.meta.url)));
 const now = Date.parse('2026-09-07T05:05:00Z');
@@ -62,4 +62,42 @@ test('mock or future-dated content cannot count as success',async()=>{
 });
 test('invalid live data fails without dispatching',async()=>{
   const t=setup({live:{}});await assert.rejects(t.run,/timestamp/);assert.equal(t.calls.length,1);
+});
+function ai(state, extra={}) {
+  return {state, briefing:[], items:[], last_success_at:'2026-09-07T05:02:00Z', ...extra};
+}
+function v2(overrides={}) {
+  return {schema_version:2, edition_id:'ed-1', generated_at:'2026-09-07T05:03:00Z',
+    source_checked_at:'2026-09-07T05:01:00Z', mode:'llm', scheduled_slot:slot,
+    request_ids:['req-1'], quality:{overall:'healthy'},
+    refresh:{outcome:'generated', completed_at:'2026-09-07T05:04:00Z'},
+    sections:{news:ai('healthy'), sport:ai('healthy'), finance:ai('healthy'), media:{state:'skipped', briefing:'', items:[]}},
+    ...overrides};
+}
+test('v2 health applies while the strict flag is off', async()=>{
+  const healthy = v2();
+  const noChange = v2({generated_at:'2026-09-06T17:00:00Z',
+    refresh:{outcome:'no_change', completed_at:'2026-09-07T05:04:00Z', reused_edition_id:'ed-1'},
+    sections:{news:ai('unchanged',{reused_edition_id:'ed-1', last_success_at:'2026-09-06T17:05:00Z'}),
+      sport:ai('unchanged',{reused_edition_id:'ed-1', last_success_at:'2026-09-06T17:05:00Z'}),
+      finance:ai('unchanged',{reused_edition_id:'ed-1', last_success_at:'2026-09-06T17:05:00Z'}),
+      media:{state:'skipped', briefing:'', items:[]}}});
+  const degraded = v2({quality:{overall:'degraded'}, sections:{...v2().sections, sport:{...ai('degraded'), error:'timeout'}}});
+  const failed = v2({quality:{overall:'failed'}, sections:{news:{...ai('failed'), error:'timeout'}, sport:{...ai('failed'), error:'timeout'}, finance:{...ai('failed'), error:'timeout'}, media:{state:'skipped', briefing:'', items:[]}}});
+  assert.equal((await setup({live:healthy}).run()).phase,'published');
+  assert.equal((await setup({live:noChange}).run()).phase,'published');
+  assert.equal((await setup({live:degraded}).run()).phase,'dispatched');
+  assert.equal((await setup({live:failed}).run()).phase,'dispatched');
+  assert.equal(slotPublished(stale, slot, now, {strict:false}), false);
+  assert.equal(slotPublished({generated_at:slot, mode:'llm'}, slot, now, {strict:false}), true);
+  assert.equal(slotPublished({generated_at:slot, mode:'llm'}, slot, now, {strict:true}), false);
+});
+test('a failed v2 edition keeps the retry budget despite a new timestamp', async()=>{
+  const failed = v2({quality:{overall:'failed'}});
+  const t = setup({live:failed, state:{slot, attempts:2, phase:'dispatched', nextAttempt:0}});
+  const result = await t.run();
+  assert.equal(result.phase,'dispatched');
+  assert.equal(result.attempts,3);
+  const stopped = setup({live:failed, state:{slot, attempts:3, phase:'dispatched', nextAttempt:0}});
+  assert.equal((await stopped.run()).phase,'attention_needed');
 });

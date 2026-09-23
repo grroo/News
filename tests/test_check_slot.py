@@ -36,6 +36,50 @@ CLAIM_RESPONSE = Draft202012Validator(
 )
 
 
+def section(**extra):
+    base = {
+        "state": "healthy",
+        "briefing": [],
+        "items": [],
+        "last_success_at": "2026-09-07T05:02:00+00:00",
+        "source_checked_at": "2026-09-07T05:01:00+00:00",
+    }
+    base.update(extra)
+    return base
+
+
+def unchanged_sections():
+    return {
+        name: section(state="unchanged", reused_edition_id="ed-1", input_fingerprint="sha256:abc", last_success_at="2026-09-06T17:05:00+00:00")
+        for name in ("news", "sport", "finance")
+    } | {"media": {"state": "skipped", "briefing": "", "items": []}}
+
+
+def v2_edition(**overrides):
+    edition = {
+        "schema_version": 2,
+        "edition_id": "ed-1",
+        "generated_at": "2026-09-07T05:03:00+00:00",
+        "source_checked_at": "2026-09-07T05:01:00+00:00",
+        "timezone": "Europe/Rome",
+        "schedule": SCHEDULE,
+        "trigger": "scheduled",
+        "request_ids": ["req-1"],
+        "scheduled_slot": SLOT,
+        "quality": {"overall": "healthy"},
+        "mode": "llm",
+        "refresh": {"outcome": "generated", "completed_at": "2026-09-07T05:04:00+00:00"},
+        "sections": {
+            "news": section(),
+            "sport": section(),
+            "finance": section(),
+            "media": {"state": "skipped", "briefing": "", "items": []},
+        },
+    }
+    edition.update(overrides)
+    return edition
+
+
 def decide(**kwargs):
     defaults = dict(
         slot_text=SLOT,
@@ -136,6 +180,67 @@ class SlotTests(unittest.TestCase):
         self.assertFalse(
             guard.slot_satisfied(FRESH, slot, NOW, strict_gate=True, slot_text=SLOT)
         )
+
+    def test_v2_health_applies_while_strict_flag_is_off(self):
+        slot = datetime.fromisoformat(SLOT.replace("Z", "+00:00"))
+        healthy = v2_edition()
+        no_change = v2_edition(
+            generated_at="2026-09-06T17:00:00+00:00",
+            refresh={"outcome": "no_change", "completed_at": "2026-09-07T05:04:00+00:00", "reused_edition_id": "ed-1"},
+            sections=unchanged_sections(),
+        )
+        degraded = v2_edition(quality={"overall": "degraded"}, sections={**unchanged_sections(), "sport": {**section(), "state": "degraded", "error": "timeout"}})
+        failed = v2_edition(
+            generated_at="2026-09-07T05:03:00+00:00",
+            quality={"overall": "failed"},
+            sections={name: {**section(), "state": "failed", "error": "timeout", "briefing": "Summary unavailable."} for name in ("news", "sport", "finance")} | {"media": {"state": "skipped", "briefing": "", "items": []}},
+        )
+        legacy = FRESH
+        for edition, expected in ((healthy, True), (no_change, True), (degraded, False), (failed, False), (legacy, True)):
+            self.assertEqual(
+                guard.slot_satisfied(edition, slot, NOW, strict_gate=False, request_id="req-1", slot_text=SLOT),
+                expected,
+            )
+        self.assertFalse(guard.slot_satisfied(legacy, slot, NOW, strict_gate=True, slot_text=SLOT))
+        self.assertEqual(decide(live=healthy, strict_gate=False, request_id="req-1")[:2], (False, False))
+        self.assertEqual(decide(live=no_change, strict_gate=False, request_id="req-1")[:2], (False, False))
+        self.assertEqual(decide(live=degraded, strict_gate=False, request_id="req-1")[:2], (True, True))
+        self.assertEqual(decide(live=failed, strict_gate=False, request_id="req-1")[:2], (True, True))
+        self.assertEqual(decide(live=legacy, strict_gate=False)[:2], (False, False))
+        self.assertEqual(decide(live=legacy, strict_gate=True)[:2], (True, True))
+
+    def test_guard_checks_the_configured_provider_secret(self):
+        with patch.dict(os.environ, {"ANTHROPIC_API_KEY": "", "OPENAI_API_KEY": "sk-test"}, clear=False):
+            present, name = guard.provider_has_credential()
+        self.assertFalse(present)
+        self.assertEqual(name, "ANTHROPIC_API_KEY")
+        with patch.dict(os.environ, {"ANTHROPIC_API_KEY": "sk-ant-test"}, clear=False):
+            present, name = guard.provider_has_credential()
+        self.assertTrue(present)
+        self.assertEqual(name, "ANTHROPIC_API_KEY")
+
+    def test_build_step_receives_slot_request_and_provider_secrets(self):
+        import yaml
+        workflow = yaml.safe_load((ROOT / ".github/workflows/build.yml").read_text())
+        steps = workflow["jobs"]["build"]["steps"]
+        build_step = next(step for step in steps if step.get("name") == "Build briefing")
+        env = build_step["env"]
+        self.assertIn("steps.slot.outputs.scheduled_slot", env["SCHEDULED_SLOT"])
+        self.assertIn("inputs.request_id", env["REQUEST_ID"])
+        self.assertIn("github.event_name", env["GITHUB_EVENT_NAME"])
+        self.assertIn("secrets.ANTHROPIC_API_KEY", env["ANTHROPIC_API_KEY"])
+        self.assertIn("secrets.OPENAI_API_KEY", env["OPENAI_API_KEY"])
+        self.assertNotIn("sk-", yaml.safe_dump(workflow))
+
+    def test_pages_artifact_omits_private_caches(self):
+        import yaml
+        for name in (".github/workflows/build.yml", ".github/workflows/deploy-pages.yml"):
+            workflow = yaml.safe_load((ROOT / name).read_text())
+            steps = workflow["jobs"][next(iter(workflow["jobs"]))]["steps"]
+            assemble = next(step for step in steps if "Assemble" in step.get("name", ""))
+            script = assemble["run"]
+            for private in ("seen.json", "feed-cache.json", "section-cache.json"):
+                self.assertIn(f"_site/data/{private}", script)
 
     def test_dst_previous_day(self):
         now = datetime(2026, 3, 29, 4, 59, tzinfo=timezone.utc)

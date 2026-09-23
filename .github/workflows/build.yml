@@ -90,6 +90,10 @@ jobs:
         if: steps.slot.outputs.build == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SCHEDULED_SLOT: ${{ steps.slot.outputs.scheduled_slot }}
+          REQUEST_ID: ${{ inputs.request_id }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: |
           if [ "${{ inputs.mock }}" = "true" ]; then
             python scripts/build.py --mock
@@ -120,7 +124,7 @@ jobs:
           mkdir -p _site
           cp -r site/. _site/
           cp -r data _site/data
-          rm -f _site/data/seen.json
+          rm -f _site/data/seen.json _site/data/feed-cache.json _site/data/section-cache.json
           touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3.0.1

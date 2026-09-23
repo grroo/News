@@ -39,6 +39,49 @@ async function json(response, limit = 1024 * 1024) {
   return JSON.parse(new TextDecoder().decode(bytes));
 }
 
+function instant(value) {
+  const parsed = Date.parse(value);
+  return Number.isFinite(parsed) ? parsed : NaN;
+}
+
+/** Same rules as scripts/slot_health.py. A v2 edition is judged here even when strict is false. */
+export function slotPublished(live, slot, now, {requestId = null, strict = false} = {}) {
+  if (!live || typeof live !== 'object') return false;
+  if (live.schema_version === 2) {
+    if (live.mode !== 'llm' || live.quality?.overall !== 'healthy') return false;
+    if (requestId && !(live.request_ids || []).includes(requestId)) return false;
+    const due = instant(slot);
+    const source = instant(live.source_checked_at);
+    const done = instant(live.refresh?.completed_at);
+    const generated = instant(live.generated_at);
+    if (instant(live.scheduled_slot) !== due) return false;
+    if (![due, source, done, generated].every(Number.isFinite)) return false;
+    if (!(due <= source && source <= done && done <= now + 60000)) return false;
+    if (generated > now + 60000) return false;
+    const outcome = live.refresh?.outcome;
+    if (outcome === 'generated' && generated < due) return false;
+    if (outcome === 'no_change' && live.refresh?.reused_edition_id !== live.edition_id) return false;
+    for (const name of ['news', 'sport', 'finance']) {
+      const section = live.sections?.[name];
+      if (!section || !['healthy', 'unchanged'].includes(section.state) || section.error) return false;
+      if (!Array.isArray(section.briefing) || !Array.isArray(section.items)) return false;
+      if (section.state === 'unchanged' && !section.reused_edition_id) return false;
+      const succeeded = instant(section.last_success_at);
+      if (!Number.isFinite(succeeded) || succeeded > done + 60000) return false;
+      if (section.state === 'healthy' && succeeded < due) return false;
+    }
+    const media = live.sections?.media;
+    return !!media && ['healthy', 'unchanged', 'skipped'].includes(media.state) && !media.error;
+  }
+  if (strict) return false;
+  const generated = instant(live.generated_at);
+  return Number.isFinite(generated) && generated >= instant(slot) && generated <= now + 60000 && live.mode === 'llm';
+}
+
+function strictGate(env) {
+  return ['1', 'true', 'yes'].includes(String(env.STRICT_SLOT_GATE || '').toLowerCase());
+}
+
 export async function tick({now, schedule, state, env, request = fetch, save}) {
   const slot = dueSlot(now, schedule);
   state = state.slot === slot ? {...state} : {slot, attempts:0, phase:'due', nextAttempt:0};
@@ -47,10 +90,12 @@ export async function tick({now, schedule, state, env, request = fetch, save}) {
   const live = await json(await request(`${env.BRIEFING_URL}?scheduler=${now}`, {
     cache:'no-store', redirect:'manual', signal:AbortSignal.timeout(10000)
   }));
-  const generated = Date.parse(live.generated_at);
-  if (!Number.isFinite(generated)) throw new Error('Live briefing has no valid timestamp');
-  state.liveGeneratedAt = live.generated_at;
-  if (generated >= Date.parse(slot) && generated <= now + 60000 && live.mode === 'llm') {
+  if (live.schema_version !== 2) {
+    const generated = Date.parse(live.generated_at);
+    if (!Number.isFinite(generated)) throw new Error('Live briefing has no valid timestamp');
+  }
+  state.liveGeneratedAt = live.generated_at ?? null;
+  if (slotPublished(live, slot, now, {strict: strictGate(env)})) {
     return {...state, phase:'published', error:null};
   }
   if (!env.GITHUB_TOKEN) return {...state, phase:'needs_github_secret'};
