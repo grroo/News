@@ -2,21 +2,30 @@ name: Build briefing & deploy
 
 on:
   schedule:
-    # Rome time, including daylight saving changes. Always process a triggered
-    # run even if GitHub starts it late; checking the runner's hour loses updates.
+    # Rome time, including daylight saving changes. Remove only after Worker cutover
+    # documented in docs/operations/scheduler-cutover.md.
     - cron: "0 7,13,19 * * *"
       timezone: "Europe/Rome"
-  push:
-    branches: [main]
-    paths: [schedule.json, config.yml, "scripts/**", "site/**", "tests/**", requirements.txt, .github/workflows/build.yml]
   workflow_dispatch:
     inputs:
       scheduled_slot:
-        description: "Publication slot (ISO timestamp; supplied by Cloudflare)"
+        description: "Publication slot (UTC ISO timestamp; Cloudflare supplies this for scheduled work)"
+        type: string
+        required: false
+      reservation_id:
+        description: "Opaque reservation id from the Worker gate"
+        type: string
+        required: false
+      request_id:
+        description: "Opaque request id acknowledged in the published edition"
         type: string
         required: false
       mock:
-        description: "Skip the LLM (mock briefings)"
+        description: "Build a mock preview artifact only (never commits or publishes)"
+        type: boolean
+        default: false
+      deploy_only:
+        description: "Publish committed data without fetching or generating"
         type: boolean
         default: false
 
@@ -26,7 +35,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: briefing-build
+  group: briefing-publication
   cancel-in-progress: false
 
 jobs:
@@ -36,49 +45,72 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
+      - uses: actions/checkout@v4.2.2
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5.4.0
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: requirements.lock
 
-      - name: Install
-        run: |
-          pip install -r requirements-test.txt
-          npm ci --ignore-scripts
+      - name: Install locked runtime dependencies
+        run: pip install -r requirements.lock
 
-      - name: Validate selection and freshness
-        run: |
-          python -m unittest discover -s tests -p 'test_*.py'
-          node --test tests/freshness.test.cjs tests/contracts.test.cjs cloudflare/news-scheduler/core.test.mjs
-
-      - name: Check scheduled slot
+      - name: Check slot and generation guard
         id: slot
         env:
           SCHEDULED_SLOT: ${{ inputs.scheduled_slot }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          RESERVATION_ID: ${{ inputs.reservation_id }}
+          REQUEST_ID: ${{ inputs.request_id }}
+          DEPLOY_ONLY: ${{ inputs.deploy_only }}
+          MOCK_REQUESTED: ${{ inputs.mock }}
+          GENERATE_REQUESTED: ${{ inputs.deploy_only == false }}
+          REQUIRE_RESERVATION: ${{ vars.RESERVATION_GATE_ENABLED == 'true' }}
+          STRICT_SLOT_GATE: ${{ vars.STRICT_SLOT_GATE || 'false' }}
+          NEWS_WORKFLOW_FILE: build.yml
+          GITHUB_REF: ${{ github.ref }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/check_slot.py
+
+      - name: Claim reservation
+        if: steps.slot.outputs.build == 'true' && inputs.deploy_only == false && inputs.mock == false && (vars.RESERVATION_GATE_ENABLED == 'true' || inputs.reservation_id != '')
+        env:
+          RESERVATION_ID: ${{ inputs.reservation_id }}
+          REQUEST_ID: ${{ inputs.request_id }}
+          NEWS_RESERVATION_GATE_TOKEN: ${{ secrets.NEWS_RESERVATION_GATE_TOKEN }}
+          RESERVATION_CLAIM_URL: ${{ vars.RESERVATION_CLAIM_URL }}
+          NEWS_WORKFLOW_FILE: build.yml
+          GITHUB_REF: ${{ github.ref }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_RUN_ATTEMPT: ${{ github.run_attempt }}
+        run: python scripts/check_slot.py --claim
 
       - name: Build briefing
         if: steps.slot.outputs.build == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          if [ "${{ github.event.inputs.mock }}" = "true" ]; then
+          if [ "${{ inputs.mock }}" = "true" ]; then
             python scripts/build.py --mock
           else
             python scripts/build.py
           fi
 
+      - name: Upload mock preview
+        if: steps.slot.outputs.build == 'true' && inputs.mock == true
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: mock-briefing-preview
+          path: data/briefing.json
+
       - name: Commit data
-        if: steps.slot.outputs.build == 'true'
+        if: steps.slot.outputs.build == 'true' && steps.slot.outputs.publish == 'true'
         run: |
           git config user.name "briefing-bot"
           git config user.email "briefing-bot@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "briefing: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git diff --cached --quiet || git commit -m "briefing: $(date -u +'%Y-%m-%d %H:%M UTC') [skip ci]"
           git pull --rebase --autostash origin ${{ github.ref_name }}
           git push
 
@@ -91,11 +123,11 @@ jobs:
           rm -f _site/data/seen.json
           touch _site/.nojekyll
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3.0.1
         if: steps.slot.outputs.publish == 'true'
         with:
           path: _site
 
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4.0.5
         if: steps.slot.outputs.publish == 'true'
         id: deployment

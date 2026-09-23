@@ -5,7 +5,7 @@ import copy
 import json
 import sys
 import unittest
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
@@ -15,6 +15,9 @@ FIXTURES = ROOT / "tests" / "fixtures" / "contracts"
 SCHEMAS = ROOT / "docs" / "contracts" / "schemas"
 FORMAT_CHECKER = FormatChecker()
 SCHEMA_DOCS = {p.stem: json.loads(p.read_text()) for p in SCHEMAS.glob("*.json")}
+
+sys.path.insert(0, str(ROOT / "scripts"))
+from slot_health import satisfies_healthy_slot  # noqa: E402
 
 
 def load(name: str) -> dict:
@@ -53,47 +56,6 @@ def instant(value: str) -> datetime:
     if dt.utcoffset() is None:
         raise ValueError("Timezone required")
     return dt
-
-
-def satisfies_healthy_slot(edition: dict, slot: str, now: datetime, request_id: str | None = None) -> bool:
-    """Reference contract rule; production enforcement belongs to T01/T05."""
-    if not validator("edition").is_valid(edition) or edition.get("schema_version") != 2:
-        return False
-    if edition["mode"] != "llm" or edition["quality"]["overall"] != "healthy":
-        return False
-    if request_id and request_id not in edition["request_ids"]:
-        return False
-    try:
-        due = instant(slot)
-        if instant(edition.get("scheduled_slot", "")) != due:
-            return False
-        source = instant(edition["source_checked_at"])
-        done = instant(edition["refresh"]["completed_at"])
-        generated = instant(edition["generated_at"])
-        if not (due <= source <= done <= now + timedelta(seconds=60)):
-            return False
-        if generated > now + timedelta(seconds=60):
-            return False
-        outcome = edition["refresh"]["outcome"]
-        if outcome == "generated" and generated < due:
-            return False
-        if outcome == "no_change" and edition["refresh"]["reused_edition_id"] != edition["edition_id"]:
-            return False
-        for name in ("news", "sport", "finance"):
-            section = edition["sections"][name]
-            if section["state"] not in ("healthy", "unchanged") or "error" in section:
-                return False
-            if not isinstance(section.get("briefing"), list) or not isinstance(section.get("items"), list):
-                return False
-            succeeded = instant(section["last_success_at"])
-            if succeeded > done + timedelta(seconds=60):
-                return False
-            if section["state"] == "healthy" and succeeded < due:
-                return False
-        media = edition["sections"]["media"]
-        return media["state"] in ("healthy", "unchanged", "skipped") and "error" not in media
-    except (KeyError, TypeError, ValueError):
-        return False
 
 
 def claim_decision(reservation: dict, claim: dict, now: str) -> tuple[str, str | None]:

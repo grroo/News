@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - schedule.json
+      - config.yml
+      - scripts/**
+      - site/**
+      - tests/**
+      - cloudflare/**
+      - docs/contracts/**
+      - requirements*.txt
+      - requirements.lock
+      - package.json
+      - package-lock.json
+      - .github/workflows/**
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - uses: actions/setup-python@v5.4.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-test.txt
+
+      - uses: actions/setup-node@v4.1.0
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install Python test dependencies
+        run: pip install -r requirements-test.txt
+
+      - name: Verify production lock in clean environment
+        run: |
+          python -m venv /tmp/news-prod-venv
+          /tmp/news-prod-venv/bin/pip install -r requirements.lock
+          /tmp/news-prod-venv/bin/python -c "import jsonschema; import sys; sys.path.insert(0, 'scripts'); import build, check_slot, llm_provider"
+
+      - name: Install root contract-test dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Install Worker dev dependencies
+        working-directory: cloudflare/news-scheduler
+        run: npm ci --ignore-scripts
+
+      - name: Python and contract tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Frontend freshness and contract tests
+        run: node --test tests/freshness.test.cjs tests/contracts.test.cjs
+
+      - name: Worker typecheck and tests
+        working-directory: cloudflare/news-scheduler
+        run: npm run check
