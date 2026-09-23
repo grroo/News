@@ -232,6 +232,16 @@ class SlotTests(unittest.TestCase):
         self.assertIn("secrets.OPENAI_API_KEY", env["OPENAI_API_KEY"])
         self.assertNotIn("sk-", yaml.safe_dump(workflow))
 
+    def test_pages_artifact_omits_private_caches(self):
+        import yaml
+        for name in (".github/workflows/build.yml", ".github/workflows/deploy-pages.yml"):
+            workflow = yaml.safe_load((ROOT / name).read_text())
+            steps = workflow["jobs"][next(iter(workflow["jobs"]))]["steps"]
+            assemble = next(step for step in steps if "Assemble" in step.get("name", ""))
+            script = assemble["run"]
+            for private in ("seen.json", "feed-cache.json", "section-cache.json"):
+                self.assertIn(f"_site/data/{private}", script)
+
     def test_dst_previous_day(self):
         now = datetime(2026, 3, 29, 4, 59, tzinfo=timezone.utc)
         self.assertEqual(
