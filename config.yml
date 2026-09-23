@@ -6,8 +6,22 @@
 
 timezone: Europe/Rome
 language: English            # language of the LLM-written briefings/summaries
-model: claude-haiku-4-5      # cheapest that does the job. Smarter but ≈3× pricier: claude-sonnet-4-6
+# Rollback is provider anthropic + the model below. Luna is provider openai + gpt-6-luna.
+provider: anthropic
+model: claude-haiku-4-5
+provider_max_attempts: 2     # includes the first call; the provider owns this retry loop
+provider_timeout_seconds: 120
+prompt_version: 1
+# Past editions: seven days, with a hard count and size ceiling. keep_past_briefings
+# is only the count used when archive is omitted.
 keep_past_briefings: 6
+archive:
+  max_age_days: 7
+  max_count: 40
+  max_bytes: 8000000
+feed_cache:
+  max_bytes: 1000000
+  max_records: 40
 
 # Cost knobs: candidates sent to the LLM per section (≈70 tokens each) and
 # how many items it should select. Fewer candidates = cheaper.

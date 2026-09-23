@@ -67,8 +67,7 @@ class SelectionTests(unittest.TestCase):
         response = {'items':[{'id':0},{'id':0},{'id':-1},{'id':True},{'id':99}],
                     'briefing':[{'text':'Supported bullet', 'source_ids':[0,0,-1,True,99]},
                                 {'text':'Unsupported bullet','source_ids':[99]}, 'Uncited legacy text']}
-        with patch.object(build,'call_claude',return_value=response):
-            result = build.llm_section('news', candidates, self.cfg, 'fake')
+        result = build.apply_selection(response, candidates, self.cfg['source_preferences'].get('news', {}), 8)
         self.assertEqual(len(result['items']),1)
         self.assertEqual(len(result['briefing']),1)
         self.assertEqual(len(result['briefing'][0]['sources']),1)
