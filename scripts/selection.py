@@ -69,6 +69,20 @@ def editorial_enabled(cfg: dict) -> bool:
     return flag is True or flag == "true"
 
 
+def selection_fingerprint_fields(cfg: dict, section: str, candidates: list[dict]) -> dict:
+    """Fields T09 must fold into section_cache.fingerprint when editorial ranking ships.
+
+    T04 currently sorts candidate keys and ignores selection mode/order. Keep
+    ``editorial_selection`` false until T09 merges this into the live fingerprint.
+    """
+    return {
+        "selection_version": SELECTION_VERSION,
+        "selection_mode": "editorial" if editorial_enabled(cfg) else "legacy",
+        "candidate_order": [it.get("key") for it in candidates],
+        "selection_policy": (cfg.get("selection") or {}),
+    }
+
+
 def select_candidates(items: list[dict], cfg: dict, section: str) -> list[dict]:
     """Pick the bounded candidate list for one section.
 
@@ -116,6 +130,17 @@ _UPDATE_TOKENS = {
     "transfer", "transfers", "signs", "signed", "signing", "signe",
     "suspended", "suspension", "merger", "acquisition", "acquires",
 }
+
+# Generic headline verbs/nouns that must not alone justify collapsing distinct stories.
+_GENERIC_STORY = _STOP | {
+    "raises", "raise", "raised", "outlook", "preview", "previews", "insurance",
+    "reports", "report", "says", "said", "update", "updates", "beat", "beats",
+    "win", "wins", "loss", "draw", "vs", "versus", "match", "game", "cup",
+}
+
+_OUTLET_SUFFIX = re.compile(r"\s+[-–|]\s+[^-–|]{2,48}$")
+
+SELECTION_VERSION = "2026-09-23-v1"
 
 _SECTION_TOPICS = {
     "news": (
@@ -166,8 +191,8 @@ def _topic_hits(item: dict, terms: tuple[str, ...]) -> int:
     return sum(1 for term in terms if _contains_term(text, term))
 
 
-def _story_tokens(title: str) -> tuple[str, ...]:
-    words = re.findall(r"[a-z0-9àâäéèêëïîôùûüç]+", title.lower())
+def _story_tokens(title: str, item: dict | None = None) -> tuple[str, ...]:
+    words = re.findall(r"[a-z0-9àâäéèêëïîôùûüç]+", _headline_core(title, item))
     kept = []
     for word in words:
         if any(char.isdigit() for char in word) or (word not in _STOP and len(word) > 2):
@@ -175,14 +200,60 @@ def _story_tokens(title: str) -> tuple[str, ...]:
     return tuple(kept)
 
 
+def _headline_core(title: str, item: dict | None = None) -> str:
+    """Normalize a headline without dropping internal 'Team - Opponent' segments."""
+    text = title.strip()
+    suffix = _OUTLET_SUFFIX.search(text)
+    if suffix:
+        candidate = suffix.group(0).strip(" -–|").strip().lower()
+        strip = False
+        if item:
+            publisher = normalize_publisher(item)
+            if candidate == publisher or candidate in publisher or publisher in candidate:
+                strip = True
+        if candidate in _PUBLISHER_ALIASES or candidate in _PUBLISHER_ALIASES.values():
+            strip = True
+        if strip:
+            text = text[: suffix.start()]
+    text = re.sub(r"[^a-z0-9 àâäéèêëïîôùûüç'-]", " ", text.lower())
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _distinctive_tokens(title: str, item: dict | None = None) -> frozenset[str]:
+    words = re.findall(r"[a-z0-9àâäéèêëïîôùûüç]+", _headline_core(title, item))
+    kept = set()
+    for word in words:
+        if any(char.isdigit() for char in word):
+            kept.add(word)
+        elif word not in _GENERIC_STORY and len(word) > 2:
+            kept.add(word)
+    return frozenset(kept)
+
+
 def _same_story(left: dict, right: dict) -> bool:
-    if title_key(left.get("title") or "") == title_key(right.get("title") or ""):
+    left_title = left.get("title") or ""
+    right_title = right.get("title") or ""
+    if _headline_core(left_title, left) == _headline_core(right_title, right):
         return True
-    a, b = set(_story_tokens(left.get("title") or "")), set(_story_tokens(right.get("title") or ""))
-    if len(a) < 3 or len(b) < 3:
+
+    left_distinct = _distinctive_tokens(left_title, left)
+    right_distinct = _distinctive_tokens(right_title, right)
+    if not left_distinct or not right_distinct:
         return False
-    overlap = len(a & b)
-    return overlap / len(a | b) >= 0.62 or (overlap >= 4 and (a <= b or b <= a))
+    distinct_overlap = len(left_distinct & right_distinct)
+    distinct_min = min(len(left_distinct), len(right_distinct))
+    if len(left_distinct) >= 2 and len(right_distinct) >= 2 and distinct_overlap < 2:
+        return False
+    if distinct_overlap / distinct_min < 0.75:
+        return False
+
+    left_tokens, right_tokens = set(_story_tokens(left_title, left)), set(_story_tokens(right_title, right))
+    if len(left_tokens) < 3 or len(right_tokens) < 3:
+        return distinct_overlap >= distinct_min
+
+    token_overlap = len(left_tokens & right_tokens)
+    jaccard = token_overlap / len(left_tokens | right_tokens)
+    return jaccard >= 0.72 and distinct_overlap >= 2
 
 
 def _is_followup(newer: dict, older: dict) -> bool:
