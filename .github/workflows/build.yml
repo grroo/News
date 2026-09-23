@@ -68,7 +68,7 @@ jobs:
           GENERATE_REQUESTED: ${{ inputs.deploy_only == false }}
           REQUIRE_RESERVATION: ${{ vars.RESERVATION_GATE_ENABLED == 'true' }}
           STRICT_SLOT_GATE: ${{ vars.STRICT_SLOT_GATE || 'false' }}
-          GITHUB_WORKFLOW_REF: build.yml
+          NEWS_WORKFLOW_FILE: build.yml
           GITHUB_REF: ${{ github.ref }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/check_slot.py
@@ -80,7 +80,7 @@ jobs:
           REQUEST_ID: ${{ inputs.request_id }}
           NEWS_RESERVATION_GATE_TOKEN: ${{ secrets.NEWS_RESERVATION_GATE_TOKEN }}
           RESERVATION_CLAIM_URL: ${{ vars.RESERVATION_CLAIM_URL }}
-          GITHUB_WORKFLOW_REF: build.yml
+          NEWS_WORKFLOW_FILE: build.yml
           GITHUB_REF: ${{ github.ref }}
           GITHUB_RUN_ID: ${{ github.run_id }}
           GITHUB_RUN_ATTEMPT: ${{ github.run_attempt }}

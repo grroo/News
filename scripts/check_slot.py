@@ -91,6 +91,19 @@ def decide(
     return True, publish, reason
 
 
+def claim_workflow_file() -> str:
+    explicit = os.environ.get("NEWS_WORKFLOW_FILE", "").strip()
+    if explicit:
+        return explicit
+    raw = os.environ.get("GITHUB_WORKFLOW_REF", "").strip()
+    if raw:
+        path_part = raw.split("@", 1)[0]
+        name = Path(path_part).name
+        if name.endswith((".yml", ".yaml")):
+            return name
+    return "build.yml"
+
+
 def claim_request_body(reservation_id, request_id, run_id, run_attempt):
     return {
         "reservation_id": reservation_id,
@@ -98,7 +111,7 @@ def claim_request_body(reservation_id, request_id, run_id, run_attempt):
         "run_id": int(run_id),
         "run_attempt": int(run_attempt),
         "repository": os.environ.get("GITHUB_REPOSITORY", "grroo/News"),
-        "workflow": os.environ.get("GITHUB_WORKFLOW_REF", "build.yml"),
+        "workflow": claim_workflow_file(),
         "ref": os.environ.get("GITHUB_REF", "refs/heads/main"),
     }
 

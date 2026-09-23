@@ -13,6 +13,7 @@ on:
       - cloudflare/**
       - docs/contracts/**
       - requirements*.txt
+      - requirements.lock
       - package.json
       - package-lock.json
       - .github/workflows/**
@@ -43,6 +44,12 @@ jobs:
 
       - name: Install Python test dependencies
         run: pip install -r requirements-test.txt
+
+      - name: Verify production lock in clean environment
+        run: |
+          python -m venv /tmp/news-prod-venv
+          /tmp/news-prod-venv/bin/pip install -r requirements.lock
+          /tmp/news-prod-venv/bin/python -c "import jsonschema; import sys; sys.path.insert(0, 'scripts'); import build, check_slot, llm_provider"
 
       - name: Install root contract-test dependencies
         run: npm ci --ignore-scripts

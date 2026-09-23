@@ -38,7 +38,7 @@ Provider credentials: the guard currently checks `ANTHROPIC_API_KEY` only. T04 m
    - `GITHUB_TOKEN` on the Worker (fine-grained, Actions read/write on `grroo/News`).
    - `NEWS_RESERVATION_GATE_TOKEN` shared between Worker and GitHub (T05 implements claim endpoint).
    - Repository variable `RESERVATION_CLAIM_URL` → Worker `POST /internal/reservations/claim` URL.
-   - Claim body uses `workflow: build.yml` and `ref: refs/heads/main` (see `docs/contracts/schemas/reservation.json`).
+   - Claim body uses `workflow: build.yml` and `ref: refs/heads/main` (see `docs/contracts/schemas/reservation.json`). The workflow sets `NEWS_WORKFLOW_FILE=build.yml`; without it, `check_slot.py` parses GitHub's default `GITHUB_WORKFLOW_REF`.
 
 4. **One full Rome day observed**
    - Three slots complete with `phase: published` on `/health`.

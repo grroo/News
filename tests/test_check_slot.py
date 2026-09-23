@@ -152,7 +152,7 @@ class SlotTests(unittest.TestCase):
 class ClaimTests(unittest.TestCase):
     github_env = {
         "GITHUB_REPOSITORY": "grroo/News",
-        "GITHUB_WORKFLOW_REF": "build.yml",
+        "NEWS_WORKFLOW_FILE": "build.yml",
         "GITHUB_REF": "refs/heads/main",
     }
 
@@ -162,6 +162,25 @@ class ClaimTests(unittest.TestCase):
         self.assertTrue(CLAIM_REQUEST.is_valid(body))
         self.assertEqual(body["workflow"], "build.yml")
         self.assertEqual(body["ref"], "refs/heads/main")
+
+    def test_claim_body_parses_real_github_workflow_ref(self):
+        env = {
+            "GITHUB_REPOSITORY": "grroo/News",
+            "GITHUB_WORKFLOW_REF": "grroo/News/.github/workflows/build.yml@refs/heads/main",
+            "GITHUB_REF": "refs/heads/main",
+        }
+        with patch.dict(os.environ, env, clear=True):
+            body = guard.claim_request_body("resv_abc", "req_xyz", 4242, 1)
+        self.assertTrue(CLAIM_REQUEST.is_valid(body))
+        self.assertEqual(body["workflow"], "build.yml")
+
+    def test_news_workflow_file_overrides_github_workflow_ref(self):
+        env = {
+            "NEWS_WORKFLOW_FILE": "build.yml",
+            "GITHUB_WORKFLOW_REF": "grroo/News/.github/workflows/other.yml@refs/heads/main",
+        }
+        with patch.dict(os.environ, env, clear=True):
+            self.assertEqual(guard.claim_workflow_file(), "build.yml")
 
     def test_validate_allowed_response_requires_matching_ids(self):
         payload = {"decision": "allowed", "reservation_id": "resv_abc", "request_id": "req_xyz"}
