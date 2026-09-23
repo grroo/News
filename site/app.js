@@ -3,31 +3,44 @@
   const $app = document.getElementById('app');
   const SECTIONS = ['news', 'sport', 'finance', 'media'];
   const LABELS = { news: 'News', sport: 'Sport', finance: 'Finance', media: 'Media' };
-  const LS_SEEN = 'briefing.seen.v1', LS_THEME = 'briefing.theme';
+  const LS_SEEN = 'briefing.seen.v1';
+  const LS_THEME = 'briefing.theme';
+  const LS_PENDING = 'briefing.pendingFetch.v1';
+  const storage = BriefingStorage;
+  const refresh = BriefingRefresh;
 
-  // ── seen state (localStorage only) ─────────────────────────────────────
-  let storedSeen = [];
-  try { storedSeen = JSON.parse(localStorage.getItem(LS_SEEN) || '[]'); } catch {}
+  const ownerMeta = document.querySelector('meta[name="news-owner-url"]');
+  const apiMeta = document.querySelector('meta[name="news-refresh-api"]');
+  const OWNER_URL = ownerMeta?.content?.trim() || '';
+  const REFRESH_API = apiMeta?.content?.trim() || '';
+
+  // ── seen state ─────────────────────────────────────────────────────────
+  const storedSeen = storage.readJSON(LS_SEEN, []);
   const seen = new Set(Array.isArray(storedSeen) ? storedSeen : []);
-  const saveSeen = () => localStorage.setItem(LS_SEEN, JSON.stringify([...seen].slice(-2000)));
+  const saveSeen = () => storage.writeJSON(LS_SEEN, [...seen].slice(-2000));
   const markSeen = k => { if (k && !seen.has(k)) { seen.add(k); saveSeen(); } };
 
   // ── theme ──────────────────────────────────────────────────────────────
   const applyTheme = () => {
-    const t = localStorage.getItem(LS_THEME);
-    if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme;
+    const t = storage.getItem(LS_THEME);
+    if (t) document.documentElement.dataset.theme = t;
+    else delete document.documentElement.dataset.theme;
   };
   const toggleTheme = () => {
     const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-    const cur = localStorage.getItem(LS_THEME) || (dark ? 'dark' : 'light');
-    localStorage.setItem(LS_THEME, cur === 'dark' ? 'light' : 'dark');
+    const cur = storage.getItem(LS_THEME) || (dark ? 'dark' : 'light');
+    storage.setItem(LS_THEME, cur === 'dark' ? 'light' : 'dark');
     applyTheme();
   };
   applyTheme();
 
   // ── data ───────────────────────────────────────────────────────────────
   let current = null, viewing = null, pastIndex = null, shown = null;
-  const fetchJSON = async p => { const r = await fetch(p + '?t=' + Date.now(), {cache: 'no-store', signal: AbortSignal.timeout(15000)}); if (!r.ok) throw new Error(r.status + ' ' + p); return r.json(); };
+  const fetchJSON = async p => {
+    const r = await fetch(p + '?t=' + Date.now(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+    if (!r.ok) throw new Error(r.status + ' ' + p);
+    return r.json();
+  };
   const loadCurrent = async () => current || (current = await fetchJSON('data/briefing.json'));
   const loadPastIndex = async () => pastIndex || (pastIndex = await fetchJSON('data/past/index.json').catch(() => []));
 
@@ -44,9 +57,9 @@
   const unseenCount = sec => (sec?.items || []).filter(i => !seen.has(i.key)).length;
   const fmtLocal = b => b.generated_local || new Date(b.generated_at).toLocaleString();
 
-  let refreshMessage = '', refreshing = false;
+  let updateMessage = '', fetchMessage = '', checkingUpdates = false, fetchPoller = null;
   const slotLabel = (time, timezone) => new Date(time).toLocaleString('en-GB', {
-    timeZone: timezone, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+    timeZone: timezone, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
   });
   const freshnessHTML = b => {
     const state = BriefingTime.status(b);
@@ -54,17 +67,45 @@
     const tz = state.timezone === 'Europe/Rome' ? 'Rome time' : state.timezone;
     return `${state.overdue ? `<span class="overdue">Update overdue since ${esc(due)}.</span> ` : state.pending ? 'Scheduled update pending. ' : ''}Next scheduled: ${esc(next)} · ${esc(tz)}`;
   };
-  const headerHTML = (b, sub) => `
+
+  const ownerLink = () => {
+    if (!OWNER_URL) return '';
+    const returnUrl = typeof location !== 'undefined' ? location.href.split('?')[0].split('#')[0] : '';
+    return refresh.buildOwnerUrl(OWNER_URL, returnUrl);
+  };
+
+  const pendingFetch = () => storage.readJSON(LS_PENDING, null);
+  const savePending = value => {
+    if (value) storage.writeJSON(LS_PENDING, value);
+    else storage.removeItem(LS_PENDING);
+  };
+
+  const statusMessages = () => [updateMessage, fetchMessage].filter(Boolean).join(' ');
+
+  const headerHTML = (b, sub) => {
+    const onLatest = b === current;
+    const ownerHref = ownerLink();
+    const pending = pendingFetch();
+    const fetchDisabled = !!pending?.requestId;
+    return `
     <header>
       <h1><a href="#/">Briefing</a></h1>
-      <div class="row">
+      <div class="row actions">
         <span class="meta">${esc(sub ?? ('Updated ' + fmtLocal(b)))}</span>
-        <button class="btn" data-refresh title="Check for the latest published briefing" ${refreshing ? 'disabled' : ''}>${refreshing ? 'Checking…' : 'Refresh'}</button>
-        <button class="btn" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+        <button class="btn" type="button" data-check-updates title="Reload the latest published briefing" ${checkingUpdates ? 'disabled' : ''}>${checkingUpdates ? 'Checking…' : 'Check for updates'}</button>
+        ${onLatest && ownerHref ? `<a class="btn btn-primary" href="${esc(ownerHref)}" data-fetch-briefing ${fetchDisabled ? 'aria-disabled="true" tabindex="-1"' : ''} title="Sign in on the owner page to request a new briefing">Fetch new briefing</a>` : ''}
+        ${onLatest && !ownerHref ? `<span class="meta owner-note">Owner fetch not configured yet.</span>` : ''}
+        <button class="btn" type="button" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
       </div>
     </header>
-    ${b === current ? `<div class="freshness"><div data-freshness>${freshnessHTML(b)}</div><p data-refresh-result role="status">${esc(refreshMessage)}</p></div>` :
-      `<div class="banner archive-note">Past briefing · ${esc(fmtLocal(b))}. <a href="#/">Back to latest</a><p data-refresh-result role="status">${esc(refreshMessage)}</p></div>`}`;
+    ${onLatest ? `<div class="freshness"><div data-freshness>${freshnessHTML(b)}</div>
+      <p class="status-line" data-status-live role="status" aria-live="polite">${esc(statusMessages())}</p>
+      ${ownerHref ? `<p class="owner-help">Fetch new briefing opens a protected owner page. Sign in if asked, submit your request there, then return here to follow progress.</p>` : ''}
+      ${storage.isDenied() ? '<p class="storage-note">Reading history cannot be saved in this browser.</p>' : ''}
+    </div>` :
+      `<div class="banner archive-note">Past briefing · ${esc(fmtLocal(b))}. <a href="#/">Back to latest</a>
+      <p class="status-line" data-status-live role="status" aria-live="polite">${esc(statusMessages())}</p></div>`}`;
+  };
 
   const healthHTML = (b, section) => {
     const feeds = (b.feed_health || []).filter(f => !section || f.section === section);
@@ -114,8 +155,11 @@
     return `<div class="brief ${mock ? 'mock' : ''}" style="--c:var(--${s})">${body}</div>`;
   };
 
-  const tickers = rows => rows?.length ? `
-    <table class="tick"><tbody>${rows.map(r => {
+  const tickers = (rows, caption) => rows?.length ? `
+    ${caption ? `<p class="tick-caption">${esc(caption)}</p>` : ''}
+    <table class="tick" aria-label="Market quotes">
+      <thead><tr><th scope="col">Instrument</th><th scope="col">Price</th><th scope="col">Day change</th></tr></thead>
+      <tbody>${rows.map(r => {
       const p = r.change_pct, cls = p == null ? '' : p >= 0 ? 'up' : 'down';
       return `<tr><td>${esc(r.label)}<span class="sym">${esc(r.symbol)}</span></td>
         <td class="num">${r.price != null ? r.price.toLocaleString(undefined, { maximumFractionDigits: 2 }) : '—'}${r.currency ? ` <span class="sym">${esc(r.currency)}</span>` : ''}</td>
@@ -125,13 +169,16 @@
   const section = (b, s) => {
     const sec = b.sections[s] || { items: [] };
     const backPath = b === current ? '#/' : `#/past/${encodeURIComponent(viewing)}`;
+    const ageNote = refresh.sectionAgeNote(sec, b);
+    const finCaption = s === 'finance' ? refresh.financeCaption(sec, b) : '';
     return `
       ${headerHTML(b)}
       <div class="section-head" style="--c:var(--${s})">
         <h2>${LABELS[s]}</h2>
-        <div class="row"><a class="btn" href="${backPath}">← Home</a><button class="btn" data-mark-all="${s}">Mark all read</button></div>
+        <div class="row"><a class="btn" href="${backPath}">← Home</a><button class="btn" type="button" data-mark-all="${s}">Mark all read</button></div>
       </div>
-      ${s === 'finance' ? tickers(sec.tickers) : ''}
+      ${ageNote ? `<p class="section-age">${esc(ageNote)}</p>` : ''}
+      ${s === 'finance' ? tickers(sec.tickers, finCaption) : ''}
       ${briefHTML(sec.briefing, b.mode === 'mock' || !!sec.error, s)}
       <div class="cards">${sec.items.length ? sec.items.map(card).join('') : '<div class="empty">Nothing new in this window.</div>'}</div>
       ${healthHTML(b, s)}
@@ -139,13 +186,125 @@
   };
 
   const past = (b, idx) => `
-    ${headerHTML(b, 'past briefings')}
+    ${headerHTML(b, 'Past briefings')}
     <div class="past">
       <a href="#/"><b>Latest</b><small>${esc(fmtLocal(b))}</small></a>
       ${idx.length ? idx.map(p => `<a href="#/past/${encodeURIComponent(p.file)}">${esc(new Date(p.generated_at).toLocaleString(undefined, { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }))}
         <small>${SECTIONS.map(s => `${LABELS[s]} ${p.counts?.[s] ?? 0}`).join(' · ')}</small></a>`).join('')
         : '<div class="empty">No past briefings yet.</div>'}
     </div>`;
+
+  // ── status UI ──────────────────────────────────────────────────────────
+  const updateStatusLine = () => {
+    const line = $app.querySelector('[data-status-live]');
+    if (line) line.textContent = statusMessages();
+    const freshness = $app.querySelector('[data-freshness]');
+    if (freshness && current) freshness.innerHTML = freshnessHTML(current);
+    const checkBtn = $app.querySelector('[data-check-updates]');
+    if (checkBtn) {
+      checkBtn.disabled = checkingUpdates;
+      checkBtn.textContent = checkingUpdates ? 'Checking…' : 'Check for updates';
+    }
+  };
+
+  const stripReturnParams = () => {
+    const url = new URL(location.href);
+    ['request', 'request_id', 'job', 'job_id', 'status', 'status_url', 'refresh_error', 'retry_after'].forEach(k => url.searchParams.delete(k));
+    history.replaceState(null, '', url.pathname + url.hash);
+  };
+
+  const beginFetchPoll = async params => {
+    if (fetchPoller?.running) return;
+    const baseline = current || await loadCurrent().catch(() => null);
+    savePending({ requestId: params.requestId, jobId: params.jobId, startedAt: Date.now() });
+    fetchMessage = refresh.userStatusMessage(params.initialStatus || 'accepted');
+    updateStatusLine();
+
+    fetchPoller = refresh.startFetchPoll({
+      fetchFn: async (url, init) => fetch(url, { ...init, credentials: 'include' }),
+      loadBriefing: async () => {
+        const data = await fetchJSON('data/briefing.json');
+        current = data;
+        return data;
+      },
+      onStatus: ({ message, status }) => {
+        fetchMessage = message || refresh.userStatusMessage(status || 'waiting_publish');
+        updateStatusLine();
+      },
+      onComplete: async ({ status, edition }) => {
+        savePending(null);
+        current = edition;
+        pastIndex = null;
+        fetchMessage = refresh.userStatusMessage(status);
+        if (status === 'no_change') fetchMessage = 'Nothing new was published for your request.';
+        await render(false);
+        updateStatusLine();
+      },
+      onError: ({ code, message }) => {
+        if (code !== 'timeout') savePending(null);
+        fetchMessage = message;
+        updateStatusLine();
+      },
+    });
+
+    fetchPoller.setVisible(document.visibilityState === 'visible');
+    await fetchPoller.start({
+      requestId: params.requestId,
+      statusUrl: refresh.resolveStatusUrl(params.statusPath, REFRESH_API),
+      baselineEdition: baseline,
+    });
+  };
+
+  const resumePendingFetch = async () => {
+    const params = refresh.parseReturnParams(location.search);
+    if (params.refreshError) {
+      fetchMessage = refresh.userStatusMessage(params.refreshError, { retry_after: params.retryAfter });
+      stripReturnParams();
+      return;
+    }
+    const pending = pendingFetch();
+    const requestId = params.requestId || pending?.requestId;
+    if (!requestId) return;
+    if (params.requestId) stripReturnParams();
+    await beginFetchPoll({
+      requestId,
+      jobId: params.jobId || pending?.jobId,
+      statusPath: params.statusPath || pending?.statusPath,
+    });
+  };
+
+  // ── check for updates (read-only) ────────────────────────────────────
+  let lastCheck = 0;
+  const checkForUpdates = async (manual = false) => {
+    if (checkingUpdates || (!manual && Date.now() - lastCheck < 60000)) return;
+    lastCheck = Date.now();
+    checkingUpdates = true;
+    if (manual) updateMessage = 'Checking for a newer published briefing…';
+    updateStatusLine();
+    try {
+      const fresh = await fetchJSON('data/briefing.json');
+      if (!current || fresh.generated_at !== current.generated_at) {
+        current = fresh;
+        pastIndex = null;
+        updateMessage = 'Latest briefing loaded.';
+        await render(false);
+      } else if (manual) {
+        updateMessage = BriefingTime.status(current).overdue
+          ? 'No newer briefing published yet. This update is overdue.'
+          : 'You have the latest published briefing.';
+        updateStatusLine();
+      } else {
+        updateMessage = '';
+      }
+    } catch {
+      updateMessage = current
+        ? 'Could not check for updates. Keeping your current briefing.'
+        : 'Could not load the briefing. Please try again.';
+    } finally {
+      checkingUpdates = false;
+      updateStatusLine();
+    }
+  };
 
   // ── router ─────────────────────────────────────────────────────────────
   let renderVersion = 0;
@@ -156,65 +315,71 @@
       if (version !== renderVersion) return;
       const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decodeURIComponent);
       if (parts[0] === 'past') {
-        if (!parts[1]) { const idx = await loadPastIndex(); if (version !== renderVersion) return; shown = b; $app.innerHTML = past(b, idx); }
-        else {
+        if (!parts[1]) {
+          const idx = await loadPastIndex();
+          if (version !== renderVersion) return;
+          shown = b;
+          $app.innerHTML = past(b, idx);
+        } else {
           viewing = parts[1];
           const pb = await fetchJSON('data/past/' + encodeURIComponent(parts[1]));
           if (version !== renderVersion) return;
-          shown = pb; $app.innerHTML = SECTIONS.includes(parts[2]) ? section(pb, parts[2]) : landing(pb);
+          shown = pb;
+          $app.innerHTML = SECTIONS.includes(parts[2]) ? section(pb, parts[2]) : landing(pb);
         }
       } else if (SECTIONS.includes(parts[0])) {
-        viewing = null; shown = b; $app.innerHTML = section(b, parts[0]);
+        viewing = null;
+        shown = b;
+        $app.innerHTML = section(b, parts[0]);
       } else {
-        viewing = null; shown = b; $app.innerHTML = landing(b);
+        viewing = null;
+        shown = b;
+        $app.innerHTML = landing(b);
       }
       if (resetScroll) window.scrollTo(0, 0);
-    } catch (e) {
+      updateStatusLine();
+    } catch {
       if (version !== renderVersion) return;
-      $app.innerHTML = `<div class="empty">Could not load the briefing. Check your connection and try again.<br><button class="btn" data-refresh>Retry</button> <a href="#/">Back to latest</a></div>`;
+      $app.innerHTML = `<div class="empty">Could not load the briefing. Check your connection and try again.<br><button class="btn" type="button" data-check-updates>Retry</button> <a href="#/">Back to latest</a></div>`;
     }
   };
 
   $app.addEventListener('click', e => {
-    if (e.target.closest('[data-refresh]')) { refresh(true); return; }
+    if (e.target.closest('[data-check-updates]')) { checkForUpdates(true); return; }
+    const fetchBtn = e.target.closest('[data-fetch-briefing]');
+    if (fetchBtn) {
+      if (pendingFetch()?.requestId) {
+        e.preventDefault();
+        fetchMessage = 'A fetch is already in progress. Return here to follow it, or wait for it to finish.';
+        updateStatusLine();
+        return;
+      }
+      return;
+    }
     const ref = e.target.closest('[data-citation-key]'); if (ref) { markSeen(ref.dataset.citationKey); return; }
     const c = e.target.closest('.card'); if (c) { markSeen(c.dataset.key); c.classList.add('seen'); return; }
     const m = e.target.closest('[data-mark-all]');
-    if (m) { const sec = shown?.sections?.[m.dataset.markAll];
-      (sec?.items || []).forEach(i => markSeen(i.key)); render(); return; }
+    if (m) {
+      const sec = shown?.sections?.[m.dataset.markAll];
+      (sec?.items || []).forEach(i => markSeen(i.key));
+      render(false);
+      return;
+    }
     if (e.target.closest('[data-theme-toggle]')) toggleTheme();
   });
+
   window.addEventListener('hashchange', () => render());
-  let lastCheck = 0;
-  const updateStatus = () => {
-    const status = $app.querySelector('[data-freshness]');
-    if (status && current) status.innerHTML = freshnessHTML(current);
-    const result = $app.querySelector('[data-refresh-result]');
-    if (result) result.textContent = refreshMessage;
-    const btn = $app.querySelector('[data-refresh]');
-    if (btn) { btn.disabled = refreshing; btn.textContent = refreshing ? 'Checking…' : 'Refresh'; }
-  };
-  const refresh = async (manual = false) => {
-    if (refreshing || (!manual && Date.now() - lastCheck < 60000)) return;
-    lastCheck = Date.now(); refreshing = true;
-    if (manual) refreshMessage = 'Checking for a newer published briefing…';
-    updateStatus();
-    try {
-      const fresh = await fetchJSON('data/briefing.json');
-      if (!current || fresh.generated_at !== current.generated_at) {
-        current = fresh; pastIndex = null;
-        refreshMessage = 'Latest briefing loaded.';
-        await render(false);
-      } else if (manual) {
-        refreshMessage = BriefingTime.status(current).overdue ? 'No newer briefing published yet. This update is overdue.' : 'You have the latest published briefing.';
-        await render(false);
-      } else refreshMessage = '';
-    } catch {
-      refreshMessage = current ? 'Could not check for updates. Keeping your current briefing.' : 'Could not load the briefing. Please try again.';
-    } finally { refreshing = false; updateStatus(); }
-  };
-  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') refresh(); });
-  window.addEventListener('pageshow', e => { if (e.persisted) refresh(); });
-  setInterval(() => { if (document.visibilityState === 'visible') { updateStatus(); refresh(); } }, 60000);
-  render();
+  document.addEventListener('visibilitychange', () => {
+    refresh.getActivePoller()?.setVisible(document.visibilityState === 'visible');
+    if (document.visibilityState === 'visible') checkForUpdates();
+  });
+  window.addEventListener('pageshow', e => { if (e.persisted) checkForUpdates(); });
+  setInterval(() => {
+    if (document.visibilityState === 'visible') {
+      updateStatusLine();
+      checkForUpdates();
+    }
+  }, 60000);
+
+  render().then(() => resumePendingFetch());
 })();
