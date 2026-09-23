@@ -9,7 +9,8 @@ A SQLite Durable Object serializes checks and remembers dispatch attempts. The
 Worker waits for active GitHub builds, retries at intervals of at least 15 minutes,
 and stops after three dispatches per slot. Successful publication clears the slot.
 `/health` exposes read-only status and Cloudflare logs record check failures.
-There is no public endpoint that can start a paid briefing build.
+There is no public endpoint that can start a paid briefing build. Owner refresh
+stays off until the flags below are set on purpose.
 
 ## Deploy and activate
 
@@ -55,3 +56,70 @@ generate normally.
 The health endpoint provides diagnostics; it does not send email or notifications.
 To roll back after cutover, remove the Cloudflare cron and restore GitHub's Rome
 schedule. Changing `schedule.json` requires redeploying the Worker too.
+
+## Authenticated refresh (off by default)
+
+`REFRESH_ENABLED`, `RESERVATION_GATE_ENABLED`, and `STRICT_SLOT_GATE` are plain
+vars and default to `false`. With those defaults the cron keeps the previous
+slot check, `GET /health` stays public, and `/`, `POST /refresh`, and
+`GET /refresh/:id` answer 404. Nothing in this repository turns the flags on,
+creates Access applications, or writes secrets.
+
+Do not set `REFRESH_ENABLED=true` until Cloudflare Access on the **deployed**
+hostname is proven. That proof is still outstanding: this repo cannot see the
+account's Access path policy. Required before enabling refresh:
+
+- Access covers `GET /`, `POST /refresh`, and `GET /refresh/:id`.
+- `GET /health` stays public and does not start a build.
+- `POST /internal/reservations/claim` is **excluded** from browser Access. It
+  accepts only `Authorization: Bearer` equal to the Worker secret
+  `NEWS_RESERVATION_GATE_TOKEN` (constant-time compare). Do not add that name
+  to `secrets.required` in `wrangler.jsonc`; a missing value must not block
+  deploys that are still on the legacy cron.
+- The Worker checks the Access JWT (`Cf-Access-Jwt-Assertion`): RS256 signature
+  against `https://<ACCESS_TEAM_DOMAIN>.cloudflareaccess.com/cdn-cgi/access/certs`,
+  issuer, audience (`ACCESS_AUD`), expiry, and `email` equal to `OWNER_EMAIL`.
+  A service token (`common_name` without `email`) is rejected.
+
+Set the non-secret vars in the dashboard or with `npx wrangler secret`/`vars`,
+not in git, when you are ready:
+
+| Name | Value |
+|---|---|
+| `ACCESS_TEAM_DOMAIN` | Access team name, without the `.cloudflareaccess.com` suffix |
+| `ACCESS_AUD` | Access application audience tag (AUD) |
+| `OWNER_EMAIL` | The one email allowed to refresh |
+| `PAGES_SITE_URL` | Public briefing origin, used only as the return link |
+| `REFRESH_ENABLED` | `true` only after the Access checks above |
+| `RESERVATION_GATE_ENABLED` | `true` together with refresh, after claim is deployed |
+| `STRICT_SLOT_GATE` | leave `false` until editions are schema v2 |
+
+`NEWS_RESERVATION_GATE_TOKEN` is a second Worker secret, shared with the GitHub
+Actions secret of the same name. Generate it outside the repo and enter it with
+`npx wrangler secret put NEWS_RESERVATION_GATE_TOKEN`. `GITHUB_TOKEN` stays the
+fine-grained Actions read/write token for `grroo/News` only. Neither value
+belongs in the browser, in logs, or in git.
+
+Enable `RESERVATION_GATE_ENABLED` and `REFRESH_ENABLED` together, and only after
+Access is proven. The gate makes every paid `build.yml` run claim a reservation
+before it fetches or calls a model. `deploy_only` recovery does not call the
+model and does not spend another generation allowance. `STRICT_SLOT_GATE=true`
+switches publication from `mode === llm` to per-section outcomes; turn it on
+only after v2 editions are what Pages serves, or the cron will treat legacy
+briefings as unpublished.
+
+Limits, stored before GitHub is called: 15 minutes between manual refreshes,
+five manual requests per Europe/Rome day, eight generation runs per Rome day
+with room left for scheduled slots that have not had a first attempt. Retries
+count. The same idempotency key, or a second request while a reservation is
+still open, joins that reservation instead of dispatching again. A dispatch
+that times out keeps the reservation and is matched to a workflow run before
+another dispatch of that same reservation. Publication is the Pages edition
+whose `request_ids` contain that request, including `no_change` and `degraded`.
+An Actions success alone does not finish the job.
+
+Reconciliation is reliable when the Actions run name or display title contains
+`request_id`. `build.yml` does not set that name yet; until it does, the Worker
+will bind the reservation only when exactly one `workflow_dispatch` run appears
+in the reservation window. Ask the workflow owner to put `request_id` in
+`run-name` before relying on refresh in production.

@@ -1,25 +1,42 @@
 // No platform dependencies: the scheduler's decisions are regression-tested in Node.
-export function dueSlot(now, schedule) {
-  const fields = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
-    timeZone: schedule.timezone, year: 'numeric', month: '2-digit', day: '2-digit',
+export function zonedParts(ms, timeZone) {
+  return Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
+    timeZone, year: 'numeric', month: '2-digit', day: '2-digit',
     hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
-  }).formatToParts(new Date(now)).filter(p => p.type !== 'literal').map(p => [p.type, Number(p.value)]));
-  const localNow = Date.UTC(fields.year, fields.month-1, fields.day, fields.hour, fields.minute);
-  let localDue;
-  for (const hour of schedule.hours) {
-    const candidate = Date.UTC(fields.year, fields.month-1, fields.day, hour, schedule.minute);
-    if (candidate <= localNow) localDue = candidate;
-  }
-  if (localDue === undefined) localDue = Date.UTC(fields.year, fields.month-1, fields.day-1, schedule.hours.at(-1), schedule.minute);
+  }).formatToParts(new Date(ms)).filter(p => p.type !== 'literal').map(p => [p.type, Number(p.value)]));
+}
+
+export function resolveLocalUtc(localDue, timeZone) {
   // Resolve offset at the slot itself, including the night of a DST transition.
   let utc = localDue;
-  for (let i=0; i<3; i++) {
-    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {timeZone:schedule.timezone,
-      year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'
-    }).formatToParts(new Date(utc)).filter(p=>p.type!=='literal').map(p=>[p.type,Number(p.value)]));
-    utc += localDue - Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute);
+  for (let i = 0; i < 3; i++) {
+    const p = zonedParts(utc, timeZone);
+    utc += localDue - Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute);
   }
-  return new Date(utc).toISOString();
+  return utc;
+}
+
+export function slotAtHour(now, schedule, hour) {
+  const fields = zonedParts(now, schedule.timezone);
+  const localDue = Date.UTC(fields.year, fields.month - 1, fields.day, hour, schedule.minute);
+  return new Date(resolveLocalUtc(localDue, schedule.timezone)).toISOString();
+}
+
+export function dueSlot(now, schedule) {
+  const fields = zonedParts(now, schedule.timezone);
+  const localNow = Date.UTC(fields.year, fields.month - 1, fields.day, fields.hour, fields.minute);
+  let localDue;
+  for (const hour of schedule.hours) {
+    const candidate = Date.UTC(fields.year, fields.month - 1, fields.day, hour, schedule.minute);
+    if (candidate <= localNow) localDue = candidate;
+  }
+  if (localDue === undefined) localDue = Date.UTC(fields.year, fields.month - 1, fields.day - 1, schedule.hours.at(-1), schedule.minute);
+  return new Date(resolveLocalUtc(localDue, schedule.timezone)).toISOString();
+}
+
+export function romeDay(now, timeZone = 'Europe/Rome') {
+  const fields = zonedParts(now, timeZone);
+  return `${fields.year}-${String(fields.month).padStart(2, '0')}-${String(fields.day).padStart(2, '0')}`;
 }
 
 async function json(response, limit = 1024 * 1024) {
