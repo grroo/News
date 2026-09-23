@@ -1,4 +1,4 @@
-name: Briefing generation
+name: Build briefing & deploy
 
 on:
   schedule:
@@ -21,7 +21,7 @@ on:
         type: string
         required: false
       mock:
-        description: "Explicit mock generation (never used by schedule)"
+        description: "Build a mock preview artifact only (never commits or publishes)"
         type: boolean
         default: false
       deploy_only:
@@ -39,7 +39,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -66,18 +66,24 @@ jobs:
           DEPLOY_ONLY: ${{ inputs.deploy_only }}
           MOCK_REQUESTED: ${{ inputs.mock }}
           GENERATE_REQUESTED: ${{ inputs.deploy_only == false }}
-          REQUIRE_RESERVATION: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_only == false && inputs.scheduled_slot == '' }}
+          REQUIRE_RESERVATION: ${{ vars.RESERVATION_GATE_ENABLED == 'true' }}
           STRICT_SLOT_GATE: ${{ vars.STRICT_SLOT_GATE || 'false' }}
+          GITHUB_WORKFLOW_REF: build.yml
+          GITHUB_REF: ${{ github.ref }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/check_slot.py
 
       - name: Claim reservation
-        if: steps.slot.outputs.build == 'true' && inputs.reservation_id != ''
+        if: steps.slot.outputs.build == 'true' && inputs.deploy_only == false && inputs.mock == false && (vars.RESERVATION_GATE_ENABLED == 'true' || inputs.reservation_id != '')
         env:
           RESERVATION_ID: ${{ inputs.reservation_id }}
           REQUEST_ID: ${{ inputs.request_id }}
           NEWS_RESERVATION_GATE_TOKEN: ${{ secrets.NEWS_RESERVATION_GATE_TOKEN }}
           RESERVATION_CLAIM_URL: ${{ vars.RESERVATION_CLAIM_URL }}
+          GITHUB_WORKFLOW_REF: build.yml
+          GITHUB_REF: ${{ github.ref }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_RUN_ATTEMPT: ${{ github.run_attempt }}
         run: python scripts/check_slot.py --claim
 
       - name: Build briefing
@@ -91,13 +97,20 @@ jobs:
             python scripts/build.py
           fi
 
+      - name: Upload mock preview
+        if: steps.slot.outputs.build == 'true' && inputs.mock == true
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: mock-briefing-preview
+          path: data/briefing.json
+
       - name: Commit data
-        if: steps.slot.outputs.build == 'true'
+        if: steps.slot.outputs.build == 'true' && steps.slot.outputs.publish == 'true'
         run: |
           git config user.name "briefing-bot"
           git config user.email "briefing-bot@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "briefing: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git diff --cached --quiet || git commit -m "briefing: $(date -u +'%Y-%m-%d %H:%M UTC') [skip ci]"
           git pull --rebase --autostash origin ${{ github.ref_name }}
           git push
 

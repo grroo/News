@@ -13,10 +13,6 @@ import requests
 
 ROOT = Path(__file__).resolve().parent.parent
 LIVE_URL = os.environ.get("LIVE_BRIEFING_URL", "https://grroo.github.io/News/data/briefing.json")
-CLAIM_URL = os.environ.get("RESERVATION_CLAIM_URL", "").rstrip("/")
-REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "grroo/News")
-WORKFLOW_FILE = os.environ.get("GITHUB_WORKFLOW", "briefing.yml")
-GIT_REF = os.environ.get("GITHUB_REF_NAME", "main")
 
 sys.path.insert(0, str(Path(__file__).parent))
 from slot_health import satisfies_healthy_slot  # noqa: E402
@@ -43,7 +39,9 @@ def slot_satisfied(data, slot, now, *, strict_gate=False, request_id=None, slot_
     if not data:
         return False
     slot_iso = slot_text or slot.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
-    if strict_gate and data.get("schema_version") == 2:
+    if strict_gate:
+        if data.get("schema_version") != 2:
+            return False
         return satisfies_healthy_slot(data, slot_iso, now, request_id)
     return fresh_legacy(data, slot, now)
 
@@ -70,13 +68,15 @@ def decide(
     if generate_requested and not has_api_key and not mock_requested:
         return False, False, "Missing ANTHROPIC_API_KEY; refusing generation"
 
-    if require_reservation and not reservation_id:
-        return False, False, "Reservation required for generation"
+    if require_reservation and (not reservation_id or not request_id):
+        return False, False, "Reservation and request id required for generation"
+
+    publish = not mock_requested
 
     if not slot_text:
         if not generate_requested:
             return False, False, "No generation requested"
-        return True, True, "Manual generation"
+        return True, publish, "Mock preview only" if mock_requested else "Manual generation"
 
     slot = datetime.fromisoformat(slot_text.replace("Z", "+00:00"))
     if slot.tzinfo is None:
@@ -86,39 +86,69 @@ def decide(
     if slot_satisfied(live, slot, now, strict_gate=strict_gate, request_id=request_id, slot_text=slot_text):
         return False, False, "Slot already published"
     if slot_satisfied(local, slot, now, strict_gate=strict_gate, request_id=request_id, slot_text=slot_text):
-        return False, True, "Deploy existing briefing without generating again"
-    return True, True, "New scheduled briefing"
+        return False, publish, "Deploy existing briefing without generating again"
+    reason = "Mock preview only" if mock_requested else "New scheduled briefing"
+    return True, publish, reason
 
 
-def claim_reservation(reservation_id, request_id, run_id, run_attempt):
-    if not reservation_id:
-        return True, "No reservation to claim (legacy scheduled path)"
-    token = os.environ.get("NEWS_RESERVATION_GATE_TOKEN", "").strip()
-    if not token:
-        return False, "NEWS_RESERVATION_GATE_TOKEN is not configured"
-    if not CLAIM_URL:
-        return False, "RESERVATION_CLAIM_URL is not configured"
-    body = {
+def claim_request_body(reservation_id, request_id, run_id, run_attempt):
+    return {
         "reservation_id": reservation_id,
         "request_id": request_id,
         "run_id": int(run_id),
         "run_attempt": int(run_attempt),
-        "repository": REPOSITORY,
-        "workflow": WORKFLOW_FILE,
-        "ref": GIT_REF,
+        "repository": os.environ.get("GITHUB_REPOSITORY", "grroo/News"),
+        "workflow": os.environ.get("GITHUB_WORKFLOW_REF", "build.yml"),
+        "ref": os.environ.get("GITHUB_REF", "refs/heads/main"),
     }
-    response = requests.post(
-        CLAIM_URL,
+
+
+def validate_claim_response(payload, reservation_id, request_id):
+    if not isinstance(payload, dict):
+        return False, "Claim response is not a JSON object"
+    decision = payload.get("decision")
+    if decision not in ("allowed", "denied"):
+        return False, "Claim response missing valid decision"
+    if decision == "denied":
+        reason = payload.get("reason") or "unknown"
+        return False, f"Reservation claim denied: {reason}"
+    for field in ("reservation_id", "request_id"):
+        if not isinstance(payload.get(field), str) or not payload[field]:
+            return False, f"Claim response missing {field}"
+    if payload["reservation_id"] != reservation_id:
+        return False, "Claim response reservation_id mismatch"
+    if payload["request_id"] != request_id:
+        return False, "Claim response request_id mismatch"
+    if payload.get("reason") is not None:
+        return False, "Allowed claim must not include reason"
+    return True, None
+
+
+def claim_reservation(reservation_id, request_id, run_id, run_attempt, *, post=requests.post):
+    if not reservation_id or not request_id:
+        return False, "Reservation and request id required to claim"
+    token = os.environ.get("NEWS_RESERVATION_GATE_TOKEN", "").strip()
+    if not token:
+        return False, "NEWS_RESERVATION_GATE_TOKEN is not configured"
+    if not os.environ.get("RESERVATION_CLAIM_URL", "").strip():
+        return False, "RESERVATION_CLAIM_URL is not configured"
+    claim_url = os.environ.get("RESERVATION_CLAIM_URL", "").rstrip("/")
+    body = claim_request_body(reservation_id, request_id, run_id, run_attempt)
+    response = post(
+        claim_url,
         headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
         json=body,
         timeout=20,
     )
     if response.status_code >= 400:
         return False, f"Reservation claim HTTP {response.status_code}: {response.text[:200]}"
-    payload = response.json()
-    if payload.get("decision") != "allowed":
-        reason = payload.get("reason") or payload.get("decision") or "denied"
-        return False, f"Reservation claim denied: {reason}"
+    try:
+        payload = response.json()
+    except ValueError:
+        return False, "Claim response is not valid JSON"
+    ok, message = validate_claim_response(payload, reservation_id, request_id)
+    if not ok:
+        return False, message
     return True, "Reservation claimed"
 
 
