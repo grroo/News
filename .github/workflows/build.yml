@@ -90,6 +90,10 @@ jobs:
         if: steps.slot.outputs.build == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SCHEDULED_SLOT: ${{ steps.slot.outputs.scheduled_slot }}
+          REQUEST_ID: ${{ inputs.request_id }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: |
           if [ "${{ inputs.mock }}" = "true" ]; then
             python scripts/build.py --mock

@@ -282,6 +282,16 @@ def _public_section(section: dict) -> dict:
     return {key: value for key, value in section.items() if key != "provider_result"}
 
 
+def _last_good(cached: dict | None) -> bool:
+    if not isinstance(cached, dict):
+        return False
+    briefing = cached.get("briefing")
+    items = cached.get("items")
+    has_text = (isinstance(briefing, list) and bool(briefing)) or (isinstance(briefing, str) and bool(briefing.strip()))
+    has_items = isinstance(items, list) and bool(items)
+    return has_text or has_items
+
+
 def _reuse_section(cached: dict, *, state: str, error: str | None, fingerprint_value: str) -> dict:
     section = {
         "state": state,
@@ -383,11 +393,37 @@ def main():
         cached = section_state.get(name) if isinstance(section_state.get(name), dict) else None
         blocked = source_error(fetcher.feed_health, name)
         if not pools[name]:
-            sections[name] = _finish_section(
-                {"briefing": [], "items": [], "reviewed_count": 0},
-                state="healthy", checked_at=checked_at, success_at=checked_at,
-                fingerprint_value=fingerprint_value, edition_id=None, error=None,
-            )
+            if blocked:
+                generated_any = True
+                if _last_good(cached):
+                    sections[name] = _reuse_section(
+                        cached, state="degraded", error=blocked,
+                        fingerprint_value=cached.get("fingerprint") or fingerprint_value,
+                    )
+                    sections[name]["source_checked_at"] = checked_at
+                else:
+                    sections[name] = _finish_section(
+                        {"briefing": [], "items": [], "reviewed_count": 0},
+                        state="failed", checked_at=checked_at, success_at=None,
+                        fingerprint_value=fingerprint_value, edition_id=None, error=blocked,
+                    )
+            elif cached and cached.get("fingerprint") == fingerprint_value and cached.get("briefing") is not None:
+                sections[name] = _reuse_section(cached, state="unchanged", error=None, fingerprint_value=fingerprint_value)
+                sections[name]["source_checked_at"] = checked_at
+            else:
+                generated_any = True
+                sections[name] = _finish_section(
+                    {"briefing": [], "items": [], "reviewed_count": 0},
+                    state="healthy", checked_at=checked_at, success_at=checked_at,
+                    fingerprint_value=fingerprint_value, edition_id=None, error=None,
+                )
+                section_state[name] = {
+                    "fingerprint": fingerprint_value,
+                    "edition_id": new_edition_id,
+                    "last_success_at": checked_at,
+                    "briefing": [],
+                    "items": [],
+                }
             continue
         if cached and cached.get("fingerprint") == fingerprint_value and cached.get("briefing") is not None:
             state = "degraded" if blocked else "unchanged"

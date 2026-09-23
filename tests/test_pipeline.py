@@ -16,6 +16,7 @@ from slot_health import satisfies_healthy_slot
 from usage_ledger import ledger, section_usage
 
 ROOT = Path(__file__).resolve().parents[1]
+EMPTY_FEED = '<?xml version="1.0"?><rss version="2.0"><channel><title>Empty</title></channel></rss>'
 
 
 def provider_ok():
@@ -154,6 +155,9 @@ class PipelineRunTests(unittest.TestCase):
             first = json.loads((root / "briefing.json").read_text())
             self.assertEqual(first["quality"]["overall"], "healthy")
             self.assertEqual(first["mode"], "llm")
+            self.assertEqual(first["scheduled_slot"], slot)
+            self.assertEqual(first["request_ids"], ["req-slot"])
+            self.assertEqual(first["trigger"], "scheduled")
             self.assertEqual(first["usage"]["output_tokens"], 150)
             self.assertEqual(first["usage"]["reasoning_tokens"], 60)
             self.assertGreater(first["usage"]["est_cost_usd"], 0)
@@ -214,6 +218,70 @@ class PipelineRunTests(unittest.TestCase):
             now = datetime(2026, 9, 4, 18, tzinfo=timezone.utc)
             self.assertFalse(satisfies_healthy_slot({**edition, "trigger": "scheduled", "scheduled_slot": "2026-09-04T17:00:00+00:00"}, "2026-09-04T17:00:00+00:00", now))
 
+    def test_unavailable_sources_with_no_candidates_are_not_healthy(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as tmp:
+            root = Path(tmp)
+            fixtures = root / "fixtures"
+            fixtures.mkdir()
+            (fixtures / "map.json").write_text("{}")
+            (root / "section-cache.json").write_text(json.dumps({"version": 1, "sections": {"news": {
+                "fingerprint": "sha256:previous",
+                "edition_id": "ed-old",
+                "last_success_at": "2026-09-01T00:00:00+00:00",
+                "briefing": [{"text": "Earlier news", "sources": []}],
+                "items": [{"key": "old-news", "title": "Earlier", "url": "https://example.com/old", "source": "BBC", "new": False}],
+            }}}))
+            calls = self.run_build(
+                root, ["build.py", "--fixtures", str(fixtures), "--now", "2026-09-04T17:00:00+00:00"],
+                lambda **_k: provider_ok(),
+                {"SCHEDULED_SLOT": "2026-09-04T17:00:00+00:00", "REQUEST_ID": "req-empty"},
+            )
+            self.assertEqual(calls.call_count, 0)
+            edition = json.loads((root / "briefing.json").read_text())
+            self.assertTrue(all(row["status"] == "unavailable" for row in edition["feed_health"] if row["section"] in ("news", "sport", "finance")))
+            self.assertEqual(edition["sections"]["news"]["state"], "degraded")
+            self.assertEqual(edition["sections"]["news"]["briefing"][0]["text"], "Earlier news")
+            self.assertEqual(edition["sections"]["news"]["last_success_at"], "2026-09-01T00:00:00+00:00")
+            self.assertEqual(edition["sections"]["sport"]["state"], "failed")
+            self.assertEqual(edition["sections"]["finance"]["state"], "failed")
+            self.assertNotIn("last_success_at", edition["sections"]["sport"])
+            self.assertEqual(edition["quality"]["overall"], "degraded")
+            self.assertEqual(edition["refresh"]["outcome"], "generated")
+            self.assertFalse(satisfies_healthy_slot(edition, "2026-09-04T17:00:00+00:00", datetime(2026, 9, 4, 18, tzinfo=timezone.utc), "req-empty"))
+
+            (root / "section-cache.json").unlink()
+            self.run_build(
+                root, ["build.py", "--fixtures", str(fixtures), "--now", "2026-09-04T18:00:00+00:00"],
+                lambda **_k: provider_ok(),
+            )
+            failed = json.loads((root / "briefing.json").read_text())
+            self.assertTrue(all(failed["sections"][name]["state"] == "failed" for name in ("news", "sport", "finance")))
+            self.assertEqual(failed["quality"]["overall"], "failed")
+            self.assertEqual(failed["mode"], "llm")
+
+    def test_a_successful_empty_feed_stays_healthy(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as tmp:
+            root = Path(tmp)
+            fixtures = root / "empty-feeds"
+            write_empty_feeds(fixtures)
+            calls = self.run_build(
+                root, ["build.py", "--fixtures", str(fixtures), "--now", "2026-09-04T17:00:00+00:00"],
+                lambda **_k: provider_ok(),
+                {"SCHEDULED_SLOT": "2026-09-04T17:00:00+00:00", "REQUEST_ID": "req-empty-ok"},
+            )
+            self.assertEqual(calls.call_count, 0)
+            edition = json.loads((root / "briefing.json").read_text())
+            checked = [row for row in edition["feed_health"] if row["section"] in ("news", "sport", "finance")]
+            self.assertTrue(checked)
+            self.assertTrue(all(row["status"] == "empty" for row in checked))
+            for name in ("news", "sport", "finance"):
+                self.assertEqual(edition["sections"][name]["state"], "healthy")
+                self.assertEqual(edition["sections"][name]["items"], [])
+                self.assertEqual(edition["sections"][name]["briefing"], [])
+                self.assertIsNone(edition["sections"][name].get("error"))
+            self.assertEqual(edition["quality"]["overall"], "healthy")
+            self.assertTrue(satisfies_healthy_slot(edition, "2026-09-04T17:00:00+00:00", datetime(2026, 9, 4, 17, 5, tzinfo=timezone.utc), "req-empty-ok"))
+
     def test_missing_credential_does_not_write_a_mock(self):
         with tempfile.TemporaryDirectory(dir=ROOT) as tmp:
             root = Path(tmp)
@@ -244,6 +312,28 @@ class PipelineRunTests(unittest.TestCase):
         cfg = yaml_config()
         self.assertEqual(validate_config(cfg), [])
         self.assertEqual(policy_from(cfg)["max_age_days"], 7)
+
+
+def write_empty_feeds(directory: Path) -> None:
+    import urllib.parse
+    import yaml
+    from ingestion import google_news_rss, topic_sources
+
+    cfg = yaml.safe_load((ROOT / "config.yml").read_text())
+    urls = [src["url"] for src in cfg.get("news_sources", [])]
+    urls += [src["url"] for src in topic_sources(cfg.get("watched_topics"), "Topic")]
+    urls += [src["url"] for src in topic_sources(cfg.get("sport_teams"), "Team")]
+    urls += [src["url"] for src in cfg.get("sport_sites", [])]
+    for ticker in cfg.get("tickers", []):
+        symbol = urllib.parse.quote(ticker["symbol"])
+        urls.append(f"https://feeds.finance.yahoo.com/rss/2.0/headline?s={symbol}&region=US&lang=en-US")
+    urls += [src["url"] for src in cfg.get("market_news_sources", [])]
+    for src in cfg.get("market_news_sources", []):
+        if src.get("fallback_query"):
+            urls.append(google_news_rss(src["fallback_query"], src.get("fallback_lang", "en")))
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory / "empty.xml").write_text(EMPTY_FEED)
+    (directory / "map.json").write_text(json.dumps({url: "empty.xml" for url in urls}))
 
 
 def yaml_config():
