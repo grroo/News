@@ -24,13 +24,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4.2.2
+        with:
+          ref: main
 
       - name: Assemble static site
         run: |
           mkdir -p _site
           cp -r site/. _site/
           cp -r data _site/data
-          rm -f _site/data/seen.json _site/data/feed-cache.json _site/data/section-cache.json
+          rm -f _site/data/seen.json _site/data/feed-cache.json _site/data/section-cache.json _site/data/usage-history.json
           touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3.0.1

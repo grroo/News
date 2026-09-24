@@ -6,6 +6,12 @@ unpriced instead of inheriting another model's rate.
 """
 from __future__ import annotations
 
+import json
+from datetime import datetime
+from pathlib import Path
+
+from pipeline import atomic_write
+
 PRICE_TABLE_VERSION = "2026-09-23"
 
 # USD per million tokens. Cached input is the published cache-read rate.
@@ -41,6 +47,7 @@ def section_usage(section: str, result: dict | None) -> dict:
         "provider": (result or {}).get("provider"),
         "model": (result or {}).get("model"),
         "attempts": usage.get("attempts", 0) if result else 0,
+        "latency_ms": (result or {}).get("latency_ms"),
         "unknown": bool(usage.get("unknown")),
         "provider_request_ids": list((result or {}).get("provider_request_ids") or []),
     }
@@ -122,3 +129,34 @@ def ledger(rows: list[dict], *, editions_per_day: int = 3) -> dict:
     if saw_reasoning:
         summary["reasoning_tokens"] = reasoning
     return summary
+
+
+def record_run(path: Path, run_id: str, checked_at: str, usage: dict) -> dict:
+    """Persist observed usage independently of content IDs and archive pruning.
+
+    This is a token-priced lower bound, never an invoice. Failed/uncommitted
+    workflows are absent; unknown usage remains explicit. Retain 12 UTC months.
+    """
+    history = json.loads(path.read_text()) if path.exists() else {"version": 1, "months": {}}
+    month = datetime.fromisoformat(checked_at.replace("Z", "+00:00")).strftime("%Y-%m")
+    months = history["months"]
+    records = months.setdefault(month, {})
+    records.setdefault(run_id, {
+        "checked_at": checked_at,
+        "price_table_version": usage["price_table_version"],
+        "attempts": usage["attempts"],
+        "known_cost_usd": usage["est_cost_usd"] if usage["attempts"] else 0.0,
+        "unknown_cost": bool(usage["unknown"] or usage["unreported_cost"]),
+        "sections": usage["sections"],
+    })
+    history["months"] = {key: months[key] for key in sorted(months)[-12:]}
+    atomic_write(path, json.dumps(history, indent=1, ensure_ascii=False, allow_nan=False) + "\n")
+    rows = list(records.values())
+    return {
+        "month_utc": month,
+        "recorded_runs": len(rows),
+        "attempts": sum(row["attempts"] for row in rows),
+        "known_cost_usd": round(sum(row["known_cost_usd"] or 0 for row in rows), 6),
+        "unknown_cost_runs": sum(bool(row["unknown_cost"]) for row in rows),
+        "coverage": "committed runs only; token-priced lower bound, not an invoice",
+    }

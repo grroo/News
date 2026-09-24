@@ -248,6 +248,13 @@ def guard_main():
     )
     print(reason)
     write_outputs(build, publish, reason, scheduled_slot=slot_text)
+    # Configuration/auth failures must be failed workflow runs, not successful
+    # no-ops that the scheduler mistakes for deploy-only recovery candidates.
+    if not deploy_only and generate_requested and (
+        (not has_api_key and not mock_requested)
+        or (require_reservation and (not reservation_id or not request_id))
+    ):
+        raise SystemExit(1)
 
 
 def claim_main():

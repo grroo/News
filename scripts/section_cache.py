@@ -11,6 +11,8 @@ import threading
 from datetime import datetime
 from pathlib import Path
 
+from selection import selection_fingerprint_fields
+
 
 def fingerprint(section: str, items: list[dict], cfg: dict, extra_context: str = "") -> str:
     """Identity of the model input, ignoring publish bookkeeping such as new-flags."""
@@ -25,6 +27,12 @@ def fingerprint(section: str, items: list[dict], cfg: dict, extra_context: str =
         for it in items
     ]
     rows.sort(key=lambda row: (row["key"] or "", row["title"] or ""))
+    selection = selection_fingerprint_fields(cfg, section, items)
+    if selection["selection_mode"] == "legacy":
+        # Legacy selection reorders the same pool after publishing sets `new`
+        # flags. Preserve T04's no-change semantics for that bookkeeping only.
+        # Editorial order is meaningful ranking and must remain order-sensitive.
+        selection["candidate_order"] = [row["key"] for row in rows]
     payload = {
         "section": section,
         "candidates": rows,
@@ -36,6 +44,9 @@ def fingerprint(section: str, items: list[dict], cfg: dict, extra_context: str =
         "language": cfg.get("language", "English"),
         "item_target": cfg.get("item_targets", {}).get(section),
         "finance_context": extra_context or "",
+        # Candidate IDs in the prompt are positional. Sorting rows alone loses
+        # ranking changes; use T07's versioned handoff for both selection modes.
+        **selection,
     }
     raw = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
     return "sha256:" + hashlib.sha256(raw).hexdigest()

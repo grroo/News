@@ -73,3 +73,10 @@ Provider credentials: the guard and the build step follow `config.yml`. Producti
 - Confirm `/internal/reservations/claim` is **excluded** from browser Access and protected by the gate token only.
 
 These items are documented in `docs/contracts/README.md` but must be proved on the live hostname before enabling owner refresh.
+
+## T09 release candidate update
+
+Use [T09 staged rollout](T09-rollout.md) as the current cutover sequence. The
+candidate adds exact request run names and current-main deploy-only checkout,
+keeps the owner link disabled, and separates reservation scheduling from manual
+refresh enablement. No cutover or full-day live verification has been performed.

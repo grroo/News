@@ -1,4 +1,5 @@
 name: Build briefing & deploy
+run-name: briefing ${{ inputs.request_id || github.run_id }}${{ inputs.deploy_only && ' deploy-only' || '' }}
 
 on:
   schedule:
@@ -46,6 +47,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4.2.2
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5.4.0
         with:
@@ -71,6 +74,7 @@ jobs:
           NEWS_WORKFLOW_FILE: build.yml
           GITHUB_REF: ${{ github.ref }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/check_slot.py
 
       - name: Claim reservation
@@ -124,7 +128,7 @@ jobs:
           mkdir -p _site
           cp -r site/. _site/
           cp -r data _site/data
-          rm -f _site/data/seen.json _site/data/feed-cache.json _site/data/section-cache.json
+          rm -f _site/data/seen.json _site/data/feed-cache.json _site/data/section-cache.json _site/data/usage-history.json
           touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3.0.1
