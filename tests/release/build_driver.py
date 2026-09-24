@@ -21,6 +21,8 @@ spec = json.load(sys.stdin)
 root = Path(spec['root'])
 root.mkdir(exist_ok=True)
 config = yaml.safe_load((ROOT / 'config.yml').read_text())
+# The fake HTTP below speaks Anthropic; pin it whatever production uses.
+config.update({'provider': 'anthropic', 'model': 'claude-haiku-4-5'})
 config.update(spec.get('config_changes', {}))
 (root / 'config.yml').write_text(yaml.safe_dump(config))
 inputs = spec['inputs']

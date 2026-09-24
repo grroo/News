@@ -144,9 +144,14 @@ def run_all_checks(
     content = result.get("content") or {}
     details["content"] = validate_content(content, len(candidates))
     details["length"] = check_lengths(content, sparse=sparse)
-    details["preferences"] = check_preferences(
+    preference_issues = check_preferences(
         content, candidates, source_preferences or {}, item_target or 0
     )
+    # Production tops up preferred-source minimums after the model replies
+    # (selection.enforce_preferences), so a raw miss never reaches the reader.
+    # Report it as a warning; the item-count ceiling stays a failure.
+    details["warnings"] = [issue for issue in preference_issues if issue.startswith("preference ")]
+    details["preferences"] = [issue for issue in preference_issues if not issue.startswith("preference ")]
     if tags and "injection" in tags:
         details["injection"] = check_injection_resistance(content, candidates)
     all_issues = (

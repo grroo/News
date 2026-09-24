@@ -41,6 +41,9 @@ CANDIDATE_SUMMARY_CHARS = 140
 OPENAI_MODEL = "gpt-6-luna"
 OPENAI_REASONING_EFFORT = "none"
 OPENAI_MAX_OUTPUT_TOKENS = 2500
+# Reasoning tokens count against max_output_tokens; leave room for them.
+OPENAI_REASONING_MAX_OUTPUT_TOKENS = 4000
+REASONING_EFFORTS = ("none", "low")
 # First attempt plus one transient retry. Callers may pass a smaller allowance.
 DEFAULT_MAX_ATTEMPTS = 2
 PRICE_TABLE_VERSION = "unpriced"
@@ -198,6 +201,22 @@ def anthropic_request(api_key: str, model: str, system: str, user: str, max_toke
     return headers, body
 
 
+FILL_RULE = (
+    "\n- Fill the section: when enough relevant candidates exist, write 4-6 bullets "
+    "and select close to {n} items. Fall short only when relevant candidates run out; "
+    "never pad with irrelevant items or with claims the candidates do not support."
+)
+
+
+def with_fill_rule(system: str, n: int) -> str:
+    """Append the opt-in fuller-output rule (config ``fill_items``)."""
+    return system + FILL_RULE.replace("{n}", str(n))
+
+
+def openai_max_output_tokens(effort: str) -> int:
+    return OPENAI_MAX_OUTPUT_TOKENS if effort == "none" else OPENAI_REASONING_MAX_OUTPUT_TOKENS
+
+
 def instructions_for_provider(provider_name: str, system: str) -> str:
     """Use the tool instruction only for Anthropic. Luna is asked for the JSON object."""
     if provider_name == "openai" and _TOOL_REPLY in system:
@@ -205,8 +224,11 @@ def instructions_for_provider(provider_name: str, system: str) -> str:
     return system
 
 
-def openai_request(api_key: str, model: str, system: str, user: str, max_output_tokens: int = OPENAI_MAX_OUTPUT_TOKENS) -> tuple[dict, dict]:
+def openai_request(api_key: str, model: str, system: str, user: str, max_output_tokens: int | None = None, reasoning_effort: str | None = None) -> tuple[dict, dict]:
     """Responses request. Sampling parameters from Anthropic are intentionally absent."""
+    effort = reasoning_effort or OPENAI_REASONING_EFFORT
+    if max_output_tokens is None:
+        max_output_tokens = openai_max_output_tokens(effort)
     headers = {
         "authorization": f"Bearer {api_key}",
         "content-type": "application/json",
@@ -216,7 +238,7 @@ def openai_request(api_key: str, model: str, system: str, user: str, max_output_
         "instructions": instructions_for_provider("openai", system),
         "input": user,
         "max_output_tokens": max_output_tokens,
-        "reasoning": {"effort": OPENAI_REASONING_EFFORT},
+        "reasoning": {"effort": effort},
         "store": False,
         "text": {
             "format": {
@@ -513,6 +535,7 @@ def generate_briefing(
     candidate_count: int,
     max_attempts: int = DEFAULT_MAX_ATTEMPTS,
     timeout: float = 120,
+    reasoning_effort: str | None = None,
     http_post=None,
     sleep=time.sleep,
     clock=time.monotonic,
@@ -543,7 +566,7 @@ def generate_briefing(
     last = None
     for attempt in range(1, max_attempts + 1):
         if provider == "openai":
-            url, headers, body = OPENAI_URL, *openai_request(api_key, selected, system, user)
+            url, headers, body = OPENAI_URL, *openai_request(api_key, selected, system, user, reasoning_effort=reasoning_effort)
         else:
             url, headers, body = ANTHROPIC_URL, *anthropic_request(api_key, selected, system, user)
         started = clock()

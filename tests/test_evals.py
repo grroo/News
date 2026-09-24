@@ -265,6 +265,17 @@ class EvalSpendTests(unittest.TestCase):
         self.assertEqual(summary["cases"][0]["check_issues"], ["briefing has 0 bullets; expected 1-6"])
         self.assertIn("c001 / haiku: briefing has 0 bullets", (run_dir / "report.md").read_text())
 
+    def test_preferred_source_miss_is_a_warning_not_a_failure(self):
+        candidates = [
+            {"title": f"PSG {i}", "source": "CulturePSG", "feed_name": "CulturePSG", "new": True, "summary": "s"}
+            for i in range(3)
+        ]
+        result = _success(HAIKU, est_cost_usd=0.001, price_table_version="2026-09-23")
+        result["content"] = {"briefing": [{"text": "PSG news.", "source_ids": [0]}], "items": [{"id": 0, "title": "PSG 0", "summary": "s"}]}
+        checks = run_all_checks(result, candidates=candidates, source_preferences={"CulturePSG": {"min_new_items": 2}}, item_target=8)
+        self.assertTrue(checks["passed"], checks)
+        self.assertEqual(checks["warnings"], ["preference CulturePSG: expected at least 2 new items, got 1"])
+
     def test_blind_review_skips_unpaired_cases(self):
         run_dir = Path(tempfile.mkdtemp())
         (run_dir / "c001__haiku.json").write_text(json.dumps({"result": _success(HAIKU)}))

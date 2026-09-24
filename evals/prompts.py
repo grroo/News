@@ -28,6 +28,8 @@ def build_prompts(case: dict, profile: dict) -> dict:
             for name, policy in policies.items()
         )
 
+    if profile.get("fill"):
+        base_system = provider.with_fill_rule(base_system, n)
     sent_system = provider.instructions_for_provider(profile["provider"], base_system)
     interests = (case.get("interests_excerpt") or "").strip()
     extra = (case.get("extra_context") or "").strip()
@@ -39,15 +41,10 @@ def build_prompts(case: dict, profile: dict) -> dict:
     )
 
     model = profile.get("model") or ""
-    reasoning = profile.get("reasoning_effort")
     if profile["provider"] == "openai":
-        original = provider.OPENAI_REASONING_EFFORT
-        if reasoning == "low":
-            provider.OPENAI_REASONING_EFFORT = "low"
-        try:
-            _, request_body = provider.openai_request("REDACTED", model, sent_system, user)
-        finally:
-            provider.OPENAI_REASONING_EFFORT = original
+        _, request_body = provider.openai_request(
+            "REDACTED", model, sent_system, user, reasoning_effort=profile.get("reasoning_effort") or "none",
+        )
     else:
         _, request_body = provider.anthropic_request("REDACTED", model, sent_system, user)
 

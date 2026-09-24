@@ -132,7 +132,12 @@ class PipelineRunTests(unittest.TestCase):
         past = root / "past"
         paths = dict(DATA_DIR=root, PAST_DIR=past, SEEN_PATH=root / "seen.json", OUT_PATH=root / "briefing.json", CONFIG_PATH=root / "config.yml")
         if not (root / "config.yml").exists():
-            (root / "config.yml").write_text((ROOT / "config.yml").read_text())
+            # provider_ok() fakes Anthropic results; pin it whatever production uses.
+            (root / "config.yml").write_text(
+                (ROOT / "config.yml").read_text()
+                .replace("provider: openai", "provider: anthropic")
+                .replace("model: gpt-6-luna", "model: claude-haiku-4-5")
+            )
         env = {key: value for key, value in os.environ.items() if key not in {"ANTHROPIC_API_KEY", "OPENAI_API_KEY", "SCHEDULED_SLOT", "REQUEST_ID"}}
         env["ANTHROPIC_API_KEY"] = "sk-ant-test"
         env.update(extra_env or {})

@@ -51,7 +51,8 @@ jobs:
             python evals/snapshot_live.py --output evals/runs/live-cases
             cases="--cases-dir evals/runs/live-cases"
           fi
-          python evals/run.py --live --profile haiku --profile luna-none $cases --output evals/runs/ci
+          # luna-live = production setting (reasoning low + fill); blind review pairs it with Haiku.
+          python evals/run.py --live --profile haiku --profile luna-live $cases --output evals/runs/ci
 
       - name: Publish report to the run summary
         if: always()
