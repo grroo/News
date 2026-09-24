@@ -205,11 +205,20 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--case", action="append", dest="cases", help="Case id (repeatable)")
     parser.add_argument("--profile", action="append", dest="profiles", help="Profile id (repeatable)")
     parser.add_argument("--output", type=Path, default=DEFAULT_RUNS, help="Output directory for replay bundles")
+    parser.add_argument("--cases-dir", type=Path, help="Use cases from this directory (e.g. evals/snapshot_live.py output)")
     args = parser.parse_args(argv)
 
     manifest = load_manifest()
-    case_ids = args.cases or manifest["case_ids"]
+    global CASES_DIR
+    CASES_DIR = args.cases_dir or EVALS / "cases"
+    if args.cases_dir:
+        case_ids = args.cases or sorted(path.stem for path in CASES_DIR.glob("*.json"))
+    else:
+        case_ids = args.cases or manifest["case_ids"]
     profiles = [p for p in manifest["profiles"] if not args.profiles or p["id"] in args.profiles]
+    if not case_ids:
+        print("No cases to run.", file=sys.stderr)
+        return 2
     schedule = planned_calls(profiles, case_ids)
 
     if args.validate_cases:
@@ -313,6 +322,7 @@ def main(argv: list[str] | None = None) -> int:
                 "profile_id": profile["id"],
                 "status": result.get("status"),
                 "passed_checks": bundle["checks"]["passed"],
+                "check_issues": bundle["checks"].get("issues", []),
                 "latency_ms": result.get("latency_ms"),
                 "usage": result.get("usage"),
                 "recorded_cost_usd": cost,

@@ -221,6 +221,50 @@ class EvalSpendTests(unittest.TestCase):
         self.assertNotIn("haiku", review.lower())
         self.assertNotIn("luna", review.lower())
 
+    def test_live_snapshot_cases_mirror_production_selection(self):
+        import yaml
+        from evals.snapshot_live import snapshot_cases
+        from selection import select_candidates
+
+        cfg = yaml.safe_load((ROOT / "config.yml").read_text())
+        item = {"title": "Real headline", "source": "Reuters", "feed_name": "Reuters", "published": "2026-09-24T06:00:00+00:00",
+                "new": True, "summary": "A real summary.", "url": "https://example.com/a", "key": "k1", "extra": "dropped"}
+        pools = {"news": [item], "sport": [], "finance": [dict(item, key="k2", url="https://example.com/b")]}
+        prices = [{"label": "S&P 500", "change_pct": 0.5}, {"label": "X", "change_pct": None}]
+        cases = snapshot_cases(cfg, pools, prices, "2026-09-24T06:00Z")
+        self.assertEqual([c["id"] for c in cases], ["live-news", "live-finance"])
+        news = cases[0]
+        self.assertEqual(news["interests_excerpt"], cfg["interests"].strip())
+        self.assertEqual(news["item_target"], cfg["item_targets"]["news"])
+        self.assertEqual(len(news["candidates"]), len(select_candidates(pools["news"], cfg, "news")))
+        self.assertNotIn("extra", news["candidates"][0])
+        self.assertEqual(cases[1]["extra_context"], "Today's price moves: S&P 500 +0.50%")
+        prompts = build_prompts(news, LUNA)
+        self.assertIn("Real headline", prompts["user_prompt"])
+
+    def test_cases_dir_runs_only_those_cases(self):
+        cases_dir = Path(tempfile.mkdtemp())
+        case = load_case("c003")
+        case["id"] = "live-news"
+        (cases_dir / "live-news.json").write_text(json.dumps(case))
+        with patch("evals.run.run_all_checks", return_value={"passed": True, "issues": []}):
+            code, summary, run_dir = self._live(
+                ["--cases-dir", str(cases_dir), "--profile", "haiku", "--profile", "luna-none"],
+                lambda profile, *_a, **_k: _success(profile),
+            )
+        self.assertEqual(code, 0, summary)
+        self.assertEqual({row["case_id"] for row in summary["cases"]}, {"live-news"})
+        self.assertTrue((run_dir / "blind-review.md").exists())
+
+    def test_empty_cases_dir_is_an_error(self):
+        self.assertEqual(main(["--validate-cases", "--cases-dir", tempfile.mkdtemp()]), 2)
+
+    def test_check_failures_are_listed_in_report(self):
+        with patch("evals.run.run_all_checks", return_value={"passed": False, "issues": ["briefing has 0 bullets; expected 1-6"]}):
+            _code, summary, run_dir = self._live(["--case", "c001", "--profile", "haiku"], lambda profile, *_a, **_k: _success(profile))
+        self.assertEqual(summary["cases"][0]["check_issues"], ["briefing has 0 bullets; expected 1-6"])
+        self.assertIn("c001 / haiku: briefing has 0 bullets", (run_dir / "report.md").read_text())
+
     def test_blind_review_skips_unpaired_cases(self):
         run_dir = Path(tempfile.mkdtemp())
         (run_dir / "c001__haiku.json").write_text(json.dumps({"result": _success(HAIKU)}))
