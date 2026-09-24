@@ -1,0 +1,70 @@
+name: Luna evaluation (paid, manual)
+run-name: luna-eval ${{ inputs.scope }}
+
+# Paired Haiku vs GPT-6 Luna comparison on the fixed snapshots in evals/cases.
+# Manual only. Spend is capped by evals/manifest.json (live_budget_usd), with a
+# worst-case reservation before every call. Never publishes or commits.
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "smoke = 1 case (2 calls, ~1 cent); full = 20 cases (40 calls, ~20 cents)"
+        type: choice
+        options: [smoke, full]
+        default: smoke
+
+permissions:
+  contents: read
+
+concurrency:
+  group: luna-eval
+  cancel-in-progress: false
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - uses: actions/setup-python@v5.4.0
+        with:
+          python-version: "3.12"
+
+      - name: Install locked runtime dependencies
+        run: pip install -r requirements.lock
+
+      - name: Offline checks
+        run: |
+          python evals/run.py --validate-cases
+          python evals/run.py --check-fixtures
+
+      - name: Paired live run
+        env:
+          EVAL_LIVE: "1"
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          cases=""
+          if [ "${{ inputs.scope }}" = "smoke" ]; then cases="--case c001"; fi
+          python evals/run.py --live --profile haiku --profile luna-none $cases --output evals/runs/ci
+
+      - name: Publish report to the run summary
+        if: always()
+        run: |
+          dir=$(ls -d evals/runs/ci/*/ 2>/dev/null | tail -1)
+          [ -n "$dir" ] || { echo "No run directory"; exit 0; }
+          cat "$dir/report.md" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f "$dir/blind-review.md" ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            cat "$dir/blind-review.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          cat "$dir/report.md"
+
+      - uses: actions/upload-artifact@v4.6.2
+        if: always()
+        with:
+          name: luna-eval-${{ inputs.scope }}-${{ github.run_id }}
+          path: evals/runs/ci/
+          if-no-files-found: ignore
+          retention-days: 30

@@ -27,6 +27,7 @@ def write_report(run_dir: Path) -> Path:
             f"- Completed calls: {summary.get('completed_calls', '—')}",
             f"- Successful calls: {summary.get('successful_calls', '—')}",
             f"- Failed calls: {summary.get('failed_calls', '—')}",
+            f"- Calls failing mechanical checks: {summary.get('checks_failed', '—')}",
             "",
             "## Cases",
             "",

@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT))
 
 import llm_provider as provider  # noqa: E402
+from usage_ledger import RATES, ledger, section_usage  # noqa: E402
 from evals.checks import run_all_checks  # noqa: E402
 from evals.prompts import PROMPT_POLICY_VERSION, build_prompts, replay_bundle  # noqa: E402
 
@@ -90,13 +91,29 @@ def estimate_cost(profiles: list[dict], case_ids: list[str]) -> dict:
 
 
 def price_result(result: dict, profile: dict) -> float | None:
-    usage = result.get("usage") or {}
-    if usage.get("unknown"):
+    """Price every reported token bucket with the production price table.
+
+    Returns None when any attempt's charge is unknown (for example a timeout
+    with no usage). Callers must treat None as a stop condition, not as zero.
+    """
+    model = result.get("model") or profile.get("model") or ""
+    summary = ledger([section_usage(profile["id"], {**result, "model": model})])
+    if summary["est_cost_usd"] is None or summary["unreported_cost"]:
         return None
-    inp = int(usage.get("input_tokens") or 0)
-    out = int(usage.get("output_tokens") or 0)
-    rates = HAIKU_RATES if profile["provider"] == "anthropic" else LUNA_RATES
-    return round((inp * rates[0] + out * rates[1]) / 1_000_000, 6)
+    return summary["est_cost_usd"]
+
+
+def worst_case_cost(profile: dict, prompts: dict) -> float:
+    """Upper bound for one call, reserved before it starts.
+
+    Assumes every allowed attempt is billed, with input at two characters per
+    token (conservative for English/JSON) and the full output allowance.
+    """
+    rates = RATES[profile.get("model") or ""]
+    input_tokens = (len(prompts["system_prompt_sent"]) + len(prompts["user_prompt"])) // 2 + 1
+    output_tokens = provider.OPENAI_MAX_OUTPUT_TOKENS if profile["provider"] == "openai" else 2500
+    per_attempt = (input_tokens * rates["input"] + output_tokens * rates["output"]) / 1_000_000
+    return round(per_attempt * provider.DEFAULT_MAX_ATTEMPTS, 6)
 
 
 def accumulate_usage(totals: dict, result: dict) -> None:
@@ -252,6 +269,7 @@ def main(argv: list[str] | None = None) -> int:
         "completed_calls": 0,
         "successful_calls": 0,
         "failed_calls": 0,
+        "checks_failed": 0,
         "missing_credentials": missing,
         "cases": [],
         "estimate": pre_estimate if args.live else None,
@@ -267,10 +285,10 @@ def main(argv: list[str] | None = None) -> int:
     incomplete_reason = None
 
     for case_id, profile in schedule:
-        if args.live and recorded_spend >= budget:
+        case = load_case(case_id)
+        if args.live and recorded_spend + worst_case_cost(profile, build_prompts(case, profile)) > budget:
             incomplete_reason = "budget_exhausted"
             break
-        case = load_case(case_id)
         bundle = run_case(case, profile, live=args.live)
         out = run_dir / f"{case_id}__{profile['id']}.json"
         out.write_text(json.dumps(bundle, indent=2, ensure_ascii=False) + "\n")
@@ -280,6 +298,8 @@ def main(argv: list[str] | None = None) -> int:
         cost = bundle.get("recorded_cost_usd")
         if cost is not None:
             recorded_spend += cost
+        if not bundle["checks"]["passed"]:
+            summary["checks_failed"] += 1
 
         summary["completed_calls"] += 1
         if success:
@@ -298,6 +318,10 @@ def main(argv: list[str] | None = None) -> int:
                 "recorded_cost_usd": cost,
             }
         )
+        if args.live and cost is None:
+            # Unknown spend could exceed the cap; stop rather than count it as zero.
+            incomplete_reason = "unknown_cost"
+            break
 
     summary["spend_usd"]["recorded"] = round(recorded_spend, 6)
 
@@ -311,6 +335,9 @@ def main(argv: list[str] | None = None) -> int:
         elif summary["failed_calls"]:
             summary["status"] = "failed"
             summary["incomplete_reason"] = "provider_failures"
+        elif summary["checks_failed"]:
+            summary["status"] = "failed"
+            summary["incomplete_reason"] = "mechanical_checks_failed"
         else:
             summary["status"] = "complete"
     else:
@@ -321,6 +348,10 @@ def main(argv: list[str] | None = None) -> int:
     from evals.report import write_report  # noqa: WPS433
 
     write_report(run_dir)
+    if args.live:
+        from evals.blind import write_blind_review  # noqa: WPS433
+
+        write_blind_review(run_dir, {cid: load_case(cid) for cid, _profile in schedule})
     print(f"Wrote run to {run_dir} (status={summary['status']})")
 
     if args.live and summary["status"] != "complete":
