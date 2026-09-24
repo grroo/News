@@ -50,6 +50,12 @@ def write_report(run_dir: Path) -> Path:
         for row in issues:
             lines.append(f"- {row['case_id']} / {row['profile_id']}: " + "; ".join(row["check_issues"]))
 
+    warnings = [row for row in summary.get("cases", []) if row.get("check_warnings")]
+    if warnings:
+        lines.extend(["", "## Warnings (fixed automatically in production)", ""])
+        for row in warnings:
+            lines.append(f"- {row['case_id']} / {row['profile_id']}: " + "; ".join(row["check_warnings"]))
+
     spend = summary.get("spend_usd") or {}
     if spend:
         lines.extend(

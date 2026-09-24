@@ -323,6 +323,7 @@ def main(argv: list[str] | None = None) -> int:
                 "status": result.get("status"),
                 "passed_checks": bundle["checks"]["passed"],
                 "check_issues": bundle["checks"].get("issues", []),
+                "check_warnings": bundle["checks"].get("warnings", []),
                 "latency_ms": result.get("latency_ms"),
                 "usage": result.get("usage"),
                 "recorded_cost_usd": cost,
