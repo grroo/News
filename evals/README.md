@@ -35,7 +35,7 @@ Default budget cap: **$0.75** (`manifest.json`). The harness refuses to start wh
 
 ### From GitHub Actions (no local setup)
 
-*Actions → Luna evaluation (paid, manual) → Run workflow*, choose `smoke` (1 case) or `full` (20 cases). It uses the repository's `ANTHROPIC_API_KEY` and `OPENAI_API_KEY` secrets, shows the report and blind review on the run page, and uploads the run directory (including the key) as an artifact. It never commits or publishes.
+*Actions → Luna evaluation (paid, manual) → Run workflow*, choose `live` (default: today's real news/sport/finance candidate lists from `evals/snapshot_live.py`, 6 calls, about 3 cents) or `snapshots` (the 20 fixed cases, many of them synthetic placeholders, 40 calls). It uses the repository's `ANTHROPIC_API_KEY` and `OPENAI_API_KEY` secrets, shows the report and blind review on the run page, and uploads the run directory (including the key) as an artifact. It never commits or publishes.
 
 **Do not** run routine production dual-generation. Live quality comparison belongs here, not in `build.py`.
 

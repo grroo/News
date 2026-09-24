@@ -1,17 +1,18 @@
 name: Luna evaluation (paid, manual)
 run-name: luna-eval ${{ inputs.scope }}
 
-# Paired Haiku vs GPT-6 Luna comparison on the fixed snapshots in evals/cases.
+# Paired Haiku vs GPT-6 Luna comparison, on today's real candidates (live) or
+# on the fixed snapshots in evals/cases.
 # Manual only. Spend is capped by evals/manifest.json (live_budget_usd), with a
 # worst-case reservation before every call. Never publishes or commits.
 on:
   workflow_dispatch:
     inputs:
       scope:
-        description: "smoke = 1 case (2 calls, ~1 cent); full = 20 cases (40 calls, ~20 cents)"
+        description: "live = today's real news/sport/finance candidates (6 calls, ~3 cents); snapshots = 20 fixed cases (40 calls, ~20 cents)"
         type: choice
-        options: [smoke, full]
-        default: smoke
+        options: [live, snapshots]
+        default: live
 
 permissions:
   contents: read
@@ -46,7 +47,10 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           cases=""
-          if [ "${{ inputs.scope }}" = "smoke" ]; then cases="--case c001"; fi
+          if [ "${{ inputs.scope }}" = "live" ]; then
+            python evals/snapshot_live.py --output evals/runs/live-cases
+            cases="--cases-dir evals/runs/live-cases"
+          fi
           python evals/run.py --live --profile haiku --profile luna-none $cases --output evals/runs/ci
 
       - name: Publish report to the run summary
@@ -60,11 +64,14 @@ jobs:
             cat "$dir/blind-review.md" >> "$GITHUB_STEP_SUMMARY"
           fi
           cat "$dir/report.md"
+          [ -f "$dir/blind-review.md" ] && cat "$dir/blind-review.md" || true
 
       - uses: actions/upload-artifact@v4.6.2
         if: always()
         with:
           name: luna-eval-${{ inputs.scope }}-${{ github.run_id }}
-          path: evals/runs/ci/
+          path: |
+            evals/runs/ci/
+            evals/runs/live-cases/
           if-no-files-found: ignore
           retention-days: 30

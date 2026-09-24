@@ -44,6 +44,12 @@ def write_report(run_dir: Path) -> Path:
             f"{usage.get('attempts', '—')} | {row.get('recorded_cost_usd', '—')} |"
         )
 
+    issues = [row for row in summary.get("cases", []) if row.get("check_issues")]
+    if issues:
+        lines.extend(["", "## Check failures", ""])
+        for row in issues:
+            lines.append(f"- {row['case_id']} / {row['profile_id']}: " + "; ".join(row["check_issues"]))
+
     spend = summary.get("spend_usd") or {}
     if spend:
         lines.extend(
