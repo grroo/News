@@ -29,7 +29,13 @@ export EVAL_LIVE=1
 python evals/run.py --live --profile haiku --profile luna-none --case c001
 ```
 
-Default budget cap: **$0.75** (`manifest.json`). The harness refuses to start when credentials are missing, when the pre-run estimate exceeds the cap, or when recorded spend reaches the cap mid-run. Live runs exit nonzero unless every planned call succeeds (`status: complete` in `summary.json`).
+Default budget cap: **$0.75** (`manifest.json`). The harness refuses to start when credentials are missing or the pre-run estimate exceeds the cap. Before every call it reserves that call's worst case (all allowed attempts, full output allowance) and stops if the reservation would cross the cap. Spend is priced with the production table in `scripts/usage_ledger.py`, including cached-read and cache-write buckets. A call with unknown usage stops the run instead of counting as zero.
+
+`status: complete` requires every planned call to succeed **and** pass the mechanical checks; anything else exits nonzero. Paired live runs also write `blind-review.md` (outputs labelled A/B in random order) and `blind-key.json` (the mapping). Score the review before opening the key.
+
+### From GitHub Actions (no local setup)
+
+*Actions → Luna evaluation (paid, manual) → Run workflow*, choose `smoke` (1 case) or `full` (20 cases). It uses the repository's `ANTHROPIC_API_KEY` and `OPENAI_API_KEY` secrets, shows the report and blind review on the run page, and uploads the run directory (including the key) as an artifact. It never commits or publishes.
 
 **Do not** run routine production dual-generation. Live quality comparison belongs here, not in `build.py`.
 
