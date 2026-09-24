@@ -49,6 +49,7 @@ Replay bundles store the **provider-specific prompt actually sent** (`system_pro
 |---|---|---|---|
 | `haiku` | anthropic | claude-haiku-4-5 | Rollback baseline |
 | `luna-none` | openai | gpt-6-luna | reasoning effort `none` |
+| `luna-live` | openai | gpt-6-luna | production setting: reasoning `low` + fill rule (`config.yml`) |
 | `luna-low` | openai | gpt-6-luna | reasoning effort `low`; cases `c014`, `c019` only |
 
 Regenerate cases after editing `evals/make_cases.py`:

@@ -111,7 +111,10 @@ def worst_case_cost(profile: dict, prompts: dict) -> float:
     """
     rates = RATES[profile.get("model") or ""]
     input_tokens = (len(prompts["system_prompt_sent"]) + len(prompts["user_prompt"])) // 2 + 1
-    output_tokens = provider.OPENAI_MAX_OUTPUT_TOKENS if profile["provider"] == "openai" else 2500
+    output_tokens = (
+        provider.openai_max_output_tokens(profile.get("reasoning_effort") or "none")
+        if profile["provider"] == "openai" else 2500
+    )
     per_attempt = (input_tokens * rates["input"] + output_tokens * rates["output"]) / 1_000_000
     return round(per_attempt * provider.DEFAULT_MAX_ATTEMPTS, 6)
 
@@ -126,39 +129,15 @@ def accumulate_usage(totals: dict, result: dict) -> None:
 
 
 def call_profile(profile: dict, prompts: dict, candidate_count: int, *, live: bool) -> dict:
-    api_key = os.environ.get(provider.credential_env_var(profile["provider"]))
-    system = prompts["system_prompt_sent"]
-    user = prompts["user_prompt"]
-    if not live:
-        return provider.generate_briefing(
-            provider=profile["provider"],
-            model=profile.get("model") or "",
-            api_key=None,
-            system=system,
-            user=user,
-            candidate_count=candidate_count,
-        )
-    if profile.get("reasoning_effort") == "low" and profile["provider"] == "openai":
-        original = provider.OPENAI_REASONING_EFFORT
-        provider.OPENAI_REASONING_EFFORT = "low"
-        try:
-            return provider.generate_briefing(
-                provider=profile["provider"],
-                model=profile.get("model") or "",
-                api_key=api_key,
-                system=system,
-                user=user,
-                candidate_count=candidate_count,
-            )
-        finally:
-            provider.OPENAI_REASONING_EFFORT = original
+    api_key = os.environ.get(provider.credential_env_var(profile["provider"])) if live else None
     return provider.generate_briefing(
         provider=profile["provider"],
         model=profile.get("model") or "",
         api_key=api_key,
-        system=system,
-        user=user,
+        system=prompts["system_prompt_sent"],
+        user=prompts["user_prompt"],
         candidate_count=candidate_count,
+        reasoning_effort=profile.get("reasoning_effort") if profile["provider"] == "openai" else None,
     )
 
 

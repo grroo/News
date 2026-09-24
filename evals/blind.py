@@ -11,7 +11,7 @@ import secrets
 from pathlib import Path
 
 BASELINE = "haiku"
-CANDIDATE = "luna-none"
+CANDIDATES = ("luna-live", "luna-none")
 
 
 def _render(result: dict, candidates: list[dict]) -> list[str]:
@@ -37,7 +37,10 @@ def write_blind_review(run_dir: Path, cases: dict[str, dict], rng=None) -> Path 
     for path in sorted(run_dir.glob("*__*.json")):
         case_id, profile_id = path.stem.split("__", 1)
         bundles.setdefault(case_id, {})[profile_id] = json.loads(path.read_text())
-    pairs = [cid for cid in sorted(bundles) if {BASELINE, CANDIDATE} <= set(bundles[cid])]
+    def candidate(cid):
+        return next((p for p in CANDIDATES if p in bundles[cid]), None)
+
+    pairs = [cid for cid in sorted(bundles) if BASELINE in bundles[cid] and candidate(cid)]
     if not pairs:
         return None
     key = {}
@@ -51,7 +54,7 @@ def write_blind_review(run_dir: Path, cases: dict[str, dict], rng=None) -> Path 
     ]
     for case_id in pairs:
         case = cases[case_id]
-        order = [BASELINE, CANDIDATE]
+        order = [BASELINE, candidate(case_id)]
         rng.shuffle(order)
         key[case_id] = {"A": order[0], "B": order[1]}
         lines += [f"## {case_id} — {case['section']}", "", "<details><summary>Candidates</summary>", ""]

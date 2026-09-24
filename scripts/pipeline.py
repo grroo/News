@@ -28,6 +28,10 @@ def validate_config(cfg: dict) -> list[str]:
     timeout = cfg.get("provider_timeout_seconds", 120)
     if type(timeout) is not int or not 10 <= timeout <= 300:
         problems.append("provider_timeout_seconds must be an integer from 10 to 300")
+    if cfg.get("reasoning_effort", "none") not in ("none", "low"):
+        problems.append("reasoning_effort must be none or low")
+    if type(cfg.get("fill_items", False)) is not bool:
+        problems.append("fill_items must be true or false")
     prompt_version = cfg.get("prompt_version", 1)
     if type(prompt_version) is not int or prompt_version < 1:
         problems.append("prompt_version must be an integer >= 1")

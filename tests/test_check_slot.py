@@ -210,14 +210,17 @@ class SlotTests(unittest.TestCase):
         self.assertEqual(decide(live=legacy, strict_gate=True)[:2], (True, True))
 
     def test_guard_checks_the_configured_provider_secret(self):
-        with patch.dict(os.environ, {"ANTHROPIC_API_KEY": "", "OPENAI_API_KEY": "sk-test"}, clear=False):
+        import yaml
+        configured = "OPENAI_API_KEY" if yaml.safe_load((ROOT / "config.yml").read_text())["provider"] == "openai" else "ANTHROPIC_API_KEY"
+        other = ({"ANTHROPIC_API_KEY", "OPENAI_API_KEY"} - {configured}).pop()
+        with patch.dict(os.environ, {configured: "", other: "sk-test"}, clear=False):
             present, name = guard.provider_has_credential()
         self.assertFalse(present)
-        self.assertEqual(name, "ANTHROPIC_API_KEY")
-        with patch.dict(os.environ, {"ANTHROPIC_API_KEY": "sk-ant-test"}, clear=False):
+        self.assertEqual(name, configured)
+        with patch.dict(os.environ, {configured: "sk-test"}, clear=False):
             present, name = guard.provider_has_credential()
         self.assertTrue(present)
-        self.assertEqual(name, "ANTHROPIC_API_KEY")
+        self.assertEqual(name, configured)
 
     def test_build_step_receives_slot_request_and_provider_secrets(self):
         import yaml

@@ -2,7 +2,7 @@
 
 A static, phone-first News · Sport · Finance · Media briefing, scheduled for **07:00, 13:00 and 19:00 Europe/Rome**. Python collects public feeds and quotes, selects candidates and asks a provider for structured, cited summaries. GitHub Actions commits data and GitHub Pages serves it. A Cloudflare Worker checks publication and provides a gated owner-refresh service.
 
-Production remains **Claude Haiku 4.5**. Luna, protected manual refresh and editorial ranking are separate release gates. The [T09 candidate evidence](docs/release/T09-candidate.md) records completed checks and outstanding blockers; the [staged rollout runbook](docs/operations/T09-rollout.md) is prepared but not executed.
+Production runs **GPT-6 Luna** with low reasoning and the fill rule (`config.yml`: `reasoning_effort: low`, `fill_items: true`), chosen after a paired live comparison with Claude Haiku 4.5. Roll back by setting `provider: anthropic` and `model: claude-haiku-4-5`. Protected manual refresh and editorial ranking remain separate release gates. The [T09 candidate evidence](docs/release/T09-candidate.md) records completed checks and outstanding blockers; the [staged rollout runbook](docs/operations/T09-rollout.md) is prepared but not executed.
 
 ## Reading and refresh
 

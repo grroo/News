@@ -6,9 +6,12 @@
 
 timezone: Europe/Rome
 language: English            # language of the LLM-written briefings/summaries
-# Rollback is provider anthropic + the model below. Luna is provider openai + gpt-6-luna.
-provider: anthropic
-model: claude-haiku-4-5
+# Rollback: provider anthropic + model claude-haiku-4-5 (reasoning_effort and
+# fill_items can stay; reasoning_effort only applies to openai).
+provider: openai
+model: gpt-6-luna
+reasoning_effort: low        # openai only: none | low. Low adds hidden reasoning tokens (billed as output)
+fill_items: true             # ask for 4-6 bullets and close to item_targets when enough relevant news exists
 editorial_selection: false # T09 tests cache integration; editorial evaluation still pending
 provider_max_attempts: 2     # includes the first call; the provider owns this retry loop
 provider_timeout_seconds: 120

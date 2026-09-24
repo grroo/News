@@ -41,6 +41,8 @@ def fingerprint(section: str, items: list[dict], cfg: dict, extra_context: str =
         "provider": cfg.get("provider", "anthropic"),
         "model": cfg.get("model"),
         "prompt_version": cfg.get("prompt_version", 1),
+        "reasoning_effort": cfg.get("reasoning_effort", "none"),
+        "fill_items": bool(cfg.get("fill_items", False)),
         "language": cfg.get("language", "English"),
         "item_target": cfg.get("item_targets", {}).get(section),
         "finance_context": extra_context or "",

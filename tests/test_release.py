@@ -26,7 +26,8 @@ class ReleaseTests(unittest.TestCase):
             env.update(GITHUB_EVENT_NAME='workflow_dispatch', GITHUB_OUTPUT=str(output))
             proc = subprocess.run([sys.executable, str(ROOT/'scripts/check_slot.py')], env=env, capture_output=True, text=True)
             self.assertEqual(proc.returncode, 1)
-            self.assertIn('Missing ANTHROPIC_API_KEY', proc.stdout)
+            configured = 'OPENAI_API_KEY' if yaml.safe_load((ROOT/'config.yml').read_text())['provider'] == 'openai' else 'ANTHROPIC_API_KEY'
+            self.assertIn(f'Missing {configured}', proc.stdout)
             self.assertIn('publish=false', output.read_text())
 
     def test_editorial_order_mode_version_and_policy_invalidate_cache(self):
@@ -44,7 +45,9 @@ class ReleaseTests(unittest.TestCase):
 
     def test_safe_release_defaults_and_workflow_interfaces(self):
         cfg = yaml.safe_load((ROOT/'config.yml').read_text())
-        self.assertEqual((cfg['provider'], cfg['model']), ('anthropic', 'claude-haiku-4-5'))
+        # Luna went live after the paired live evaluation (reasoning low + fill rule).
+        self.assertEqual((cfg['provider'], cfg['model']), ('openai', 'gpt-6-luna'))
+        self.assertEqual((cfg['reasoning_effort'], cfg['fill_items']), ('low', True))
         self.assertIs(cfg['editorial_selection'], False)
         workflow = yaml.safe_load((ROOT/'.github/workflows/build.yml').read_text())
         self.assertIn('inputs.request_id', workflow['run-name'])

@@ -34,6 +34,7 @@ from llm_provider import (  # noqa: E402
     call_claude,
     credential_env_var,
     generate_briefing,
+    with_fill_rule,
 )
 from pipeline import (  # noqa: E402
     AI_SECTIONS,
@@ -153,6 +154,8 @@ def llm_section(section: str, items: list[dict], cfg: dict, api_key: str | None,
             "Prefer direct original reporting over aggregated copies."
             for name, policy in policies.items()
         )
+    if cfg.get("fill_items"):
+        system = with_fill_rule(system, n)
     user = (
         f"SECTION: {section}\n\nREADER INTERESTS:\n{cfg['interests'].strip()}\n\n"
         + (f"CONTEXT:\n{extra_context}\n\n" if extra_context else "")
@@ -169,6 +172,7 @@ def llm_section(section: str, items: list[dict], cfg: dict, api_key: str | None,
         candidate_count=len(items),
         max_attempts=cfg.get("provider_max_attempts", 2),
         timeout=cfg.get("provider_timeout_seconds", 120),
+        reasoning_effort=cfg.get("reasoning_effort", "none") if provider_name == "openai" else None,
     )
     if result.get("status") != "success":
         log(f"  [llm failed for {section}] {result.get('error')}")
