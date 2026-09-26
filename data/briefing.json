@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20260926T050123088143Z",
- "generated_at": "2026-09-26T05:01:23.088143+00:00",
- "generated_local": "Sat 26 Sep 2026, 07:01",
- "source_checked_at": "2026-09-26T05:01:23.088143+00:00",
+ "edition_id": "ed-20260926T110120392437Z",
+ "generated_at": "2026-09-26T11:01:20.392437+00:00",
+ "generated_local": "Sat 26 Sep 2026, 13:01",
+ "source_checked_at": "2026-09-26T11:01:20.392437+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-09-26T05:01:23.088143+00:00"
+  "run-2026-09-26T11:01:20.392437+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-09-26T05:01:23.088143+00:00"
+  "completed_at": "2026-09-26T11:01:20.392437+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 33,
+   "item_count": 23,
    "reason": null,
    "failure": null,
-   "parsed_count": 33,
+   "parsed_count": 23,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 109,
+   "item_count": 105,
    "reason": null,
    "failure": null,
-   "parsed_count": 109,
+   "parsed_count": 105,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -189,6 +189,18 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
+   "item_count": 108,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 108,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: PSG",
+   "section": "sport",
+   "status": "ok",
    "item_count": 109,
    "reason": null,
    "failure": null,
@@ -198,25 +210,13 @@
    "cache": "refreshed"
   },
   {
-   "name": "Team: PSG",
-   "section": "sport",
-   "status": "ok",
-   "item_count": 107,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 107,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -225,10 +225,10 @@
    "name": "Team: XV de France rugby",
    "section": "sport",
    "status": "ok",
-   "item_count": 103,
+   "item_count": 101,
    "reason": null,
    "failure": null,
-   "parsed_count": 103,
+   "parsed_count": 101,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -417,10 +417,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 12,
+   "item_count": 11,
    "reason": null,
    "failure": null,
-   "parsed_count": 12,
+   "parsed_count": 11,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -524,104 +524,74 @@
   {
    "name": "Wiloo",
    "section": "media",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 404",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 404,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 404",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 404,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
-   }
+   "cache": "refreshed"
   },
   {
    "name": "VisualPolitik EN",
    "section": "media",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 404",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 404,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Preston Stewart",
    "section": "media",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 404",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 404,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Marques Brownlee",
    "section": "media",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 404",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 404,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
-   }
+   "cache": "refreshed"
   },
   {
    "name": "The Christo Files",
    "section": "media",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 404",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 404,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Making Sense with Sam Harris",
@@ -714,9 +684,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002418,
-  "est_month_usd": 0.22,
-  "forecast_month_usd": 0.22,
+  "est_cost_usd": 0.002042,
+  "est_month_usd": 0.18,
+  "forecast_month_usd": 0.18,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -724,60 +694,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8118,
+    "latency_ms": 4878,
     "unknown": false,
     "provider_request_ids": [
-     "resp_00b8be5eba97bda8016ab751ad75dc87d1848277129760dd58"
+     "resp_06c1f12adcd65db6016ab7a608ddb887d19606503048db23d2"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3252,
-    "output_tokens": 767,
-    "reasoning_tokens": 181
+    "cache_write_tokens": 3381,
+    "output_tokens": 417,
+    "reasoning_tokens": 0
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6831,
+    "latency_ms": 6391,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0db1f46795b01a6e016ab751b4b41487d1a12e6913fdf39cd4"
+     "resp_0146ab064108b22a016ab7a60ce63087d18f262c0d9f06df4c"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3837,
-    "output_tokens": 706,
-    "reasoning_tokens": 442
+    "cache_write_tokens": 3755,
+    "output_tokens": 644,
+    "reasoning_tokens": 311
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7160,
+    "latency_ms": 6003,
     "unknown": false,
     "provider_request_ids": [
-     "resp_051f1b081445cae8016ab751bb892c87d1802cba8f051a6366"
+     "resp_00ddec1e4eed2969016ab7a6134ad087d19a5e1cce1f49d8c8"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3241,
-    "output_tokens": 780,
-    "reasoning_tokens": 288
+    "cache_write_tokens": 3222,
+    "output_tokens": 432,
+    "reasoning_tokens": 0
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10330,
-  "output_tokens": 2253,
-  "reasoning_tokens": 911,
+  "cache_write_tokens": 10358,
+  "output_tokens": 1493,
+  "reasoning_tokens": 311,
   "recorded_month_to_date": {
    "month_utc": "2026-09",
-   "recorded_runs": 7,
-   "attempts": 21,
-   "known_cost_usd": 0.041696,
+   "recorded_runs": 8,
+   "attempts": 24,
+   "known_cost_usd": 0.043738,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -786,470 +756,369 @@
   "news": {
    "briefing": [
     {
-     "text": "Iran has offered a deal to reopen the Strait of Hormuz within seven days, while reporting says Tehran is awaiting Washington’s response to a separate peace proposal.",
+     "text": "Washington and Beijing say they will establish an AI communication channel after Xi’s visit, alongside a reported tariff-cut agreement—an unusual combination of strategic dialogue and trade de-escalation.",
      "sources": [
       {
-       "key": "3808196cf27c416a",
-       "title": "Iran offers US deal to reopen Strait of Hormuz in seven days",
-       "url": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
-      },
-      {
-       "key": "aba0e06e8232376a",
-       "title": "Iran awaits US move after WSJ report says Trump rejects peace plan - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZTlYWmNvWG9uODA3NXdWTTQ0d1EtNnFKczBKYThkcFExSmZGWjlqb2xmc0ZsUDNsYWxUWjhLNm1ocTRCcmJDMGdhUmZ1NC1WdjVJdWFxNDRzLTA0Mk11dUN6WHkyUUVpcFMxV1A1d2RFUXljR0xlY293UldHb2ZoUDAzT294ZmVUWVdCZUEzUTlGSkp4cEhTLTVqTllkU3lDNDREeXFqVlQzSUU1VGpnXzZYZ1ZSMXZ3dmU0Tg?oc=5",
+       "key": "1a68e1e0ae49c6cf",
+       "title": "China, US agree to $30 billion tariff cut, AI dialogue during Xi visit, China foreign ministry says - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNT2FRVWRwSDZuWUZPYTRXcmNuNTFDR0hrQkVUZnpSdV9RdGhpUjV5R0hwN2V6MUNUS2hiTHpENFhwUFVDODBIeDhBSm5SdUJOeU1qSUhjekl2RzBDd0VBYi0tdmNDblQwV1RMTF9QMGFHdlFRcDRmalE3dWlhX0l6aUJjSGtsVjlsZXNnbmZWY3JzMEtwY3hxNEZHT3JjWXJEQlVRSFpSM0haSUROOUFRaWJB?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "A Russian strike on Zaporizhzhia killed two people, according to local authorities, as the war in Ukraine continues.",
+     "text": "Iran is awaiting a formal US response to a proposed seven-day deal to reopen the Strait of Hormuz; Trump is reportedly expected to reject it, keeping a key energy route in focus.",
      "sources": [
       {
-       "key": "08f31caf365a58db",
-       "title": "EN DIRECT, guerre en Ukraine : une attaque russe à Zaporijia fait deux morts, selon l’administration militaire locale",
-       "url": "https://www.lemonde.fr/international/live/2026/09/26/en-direct-guerre-en-ukraine-une-attaque-russe-a-zaporijia-fait-deux-morts-selon-l-administration-militaire-locale_6777944_3210.html",
-       "source": "Le Monde",
+       "key": "0807250554d3638b",
+       "title": "Trump reportedly rejects Iran’s seven-day peace deal to reopen strait of Hormuz",
+       "url": "https://www.theguardian.com/world/2026/sep/26/trump-dismiss-iran-seven-day-peace-deal-hormuz",
+       "source": "The Guardian World",
        "via": null
       }
      ]
     },
     {
-     "text": "France has disclosed a military contribution to protect Saudi energy infrastructure, highlighting a discreet defence relationship between Paris and Riyadh.",
+     "text": "An explosion destroyed a building near Athens’ Acropolis, killing two people and leaving four missing, according to Reuters.",
      "sources": [
       {
-       "key": "31aba12eaefeb567",
-       "title": "L’envoi de « moyens militaires » français en Arabie saoudite sort de l’ombre la discrète coopération de défense entre Paris et Riyad",
-       "url": "https://www.lemonde.fr/international/article/2026/09/26/l-envoi-de-moyens-militaires-francais-en-arabie-saoudite-sort-de-l-ombre-la-discrete-cooperation-de-defense-entre-paris-et-riyad_6783006_3210.html",
-       "source": "Le Monde",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "OpenAI says its agents accessed public data on US government websites, including the Census and SEC; the episode raises questions about agent access controls.",
-     "sources": [
-      {
-       "key": "d22a199399a36e3b",
-       "title": "OpenAI bots meddled with multiple US government agency sites",
-       "url": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "ECB policymaker Isabel Schnabel’s early departure has opened the contest to succeed her on the Governing Council.",
-     "sources": [
-      {
-       "key": "589811a37d1601d5",
-       "title": "Schnabel’s Early Exit Fires Starting Gun on ECB Race - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcEZmY24taEpJdjFsYnVLOU9zS1ZvQWQ4MHBpTU0wOFF0Nmc0eDZHa1VvTmpwTnZGVEI0cHltckZZMGJRNEpGTGFXNmU4X2tfSC10dlpNc2JyRGRXOHNhRjZIaGU1Q3ZLTW1ja2FCUEpReGlod2tPUEhCQ2Q1cG85Y2UtNi1qb1pJREc2UjgtZnhBTmItU25MSHZtX3V4cDE2UjA4bXFERkpWdTA?oc=5",
-       "source": "Bloomberg",
+       "key": "3dfd270879967ce0",
+       "title": "Two dead, 4 missing after explosion destroys building in Athens - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbTJpdXZYT3MyX1dFU1pNMW5raW40eUpoZWNKZFZnY3U1SFJiZjB4OVdhQ3JBN3R1eFFFaUFnUFFHZXh2R2J1ZldkVkotZW1ab1VEeFZNLVhHTnAxaXhmQnAxZ2ItOUc0U0l5TDE0ZW9OMTNUa0hGTjNWSTdoN2IxVGFINU0xVGlVdzBXSXVMYnozVHRhRWF2ZXlZMWxIN0NsSW04?oc=5",
+       "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "TikTok has agreed to pay Alabama more than $100 million and limit teenagers’ screen time under a state settlement.",
+     "text": "A Goncourt Prize selection has been dropped after its author was accused of using AI, putting questions about AI disclosure and authorship in the French literary spotlight.",
      "sources": [
       {
-       "key": "db0e28f74f8b6c59",
-       "title": "TikTok accepte de limiter le temps d’écran des adolescents dans un accord à plus de 100 millions de dollars avec l’Alabama",
-       "url": "https://www.lemonde.fr/pixels/article/2026/09/26/tiktok-accepte-de-limiter-le-temps-d-ecran-des-adolescents-en-alabama-pour-s-eviter-un-proces_6782872_4408996.html",
-       "source": "Le Monde",
-       "via": null
+       "key": "d6118002fae3c957",
+       "title": "France’s prestigious Goncourt prize drops novel after author accused of using AI - CNN",
+       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9pOXJac1libzZTbjlna2ktN3daYUNKb1dSaWJRRHIxaGJDQm5xcHdIajROVi1KT2Y3X3JXdDFYZVA3REpXVzZ6ZTBEdndLMDBOeWJhTE1jd2QxTXBEZXppYmNYVFpiTHFZNEJOc2lqMjFObnBpalZzR0dB?oc=5",
+       "source": "CNN",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A Washington Post investigation says the US and Russia weakened an international effort to regulate potentially dangerous AI, underscoring the difficulty of reaching global safeguards.",
+     "sources": [
+      {
+       "key": "300b661b3fac9df6",
+       "title": "How the U.S. and Russia weakened a global effort to regulate killer AI - The Washington Post",
+       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPblNLMmd2Y0t3cS1KN01EbFRNdzc0cHpWT193NnJHNXN1SndBTjdISVdYVGlIbnN0NHRROWJYdDlaeU1VelUwc2hwZ1c5d3dZcjhBQnVNMVF3UVFRd0hDOGkwTTVMSkFBTHM3VG9sU2NJakQ3SGNuMmFUanAzV0tGbXhNOFl6elFaOXZxNEwweUpmSXF5cDlfbmQ2Y0xjMWUxRkNHSW5iUEJNTnR6MFE?oc=5",
+       "source": "The Washington Post",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-09-26T04:14:30+00:00",
-     "new": true,
-     "key": "3808196cf27c416a",
-     "title": "Iran offers US deal to reopen Strait of Hormuz in seven days",
-     "summary": "Iran has offered the United States a deal to reopen the Strait of Hormuz within seven days."
-    },
-    {
-     "url": "https://www.lemonde.fr/international/live/2026/09/26/en-direct-guerre-en-ukraine-une-attaque-russe-a-zaporijia-fait-deux-morts-selon-l-administration-militaire-locale_6777944_3210.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-09-26T04:33:20+00:00",
-     "new": true,
-     "key": "08f31caf365a58db",
-     "title": "Russian strike on Zaporizhzhia kills two, local authorities say",
-     "summary": "A Russian strike destroyed a home in Zaporizhzhia and killed two women, according to local authorities."
-    },
-    {
-     "url": "https://www.lemonde.fr/international/article/2026/09/26/l-envoi-de-moyens-militaires-francais-en-arabie-saoudite-sort-de-l-ombre-la-discrete-cooperation-de-defense-entre-paris-et-riyad_6783006_3210.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-09-26T03:53:46+00:00",
-     "new": true,
-     "key": "31aba12eaefeb567",
-     "title": "France’s military support for Saudi Arabia comes to light",
-     "summary": "France announced soldiers, radars and air-defence systems to protect Saudi energy infrastructure."
-    },
-    {
-     "url": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-09-26T02:50:56+00:00",
-     "new": true,
-     "key": "d22a199399a36e3b",
-     "title": "OpenAI agents accessed multiple US government websites",
-     "summary": "OpenAI said its agents accessed public data from the US Census and Securities and Exchange Commission websites."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcEZmY24taEpJdjFsYnVLOU9zS1ZvQWQ4MHBpTU0wOFF0Nmc0eDZHa1VvTmpwTnZGVEI0cHltckZZMGJRNEpGTGFXNmU4X2tfSC10dlpNc2JyRGRXOHNhRjZIaGU1Q3ZLTW1ja2FCUEpReGlod2tPUEhCQ2Q1cG85Y2UtNi1qb1pJREc2UjgtZnhBTmItU25MSHZtX3V4cDE2UjA4bXFERkpWdTA?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-09-26T04:01:40+00:00",
-     "new": true,
-     "key": "589811a37d1601d5",
-     "title": "Schnabel’s early exit starts ECB succession race",
-     "summary": "Isabel Schnabel’s early departure from the ECB Governing Council has opened a race to succeed her."
-    },
-    {
-     "url": "https://www.lemonde.fr/pixels/article/2026/09/26/tiktok-accepte-de-limiter-le-temps-d-ecran-des-adolescents-en-alabama-pour-s-eviter-un-proces_6782872_4408996.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-09-26T01:48:23+00:00",
-     "new": true,
-     "key": "db0e28f74f8b6c59",
-     "title": "TikTok agrees to Alabama settlement and teen screen-time limits",
-     "summary": "TikTok agreed to pay more than $100 million and impose default daily screen-time limits for users aged 13 to 17."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQV0NEM09wY1NMTncySWN2blBvTk9tZzhpb1FCVXMtWDdWSnFtQmpEbm5jN0dHaTA2cmxwamNuRzBRSG92Rzk2Q0tlaTV6dm1FZXV2MVhqVVhhMVlmTV9LelBGaGZ2WXZkRkZJWnJzMFVGMWdVcEdLUWh2VnEzX2dIZzBEZFpYTktfanhBZWhES0dCMFJ2LVlBZkxZUXN3b0lKMXNrS0dWZU80NHpMT0E?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNT2FRVWRwSDZuWUZPYTRXcmNuNTFDR0hrQkVUZnpSdV9RdGhpUjV5R0hwN2V6MUNUS2hiTHpENFhwUFVDODBIeDhBSm5SdUJOeU1qSUhjekl2RzBDd0VBYi0tdmNDblQwV1RMTF9QMGFHdlFRcDRmalE3dWlhX0l6aUJjSGtsVjlsZXNnbmZWY3JzMEtwY3hxNEZHT3JjWXJEQlVRSFpSM0haSUROOUFRaWJB?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-09-26T03:19:43+00:00",
+     "published": "2026-09-26T09:15:32+00:00",
      "new": true,
-     "key": "b29021f5427c693e",
-     "title": "Trump seeks to withhold $800 million in Congress-approved funds",
-     "summary": "President Donald Trump is seeking to withhold $800 million in funds approved by Congress."
+     "key": "1a68e1e0ae49c6cf",
+     "title": "China and US agree tariff cuts and AI dialogue",
+     "summary": "China’s foreign ministry says the countries agreed to a $30 billion tariff cut and an AI dialogue during Xi’s visit."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQRGxIVlhvSHVLaXVTcDlUX3RjVGdka0IzQjJ2X1JFXzhfYUYySmUyVDh1V1lpSV9hb3ROUEhvdTdseU8zOTVVNVJtOG91ME03b2hTR1RLMkxJMVZvZjQyYktPTDFmZHNCbUdQYXg5em1rR3hENjhfUkZWU2U5SGhKbzhnWXlHN2ZYU0FpMFRoNUoweTJzdHVFU2ZHNGxBYmZzWngzbW5ZR0M4bVRwRm5zR0FJaTNwODZRT2lSMm9tbl81UEpVek9zMm1GcTktQ1Q5dnBycjZjeGvSAb4BQVVfeXFMTXkyRnhzN2NTYTdUdUJ4aG5iNnJDRU1QcG1XUXdUTGlhN2lKSVg0Z0o3cXhEWVBzcC1PT1JzYS1ERXlPQ0NxTGVVbzhaTTY2a2pxdnl3NWJoMVhHUlFxNWVOb2M2TWdoQmNIeEFEODczNnJpbGlSVHQwN1d4Z2twM2pHaDB3U3JwdnJObFRIWEExTGRwWFVQaG9jczg5emZhZ29EbUlReVUwTGdxaDVpU2ItT09WLTBSbi1SUE9vUQ?oc=5",
-     "source": "South China Morning Post",
+     "url": "https://www.theguardian.com/world/2026/sep/26/trump-dismiss-iran-seven-day-peace-deal-hormuz",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-09-26T09:31:47+00:00",
+     "new": true,
+     "key": "0807250554d3638b",
+     "title": "Trump reportedly rejects Iran’s Hormuz proposal",
+     "summary": "Iran awaits a formal US response to its proposed seven-day deal to reopen the Strait of Hormuz, which Trump reportedly plans to reject."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbTJpdXZYT3MyX1dFU1pNMW5raW40eUpoZWNKZFZnY3U1SFJiZjB4OVdhQ3JBN3R1eFFFaUFnUFFHZXh2R2J1ZldkVkotZW1ab1VEeFZNLVhHTnAxaXhmQnAxZ2ItOUc0U0l5TDE0ZW9OMTNUa0hGTjNWSTdoN2IxVGFINU0xVGlVdzBXSXVMYnozVHRhRWF2ZXlZMWxIN0NsSW04?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-26T09:52:08+00:00",
+     "new": true,
+     "key": "3dfd270879967ce0",
+     "title": "Two dead and four missing after Athens explosion",
+     "summary": "An explosion destroyed a building near Athens’ Acropolis, killing two people and leaving four missing."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9pOXJac1libzZTbjlna2ktN3daYUNKb1dSaWJRRHIxaGJDQm5xcHdIajROVi1KT2Y3X3JXdDFYZVA3REpXVzZ6ZTBEdndLMDBOeWJhTE1jd2QxTXBEZXppYmNYVFpiTHFZNEJOc2lqMjFObnBpalZzR0dB?oc=5",
+     "source": "CNN",
      "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-09-26T04:48:13+00:00",
+     "published": "2026-09-26T09:16:57+00:00",
      "new": true,
-     "key": "93759af58184a25f",
-     "title": "OpenAI says AI agents posted user images online in error",
-     "summary": "OpenAI said its AI agents mistakenly posted users’ images online."
+     "key": "d6118002fae3c957",
+     "title": "Goncourt prize drops novel over AI-use allegation",
+     "summary": "The Goncourt prize dropped a novel after its author was accused of using AI."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQc0kwNk9oLVg5bWdrdkJfUXVSNkFYT2o5ODZpU3RaMjJpM0pKb19QTnM0Zlk4d2xURlJZZVF6blp1ZEk5T1ZnMEM3RmN1STc1RnFTZXpDSGRuWWpBY2NwZGZUVzJET29UY0lLYzFxU0NOQjNTV25lRUpkSzRPQTgtQlVkMVRSLWJ1TkROb0ZqaU9sa0ZtSGJ4ZWNtak9pQTQ3dUtmZXdXdWpFSGZHNlpJdGQ4QU1SNm9mYlhwd2t3?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPblNLMmd2Y0t3cS1KN01EbFRNdzc0cHpWT193NnJHNXN1SndBTjdISVdYVGlIbnN0NHRROWJYdDlaeU1VelUwc2hwZ1c5d3dZcjhBQnVNMVF3UVFRd0hDOGkwTTVMSkFBTHM3VG9sU2NJakQ3SGNuMmFUanAzV0tGbXhNOFl6elFaOXZxNEwweUpmSXF5cDlfbmQ2Y0xjMWUxRkNHSW5iUEJNTnR6MFE?oc=5",
+     "source": "The Washington Post",
+     "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-09-26T02:06:00+00:00",
+     "published": "2026-09-26T10:32:45+00:00",
      "new": true,
-     "key": "327df00330637c11",
-     "title": "ShinyHunters expanded Oracle PeopleSoft attacks, Google says",
-     "summary": "Google said the ShinyHunters hacking group expanded attacks targeting Oracle’s PeopleSoft software."
+     "key": "300b661b3fac9df6",
+     "title": "US and Russia weakened global effort to regulate dangerous AI",
+     "summary": "The Washington Post reports that the US and Russia weakened an international effort to regulate potentially dangerous AI."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-09-26T05:01:23.088143+00:00",
-   "input_fingerprint": "sha256:67ed9ab5d4742188b4e799817fd0583797568dca6ddfba67a67843b8d887302a",
-   "last_success_at": "2026-09-26T05:01:23.088143+00:00",
-   "candidate_count": 461,
-   "new_count": 9
+   "source_checked_at": "2026-09-26T11:01:20.392437+00:00",
+   "input_fingerprint": "sha256:c6aee533a23cc49a64a1daf24ca519a85c1f38fd450583795a1595bbd93d5a9a",
+   "last_success_at": "2026-09-26T11:01:20.392437+00:00",
+   "candidate_count": 406,
+   "new_count": 5
   },
   "sport": {
    "briefing": [
     {
-     "text": "France beat Turkey 1-0 in Zinédine Zidane’s first match as coach, with Kylian Mbappé scoring; he was also reported injured during the game.",
+     "text": "Kylian Mbappé has left the France camp after suffering a left-knee injury against Turkey; he will not be replaced for the rest of the gathering.",
      "sources": [
       {
-       "key": "0195ad8d51faada0",
-       "title": "Turquie/France, le résumé et le but en video",
-       "url": "https://www.culturepsg.com/news/selections/turquie-france-le-resume-et-le-but-en-video/60919",
-       "source": "CulturePSG",
-       "via": null
-      },
-      {
-       "key": "1b4852107d0bae0c",
-       "title": "Un match et puis s'en va : la soirée mitigée de Kylian Mbappé buteur puis blessé avec les Bleus contre la Turquie",
-       "url": "https://www.lequipe.fr/Football/Article/Un-match-et-puis-s-en-va-la-soiree-mitigee-de-kylian-mbappe-buteur-puis-blesse-avec-les-bleus-contre-la-turquie/1721333#at_medium=RSS_feeds",
+       "key": "7d10de25031a3041",
+       "title": "Kylian Mbappé, forfait pour la suite du rassemblement de l'équipe de France, ne sera pas remplacé",
+       "url": "https://www.lequipe.fr/Football/Actualites/Kylian-mbappe-forfait-pour-la-suite-du-rassemblement-de-l-equipe-de-france-ne-sera-pas-remplace/1721373#at_medium=RSS_feeds",
        "source": "L'Équipe",
        "via": null
       }
      ]
     },
     {
-     "text": "PSG summer signing Mika Godts scored his first goal for Belgium, against Italy’s Gianluigi Donnarumma.",
+     "text": "France opened the Zidane era with a 1–0 win in Turkey. Ousmane Dembélé started in the central role and was judged not yet fully at home there.",
      "sources": [
       {
-       "key": "d9286bf51fa908fb",
-       "title": "Le but de Godts contre Donnarumma en video",
-       "url": "https://www.culturepsg.com/news/selections/le-but-de-godts-contre-donnarumma-en-video/60918",
+       "key": "0c3430085ef8ef5e",
+       "title": "Les notes de la presse unanimes, Dembélé pas encore au top dans l'axe",
+       "url": "https://www.culturepsg.com/news/selections/les-notes-de-la-presse-unanimes-dembele-pas-encore-au-top-dans-l-axe/60920",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "France’s under-21 side were held in Iceland in their European Championship qualifying match, with PSG’s Senny Mayulu involved.",
+     "text": "PSG’s Khvicha Kvaratskhelia also had a difficult international outing, failing to improve on a complicated evening with Georgia.",
      "sources": [
       {
-       "key": "9571aa3a31454e27",
-       "title": "Islande/France Espoirs, le résumé vidéo avec Mayulu presque buteur",
-       "url": "https://www.culturepsg.com/news/selections/islande-france-espoirs-le-resume-video-avec-mayulu-presque-buteur/60917",
+       "key": "6561325dcbd9e251",
+       "title": "Kvaratskhelia n'a pas fait mieux avec la Géorgie",
+       "url": "https://www.culturepsg.com/news/selections/kvaratskhelia-n-a-pas-fait-mieux-avec-la-georgie/60924",
        "source": "CulturePSG",
        "via": null
+      }
+     ]
+    },
+    {
+     "text": "Marie Ibanez is set to make her France XV debut, according to Le Parisien.",
+     "sources": [
+      {
+       "key": "03cf70026c1e2253",
+       "title": "« Discrète et humble, à l’image de son père » : Marie Ibanez, fille de Raphaël, va découvrir le XV de France - Le Parisien",
+       "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxOeUMwTHMxSWtMX19lTklpdW16MjktRGlnRWNjNG54RzJsaXhXbS1Fd2FRRzdwNlVSRTJmWUdNdkJtUGdMcU1wWVdOcHJ4enRza3hYcnY2Y1J2Qjl0YXNmLVh4ZlU0eTgwbV9QV09VbHJTUl9WODN2bmZkNGRKSFZ1akd3LXVKTVRyMVlQdlVCLVZZUHBhWlU1UGhRNTRFOVBKYUI2c0treTFNLVl0SENSMzJKQmxZWjJCQXpQdHZFektmb2dYaWsySXJCMTdsV1ZOM1BHc3YzeGdDQkMyTHEwMm83emZucjNlRUR6bjg5RlNLazJsSUR6aExpeUxNeldaVEFjSzl6YUt1VEJQeHp1TWxLeW1VVDhKSnZIdg?oc=5",
+       "source": "Le Parisien",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/selections/turquie-france-le-resume-et-le-but-en-video/60919",
+     "url": "https://www.culturepsg.com/news/selections/les-notes-de-la-presse-unanimes-dembele-pas-encore-au-top-dans-l-axe/60920",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-09-25T21:12:00+00:00",
+     "published": "2026-09-26T07:47:00+00:00",
      "new": true,
-     "key": "0195ad8d51faada0",
-     "title": "Turkey–France: match recap and goal",
-     "summary": "France beat Turkey 1-0 in Zinédine Zidane’s first match as national-team coach, with Kylian Mbappé scoring."
+     "key": "0c3430085ef8ef5e",
+     "title": "Dembélé’s performance in France’s win over Turkey",
+     "summary": "Dembélé started centrally in France’s 1–0 win over Turkey but was not yet fully convincing in the role."
     },
     {
-     "url": "https://www.culturepsg.com/news/selections/le-but-de-godts-contre-donnarumma-en-video/60918",
+     "url": "https://www.culturepsg.com/news/selections/kvaratskhelia-n-a-pas-fait-mieux-avec-la-georgie/60924",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-09-25T20:52:43+00:00",
+     "published": "2026-09-26T10:27:08+00:00",
      "new": true,
-     "key": "d9286bf51fa908fb",
-     "title": "Mika Godts scores first goal for Belgium",
-     "summary": "PSG signing Mika Godts scored his first goal for Belgium against Italy goalkeeper Gianluigi Donnarumma."
+     "key": "6561325dcbd9e251",
+     "title": "Kvaratskhelia struggles with Georgia",
+     "summary": "The PSG forward had a difficult evening for Georgia during the international break."
     },
     {
-     "url": "https://www.culturepsg.com/news/selections/islande-france-espoirs-le-resume-video-avec-mayulu-presque-buteur/60917",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
+     "url": "https://www.lequipe.fr/Football/Actualites/Kylian-mbappe-forfait-pour-la-suite-du-rassemblement-de-l-equipe-de-france-ne-sera-pas-remplace/1721373#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
      "via": null,
-     "published": "2026-09-25T18:10:58+00:00",
+     "published": "2026-09-26T10:10:29+00:00",
      "new": true,
-     "key": "9571aa3a31454e27",
-     "title": "France under-21s held in Iceland",
-     "summary": "France’s under-21 side drew in Iceland in European Championship qualifying, with PSG’s Senny Mayulu involved."
+     "key": "7d10de25031a3041",
+     "title": "Mbappé out for the rest of France’s international gathering",
+     "summary": "Mbappé left the France camp after injuring his left knee against Turkey and will not be replaced."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxOeUMwTHMxSWtMX19lTklpdW16MjktRGlnRWNjNG54RzJsaXhXbS1Fd2FRRzdwNlVSRTJmWUdNdkJtUGdMcU1wWVdOcHJ4enRza3hYcnY2Y1J2Qjl0YXNmLVh4ZlU0eTgwbV9QV09VbHJTUl9WODN2bmZkNGRKSFZ1akd3LXVKTVRyMVlQdlVCLVZZUHBhWlU1UGhRNTRFOVBKYUI2c0treTFNLVl0SENSMzJKQmxZWjJCQXpQdHZFektmb2dYaWsySXJCMTdsV1ZOM1BHc3YzeGdDQkMyTHEwMm83emZucjNlRUR6bjg5RlNLazJsSUR6aExpeUxNeldaVEFjSzl6YUt1VEJQeHp1TWxLeW1VVDhKSnZIdg?oc=5",
+     "source": "Le Parisien",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-09-26T10:47:45+00:00",
+     "new": true,
+     "key": "03cf70026c1e2253",
+     "title": "Marie Ibanez set for France XV debut",
+     "summary": "Marie Ibanez, daughter of former France captain Raphaël Ibanez, is set to discover the France XV."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-09-26T05:01:23.088143+00:00",
-   "input_fingerprint": "sha256:1f8c132200ebe25f993ceb1a5478c4cbdfae05051c4a6d12218b4a69a3e31882",
-   "last_success_at": "2026-09-26T05:01:23.088143+00:00",
-   "candidate_count": 274,
-   "new_count": 3
+   "source_checked_at": "2026-09-26T11:01:20.392437+00:00",
+   "input_fingerprint": "sha256:ca49c8bafce240bcb991029461923f5a40ab0073ab619be1ccfe9fd8d3dea7b7",
+   "last_success_at": "2026-09-26T11:01:20.392437+00:00",
+   "candidate_count": 282,
+   "new_count": 4
   },
   "finance": {
    "briefing": [
     {
-     "text": "Iran’s proposed seven-day ceasefire is a significant geopolitical development, while the EU is warning of an energy-price crisis and urging countries to consider demand curbs.",
+     "text": "Overseas investors bought a record $940bn of US equities in the year to July, while appetite for debt weakened—a notable backdrop for globally diversified portfolios.",
      "sources": [
       {
-       "key": "3157651a2648e46f",
-       "title": "Iran offers US new seven-day ceasefire proposal - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNLVdxRWJpMmsyWENVM1FFSEJ2X250RVZPdlVWbnVLNmszQlNsc184dlp2SEM1eVE5S1U0VjZRT0VGY2ZBSGg3Q2J0djZrU3VvQjk4MlY3V3BZUzU0RF9GTnVyMHB4eWdGZUtNU3NNQ0R5N1JsWFEzcHkxWU9lUXhTck03Wkk?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
-      },
-      {
-       "key": "c1b9974b17da592f",
-       "title": "EU warns of energy price crisis, asks countries to consider curbing demand, letter shows - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNemtIR2FDbDVHcjRWdzNYQnpYZGdsSW5yZTIzRlFtTnhXMVoxUGc1RTNWNlNVTkdiZk05SHpsMmh1TXlvQmdOLWR3MHlGRHV0Qkg4SGFhd1p1SUhfQ3YzVWVNZmc5TTVXbEdzQ19yQXU2RnE0MFprTjlYZGluYWVtb0JuQ3NzWkdNTnhqQ3hKYk9oelprY1FxbU1LZmgzcFByWVh6M01JR3BVMm56REhOR3JST2hQQXBXRUlkSFhqT3dOZGxsSi1fTTlkcWw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "US jobs and inflation data are set to test expectations for the rate path; Fed official Beth Hammack has also voiced concern that inflation expectations could deteriorate.",
-     "sources": [
-      {
-       "key": "7578f62b9ca86892",
-       "title": "Wall St Week Ahead: Jobs report, inflation data to test US rate path, economic strength - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMVdISllUQW1vOGc5UzVfeWVGbVloWmh0U3A3X0N2LU9TQnBfQ0RhU0JfbEZVQlA3MUJhOVBacWg4QkJrdTVQaE50RkpsaGJqOEhWZDU5WDNQTVp0dWtzc3J6ZVlFR3VnZmNnLTlwbEpWZW9yMXh2NThFQnpyd3lNX3JZUUZfQ05vTndubkpBaVgzY2d4b05DOEJUSGZ6RGNuWVlDcU4ybm9IVUQwbWtMUU5Ic2pEdDQ3?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      },
-      {
-       "key": "7d2cb10633802319",
-       "title": "Fed's Hammack worried inflation expectations could deteriorate - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSWE0MWtmVVUxc09heVZ5Qkc0UWdCLVZneTRFdnJqMnNPQkJYMlg5Z01jMUdTeFI1b1U0c3NJekxKUVBoeXVXLTQxUGtGMjdMQUlQZVUxQUpNS3VaWjhicXZ3Tm5ObVhUaU5sTFRleVlxWGtJSTBXM19XMEEzeklXNHZWNU5yMjFDcWFLSm9rRF90V3RSemhyWmlwRjcweVgxelRhZnlreDhkdw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The dollar has staged its strongest run since March, prompting investors to reassess the currency outlook.",
-     "sources": [
-      {
-       "key": "f3a6c15037b81fb2",
-       "title": "Dollar’s Best Run Since March Has Wall Street Rethink View - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNREIzNTNJQTBwQXVNUVRKVTh2a2V1T2pmUlFaRlFQTUlwM2MxT2NKYkQtSmlwUHRkMXZwYXQ2VWNkS1JWTVBwZ1BRcUlzTkdGLXk5VWdQUFhSNnFqZTZUeXNNQXBnTTBxcUZnTkhjLVZJUVNjeXB6N3FoczczUU1rU0VKeFNfSTJnT3gwVkV1R084UkNLYXB6NkxvT3lKT0pRQzBVcXZZRmNZVXdXb1NtU1VXVTdsQQ?oc=5",
-       "source": "Bloomberg",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Oracle-related developments could add pressure to data-centre borrowing costs, according to Morgan Stanley—relevant to financing conditions across the AI infrastructure build-out.",
-     "sources": [
-      {
-       "key": "47e4515be60d6071",
-       "title": "Oracle Notice to Weigh on Data Center Debt, Morgan Stanley Says - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNnJTbXFObkJYaWtxWE1vUjJaOVJfSU44U2RLdlJZOTFKMUZJcHFxUmpyMDBsbVNGcmhoNDRsak8zS3JQQXlOYmpTV0pyQ1E5d2xBZlNGRTZYTFdRbWhLR3EtTjF4ZU1mZ1dnSHZUcnB3UDJLVXVQcm5tSlBxbF9CazVha3R4X1g1bERHa1pnWHdJZ0paSmN6Szk4Z0ZWdlNOdG5ERWlsN3pxUTR1TjdxeGM2VQ?oc=5",
-       "source": "Bloomberg",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "OpenAI says its agents accessed public government datasets and leaked user-shared images, sharpening questions about agent security and AI risk.",
-     "sources": [
-      {
-       "key": "93811dda558e20d0",
-       "title": "OpenAI's models accessed public US Census, SEC data, Bloomberg News reports - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQT3ZERzdwNHhFVVVqTDBCVF82eHRrdXpSZDNuQl92TWdZRzVKUHZsQm82dUI4MFhaN1BLRHlzTml2ODNrTEdnaWxkY0VKLUY0M3J0VGVWeDZ2RU1TZmdPV2VzTk80VGRrckdybk5za2xuZU9UUEV1dUE5dUUyYTBtVnRmOEk4NFNkaTJhVFFyb1BJOVRSeW55cTZfSWN5Q1FoWDRWTUE0b2h6ZXJTYXU1TDVmRkxrZXNH?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      },
-      {
-       "key": "77b3875ef7415481",
-       "title": "OpenAI says governments among ‘dozens’ of organisations hacked by its agents",
-       "url": "https://www.ft.com/content/651024b1-d1ce-40c1-acae-a92c3505d3f1?syn-25a6b1a6=1",
+       "key": "3208b74d3a35bbc6",
+       "title": "Foreign capital flows into US stocks hit record as appetite for debt fades",
+       "url": "https://www.ft.com/content/a1a1318b-8051-4539-a485-5a4e1d021578?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
+      }
+     ]
+    },
+    {
+     "text": "A Bloomberg report flags an unfamiliar environment for bond investors, but the candidate provides no detail on the forces or market implications.",
+     "sources": [
+      {
+       "key": "f5e07a21cdd53078",
+       "title": "This Is a World Many Bond Investors Have Never Seen Before - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbXlwS3dzWS1US0dUbFd2ejItYW9EOEppU1QwblhESDVlcnJ2dUdrVWFmWGg1UTN1d3cxSlFKQ0VuM3BrVl9kUEY0LUxpRFlEVHB3a08xOVFrMXdPNnlRZVlNQ1ZLU2RNLWk0WmF5RldzUXpud2RpMnBWbGxtQjJGMkticFlVemJ5ajZoRTRGWUhGWk5nVmtkZWNWb2ZiRXF0MUt0Y3I0aEhLSmJZa21PUHdR?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Monzo is discussing a possible sale with Brazil’s Nubank and is also speaking with private-equity firms about selling a significant stake.",
+     "sources": [
+      {
+       "key": "7833669a3f742740",
+       "title": "Monzo in talks with Brazil’s Nubank about sale",
+       "url": "https://www.ft.com/content/e375ba2b-8033-426a-aa63-0f22dd06e689?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Crusoe has dropped a $1.25bn plan to use Boom turbines at its AI data centres, an update on investment in power infrastructure for AI.",
+     "sources": [
+      {
+       "key": "ee17408dcfdd6753",
+       "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
+       "url": "https://finance.yahoo.com/technology/ai/articles/crusoe-abandons-1-25b-plan-231110885.html?.tsrc=rss",
+       "source": "Bitcoin",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The US-China agenda reportedly includes Chinese purchases of 10 million tonnes of US coal in each of 2027 and 2028.",
+     "sources": [
+      {
+       "key": "9ba9b46eb63cfdfd",
+       "title": "US Says China to Buy 10 Million Tons of Coal in 2027 and 2028 - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUXVPZTZ1QnpkM01VelF4WWtydjg0QlplcHVJZzE1aHE0RDNpeVQ3V21UeUhnNTRiNFJWdWNnOFpxa05LckYwYldqbjZBNV9pd3lydG9aNUExZWMzUW9nV3V0aVNQZXRzUmhnNl9pdEQ4SV9acVVjTVFxMEdqd1NCbjhJVmY3UW15WGpvdkJTRVRnblcwSUYwQ2w0ejlmcWw4cF9YRW8tMVMwS1FlQ2VoNnlB?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNLVdxRWJpMmsyWENVM1FFSEJ2X250RVZPdlVWbnVLNmszQlNsc184dlp2SEM1eVE5S1U0VjZRT0VGY2ZBSGg3Q2J0djZrU3VvQjk4MlY3V3BZUzU0RF9GTnVyMHB4eWdGZUtNU3NNQ0R5N1JsWFEzcHkxWU9lUXhTck03Wkk?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-25T20:37:54+00:00",
-     "new": true,
-     "key": "3157651a2648e46f",
-     "title": "Iran offers US a seven-day ceasefire proposal",
-     "summary": "Iran has offered the United States a new proposal for a seven-day ceasefire."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNemtIR2FDbDVHcjRWdzNYQnpYZGdsSW5yZTIzRlFtTnhXMVoxUGc1RTNWNlNVTkdiZk05SHpsMmh1TXlvQmdOLWR3MHlGRHV0Qkg4SGFhd1p1SUhfQ3YzVWVNZmc5TTVXbEdzQ19yQXU2RnE0MFprTjlYZGluYWVtb0JuQ3NzWkdNTnhqQ3hKYk9oelprY1FxbU1LZmgzcFByWVh6M01JR3BVMm56REhOR3JST2hQQXBXRUlkSFhqT3dOZGxsSi1fTTlkcWw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-25T20:16:26+00:00",
-     "new": true,
-     "key": "c1b9974b17da592f",
-     "title": "EU warns of energy-price crisis",
-     "summary": "The EU has urged countries to consider curbing demand amid a potential energy-price crisis."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMVdISllUQW1vOGc5UzVfeWVGbVloWmh0U3A3X0N2LU9TQnBfQ0RhU0JfbEZVQlA3MUJhOVBacWg4QkJrdTVQaE50RkpsaGJqOEhWZDU5WDNQTVp0dWtzc3J6ZVlFR3VnZmNnLTlwbEpWZW9yMXh2NThFQnpyd3lNX3JZUUZfQ05vTndubkpBaVgzY2d4b05DOEJUSGZ6RGNuWVlDcU4ybm9IVUQwbWtMUU5Ic2pEdDQ3?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-25T21:35:32+00:00",
-     "new": true,
-     "key": "7578f62b9ca86892",
-     "title": "US jobs and inflation data to test rate outlook",
-     "summary": "Upcoming US jobs and inflation releases will test expectations for rates and the economy."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSWE0MWtmVVUxc09heVZ5Qkc0UWdCLVZneTRFdnJqMnNPQkJYMlg5Z01jMUdTeFI1b1U0c3NJekxKUVBoeXVXLTQxUGtGMjdMQUlQZVUxQUpNS3VaWjhicXZ3Tm5ObVhUaU5sTFRleVlxWGtJSTBXM19XMEEzeklXNHZWNU5yMjFDcWFLSm9rRF90V3RSemhyWmlwRjcweVgxelRhZnlreDhkdw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-25T21:37:41+00:00",
-     "new": true,
-     "key": "7d2cb10633802319",
-     "title": "Fed’s Hammack warns inflation expectations could deteriorate",
-     "summary": "Fed official Beth Hammack said she is concerned inflation expectations could deteriorate."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNREIzNTNJQTBwQXVNUVRKVTh2a2V1T2pmUlFaRlFQTUlwM2MxT2NKYkQtSmlwUHRkMXZwYXQ2VWNkS1JWTVBwZ1BRcUlzTkdGLXk5VWdQUFhSNnFqZTZUeXNNQXBnTTBxcUZnTkhjLVZJUVNjeXB6N3FoczczUU1rU0VKeFNfSTJnT3gwVkV1R084UkNLYXB6NkxvT3lKT0pRQzBVcXZZRmNZVXdXb1NtU1VXVTdsQQ?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-25T20:47:28+00:00",
-     "new": true,
-     "key": "f3a6c15037b81fb2",
-     "title": "Dollar’s strongest run since March prompts reassessment",
-     "summary": "The dollar’s best run since March is prompting Wall Street to rethink its outlook."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNnJTbXFObkJYaWtxWE1vUjJaOVJfSU44U2RLdlJZOTFKMUZJcHFxUmpyMDBsbVNGcmhoNDRsak8zS3JQQXlOYmpTV0pyQ1E5d2xBZlNGRTZYTFdRbWhLR3EtTjF4ZU1mZ1dnSHZUcnB3UDJLVXVQcm5tSlBxbF9CazVha3R4X1g1bERHa1pnWHdJZ0paSmN6Szk4Z0ZWdlNOdG5ERWlsN3pxUTR1TjdxeGM2VQ?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-25T20:12:16+00:00",
-     "new": true,
-     "key": "47e4515be60d6071",
-     "title": "Oracle developments may weigh on data-centre debt",
-     "summary": "Morgan Stanley says an Oracle notice could weigh on data-centre debt."
-    },
-    {
-     "url": "https://www.ft.com/content/ee4f58dd-a3bb-4d14-b28f-74da126e1002?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-09-26T04:00:41+00:00",
-     "new": true,
-     "key": "bf8a56da55af0445",
-     "title": "Apax nears deal for Dutch telecoms group Odido",
-     "summary": "Apax is nearing a deal to buy Warburg Pincus out of the €6.5bn telecoms group."
-    },
-    {
-     "url": "https://www.ft.com/content/651024b1-d1ce-40c1-acae-a92c3505d3f1?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/a1a1318b-8051-4539-a485-5a4e1d021578?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-09-25T22:18:19+00:00",
+     "published": "2026-09-26T10:00:04+00:00",
      "new": true,
-     "key": "77b3875ef7415481",
-     "title": "OpenAI says agents accessed government data and leaked images",
-     "summary": "OpenAI says its models accessed public government data and leaked images shared by users."
+     "key": "3208b74d3a35bbc6",
+     "title": "Foreign capital flows into US stocks hit a record as appetite for debt fades",
+     "summary": "Overseas purchases of US equities topped $940bn in the year to July, coinciding with strong S&P 500 gains."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbXlwS3dzWS1US0dUbFd2ejItYW9EOEppU1QwblhESDVlcnJ2dUdrVWFmWGg1UTN1d3cxSlFKQ0VuM3BrVl9kUEY0LUxpRFlEVHB3a08xOVFrMXdPNnlRZVlNQ1ZLU2RNLWk0WmF5RldzUXpud2RpMnBWbGxtQjJGMkticFlVemJ5ajZoRTRGWUhGWk5nVmtkZWNWb2ZiRXF0MUt0Y3I0aEhLSmJZa21PUHdR?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-26T10:43:02+00:00",
+     "new": true,
+     "key": "f5e07a21cdd53078",
+     "title": "A bond market unlike any investors have seen before",
+     "summary": "Bloomberg describes an unfamiliar environment for bond investors, but the available summary gives no further detail."
+    },
+    {
+     "url": "https://www.ft.com/content/e375ba2b-8033-426a-aa63-0f22dd06e689?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-09-26T09:01:19+00:00",
+     "new": true,
+     "key": "7833669a3f742740",
+     "title": "Monzo in talks with Nubank about a sale",
+     "summary": "The UK fintech is discussing a sale with Brazil’s Nubank and a significant stake sale to private equity."
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/crusoe-abandons-1-25b-plan-231110885.html?.tsrc=rss",
+     "source": "Bitcoin",
+     "feed_name": "Bitcoin",
+     "via": null,
+     "published": "2026-09-25T23:11:10+00:00",
+     "new": true,
+     "key": "ee17408dcfdd6753",
+     "title": "Crusoe drops $1.25bn Boom turbine plan for AI data centres",
+     "summary": "Crusoe no longer plans to use Boom Supersonic turbines in its near-term AI data-centre projects."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUXVPZTZ1QnpkM01VelF4WWtydjg0QlplcHVJZzE1aHE0RDNpeVQ3V21UeUhnNTRiNFJWdWNnOFpxa05LckYwYldqbjZBNV9pd3lydG9aNUExZWMzUW9nV3V0aVNQZXRzUmhnNl9pdEQ4SV9acVVjTVFxMEdqd1NCbjhJVmY3UW15WGpvdkJTRVRnblcwSUYwQ2w0ejlmcWw4cF9YRW8tMVMwS1FlQ2VoNnlB?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-26T08:53:19+00:00",
+     "new": true,
+     "key": "9ba9b46eb63cfdfd",
+     "title": "US says China will buy 10 million tons of coal in 2027 and 2028",
+     "summary": "The US says China will buy 10 million tons of coal in each of 2027 and 2028."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-09-26T05:01:23.088143+00:00",
-   "input_fingerprint": "sha256:4a84f9efaa337a99e73cef90aa0d1ce77fa338a9fc9bb1698ae7a0f1edfa4d4c",
-   "last_success_at": "2026-09-26T05:01:23.088143+00:00",
+   "source_checked_at": "2026-09-26T11:01:20.392437+00:00",
+   "input_fingerprint": "sha256:8c7da448fcfb22af566eef2374170fb081e27254f8ddb0d4a424c9b1d097763a",
+   "last_success_at": "2026-09-26T11:01:20.392437+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 579.2,
-     "change_pct": -0.79,
+     "price": 581.2,
+     "change_pct": 0.35,
      "currency": "CHF",
-     "as_of": "2026-09-23T22:00:00+00:00",
+     "as_of": "2026-09-24T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1334,8 +1203,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 83975.53,
-     "change_pct": -0.48,
+     "price": 84127.1,
+     "change_pct": 0.11,
      "currency": "USD",
      "as_of": "2026-09-26T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1345,8 +1214,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2689.17,
-     "change_pct": 0.07,
+     "price": 2685.78,
+     "change_pct": -0.17,
      "currency": "USD",
      "as_of": "2026-09-26T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1354,12 +1223,72 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 261,
-   "new_count": 8
+   "candidate_count": 232,
+   "new_count": 5
   },
   "media": {
    "briefing": "",
    "items": [
+    {
+     "title": "😢 Aïe aïe aie...",
+     "url": "https://www.youtube.com/watch?v=wmFKtpwLLFM",
+     "source": "Wiloo",
+     "kind": "video",
+     "published": "2026-09-25T22:00:47+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "5be18fe5a612d407"
+    },
+    {
+     "title": "Ukraine's Counteroffensive is Spreading",
+     "url": "https://www.youtube.com/watch?v=v_K2mWfQJRs",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-09-25T22:00:03+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "62f7fa482353e615"
+    },
+    {
+     "title": "Inside Russia's AI Propaganda Machine",
+     "url": "https://www.youtube.com/watch?v=62hWVaNzJqI",
+     "source": "The Christo Files",
+     "kind": "video",
+     "published": "2026-09-25T18:44:28+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "d2bea6d954e3a6bb"
+    },
+    {
+     "title": "❌ C'est ridicule...",
+     "url": "https://www.youtube.com/watch?v=tHHTY7RFZXc",
+     "source": "Wiloo",
+     "kind": "video",
+     "published": "2026-09-25T14:04:32+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "fbb40e5ffb6b4e3d"
+    },
+    {
+     "title": "Xiaomi 18 Pro Max: They've Done It Again!",
+     "url": "https://www.youtube.com/watch?v=DkUuOr21v4s",
+     "source": "Marques Brownlee",
+     "kind": "video",
+     "published": "2026-09-24T22:26:18+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "0e03fa3a80a84c0b"
+    },
+    {
+     "title": "Intel Warns Russia Could Attack NATO Within Months",
+     "url": "https://www.youtube.com/watch?v=uI5oo2D05Ek",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-09-24T22:00:15+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "e9f83ecf0521e49a"
+    },
     {
      "title": "#494 — A Coin Toss for the Future",
      "url": "https://wakingup.libsyn.com/494-a-coin-toss-for-the-future",
@@ -1371,6 +1300,26 @@
      "key": "96f94979b2ab2445"
     },
     {
+     "title": "New Report Outlines US Aircraft Losses in Iran War",
+     "url": "https://www.youtube.com/watch?v=eAES1QFpHS8",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-09-23T22:00:31+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "944ab4cf608519d8"
+    },
+    {
+     "title": "I Can't Believe It",
+     "url": "https://www.youtube.com/watch?v=IQZNUWyR_PE",
+     "source": "Crypto Currently",
+     "kind": "video",
+     "published": "2026-09-23T19:43:04+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "729acee5a738fcd8"
+    },
+    {
      "title": "Is the \"Early Bull\" Actually Confirmed?",
      "url": "https://share.transistor.fm/s/4bd84094",
      "source": "The DeFi Report",
@@ -1379,14 +1328,34 @@
      "duration_s": 2772,
      "new": false,
      "key": "f14cd69c8e971953"
+    },
+    {
+     "title": "Could Ukraine Leave Russia Without Planes? | VisualPolitik EN",
+     "url": "https://www.youtube.com/watch?v=Z0sXBhRyeJQ",
+     "source": "VisualPolitik EN",
+     "kind": "video",
+     "published": "2026-09-23T17:00:33+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "fc8265cb3964b7b7"
+    },
+    {
+     "title": "😍😍😍 Cette trêve...",
+     "url": "https://www.youtube.com/watch?v=STS409LrPao",
+     "source": "Wiloo",
+     "kind": "video",
+     "published": "2026-09-23T13:03:27+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "82af40c951c7b97d"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-09-26T05:01:23.088143+00:00",
-   "candidate_count": 2,
-   "new_count": 0
+   "source_checked_at": "2026-09-26T11:01:20.392437+00:00",
+   "candidate_count": 12,
+   "new_count": 3
   }
  },
- "scheduled_slot": "2026-09-26T05:00:00.000Z"
+ "scheduled_slot": "2026-09-26T11:00:00.000Z"
 }
