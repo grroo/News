@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20260927T170119390357Z",
- "generated_at": "2026-09-27T17:01:19.390357+00:00",
- "generated_local": "Sun 27 Sep 2026, 19:01",
- "source_checked_at": "2026-09-27T17:01:19.390357+00:00",
+ "edition_id": "ed-20260928T050125898782Z",
+ "generated_at": "2026-09-28T05:01:25.898782+00:00",
+ "generated_local": "Mon 28 Sep 2026, 07:01",
+ "source_checked_at": "2026-09-28T05:01:25.898782+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-09-27T17:01:19.390357+00:00"
+  "run-2026-09-28T05:01:25.898782+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-09-27T17:01:19.390357+00:00"
+  "completed_at": "2026-09-28T05:01:25.898782+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 25,
+   "item_count": 26,
    "reason": null,
    "failure": null,
-   "parsed_count": 25,
+   "parsed_count": 26,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 105,
+   "item_count": 103,
    "reason": null,
    "failure": null,
-   "parsed_count": 105,
+   "parsed_count": 103,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -524,50 +524,70 @@
   {
    "name": "Wiloo",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "VisualPolitik EN",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Preston Stewart",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Marques Brownlee",
@@ -684,7 +704,7 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002249,
+  "est_cost_usd": 0.002263,
   "est_month_usd": 0.2,
   "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
@@ -694,60 +714,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6328,
+    "latency_ms": 7005,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0a27f5d387e6d93f016ab94be789f087d19a57b18530a93d95"
+     "resp_0aedc41c41307f43016ab9f4ae724887d09910dc5049215d20"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3286,
-    "output_tokens": 522,
-    "reasoning_tokens": 145
+    "cache_write_tokens": 3289,
+    "output_tokens": 635,
+    "reasoning_tokens": 219
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6813,
+    "latency_ms": 6969,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0e0a72b3affed8ec016ab94bed205087d19a2b5b81a6498f04"
+     "resp_0cb5076b585092a8016ab9f4b4ad0887d0aca6b88272f97260"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3833,
-    "output_tokens": 665,
-    "reasoning_tokens": 285
+    "cache_write_tokens": 3666,
+    "output_tokens": 537,
+    "reasoning_tokens": 282
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7438,
+    "latency_ms": 7518,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0bb69391c61aa437016ab94bf3e33887d1821048191034f24e"
+     "resp_0f9228917bc62234016ab9f4bb93c487d09412777ce611c3c6"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3370,
-    "output_tokens": 686,
-    "reasoning_tokens": 316
+    "cache_write_tokens": 3120,
+    "output_tokens": 834,
+    "reasoning_tokens": 327
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10489,
-  "output_tokens": 1873,
-  "reasoning_tokens": 746,
+  "cache_write_tokens": 10075,
+  "output_tokens": 2006,
+  "reasoning_tokens": 828,
   "recorded_month_to_date": {
    "month_utc": "2026-09",
-   "recorded_runs": 12,
-   "attempts": 36,
-   "known_cost_usd": 0.052763,
+   "recorded_runs": 13,
+   "attempts": 39,
+   "known_cost_usd": 0.055026,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,61 +776,68 @@
   "news": {
    "briefing": [
     {
-     "text": "Swiss voters rejected a proposal to tighten neutrality rules by 70.2%, preserving the government’s ability to impose sanctions without a UN mandate.",
+     "text": "China says the extension of the US trade truce gives both sides more room to advance talks, keeping trade policy in focus for markets.",
      "sources": [
       {
-       "key": "ef10a4f7377d3bc0",
-       "title": "Svizzera, al referendum su una maggiore neutralità vince il No con il 70,2%",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/27/svizzera-al-referendum-su-una-maggiore-neutralita-vince-il-no-con-il-702_acad025a-7799-4e3f-b4fa-9e0c56176878.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "OpenAI and Anthropic are reportedly investigating tens of thousands of security incidents, including attempts to escape sandboxes and hijack websites.",
-     "sources": [
-      {
-       "key": "8fe4645446673c95",
-       "title": "Axios, indagine OpenAI e Anthropic su decine di migliaia di incidenti di sicurezza",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/27/axios-indagine-openai-e-anthropic-su-decine-di-migliaia-di-incidenti-di-sicurezza_449d631c-7ef5-4a3a-b925-e60c3b3e5c1d.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "The US ambassador to the UN said Trump rejected Iran’s proposal to end the war, arguing Tehran was demanding too much up front.",
-     "sources": [
-      {
-       "key": "f7656d113ba5c195",
-       "title": "UN ambassador Waltz says Iran was not negotiating ‘in good faith’ to end war",
-       "url": "https://www.theguardian.com/us-news/2026/sep/27/trump-un-ambassador-iran-war",
-       "source": "The Guardian World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Bill Gates has joined calls for AI safeguards, including legislation, adding a prominent voice to the debate over oversight.",
-     "sources": [
-      {
-       "key": "651ced999ded9424",
-       "title": "Bill Gates joins calls for AI safeguards, including legislation - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQmNRNTdyaGdENWhHUlEzVFpTVnRndmtXcDBfZlVmTVZpWWF2SEF6M1FwXzBtbFZRdWJWOGNKc2JfYll1aEZxamJYYTJwZ2pXMUZ0NW1wWjEyQXRObnRJa29BbzhrLWxXOTFmSVZlRlkyS1Z3endodzAyYm9Sc0NOYlE5REhwbnZQbERfdWc2Mi1LbWVyaGpiOGtjZ1dVWGQ2cTJib1FVM1ZJYkVZbmRJWA?oc=5",
+       "key": "a4c97ce3241fb7b0",
+       "title": "China says US trade truce extension creates space to advance talks - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPaTBqVzRGcGNNZ2M5YWVLbUQxanlOVWhxYU5lWjNuYzJSWmtHV2lQTWdSUXlpTGM3M1UzU2JUckNLUGxIc3dFVWx5WlExNnotSmtQblE4UnM0Sk1OVnQycjVkR0ozUlpzMW5MMExHNll4NDR2dXpfWTNCMVpQT0docjI1SHFDeFdwYnZGVlVocXhzTy10WWViRk54VklyNzNiRFczXy04aURCdVdmSEdNbjNrRHpXNXM5LWRCZzJQajZVMVBx?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Trump said people arrested at a UK air base used by US forces intended to cause major damage; the report offers no further details.",
+     "text": "Ukraine’s detention of North Korean soldiers remains diplomatically sensitive: Seoul is demanding an apology from Kyiv over the public disclosure of their capture.",
      "sources": [
       {
-       "key": "7037a5ad5232dfea",
-       "title": "Trump says men arrested at UK air base used by US were looking to do 'big damage' - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOThaUHcwMHZuZEY2dldUNjhYQ29PeWRJdEYxWFBPV3NEUUdSc0l4MkdhN3liTGdyNG9XaEhwWG8xRk8xR29JVlA0ZEV2ZXM3RVZCRDlPSHhzU29Pek9tZVREdUdvOHRXS1ZuaTR0TXVGV253bkplU1lNbG85WXRjYzcwV2ZSekFCa1gtR1RtV09zM3NYeF93?oc=5",
-       "source": "Reuters",
+       "key": "b4555cacf441962d",
+       "title": "EN DIRECT, guerre en Ukraine : Séoul exige des excuses de Kiev pour avoir rendu publique la détention de prisonniers de guerre nord-coréens",
+       "url": "https://www.lemonde.fr/international/live/2026/09/28/en-direct-guerre-en-ukraine-seoul-exige-des-excuses-de-kiev-pour-avoir-rendu-publique-la-detention-de-prisonniers-de-guerre-nord-coreens_6783795_3210.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Swiss voters rejected a far-right proposal on neutrality, backing a more pragmatic, Atlantic-oriented stance, according to Le Monde.",
+     "sources": [
+      {
+       "key": "fb1328351ef10a7b",
+       "title": "En balayant la neutralité « totale » dans les urnes, la Suisse vote pour un pragmatisme atlantiste",
+       "url": "https://www.lemonde.fr/international/article/2026/09/28/en-balayant-la-neutralite-totale-dans-les-urnes-la-suisse-vote-pour-un-pragmatisme-atlantiste_6784731_3210.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "AI investment is reshaping corporate borrowing, with the Financial Times reporting that hyperscalers are transforming debt markets; insurers are also making AI a strategic priority, with ERGO creating a chief AI officer role.",
+     "sources": [
+      {
+       "key": "ebe8a1aeaf58419e",
+       "title": "AI hyperscalers are transforming debt - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSFB2ZC0tQzM5QllZMExaN0FBZUZWeU1fZE95OTVpSnBmOG12a09rVHFlcTRxWEpGRmlWbFJiUl9waktTNURPbEZVcnlLVnpPN0M0Q2kyRTBVZjRSWVM2YnNoMl81Y041bzdKNVZVUHpOUGY4RVVlR0lZMzFBN1djWkJGSUc?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      },
+      {
+       "key": "da856dd3cb18e094",
+       "title": "ERGO Group creates a chief AI officer role - Insurance Business",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWi1pMXZOMzNjd3dkdWlkdGs0SGpsLVAxbkpMZHdFc280Z3VvNFpTZlZIYlY5M1Q4QnZvcmJoR29RbnVwSkFTYlhhM3Zxd2RZXzB4YnZyWjJDajF1RmJJdWg2aFhFQmlLeWpfMXhNYV9FT3FvVE9mdV81OHpDeGNEX0R2Q1ZmZkIyelVtamdPNjE1a2VJeE1OVThFc04xYkhwaVFGQUlObFRoVjRjaXNZc3pLcw?oc=5",
+       "source": "Insurance Business",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Verisure is pursuing AI partnerships to address concerns about disruption, highlighting how established security businesses are responding to AI’s potential impact.",
+     "sources": [
+      {
+       "key": "c2067898453fdf10",
+       "title": "Verisure Bets on AI Partnerships to Counter Disruption Concerns - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcHpuZW9KMmhWaU8xc24zS0d4WGI4RGQ4ZzZRXzdkSzl3Y2NnejNlQWdGYll6UU5ETTVnOVcwNng2UTVma2ViMk5aZmpBekY1WW0zb1Ezbko4RlhDR2N1MXV2Mm1mOFR5bmJ6ckozZGFob3hiSGU2eUdpcjQzcHZMc1ZWWjlfd2lfa3B2dTl0MFdKR1ZFLU9qQ3g0NGp3WW81bVltd2lsQmdqSm93cmVDY0x2cVg?oc=5",
+       "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
@@ -818,127 +845,121 @@
    ],
    "items": [
     {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/27/svizzera-al-referendum-su-una-maggiore-neutralita-vince-il-no-con-il-702_acad025a-7799-4e3f-b4fa-9e0c56176878.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-09-27T16:41:32+00:00",
-     "new": true,
-     "key": "ef10a4f7377d3bc0",
-     "title": "Swiss voters reject stricter neutrality rules",
-     "summary": "The proposal, which could have constrained sanctions against Russia, was rejected by 70.2% of voters."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/27/axios-indagine-openai-e-anthropic-su-decine-di-migliaia-di-incidenti-di-sicurezza_449d631c-7ef5-4a3a-b925-e60c3b3e5c1d.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-09-27T16:33:40+00:00",
-     "new": true,
-     "key": "8fe4645446673c95",
-     "title": "OpenAI and Anthropic investigate security incidents",
-     "summary": "The companies are investigating tens of thousands of incidents, including sandbox escapes and website hijackings."
-    },
-    {
-     "url": "https://www.theguardian.com/us-news/2026/sep/27/trump-un-ambassador-iran-war",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-09-27T16:28:05+00:00",
-     "new": true,
-     "key": "f7656d113ba5c195",
-     "title": "US says Iran was not negotiating in good faith",
-     "summary": "US ambassador Mike Waltz said Trump rejected Iran’s proposal to end the war because it demanded too much up front."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQmNRNTdyaGdENWhHUlEzVFpTVnRndmtXcDBfZlVmTVZpWWF2SEF6M1FwXzBtbFZRdWJWOGNKc2JfYll1aEZxamJYYTJwZ2pXMUZ0NW1wWjEyQXRObnRJa29BbzhrLWxXOTFmSVZlRlkyS1Z3endodzAyYm9Sc0NOYlE5REhwbnZQbERfdWc2Mi1LbWVyaGpiOGtjZ1dVWGQ2cTJib1FVM1ZJYkVZbmRJWA?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPaTBqVzRGcGNNZ2M5YWVLbUQxanlOVWhxYU5lWjNuYzJSWmtHV2lQTWdSUXlpTGM3M1UzU2JUckNLUGxIc3dFVWx5WlExNnotSmtQblE4UnM0Sk1OVnQycjVkR0ozUlpzMW5MMExHNll4NDR2dXpfWTNCMVpQT0docjI1SHFDeFdwYnZGVlVocXhzTy10WWViRk54VklyNzNiRFczXy04aURCdVdmSEdNbjNrRHpXNXM5LWRCZzJQajZVMVBx?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-09-27T16:11:25+00:00",
+     "published": "2026-09-28T03:07:00+00:00",
      "new": true,
-     "key": "651ced999ded9424",
-     "title": "Bill Gates backs AI safeguards and legislation",
-     "summary": "Gates has joined calls for safeguards on AI, including legislation."
+     "key": "a4c97ce3241fb7b0",
+     "title": "China says US trade truce extension creates room for talks",
+     "summary": "China says extending the US trade truce creates space to advance bilateral talks."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOThaUHcwMHZuZEY2dldUNjhYQ29PeWRJdEYxWFBPV3NEUUdSc0l4MkdhN3liTGdyNG9XaEhwWG8xRk8xR29JVlA0ZEV2ZXM3RVZCRDlPSHhzU29Pek9tZVREdUdvOHRXS1ZuaTR0TXVGV253bkplU1lNbG85WXRjYzcwV2ZSekFCa1gtR1RtV09zM3NYeF93?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-27T16:44:50+00:00",
+     "url": "https://www.lemonde.fr/international/live/2026/09/28/en-direct-guerre-en-ukraine-seoul-exige-des-excuses-de-kiev-pour-avoir-rendu-publique-la-detention-de-prisonniers-de-guerre-nord-coreens_6783795_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-09-28T04:07:26+00:00",
      "new": true,
-     "key": "7037a5ad5232dfea",
-     "title": "Trump says suspects at UK air base intended major damage",
-     "summary": "Trump said men arrested at a UK air base used by US forces were looking to cause major damage."
+     "key": "b4555cacf441962d",
+     "title": "Seoul demands apology from Kyiv over North Korean prisoners",
+     "summary": "South Korea is demanding an apology from Ukraine for publicizing the detention of two North Korean soldiers captured in January 2025."
+    },
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/09/28/en-balayant-la-neutralite-totale-dans-les-urnes-la-suisse-vote-pour-un-pragmatisme-atlantiste_6784731_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-09-28T03:00:12+00:00",
+     "new": true,
+     "key": "fb1328351ef10a7b",
+     "title": "Swiss voters reject far-right neutrality proposal",
+     "summary": "Swiss voters rejected a far-right initiative and backed a more pragmatic, Atlantic-oriented approach to neutrality."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSFB2ZC0tQzM5QllZMExaN0FBZUZWeU1fZE95OTVpSnBmOG12a09rVHFlcTRxWEpGRmlWbFJiUl9waktTNURPbEZVcnlLVnpPN0M0Q2kyRTBVZjRSWVM2YnNoMl81Y041bzdKNVZVUHpOUGY4RVVlR0lZMzFBN1djWkJGSUc?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-09-28T04:00:10+00:00",
+     "new": true,
+     "key": "ebe8a1aeaf58419e",
+     "title": "AI hyperscalers are transforming debt",
+     "summary": "The Financial Times reports that AI hyperscalers are changing debt markets."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcHpuZW9KMmhWaU8xc24zS0d4WGI4RGQ4ZzZRXzdkSzl3Y2NnejNlQWdGYll6UU5ETTVnOVcwNng2UTVma2ViMk5aZmpBekY1WW0zb1Ezbko4RlhDR2N1MXV2Mm1mOFR5bmJ6ckozZGFob3hiSGU2eUdpcjQzcHZMc1ZWWjlfd2lfa3B2dTl0MFdKR1ZFLU9qQ3g0NGp3WW81bVltd2lsQmdqSm93cmVDY0x2cVg?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-09-28T04:00:00+00:00",
+     "new": true,
+     "key": "c2067898453fdf10",
+     "title": "Verisure bets on AI partnerships",
+     "summary": "Verisure is pursuing AI partnerships to counter concerns that the technology could disrupt its business."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWi1pMXZOMzNjd3dkdWlkdGs0SGpsLVAxbkpMZHdFc280Z3VvNFpTZlZIYlY5M1Q4QnZvcmJoR29RbnVwSkFTYlhhM3Zxd2RZXzB4YnZyWjJDajF1RmJJdWg2aFhFQmlLeWpfMXhNYV9FT3FvVE9mdV81OHpDeGNEX0R2Q1ZmZkIyelVtamdPNjE1a2VJeE1OVThFc04xYkhwaVFGQUlObFRoVjRjaXNZc3pLcw?oc=5",
+     "source": "Insurance Business",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-09-28T03:38:06+00:00",
+     "new": true,
+     "key": "da856dd3cb18e094",
+     "title": "ERGO creates chief AI officer role",
+     "summary": "ERGO Group has created a chief AI officer position."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-09-27T17:01:19.390357+00:00",
-   "input_fingerprint": "sha256:ed7479db3cdd4db0e924a43d6406851a293ff36451aaae50ea88b02ccfda848a",
-   "last_success_at": "2026-09-27T17:01:19.390357+00:00",
-   "candidate_count": 317,
-   "new_count": 5
+   "source_checked_at": "2026-09-28T05:01:25.898782+00:00",
+   "input_fingerprint": "sha256:4ef9fe05cd4ba2ba5743a6818d421985e4577bdc418bc6a63b627e71e112c3d9",
+   "last_success_at": "2026-09-28T05:01:25.898782+00:00",
+   "candidate_count": 336,
+   "new_count": 6
   },
   "sport": {
    "briefing": [
     {
-     "text": "With Mbappé leaving the France camp, Zidane says Dembélé could take on a greater leadership role. [0]",
+     "text": "France face Belgium in a significant early test for Zinédine Zidane, with Kylian Mbappé absent. The squad had limited time together, though the expected changes are personnel rather than principles.",
      "sources": [
       {
-       "key": "0ca30a7d601cc3e2",
-       "title": "Zidane vante une qualité surprenante de Dembélé",
-       "url": "https://www.culturepsg.com/news/selections/zidane-vante-une-qualite-surprenante-de-dembele/60939",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "PSG face a demanding run after the international break, with six high-stakes matches scheduled. [2]",
-     "sources": [
+       "key": "fdd8a3a5df315914",
+       "title": "France-Belgique : avec un voyage et un seul réel entraînement au complet, des changements d'hommes mais pas de principes attendus pour les Bleus - franceinfo",
+       "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxQU1NnV2Jvd1FNeExJc0lQQjRFRVJoMUhiRTVfZXZpVGRqanU2SkxHcDBJU1luTHRlbGRtem4zSlozSzQxcktsdUFDRmlyTXk5aXZMNUxOb3RFMHF1ZFVXcm5nM1Nna3J3MmM2OEE4MmJ5bHNfaGJyM2ZwUmtTVGpWcWdOXzFCM2xubktybC1BTGhac1dDREkxOXN6VE5hN1YxWTNMWWRWbXNtdTRHRkNnbk9jWVFKRkEyR1ZlV0NMdlJua0R0RzlPS2NYMG42MEV4WG04UE5Ibm5qLThFaE91WVBMSGRIRVBUUkY2UTRldnduQlRZSFIyZ053QngycS1yTndxY2xfYjBGZFlGYW5jbDVNa1dUcUxXMVdFa2s1allFdnpiZEJ2SnBhR0g2Zk5Jekhz?oc=5",
+       "source": "franceinfo",
+       "via": "Google News"
+      },
       {
-       "key": "967133f60933b003",
-       "title": "L'après trêve du PSG sera intense",
-       "url": "https://www.culturepsg.com/news/club/l-apres-treve-du-psg-sera-intense/60937",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "PSG are reportedly among the clubs pursuing 15-year-old Manchester United prospect JJ Gabriel, though the report is based on Spanish press. [1]",
-     "sources": [
-      {
-       "key": "47b95a9aaf40fbde",
-       "title": "Le PSG a pris contact avec l'entourage de JJ Gabriel",
-       "url": "https://www.culturepsg.com/news/mercato/le-psg-a-pris-contact-avec-l-entourage-de-jj-gabriel/60938",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Zidane has confirmed changes to France’s starting lineup against Belgium in the Nations League. [17]",
-     "sources": [
-      {
-       "key": "027104c4cd867aee",
-       "title": "Equipe de France - Zinédine Zidane confirme des changements dans son onze de départ face à la Belgique - MadeInFOOT",
-       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNY3E0WHZXV3BmUVpZYXZ4QkdfelhYX1AxN2pIendpLW5GSlFXNTc4VnpqZTZBR1dicndqbVo5UkhiUzFUOHd1bWFWczZzM0VzaE5rQzFtSzM5dlptNVA1ZE92aDQyejdEWGJiRXZadldVblh2LV95R25sVFByZzRkQk9SbVA4NkE1ZFpIV3l1SHNDTUNTMGFwb1Jfa1JoUndNdDAyYktSR1NfWEJxWHo4a2xpMG9GU3A5UHdQVkpXemFzUWh5UUROaEgzSjBDdmExVi0zQURKZDAyV3Vwd3lOOWdiQWpsUEVqOFFjRnZYazlKbXc?oc=5",
-       "source": "MadeInFOOT",
+       "key": "74f580b94f7a1cc8",
+       "title": "Belgique-France : un premier vrai test pour Zidane et ses Bleus - lefigaro.fr",
+       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbHU1eWpHWEVEd09UR0JkclMyTVVCMDJaSVFUa2VZQVRBaGlaZnJaS0trUEtPSzQ3SnBiQTdCWDJqUkY4X0FwRmlPV05ndENpR2JfTTFXMEZLSEVSQUtXWVM3VGFMWlpYMGE0SFl3M191NktrOVRkQy1sQ0U1U09kZVBOM1RfQXIzNnJaZm45c19LazBWbFRxREV0VFJfdmNvRlVjcWRxWFRKeHI1aE80X3lHNi14OVdpa0hORDkxaUxFeU52SjdR?oc=5",
+       "source": "lefigaro.fr",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Camavinga described how unusual it initially felt to work with Zidane in the France setup. [28]",
+     "text": "Portugal beat Norway in the Nations League, with PSG’s Nuno Mendes and Gonçalo Ramos involved; João Neves was also part of the squad.",
      "sources": [
       {
-       "key": "7634d8bb818dc56f",
-       "title": "Eduardo Camavinga avant le match des Bleus en Belgique : « Au début, c'était assez spécial... » de travailler avec Zinédine Zidane",
-       "url": "https://www.lequipe.fr/Football/Actualites/Eduardo-camavinga-avant-le-match-des-bleus-en-belgique-au-debut-c-etait-assez-special-de-travailler-avec-zinedine-zidane/1721689#at_medium=RSS_feeds",
-       "source": "L'Équipe",
+       "key": "cd22a346d894e23c",
+       "title": "Norvège/Portugal, le résumé et les buts en video, avec Mendes et Ramos impliqués",
+       "url": "https://www.culturepsg.com/news/selections/norvege-portugal-le-resume-et-les-buts-en-video-avec-mendes-et-ramos-impliques/60940",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Former PSG winger Ángel Di María produced another standout left-footed goal, showing he remains a threat at 38.",
+     "sources": [
+      {
+       "key": "58f09766071b0d98",
+       "title": "A 38 ans, Di Maria a toujours son pied gauche magique",
+       "url": "https://www.culturepsg.com/news/anciens/a-38-ans-di-maria-a-toujours-son-pied-gauche-magique/60929",
+       "source": "CulturePSG",
        "via": null
       }
      ]
@@ -946,127 +967,119 @@
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/selections/zidane-vante-une-qualite-surprenante-de-dembele/60939",
+     "url": "https://www.culturepsg.com/news/selections/norvege-portugal-le-resume-et-les-buts-en-video-avec-mendes-et-ramos-impliques/60940",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-09-27T16:16:37+00:00",
+     "published": "2026-09-27T20:55:01+00:00",
      "new": true,
-     "key": "0ca30a7d601cc3e2",
-     "title": "Zidane highlights a surprising quality in Dembélé",
-     "summary": "With Mbappé leaving the France camp, Zidane says Dembélé could take on greater leadership responsibilities."
+     "key": "cd22a346d894e23c",
+     "title": "Portugal make a statement in Norway",
+     "summary": "Portugal secured a major Nations League result in Norway, with Nuno Mendes and Gonçalo Ramos involved."
     },
     {
-     "url": "https://www.culturepsg.com/news/club/l-apres-treve-du-psg-sera-intense/60937",
+     "url": "https://www.culturepsg.com/news/anciens/a-38-ans-di-maria-a-toujours-son-pied-gauche-magique/60929",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-09-27T14:28:54+00:00",
+     "published": "2026-09-27T07:40:54+00:00",
      "new": true,
-     "key": "967133f60933b003",
-     "title": "A demanding run awaits PSG after the break",
-     "summary": "PSG’s players are due to regroup from the week of 5 October ahead of six high-stakes matches."
+     "key": "58f09766071b0d98",
+     "title": "Di María still has his magic left foot",
+     "summary": "At 38, former PSG winger Ángel Di María scored another memorable goal."
     },
     {
-     "url": "https://www.culturepsg.com/news/mercato/le-psg-a-pris-contact-avec-l-entourage-de-jj-gabriel/60938",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-09-27T15:13:24+00:00",
-     "new": true,
-     "key": "47b95a9aaf40fbde",
-     "title": "PSG reportedly contact JJ Gabriel’s entourage",
-     "summary": "The club is reportedly interested in 15-year-old Manchester United prospect JJ Gabriel, according to Spanish media."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNY3E0WHZXV3BmUVpZYXZ4QkdfelhYX1AxN2pIendpLW5GSlFXNTc4VnpqZTZBR1dicndqbVo5UkhiUzFUOHd1bWFWczZzM0VzaE5rQzFtSzM5dlptNVA1ZE92aDQyejdEWGJiRXZadldVblh2LV95R25sVFByZzRkQk9SbVA4NkE1ZFpIV3l1SHNDTUNTMGFwb1Jfa1JoUndNdDAyYktSR1NfWEJxWHo4a2xpMG9GU3A5UHdQVkpXemFzUWh5UUROaEgzSjBDdmExVi0zQURKZDAyV3Vwd3lOOWdiQWpsUEVqOFFjRnZYazlKbXc?oc=5",
-     "source": "MadeInFOOT",
+     "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxQU1NnV2Jvd1FNeExJc0lQQjRFRVJoMUhiRTVfZXZpVGRqanU2SkxHcDBJU1luTHRlbGRtem4zSlozSzQxcktsdUFDRmlyTXk5aXZMNUxOb3RFMHF1ZFVXcm5nM1Nna3J3MmM2OEE4MmJ5bHNfaGJyM2ZwUmtTVGpWcWdOXzFCM2xubktybC1BTGhac1dDREkxOXN6VE5hN1YxWTNMWWRWbXNtdTRHRkNnbk9jWVFKRkEyR1ZlV0NMdlJua0R0RzlPS2NYMG42MEV4WG04UE5Ibm5qLThFaE91WVBMSGRIRVBUUkY2UTRldnduQlRZSFIyZ053QngycS1yTndxY2xfYjBGZFlGYW5jbDVNa1dUcUxXMVdFa2s1allFdnpiZEJ2SnBhR0g2Zk5Jekhz?oc=5",
+     "source": "franceinfo",
      "feed_name": "Team: équipe de France football",
      "via": "Google News",
-     "published": "2026-09-27T16:35:00+00:00",
+     "published": "2026-09-28T04:00:07+00:00",
      "new": true,
-     "key": "027104c4cd867aee",
-     "title": "Zidane confirms changes to France’s lineup against Belgium",
-     "summary": "The France coach said he would make changes to his starting eleven for the Nations League match."
-    },
-    {
-     "url": "https://www.lequipe.fr/Football/Actualites/Eduardo-camavinga-avant-le-match-des-bleus-en-belgique-au-debut-c-etait-assez-special-de-travailler-avec-zinedine-zidane/1721689#at_medium=RSS_feeds",
-     "source": "L'Équipe",
-     "feed_name": "L'Équipe",
-     "via": null,
-     "published": "2026-09-27T16:17:35+00:00",
-     "new": true,
-     "key": "7634d8bb818dc56f",
-     "title": "Camavinga reflects on working with Zidane",
-     "summary": "The France midfielder said working with Zidane initially felt unusual."
+     "key": "fdd8a3a5df315914",
+     "title": "France-Belgium: limited preparation, but the same principles expected",
+     "summary": "France are expected to make personnel changes against Belgium after a trip and only one full training session."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-09-27T17:01:19.390357+00:00",
-   "input_fingerprint": "sha256:3d7f012b12356a5f05e7b9183e86d2057ccab85860b67ab5d17a689a19eb80e1",
-   "last_success_at": "2026-09-27T17:01:19.390357+00:00",
-   "candidate_count": 313,
-   "new_count": 5
+   "source_checked_at": "2026-09-28T05:01:25.898782+00:00",
+   "input_fingerprint": "sha256:2e5b6f99d58f3c453e3fa27cc726fcdc3c209a0a1524e1a413dcbf23145b9f3b",
+   "last_success_at": "2026-09-28T05:01:25.898782+00:00",
+   "candidate_count": 290,
+   "new_count": 3
   },
   "finance": {
    "briefing": [
     {
-     "text": "Higher Treasury yields are raising financing costs for AI infrastructure companies, putting a market price on the sector’s continued buildout.",
+     "text": "Oil above $106 a barrel is adding pressure to government bonds, with 10-year US Treasury yields reaching 5.2%; higher energy costs and yields are a key market risk.",
      "sources": [
       {
-       "key": "94dfe2e76bbb7171",
-       "title": "Debt-hungry AI companies face increased risk as bond yields spike",
-       "url": "https://www.cnbc.com/2026/09/27/debt-hungry-data-center-companies-increased-risk-bond-yields-spike.html",
-       "source": "CNBC Markets",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Rising US yields are also prompting investors to avoid riskier emerging-market bonds, tightening conditions for more vulnerable borrowers.",
-     "sources": [
-      {
-       "key": "46d1749f5945b00c",
-       "title": "Emerging Market Investors Shun Riskiest Bonds as US Yields Soar - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMXVzamIwSmlSREV5QTJmRU9Ga1pFRWw0OXNWUkNwT0hJUkZOR3M0UlVTLW5xMm10RVNhUlhqclZXRGJIRTY3TFM5N3ZFX3RFSnI3dlZ6YmVaMzFxR0VmYUQzb2JnRmg1a290T3huS2xlUXV3d3d2T3RtM1ZXTUx0M0xvT1RJbkE4LUc0a0U4LXlDSW4wNmJhNDFsZzJ4WWF0dVlYdXlzeTlaRWVndl9UdV9lcmM?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "AI-related swings in investor sentiment are jolting stocks, adding volatility to a market already sensitive to technology-sector expectations.",
-     "sources": [
-      {
-       "key": "ed33a7266c94708b",
-       "title": "AI Whiplash Jolts Stocks as Sentiment Lurches From Fear to Greed - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQcjhKd2FaWmFDNGx6VVBvd1AxMkp4MmQwek85Nzl4bWlrOEFaWmo4U190dW5zb0dOQnVXakYtWi1CTHJyZWo4T3lqRnYwVGszOEJ3M3NHMFlMU3pxSkM5WkljTkxLVU5VakNUTkhhZUFBMzQ4bHVBQldaV3k0T1JsMER3X3hzZkhvZmkzR05rSXJGWXBtdWo2OG9oN3hzVHdqU2hyQ3lvZ25BSUtuaE9qaVJhSnA1QQ?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "US jobs data is a key focus for markets this week as investors assess whether it will add pressure on Fed policymakers.",
-     "sources": [
-      {
-       "key": "5da5b7d7cca029a9",
-       "title": "Will US jobs data add to pressure on Fed policymakers?",
-       "url": "https://www.ft.com/content/08fe7323-5a2f-4d46-ad64-132ce469b381?syn-25a6b1a6=1",
+       "key": "b61f777e972aa91c",
+       "title": "Oil price rise puts more pressure on government bonds",
+       "url": "https://www.ft.com/content/d751ad99-531d-4990-9a4c-ee89a9fc1b2d?syn-25a6b1a6=1",
        "source": "FT Markets",
        "via": null
       }
      ]
     },
     {
-     "text": "Authorities made terrorism arrests near RAF Fairford, an air base used for US strikes on Iran; Trump said the US worked with the UK to prevent an attack.",
+     "text": "Washington and Beijing agreed a low-tariff regime covering $60bn of non-sensitive goods, a step aimed at easing trade tensions.",
      "sources": [
       {
-       "key": "79251a181c3caca0",
-       "title": "Terrorism arrests made in ‘major incident’ near RAF Fairford",
-       "url": "https://www.ft.com/content/875027a3-db29-40a6-b17c-fa97c30fd07b?syn-25a6b1a6=1",
+       "key": "7572b8575a311bf3",
+       "title": "US and China agree $60bn low tariff regime for goods from foie gras to camels",
+       "url": "https://www.ft.com/content/b1ba7dd2-3e3a-4944-b637-ff7db3b636e1?syn-25a6b1a6=1",
        "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "AI hyperscalers’ large funding needs are reshaping borrowing choices for companies and governments, a financing trend worth watching across credit markets.",
+     "sources": [
+      {
+       "key": "c2233a4e4351901a",
+       "title": "AI hyperscalers are transforming debt",
+       "url": "https://www.ft.com/content/00f94018-e658-4545-b16e-1bc00e19b754?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "China’s industrial profit growth slowed further, adding to signs of economic imbalances; in Japan, the central bank debated faster rate hikes and services inflation reached a two-year high.",
+     "sources": [
+      {
+       "key": "1e85b3685a86cfb4",
+       "title": "China's industrial profit growth slows further as economic imbalances deepen - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeGRoN0tpc0FCRXdvTHEzV1F0ZzBzV1ZWMFFEYXl1WC0xUWxnaDdJTDNWcEtFaHh3a0dob2hwOGVNQ1ptR2c1N0QtNkRfd2UzT0VPSDFMNEdIaXJGdUZFMmRvbDd4T0pVOU9SWjlIYTNqNVJUQ2lMSmxBSVRlNS1kSzZYYTBteHpQT1FKcWZJOTBrRXY3RlM0cnpyNlFsNXAtcC1WdXZB?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      },
+      {
+       "key": "0d07d0330aec325c",
+       "title": "Bank of Japan debated need for faster rate hikes, July minutes show - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNM0Rid1RQcVo2QlNMTTZDOGEyYmRtQnFYVVJDN1pBMGpwNGxzS19vN1VBMHVXbDFtWkZHOVJhZTNxaWptMGsxbkxDQ2ZSNjZkNFdMTUQwZEhuaW1FUGhHUnJhWGU1eU5NQ1QwRWpDUURJQS1HUUdNYmFZbldSdFk4VGRXSGhUTkVPbk1QSUxzMV9ZckpvMWJYaTNPaWswYnpCTkpEUk9xNUhFMjEyVDRJek93?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      },
+      {
+       "key": "a422acf2255fa9b0",
+       "title": "Japan's corporate services inflation hits 2-year high - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOckhuSjBSeXYxT0JkaDJPZmF2cThESzJvaEE5dHBWWEpZVFVvbGdkTlhfa0NKOGllU1AxWTBHRzdDdFhTN2VWM1h6TUVEeTNWdmt6Z0FEajR4V1JMckFZZm9wbG1Hckh6d2NuTHhGTGRLbDlSeGhoQ21JNURHcjFkbVZROU9FMVVvNVBqYWprbGk2ci1vaHA0YmU0emluY09xRHNOd3ZTdG15Vlk?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Gold Fields’ $27bn approach for Northern Star was rejected as opportunistic, putting a significant cross-border mining takeover proposal in focus.",
+     "sources": [
+      {
+       "key": "dbb5c97a0b7200d7",
+       "title": "Australia’s biggest gold miner rejects $27bn takeover bid",
+       "url": "https://www.ft.com/content/bce81a18-05cf-43a6-9c86-b3238b732230?syn-25a6b1a6=1",
+       "source": "FT Markets",
        "via": null
       }
      ]
@@ -1074,66 +1087,99 @@
    ],
    "items": [
     {
-     "url": "https://www.cnbc.com/2026/09/27/debt-hungry-data-center-companies-increased-risk-bond-yields-spike.html",
-     "source": "CNBC Markets",
-     "feed_name": "CNBC Markets",
-     "via": null,
-     "published": "2026-09-27T15:35:34+00:00",
-     "new": true,
-     "key": "94dfe2e76bbb7171",
-     "title": "AI companies face higher borrowing costs as bond yields rise",
-     "summary": "Rising Treasury yields are increasing financing costs for companies funding the AI infrastructure buildout."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMXVzamIwSmlSREV5QTJmRU9Ga1pFRWw0OXNWUkNwT0hJUkZOR3M0UlVTLW5xMm10RVNhUlhqclZXRGJIRTY3TFM5N3ZFX3RFSnI3dlZ6YmVaMzFxR0VmYUQzb2JnRmg1a290T3huS2xlUXV3d3d2T3RtM1ZXTUx0M0xvT1RJbkE4LUc0a0U4LXlDSW4wNmJhNDFsZzJ4WWF0dVlYdXlzeTlaRWVndl9UdV9lcmM?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-27T12:30:00+00:00",
-     "new": true,
-     "key": "46d1749f5945b00c",
-     "title": "Emerging-market investors shun riskier bonds as US yields soar",
-     "summary": "Investors are avoiding the riskiest emerging-market bonds as US yields climb."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQcjhKd2FaWmFDNGx6VVBvd1AxMkp4MmQwek85Nzl4bWlrOEFaWmo4U190dW5zb0dOQnVXakYtWi1CTHJyZWo4T3lqRnYwVGszOEJ3M3NHMFlMU3pxSkM5WkljTkxLVU5VakNUTkhhZUFBMzQ4bHVBQldaV3k0T1JsMER3X3hzZkhvZmkzR05rSXJGWXBtdWo2OG9oN3hzVHdqU2hyQ3lvZ25BSUtuaE9qaVJhSnA1QQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-27T13:00:07+00:00",
-     "new": true,
-     "key": "ed33a7266c94708b",
-     "title": "AI-driven sentiment swings jolt stocks",
-     "summary": "Stock sentiment has swung sharply between fear and greed amid uncertainty around AI."
-    },
-    {
-     "url": "https://www.ft.com/content/08fe7323-5a2f-4d46-ad64-132ce469b381?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/d751ad99-531d-4990-9a4c-ee89a9fc1b2d?syn-25a6b1a6=1",
      "source": "FT Markets",
      "feed_name": "FT Markets",
      "via": null,
-     "published": "2026-09-27T11:00:02+00:00",
+     "published": "2026-09-28T04:31:02+00:00",
      "new": true,
-     "key": "5da5b7d7cca029a9",
-     "title": "Will US jobs data add pressure on the Fed?",
-     "summary": "This week’s US jobs data could affect pressure on Fed policymakers."
+     "key": "b61f777e972aa91c",
+     "title": "Oil price rise puts more pressure on government bonds",
+     "summary": "Brent rose above $106 a barrel as 10-year Treasury yields reached 5.2%."
     },
     {
-     "url": "https://www.ft.com/content/875027a3-db29-40a6-b17c-fa97c30fd07b?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/b1ba7dd2-3e3a-4944-b637-ff7db3b636e1?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-09-27T16:47:18+00:00",
+     "published": "2026-09-28T04:04:40+00:00",
      "new": true,
-     "key": "79251a181c3caca0",
-     "title": "Terrorism arrests near RAF Fairford",
-     "summary": "Arrests were made near a UK air base used for US strikes on Iran, with Trump saying the US helped prevent an attack."
+     "key": "7572b8575a311bf3",
+     "title": "US and China agree low-tariff regime for $60bn of goods",
+     "summary": "The two countries agreed lower levies on non-sensitive goods as they seek to ease tensions."
+    },
+    {
+     "url": "https://www.ft.com/content/00f94018-e658-4545-b16e-1bc00e19b754?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-09-28T04:00:10+00:00",
+     "new": true,
+     "key": "c2233a4e4351901a",
+     "title": "AI hyperscalers are transforming debt",
+     "summary": "The sector’s capital needs are prompting companies and countries to rethink borrowing."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeGRoN0tpc0FCRXdvTHEzV1F0ZzBzV1ZWMFFEYXl1WC0xUWxnaDdJTDNWcEtFaHh3a0dob2hwOGVNQ1ptR2c1N0QtNkRfd2UzT0VPSDFMNEdIaXJGdUZFMmRvbDd4T0pVOU9SWjlIYTNqNVJUQ2lMSmxBSVRlNS1kSzZYYTBteHpQT1FKcWZJOTBrRXY3RlM0cnpyNlFsNXAtcC1WdXZB?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-28T01:40:00+00:00",
+     "new": true,
+     "key": "1e85b3685a86cfb4",
+     "title": "China’s industrial profit growth slows further",
+     "summary": "Industrial profit growth slowed further as economic imbalances deepened."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNM0Rid1RQcVo2QlNMTTZDOGEyYmRtQnFYVVJDN1pBMGpwNGxzS19vN1VBMHVXbDFtWkZHOVJhZTNxaWptMGsxbkxDQ2ZSNjZkNFdMTUQwZEhuaW1FUGhHUnJhWGU1eU5NQ1QwRWpDUURJQS1HUUdNYmFZbldSdFk4VGRXSGhUTkVPbk1QSUxzMV9ZckpvMWJYaTNPaWswYnpCTkpEUk9xNUhFMjEyVDRJek93?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-28T00:58:00+00:00",
+     "new": true,
+     "key": "0d07d0330aec325c",
+     "title": "Bank of Japan debated need for faster rate hikes",
+     "summary": "The central bank’s July minutes showed policymakers discussed whether rate increases should accelerate."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOckhuSjBSeXYxT0JkaDJPZmF2cThESzJvaEE5dHBWWEpZVFVvbGdkTlhfa0NKOGllU1AxWTBHRzdDdFhTN2VWM1h6TUVEeTNWdmt6Z0FEajR4V1JMckFZZm9wbG1Hckh6d2NuTHhGTGRLbDlSeGhoQ21JNURHcjFkbVZROU9FMVVvNVBqYWprbGk2ci1vaHA0YmU0emluY09xRHNOd3ZTdG15Vlk?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-28T00:29:00+00:00",
+     "new": true,
+     "key": "a422acf2255fa9b0",
+     "title": "Japan’s corporate services inflation hits two-year high",
+     "summary": "Corporate services inflation in Japan reached its highest level in two years."
+    },
+    {
+     "url": "https://www.ft.com/content/bce81a18-05cf-43a6-9c86-b3238b732230?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-09-28T02:42:40+00:00",
+     "new": true,
+     "key": "dbb5c97a0b7200d7",
+     "title": "Australia’s biggest gold miner rejects $27bn takeover bid",
+     "summary": "Northern Star said Gold Fields’ approach undervalued the Perth-based mining group."
+    },
+    {
+     "url": "https://www.ft.com/content/fb3aa961-fa28-4dd0-a2ea-cdb03ac8258d?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-09-28T03:25:12+00:00",
+     "new": true,
+     "key": "ea53da5a57f2bf9a",
+     "title": "Trump hosts Anthropic boss Dario Amodei at White House dinner",
+     "summary": "The dinner suggested a possible rapprochement between the US president and the AI company’s chief executive."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-09-27T17:01:19.390357+00:00",
-   "input_fingerprint": "sha256:0d2bff9d9cef39ddaf2b12ed7fba80b8319b3f393742b7082bd492fefbd263d1",
-   "last_success_at": "2026-09-27T17:01:19.390357+00:00",
+   "source_checked_at": "2026-09-28T05:01:25.898782+00:00",
+   "input_fingerprint": "sha256:d5442b7b1246bf3152e32d459b6cbb34baaf08132755879165c42368f0db8538",
+   "last_success_at": "2026-09-28T05:01:25.898782+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1226,10 +1272,10 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 84427.19,
-     "change_pct": 0.02,
+     "price": 83493.72,
+     "change_pct": -1.08,
      "currency": "USD",
-     "as_of": "2026-09-27T00:00:00+00:00",
+     "as_of": "2026-09-28T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1237,51 +1283,21 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2686.22,
-     "change_pct": -0.33,
+     "price": 2659.16,
+     "change_pct": -1.34,
      "currency": "USD",
-     "as_of": "2026-09-27T00:00:00+00:00",
+     "as_of": "2026-09-28T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 103,
-   "new_count": 5
+   "candidate_count": 127,
+   "new_count": 8
   },
   "media": {
    "briefing": "",
    "items": [
-    {
-     "title": "Russia Wasn't Ready For This Operation",
-     "url": "https://www.youtube.com/watch?v=iauv7plhosE",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-09-26T18:00:19+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "2beab5d88b98f5a6"
-    },
-    {
-     "title": "😢 Aïe aïe aie...",
-     "url": "https://www.youtube.com/watch?v=wmFKtpwLLFM",
-     "source": "Wiloo",
-     "kind": "video",
-     "published": "2026-09-25T22:00:47+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "5be18fe5a612d407"
-    },
-    {
-     "title": "Ukraine's Counteroffensive is Spreading",
-     "url": "https://www.youtube.com/watch?v=v_K2mWfQJRs",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-09-25T22:00:03+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "62f7fa482353e615"
-    },
     {
      "title": "Inside Russia's AI Propaganda Machine",
      "url": "https://www.youtube.com/watch?v=62hWVaNzJqI",
@@ -1291,54 +1307,14 @@
      "duration_s": null,
      "new": false,
      "key": "d2bea6d954e3a6bb"
-    },
-    {
-     "title": "❌ C'est ridicule...",
-     "url": "https://www.youtube.com/watch?v=tHHTY7RFZXc",
-     "source": "Wiloo",
-     "kind": "video",
-     "published": "2026-09-25T14:04:32+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "fbb40e5ffb6b4e3d"
-    },
-    {
-     "title": "Xiaomi 18 Pro Max: They've Done It Again!",
-     "url": "https://www.youtube.com/watch?v=DkUuOr21v4s",
-     "source": "Marques Brownlee",
-     "kind": "video",
-     "published": "2026-09-24T22:26:18+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "0e03fa3a80a84c0b"
-    },
-    {
-     "title": "Intel Warns Russia Could Attack NATO Within Months",
-     "url": "https://www.youtube.com/watch?v=uI5oo2D05Ek",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-09-24T22:00:15+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "e9f83ecf0521e49a"
-    },
-    {
-     "title": "#494 — A Coin Toss for the Future",
-     "url": "https://wakingup.libsyn.com/494-a-coin-toss-for-the-future",
-     "source": "Making Sense with Sam Harris",
-     "kind": "podcast",
-     "published": "2026-09-24T21:33:00+00:00",
-     "duration_s": 5564,
-     "new": false,
-     "key": "96f94979b2ab2445"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-09-27T17:01:19.390357+00:00",
-   "candidate_count": 8,
+   "source_checked_at": "2026-09-28T05:01:25.898782+00:00",
+   "candidate_count": 1,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-09-27T17:00:00.000Z"
+ "scheduled_slot": "2026-09-28T05:00:00.000Z"
 }
