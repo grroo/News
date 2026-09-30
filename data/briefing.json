@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20260930T110128145904Z",
- "generated_at": "2026-09-30T11:01:28.145904+00:00",
- "generated_local": "Wed 30 Sep 2026, 13:01",
- "source_checked_at": "2026-09-30T11:01:28.145904+00:00",
+ "edition_id": "ed-20260930T164711380500Z",
+ "generated_at": "2026-09-30T16:47:11.380500+00:00",
+ "generated_local": "Wed 30 Sep 2026, 18:47",
+ "source_checked_at": "2026-09-30T16:47:11.380500+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-09-30T11:01:28.145904+00:00"
+  "run-2026-09-30T16:47:11.380500+00:00"
  ],
  "quality": {
-  "overall": "degraded"
+  "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-09-30T11:01:28.145904+00:00"
+  "completed_at": "2026-09-30T16:47:11.380500+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 30,
+   "item_count": 26,
    "reason": null,
    "failure": null,
-   "parsed_count": 30,
+   "parsed_count": 26,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -177,6 +177,54 @@
    "name": "Topic: European Central Bank",
    "section": "news",
    "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: Milano",
+   "section": "news",
+   "status": "ok",
+   "item_count": 111,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 111,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: PSG",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 101,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 101,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: équipe de France football",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 105,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 105,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: XV de France rugby",
+   "section": "sport",
+   "status": "ok",
    "item_count": 102,
    "reason": null,
    "failure": null,
@@ -186,61 +234,13 @@
    "cache": "refreshed"
   },
   {
-   "name": "Topic: Milano",
-   "section": "news",
-   "status": "ok",
-   "item_count": 108,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 108,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
-   "name": "Team: PSG",
-   "section": "sport",
-   "status": "ok",
-   "item_count": 106,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 106,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
-   "name": "Team: équipe de France football",
-   "section": "sport",
-   "status": "ok",
-   "item_count": 101,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 101,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
-   "name": "Team: XV de France rugby",
-   "section": "sport",
-   "status": "ok",
-   "item_count": 101,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 101,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 103,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 103,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -488,14 +488,14 @@
   {
    "name": "Il Sole 24 Ore Finanza",
    "section": "finance",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "RetryError",
-   "failure": "transport",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 4,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 4,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null
+   "cache": "refreshed"
   },
   {
    "name": "Les Echos Finance",
@@ -684,7 +684,7 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002375,
+  "est_cost_usd": 0.002312,
   "est_month_usd": 0.21,
   "forecast_month_usd": 0.21,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
@@ -694,60 +694,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 9030,
+    "latency_ms": 9306,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0d7e971a317f143e016abcec10530887d2be8de809c04e4d46"
+     "resp_0cafef66be076c27016abd3d18b21487d0b7e8534ddd7470cb"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3442,
-    "output_tokens": 712,
-    "reasoning_tokens": 251
+    "cache_write_tokens": 3363,
+    "output_tokens": 748,
+    "reasoning_tokens": 247
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7883,
+    "latency_ms": 7455,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0f7dd8218e81cf23016abcec1864e887d28107e501228b3411"
+     "resp_0f5a9596cb27c6d5016abd3d215a8487d08e4b27158245d0de"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3524,
-    "output_tokens": 680,
-    "reasoning_tokens": 333
+    "cache_write_tokens": 3679,
+    "output_tokens": 648,
+    "reasoning_tokens": 222
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8197,
+    "latency_ms": 7418,
     "unknown": false,
     "provider_request_ids": [
-     "resp_05f31940443f8022016abcec203b4c87d294e66cac7ad34f96"
+     "resp_097d28404952d7fb016abd3d28d89087d08a0303518cab934a"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3343,
-    "output_tokens": 777,
-    "reasoning_tokens": 337
+    "cache_write_tokens": 3257,
+    "output_tokens": 651,
+    "reasoning_tokens": 188
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10309,
-  "output_tokens": 2169,
-  "reasoning_tokens": 921,
+  "cache_write_tokens": 10299,
+  "output_tokens": 2047,
+  "reasoning_tokens": 657,
   "recorded_month_to_date": {
    "month_utc": "2026-09",
-   "recorded_runs": 20,
-   "attempts": 60,
-   "known_cost_usd": 0.071154,
+   "recorded_runs": 21,
+   "attempts": 63,
+   "known_cost_usd": 0.073466,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,75 +756,75 @@
   "news": {
    "briefing": [
     {
-     "text": "Russia struck energy facilities in Kyiv and nearby areas, signalling a renewed threat to Ukraine’s energy supply ahead of winter.",
+     "text": "Italy is pressing the EU for more flexibility to help households and businesses cope with inflation, putting the issue on the Ecofin and European Council agendas.",
      "sources": [
       {
-       "key": "4759814b7ce5c176",
-       "title": "Russia strikes energy facilities in Kyiv and nearby areas in prelude to winter assault - reuters.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOOUJYOFJjVEFrbW9LNnY1V0ZZOWxPVEhBRm9mcW16RnZIX0stUTRWMXpybThGUF9EMVZ1eTBQelpVbkM4NGtyRzlzVzJyZ21CX3UxR1lIVThTU1RUMEF3WFdheW1jTTNXWExLcHExUmJrTDVEQ3Q3SWdUckRicHEzajlnSFMxRTlReUl0LXU3TjdJRlp0S3ljc2ZUQ3FsRldiOFBsZEZ3Y2ZfeEhKY2hjajZrN1h6dw?oc=5",
-       "source": "reuters.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "An EU defence assessment says member states’ forces remain insufficiently operational and sustainable despite record spending, underlining pressure to close capability gaps.",
-     "sources": [
-      {
-       "key": "05ecd70bd639b3d8",
-       "title": "Il documento Eda sulla difesa inchioda i 27: 'Gravi lacune, fare di più'",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/30/il-documento-eda-sulla-difesa-inchioda-i-27-gravi-lacune-fare-di-piu_b1c4e975-511d-44f8-b2d4-fea3eae2d7ed.html",
+       "key": "297e616b9ae9c34e",
+       "title": "Meloni scrive a von der Leyen, a causa dell'inflazione serve più flessibilità",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/30/meloni-scrive-a-von-der-leyen-a-causa-dellinflazione-serve-piu-flessibilita_e069567f-2421-46a7-b611-3766e3215f9f.html",
        "source": "ANSA Top News",
        "via": null
       }
      ]
     },
     {
-     "text": "Euro-zone inflation has jumped, raising the prospect of renewed ECB tightening; a separate market note says ECB pushback is weighing on the euro.",
+     "text": "Rising oil prices weighed on Milan and broader European equities; Italian government bonds also underperformed, with the BTP–Bund spread closing at 102.9 basis points.",
      "sources": [
       {
-       "key": "565daefc36c56628",
-       "title": "Inflation jumps across euro zone, raising pressure on ECB to hike - Miami Herald",
-       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQT1RDaGsyR1A0eWJvTnFubGpSVE9ZYTBhVjlMQktSVkZITWdxdk5VNnVSZFR6bWpUYzZfdkRvV2cyTzdaZ1plSHR6dTljSGd0S2FqS3V5TlFYTmFnY2FlTXBsYTd4T2RLMm1aV1VuSTlDazI3LVdodlhoSy04ajlOMWFR?oc=5",
-       "source": "Miami Herald",
-       "via": "Google News"
+       "key": "04c2e721be13e06f",
+       "title": "Borsa: Milano in calo con Europa, pesa il rally del petrolio",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/30/borsa-milano-in-calo-con-europa-pesa-il-rally-del-petrolio_84f74e6d-af16-4358-b0f0-25f58828c827.html",
+       "source": "ANSA Top News",
+       "via": null
       },
       {
-       "key": "f3ab7fc4db9ee3c5",
-       "title": "Euro: ECB pushback weighs on currency – MUFG - FXStreet",
-       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNUEsxZkI5QUo4TzNjOHRvRC02MWlGNW5kMDRSZGc3cFF0VnNnVkR3QUc5R2t2VTNFX3dsZVY0ZUlvS21IM1AtZ25MSlZubW9Gc3FoX0J4LWhEN01HZ21mYU5LUGtTSElOb2wzSVNpQUkzOGEtTm43MUM1eFd1Yzl1MTYzMDFybVZSUzZBeQ?oc=5",
-       "source": "FXStreet",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Bank of England Governor Andrew Bailey called for a “right to intervene” in AI, citing concerns that rogue models could threaten financial stability.",
-     "sources": [
-      {
-       "key": "cbcc5b414c5e0e3a",
-       "title": "We need ‘right to intervene’ in AI amid growing threat, says Bank of England boss",
-       "url": "https://www.theguardian.com/technology/2026/sep/30/intervene-ai-growing-threat-bank-of-england-boss",
-       "source": "The Guardian World",
+       "key": "5a9d6a6f74917c82",
+       "title": "++ Lo spread Btp-Bund chiude a 102,9 punti ++",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/30/-lo-spread-btp-bund-chiude-a-1029-punti-_497613aa-35ee-4f83-ad29-d04fc55163ac.html",
+       "source": "ANSA Top News",
        "via": null
       }
      ]
     },
     {
-     "text": "DeepSeek and Huawei are targeting a key source of Nvidia’s AI advantage, while Aon reports strong activity in Britain’s bulk-annuity market.",
+     "text": "ECB President Christine Lagarde has warned that France needs a credible plan to rein in its debt, adding to pressure around the country’s fiscal outlook.",
      "sources": [
       {
-       "key": "dfc5adaa867730de",
-       "title": "DeepSeek and Huawei Target a Key Source of Nvidia’s A.I. Dominance - nytimes.com",
-       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBSVnEtX2xUV3VfaDRUanAyY2Y0Q2o1WEZRM2hTVEFIRDg0SGIxYUtGR1lNbkpRaFgwS0NHSGdvOXNfaUpkMmxCTDZ0dEhuaWRjZkwxejNjTkU4LW9tMlpEUl9rUFF3MmFYZnRJY244UkFzNkZzZmtVcDZpY0JEQQ?oc=5",
-       "source": "nytimes.com",
+       "key": "19fd4ad54823100b",
+       "title": "ECB’s Lagarde warns France needs a credible path to rein in debt - Mitrade",
+       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNb0FHLUU4c1BFZVpMa0haYU5BSjhUUHpHdUlMZjR0NmNXUEExZ1dtRXlrek5hN2VKazdjU0llbnIwSnFrbzRHQmdoVEFTbHNOV2dZZEhUckZrVGZoYzlSQzZyaFB5MmJ3ZHNKOTNSLXdJeHdLRmZwdTlPakxZSkZFLTlRUQ?oc=5",
+       "source": "Mitrade",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The White House says President Trump will announce $200 billion in South Korean investment in US projects, a substantial cross-border investment commitment.",
+     "sources": [
+      {
+       "key": "110514064e83212b",
+       "title": "Trump to unveil $200 billion investment in US projects by South Korea, White House says - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPd19OMlhEUlRpYXJTY0hWUjF3MDRneXkxa0w0dzhuZ19VUGl3UlEyM0tiWnJqLWprdXByMm9lUG9paGU0Nl9VQ2I5djVaLW5rSGhLMDlCN3Y1enBXcHB3dUNoeEhybms5dmVCS3FJMFl3T20yM2ZJOEx1TGItMnNrT1FrM0RtT0xDc0VieWxkLWJidUh2a2l4V0sxS0plYVJuQi1qOW1ETzRDREdCUEE4U3lZaVpjVHlKTEhRTC1jTmNWWjZ3Zk5fZWFCQnJudw?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "AM Best expects growth in the US property-and-casualty fronting market to slow over the next 12 months; a separate industry report examines changes in Indonesia’s reinsurance market.",
+     "sources": [
+      {
+       "key": "0122b18f368208cd",
+       "title": "US P&C fronting market level of growth to diminish over next 12 months: AM Best - theinsurer.com",
+       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQejIxUXZrdlRiRTdRbG1hOWhmY1ZjS0ZKT0hKU0Zja0Y0bzNjZ1NxajB4SjZINENUS0dkRmxvS0c2LWFkdjd2M21aWWxpWFVhamI1dVpESW1MYTh3NDVaMlpjQ2FnZmFNNi1DaUJEM3piaXJCNGF6LVZDcFFWVC1MdVZROFE3a1RFYkxaa01MRjduazh2YklWYVBJTWRacHRYazJGa1E0bG1jWU5YWGh0R05oYTY5bmwxa284ZHE5NVUxMFBfelh4Tm1vNWNHVkQzOEZr?oc=5",
+       "source": "theinsurer.com",
        "via": "Google News"
       },
       {
-       "key": "fa69b53a5ebdbe33",
-       "title": "Aon reports strong activity in UK bulk annuity market during H1’26 - Reinsurance News",
-       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOclB1WVUzYU9ZSE83c2JFNjQwQ3E0bngzU3FadnJxZGI1WmF1ZUN1Qk54QVU1WHFBczNEMHAwcWg2RmEzVG05b2hwMk9Lam9ZQy1uYmdBaTJVS0daek45Zk10RHphZlFtTElYTUd3X25hM2tYOXBpYldjVlU0MTZHTm5NcG5EY2ZNZ0dkemgzR3dfY2U5OWkxTnU4cw?oc=5",
-       "source": "Reinsurance News",
+       "key": "6b8863a7b523dfdd",
+       "title": "Navigating Indonesia's reshaped reinsurance industry - Market spotlight - Indonesia - Asia Insurance Review",
+       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPdG5rMDNOZWFKS2pxam9QNjNPc1o3ZTNHQnVkVDJZTGFHdmNrSUVRMThseHZIdmZnZVkyQ2xUTnBwQUUzRkdkTXh4WEk2X1VWRG8zUWVuTEpQbHlqSkh3bWZOX2UtY0N5bVhkOTFRQnZGTnVDT3ZvcF84dDhMLU9IRVdiWDFQcGhPaHdYSVBLeXZpSmZuLVBDT2NmM2daSm5JR01KSGx2QlhwRXB5NGJWV1RWbGhkR0JqX1hGb2JZcnRGa0w1N1E?oc=5",
+       "source": "Asia Insurance Review",
        "via": "Google News"
       }
      ]
@@ -832,266 +832,310 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOOUJYOFJjVEFrbW9LNnY1V0ZZOWxPVEhBRm9mcW16RnZIX0stUTRWMXpybThGUF9EMVZ1eTBQelpVbkM4NGtyRzlzVzJyZ21CX3UxR1lIVThTU1RUMEF3WFdheW1jTTNXWExLcHExUmJrTDVEQ3Q3SWdUckRicHEzajlnSFMxRTlReUl0LXU3TjdJRlp0S3ljc2ZUQ3FsRldiOFBsZEZ3Y2ZfeEhKY2hjajZrN1h6dw?oc=5",
-     "source": "reuters.com",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-30T10:05:18+00:00",
-     "new": true,
-     "key": "4759814b7ce5c176",
-     "title": "Russia strikes energy facilities in Kyiv ahead of winter",
-     "summary": "Russia struck energy facilities in Kyiv and nearby areas ahead of a winter assault."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/30/il-documento-eda-sulla-difesa-inchioda-i-27-gravi-lacune-fare-di-piu_b1c4e975-511d-44f8-b2d4-fea3eae2d7ed.html",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/30/meloni-scrive-a-von-der-leyen-a-causa-dellinflazione-serve-piu-flessibilita_e069567f-2421-46a7-b611-3766e3215f9f.html",
      "source": "ANSA Top News",
      "feed_name": "ANSA Top News",
      "via": null,
-     "published": "2026-09-30T10:22:46+00:00",
+     "published": "2026-09-30T16:41:55+00:00",
      "new": true,
-     "key": "05ecd70bd639b3d8",
-     "title": "EU defence assessment warns of serious capability gaps",
-     "summary": "An EDA assessment says EU forces are not sufficiently operational or sustainable despite record defence spending."
+     "key": "297e616b9ae9c34e",
+     "title": "Meloni urges EU flexibility to address inflation",
+     "summary": "Italy’s prime minister called for the inflation issue to be addressed at Ecofin and the European Council to help households and businesses."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQT1RDaGsyR1A0eWJvTnFubGpSVE9ZYTBhVjlMQktSVkZITWdxdk5VNnVSZFR6bWpUYzZfdkRvV2cyTzdaZ1plSHR6dTljSGd0S2FqS3V5TlFYTmFnY2FlTXBsYTd4T2RLMm1aV1VuSTlDazI3LVdodlhoSy04ajlOMWFR?oc=5",
-     "source": "Miami Herald",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-09-30T10:42:04+00:00",
-     "new": true,
-     "key": "565daefc36c56628",
-     "title": "Euro-zone inflation jumps, raising pressure on the ECB",
-     "summary": "A rise in euro-zone inflation is increasing pressure on the ECB to consider a rate hike."
-    },
-    {
-     "url": "https://www.theguardian.com/technology/2026/sep/30/intervene-ai-growing-threat-bank-of-england-boss",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/30/borsa-milano-in-calo-con-europa-pesa-il-rally-del-petrolio_84f74e6d-af16-4358-b0f0-25f58828c827.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
      "via": null,
-     "published": "2026-09-30T10:41:58+00:00",
+     "published": "2026-09-30T16:31:33+00:00",
      "new": true,
-     "key": "cbcc5b414c5e0e3a",
-     "title": "Bailey calls for a right to intervene in AI",
-     "summary": "The Bank of England governor says authorities need a right to intervene amid concerns about AI risks to financial stability."
+     "key": "04c2e721be13e06f",
+     "title": "Oil rally weighs on Milan and European shares",
+     "summary": "Milan stocks fell alongside European markets as oil rallied, with banks and auto shares weak."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBSVnEtX2xUV3VfaDRUanAyY2Y0Q2o1WEZRM2hTVEFIRDg0SGIxYUtGR1lNbkpRaFgwS0NHSGdvOXNfaUpkMmxCTDZ0dEhuaWRjZkwxejNjTkU4LW9tMlpEUl9rUFF3MmFYZnRJY244UkFzNkZzZmtVcDZpY0JEQQ?oc=5",
-     "source": "nytimes.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-09-30T10:41:50+00:00",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/30/-lo-spread-btp-bund-chiude-a-1029-punti-_497613aa-35ee-4f83-ad29-d04fc55163ac.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-09-30T16:06:45+00:00",
      "new": true,
-     "key": "dfc5adaa867730de",
-     "title": "DeepSeek and Huawei target a key source of Nvidia’s AI edge",
-     "summary": "DeepSeek and Huawei are targeting a source of Nvidia’s dominance in artificial intelligence."
+     "key": "5a9d6a6f74917c82",
+     "title": "BTP–Bund spread closes at 102.9 basis points",
+     "summary": "The Italian 10-year yield rose to 4.61% and the German yield to 3.58%."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOclB1WVUzYU9ZSE83c2JFNjQwQ3E0bngzU3FadnJxZGI1WmF1ZUN1Qk54QVU1WHFBczNEMHAwcWg2RmEzVG05b2hwMk9Lam9ZQy1uYmdBaTJVS0daek45Zk10RHphZlFtTElYTUd3X25hM2tYOXBpYldjVlU0MTZHTm5NcG5EY2ZNZ0dkemgzR3dfY2U5OWkxTnU4cw?oc=5",
-     "source": "Reinsurance News",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-09-30T10:34:35+00:00",
-     "new": true,
-     "key": "fa69b53a5ebdbe33",
-     "title": "Aon reports strong UK bulk-annuity activity",
-     "summary": "Aon says activity in the UK bulk-annuity market was strong during the first half of 2026."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNUEsxZkI5QUo4TzNjOHRvRC02MWlGNW5kMDRSZGc3cFF0VnNnVkR3QUc5R2t2VTNFX3dsZVY0ZUlvS21IM1AtZ25MSlZubW9Gc3FoX0J4LWhEN01HZ21mYU5LUGtTSElOb2wzSVNpQUkzOGEtTm43MUM1eFd1Yzl1MTYzMDFybVZSUzZBeQ?oc=5",
-     "source": "FXStreet",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNb0FHLUU4c1BFZVpMa0haYU5BSjhUUHpHdUlMZjR0NmNXUEExZ1dtRXlrek5hN2VKazdjU0llbnIwSnFrbzRHQmdoVEFTbHNOV2dZZEhUckZrVGZoYzlSQzZyaFB5MmJ3ZHNKOTNSLXdJeHdLRmZwdTlPakxZSkZFLTlRUQ?oc=5",
+     "source": "Mitrade",
      "feed_name": "Topic: European Central Bank",
      "via": "Google News",
-     "published": "2026-09-30T10:34:35+00:00",
+     "published": "2026-09-30T16:35:18+00:00",
      "new": true,
-     "key": "f3ab7fc4db9ee3c5",
-     "title": "ECB pushback weighs on the euro, MUFG says",
-     "summary": "MUFG says ECB pushback is weighing on the euro."
+     "key": "19fd4ad54823100b",
+     "title": "Lagarde says France needs a credible debt-reduction path",
+     "summary": "The ECB president warned that France needs a credible path to rein in its debt."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPd19OMlhEUlRpYXJTY0hWUjF3MDRneXkxa0w0dzhuZ19VUGl3UlEyM0tiWnJqLWprdXByMm9lUG9paGU0Nl9VQ2I5djVaLW5rSGhLMDlCN3Y1enBXcHB3dUNoeEhybms5dmVCS3FJMFl3T20yM2ZJOEx1TGItMnNrT1FrM0RtT0xDc0VieWxkLWJidUh2a2l4V0sxS0plYVJuQi1qOW1ETzRDREdCUEE4U3lZaVpjVHlKTEhRTC1jTmNWWjZ3Zk5fZWFCQnJudw?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-30T16:36:57+00:00",
+     "new": true,
+     "key": "110514064e83212b",
+     "title": "Trump to announce $200 billion in South Korean investment",
+     "summary": "The White House said Trump will unveil South Korean investment in US projects worth $200 billion."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQejIxUXZrdlRiRTdRbG1hOWhmY1ZjS0ZKT0hKU0Zja0Y0bzNjZ1NxajB4SjZINENUS0dkRmxvS0c2LWFkdjd2M21aWWxpWFVhamI1dVpESW1MYTh3NDVaMlpjQ2FnZmFNNi1DaUJEM3piaXJCNGF6LVZDcFFWVC1MdVZROFE3a1RFYkxaa01MRjduazh2YklWYVBJTWRacHRYazJGa1E0bG1jWU5YWGh0R05oYTY5bmwxa284ZHE5NVUxMFBfelh4Tm1vNWNHVkQzOEZr?oc=5",
+     "source": "theinsurer.com",
+     "feed_name": "Topic: insurance industry",
+     "via": "Google News",
+     "published": "2026-09-30T16:27:39+00:00",
+     "new": true,
+     "key": "0122b18f368208cd",
+     "title": "US P&C fronting market growth expected to slow",
+     "summary": "AM Best expects the level of growth in the US property-and-casualty fronting market to diminish over the next 12 months."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPdG5rMDNOZWFKS2pxam9QNjNPc1o3ZTNHQnVkVDJZTGFHdmNrSUVRMThseHZIdmZnZVkyQ2xUTnBwQUUzRkdkTXh4WEk2X1VWRG8zUWVuTEpQbHlqSkh3bWZOX2UtY0N5bVhkOTFRQnZGTnVDT3ZvcF84dDhMLU9IRVdiWDFQcGhPaHdYSVBLeXZpSmZuLVBDT2NmM2daSm5JR01KSGx2QlhwRXB5NGJWV1RWbGhkR0JqX1hGb2JZcnRGa0w1N1E?oc=5",
+     "source": "Asia Insurance Review",
+     "feed_name": "Topic: insurance industry",
+     "via": "Google News",
+     "published": "2026-09-30T16:06:38+00:00",
+     "new": true,
+     "key": "6b8863a7b523dfdd",
+     "title": "Indonesia’s reinsurance industry is reshaping",
+     "summary": "Asia Insurance Review examines changes in Indonesia’s reinsurance industry."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-09-30T11:01:28.145904+00:00",
-   "input_fingerprint": "sha256:1554a5082748616d303ac0e8add63084ce34fcbe782260f5195d90e223a94fc9",
-   "last_success_at": "2026-09-30T11:01:28.145904+00:00",
-   "candidate_count": 495,
+   "source_checked_at": "2026-09-30T16:47:11.380500+00:00",
+   "input_fingerprint": "sha256:e97074db0c6780a5d32d8c932dc6c5da85dc29977b8c19971f08d73c04983957",
+   "last_success_at": "2026-09-30T16:47:11.380500+00:00",
+   "candidate_count": 526,
    "new_count": 7
   },
   "sport": {
    "briefing": [
     {
-     "text": "France face Italy in a significant upcoming fixture: Manu Koné says the squad wants a win in the coach’s first match at the Stade de France.",
+     "text": "PSG midfielder Senny Mayulu has left France’s under-21 camp after picking up an injury against Estonia and is returning to Paris early.",
      "sources": [
       {
-       "key": "b874bf9a13fde4e6",
-       "title": "France-Italie : «Pour le premier match du coach au Stade de France, on a à cœur de gagner» affirme Manu Koné - Le Figaro",
-       "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNSHFjdzgxZ1FtZzFGRVVxTU9WR19LNkY5TWlkbzlQMm5hR3U5Rk5OQ09OZEE1TVQ3cVdfZGhhWlpXcnd1ZWtrYzhfZFN0LWg1U0ZIREE0U1d6bWpBLTlWVWU0VVRmMm9sNVdQYm9qWkdUNDVJS0o1dEY3VG1KY1BEN2RFQ2xMa1RiWS1pbWYydXpTamFfNXJFVldCMkV0M1FmZ1ptdjB4SFJjZEJIQmlBSjFycFhQSV9FZGZ6dmtKQzFEdTV1dGVTOTNGVURGQnJkdW01dnRjV19JUzlXUFYwNXRUNVEyLUU4Yk80OWRneVVZSG1Yd3NHancycHZVeE4y?oc=5",
+       "key": "5ef3ede500961784",
+       "title": "Mayulu de retour au PSG plus tôt que prévu",
+       "url": "https://www.culturepsg.com/news/selections/mayulu-de-retour-au-psg-plus-tot-que-prevu/60969",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Italy are treating their upcoming Nations League meeting with France as a key test, with defender Giorgio Scalvini saying it will show where the side stands.",
+     "sources": [
+      {
+       "key": "31e3b561a21d9187",
+       "title": "Ligue des nations: «après la France, on saura où on en est», Scalvini attend un test décisif pour l’Italie - Le Figaro",
+       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNcGQ5SERZUWZqR0FQdTFtY0FUamY3YU1fSmpaWlRvdllLRjlQUWpRVXlEX0tzci1waDlVWExGQUsxOGhyTWtGU3BxczJGZDcwMDhiRVQ0TDdybl9sVlpGdHNncE9rbjdrRnRBd1piY3lxWVo4cERWdUFhek56S0QwUHczYlUxSDVvNEJoZEJGQkJUemVvYkl5aEJYN09FQTBWTkEwMTA4UnRBeGpqbkZlVi10c09kY3UtcmdkSXpuaWxqSmE1ejBXU0xQVVdQb2VMUVhPOHlrU1hiV2hvMzZyVHNkU3E?oc=5",
        "source": "Le Figaro",
+       "via": "Google News"
+      },
+      {
+       "key": "83d7eb6e31bd46c6",
+       "title": "Ligue des nations. « Un excellent moyen de comprendre où on en est » : Scalvini impatient avant d’affronter la France - Ouest-France",
+       "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQUXUwbUJobXNBZWhoS3JGTDVMbnhEYzdoQWNldDVQcm1COHBoWlU1QTJxaFNfUTdyR2RweVJtZ3lGZVQxZnp0MkNNS0hTRHpyVzJONTlFLWtFbDFoLVlITWdiRG1oSzAyR05sbTctVWZLRGwybjlRNk1OU3ZWWDFJcThQWTJRTzJNUjNNXzV1NURablJITkotV0FJMWhINmo2ZkxwY0dqV0NVb1lMeHFaaGxQelNETi1ERHNtWDFaRDRXcmV0bERFeTRLbWZycXdxdklmQ3Q2N1gydUNzUlRMRXZuNmN3Vy14NmJoanR5U1dVY09EUTlBeXBqTFNKYWJiRVQ5VDRiYV9VYXVZRFZ0RFJDTkVMR18wcGFTdUt3WkZYV2NvOU9OV0tTcU5VUmlM?oc=5",
+       "source": "Ouest-France",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Fabian Ruiz started as Spain beat Croatia 4-1 in the Nations League, extending its winning run.",
+     "text": "PSG Handball have confirmed the arrival of Juri Knorr, a highly regarded European centre-back, as part of a project looking ahead to 2027.",
      "sources": [
       {
-       "key": "e82e2109b7c1ed58",
-       "title": "Espagne/Croatie, le résume video, les buts et les notes de Ruiz",
-       "url": "https://www.culturepsg.com/news/selections/espagne-croatie-le-resume-video-les-buts-et-les-notes-de-ruiz/60964",
+       "key": "8a6cb5f20395174e",
+       "title": "Avec Juri Knorr, le PSG prépare déjà son projet 2027",
+       "url": "https://www.culturepsg.com/news/handball/avec-juri-knorr-le-psg-prepare-deja-son-projet-2027/60950",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "France’s Under-21s moved close to qualifying for the European Championship, but PSG’s Senny Mayulu was injured in the match.",
+     "text": "Achraf Hakimi is expected to play one more match for Morocco after Ghana withdrew from the planned friendly; Morocco have arranged a replacement opponent.",
      "sources": [
       {
-       "key": "d886306c6c01ca83",
-       "title": "Le résumé video d'Estonie/France Espoirs, Mayulu blessé",
-       "url": "https://www.culturepsg.com/news/selections/le-resume-d-estonie-france-espoirs-mayulu-blesse/60963",
+       "key": "5c37e606d43a9f75",
+       "title": "Hakimi aura bien un dernier match à jouer avec le Maroc",
+       "url": "https://www.culturepsg.com/news/selections/hakimi-aura-bien-un-dernier-match-a-jouer-avec-le-maroc/60970",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "PSG president Nasser Al-Khelaïfi weighed in on the Ballon d’Or during the European Football Clubs congress; the available report summary gives no further detail.",
+     "text": "France rugby coach Fabien Galthié still has some uncertainties to resolve a year before the World Cup, according to a report.",
      "sources": [
       {
-       "key": "2e89c8c6b936ef77",
-       "title": "Al-Khelaïfi se mouille aussi sur le Ballon d'Or",
-       "url": "https://www.culturepsg.com/news/club/al-khelaifi-se-mouille-sur-le-ballon-d-or/60967",
-       "source": "CulturePSG",
-       "via": null
+       "key": "7f3fd027cb4f15c8",
+       "title": "À un an du Mondial, encore quelques incertitudes pour le sélectionneur Fabien Galthié - L’Écho Républicain",
+       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOZC1yMHctMF9Hb0FhYlhJXzhFckw4SjVNcVR6Tmp5UmgtTkF0anRLZzk3NEgwSVhrOFppV2lPRXd5RDQ2TXNGQTFzR0dJdUItT2ZLRVc2VFM3TW9NY254RHp4SkVvemJVWFhxNmtsN19jWkN2ZGoyejhESS1DdG9RbUo1V18zT3ZUX0ZocS1YcmpkOWhkQzhkdnNDSTh2Vl9sb2tOaWhHSzV2UWJWOV9lb0Y2elQ1Y2NLZktKTjI1dGFWLTEwc0huZjQ3clJLV1dMMTFVMXU1azc5Y3Fjc2c?oc=5",
+       "source": "L’Écho Républicain",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/selections/espagne-croatie-le-resume-video-les-buts-et-les-notes-de-ruiz/60964",
+     "url": "https://www.culturepsg.com/news/selections/mayulu-de-retour-au-psg-plus-tot-que-prevu/60969",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-09-30T06:29:00+00:00",
+     "published": "2026-09-30T12:47:00+00:00",
      "new": true,
-     "key": "e82e2109b7c1ed58",
-     "title": "Spain beat Croatia 4-1 with Fabian Ruiz starting",
-     "summary": "Spain beat Croatia 4-1 in the Nations League with Fabian Ruiz in the starting lineup."
+     "key": "5ef3ede500961784",
+     "title": "Mayulu returns to PSG early after injury",
+     "summary": "Senny Mayulu has left France’s under-21 camp after an injury against Estonia and is returning to PSG."
     },
     {
-     "url": "https://www.culturepsg.com/news/club/al-khelaifi-se-mouille-sur-le-ballon-d-or/60967",
+     "url": "https://www.culturepsg.com/news/handball/avec-juri-knorr-le-psg-prepare-deja-son-projet-2027/60950",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-09-30T09:08:00+00:00",
+     "published": "2026-09-30T15:31:00+00:00",
      "new": true,
-     "key": "2e89c8c6b936ef77",
-     "title": "Al-Khelaïfi comments on the Ballon d’Or",
-     "summary": "Nasser Al-Khelaïfi spoke about the Ballon d’Or at the European Football Clubs congress."
+     "key": "8a6cb5f20395174e",
+     "title": "PSG Handball plan ahead with Juri Knorr",
+     "summary": "PSG Handball have confirmed the arrival of centre-back Juri Knorr as part of a project for 2027."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNSHFjdzgxZ1FtZzFGRVVxTU9WR19LNkY5TWlkbzlQMm5hR3U5Rk5OQ09OZEE1TVQ3cVdfZGhhWlpXcnd1ZWtrYzhfZFN0LWg1U0ZIREE0U1d6bWpBLTlWVWU0VVRmMm9sNVdQYm9qWkdUNDVJS0o1dEY3VG1KY1BEN2RFQ2xMa1RiWS1pbWYydXpTamFfNXJFVldCMkV0M1FmZ1ptdjB4SFJjZEJIQmlBSjFycFhQSV9FZGZ6dmtKQzFEdTV1dGVTOTNGVURGQnJkdW01dnRjV19JUzlXUFYwNXRUNVEyLUU4Yk80OWRneVVZSG1Yd3NHancycHZVeE4y?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNcGQ5SERZUWZqR0FQdTFtY0FUamY3YU1fSmpaWlRvdllLRjlQUWpRVXlEX0tzci1waDlVWExGQUsxOGhyTWtGU3BxczJGZDcwMDhiRVQ0TDdybl9sVlpGdHNncE9rbjdrRnRBd1piY3lxWVo4cERWdUFhek56S0QwUHczYlUxSDVvNEJoZEJGQkJUemVvYkl5aEJYN09FQTBWTkEwMTA4UnRBeGpqbkZlVi10c09kY3UtcmdkSXpuaWxqSmE1ejBXU0xQVVdQb2VMUVhPOHlrU1hiV2hvMzZyVHNkU3E?oc=5",
      "source": "Le Figaro",
      "feed_name": "Team: équipe de France football",
      "via": "Google News",
-     "published": "2026-09-30T10:07:15+00:00",
+     "published": "2026-09-30T16:36:48+00:00",
      "new": true,
-     "key": "b874bf9a13fde4e6",
-     "title": "Manu Koné: France want to win against Italy at the Stade de France",
-     "summary": "Manu Koné said France are eager to win in the coach’s first match at the Stade de France."
+     "key": "31e3b561a21d9187",
+     "title": "Scalvini sees France match as a decisive test for Italy",
+     "summary": "The Italy defender says the Nations League match against France will help show where his side stands."
     },
     {
-     "url": "https://www.culturepsg.com/news/selections/le-resume-d-estonie-france-espoirs-mayulu-blesse/60963",
+     "url": "https://www.culturepsg.com/news/selections/hakimi-aura-bien-un-dernier-match-a-jouer-avec-le-maroc/60970",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-09-29T19:27:00+00:00",
-     "new": false,
-     "key": "d886306c6c01ca83",
-     "title": "France Under-21s close in on qualification as Mayulu is injured",
-     "summary": "France’s Under-21s moved close to qualifying for the European Championship, while PSG’s Senny Mayulu was injured."
+     "published": "2026-09-30T14:33:00+00:00",
+     "new": true,
+     "key": "5c37e606d43a9f75",
+     "title": "Hakimi to play one more match for Morocco",
+     "summary": "Morocco have arranged a replacement after Ghana withdrew from a planned friendly, giving Hakimi one more match to play."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOZC1yMHctMF9Hb0FhYlhJXzhFckw4SjVNcVR6Tmp5UmgtTkF0anRLZzk3NEgwSVhrOFppV2lPRXd5RDQ2TXNGQTFzR0dJdUItT2ZLRVc2VFM3TW9NY254RHp4SkVvemJVWFhxNmtsN19jWkN2ZGoyejhESS1DdG9RbUo1V18zT3ZUX0ZocS1YcmpkOWhkQzhkdnNDSTh2Vl9sb2tOaWhHSzV2UWJWOV9lb0Y2elQ1Y2NLZktKTjI1dGFWLTEwc0huZjQ3clJLV1dMMTFVMXU1azc5Y3Fjc2c?oc=5",
+     "source": "L’Écho Républicain",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-09-30T16:00:00+00:00",
+     "new": true,
+     "key": "7f3fd027cb4f15c8",
+     "title": "Galthié still has questions to settle a year before the World Cup",
+     "summary": "A report says France coach Fabien Galthié still faces some uncertainties with a year remaining before the World Cup."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-09-30T11:01:28.145904+00:00",
-   "input_fingerprint": "sha256:09e679d69ee1f3c49d4bc55de34a3410988d577e186c35e83f8cbd941d024db3",
-   "last_success_at": "2026-09-30T11:01:28.145904+00:00",
-   "candidate_count": 301,
-   "new_count": 3
+   "source_checked_at": "2026-09-30T16:47:11.380500+00:00",
+   "input_fingerprint": "sha256:dfbf8b84b1d3c26046f1be1780e6aa7cf52462ef0de3122a1c0a45adac65254c",
+   "last_success_at": "2026-09-30T16:47:11.380500+00:00",
+   "candidate_count": 342,
+   "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "Bond markets rebounded after a sell-off that had pushed US long-term borrowing costs to their highest level in almost 25 years.",
+     "text": "Cooler-than-expected US inflation eased rate-hike bets and supported equities, with the S&P 500 and Nasdaq advancing.",
      "sources": [
       {
-       "key": "39d59e4e73d3feb9",
-       "title": "Bond markets rebound after sell-off",
-       "url": "https://www.ft.com/content/cd22d20a-3b65-4534-ac04-f5008810e10a?syn-25a6b1a6=1",
-       "source": "FT Markets",
+       "key": "c433f1044e5c711f",
+       "title": "S&P 500, Nasdaq advance as soft inflation tempers Fed rate-hike bets - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdXFFNHNQQUxXRkRPN3ZndG5TZS1PSGpvaFZPMG8zRU1oNFdrOUFZQnNsT183YWZ2R3NoNGNUX1NVdmtZNmxaYVc2X2c0Vm5tNWZjbEo1ZkYzNzVqeW1BS0VTaWZYc1hKRlRaRGxrQlk1aGlpQTROOV9mSDZldFlkejFZVGxKYmZzQ3czLUFPUDRBVmNJNWpuMnBPdE00QUlncU9EU2lXZw?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      },
+      {
+       "key": "7bc36b79d2342d6e",
+       "title": "Traders Pull Back on October Fed Hike Bets After Cool PCE Data - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMm5SVnI0VE5OT1EySk5mWndReTFpb25SZXNlcGduOXlQc2hBbTFhQllCVFJIc1FNcGNvTWRBRUNldVVKa0hSZERtd2dyNlA0TG5aTFpxZERCR1M1RUEzeXpySHVSWkQ1OEFaQUstRXZGdGd4M290dVZBR1UwU1dNa2w2TWE2d0hOS28ydjN5SDAwcnp4TWlZUEt5d3lpRklfbEpLR0xKTjBGcXVGQVZoVjBTaw?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Inflation is also a concern in Europe: German inflation reached its highest level in almost three years, while oil is weighing on prices across major EU economies.",
+     "sources": [
+      {
+       "key": "8d314e0c080d3b08",
+       "title": "German inflation hits highest level in almost 3 years - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNazk0TXpBNWs4Tnc3V21JZFhFQkJFWk5TcmVBcnRyekFjYWtrTWx5MmpmcWdsb1hCaERvUjU2bkpoTWhpMWQtQ0ctRndEdk1lUmc2bXVvcHpFUC1BNy1ONDBieHZWcUE1bmxtX2x0bVZMdW5ueUZvSDNlUy1wZ2RmUlA3am5hb0x5TnZBZ2s0Vm0tTUtRdHktQXVwMXhoR0hxOWtuV0hoYw?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      },
+      {
+       "key": "762072bbf7eb74c8",
+       "title": "Inflation Grips EU’s Top Economies as Oil Prices Pummel Region - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZVF0eG9hdWc1NTFvaFl4R29IYU9XOGJST04tMGZNeUtIYkgwNnJpajBwblhyNllUOWNOb2RtVFhiUlZWQ1lTeE5aNWxoRW10NGlHUVBMX0oxUHUwOTYydi12NGwyanhQQWN2c3RkZ0psVW1BdEJwM1BOcV9ESUlkYkEwZ200aXI0RHJXUnM3VFJSeTlXZ3lDZWo4VWpzVTNIVTRzNHNsb0EtOWZPSHpjZThBOA?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "French government debt is facing persistent investor selling, a warning sign for sovereign financing conditions.",
+     "sources": [
+      {
+       "key": "8b528b975d21625c",
+       "title": "« Nous sommes vendeurs depuis dix-huit mois » : le coup de semonce des investisseurs sur la dette française - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPRnQycXk2M2ZtbW9veWVyVGdJSWdjMkoyeEJiR0JYUnBRY0hHR1N5azg1SFVhaDhzcWh0bHRIOXJ0WE5wUzZkSldkUVNVRmlyS004ZWlCUHBwb01MdGkwOG1yWjVaa2x1WXRUUDQ4dTFraHRMRU1pSEJESzNQRk1JeEg3X0F3R1k0b196V0ZyTTZGRDh6YWFfYkFBUllhQmZaOFJWLTdTeTdLeFhrOEQ2MHlZY0ViZHhBWWtwR3hfRzFFV01FTC0wTWw5czQxUGFVZks4QW9Tb3FTY01nd0NTLXhMWHVUUlIwQ045UFJKdjlmSHplSldN?oc=5",
+       "source": "Les Echos",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "US energy executives expect elevated diesel costs to persist for a year, suggesting continued fuel-cost pressure for businesses.",
+     "sources": [
+      {
+       "key": "3db445730527fa20",
+       "title": "US oil industry warns diesel prices will not return to normal for a year",
+       "url": "https://www.ft.com/content/0d74d66a-a9ee-4c22-83ab-9df6452117de?syn-25a6b1a6=1",
+       "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "France’s 10-year bond risk premium rose to 120 basis points, a notable sovereign-spread development for euro-area markets.",
+     "text": "The SEC is proposing changes to fund fee rules as it seeks to broaden retail access to private-market investments.",
      "sources": [
       {
-       "key": "5ee5c65c9f746520",
-       "title": "France’s 10-Year Bond Risk Premium Rises to 120 Basis Points - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZ2RNRndMNF9GTFBoQktDZnBNNFVlc2s5QnNEbDd6RmVrU0tRZS1nbjgtNmxCZjVKU2tDdnZyYVBkRklkLXR3TmpYNTNnS1FySDA3M1V2YUtNYm96N00zeHgtSFowT0pGQVRKQkJYWDE1UTVnNXRvdWg1YnBiM1FjYkFLajR4STkxU1d0TUIwSVlfUHA3dHNUaVFGcTJYS2VkT3B3a1lyT2dmYWRETkpjSQ?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The dollar is on track for its strongest month since June, with the move linked to the Fed’s inflation fight.",
-     "sources": [
-      {
-       "key": "867b395762781601",
-       "title": "Dollar Powers to Best Month Since June on Fed’s Inflation Fight - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQTE1JRURrOTVvcUhsZEJIWVowbngyNm52NVNsTml2VGIyNlhTT05DVHV2SFhMN25Xc0tlWjRnQ1ljdFpYQ0haSGl1WEpJUzBZTFJ2WU11cGpZYUV4VGlhN01CQmpob0MxVDlkSmNvQjhLcjV2eEJVMUJNYUNBNUNEUUxLZV9RNmt5Rm5rWUYyN2l4ZDFTTVYyeVUxTXBUT2tsTkwzZ0dQWnVBVXg1ay1adGpUWnc?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "China hardware stocks are heading for their worst quarter as the AI rally unwinds, a shift to watch across technology markets.",
-     "sources": [
-      {
-       "key": "71f852c8cfb83c6a",
-       "title": "China Hardware Stocks Set for Worst Quarter as AI Rally Unravels - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZFhRRVc5RG1Td0FGaTFEZXlVWXdCVG40SS1reDB3akJnNHlNc05id01YUGh5ZEVWUGtZRWU0dUhEd3VYZmdNSDZydnJjS2JrM1hCdUpETHVPNEhzQkozUTlSdFM2TXBpanZZeUxBZVlnbUJxaWJpR2dmNTRzVWVFODVBM2JPX0NSREllcm5yWUNwdTRDZFAyQXF5MXNlcVVQNDY4MVVPajZldm9XZm52Snd4c0ptQQ?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "OpenAI is seeking $30 billion at a $1.4 trillion valuation after delaying its IPO, according to the report.",
-     "sources": [
-      {
-       "key": "52f64280b7a3ea3d",
-       "title": "OpenAI seeks $30 billion in funding at whopping $1.4 trillion valuation after delaying IPO",
-       "url": "https://www.coindesk.com/markets/2026/09/30/openai-targets-usd1-4-trillion-valuation-and-unveils-dots-ai-agent",
-       "source": "CoinDesk",
+       "key": "37a7354ddddde707",
+       "title": "SEC proposes performance fees for retail funds in private markets push",
+       "url": "https://www.ft.com/content/5e39d12d-c088-458f-9b03-0594292f772e?syn-25a6b1a6=1",
+       "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "The UK’s second-quarter growth was revised higher, reinforcing its lead among G7 economies, Reuters reports.",
+     "text": "The FTC has opened an investigation involving AI companies including Anthropic and OpenAI, adding to regulatory scrutiny of the sector.",
      "sources": [
       {
-       "key": "e3465f753dd7e856",
-       "title": "UK economy grew faster than thought in second quarter, cementing G7 lead - reuters.com",
-       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYkhXWE1jdThXSFYwVER4YWVYWk5uZ1BPeGpGT29ySVFpU2tuWUZhMzk5TEd3a2dxWDg0UGdOT1JDeWk2amtpdndYN0NUZ3Z3UW51dThkWkFWUmRiM0xrUlc3dGc3TDZZLWQtVzhBNl9BRkNCTFp1YlVwLU00Z0x6eTNmbXJRQnlVczNr?oc=5",
-       "source": "reuters.com",
+       "key": "970ebef21f7cb86a",
+       "title": "FTC opens probe into AI giants including Anthropic and OpenAI - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdzYzcTVSY1JmRld3cFRBRlRaX0w0YVZHTjU3NWVvVG5BcXFIZGFwdXViLXBLNnhJQ3d0RS13T2VURWdNQ19ySkJuVXNlV2NWX0E3LUExYUZQaFBsTTVEaC1NMXJtR0RGYlllQVotQmM3VlRaVmd2em04YWdzTXFkMjhsUlQ0b1JlcVJBRENNRFFBT1NLcU00YUtqU0N5LUlJa0YxaEhzdU1mR1lkUTJ0MFhLMjA3a1FJVlQ5RXpMOEIxdw?oc=5",
+       "source": "Reuters",
        "via": "Google News"
       }
      ]
@@ -1099,84 +1143,94 @@
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/cd22d20a-3b65-4534-ac04-f5008810e10a?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-09-30T09:54:18+00:00",
-     "new": true,
-     "key": "39d59e4e73d3feb9",
-     "title": "Bond markets rebound after sell-off",
-     "summary": "Bond markets rebounded after US long-term borrowing costs reached their highest level in almost 25 years on Tuesday."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZ2RNRndMNF9GTFBoQktDZnBNNFVlc2s5QnNEbDd6RmVrU0tRZS1nbjgtNmxCZjVKU2tDdnZyYVBkRklkLXR3TmpYNTNnS1FySDA3M1V2YUtNYm96N00zeHgtSFowT0pGQVRKQkJYWDE1UTVnNXRvdWg1YnBiM1FjYkFLajR4STkxU1d0TUIwSVlfUHA3dHNUaVFGcTJYS2VkT3B3a1lyT2dmYWRETkpjSQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-30T09:08:18+00:00",
-     "new": true,
-     "key": "5ee5c65c9f746520",
-     "title": "France’s 10-year bond risk premium rises to 120 basis points",
-     "summary": "France’s 10-year bond risk premium rose to 120 basis points."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQTE1JRURrOTVvcUhsZEJIWVowbngyNm52NVNsTml2VGIyNlhTT05DVHV2SFhMN25Xc0tlWjRnQ1ljdFpYQ0haSGl1WEpJUzBZTFJ2WU11cGpZYUV4VGlhN01CQmpob0MxVDlkSmNvQjhLcjV2eEJVMUJNYUNBNUNEUUxLZV9RNmt5Rm5rWUYyN2l4ZDFTTVYyeVUxTXBUT2tsTkwzZ0dQWnVBVXg1ay1adGpUWnc?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-30T09:35:02+00:00",
-     "new": true,
-     "key": "867b395762781601",
-     "title": "Dollar posts best month since June amid Fed inflation fight",
-     "summary": "The dollar is on track for its best month since June as the Fed pursues its inflation fight."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZFhRRVc5RG1Td0FGaTFEZXlVWXdCVG40SS1reDB3akJnNHlNc05id01YUGh5ZEVWUGtZRWU0dUhEd3VYZmdNSDZydnJjS2JrM1hCdUpETHVPNEhzQkozUTlSdFM2TXBpanZZeUxBZVlnbUJxaWJpR2dmNTRzVWVFODVBM2JPX0NSREllcm5yWUNwdTRDZFAyQXF5MXNlcVVQNDY4MVVPajZldm9XZm52Snd4c0ptQQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-09-30T07:41:25+00:00",
-     "new": true,
-     "key": "71f852c8cfb83c6a",
-     "title": "China hardware stocks face worst quarter as AI rally unravels",
-     "summary": "China hardware stocks are set for their worst quarter as the AI rally unravels."
-    },
-    {
-     "url": "https://www.coindesk.com/markets/2026/09/30/openai-targets-usd1-4-trillion-valuation-and-unveils-dots-ai-agent",
-     "source": "CoinDesk",
-     "feed_name": "CoinDesk",
-     "via": null,
-     "published": "2026-09-30T08:50:22+00:00",
-     "new": true,
-     "key": "52f64280b7a3ea3d",
-     "title": "OpenAI seeks $30 billion at $1.4 trillion valuation",
-     "summary": "OpenAI is seeking $30 billion in funding after delaying its IPO."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYkhXWE1jdThXSFYwVER4YWVYWk5uZ1BPeGpGT29ySVFpU2tuWUZhMzk5TEd3a2dxWDg0UGdOT1JDeWk2amtpdndYN0NUZ3Z3UW51dThkWkFWUmRiM0xrUlc3dGc3TDZZLWQtVzhBNl9BRkNCTFp1YlVwLU00Z0x6eTNmbXJRQnlVczNr?oc=5",
-     "source": "reuters.com",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdXFFNHNQQUxXRkRPN3ZndG5TZS1PSGpvaFZPMG8zRU1oNFdrOUFZQnNsT183YWZ2R3NoNGNUX1NVdmtZNmxaYVc2X2c0Vm5tNWZjbEo1ZkYzNzVqeW1BS0VTaWZYc1hKRlRaRGxrQlk1aGlpQTROOV9mSDZldFlkejFZVGxKYmZzQ3czLUFPUDRBVmNJNWpuMnBPdE00QUlncU9EU2lXZw?oc=5",
+     "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-09-30T08:47:54+00:00",
+     "published": "2026-09-30T16:06:27+00:00",
      "new": true,
-     "key": "e3465f753dd7e856",
-     "title": "UK economy grew faster than expected in the second quarter",
-     "summary": "The UK economy grew faster than initially estimated in the second quarter."
+     "key": "c433f1044e5c711f",
+     "title": "US stocks rise as softer inflation cools rate-hike bets",
+     "summary": "The S&P 500 and Nasdaq advanced after softer inflation data tempered expectations of a Federal Reserve rate hike."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNazk0TXpBNWs4Tnc3V21JZFhFQkJFWk5TcmVBcnRyekFjYWtrTWx5MmpmcWdsb1hCaERvUjU2bkpoTWhpMWQtQ0ctRndEdk1lUmc2bXVvcHpFUC1BNy1ONDBieHZWcUE1bmxtX2x0bVZMdW5ueUZvSDNlUy1wZ2RmUlA3am5hb0x5TnZBZ2s0Vm0tTUtRdHktQXVwMXhoR0hxOWtuV0hoYw?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-30T14:45:54+00:00",
+     "new": true,
+     "key": "8d314e0c080d3b08",
+     "title": "German inflation reaches nearly three-year high",
+     "summary": "German inflation rose to its highest level in almost three years."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZVF0eG9hdWc1NTFvaFl4R29IYU9XOGJST04tMGZNeUtIYkgwNnJpajBwblhyNllUOWNOb2RtVFhiUlZWQ1lTeE5aNWxoRW10NGlHUVBMX0oxUHUwOTYydi12NGwyanhQQWN2c3RkZ0psVW1BdEJwM1BOcV9ESUlkYkEwZ200aXI0RHJXUnM3VFJSeTlXZ3lDZWo4VWpzVTNIVTRzNHNsb0EtOWZPSHpjZThBOA?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-30T14:24:11+00:00",
+     "new": true,
+     "key": "762072bbf7eb74c8",
+     "title": "Oil weighs on inflation across major EU economies",
+     "summary": "Oil prices are contributing to inflation pressures in the European Union’s largest economies."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPRnQycXk2M2ZtbW9veWVyVGdJSWdjMkoyeEJiR0JYUnBRY0hHR1N5azg1SFVhaDhzcWh0bHRIOXJ0WE5wUzZkSldkUVNVRmlyS004ZWlCUHBwb01MdGkwOG1yWjVaa2x1WXRUUDQ4dTFraHRMRU1pSEJESzNQRk1JeEg3X0F3R1k0b196V0ZyTTZGRDh6YWFfYkFBUllhQmZaOFJWLTdTeTdLeFhrOEQ2MHlZY0ViZHhBWWtwR3hfRzFFV01FTC0wTWw5czQxUGFVZks4QW9Tb3FTY01nd0NTLXhMWHVUUlIwQ045UFJKdjlmSHplSldN?oc=5",
+     "source": "Les Echos",
+     "feed_name": "Les Echos Finance",
+     "via": "Google News",
+     "published": "2026-09-30T15:08:44+00:00",
+     "new": true,
+     "key": "8b528b975d21625c",
+     "title": "Investors signal sustained selling of French debt",
+     "summary": "Investors say they have been net sellers of French government debt for eighteen months."
+    },
+    {
+     "url": "https://www.ft.com/content/0d74d66a-a9ee-4c22-83ab-9df6452117de?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-09-30T16:20:52+00:00",
+     "new": true,
+     "key": "3db445730527fa20",
+     "title": "US energy executives expect elevated diesel prices to persist",
+     "summary": "A Dallas Fed survey found energy executives expect high fuel costs to continue for a year."
+    },
+    {
+     "url": "https://www.ft.com/content/5e39d12d-c088-458f-9b03-0594292f772e?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-09-30T15:10:39+00:00",
+     "new": true,
+     "key": "37a7354ddddde707",
+     "title": "SEC proposes private-market fund fee changes",
+     "summary": "The SEC proposed changes to performance fees as part of a push to expand retail access to alternative investments."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdzYzcTVSY1JmRld3cFRBRlRaX0w0YVZHTjU3NWVvVG5BcXFIZGFwdXViLXBLNnhJQ3d0RS13T2VURWdNQ19ySkJuVXNlV2NWX0E3LUExYUZQaFBsTTVEaC1NMXJtR0RGYlllQVotQmM3VlRaVmd2em04YWdzTXFkMjhsUlQ0b1JlcVJBRENNRFFBT1NLcU00YUtqU0N5LUlJa0YxaEhzdU1mR1lkUTJ0MFhLMjA3a1FJVlQ5RXpMOEIxdw?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-09-30T14:52:48+00:00",
+     "new": true,
+     "key": "970ebef21f7cb86a",
+     "title": "FTC opens probe into AI companies including Anthropic and OpenAI",
+     "summary": "The FTC has opened an investigation into AI companies including Anthropic and OpenAI."
     }
    ],
    "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-09-30T11:01:28.145904+00:00",
-   "input_fingerprint": "sha256:8ab9d83eb352eadc993e72beb470eaf5418ef32d6fcf09ac47194612ce61c89d",
-   "last_success_at": "2026-09-30T11:01:28.145904+00:00",
-   "error": "Source check failed: Il Sole 24 Ore Finanza",
+   "state": "healthy",
+   "source_checked_at": "2026-09-30T16:47:11.380500+00:00",
+   "input_fingerprint": "sha256:344c3a99111a8e4bb5a8ae47f4e85fc01d552dcef68fdd38257d5f528cc3e480",
+   "last_success_at": "2026-09-30T16:47:11.380500+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 570.8,
-     "change_pct": -0.45,
+     "price": 567.0,
+     "change_pct": -1.12,
      "currency": "CHF",
      "as_of": "2026-09-29T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1186,8 +1240,8 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 729.12,
-     "change_pct": 0.06,
+     "price": 732.78,
+     "change_pct": 0.56,
      "currency": "EUR",
      "as_of": "2026-09-29T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1197,8 +1251,8 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 103.1,
-     "change_pct": 0.35,
+     "price": 102.96,
+     "change_pct": 0.21,
      "currency": "EUR",
      "as_of": "2026-09-29T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1208,8 +1262,8 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 288.35,
-     "change_pct": 0.17,
+     "price": 289.05,
+     "change_pct": 0.42,
      "currency": "EUR",
      "as_of": "2026-09-29T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1219,8 +1273,8 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 315.0,
-     "change_pct": -0.03,
+     "price": 313.4,
+     "change_pct": -0.54,
      "currency": "EUR",
      "as_of": "2026-09-29T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1230,8 +1284,8 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 9.31,
-     "change_pct": 0.34,
+     "price": 9.29,
+     "change_pct": 0.05,
      "currency": "EUR",
      "as_of": "2026-09-29T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1241,8 +1295,8 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 54.93,
-     "change_pct": 0.94,
+     "price": 54.72,
+     "change_pct": 0.55,
      "currency": "EUR",
      "as_of": "2026-09-29T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1252,8 +1306,8 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 71.5,
-     "change_pct": 1.67,
+     "price": 71.0,
+     "change_pct": 0.97,
      "currency": "EUR",
      "as_of": "2026-09-29T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1263,8 +1317,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 83752.18,
-     "change_pct": 0.16,
+     "price": 84383.76,
+     "change_pct": 0.91,
      "currency": "USD",
      "as_of": "2026-09-30T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1274,8 +1328,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2688.35,
-     "change_pct": 0.43,
+     "price": 2692.2,
+     "change_pct": 0.58,
      "currency": "USD",
      "as_of": "2026-09-30T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1283,12 +1337,22 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 308,
-   "new_count": 6
+   "candidate_count": 321,
+   "new_count": 7
   },
   "media": {
    "briefing": "",
    "items": [
+    {
+     "title": "Dear YouTube!",
+     "url": "https://www.youtube.com/watch?v=e1q-TuHdc4Y",
+     "source": "Marques Brownlee",
+     "kind": "video",
+     "published": "2026-09-30T14:42:19+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "e3a30325d86fd60c"
+    },
     {
      "title": "\"Situation Deteriorating\" - Russians Report Problems in the East",
      "url": "https://www.youtube.com/watch?v=njMA9bJOCxw",
@@ -1362,10 +1426,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-09-30T11:01:28.145904+00:00",
-   "candidate_count": 7,
-   "new_count": 0
+   "source_checked_at": "2026-09-30T16:47:11.380500+00:00",
+   "candidate_count": 8,
+   "new_count": 1
   }
  },
- "scheduled_slot": "2026-09-30T11:00:00.000Z"
+ "scheduled_slot": "2026-09-30T11:00:00Z"
 }
