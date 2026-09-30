@@ -1,12 +1,14 @@
 name: News
-test: python -m unittest discover -s tests -p 'test_*.py' && node --test tests/freshness.test.cjs tests/contracts.test.cjs tests/frontend.test.cjs tests/release.test.cjs
+# subset of ci.yml; PR CI is the gate (skips cloudflare/news-scheduler npm run check). Use python3 if loop runs test locally.
+test: python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/freshness.test.cjs tests/contracts.test.cjs tests/frontend.test.cjs tests/release.test.cjs
 run: null
-# .github/workflows/deploy-pages.yml — push to main, paths site/**
+# .github/workflows/deploy-pages.yml — push to main paths site/** + workflow_dispatch; build.yml also redeploys main at 07/13/19 Europe/Rome (any merge live ≤6h)
 deploy: auto (on merge, deploy-pages.yml)
-# protected main — gh pr revert + merge; deploy-pages.yml republishes on revert merge (site/**)
+deploy_manual: gh workflow run deploy-pages.yml --repo grroo/News --ref main
+# rollback placeholders: MERGE_PR = PR number to undo; REVERT_PR = number printed by step 1 (gh pr revert opens the revert PR)
 rollback:
   - gh pr revert MERGE_PR --repo grroo/News
   - gh pr merge REVERT_PR --merge --repo grroo/News
-  - auto (on merge, deploy-pages.yml)
+  - gh workflow run deploy-pages.yml --repo grroo/News --ref main
 rollback_one_command: false
 default_branch: main
