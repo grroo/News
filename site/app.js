@@ -56,6 +56,16 @@
   const dur = s => s ? (s >= 3600 ? Math.floor(s / 3600) + 'h ' + Math.round((s % 3600) / 60) + 'm' : Math.round(s / 60) + 'm') : '';
   const unseenCount = sec => (sec?.items || []).filter(i => !seen.has(i.key)).length;
   const fmtLocal = b => b.generated_local || new Date(b.generated_at).toLocaleString();
+  const todayInRome = () => {
+    const now = new Date();
+    const part = options => new Intl.DateTimeFormat('en-US', {
+      timeZone: 'Europe/Rome', ...options,
+    }).format(now);
+    return {
+      kicker: `Today · ${part({ weekday: 'long' })} · ${part({ year: 'numeric' })}`,
+      date: part({ month: 'long', day: 'numeric' }),
+    };
+  };
 
   let updateMessage = '', fetchMessage = '', checkingUpdates = false, fetchPoller = null;
   const slotLabel = (time, timezone) => new Date(time).toLocaleString('en-GB', {
@@ -107,6 +117,29 @@
       <p class="status-line" data-status-live role="status" aria-live="polite">${esc(statusMessages())}</p></div>`}`;
   };
 
+  const landingHeaderHTML = b => {
+    const today = todayInRome();
+    const ownerHref = ownerLink();
+    const fetchDisabled = !!pendingFetch()?.requestId;
+    return `<header class="landing-hero">
+      <div class="landing-masthead">
+        <a class="landing-brand" href="#/"><span class="landing-brand-mark" aria-hidden="true"></span>Briefing</a>
+        <button class="landing-theme" type="button" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+      </div>
+      <div class="landing-date">
+        <p data-today-kicker>${esc(today.kicker)}</p>
+        <h1 data-today-date>${esc(today.date)}</h1>
+      </div>
+      <div class="landing-edition">
+        <div class="landing-edition-meta"><strong>Latest edition</strong><br>Updated ${esc(fmtLocal(b))}</div>
+        <div class="landing-actions">
+          <button class="btn" type="button" data-check-updates title="Reload the latest published briefing" ${checkingUpdates ? 'disabled' : ''}>${checkingUpdates ? 'Checking…' : 'Check for updates'}</button>
+          ${ownerHref ? `<a class="btn btn-primary" href="${esc(ownerHref)}" data-fetch-briefing ${fetchDisabled ? 'aria-disabled="true" tabindex="-1"' : ''} title="Sign in on the owner page to request a new briefing">Fetch new briefing</a>` : ''}
+        </div>
+      </div>
+    </header>`;
+  };
+
   const healthHTML = (b, section) => {
     const feeds = (b.feed_health || []).filter(f => !section || f.section === section);
     if (!feeds.length) return '';
@@ -118,8 +151,9 @@
   const safeHref = url => { try { const u = new URL(url); return ['https:', 'http:'].includes(u.protocol) ? u.href : '#'; } catch { return '#'; } };
 
   // ── views ──────────────────────────────────────────────────────────────
-  const landing = b => `<div class="landing">
-    ${headerHTML(b)}
+  const landing = b => `<div class="landing ${b === current ? 'landing-home' : ''}">
+    <div class="landing-shell">
+    ${b === current ? landingHeaderHTML(b) : headerHTML(b)}
     <div class="grid">
       ${SECTIONS.map(s => {
         const sec = b.sections[s] || { items: [] }, n = unseenCount(sec);
@@ -130,6 +164,10 @@
           <div class="count ${n ? '' : 'zero'}"><b>${n}</b> unread · ${sec.items.length} items</div>
         </a>`;
       }).join('')}
+    </div>
+    ${b === current ? `<div class="landing-freshness"><div data-freshness>${freshnessHTML(b)}</div>
+      <p class="status-line" data-status-live role="status" aria-live="polite">${esc(statusMessages())}</p>
+      ${storage.isDenied() ? '<p class="storage-note">Reading history cannot be saved in this browser.</p>' : ''}</div>` : ''}
     </div>
     ${healthHTML(b)}
     <footer>
@@ -201,6 +239,13 @@
 
   // ── status UI ──────────────────────────────────────────────────────────
   const updateStatusLine = () => {
+    const todayKicker = $app.querySelector('[data-today-kicker]');
+    const todayDate = $app.querySelector('[data-today-date]');
+    if (todayKicker && todayDate) {
+      const today = todayInRome();
+      todayKicker.textContent = today.kicker;
+      todayDate.textContent = today.date;
+    }
     const line = $app.querySelector('[data-status-live]');
     if (line) line.textContent = statusMessages();
     const freshness = $app.querySelector('[data-freshness]');
