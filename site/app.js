@@ -167,6 +167,8 @@
     </div>
     ${b === current ? `<div class="landing-freshness"><div data-freshness>${freshnessHTML(b)}</div>
       <p class="status-line" data-status-live role="status" aria-live="polite">${esc(statusMessages())}</p>
+      ${ownerLink() ? `<p class="owner-help">Fetch new briefing opens a protected owner page. Sign in if asked, submit your request there, then return here to follow progress.</p>` : ''}
+      ${!ownerLink() ? '<p class="owner-note">Owner fetch not configured yet.</p>' : ''}
       ${storage.isDenied() ? '<p class="storage-note">Reading history cannot be saved in this browser.</p>' : ''}</div>` : ''}
     </div>
     ${healthHTML(b)}

@@ -249,3 +249,90 @@ test('archived legacy edition remains readable in helpers', () => {
   assert.equal(BriefingRefresh.sectionAgeNote(archived.sections.news, archived), '');
   assert.equal(BriefingRefresh.requestAcknowledged(archived, 'anything'), false);
 });
+
+const renderLandingHtml = ownerUrl => new Promise(resolve => {
+  const edition = load('healthy-edition.json');
+  let done = false;
+  const appEl = {
+    _html: '',
+    addEventListener() {},
+    set innerHTML(value) {
+      this._html = value;
+      if (!done && value.includes('landing-home')) {
+        done = true;
+        resolve(value);
+      }
+    },
+    get innerHTML() { return this._html; },
+  };
+  const loc = { href: 'https://pages.example.test/News/#/', hash: '#/', search: '' };
+  const ctx = {
+    BriefingStorage,
+    BriefingRefresh,
+    URLSearchParams,
+    URL,
+    Date,
+    Intl,
+    encodeURIComponent,
+    decodeURIComponent,
+    Error,
+    Array,
+    Object,
+    JSON,
+    Math,
+    Number,
+    String,
+    RegExp,
+    setTimeout,
+    clearTimeout,
+    AbortController,
+    document: {
+      getElementById: id => (id === 'app' ? appEl : null),
+      querySelector: sel => {
+        if (sel === 'meta[name="news-owner-url"]') return { content: ownerUrl };
+        if (sel === 'meta[name="news-refresh-api"]') return { content: '' };
+        return null;
+      },
+      documentElement: { dataset: {} },
+      addEventListener() {},
+      visibilityState: 'hidden',
+    },
+    window: { addEventListener() {}, location: loc, scrollTo() {} },
+    location: loc,
+    matchMedia: () => ({ matches: false }),
+    fetch: async () => ({ ok: true, json: async () => edition }),
+    setInterval: () => 0,
+    AbortSignal: { timeout: () => new AbortController().signal },
+    console,
+  };
+  ctx.globalThis = ctx;
+  const vm = require('node:vm');
+  vm.createContext(ctx);
+  const siteDir = path.join(__dirname, '../site');
+  for (const file of ['freshness.js', 'storage.js', 'refresh.js', 'app.js']) {
+    vm.runInContext(fs.readFileSync(path.join(siteDir, file), 'utf8'), ctx);
+  }
+  setTimeout(() => { if (!done) resolve(appEl.innerHTML); }, 1000);
+});
+
+test('landing home shows owner-note in landing-freshness when owner URL is empty', async () => {
+  const html = await renderLandingHtml('');
+  const actions = html.match(/<div class="landing-actions">([\s\S]*?)<\/div>/);
+  assert.ok(actions);
+  assert.doesNotMatch(actions[1], /owner-note/);
+  assert.match(
+    html,
+    /<div class="landing-freshness">[\s\S]*<p class="owner-note">Owner fetch not configured yet\.<\/p>/,
+  );
+  assert.doesNotMatch(html, /<div class="landing-freshness">[\s\S]*owner-help/);
+});
+
+test('landing home shows owner-help and fetch button when owner URL is set', async () => {
+  const html = await renderLandingHtml('https://worker.example.test/');
+  assert.match(html, /data-fetch-briefing[^>]*>Fetch new briefing<\/a>/);
+  assert.match(
+    html,
+    /<div class="landing-freshness">[\s\S]*<p class="owner-help">Fetch new briefing opens a protected owner page/,
+  );
+  assert.doesNotMatch(html, /owner-note/);
+});
