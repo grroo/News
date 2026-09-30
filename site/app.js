@@ -135,6 +135,7 @@
         <div class="landing-actions">
           <button class="btn" type="button" data-check-updates title="Reload the latest published briefing" ${checkingUpdates ? 'disabled' : ''}>${checkingUpdates ? 'Checking…' : 'Check for updates'}</button>
           ${ownerHref ? `<a class="btn btn-primary" href="${esc(ownerHref)}" data-fetch-briefing ${fetchDisabled ? 'aria-disabled="true" tabindex="-1"' : ''} title="Sign in on the owner page to request a new briefing">Fetch new briefing</a>` : ''}
+          ${!ownerHref ? `<span class="meta owner-note">Owner fetch not configured yet.</span>` : ''}
         </div>
       </div>
     </header>`;
@@ -167,6 +168,7 @@
     </div>
     ${b === current ? `<div class="landing-freshness"><div data-freshness>${freshnessHTML(b)}</div>
       <p class="status-line" data-status-live role="status" aria-live="polite">${esc(statusMessages())}</p>
+      ${ownerLink() ? `<p class="owner-help">Fetch new briefing opens a protected owner page. Sign in if asked, submit your request there, then return here to follow progress.</p>` : ''}
       ${storage.isDenied() ? '<p class="storage-note">Reading history cannot be saved in this browser.</p>' : ''}</div>` : ''}
     </div>
     ${healthHTML(b)}

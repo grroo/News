@@ -249,3 +249,14 @@ test('archived legacy edition remains readable in helpers', () => {
   assert.equal(BriefingRefresh.sectionAgeNote(archived.sections.news, archived), '');
   assert.equal(BriefingRefresh.requestAcknowledged(archived, 'anything'), false);
 });
+
+test('landing home includes owner-fetch hints matching section header', () => {
+  const src = fs.readFileSync(path.join(__dirname, '../site/app.js'), 'utf8');
+  const landingHeader = src.slice(src.indexOf('const landingHeaderHTML'), src.indexOf('const healthHTML'));
+  const landingView = src.slice(src.indexOf('const landing ='), src.indexOf('const section ='));
+  const ownerNote = 'Owner fetch not configured yet.';
+  const ownerHelp = 'Fetch new briefing opens a protected owner page';
+  assert.match(landingHeader, new RegExp(ownerNote));
+  assert.match(landingHeader, /!ownerHref[\s\S]*owner-note/);
+  assert.match(landingView, /landing-freshness[\s\S]*owner-help[\s\S]*Fetch new briefing opens a protected owner page/);
+});
