@@ -1,0 +1,12 @@
+name: News
+test: python -m unittest discover -s tests -p 'test_*.py' && node --test tests/freshness.test.cjs tests/contracts.test.cjs tests/frontend.test.cjs tests/release.test.cjs
+run: null
+# .github/workflows/deploy-pages.yml — push to main, paths site/**
+deploy: auto (on merge, deploy-pages.yml)
+# protected main — gh pr revert + merge; deploy-pages.yml republishes on revert merge (site/**)
+rollback:
+  - gh pr revert MERGE_PR --repo grroo/News
+  - gh pr merge REVERT_PR --merge --repo grroo/News
+  - auto (on merge, deploy-pages.yml)
+rollback_one_command: false
+default_branch: main
