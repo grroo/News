@@ -5,7 +5,7 @@ run: null
 # merging to main is the deploy (site/** via deploy-pages.yml; anything else at the next build.yml slot)
 deploy: auto (on merge, deploy-pages.yml)
 deploy_manual: gh workflow run deploy-pages.yml --repo grroo/News --ref main
-# rollback placeholder: MERGE_PR = PR to undo; gh pr revert prints the revert PR URL, which gh pr merge accepts
-rollback: gh pr merge "$(gh pr revert MERGE_PR --repo grroo/News)" --merge --repo grroo/News && gh workflow run deploy-pages.yml --repo grroo/News --ref main
+# rollback placeholder: MERGE_PR = PR to undo; url= captures gh pr revert stdout (revert PR URL); merge/deploy skipped if revert fails or url empty
+rollback: 'url="$(gh pr revert MERGE_PR --repo grroo/News)" && [ -n "$url" ] && gh pr merge "$url" --merge --repo grroo/News && gh workflow run deploy-pages.yml --repo grroo/News --ref main'
 rollback_one_command: true
 default_branch: main
