@@ -8,6 +8,7 @@
   const LS_PENDING = 'briefing.pendingFetch.v1';
   const storage = BriefingStorage;
   const refresh = BriefingRefresh;
+  const morph = BriefingMorph;
 
   const ownerMeta = document.querySelector('meta[name="news-owner-url"]');
   const apiMeta = document.querySelector('meta[name="news-refresh-api"]');
@@ -158,7 +159,7 @@
       ${SECTIONS.map(s => {
         const sec = b.sections[s] || { items: [] }, n = unseenCount(sec);
         const path = b === current ? `#/${s}` : `#/past/${encodeURIComponent(viewing)}/${s}`;
-        return `<a class="tile" style="--c:var(--${s})" href="${path}">
+        return `<a class="tile" data-section="${s}" style="--c:var(--${s})" href="${path}">
           <div class="name">${LABELS[s]}</div>
           <div class="preview">${sec.items[0] ? `<span class="preview-title">${esc(sec.items[0].title)}</span><span class="preview-source">${esc(sec.items[0].source)}</span>` : 'No stories in this edition.'}</div>
           <div class="count ${n ? '' : 'zero'}"><b>${n}</b> unread · ${sec.items.length} items</div>
@@ -218,6 +219,7 @@
     const finCaption = s === 'finance' ? refresh.financeCaption(sec, b) : '';
     return `
       ${headerHTML(b)}
+      <div class="section-page" data-section="${s}">
       <div class="section-head" style="--c:var(--${s})">
         <h2>${LABELS[s]}</h2>
         <div class="row"><a class="btn" href="${backPath}">← Home</a><button class="btn" type="button" data-mark-all="${s}">Mark all read</button></div>
@@ -227,7 +229,8 @@
       ${briefHTML(sec.briefing, b.mode === 'mock' || !!sec.error, s)}
       <div class="cards">${sec.items.length ? sec.items.map(card).join('') : '<div class="empty">Nothing new in this window.</div>'}</div>
       ${healthHTML(b, s)}
-      <footer><span>${sec.candidate_count ?? sec.items.length} collected${sec.reviewed_count != null ? ` · ${sec.reviewed_count} reviewed by AI` : ''}</span><span><a href="#/past">Past briefings</a></span></footer>`;
+      <footer><span>${sec.candidate_count ?? sec.items.length} collected${sec.reviewed_count != null ? ` · ${sec.reviewed_count} reviewed by AI` : ''}</span><span><a href="#/past">Past briefings</a></span></footer>
+      </div>`;
   };
 
   const past = (b, idx) => `
@@ -420,7 +423,13 @@
     if (e.target.closest('[data-theme-toggle]')) toggleTheme();
   });
 
-  window.addEventListener('hashchange', () => render());
+  let lastHash = location.hash;
+  window.addEventListener('hashchange', () => {
+    const from = morph.route(lastHash);
+    const to = morph.route(location.hash);
+    lastHash = location.hash;
+    morph.run(document, from, to, () => render());
+  });
   document.addEventListener('visibilitychange', () => {
     refresh.getActivePoller()?.setVisible(document.visibilityState === 'visible');
     if (document.visibilityState === 'visible') checkForUpdates();

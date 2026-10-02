@@ -309,7 +309,7 @@ const renderLandingHtml = ownerUrl => new Promise(resolve => {
   const vm = require('node:vm');
   vm.createContext(ctx);
   const siteDir = path.join(__dirname, '../site');
-  for (const file of ['freshness.js', 'storage.js', 'refresh.js', 'app.js']) {
+  for (const file of ['freshness.js', 'storage.js', 'refresh.js', 'morph.js', 'app.js']) {
     vm.runInContext(fs.readFileSync(path.join(siteDir, file), 'utf8'), ctx);
   }
   setTimeout(() => { if (!done) resolve(appEl.innerHTML); }, 1000);
