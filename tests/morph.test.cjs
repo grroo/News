@@ -32,7 +32,7 @@ test('only landing and section in one edition can morph', () => {
 const fakeDocument = (initial, { reducedMotion = false, hasApi = true, rejectFinished = false, missing = false } = {}) => {
   const events = [];
   let view = initial;
-  let finish;
+  const finishers = [];
   const element = (label, childName) => {
     const child = missing ? null : {
       style: { set viewTransitionName(value) { events.push(`${label}.${childName}:${value}`); } },
@@ -59,7 +59,7 @@ const fakeDocument = (initial, { reducedMotion = false, hasApi = true, rejectFin
   if (hasApi) doc.startViewTransition = callback => {
     events.push('transition');
     const updateCallbackDone = Promise.resolve().then(callback);
-    const finished = new Promise(resolve => { finish = resolve; });
+    const finished = new Promise(resolve => { finishers.push(resolve); });
     return { finished: updateCallbackDone.then(() => finished).then(() => {
       if (rejectFinished) throw new Error('transition cancelled');
     }) };
@@ -67,7 +67,7 @@ const fakeDocument = (initial, { reducedMotion = false, hasApi = true, rejectFin
   return {
     doc, events,
     update() { events.push('update'); view = view === 'landing' ? 'section' : 'landing'; },
-    finish() { finish(); },
+    finish(i) { for (const resolve of i === undefined ? finishers : [finishers[i]]) resolve(); },
   };
 };
 
@@ -114,6 +114,33 @@ test('missing elements are skipped and non-morph navigation updates once', async
     await morph.run(fake.doc, morph.route('#/'), morph.route('#/sport'), () => fake.update());
     assert.deepEqual(fake.events, ['update']);
   }
+});
+
+test('a throwing startViewTransition falls back to a plain update', async () => {
+  const fake = fakeDocument('landing');
+  fake.doc.startViewTransition = () => { throw new Error('busy'); };
+  await morph.run(fake.doc, morph.route('#/'), morph.route('#/sport'), () => fake.update());
+  assert.deepEqual(fake.events.filter(e => !e.startsWith('lookup:') && !e.startsWith('child:')), [
+    'tile:section-panel', 'tile.name:section-title', 'tile:', 'tile.name:', 'update',
+  ]);
+});
+
+test('a stale run does not clear names set by a newer run', async () => {
+  const fake = fakeDocument('landing');
+  const forward = morph.run(fake.doc, morph.route('#/'), morph.route('#/sport'), () => fake.update());
+  await Promise.resolve();
+  await Promise.resolve();
+  const mark = fake.events.length;
+  const back = morph.run(fake.doc, morph.route('#/sport'), morph.route('#/'), () => fake.update());
+  fake.finish(0);
+  await forward;
+  fake.finish(1);
+  await back;
+  const after = fake.events.slice(mark);
+  // Only the back run's own callback clears the page; the forward run's late clear skips it.
+  assert.equal(after.filter(e => e === 'page:').length, 1);
+  assert.equal(after.filter(e => e === 'page.h2:').length, 1);
+  assert.deepEqual(after.slice(-2), ['tile:', 'tile.name:']);
 });
 
 const renderAt = async hash => {

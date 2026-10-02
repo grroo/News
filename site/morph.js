@@ -24,6 +24,10 @@ var BriefingMorph = (() => {
     ((from.kind === 'landing' && to.kind === 'section') ||
       (from.kind === 'section' && to.kind === 'landing'));
 
+  // Element -> id of the run that last named it, so a stale run never clears a newer run's names.
+  const owners = new WeakMap();
+  let lastRun = 0;
+
   const run = async (doc, from, to, update) => {
     const media = doc.defaultView?.matchMedia || (typeof matchMedia === 'function' ? matchMedia : null);
     const reducedMotion = media ? media.call(doc.defaultView, '(prefers-reduced-motion: reduce)').matches : false;
@@ -35,14 +39,18 @@ var BriefingMorph = (() => {
     const forward = from.kind === 'landing';
     const tile = () => doc.querySelector(`.tile[data-section="${section}"]`);
     const page = () => doc.querySelector(`.section-page[data-section="${section}"]`);
+    const id = ++lastRun;
     const named = new Set();
     const setName = (element, name) => {
       if (!element) return;
       element.style.viewTransitionName = name;
+      owners.set(element, id);
       named.add(element);
     };
     const clear = () => {
-      for (const element of named) element.style.viewTransitionName = '';
+      for (const element of named) {
+        if (owners.get(element) === id) element.style.viewTransitionName = '';
+      }
       named.clear();
     };
     const nameTile = () => {
@@ -66,9 +74,10 @@ var BriefingMorph = (() => {
         if (forward) namePage();
         else nameTile();
       });
-    } catch (error) {
+    } catch {
+      // Never leave the URL and the view out of step: fall back to a plain render.
       clear();
-      throw error;
+      return update();
     }
     try { await transition.finished; } catch { /* A newer navigation can cancel this transition. */ }
     finally { clear(); }
