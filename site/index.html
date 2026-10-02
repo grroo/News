@@ -72,6 +72,10 @@
   /* section */
   .section-head { gap: 12px; display: flex; align-items: baseline; justify-content: space-between; margin: 4px 0 10px; }
   .section-head h2 { font-size: 26px; margin: 0; letter-spacing: -0.02em; border-bottom: 3px solid var(--c); }
+  ::view-transition-group(section-panel), ::view-transition-group(section-title) {
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+  }
   .brief { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px;
     margin-bottom: 14px; font-size: 16px; line-height: 1.55; }
   .brief.mock { border-style: dashed; color: var(--muted); font-size: 14px; }
@@ -182,6 +186,7 @@
 <script src="freshness.js"></script>
 <script src="storage.js"></script>
 <script src="refresh.js"></script>
+<script src="morph.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
