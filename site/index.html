@@ -45,8 +45,8 @@
 
   /* landing */
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .tile { min-height: 260px; border-radius: 18px; background: var(--card); border: 1px solid var(--line);
-    padding: 18px; display: flex; flex-direction: column; justify-content: space-between;
+  .tile { border-radius: 18px; background: var(--card); border: 1px solid var(--line);
+    padding: 18px; display: flex; flex-direction: column; justify-content: flex-start;
     position: relative; overflow: hidden; }
   .tile, .card, .past a { transition: transform .35s cubic-bezier(.34, 1.56, .64, 1); -webkit-tap-highlight-color: transparent; }
   .pressed, .past a.pressed { transform: scale(.97); transition-duration: .08s; transition-timing-function: ease-out; }
@@ -63,11 +63,9 @@
   .tile .count b { color: var(--new); font-weight: 600; }
   .tile .count.zero b { color: var(--muted); }
   @media (min-width: 560px) { .tile .name { font-size: 30px; } }
-  /* phones: the four tiles fill the screen instead of sitting in the top half */
   @media (max-width: 559px) {
-    .landing { display: flex; flex-direction: column; min-height: calc(100dvh - 32px - env(safe-area-inset-bottom)); }
-    .landing .grid { flex: 1; grid-template-rows: 1fr 1fr; gap: 14px; }
-    .tile { aspect-ratio: auto; min-height: 230px; padding: 16px; }
+    .landing .grid { gap: 14px; }
+    .tile { padding: 16px; }
     .tile .name { font-size: 24px; }
     .tile .preview { font-size: 15px; margin: 12px 0; }
     .section-head { flex-wrap: wrap; gap: 12px; }
@@ -139,7 +137,6 @@
 
   /* Date-led landing header. The section and archive headers keep their own layout. */
   .landing-shell { display: contents; }
-  .landing-home { min-height: 0; }
   .landing-home .landing-shell { display: flex; flex-direction: column; min-width: 0; }
   .landing-home .landing-hero { display: block; margin: 0; }
   .landing-home .landing-masthead { min-height: 50px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
@@ -163,15 +160,13 @@
   .landing-home .landing-freshness .status-line:empty { display: none; }
   .landing-home .landing-freshness .owner-help, .landing-home .landing-freshness .owner-note { font-size: inherit; margin: 4px 0 0; }
   @media (max-width: 559px) {
-    .landing-home .landing-shell { min-height: calc(100dvh - 32px - env(safe-area-inset-bottom)); }
-    .landing-home .grid { flex: 1; min-height: 0; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 14px; }
-    .landing-home .tile { min-height: 0; padding: 17px; }
+    .landing-home .grid { gap: 14px; }
+    .landing-home .tile { padding: 17px; }
     .landing-home .tile .preview-title { -webkit-line-clamp: 3; }
     .landing-home .landing-edition-meta { white-space: nowrap; }
   }
   @media (max-width: 359px) {
     main:has(.landing-home) { padding: 10px 12px 24px; }
-    .landing-home .landing-shell { min-height: calc(100dvh - 24px - env(safe-area-inset-bottom)); }
     .landing-home .landing-masthead { min-height: 44px; }
     .landing-home .landing-date { padding: 16px 0 14px; }
     .landing-home .landing-edition { padding: 8px 0 10px; }
