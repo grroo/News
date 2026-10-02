@@ -49,9 +49,9 @@
     padding: 18px; display: flex; flex-direction: column; justify-content: space-between;
     position: relative; overflow: hidden; }
   .tile, .card, .past a { transition: transform .35s cubic-bezier(.34, 1.56, .64, 1); -webkit-tap-highlight-color: transparent; }
-  .pressed { transform: scale(.97); transition-duration: .08s; transition-timing-function: ease-out; }
+  .pressed, .past a.pressed { transform: scale(.97); transition-duration: .08s; transition-timing-function: ease-out; }
   @media (prefers-reduced-motion: reduce) {
-    .pressed { transform: none; opacity: .8; transition: none; }
+    .pressed, .past a.pressed { transform: none; opacity: .8; transition: none; }
     .card.seen.pressed { opacity: .5; }
   }
   .tile::before { content: ""; position: absolute; inset: 0 auto auto 0; height: 4px; width: 100%; background: var(--c); }

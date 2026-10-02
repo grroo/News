@@ -122,8 +122,8 @@ test('attach registers one delegated listener of each type per document', () => 
 test('page includes press styles, reduced motion, and ordered scripts', () => {
   const html = fs.readFileSync(path.join(__dirname, '../site/index.html'), 'utf8');
   assert.match(html, /\.tile, \.card, \.past a\s*\{[^}]*transition: transform \.35s cubic-bezier\(\.34, 1\.56, \.64, 1\)/);
-  assert.match(html, /\.pressed\s*\{[^}]*transform: scale\(\.97\)/);
-  assert.match(html, /@media \(prefers-reduced-motion: reduce\)\s*\{\s*\.pressed\s*\{[^}]*transform: none;[^}]*opacity: \.8;[^}]*transition: none;[^}]*\}\s*\.card\.seen\.pressed\s*\{[^}]*opacity: \.5/);
+  assert.match(html, /\.pressed, \.past a\.pressed\s*\{[^}]*transform: scale\(\.97\);[^}]*transition-duration: \.08s;[^}]*transition-timing-function: ease-out/);
+  assert.match(html, /@media \(prefers-reduced-motion: reduce\)\s*\{\s*\.pressed, \.past a\.pressed\s*\{[^}]*transform: none;[^}]*opacity: \.8;[^}]*transition: none;[^}]*\}\s*\.card\.seen\.pressed\s*\{[^}]*opacity: \.5/);
   assert.ok(html.indexOf('<script src="press.js"></script>') < html.indexOf('<script src="app.js"></script>'));
   assert.doesNotMatch(html, /\.tile:active\s*\{/);
 });
