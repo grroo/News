@@ -9,6 +9,8 @@
   const storage = BriefingStorage;
   const refresh = BriefingRefresh;
   const morph = BriefingMorph;
+  const press = BriefingPress;
+  press.attach(document);
 
   const ownerMeta = document.querySelector('meta[name="news-owner-url"]');
   const apiMeta = document.querySelector('meta[name="news-refresh-api"]');
