@@ -15,6 +15,28 @@ const degraded = load('degraded-edition.json');
 const archived = load('archived-edition.json');
 const manualRequest = lifecycle.request_id;
 
+test('landing tiles have no forced height and keep press and morph styles', () => {
+  const html = fs.readFileSync(path.join(__dirname, '../site/index.html'), 'utf8');
+  const css = html.match(/<style>([\s\S]*?)<\/style>/)?.[1].replace(/\/\*[\s\S]*?\*\//g, '');
+  assert.ok(css);
+  const rules = [...css.matchAll(/([^{}]+)\{([^{}]*)\}/g)];
+  for (const [, selectors, declarations] of rules) {
+    for (const selector of selectors.split(',')) {
+      const target = selector.trim().split(/[\s>+~]+/).at(-1);
+      if (!target || /\.tile::before$/.test(target)) continue;
+      const tileOrChild = /(?:^|[\s>+~])\.tile(?=$|[.#:\s>+~])/.test(selector);
+      const landingOrGrid = /^\.(?:landing|landing-home|landing-shell|grid)(?=$|[.#:])/.test(target);
+      if (!tileOrChild && !landingOrGrid) continue;
+      assert.doesNotMatch(declarations, /(?:^|;)\s*(?:min-height|height|aspect-ratio|flex|flex-grow|grid-template-rows)\s*:/, selector.trim());
+      if (tileOrChild && /^\.tile(?=$|[.#:])/.test(target)) {
+        assert.doesNotMatch(declarations, /justify-content\s*:\s*space-between\b/, selector.trim());
+      }
+    }
+  }
+  assert.match(css, /\.pressed\s*,\s*\.past a\.pressed\s*\{/);
+  assert.match(css, /::view-transition-group\(section-panel\)/);
+});
+
 test('requestAcknowledged requires exact request id in live edition', () => {
   assert.equal(BriefingRefresh.requestAcknowledged(noChange, manualRequest), true);
   assert.equal(BriefingRefresh.requestAcknowledged(noChange, 'req_missing'), false);
