@@ -272,7 +272,7 @@ test('archived legacy edition remains readable in helpers', () => {
   assert.equal(BriefingRefresh.requestAcknowledged(archived, 'anything'), false);
 });
 
-const renderLandingHtml = ownerUrl => new Promise(resolve => {
+const renderViewHtml = (hash, ownerUrl = '') => new Promise(resolve => {
   const edition = load('healthy-edition.json');
   let done = false;
   const appEl = {
@@ -280,14 +280,14 @@ const renderLandingHtml = ownerUrl => new Promise(resolve => {
     addEventListener() {},
     set innerHTML(value) {
       this._html = value;
-      if (!done && value.includes('landing-home')) {
+      if (!done && value.includes(hash === '#/' ? 'landing-home' : 'section-page')) {
         done = true;
         resolve(value);
       }
     },
     get innerHTML() { return this._html; },
   };
-  const loc = { href: 'https://pages.example.test/News/#/', hash: '#/', search: '' };
+  const loc = { href: `https://pages.example.test/News/${hash}`, hash, search: '' };
   const ctx = {
     BriefingStorage,
     BriefingRefresh,
@@ -322,7 +322,7 @@ const renderLandingHtml = ownerUrl => new Promise(resolve => {
     window: { addEventListener() {}, location: loc, scrollTo() {} },
     location: loc,
     matchMedia: () => ({ matches: false }),
-    fetch: async () => ({ ok: true, json: async () => edition }),
+    fetch: async url => ({ ok: true, json: async () => url.startsWith('data/past/') ? archived : edition }),
     setInterval: () => 0,
     AbortSignal: { timeout: () => new AbortController().signal },
     console,
@@ -335,6 +335,44 @@ const renderLandingHtml = ownerUrl => new Promise(resolve => {
     vm.runInContext(fs.readFileSync(path.join(siteDir, file), 'utf8'), ctx);
   }
   setTimeout(() => { if (!done) resolve(appEl.innerHTML); }, 1000);
+});
+
+const renderLandingHtml = ownerUrl => renderViewHtml('#/', ownerUrl);
+
+test('section pages share the home masthead without edition status controls', async () => {
+  const html = await renderViewHtml('#/sport');
+  assert.match(html, /<header class="landing-hero">\s*<div class="landing-masthead">/);
+  assert.match(html, /<a class="landing-brand" href="#\/">/);
+  assert.match(html, /data-theme-toggle/);
+  assert.match(html, /<div class="section-head"[^>]*>\s*<h2>Sport<\/h2>/);
+  assert.match(html, /← Home/);
+  assert.match(html, /Mark all read/);
+  for (const text of ['data-check-updates', 'data-status-live', 'data-freshness', 'Owner fetch not configured', 'Updated ', 'Fetch new briefing', 'Next scheduled:', 'owner-help', 'storage-note']) {
+    assert.ok(!html.includes(text), `${text} should be absent`);
+  }
+});
+
+test('past section has one archive note below the masthead and no status line', async () => {
+  const html = await renderViewHtml('#/past/archived-edition.json/news');
+  assert.match(html, /<\/header>\s*<div class="banner archive-note">Past briefing · [^<]+\. <a href="#\/">Back to latest<\/a><\/div>\s*<div class="section-page"/);
+  assert.match(html, /<h2>News<\/h2>/);
+  assert.doesNotMatch(html, /data-status-live/);
+});
+
+test('home retains its masthead, date, and edition row', async () => {
+  const html = await renderLandingHtml('');
+  assert.match(html, /<header class="landing-hero">\s*<div class="landing-masthead">/);
+  assert.match(html, /<div class="landing-date">[\s\S]*data-today-date/);
+  assert.match(html, /<div class="landing-edition">[\s\S]*Latest edition[\s\S]*Updated /);
+});
+
+test('masthead CSS applies to sections without a home selector', () => {
+  const html = fs.readFileSync(path.join(__dirname, '../site/index.html'), 'utf8');
+  for (const selector of ['landing-hero', 'landing-masthead', 'landing-brand', 'landing-brand-mark', 'landing-theme']) {
+    assert.match(html, new RegExp(`(?:^|\\n)  \\.${selector} \\{`));
+  }
+  assert.match(html, /\.landing-masthead \{[^}]*border-bottom: 1px solid var\(--line\)/);
+  assert.match(html, /@media \(max-width: 359px\) \{[\s\S]*?\.landing-masthead \{ min-height: 44px; \}/);
 });
 
 test('landing home shows owner-note in landing-freshness when owner URL is empty', async () => {

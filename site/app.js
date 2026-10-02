@@ -120,16 +120,19 @@
       <p class="status-line" data-status-live role="status" aria-live="polite">${esc(statusMessages())}</p></div>`}`;
   };
 
-  const landingHeaderHTML = b => {
-    const today = todayInRome();
-    const ownerHref = ownerLink();
-    const fetchDisabled = !!pendingFetch()?.requestId;
-    return `<header class="landing-hero">
+  const mastheadHTML = (content = '') => `<header class="landing-hero">
       <div class="landing-masthead">
         <a class="landing-brand" href="#/"><span class="landing-brand-mark" aria-hidden="true"></span>Briefing</a>
         <button class="landing-theme" type="button" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
       </div>
-      <div class="landing-date">
+      ${content}
+    </header>`;
+
+  const landingHeaderHTML = b => {
+    const today = todayInRome();
+    const ownerHref = ownerLink();
+    const fetchDisabled = !!pendingFetch()?.requestId;
+    return mastheadHTML(`<div class="landing-date">
         <p data-today-kicker>${esc(today.kicker)}</p>
         <h1 data-today-date>${esc(today.date)}</h1>
       </div>
@@ -139,8 +142,7 @@
           <button class="btn" type="button" data-check-updates title="Reload the latest published briefing" ${checkingUpdates ? 'disabled' : ''}>${checkingUpdates ? 'Checking…' : 'Check for updates'}</button>
           ${ownerHref ? `<a class="btn btn-primary" href="${esc(ownerHref)}" data-fetch-briefing ${fetchDisabled ? 'aria-disabled="true" tabindex="-1"' : ''} title="Sign in on the owner page to request a new briefing">Fetch new briefing</a>` : ''}
         </div>
-      </div>
-    </header>`;
+      </div>`);
   };
 
   const healthHTML = (b, section) => {
@@ -220,7 +222,8 @@
     const ageNote = refresh.sectionAgeNote(sec, b);
     const finCaption = s === 'finance' ? refresh.financeCaption(sec, b) : '';
     return `
-      ${headerHTML(b)}
+      ${mastheadHTML()}
+      ${b === current ? '' : `<div class="banner archive-note">Past briefing · ${esc(fmtLocal(b))}. <a href="#/">Back to latest</a></div>`}
       <div class="section-page" data-section="${s}">
       <div class="section-head" style="--c:var(--${s})">
         <h2>${LABELS[s]}</h2>
