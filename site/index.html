@@ -135,14 +135,14 @@
   .health .issue { color: var(--new); }
   .archive-note { margin-top: 0; }
 
-  /* Date-led landing header. The section and archive headers keep their own layout. */
+  /* Shared home and section masthead; the home edition keeps its own layout. */
   .landing-shell { display: contents; }
   .landing-home .landing-shell { display: flex; flex-direction: column; min-width: 0; }
-  .landing-home .landing-hero { display: block; margin: 0; }
-  .landing-home .landing-masthead { min-height: 50px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
-  .landing-home .landing-brand { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
-  .landing-home .landing-brand-mark { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-  .landing-home .landing-theme { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; background: transparent; color: var(--muted); font-family: inherit; font-size: 22px; line-height: 1; cursor: pointer; }
+  .landing-hero { display: block; margin: 0; }
+  .landing-masthead { min-height: 50px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+  .landing-brand { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+  .landing-brand-mark { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .landing-theme { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; background: transparent; color: var(--muted); font-family: inherit; font-size: 22px; line-height: 1; cursor: pointer; }
   .landing-home .landing-date { padding: 23px 0 20px; }
   .landing-home .landing-date p { margin: 0 0 4px; color: var(--muted); font-size: 11px; font-weight: 650; letter-spacing: .13em; text-transform: uppercase; }
   .landing-home .landing-date h1 { margin: 0; font-size: clamp(36px, 11.8vw, 72px); line-height: 1.02; font-weight: 720; letter-spacing: -.062em; }
@@ -167,7 +167,7 @@
   }
   @media (max-width: 359px) {
     main:has(.landing-home) { padding: 10px 12px 24px; }
-    .landing-home .landing-masthead { min-height: 44px; }
+    .landing-masthead { min-height: 44px; }
     .landing-home .landing-date { padding: 16px 0 14px; }
     .landing-home .landing-edition { padding: 8px 0 10px; }
     .landing-home .grid { gap: 10px; }
