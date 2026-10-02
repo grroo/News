@@ -156,7 +156,7 @@ const renderAt = async hash => {
     setInterval() {}, setTimeout, clearTimeout, URL, URLSearchParams, Date, Intl, console,
   };
   vm.createContext(context);
-  for (const file of ['freshness.js', 'storage.js', 'refresh.js', 'morph.js', 'app.js']) {
+  for (const file of ['freshness.js', 'storage.js', 'refresh.js', 'morph.js', 'press.js', 'app.js']) {
     vm.runInContext(fs.readFileSync(path.join(__dirname, '../site', file), 'utf8'), context);
   }
   await new Promise(resolve => setTimeout(resolve, 0));
