@@ -1,0 +1,1434 @@
+{
+ "schema_version": 2,
+ "edition_id": "ed-20261004T105918786606Z",
+ "generated_at": "2026-10-04T10:59:18.786606+00:00",
+ "generated_local": "Sun 04 Oct 2026, 12:59",
+ "source_checked_at": "2026-10-04T10:59:18.786606+00:00",
+ "timezone": "Europe/Rome",
+ "schedule": {
+  "timezone": "Europe/Rome",
+  "hours": [
+   7,
+   13,
+   19
+  ],
+  "minute": 0,
+  "grace_minutes": 45
+ },
+ "trigger": "scheduled",
+ "request_ids": [
+  "run-2026-10-04T10:59:18.786606+00:00"
+ ],
+ "quality": {
+  "overall": "degraded"
+ },
+ "refresh": {
+  "outcome": "generated",
+  "completed_at": "2026-10-04T10:59:18.786606+00:00"
+ },
+ "mode": "llm",
+ "model": "gpt-6-luna",
+ "feed_health": [
+  {
+   "name": "BBC World",
+   "section": "news",
+   "status": "ok",
+   "item_count": 21,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 21,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Reuters (via Google News)",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Guardian World",
+   "section": "news",
+   "status": "ok",
+   "item_count": 45,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 45,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Le Monde",
+   "section": "news",
+   "status": "ok",
+   "item_count": 16,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 16,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "ANSA Top News",
+   "section": "news",
+   "status": "ok",
+   "item_count": 10,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 10,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere della Sera",
+   "section": "news",
+   "status": "ok",
+   "item_count": 69,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 69,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere Esteri",
+   "section": "news",
+   "status": "ok",
+   "item_count": 49,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 49,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere Economia",
+   "section": "news",
+   "status": "ok",
+   "item_count": 23,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 23,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: AI",
+   "section": "news",
+   "status": "ok",
+   "item_count": 104,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 104,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: insurance industry",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: Zurich Insurance",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: reinsurance",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: European Central Bank",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: Milano",
+   "section": "news",
+   "status": "ok",
+   "item_count": 109,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 109,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: PSG",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 105,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 105,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: équipe de France football",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 106,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 106,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: XV de France rugby",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: Champions League",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 105,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 105,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: Team Vitality Counter-Strike",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CulturePSG",
+   "section": "sport",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 403",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html"
+   }
+  },
+  {
+   "name": "L'Équipe",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 50,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 50,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "HLTV",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 10,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 10,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Zurich Insurance",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 17,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 17,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "S&P 500 (iShares Core)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "S&P 500 Equal Weight (Xtrackers)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "MSCI ACWI (SPDR)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Stoxx Europe 600 (Amundi)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "MSCI EM IMI (iShares)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Smart Grid (First Trust)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 1,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 1,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "PPFB",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Bitcoin",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 20,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 20,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Ethereum",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 20,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 20,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 8,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 8,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT Markets",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 25,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 25,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Reuters Business (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Bloomberg (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CNBC Markets",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 30,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 30,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Il Sole 24 Ore Finanza",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 3,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 3,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Les Echos Finance",
+   "section": "finance",
+   "status": "fallback",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CoinDesk",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 25,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 25,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Wiloo",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Crypto Currently",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "VisualPolitik EN",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Preston Stewart",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Marques Brownlee",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Christo Files",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Making Sense with Sam Harris",
+   "section": "media",
+   "status": "ok",
+   "item_count": 512,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 512,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The DeFi Report",
+   "section": "media",
+   "status": "ok",
+   "item_count": 40,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 40,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Lex Fridman Podcast",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null
+  },
+  {
+   "name": "Bankless",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null
+  },
+  {
+   "name": "Podcast de CulturePSG",
+   "section": "media",
+   "status": "ok",
+   "item_count": 537,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 537,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Dwarkesh Podcast",
+   "section": "media",
+   "status": "ok",
+   "item_count": 142,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 142,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Daily Gwei",
+   "section": "media",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  }
+ ],
+ "usage": {
+  "price_table_version": "2026-09-23",
+  "calls": 3,
+  "attempts": 3,
+  "unknown": false,
+  "unreported_cost": false,
+  "est_cost_usd": 0.002207,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
+  "forecast_basis": "3 editions/day x 30, labelled forecast",
+  "sections": [
+   {
+    "section": "news",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 8726,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_072cc8ca1386add1016ac2318e5ed887d0ac8769da4bb8fd81"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3541,
+    "output_tokens": 697,
+    "reasoning_tokens": 125
+   },
+   {
+    "section": "sport",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 3818,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_0778b0ba9741c469016ac23196835087d0b248a3875706685b"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3442,
+    "output_tokens": 288,
+    "reasoning_tokens": 0
+   },
+   {
+    "section": "finance",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 8376,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_00bbd2480d36d0d4016ac2319a58d487d0aede6f48241fdd4e"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3508,
+    "output_tokens": 805,
+    "reasoning_tokens": 302
+   }
+  ],
+  "input_tokens": 9,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 10491,
+  "output_tokens": 1790,
+  "reasoning_tokens": 427,
+  "recorded_month_to_date": {
+   "month_utc": "2026-10",
+   "recorded_runs": 12,
+   "attempts": 36,
+   "known_cost_usd": 0.0274,
+   "unknown_cost_runs": 0,
+   "coverage": "committed runs only; token-priced lower bound, not an invoice"
+  }
+ },
+ "sections": {
+  "news": {
+   "briefing": [
+    {
+     "text": "Russia says it will intensify attacks on Ukrainian infrastructure; a drone strike hit Kyiv’s Northern Bridge during German Chancellor Friedrich Merz’s surprise visit. The reports underscore the escalation as Merz met President Volodymyr Zelenskyy.",
+     "sources": [
+      {
+       "key": "46b2b9c329926e97",
+       "title": "Friedrich Merz begins unannounced Kyiv visit as Russia continues strikes on Ukraine’s capital – Europe live",
+       "url": "https://www.theguardian.com/world/live/2026/oct/04/friedrich-merz-german-chancellor-ukraine-kyiv-russia-strikes-war-zelenskyy-putin-europe-latest-news-updates",
+       "source": "The Guardian World",
+       "via": null
+      },
+      {
+       "key": "09fd057bcb0f0ccf",
+       "title": "Mosca, intensificheremo gli attacchi contro le infrastrutture ucraine",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/04/mosca-intensificheremo-gli-attacchi-contro-le-infrastrutture-ucraine_bccbe01b-b234-46d7-b45a-7deda122bafb.html",
+       "source": "ANSA Top News",
+       "via": null
+      },
+      {
+       "key": "64aa4378c789d5a2",
+       "title": "Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit",
+       "url": "https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "SoftBank founder Masayoshi Son’s AI ambitions are expanding faster than the group’s balance sheet, highlighting financing and execution risks around the AI investment boom.",
+     "sources": [
+      {
+       "key": "f4686c6fdbb9edfe",
+       "title": "Masayoshi Son’s AI ambitions outgrow SoftBank’s balance sheet - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQ25FR2lHT0tLMV94YmFjVnVBcUhJYllfQ3VGXzhOX0JpV1BUa2tFZFdIZWcyV1V3eHRlbDFlcHhfaFpHNlBuQ18yUXF5a2tWU2FidHlCYkVsckdja2FubXRSdkIyRXYyaGtZOTgtS3B2cEZBdUxnaVYtQWZJY1BQeXF6LXk?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Revolut’s rapid growth is positioning it as a major challenger to Europe’s established banks, with implications for competition across financial services.",
+     "sources": [
+      {
+       "key": "d80d6eab5dbe4365",
+       "title": "Revolut's rise to become Europe's $115 billion big bank rival - reuters.com",
+       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWDBEcXY1UUtrRGxIaE9neHYxeDlTWDNYaVlWdlp2UUhxSGtUV2RVZlR4Q25UUTlDTTR0QXlLYlVNZ1lMNEJfQkVmZnVtcFNaVW5mZE42d21uV1BZZzRESkxvVkxoM19FNkhoVThRWXYtUGR1eGZ6VmYtUHNrTWs5eXZfV1kxZ3ZnSHR2UWtmQWd5YVltQlNseWs0RGhXeVItVGVwQXNKbXpZVG9G?oc=5",
+       "source": "reuters.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Zurich’s risk leader argues insurers need a clearer view of how exposures connect, a relevant challenge as interconnected risks complicate underwriting and portfolio management.",
+     "sources": [
+      {
+       "key": "02ad6478e8054e03",
+       "title": "The future of risk demands clearer view of how exposures connect: Zurich’s Seach - Intelligent Insurer",
+       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQaEluajFBa1hSVlRzRUU1UnYtTGlQV0xEdzh4RVRkMTZaWWE4M2VPSDV2QTFOOXVhcXZVcEcwSDFyNDJhazFILVVQc3FfQk92VldoQlVJSy1lYXlnbnJDNkk4UmVIUGxSMGd6MFhka2RkUzZtMU5ub29hWlM2QUtYOXR3WXotNmNWSmYxa1hvbWVETG9yU3NOakViNE1SbDVoZnltdXBxdTNBWGpGNmFOTEFfRF9iZmZ1N2xzcFMzT0YwTk0ydUI3OWpHSQ?oc=5",
+       "source": "Intelligent Insurer",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Italy’s industry minister says nuclear power could arrive in about 15 years and that implementing decrees are expected by year-end, signaling a longer-term shift in energy policy.",
+     "sources": [
+      {
+       "key": "1d4caf6b65d8f818",
+       "title": "Pichetto, il nucleare arriverà fra 15 anni ma è la scelta del futuro",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/04/pichetto-il-nucleare-arrivera-fra-15-anni-ma-e-la-scelta-del-futuro_dd0a345b-e452-45de-8eab-0c9c4b2b252d.html",
+       "source": "ANSA Top News",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "EU house prices rose 4.7% and rents 3%, while Italy’s government is considering measures for young people in its budget; housing affordability remains a pressing policy issue.",
+     "sources": [
+      {
+       "key": "91eea41b9a02802d",
+       "title": "Case più care in Ue, governo pensa a intervento in manovra per i giovani",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/04/case-piu-care-in-ue-governo-pensa-a-intervento-in-manovra-per-i-giovani_4fbe49ec-a852-4dbf-bad0-a1ae0bca277b.html",
+       "source": "ANSA Top News",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.theguardian.com/world/live/2026/oct/04/friedrich-merz-german-chancellor-ukraine-kyiv-russia-strikes-war-zelenskyy-putin-europe-latest-news-updates",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-10-04T10:41:05+00:00",
+     "new": true,
+     "key": "46b2b9c329926e97",
+     "title": "Merz makes surprise visit to Kyiv as Russia strikes the capital",
+     "summary": "German Chancellor Friedrich Merz visited Kyiv as Russia continued strikes, including a drone attack on the city’s Northern Bridge."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/04/mosca-intensificheremo-gli-attacchi-contro-le-infrastrutture-ucraine_bccbe01b-b234-46d7-b45a-7deda122bafb.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-10-04T10:32:25+00:00",
+     "new": true,
+     "key": "09fd057bcb0f0ccf",
+     "title": "Moscow vows to intensify attacks on Ukrainian infrastructure",
+     "summary": "Russia said it would intensify attacks on Ukrainian infrastructure in response to Zelenskyy’s threat of further strikes on oil refineries."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQ25FR2lHT0tLMV94YmFjVnVBcUhJYllfQ3VGXzhOX0JpV1BUa2tFZFdIZWcyV1V3eHRlbDFlcHhfaFpHNlBuQ18yUXF5a2tWU2FidHlCYkVsckdja2FubXRSdkIyRXYyaGtZOTgtS3B2cEZBdUxnaVYtQWZJY1BQeXF6LXk?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-10-04T10:41:15+00:00",
+     "new": true,
+     "key": "f4686c6fdbb9edfe",
+     "title": "SoftBank’s AI ambitions outgrow its balance sheet",
+     "summary": "The scale of Masayoshi Son’s AI ambitions is stretching SoftBank’s financial capacity."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWDBEcXY1UUtrRGxIaE9neHYxeDlTWDNYaVlWdlp2UUhxSGtUV2RVZlR4Q25UUTlDTTR0QXlLYlVNZ1lMNEJfQkVmZnVtcFNaVW5mZE42d21uV1BZZzRESkxvVkxoM19FNkhoVThRWXYtUGR1eGZ6VmYtUHNrTWs5eXZfV1kxZ3ZnSHR2UWtmQWd5YVltQlNseWs0RGhXeVItVGVwQXNKbXpZVG9G?oc=5",
+     "source": "reuters.com",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-04T10:29:33+00:00",
+     "new": true,
+     "key": "d80d6eab5dbe4365",
+     "title": "Revolut’s rise as a European banking rival",
+     "summary": "Reuters examines how Revolut has grown into a major challenger to established European banks."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQaEluajFBa1hSVlRzRUU1UnYtTGlQV0xEdzh4RVRkMTZaWWE4M2VPSDV2QTFOOXVhcXZVcEcwSDFyNDJhazFILVVQc3FfQk92VldoQlVJSy1lYXlnbnJDNkk4UmVIUGxSMGd6MFhka2RkUzZtMU5ub29hWlM2QUtYOXR3WXotNmNWSmYxa1hvbWVETG9yU3NOakViNE1SbDVoZnltdXBxdTNBWGpGNmFOTEFfRF9iZmZ1N2xzcFMzT0YwTk0ydUI3OWpHSQ?oc=5",
+     "source": "Intelligent Insurer",
+     "feed_name": "Topic: Zurich Insurance",
+     "via": "Google News",
+     "published": "2026-10-04T10:12:37+00:00",
+     "new": true,
+     "key": "02ad6478e8054e03",
+     "title": "Zurich executive calls for clearer view of connected risks",
+     "summary": "Zurich’s Seach says risk management requires a clearer view of how exposures are connected."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/04/pichetto-il-nucleare-arrivera-fra-15-anni-ma-e-la-scelta-del-futuro_dd0a345b-e452-45de-8eab-0c9c4b2b252d.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-10-04T10:45:14+00:00",
+     "new": true,
+     "key": "1d4caf6b65d8f818",
+     "title": "Italy sees nuclear power arriving in 15 years",
+     "summary": "Italy’s industry minister says nuclear power could arrive in 15 years, with implementing decrees expected by year-end."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/04/case-piu-care-in-ue-governo-pensa-a-intervento-in-manovra-per-i-giovani_4fbe49ec-a852-4dbf-bad0-a1ae0bca277b.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-10-04T10:43:10+00:00",
+     "new": true,
+     "key": "91eea41b9a02802d",
+     "title": "EU housing costs rise as Italy considers help for young people",
+     "summary": "Eurostat data show EU house prices up 4.7% and rents up 3%, while Italy is considering budget measures for young people."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-10-04T10:59:18.786606+00:00",
+   "input_fingerprint": "sha256:c53691889b0450f84fe474b3f1dfdc4d51afad858d54248175af4e41d52b3c8e",
+   "last_success_at": "2026-10-04T10:59:18.786606+00:00",
+   "candidate_count": 290,
+   "new_count": 7
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "France coach Zinédine Zidane says changes are expected against Belgium, making the lineup the main immediate talking point ahead of the match.",
+     "sources": [
+      {
+       "key": "baa26993011c9a7c",
+       "title": "Équipe de France : Zinédine Zidane confirme des changements pour la Belgique - Foot Mercato",
+       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNU0k5UVcwVHJmVGJEc0VaZ1BRb05FX0ZpaGlpUDJEVFJ6VWsxOVY4TnFVbmE3OV90MzYxblNvd0hjX2hROG5hWTJyd1NpS0d0LUFfLVp3bWRvbU1lUG9SV2NVMmN2Z3dSS2R1WUF1T1pyVWxLUUJOSGhNVmZ1TVZ6RVNnUzNjb1JjLU9BS2dmS2dlMFJSekRIS2x2b2tsNkUwbFNEUDZuVEh3Q2F1Qk5lSjV4dmMxYUZOOUhHXy1vdTU?oc=5",
+       "source": "Foot Mercato",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Jules Koundé says he is not worried about increased competition for places in France’s squad.",
+     "sources": [
+      {
+       "key": "63b5b46ff8a9d004",
+       "title": "« C’est une source de motivation » : Jules Koundé pas inquiet de la concurrence nouvelle en Équipe de France - Foot National",
+       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNa2JzVTVSRDctUnNkMDI0Z2lWT2t2a1RXVHFmMzN6aVZOSnhBSVJaeDZGd3FsVW0td1Z6SlpRbHgyb3N1cGhhQWxmQWY5QnQ0Y0xRQzlhWXU5VDd6Qjk0akljUzdlOGd5UzhpWkpRQTBNUnpRNU5IM0JrRzY2X0NqLWFIUnkySGxiRVJEMHl4bUFwN25CMmdpN0p1eGxUeWMzem1SeHJCV1M4ZWJEX2t2SzZOUklCYmUzdjdNYndtWGpHc0NhVi1nWFJkN2hJQzJQaTNRa0VrckVOTTg0Y2FwQ1ExZEhBcFN6Rk5Z?oc=5",
+       "source": "Foot National",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "PSG defender Lucas Digne says he wants to prove he belongs at the club.",
+     "sources": [
+      {
+       "key": "0dacc086845d4d19",
+       "title": "Club : Digne « veut montrer qu'il n'est pas au PSG par hasard - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRzZaNTBwUEtjV3JKNUdSdE5FSS1oRlRZSFVXLURGNVJxQzJ3ejFTRkZIdlpLbkZwdEt6emFEZ2QwUHNKdC0ydk5tSXF0TFRRTGRwd1Jab0dNY0pZSWtRaEJJLUZKRlFhNVg3RzI2WGtkVHAxRTFGd2tLZ1VBa3ZMQjV6U2h3YWZXMDhTTnczQ0l0bTlhUE10aUIwOA?oc=5",
+       "source": "CulturePSG",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "France forward Désiré Doué has identified areas he wants to improve at both PSG and international level.",
+     "sources": [
+      {
+       "key": "ae3fc97d4b12600e",
+       "title": "Désiré Doué sait exactement ce qu'il doit améliorer au PSG et en Équipe de France - AllezParis",
+       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOeUk4aFJGN3UtRTBxSlNuZTlyc0pLdzBGdTVfV2o5dmZqQ19TRklqeVNDeHFlcGZmRnp3LWRCSW1vd1VzT09qSDk3Nl9ISTV5dG9kamlGYUt3ZWd4YXFGVEFoZ1RXRFQwTmtJVGtOdEt6dnZmWVJGZVZFMXpEbDhpclJZN2NrTkpTLThObU9CU2tvWWoyTEtxRGVTME1MLWozQTJjTlJwSGVKVHp5VVdCTFE1c2lpMWR0VDJJ?oc=5",
+       "source": "AllezParis",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNU0k5UVcwVHJmVGJEc0VaZ1BRb05FX0ZpaGlpUDJEVFJ6VWsxOVY4TnFVbmE3OV90MzYxblNvd0hjX2hROG5hWTJyd1NpS0d0LUFfLVp3bWRvbU1lUG9SV2NVMmN2Z3dSS2R1WUF1T1pyVWxLUUJOSGhNVmZ1TVZ6RVNnUzNjb1JjLU9BS2dmS2dlMFJSekRIS2x2b2tsNkUwbFNEUDZuVEh3Q2F1Qk5lSjV4dmMxYUZOOUhHXy1vdTU?oc=5",
+     "source": "Foot Mercato",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-10-04T10:38:11+00:00",
+     "new": true,
+     "key": "baa26993011c9a7c",
+     "title": "Zidane confirms changes for France against Belgium",
+     "summary": "France coach Zinédine Zidane confirmed that he will make changes for the match against Belgium."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNa2JzVTVSRDctUnNkMDI0Z2lWT2t2a1RXVHFmMzN6aVZOSnhBSVJaeDZGd3FsVW0td1Z6SlpRbHgyb3N1cGhhQWxmQWY5QnQ0Y0xRQzlhWXU5VDd6Qjk0akljUzdlOGd5UzhpWkpRQTBNUnpRNU5IM0JrRzY2X0NqLWFIUnkySGxiRVJEMHl4bUFwN25CMmdpN0p1eGxUeWMzem1SeHJCV1M4ZWJEX2t2SzZOUklCYmUzdjdNYndtWGpHc0NhVi1nWFJkN2hJQzJQaTNRa0VrckVOTTg0Y2FwQ1ExZEhBcFN6Rk5Z?oc=5",
+     "source": "Foot National",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-10-04T10:52:59+00:00",
+     "new": true,
+     "key": "63b5b46ff8a9d004",
+     "title": "Koundé welcomes competition in France squad",
+     "summary": "Jules Koundé said new competition for places in the France team is a source of motivation, not concern."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRzZaNTBwUEtjV3JKNUdSdE5FSS1oRlRZSFVXLURGNVJxQzJ3ejFTRkZIdlpLbkZwdEt6emFEZ2QwUHNKdC0ydk5tSXF0TFRRTGRwd1Jab0dNY0pZSWtRaEJJLUZKRlFhNVg3RzI2WGtkVHAxRTFGd2tLZ1VBa3ZMQjV6U2h3YWZXMDhTTnczQ0l0bTlhUE10aUIwOA?oc=5",
+     "source": "CulturePSG",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-04T10:37:00+00:00",
+     "new": true,
+     "key": "0dacc086845d4d19",
+     "title": "Digne wants to prove himself at PSG",
+     "summary": "Lucas Digne said he wants to show he deserves his place at Paris Saint-Germain."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOeUk4aFJGN3UtRTBxSlNuZTlyc0pLdzBGdTVfV2o5dmZqQ19TRklqeVNDeHFlcGZmRnp3LWRCSW1vd1VzT09qSDk3Nl9ISTV5dG9kamlGYUt3ZWd4YXFGVEFoZ1RXRFQwTmtJVGtOdEt6dnZmWVJGZVZFMXpEbDhpclJZN2NrTkpTLThObU9CU2tvWWoyTEtxRGVTME1MLWozQTJjTlJwSGVKVHp5VVdCTFE1c2lpMWR0VDJJ?oc=5",
+     "source": "AllezParis",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-04T10:38:00+00:00",
+     "new": true,
+     "key": "ae3fc97d4b12600e",
+     "title": "Doué identifies areas to improve",
+     "summary": "Désiré Doué said he knows what he needs to improve at PSG and with the France team."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "degraded",
+   "source_checked_at": "2026-10-04T10:59:18.786606+00:00",
+   "input_fingerprint": "sha256:f4ef435e366bb92c1c647eb7f5dfa48337faeae1484359cb9fe0c5a3a4ea967c",
+   "last_success_at": "2026-10-04T10:59:18.786606+00:00",
+   "error": "Source check failed: CulturePSG",
+   "candidate_count": 254,
+   "new_count": 4
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "OPEC+ is holding production growth steady, limiting the prospect of additional near-term supply from the group.",
+     "sources": [
+      {
+       "key": "23446952aefa1879",
+       "title": "Pétrole : l'Opep+ n'augmentera pas la cadence de sa production - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPakxwX2NDX1Z6MENsZ3hoc203SVYwSjV0emhRQlhub0paUVVIUWxXTGp0aEdjR1BkbUwyUnc5MlJ6allkLV9JX0s5NXhiM3ZYMF9yV1lpRllNNGhlejdCUXJQOE1JTGR5T2xfQTRKazloTUtCQ3ZaOURhaGVReTRLSTZnMlBzeUVaRVZpTlh0Y2gzMUtta1dveTBLWVB6bWFwd0VublNCMW1yaFVVMmNkSkNua3B3T1JnUXlESm5TSW5rUQ?oc=5",
+       "source": "Les Echos",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "French public debt is drawing renewed concern, with the coverage signalling that key psychological thresholds are being breached.",
+     "sources": [
+      {
+       "key": "a4cbc37608889931",
+       "title": "Dette française : « Les barrières psychologiques tombent les unes après les autres » - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOZ3BiajZvc1RkcnI1bFJUVXoxQ1BqcXZtdWtueXpmdjExTTZ3QnI0QkFYNGpieVE3VGRFclFPS0pVVFZhdlV2X215VEFvdGtsZHpiR1lHYUFuaGhKNjBLYlkycnAyQVp0RUk4N0MwMmlXWWsyNnBPSWtqeGdqVXg1dDZvSzh3SHhuVnkwRTRPUWRQYU4xNW10Z1I0cUJVSWwtT1p2MmRMcUVKbW5iSnBIWmZDQWN4b2xnUDNneGpnNXVub1M0b1BLaWI4RVJCY2xuYjNyXzZCdXBiV0t5M1E?oc=5",
+       "source": "Les Echos",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Reuters traces Revolut’s emergence as a potential $115 billion challenger in European banking, a significant development for financial competition and valuation expectations.",
+     "sources": [
+      {
+       "key": "d80d6eab5dbe4365",
+       "title": "Revolut's rise to become Europe's $115 billion big bank rival - reuters.com",
+       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWDBEcXY1UUtrRGxIaE9neHYxeDlTWDNYaVlWdlp2UUhxSGtUV2RVZlR4Q25UUTlDTTR0QXlLYlVNZ1lMNEJfQkVmZnVtcFNaVW5mZE42d21uV1BZZzRESkxvVkxoM19FNkhoVThRWXYtUGR1eGZ6VmYtUHNrTWs5eXZfV1kxZ3ZnSHR2UWtmQWd5YVltQlNseWs0RGhXeVItVGVwQXNKbXpZVG9G?oc=5",
+       "source": "reuters.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Markets face a mixed picture for capital raising: IPO flotations have stalled and new-listing returns have been weak, while Hong Kong saw record summer fundraising amid AI deal activity.",
+     "sources": [
+      {
+       "key": "30ed2e34706d49bf",
+       "title": "Why the IPO market is booming and busting",
+       "url": "https://www.ft.com/content/8b7e2800-3e36-4d0c-9016-32deaae67b62",
+       "source": "FT",
+       "via": null
+      },
+      {
+       "key": "f6aafd5471024519",
+       "title": "AI Deal Frenzy Powers Hong Kong Fundraising to Record Summer - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMDlyc283Wk8zZ3RubnFCdWI5UTdiRFFiamxqYUVlcXNLeG9PcGJEX1pXMmVvVkFsZk5FZ1RYcjdjZ1RxNkw5aFFVTGtqYXhNT3V2YmgxZ3p6WEZCRG1vV0d4MU5WOEN0M1JUQTdHTVlwX3Nhc0FFZkZPNnl6VV95WGY0dzdQVnBzS21YOGdkM0l4bnVDMlEyZ1o0TS1ZbTFDRzI3ck40WEFJZldRQjEyXw?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Russia struck Kyiv as Germany’s Merz arrived to signal support for Ukraine, while Washington is easing sanctions on Belarus in exchange for prisoner releases.",
+     "sources": [
+      {
+       "key": "40d6db0c4f083d91",
+       "title": "Russia strikes Kyiv as Germany’s Merz arrives to show support for Ukraine - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZkYwdS0xTXN2bFl1SzdPc1JXSFhlRVNmZnBZbFdUcTNPdVFIS18wSmxvRk9wWnFsMkt4WUJIdS1SN2M3RzNzQVJCb0I4X2o3UjlBbWpVa3ludzYtUGpvUF9Qc1VlQ254alhoaG1SZ25aM3ZfNVFfOGZPNmpacWFNODFTVm0?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      },
+      {
+       "key": "b604eeebaacadcdc",
+       "title": "US to receive potash shipment from Belarus as relations thaw",
+       "url": "https://www.ft.com/content/9cbc0aea-259a-41eb-bbf4-ad8a674ca8b7?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Argentina is positioning itself as a lower-tax destination for commodity investment spanning lithium, copper and gas.",
+     "sources": [
+      {
+       "key": "27fcb21a45c4be6f",
+       "title": "Lithium, cuivre, gaz… L'Argentine de Milei, nouvel eldorado fiscal des matières premières - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNTE11Y2d3RHRuVnA2OU5WUWpOcU9WZThkMTRVQnpHR3B5b2xqYmQxeEFXS2pmNjNzZFFINklOaUVMUXJXMnlia0FidDcxNXFoQjVkOGFpd2t2bnluX1R4eTV1Uy1Paml6MV9xdGY4a2VueXNrVzgydFd4LVpzOEdaWjlFa2FsLVBEY05GWHdLSDc5TWNBU194RlVqZ2VPTjgzRi0zWl80MGxIRWdHMmVYclUxUzN1NUpuV3l4TkNwZThFUDZhX2JHX3ZDZU50MERKNkx1ZV9zSWNocEVZY0YyY3pFU0pzdw?oc=5",
+       "source": "Les Echos",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPakxwX2NDX1Z6MENsZ3hoc203SVYwSjV0emhRQlhub0paUVVIUWxXTGp0aEdjR1BkbUwyUnc5MlJ6allkLV9JX0s5NXhiM3ZYMF9yV1lpRllNNGhlejdCUXJQOE1JTGR5T2xfQTRKazloTUtCQ3ZaOURhaGVReTRLSTZnMlBzeUVaRVZpTlh0Y2gzMUtta1dveTBLWVB6bWFwd0VublNCMW1yaFVVMmNkSkNua3B3T1JnUXlESm5TSW5rUQ?oc=5",
+     "source": "Les Echos",
+     "feed_name": "Les Echos Finance",
+     "via": "Google News",
+     "published": "2026-10-04T10:35:04+00:00",
+     "new": true,
+     "key": "23446952aefa1879",
+     "title": "OPEC+ will not accelerate production increases",
+     "summary": "OPEC+ will not increase the pace of its production growth."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOZ3BiajZvc1RkcnI1bFJUVXoxQ1BqcXZtdWtueXpmdjExTTZ3QnI0QkFYNGpieVE3VGRFclFPS0pVVFZhdlV2X215VEFvdGtsZHpiR1lHYUFuaGhKNjBLYlkycnAyQVp0RUk4N0MwMmlXWWsyNnBPSWtqeGdqVXg1dDZvSzh3SHhuVnkwRTRPUWRQYU4xNW10Z1I0cUJVSWwtT1p2MmRMcUVKbW5iSnBIWmZDQWN4b2xnUDNneGpnNXVub1M0b1BLaWI4RVJCY2xuYjNyXzZCdXBiV0t5M1E?oc=5",
+     "source": "Les Echos",
+     "feed_name": "Les Echos Finance",
+     "via": "Google News",
+     "published": "2026-10-04T07:05:08+00:00",
+     "new": true,
+     "key": "a4cbc37608889931",
+     "title": "French debt: psychological thresholds keep falling",
+     "summary": "Coverage highlights growing concern about successive psychological thresholds in French public debt."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWDBEcXY1UUtrRGxIaE9neHYxeDlTWDNYaVlWdlp2UUhxSGtUV2RVZlR4Q25UUTlDTTR0QXlLYlVNZ1lMNEJfQkVmZnVtcFNaVW5mZE42d21uV1BZZzRESkxvVkxoM19FNkhoVThRWXYtUGR1eGZ6VmYtUHNrTWs5eXZfV1kxZ3ZnSHR2UWtmQWd5YVltQlNseWs0RGhXeVItVGVwQXNKbXpZVG9G?oc=5",
+     "source": "reuters.com",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-04T10:29:33+00:00",
+     "new": true,
+     "key": "d80d6eab5dbe4365",
+     "title": "Revolut’s rise as a $115 billion European banking rival",
+     "summary": "Reuters examines Revolut’s rise to become a $115 billion challenger to Europe’s established banks."
+    },
+    {
+     "url": "https://www.ft.com/content/8b7e2800-3e36-4d0c-9016-32deaae67b62",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-04T09:29:09+00:00",
+     "new": true,
+     "key": "30ed2e34706d49bf",
+     "title": "Why the IPO market is booming and busting",
+     "summary": "Flotations have stalled, and returns from new listings have been weak."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMDlyc283Wk8zZ3RubnFCdWI5UTdiRFFiamxqYUVlcXNLeG9PcGJEX1pXMmVvVkFsZk5FZ1RYcjdjZ1RxNkw5aFFVTGtqYXhNT3V2YmgxZ3p6WEZCRG1vV0d4MU5WOEN0M1JUQTdHTVlwX3Nhc0FFZkZPNnl6VV95WGY0dzdQVnBzS21YOGdkM0l4bnVDMlEyZ1o0TS1ZbTFDRzI3ck40WEFJZldRQjEyXw?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-04T04:17:00+00:00",
+     "new": true,
+     "key": "f6aafd5471024519",
+     "title": "AI deal frenzy drives Hong Kong fundraising to a record summer",
+     "summary": "AI-related deal activity powered record fundraising in Hong Kong over the summer."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZkYwdS0xTXN2bFl1SzdPc1JXSFhlRVNmZnBZbFdUcTNPdVFIS18wSmxvRk9wWnFsMkt4WUJIdS1SN2M3RzNzQVJCb0I4X2o3UjlBbWpVa3ludzYtUGpvUF9Qc1VlQ254alhoaG1SZ25aM3ZfNVFfOGZPNmpacWFNODFTVm0?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-04T06:12:15+00:00",
+     "new": true,
+     "key": "40d6db0c4f083d91",
+     "title": "Russia strikes Kyiv as Merz arrives to support Ukraine",
+     "summary": "Russia struck Kyiv as Germany’s Merz arrived to show support for Ukraine."
+    },
+    {
+     "url": "https://www.ft.com/content/9cbc0aea-259a-41eb-bbf4-ad8a674ca8b7?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-10-04T09:00:07+00:00",
+     "new": true,
+     "key": "b604eeebaacadcdc",
+     "title": "US to receive Belarusian potash shipment as relations thaw",
+     "summary": "Washington has begun easing sanctions on Minsk in exchange for the release of political prisoners."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNTE11Y2d3RHRuVnA2OU5WUWpOcU9WZThkMTRVQnpHR3B5b2xqYmQxeEFXS2pmNjNzZFFINklOaUVMUXJXMnlia0FidDcxNXFoQjVkOGFpd2t2bnluX1R4eTV1Uy1Paml6MV9xdGY4a2VueXNrVzgydFd4LVpzOEdaWjlFa2FsLVBEY05GWHdLSDc5TWNBU194RlVqZ2VPTjgzRi0zWl80MGxIRWdHMmVYclUxUzN1NUpuV3l4TkNwZThFUDZhX2JHX3ZDZU50MERKNkx1ZV9zSWNocEVZY0YyY3pFU0pzdw?oc=5",
+     "source": "Les Echos",
+     "feed_name": "Les Echos Finance",
+     "via": "Google News",
+     "published": "2026-10-04T06:40:13+00:00",
+     "new": true,
+     "key": "27fcb21a45c4be6f",
+     "title": "Argentina seeks commodity investment with tax incentives",
+     "summary": "Milei’s Argentina is promoting lithium, copper and gas investment through a new fiscal approach."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-10-04T10:59:18.786606+00:00",
+   "input_fingerprint": "sha256:c444bc4d09cd4f8b816d06d2575b331a399aef2de506851e90e9e8a6bcdff9a1",
+   "last_success_at": "2026-10-04T10:59:18.786606+00:00",
+   "tickers": [
+    {
+     "symbol": "ZURN.SW",
+     "label": "Zurich Insurance",
+     "price": 572.4,
+     "change_pct": 1.56,
+     "currency": "CHF",
+     "as_of": "2026-10-01T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "SXR8.DE",
+     "label": "S&P 500 (iShares Core)",
+     "price": 739.48,
+     "change_pct": 0.95,
+     "currency": "EUR",
+     "as_of": "2026-10-01T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "XDEW.DE",
+     "label": "S&P 500 Equal Weight (Xtrackers)",
+     "price": 104.04,
+     "change_pct": 0.83,
+     "currency": "EUR",
+     "as_of": "2026-10-01T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "SPYY.DE",
+     "label": "MSCI ACWI (SPDR)",
+     "price": 291.35,
+     "change_pct": 1.01,
+     "currency": "EUR",
+     "as_of": "2026-10-01T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "MEUD.PA",
+     "label": "Stoxx Europe 600 (Amundi)",
+     "price": 311.65,
+     "change_pct": 0.74,
+     "currency": "EUR",
+     "as_of": "2026-10-01T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "AYEM.DE",
+     "label": "MSCI EM IMI (iShares)",
+     "price": 9.47,
+     "change_pct": 1.65,
+     "currency": "EUR",
+     "as_of": "2026-10-01T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "GRID.DE",
+     "label": "Smart Grid (First Trust)",
+     "price": 56.76,
+     "change_pct": 3.03,
+     "currency": "EUR",
+     "as_of": "2026-10-01T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "PPFB.DE",
+     "label": "PPFB",
+     "price": 71.39,
+     "change_pct": -0.56,
+     "currency": "EUR",
+     "as_of": "2026-10-01T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "BTC-USD",
+     "label": "Bitcoin",
+     "price": 85260.25,
+     "change_pct": 0.59,
+     "currency": "USD",
+     "as_of": "2026-10-04T00:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "ETH-USD",
+     "label": "Ethereum",
+     "price": 2701.2,
+     "change_pct": 0.52,
+     "currency": "USD",
+     "as_of": "2026-10-04T00:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    }
+   ],
+   "candidate_count": 101,
+   "new_count": 8
+  },
+  "media": {
+   "briefing": "",
+   "items": [
+    {
+     "title": "Ukraine's Offensive Isn't Stopping Anytime Soon",
+     "url": "https://www.youtube.com/watch?v=zxF5PxxI0rg",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-10-03T18:00:31+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "798c4ed19f1d4437"
+    },
+    {
+     "title": "Russia's Secret Mobilization Has ALREADY Started",
+     "url": "https://www.youtube.com/watch?v=a20NUsir8qc",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-10-02T21:00:28+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "2509384bad4b13c3"
+    },
+    {
+     "title": "Xiaomi 18 Fold: How Does This Happen?",
+     "url": "https://www.youtube.com/watch?v=3iRUwVzRDZQ",
+     "source": "Marques Brownlee",
+     "kind": "video",
+     "published": "2026-10-02T20:50:25+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "7275c2b06738428a"
+    },
+    {
+     "title": "The Taliban Could Lose Afghanistan: They’re Being Attacked On Four Fronts At Once",
+     "url": "https://www.youtube.com/watch?v=eH4UvsrSWDc",
+     "source": "VisualPolitik EN",
+     "kind": "video",
+     "published": "2026-10-02T12:00:27+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "a8da266a8c4c02e6"
+    },
+    {
+     "title": "#495 — Foreign Policy for Sale",
+     "url": "https://wakingup.libsyn.com/495-foreign-policy-for-sale",
+     "source": "Making Sense with Sam Harris",
+     "kind": "podcast",
+     "published": "2026-10-01T18:10:00+00:00",
+     "duration_s": 1089,
+     "new": false,
+     "key": "2ebb859d002bb0ae"
+    },
+    {
+     "title": "Si Sheppard – How did a few hundred Spanish soldiers topple two empires?",
+     "url": "https://www.dwarkesh.com/p/si-sheppard",
+     "source": "Dwarkesh Podcast",
+     "kind": "podcast",
+     "published": "2026-10-01T15:28:28+00:00",
+     "duration_s": 5843,
+     "new": false,
+     "key": "4684fe423867475e"
+    },
+    {
+     "title": "😬 C'est l'heure de trancher...",
+     "url": "https://www.youtube.com/watch?v=8nWHIEQMVtA",
+     "source": "Wiloo",
+     "kind": "video",
+     "published": "2026-10-01T15:26:35+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "4fb3ae3ac3b706f9"
+    },
+    {
+     "title": "Iran And The Houthis Are Closing In On Saudi Oil | VisualPolitik EN",
+     "url": "https://www.youtube.com/watch?v=7ySrVS-ZELs",
+     "source": "VisualPolitik EN",
+     "kind": "video",
+     "published": "2026-10-01T12:00:31+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "e1cc08c81c16f0bc"
+    }
+   ],
+   "reviewed_count": 0,
+   "state": "skipped",
+   "source_checked_at": "2026-10-04T10:59:18.786606+00:00",
+   "candidate_count": 8,
+   "new_count": 0
+  }
+ },
+ "scheduled_slot": "2026-10-04T05:00:00Z"
+}
