@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261005T110039107363Z",
- "generated_at": "2026-10-05T11:00:39.107363+00:00",
- "generated_local": "Mon 05 Oct 2026, 13:00",
- "source_checked_at": "2026-10-05T11:00:39.107363+00:00",
+ "edition_id": "ed-20261005T120606381748Z",
+ "generated_at": "2026-10-05T12:06:06.381748+00:00",
+ "generated_local": "Mon 05 Oct 2026, 14:06",
+ "source_checked_at": "2026-10-05T12:06:06.381748+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-10-05T11:00:39.107363+00:00"
+  "run-2026-10-05T12:06:06.381748+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-10-05T11:00:39.107363+00:00"
+  "completed_at": "2026-10-05T12:06:06.381748+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 23,
+   "item_count": 25,
    "reason": null,
    "failure": null,
-   "parsed_count": 23,
+   "parsed_count": 25,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 105,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 105,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -213,10 +213,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 103,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 103,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -271,7 +271,7 @@
    "diagnostic": {
     "status_code": 403,
     "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html"
+    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/"
    }
   },
   {
@@ -627,12 +627,12 @@
    "section": "media",
    "status": "unavailable",
    "item_count": 0,
-   "reason": "Invalid feed XML",
-   "failure": "parse",
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
    "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null
   },
   {
    "name": "Bankless",
@@ -689,9 +689,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002318,
-  "est_month_usd": 0.21,
-  "forecast_month_usd": 0.21,
+  "est_cost_usd": 0.002272,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -699,60 +699,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 10211,
+    "latency_ms": 10952,
     "unknown": false,
     "provider_request_ids": [
-     "resp_029f4a279c53b295016ac38361851887d0af6bdffb1b3fae46"
+     "resp_0f608695e07cacb5016ac392b56ad087d28234729cc0e1becb"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3455,
-    "output_tokens": 746,
-    "reasoning_tokens": 215
+    "cache_write_tokens": 3348,
+    "output_tokens": 668,
+    "reasoning_tokens": 232
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7761,
+    "latency_ms": 7697,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0fc0e94b659d9a61016ac3836b365c87d090e8b8db64b21a41"
+     "resp_0ed4ced22f648a05016ac392bf6d1887d2b5e68ec6c3d90ff2"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3463,
-    "output_tokens": 495,
-    "reasoning_tokens": 215
+    "cache_write_tokens": 3400,
+    "output_tokens": 564,
+    "reasoning_tokens": 249
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 10625,
+    "latency_ms": 9100,
     "unknown": false,
     "provider_request_ids": [
-     "resp_07574206a672be46016ac38372e64887d0aed88df25a9a7a64"
+     "resp_014aa4bd7bd631b4016ac392c70ae887d28fd6d5ee1d7cc3d4"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3367,
-    "output_tokens": 821,
-    "reasoning_tokens": 299
+    "cache_write_tokens": 3538,
+    "output_tokens": 738,
+    "reasoning_tokens": 288
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10285,
-  "output_tokens": 2062,
-  "reasoning_tokens": 729,
+  "cache_write_tokens": 10286,
+  "output_tokens": 1970,
+  "reasoning_tokens": 769,
   "recorded_month_to_date": {
    "month_utc": "2026-10",
-   "recorded_runs": 18,
-   "attempts": 54,
-   "known_cost_usd": 0.040127,
+   "recorded_runs": 19,
+   "attempts": 57,
+   "known_cost_usd": 0.042399,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -761,223 +761,208 @@
   "news": {
    "briefing": [
     {
-     "text": "Bond-market turbulence has prompted calls for the ECB to pause quantitative tightening, putting its balance-sheet policy back in focus.",
+     "text": "The euro has fallen to a 17-month low amid French debt concerns, while European government-bond yields rose and markets were mixed; Milan was nearly flat.",
      "sources": [
       {
-       "key": "591f0e378bc860c0",
-       "title": "Bond turbulence means it’s time for the ECB to put QT on hold - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBNb3VEVVB6dDc3MlNUd2E4YzFQVXJsSm9faEE3ZWF3UURvRjI0UlhzYkZwOU5ubTdwTlJtRDA1NE1HcUUycS1jcWdMRGg3ck1GLUFteTBPOHBQQ0FRS2UxVHlDbGtHeVFaQmp1OWN0Tko?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Spain has called a snap election for 29 November after parliament rejected two emergency housing-relief measures; Germany’s AfD is also weighing a shift in its EU stance.",
-     "sources": [
-      {
-       "key": "93c2b86a72e89587",
-       "title": "Spain’s Sánchez calls snap election amid national housing crisis – Europe live",
-       "url": "https://www.theguardian.com/world/live/2026/oct/05/europe-spain-pedro-sanchez-election-housing-france-school-protests-ukraine-russia-latest-news-updates",
+       "key": "884e053fb2baba2f",
+       "title": "Euro falls to 17-month low against dollar amid French debt fears",
+       "url": "https://www.theguardian.com/business/2026/oct/05/euro-falls-dollar-amid-french-debt-cac-40-spain-eurozone",
        "source": "The Guardian World",
        "via": null
       },
       {
-       "key": "9fff573f0fd7aed1",
-       "title": "Germany's AfD weighs shift from anti-EU roots, strategy paper shows - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQjdNdF90SDNFZ1RseHZqWTh4QW1oeGd2Nnk3ZXI3bnl5UjhRQkpBeHI3Vi1HY0Jramo5MjVQWHFoTExveVpuWEdvbGdWbjJwVnFFNXI3dHp2ZkZKdXptV3lvSHZXS1hHcFYyeW16VGNyYVRmNWFxWWlyU09KQTZtZkZlYlBYbjNObi1LdEFqNC1EYXAxZ2lUYnRTUjVpWGVhdkpFOWhhb29tRUNjaXlSVHNMVlVlbEQ5OUNj?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Zurich says it has completed its Beazley deal, while an insurance-linked securities fund’s holdings have reached $777 million, including new Swiss Re and Jaffa Capital investments.",
-     "sources": [
-      {
-       "key": "bc0e419ee7a1c1ff",
-       "title": "Zurich completes Beazley deal and Zurich Insurance Group stock trades at EUR 619.90 - AD HOC NEWS",
-       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUjZUMWRUWng3c0tFZFVZenZfSWtDbl81ZUR4Q19XT3JZS2xxVS1DMHpSVTRTSkRoMGJzZDJPS2ZCc0RIYldXb3FUTWRzNEJLR0hWNVBON1dkWXFQRXdxcUh2dFNoa3VQQTdFWUVZY0JBVW1lMzhQbzlySkVaaXRFeWlOVFY0VER1bTljX1ByVHFLQm9qamxVYkZxUkN2cE1ZR1JCZU5HXzloWjkzU2kwMGkxWjlKSzRnTURUSThVZkwyMlRjRUE3cjlrWHBlOTdN?oc=5",
-       "source": "AD HOC NEWS",
-       "via": "Google News"
-      },
-      {
-       "key": "4ddc2fba3370c1e9",
-       "title": "Eaton Vance mutual fund ILS holdings hit $777m, new Swiss Re and Jaffa Capital investments - Artemis.bm",
-       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZFhwLUZjTWVkelVPM21OeXRBa2p3WV9ETThfa28xanF0RC1nREpELU1YZWtoTlpIb2pjSWlIdlNVaXVYU1ZkRmhvZzdmWlhORlVsbnJWZFd3QkMtaGhsUXlnQ2wyVEl0N2ptWS1CMHBKcUFyZEdGTjNlYVU2UkNOUTZJZFFsOE9jcEY3WHRqajZsSWJUR3BVc2s1cEZyTnBEdXlTU1U2VVRqd183RERUVnByRzRFUlhE?oc=5",
-       "source": "Artemis.bm",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Executives from Anthropic, OpenAI, Google and Meta are set to face questions at a New York City Council hearing on AI risks.",
-     "sources": [
-      {
-       "key": "cdc285707a9975da",
-       "title": "Anthropic, OpenAI, Google and Meta execs set to testify at NYC Council hearing on AI risks - cnbc.com",
-       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZUIydzZYNjQ4a2RSMEROU0N4RC1NM2JPdXp3RTdtRWVqSjc0Zk5YTU9EWGd2ZEtWSk1JTkZacVkwejgyajZIRlRvMnNsSkkzMFhFbzczNGM4eVVRLXktR19kYjNybkdpVzl4bkpIdHFzRVdYSmlUTjkwR2Z2VjR5cnpSMlRLcEVFSnVlVUN0MTdRLXZERzI1eURTaGxTNllCTndqbtIBqgFBVV95cUxPcVFrM05qVE9lTUtNUUdYV0ZtZ0xNSy1NdGQ2aURSQU1pd3g3ZnA1YlMwbUxPaFZhWlh4bWVwQ3NvalBSajNFZk5DNlA0NjVERUZiLXZ0cmZhMHdRQXo0dVg5elgyTjZsbDR5Sl9KWVJvaVVNZGRKZGFrWlpzak1veGN0Yy1PX3FIWEJCYXl3YlpFMXhnaFg4ZHpkcVMxblp4NTRWM2pRT2FPdw?oc=5",
-       "source": "cnbc.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "European gas futures slipped below €75 per megawatt-hour on the Amsterdam TTF market.",
-     "sources": [
-      {
-       "key": "bde762f230beb0fc",
-       "title": "Il gas inverte la rotta e scende sotto i 75 euro sulla piazza Ttf di Amsterdam",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/05/il-gas-inverte-la-rotta-e-scende-sotto-i-75-euro-sulla-piazza-ttf-di-amsterdam_bd9447ba-bdfd-442e-9e0e-73c6ee232c2c.html",
+       "key": "6908db128c9d1c4b",
+       "title": "Borsa: Europa in ordine sparso, future negativi, Milano +0,15%",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/05/borsa-europa-in-ordine-sparso-future-negativi-milano-015_16ce3595-0ff8-4ed4-b628-0dc5da8fdfe2.html",
        "source": "ANSA Top News",
        "via": null
+      }
+     ]
+    },
+    {
+     "text": "The UK is considering tariffs on Chinese car imports to align with EU measures aimed at protecting European manufacturing.",
+     "sources": [
+      {
+       "key": "c6007d87a4f61936",
+       "title": "UK reviewing whether to impose tariffs on Chinese car imports to align with EU",
+       "url": "https://www.theguardian.com/business/2026/oct/05/uk-tariffs-chinese-car-imports-eu-manufacturing",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "India’s markets regulator is set to partly reverse derivatives settlement rules after industry pushback, Reuters reports.",
+     "sources": [
+      {
+       "key": "e18fbb45a7ffec2e",
+       "title": "EXCLUSIVE: India markets regulator to partly reverse derivative settlement rules after pushback, sources say - reuters.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSTNkZnRTSmgzdlNhUVVQUU4yV3J6S3E1Y1FtSEV1UHVkZW9VeldUbURyaXQ4MHplQWl3SlM5QlF0TXdPU3lwWmZSbDdJRXJGS29QNU9ib1lEMS05QUgzNVV2VFU0RUZzc216X2FKSDlzX2p5V3o4QnJLU3JpNEw5QjFKLXVBSXEyeUwtWXRlMDB3X0RRa3dTVWNyRmhqNFV6N1ZuSFBDNjVSM1RTaHVDUVhuWHE?oc=5",
+       "source": "reuters.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "UK mortgage costs have risen as bond-market turmoil increases expectations of a Bank of England rate rise, with the average five-year fix reaching 6%.",
+     "sources": [
+      {
+       "key": "cab072fea5c19ef0",
+       "title": "Average five-year fixed mortgage rate hits 6% for first time in three years",
+       "url": "https://www.theguardian.com/money/2026/oct/05/five-year-fixed-mortgage-rate-banks-building-societies",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Chaucer and Indemni are launching US cargo cover targeting strategic theft, a niche commercial-insurance development.",
+     "sources": [
+      {
+       "key": "9591b8663458d518",
+       "title": "Chaucer and Indemni new US Cargo proposition to target strategic theft - Reinsurance News",
+       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeExVdXFUYUVrdVpqX3ktcC1qcFhwM1dRX1B0TlJEMlVpM1N3ZmRkcHM0UU1KbjkzMjg5aFdXeGVaNXZfSTJvQ1pjVzgxYWRMOFVLRVhkcElBbVdCVlJZVjBZWFRKOWpuUjZJSXZla08taFNuS3JzLVhUdUVsUUh2WjlqZk9kSVhlR0tjazE4SmlUQ0VlN3BkS2QxdDVGMzBQRmc?oc=5",
+       "source": "Reinsurance News",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBNb3VEVVB6dDc3MlNUd2E4YzFQVXJsSm9faEE3ZWF3UURvRjI0UlhzYkZwOU5ubTdwTlJtRDA1NE1HcUUycS1jcWdMRGg3ck1GLUFteTBPOHBQQ0FRS2UxVHlDbGtHeVFaQmp1OWN0Tko?oc=5",
-     "source": "Financial Times",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-10-05T10:22:05+00:00",
-     "new": true,
-     "key": "591f0e378bc860c0",
-     "title": "Bond turbulence means it’s time for the ECB to put QT on hold",
-     "summary": "The Financial Times argues recent bond-market turbulence strengthens the case for the ECB to pause quantitative tightening."
-    },
-    {
-     "url": "https://www.theguardian.com/world/live/2026/oct/05/europe-spain-pedro-sanchez-election-housing-france-school-protests-ukraine-russia-latest-news-updates",
+     "url": "https://www.theguardian.com/business/2026/oct/05/euro-falls-dollar-amid-french-debt-cac-40-spain-eurozone",
      "source": "The Guardian World",
      "feed_name": "The Guardian World",
      "via": null,
-     "published": "2026-10-05T10:33:06+00:00",
+     "published": "2026-10-05T11:18:20+00:00",
      "new": true,
-     "key": "93c2b86a72e89587",
-     "title": "Spain’s Sánchez calls snap election amid housing crisis",
-     "summary": "Spain’s prime minister called a 29 November election after parliament rejected two emergency housing-relief measures."
+     "key": "884e053fb2baba2f",
+     "title": "Euro falls to 17-month low amid French debt fears",
+     "summary": "The euro hit a 17-month low as French debt concerns and wider eurozone uncertainty weighed on the currency."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQjdNdF90SDNFZ1RseHZqWTh4QW1oeGd2Nnk3ZXI3bnl5UjhRQkpBeHI3Vi1HY0Jramo5MjVQWHFoTExveVpuWEdvbGdWbjJwVnFFNXI3dHp2ZkZKdXptV3lvSHZXS1hHcFYyeW16VGNyYVRmNWFxWWlyU09KQTZtZkZlYlBYbjNObi1LdEFqNC1EYXAxZ2lUYnRTUjVpWGVhdkpFOWhhb29tRUNjaXlSVHNMVlVlbEQ5OUNj?oc=5",
-     "source": "Reuters",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-10-05T10:23:45+00:00",
-     "new": true,
-     "key": "9fff573f0fd7aed1",
-     "title": "Germany’s AfD weighs shift from anti-EU roots",
-     "summary": "A strategy paper shows Germany’s AfD is considering a shift from its anti-EU origins."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUjZUMWRUWng3c0tFZFVZenZfSWtDbl81ZUR4Q19XT3JZS2xxVS1DMHpSVTRTSkRoMGJzZDJPS2ZCc0RIYldXb3FUTWRzNEJLR0hWNVBON1dkWXFQRXdxcUh2dFNoa3VQQTdFWUVZY0JBVW1lMzhQbzlySkVaaXRFeWlOVFY0VER1bTljX1ByVHFLQm9qamxVYkZxUkN2cE1ZR1JCZU5HXzloWjkzU2kwMGkxWjlKSzRnTURUSThVZkwyMlRjRUE3cjlrWHBlOTdN?oc=5",
-     "source": "AD HOC NEWS",
-     "feed_name": "Topic: Zurich Insurance",
-     "via": "Google News",
-     "published": "2026-10-05T10:52:50+00:00",
-     "new": true,
-     "key": "bc0e419ee7a1c1ff",
-     "title": "Zurich completes Beazley deal",
-     "summary": "Zurich Insurance Group says it has completed its deal for Beazley."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZFhwLUZjTWVkelVPM21OeXRBa2p3WV9ETThfa28xanF0RC1nREpELU1YZWtoTlpIb2pjSWlIdlNVaXVYU1ZkRmhvZzdmWlhORlVsbnJWZFd3QkMtaGhsUXlnQ2wyVEl0N2ptWS1CMHBKcUFyZEdGTjNlYVU2UkNOUTZJZFFsOE9jcEY3WHRqajZsSWJUR3BVc2s1cEZyTnBEdXlTU1U2VVRqd183RERUVnByRzRFUlhE?oc=5",
-     "source": "Artemis.bm",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-10-05T10:30:00+00:00",
-     "new": true,
-     "key": "4ddc2fba3370c1e9",
-     "title": "Eaton Vance ILS fund holdings reach $777 million",
-     "summary": "Eaton Vance’s mutual fund ILS holdings reached $777 million, with new Swiss Re and Jaffa Capital investments."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZUIydzZYNjQ4a2RSMEROU0N4RC1NM2JPdXp3RTdtRWVqSjc0Zk5YTU9EWGd2ZEtWSk1JTkZacVkwejgyajZIRlRvMnNsSkkzMFhFbzczNGM4eVVRLXktR19kYjNybkdpVzl4bkpIdHFzRVdYSmlUTjkwR2Z2VjR5cnpSMlRLcEVFSnVlVUN0MTdRLXZERzI1eURTaGxTNllCTndqbtIBqgFBVV95cUxPcVFrM05qVE9lTUtNUUdYV0ZtZ0xNSy1NdGQ2aURSQU1pd3g3ZnA1YlMwbUxPaFZhWlh4bWVwQ3NvalBSajNFZk5DNlA0NjVERUZiLXZ0cmZhMHdRQXo0dVg5elgyTjZsbDR5Sl9KWVJvaVVNZGRKZGFrWlpzak1veGN0Yy1PX3FIWEJCYXl3YlpFMXhnaFg4ZHpkcVMxblp4NTRWM2pRT2FPdw?oc=5",
-     "source": "cnbc.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-10-05T10:41:41+00:00",
-     "new": true,
-     "key": "cdc285707a9975da",
-     "title": "AI company executives set for New York City Council hearing",
-     "summary": "Executives from Anthropic, OpenAI, Google and Meta are set to testify about AI risks."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/05/il-gas-inverte-la-rotta-e-scende-sotto-i-75-euro-sulla-piazza-ttf-di-amsterdam_bd9447ba-bdfd-442e-9e0e-73c6ee232c2c.html",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/05/borsa-europa-in-ordine-sparso-future-negativi-milano-015_16ce3595-0ff8-4ed4-b628-0dc5da8fdfe2.html",
      "source": "ANSA Top News",
      "feed_name": "ANSA Top News",
      "via": null,
-     "published": "2026-10-05T10:42:42+00:00",
+     "published": "2026-10-05T11:37:16+00:00",
      "new": true,
-     "key": "bde762f230beb0fc",
-     "title": "European gas futures fall below €75",
-     "summary": "November gas futures on Amsterdam’s TTF exchange fell 0.4% to €74.45 per megawatt-hour."
+     "key": "6908db128c9d1c4b",
+     "title": "European markets mixed as yields rise and euro weakens",
+     "summary": "European equities traded unevenly, while the euro weakened, government-bond yields rose and Italy’s spread reached 116.5 points."
     },
     {
-     "url": "https://www.theguardian.com/business/2026/oct/05/bt-buy-broadband-supplier-talktalk-jobs",
+     "url": "https://www.theguardian.com/business/2026/oct/05/uk-tariffs-chinese-car-imports-eu-manufacturing",
      "source": "The Guardian World",
      "feed_name": "The Guardian World",
      "via": null,
-     "published": "2026-10-05T10:19:14+00:00",
+     "published": "2026-10-05T11:37:46+00:00",
      "new": true,
-     "key": "7d90a9433d1e21f4",
-     "title": "BT to buy TalkTalk in £400 million rescue deal",
-     "summary": "BT agreed to buy broadband supplier TalkTalk in a £400 million deal that would save 900 jobs."
+     "key": "c6007d87a4f61936",
+     "title": "UK weighs tariffs on Chinese car imports to align with EU",
+     "summary": "The UK is reviewing tariffs on Chinese car imports to align with EU policy protecting European manufacturing."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSTNkZnRTSmgzdlNhUVVQUU4yV3J6S3E1Y1FtSEV1UHVkZW9VeldUbURyaXQ4MHplQWl3SlM5QlF0TXdPU3lwWmZSbDdJRXJGS29QNU9ib1lEMS05QUgzNVV2VFU0RUZzc216X2FKSDlzX2p5V3o4QnJLU3JpNEw5QjFKLXVBSXEyeUwtWXRlMDB3X0RRa3dTVWNyRmhqNFV6N1ZuSFBDNjVSM1RTaHVDUVhuWHE?oc=5",
+     "source": "reuters.com",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-05T11:25:35+00:00",
+     "new": true,
+     "key": "e18fbb45a7ffec2e",
+     "title": "India regulator to partly reverse derivatives settlement rules",
+     "summary": "India’s markets regulator plans to partly reverse derivatives settlement rules after pushback, Reuters reports."
+    },
+    {
+     "url": "https://www.theguardian.com/money/2026/oct/05/five-year-fixed-mortgage-rate-banks-building-societies",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-10-05T11:39:37+00:00",
+     "new": true,
+     "key": "cab072fea5c19ef0",
+     "title": "UK five-year mortgage rates reach 6%",
+     "summary": "The average UK five-year fixed mortgage rate reached 6% as bond-market turmoil raised expectations of a base-rate increase."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeExVdXFUYUVrdVpqX3ktcC1qcFhwM1dRX1B0TlJEMlVpM1N3ZmRkcHM0UU1KbjkzMjg5aFdXeGVaNXZfSTJvQ1pjVzgxYWRMOFVLRVhkcElBbVdCVlJZVjBZWFRKOWpuUjZJSXZla08taFNuS3JzLVhUdUVsUUh2WjlqZk9kSVhlR0tjazE4SmlUQ0VlN3BkS2QxdDVGMzBQRmc?oc=5",
+     "source": "Reinsurance News",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-10-05T12:02:28+00:00",
+     "new": true,
+     "key": "9591b8663458d518",
+     "title": "Chaucer and Indemni launch US cargo proposition targeting theft",
+     "summary": "Chaucer and Indemni are introducing US cargo cover aimed at strategic theft."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-05T11:00:39.107363+00:00",
-   "input_fingerprint": "sha256:73287a11b49a646f78b1f1e374f688410c1a6c3299f62c9a4ef5903c1eff497f",
-   "last_success_at": "2026-10-05T11:00:39.107363+00:00",
-   "candidate_count": 421,
-   "new_count": 8
+   "source_checked_at": "2026-10-05T12:06:06.381748+00:00",
+   "input_fingerprint": "sha256:ed3b7f4c26cc9febea7dcf0db8e58237e51ade629395ca4a9e04fae5c5d0deec",
+   "last_success_at": "2026-10-05T12:06:06.381748+00:00",
+   "candidate_count": 443,
+   "new_count": 6
   },
   "sport": {
    "briefing": [
     {
-     "text": "Vitinha drew fresh praise for his Portugal performance, offering a positive international-break update on a PSG regular.",
+     "text": "France face Belgium in the Nations League, with live coverage available; several outlets also preview the fixture, but the candidates provide no result or team news.",
      "sources": [
       {
-       "key": "7e764d13cd2696a0",
-       "title": "Sélections : Le « joaillier » Vitinha a encore émerveillé le Portugal - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOENwTS1QOERHbmROOEZTbUFTS3ZFd2ExUUtINFBDSF9oc2xKSUt0NFp2WG1QVG9pbVIzRExlLXlCN0dCeW4wUEk1YVJlSjlHcVJ5SDhfM2VTbFhPMFhrZmxleTVCS1NDaUxNdHB0MlFsLTJMZTdpNXNMY010OExQb19La0h5RndUcHp3TU15Tlg3RVVCMV91ZTItcUxzb216QVgybHpMUQ?oc=5",
-       "source": "CulturePSG",
+       "key": "450a051a1d7e30ec",
+       "title": "France - Belgique, Ligue des nations A, match en direct le 05/10/2026 - L'Équipe",
+       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNak9QY0tBTXdHS2xpdk1pelFRRGoyaFhuRXhET2Z2Mzl6NVIycGVWTE1pcHdRMVBJYXN1aTR2czhoOC0tQjBYU3lWV0hmb2NXRzZYUVdPa2JOM1pTN1BhT21oeTdDS3M1bHBoTmZkLUxDb2pLQ1pQMXdTVDcxZGR0T3JsakNwdFUteTlNNFFvMUkwaDJWOHUxRUhXVjl6dw?oc=5",
+       "source": "L'Équipe",
+       "via": "Google News"
+      },
+      {
+       "key": "c12705c0e8fbf26d",
+       "title": "DIRECT. France-Belgique: suivez le match des Bleus avec Zinédine Zidane en live - RMC Sport",
+       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOQmRpaFVnRTZHX01sUXY2NHFMWWEzUnBJOS1hc3BYVnZRV1FiOVhfdW5WbjJBZ3VZTnIyT2IxNWpJODMtdE5IYVNjQmwzM1Z6ZVhTbDdlZ3JjZlFTRHJxWWF4STZLR0FuU1VVVG0zQ20tbzFUYS1QTm1WNktQbjJmZUViSEd5eU50c3cxQ0lDSTBLZVB4YjY2LTRzQ1NUMV81Wnk5U0FrZERyb0pMSTJlUHR4cFA0YjlrM2FiUFZ0anZkMVo0aVV1eGo1U1RDT3RSSnBlQ0dKQ0x1ZGRmNUVVUmtyTDlwZ28?oc=5",
+       "source": "RMC Sport",
+       "via": "Google News"
+      },
+      {
+       "key": "d11eb5da11a7d5d8",
+       "title": "Ligue des nations : souvenir de Bruxelles, série noire, compo probable… Cinq questions avant France-Belgique - Le Figaro",
+       "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOcmc0eUtCdmF5cDNxdlNlN1pRbmVfMm1zTGpoUTNxZ1J0SVVtM1ZXUWZFcmNCWlBoY2FWTGR6TjBNUXNLb00zR3d0d3dNdzZTLVgwU0VlZ204dUY1ckh2YkJUejJic1JDdTBtcFFoSDlYT2J6eXNIZ1dfdnplQlk1T3ItS1RWMnpEc1RrSmdjZUQxSWxJXzhWQVFicTg5NWVZUkItMTA5a2hNMGNEX0IxOGpLSTRoMHJxelJRZjkxcnVNYXV5a0JtdnVBR3otTlhYU0JaZkp4dnJ1b1JiRG5GTktGTnhPb1VnaTY4ZURYU0NZODlDYV9CZ0JTalJSNEE?oc=5",
+       "source": "Le Figaro",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "PSG have announced their return-to-training schedule ahead of the Le Mans fixture.",
+     "text": "Jérémy Jacquet has caught Zinédine Zidane’s attention, according to a report focused on the young defender’s maturity and rapid rise.",
      "sources": [
       {
-       "key": "302123229ce05374",
-       "title": "Club : Le PSG dévoile son programme de reprise avant Le Mans - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbU1lbzdIU0FJRFZmMXlFazZMWF96aVRXWkdILVUtWkoxY3plOVd5Y1RDZlJ1VHZxRWNwX2E3VGZUVUdkM3I4cEt2VU5DZXZTV2J6VFBiYzhMM2EwNmxjTTRTSFZSSzJfc29iclNZN0ZSbXlFWld1c2hpVFA3bnZObnRsS1gyUVM0bURDRndSVXJhXzk0NHR5WkFVTUM?oc=5",
-       "source": "CulturePSG",
+       "key": "02c419cb51282a62",
+       "title": "«Impressionné par ce qu’il fait, par sa maturité» : Jérémy Jacquet, l’homme pressé des Bleus qui a tapé dans l’oeil de Zidane - Le Figaro",
+       "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQVjlUV08zYkFMUGJCWDZFU3otR05zNElHM3RWWWNGdmdxWG5fMGw3VnFxc0VrQlJKYWZqZDNRNWVkcWlSTFZ4QUF4RWdEZFA4aDgxUURHVkpvdlFtOHFsbE1SNFNZUThvOERsb2pJT3RxdkxWZnVMMjZmYlJtRW5oVE4zT2hPT015RS1oRTNfTENhU1pLSTdmdVlXSE91RlVLYXZ3MUNsbUo5YjFOUjgwX1J1UVdmZWVrQm1pX0hwMXVzTWVraHY0MnB5SHF2LVFZNFlBU2haeTNtLXRQTjFERDhRUmRZSDhCRkVGSTI4aVdURUg0Z3l6LVNxX19Zc0RWMDdWUlZZcjVWcFFteWZSUUZacVo?oc=5",
+       "source": "Le Figaro",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France face Belgium in the Nations League; one preview flags possible starts for Olise, Koundé and Camavinga.",
+     "text": "Zidane is reportedly giving guidance on developing new full-backs for France, a separate angle on the national team’s squad-building.",
      "sources": [
       {
-       "key": "5410493bfd0d0555",
-       "title": "France - Belgique : avec Olise, Koundé, Camavinga ? Les compos probables pour le match de Ligue des nations - Sud Ouest",
-       "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNNDRDekhpLUNBbWkzVXowRlVUTU0xaGNvLVVvT094elA3UFpDQmtwNmVyZmZDZnRpMUhFZ3pkWTgtWXJsOXZRblgtcFVwdHF1WHQzWEVDTndDUENKSXZ5bWxyOGYwZTI2c0J4aVBLNW0zZ2ItYWVqeGVNQnF4eTJSazk5TTVWa0NPUzRENzJpaDRfRjNsQk9lQ0x0ZzVIc3BKR2tEYnpDZEJMTENaS2V0eUxVZGVVMEY0U0RhTFRBVGJjd3ZNdklZakttRFJ0bXJZMVZadXplRGQyWjZqanJDWU1EcHI5WFRYOW43a096Rk9ZcDZJcHF1YUF1WVI?oc=5",
-       "source": "Sud Ouest",
+       "key": "4a9a87dabb400158",
+       "title": "Équipe de France: les consignes passées par Zinédine Zidane pour faire émerger des nouveaux latéraux - RMC Sport",
+       "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOeTdjY0hiQkw1NXR2S08yTEpSZzUwUFJlQmxtUTlOWW11Qm45SUxGMTM1UmNPTkdnbzNvQUF1aGhWUzZ5UjJLTzJYQmZCTFo0Vk1zT0Jka3pldFE5TWdQX1RVV2hEVFluNm1tcjlMaURwYTRxUldHU1JDNkJicHhtN1NjU0R5MjREYlFCOEl5ZkNiZ2Z1NU1ZbHRZUVJVcjJPWEpHb0d6MDJBdkJ5TGM5UzNwQmk3eVNYek9SekJnOUtOX1RkWDNOMFFZRUZTdklqUzQ3bjljMHpUMGNVc1g3SGdaa0FDVHYyNnJOU2lzUFJzOHpYN3lSVGpvLW13Vld3M0FN?oc=5",
+       "source": "RMC Sport",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Haaland reportedly asked to be substituted while playing for Portugal, a potential concern ahead of Manchester City’s upcoming PSG clash.",
+     "text": "PSG’s schedule points to a return to training this week, with Le Mans mentioned in the club’s programme.",
      "sources": [
       {
-       "key": "e404ff258f3d6ff9",
-       "title": "Manchester City/PSG – Haaland demande à sortir contre le Portugal, l’explication tombe - ParisFans",
-       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQeXc0OXdnU21qWFZHakQwVDI2QkJKSXBHUERfTkFIZHdjWFptNm96VGVELUY0aG1hWGxicjhSRUVnYnUwMWZsdHhZTmY1a1MtSWF6STdFdVczeFVaeC1zYWlwM18tRWJUeF9LaGtzT3RoQW91bEpjZ05hX1JWR2pNN0pfdlNHQmtNMVV6RUw2Wk5FWFlKV2VVY0JCcml5ekMzeGYyY0MxM2c0MVUxRERXY3BkX3E2MHlTLW9YdFBWVlY?oc=5",
+       "key": "a9efc29f3dab4d6d",
+       "title": "Le programme du PSG cette semaine : la reprise avec Le Mans - ParisFans",
+       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWlZLNTlfUzdnYXU3MkNGektKSlFlRXZEeEtDakRoWUJ0ckowVzZicVdSUDR0YzEzRVJ3NjFRejVoZFprOUY5Z2FQOEx6MVh3SmhaVTVJdXpSOVJCWlkyNllvTWVvb05ieUVuMl9vbV9EUHp0RkF4VXhXMVJnWURjenBHNlpkU1JXb0NrNDRnNDV5YUJONzVPUUVsRzgxajFa?oc=5",
        "source": "ParisFans",
        "via": "Google News"
       }
@@ -986,128 +971,135 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOENwTS1QOERHbmROOEZTbUFTS3ZFd2ExUUtINFBDSF9oc2xKSUt0NFp2WG1QVG9pbVIzRExlLXlCN0dCeW4wUEk1YVJlSjlHcVJ5SDhfM2VTbFhPMFhrZmxleTVCS1NDaUxNdHB0MlFsLTJMZTdpNXNMY010OExQb19La0h5RndUcHp3TU15Tlg3RVVCMV91ZTItcUxzb216QVgybHpMUQ?oc=5",
-     "source": "CulturePSG",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-05T09:50:00+00:00",
-     "new": true,
-     "key": "7e764d13cd2696a0",
-     "title": "Vitinha impresses again for Portugal",
-     "summary": "CulturePSG highlights another standout performance from Vitinha for Portugal."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbU1lbzdIU0FJRFZmMXlFazZMWF96aVRXWkdILVUtWkoxY3plOVd5Y1RDZlJ1VHZxRWNwX2E3VGZUVUdkM3I4cEt2VU5DZXZTV2J6VFBiYzhMM2EwNmxjTTRTSFZSSzJfc29iclNZN0ZSbXlFWld1c2hpVFA3bnZObnRsS1gyUVM0bURDRndSVXJhXzk0NHR5WkFVTUM?oc=5",
-     "source": "CulturePSG",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-05T10:34:00+00:00",
-     "new": true,
-     "key": "302123229ce05374",
-     "title": "PSG set return-to-training schedule ahead of Le Mans",
-     "summary": "PSG have unveiled their training schedule ahead of the match against Le Mans."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNNDRDekhpLUNBbWkzVXowRlVUTU0xaGNvLVVvT094elA3UFpDQmtwNmVyZmZDZnRpMUhFZ3pkWTgtWXJsOXZRblgtcFVwdHF1WHQzWEVDTndDUENKSXZ5bWxyOGYwZTI2c0J4aVBLNW0zZ2ItYWVqeGVNQnF4eTJSazk5TTVWa0NPUzRENzJpaDRfRjNsQk9lQ0x0ZzVIc3BKR2tEYnpDZEJMTENaS2V0eUxVZGVVMEY0U0RhTFRBVGJjd3ZNdklZakttRFJ0bXJZMVZadXplRGQyWjZqanJDWU1EcHI5WFRYOW43a096Rk9ZcDZJcHF1YUF1WVI?oc=5",
-     "source": "Sud Ouest",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNak9QY0tBTXdHS2xpdk1pelFRRGoyaFhuRXhET2Z2Mzl6NVIycGVWTE1pcHdRMVBJYXN1aTR2czhoOC0tQjBYU3lWV0hmb2NXRzZYUVdPa2JOM1pTN1BhT21oeTdDS3M1bHBoTmZkLUxDb2pLQ1pQMXdTVDcxZGR0T3JsakNwdFUteTlNNFFvMUkwaDJWOHUxRUhXVjl6dw?oc=5",
+     "source": "L'Équipe",
      "feed_name": "Team: équipe de France football",
      "via": "Google News",
-     "published": "2026-10-05T10:08:26+00:00",
+     "published": "2026-10-05T11:19:54+00:00",
      "new": true,
-     "key": "5410493bfd0d0555",
-     "title": "France–Belgium: probable line-ups for the Nations League match",
-     "summary": "The preview considers possible France starts for Olise, Koundé and Camavinga."
+     "key": "450a051a1d7e30ec",
+     "title": "France–Belgium, Nations League: live match coverage",
+     "summary": "L’Équipe is covering France’s Nations League match against Belgium live."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQeXc0OXdnU21qWFZHakQwVDI2QkJKSXBHUERfTkFIZHdjWFptNm96VGVELUY0aG1hWGxicjhSRUVnYnUwMWZsdHhZTmY1a1MtSWF6STdFdVczeFVaeC1zYWlwM18tRWJUeF9LaGtzT3RoQW91bEpjZ05hX1JWR2pNN0pfdlNHQmtNMVV6RUw2Wk5FWFlKV2VVY0JCcml5ekMzeGYyY0MxM2c0MVUxRERXY3BkX3E2MHlTLW9YdFBWVlY?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQVjlUV08zYkFMUGJCWDZFU3otR05zNElHM3RWWWNGdmdxWG5fMGw3VnFxc0VrQlJKYWZqZDNRNWVkcWlSTFZ4QUF4RWdEZFA4aDgxUURHVkpvdlFtOHFsbE1SNFNZUThvOERsb2pJT3RxdkxWZnVMMjZmYlJtRW5oVE4zT2hPT015RS1oRTNfTENhU1pLSTdmdVlXSE91RlVLYXZ3MUNsbUo5YjFOUjgwX1J1UVdmZWVrQm1pX0hwMXVzTWVraHY0MnB5SHF2LVFZNFlBU2haeTNtLXRQTjFERDhRUmRZSDhCRkVGSTI4aVdURUg0Z3l6LVNxX19Zc0RWMDdWUlZZcjVWcFFteWZSUUZacVo?oc=5",
+     "source": "Le Figaro",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-10-05T10:58:17+00:00",
+     "new": true,
+     "key": "02c419cb51282a62",
+     "title": "Jérémy Jacquet catches Zidane’s eye",
+     "summary": "Le Figaro reports that Zidane is impressed by the young defender’s maturity and progress."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOeTdjY0hiQkw1NXR2S08yTEpSZzUwUFJlQmxtUTlOWW11Qm45SUxGMTM1UmNPTkdnbzNvQUF1aGhWUzZ5UjJLTzJYQmZCTFo0Vk1zT0Jka3pldFE5TWdQX1RVV2hEVFluNm1tcjlMaURwYTRxUldHU1JDNkJicHhtN1NjU0R5MjREYlFCOEl5ZkNiZ2Z1NU1ZbHRZUVJVcjJPWEpHb0d6MDJBdkJ5TGM5UzNwQmk3eVNYek9SekJnOUtOX1RkWDNOMFFZRUZTdklqUzQ3bjljMHpUMGNVc1g3SGdaa0FDVHYyNnJOU2lzUFJzOHpYN3lSVGpvLW13Vld3M0FN?oc=5",
+     "source": "RMC Sport",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-10-05T10:25:32+00:00",
+     "new": true,
+     "key": "4a9a87dabb400158",
+     "title": "Zidane’s instructions for France’s new full-backs",
+     "summary": "RMC Sport reports on Zidane’s guidance aimed at developing new full-backs for France."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWlZLNTlfUzdnYXU3MkNGektKSlFlRXZEeEtDakRoWUJ0ckowVzZicVdSUDR0YzEzRVJ3NjFRejVoZFprOUY5Z2FQOEx6MVh3SmhaVTVJdXpSOVJCWlkyNllvTWVvb05ieUVuMl9vbV9EUHp0RkF4VXhXMVJnWURjenBHNlpkU1JXb0NrNDRnNDV5YUJONzVPUUVsRzgxajFa?oc=5",
      "source": "ParisFans",
      "feed_name": "Team: PSG",
      "via": "Google News",
-     "published": "2026-10-05T10:50:00+00:00",
+     "published": "2026-10-05T10:25:00+00:00",
      "new": true,
-     "key": "e404ff258f3d6ff9",
-     "title": "Haaland asks to come off against Portugal",
-     "summary": "A report says Haaland asked to be substituted while playing against Portugal."
+     "key": "a9efc29f3dab4d6d",
+     "title": "PSG’s schedule this week",
+     "summary": "ParisFans says PSG return to training this week, with Le Mans included in the programme."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-10-05T11:00:39.107363+00:00",
-   "input_fingerprint": "sha256:82c5d62700bd89f2a8e1932ddb80ca80b5f98d6f50164b09d5733fd4e5290965",
-   "last_success_at": "2026-10-05T11:00:39.107363+00:00",
+   "source_checked_at": "2026-10-05T12:06:06.381748+00:00",
+   "input_fingerprint": "sha256:b140408b842e92873bb5cc665f1bb1e8938c5f8f4869fe1a2e0ad1909d7370f4",
+   "last_success_at": "2026-10-05T12:06:06.381748+00:00",
    "error": "Source check failed: CulturePSG",
-   "candidate_count": 266,
+   "candidate_count": 280,
    "new_count": 4
   },
   "finance": {
    "briefing": [
     {
-     "text": "The euro has fallen to a 17-month low as French fiscal worries and high energy prices weigh on the currency.",
+     "text": "France’s debt concerns are again weighing on the euro, a relevant European risk to monitor alongside domestic bond-market pressures.",
      "sources": [
       {
-       "key": "35ca650bcd4d977f",
-       "title": "Euro slides to 17-month low against dollar",
-       "url": "https://www.ft.com/content/8b19b9f7-9237-47bf-bc50-d8b78aa7fe24?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "An FT commentary argues the ECB should pause quantitative tightening until bond-market conditions stabilise.",
-     "sources": [
-      {
-       "key": "061de37377de10f2",
-       "title": "Bond turbulence means it’s time for the ECB to put QT on hold",
-       "url": "https://www.ft.com/content/e0dfef01-4933-4ab9-8927-d08115f4822c",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Schneider Electric is reportedly pursuing PTC in a deal worth more than $20 billion, a major transaction in industrial technology.",
-     "sources": [
-      {
-       "key": "82333db3771dacb4",
-       "title": "Schneider Electric to Acquire PTC for More Than $20 Billion - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOS2h1OWdkSG4zRGsxUFFYWmhHZ2Uwc3ZzOS0tekJJSGcxYllCODc3TFJneVU3YmFRMnZ3eFlfeHYwWmdVZnhZRDduRjVKR0ZybDN4UHRUdjBuczVkd1lub21HYmdzNzlUc3V2eUYtVlNBYkRZRU5LWGxoNUg0b3ZnSjFieXl0RkdJTnlFQWpMdjl0aTlSRk5QaDZxTjJEYl8xN19DWmNBbk5qNnVhMXc?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "CNP is seeking to acquire Prudential’s Brazilian businesses, adding a sizeable insurance-sector transaction to the agenda.",
-     "sources": [
-      {
-       "key": "404ef9bf80407de1",
-       "title": "Assurances : CNP tente de s'emparer des activités de Prudential au Brésil - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRnRjaTZ6a2Znd3kxRW5hSDJiYnFzVkpEQm9UMkxweEYwRWgzMVlybkpFZmUydkJjV3ZpYllhZU84NTZlaUF2UFRBWVRXX29uUGxqc0hwVFp5RVdkUHFoZFFnV1c5bDVNQ2VkOG9DbXVuYVJEY2NNNDZjNlpCYnBuNjc1WHMzUldYS3FkczhaVnZtbjZGQzBTMDFsN0FmYnVURHhHcWdtT3h5NVVMSUhPYjJaZVFzNzdMZFlFSDYzMG9LVHJGVHdPOEdWS1VsWEtDZFE?oc=5",
+       "key": "760575d9e36203f1",
+       "title": "L'euro rattrapé par la crise de la dette française - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNYW1sUnJENEVUWXQ2aGJKOUlCMXJoZXNiMUVPandxLVlzQ1d3NkNibjhnM05XbnVUZnMxRWtESGlsb2NpV05IemxzTmtPTVZrX2FJeTlKd2Y0T0JoNXJNMlBKMWF2QUVONEVpWEdreW1mc0FJYWM0aU8xM2ctb1BhbHZNZmtOQ3RwcTF3eThra1lQaHJSNFptYWQwcE1JU0RlWHNWLWxUME1FZGJIaERkWTZNcUNVdDg?oc=5",
        "source": "Les Echos",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Aramco’s chief says oil inventories are exceptionally thin after Middle East conflict, and rebuilding them could take up to two years.",
+     "text": "Emerging-market assets rose as markets pared expectations of a Fed hike and oil prices fell.",
      "sources": [
       {
-       "key": "8fa477c3526bce94",
-       "title": "Saudi Aramco chief warns world’s oil stockpiles are ‘scarily thin’",
-       "url": "https://www.ft.com/content/53e88a8d-65b5-445e-82ee-aee253a32094?syn-25a6b1a6=1",
-       "source": "FT",
+       "key": "978211986f5be229",
+       "title": "Emerging-Market Assets Climb as Fed Hike Bets Cool, Oil Drops - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObFd3VDVxVXBJOHN2WUNVdXZlZ2lxQUJaa0JTRGlsQjAyM3FncHIzUlFkYjdvN1R2ei13LUxoSGlPMC1tRDB4NDdZdll2WV9NSWQ3Tm9la2k0elhPaVpfc1JEZ01HWG4wcU1MUENhREljdDhjdFViYVF4U3Y0eGctejdBLUJoT1pXVFhaV0FZVDJLeHhPZm9LUk0wazZMRXNTZXJLUmNjSzQzbnYxcmlYbA?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Markets are assessing how weak U.S. jobs data could affect the Fed’s path; gold edged higher as investors weighed the implications.",
+     "sources": [
+      {
+       "key": "c0fb588bacf34a52",
+       "title": "Gold Edges Higher as Markets Weigh Jobs Data Impact on Fed Path - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSmh6bExCYzhDSXJEcGJJM0VIa1ltU0RaUnBQY09uZTRTc0hVTTMwbzU3bERvTlNhY29VaGVibk9iOUMtSFJJME9iZG1jaUhzV1JpaVJVWkFTbjBkbkpjT3UtRzUxTmE5QWRHVno5OEY5dEtjSU90V3I0MV8tbWdId3J1T0t4RnVtbmx3WURCaDN3QUxfYkQ5UERZMm0zVGRNd0laZHBlMVpsaXR0WE9OaVNEN3A?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      },
+      {
+       "key": "6ba5b2ab63c6fa53",
+       "title": "Live updates: Bitcoin above $86,000 as traders price out an October Fed hike",
+       "url": "https://www.coindesk.com/business/2026/10/05/live-updates-bitcoin-above-usd86-000-as-traders-price-out-an-october-fed-hike",
+       "source": "CoinDesk",
        "via": null
       }
      ]
     },
     {
-     "text": "Japan’s long-term yields have reached a fresh high as Prime Minister Takaichi reassures markets over spending plans.",
+     "text": "Investors are reacting to Brazil’s election campaign, with Bolsonaro reported to be leading Lula in the race.",
      "sources": [
       {
-       "key": "c2c47ab138b9e90f",
-       "title": "Takaichi tells markets to ‘rest assured’ over Japan spending plans",
-       "url": "https://www.ft.com/content/49526246-46ac-4154-942f-3d4d705f1652?syn-25a6b1a6=1",
+       "key": "c2b5012191edf8b7",
+       "title": "Brazil: Investor and analyst reactions to Bolsonaro lead over Lula in election - reuters.com",
+       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRzdJUDhEcjRGdGtVNkNOdkpvTFhFcHdDMUkzc1QtaEk4bjVyMW52eEJZSVFtSWQ1NFhwSGp6MTBtZjVPV3VqNUpJbnJ6b0hmcXU3UTVVWUptQWQwS3d4VnZGOERBUWtIY1Zhcmt6cDRhRkRCVFlsd0t3c0owNjBBMUtfYWpVMzhhZW9zMGs2cTRMZTY0RWxCdWZheFFfSHgtTUJqeElRZUdveVI4Mmt2eklZT1p5YVYzMEE?oc=5",
+       "source": "reuters.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Yemen’s internationally backed government is preparing an operation to retake Houthi-held territory, as the conflict escalates.",
+     "sources": [
+      {
+       "key": "d18ac370ae1ec7b3",
+       "title": "Yemen launches push to retake territory captured by Houthis",
+       "url": "https://www.ft.com/content/a48af44e-84fb-4ce9-b7ce-d1895d0a0f05?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "ExxonMobil and Suncor have asked the U.S. Supreme Court to block state action over a climate-damages claim.",
+     "sources": [
+      {
+       "key": "dede9943a09fdaef",
+       "title": "Big Oil goes to US Supreme Court over pivotal climate damages claim",
+       "url": "https://www.ft.com/content/4d2078c4-4773-4d4c-8544-c17169362579?syn-25a6b1a6=1",
        "source": "FT Markets",
        "via": null
       }
@@ -1116,105 +1108,83 @@
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/8b19b9f7-9237-47bf-bc50-d8b78aa7fe24?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-10-05T07:43:45+00:00",
-     "new": true,
-     "key": "35ca650bcd4d977f",
-     "title": "Euro slides to a 17-month low against the dollar",
-     "summary": "High energy prices and concerns over France’s public finances are adding pressure on the euro."
-    },
-    {
-     "url": "https://www.ft.com/content/e0dfef01-4933-4ab9-8927-d08115f4822c",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-10-05T10:22:05+00:00",
-     "new": true,
-     "key": "061de37377de10f2",
-     "title": "Bond turbulence means it’s time for the ECB to put QT on hold",
-     "summary": "The FT argues the ECB should pause quantitative tightening until bond-market conditions become more stable."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOS2h1OWdkSG4zRGsxUFFYWmhHZ2Uwc3ZzOS0tekJJSGcxYllCODc3TFJneVU3YmFRMnZ3eFlfeHYwWmdVZnhZRDduRjVKR0ZybDN4UHRUdjBuczVkd1lub21HYmdzNzlUc3V2eUYtVlNBYkRZRU5LWGxoNUg0b3ZnSjFieXl0RkdJTnlFQWpMdjl0aTlSRk5QaDZxTjJEYl8xN19DWmNBbk5qNnVhMXc?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-05T09:03:05+00:00",
-     "new": true,
-     "key": "82333db3771dacb4",
-     "title": "Schneider Electric to acquire PTC for more than $20 billion",
-     "summary": "Schneider Electric is reportedly set to acquire PTC in a transaction valued above $20 billion."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRnRjaTZ6a2Znd3kxRW5hSDJiYnFzVkpEQm9UMkxweEYwRWgzMVlybkpFZmUydkJjV3ZpYllhZU84NTZlaUF2UFRBWVRXX29uUGxqc0hwVFp5RVdkUHFoZFFnV1c5bDVNQ2VkOG9DbXVuYVJEY2NNNDZjNlpCYnBuNjc1WHMzUldYS3FkczhaVnZtbjZGQzBTMDFsN0FmYnVURHhHcWdtT3h5NVVMSUhPYjJaZVFzNzdMZFlFSDYzMG9LVHJGVHdPOEdWS1VsWEtDZFE?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNYW1sUnJENEVUWXQ2aGJKOUlCMXJoZXNiMUVPandxLVlzQ1d3NkNibjhnM05XbnVUZnMxRWtESGlsb2NpV05IemxzTmtPTVZrX2FJeTlKd2Y0T0JoNXJNMlBKMWF2QUVONEVpWEdreW1mc0FJYWM0aU8xM2ctb1BhbHZNZmtOQ3RwcTF3eThra1lQaHJSNFptYWQwcE1JU0RlWHNWLWxUME1FZGJIaERkWTZNcUNVdDg?oc=5",
      "source": "Les Echos",
      "feed_name": "Les Echos Finance",
      "via": "Google News",
-     "published": "2026-10-05T10:00:37+00:00",
+     "published": "2026-10-05T10:54:37+00:00",
      "new": true,
-     "key": "404ef9bf80407de1",
-     "title": "CNP seeks to acquire Prudential’s Brazilian businesses",
-     "summary": "CNP is attempting to acquire Prudential’s activities in Brazil."
+     "key": "760575d9e36203f1",
+     "title": "France’s debt crisis weighs on the euro",
+     "summary": "A Les Echos report says concerns over France’s debt crisis are weighing on the euro."
     },
     {
-     "url": "https://www.ft.com/content/53e88a8d-65b5-445e-82ee-aee253a32094?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-10-05T08:21:07+00:00",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObFd3VDVxVXBJOHN2WUNVdXZlZ2lxQUJaa0JTRGlsQjAyM3FncHIzUlFkYjdvN1R2ei13LUxoSGlPMC1tRDB4NDdZdll2WV9NSWQ3Tm9la2k0elhPaVpfc1JEZ01HWG4wcU1MUENhREljdDhjdFViYVF4U3Y0eGctejdBLUJoT1pXVFhaV0FZVDJLeHhPZm9LUk0wazZMRXNTZXJLUmNjSzQzbnYxcmlYbA?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-05T10:47:37+00:00",
      "new": true,
-     "key": "8fa477c3526bce94",
-     "title": "Aramco chief warns oil stockpiles are ‘scarily thin’",
-     "summary": "Amin Nasser says Middle East conflict has depleted inventories that could take up to two years to rebuild."
+     "key": "978211986f5be229",
+     "title": "Emerging-market assets rise as Fed hike bets cool",
+     "summary": "Emerging-market assets climbed as expectations of a Fed hike eased and oil prices fell."
     },
     {
-     "url": "https://www.ft.com/content/49526246-46ac-4154-942f-3d4d705f1652?syn-25a6b1a6=1",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSmh6bExCYzhDSXJEcGJJM0VIa1ltU0RaUnBQY09uZTRTc0hVTTMwbzU3bERvTlNhY29VaGVibk9iOUMtSFJJME9iZG1jaUhzV1JpaVJVWkFTbjBkbkpjT3UtRzUxTmE5QWRHVno5OEY5dEtjSU90V3I0MV8tbWdId3J1T0t4RnVtbmx3WURCaDN3QUxfYkQ5UERZMm0zVGRNd0laZHBlMVpsaXR0WE9OaVNEN3A?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-05T11:11:29+00:00",
+     "new": true,
+     "key": "c0fb588bacf34a52",
+     "title": "Gold edges higher as markets weigh jobs data and Fed path",
+     "summary": "Gold rose as markets assessed the impact of jobs data on the Federal Reserve’s policy outlook."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRzdJUDhEcjRGdGtVNkNOdkpvTFhFcHdDMUkzc1QtaEk4bjVyMW52eEJZSVFtSWQ1NFhwSGp6MTBtZjVPV3VqNUpJbnJ6b0hmcXU3UTVVWUptQWQwS3d4VnZGOERBUWtIY1Zhcmt6cDRhRkRCVFlsd0t3c0owNjBBMUtfYWpVMzhhZW9zMGs2cTRMZTY0RWxCdWZheFFfSHgtTUJqeElRZUdveVI4Mmt2eklZT1p5YVYzMEE?oc=5",
+     "source": "reuters.com",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-05T10:06:03+00:00",
+     "new": true,
+     "key": "c2b5012191edf8b7",
+     "title": "Investors react to Bolsonaro’s lead over Lula in Brazil election",
+     "summary": "Reuters reports investor and analyst reactions to Bolsonaro leading Lula in Brazil’s election."
+    },
+    {
+     "url": "https://www.ft.com/content/a48af44e-84fb-4ce9-b7ce-d1895d0a0f05?syn-25a6b1a6=1",
      "source": "FT Markets",
      "feed_name": "FT Markets",
      "via": null,
-     "published": "2026-10-05T07:24:39+00:00",
+     "published": "2026-10-05T09:09:07+00:00",
      "new": true,
-     "key": "c2c47ab138b9e90f",
-     "title": "Takaichi reassures markets over Japan spending plans",
-     "summary": "Japan’s long-term bond yields reached a fresh high as Prime Minister Takaichi said she would control new issuance."
+     "key": "d18ac370ae1ec7b3",
+     "title": "Yemen government launches push to retake Houthi-held territory",
+     "summary": "Yemen’s army is set to begin operations to retake territory captured by the Houthis."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeHJ4WjNIQUVnR3lNNER0dUoybmJBb2lVVl9Zbkx2dzVsNEdrdFZUcFp2X0FPVDV3YTFoMUxXVFVvT1JnRE15UUJFNXF6aTBUOTYxMXNicnNuUU9EZkMySkdRWTlvRjV2MEcwOXFxdldaekR5enFZRkJVUjdzblJlMUd5UXJFQzBSdzFFWnhfZjYwRFRWMkRDXzVTaEJIa1JsTUpxZFNTSEttM01kb1hINg?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-05T07:36:12+00:00",
+     "url": "https://www.ft.com/content/4d2078c4-4773-4d4c-8544-c17169362579?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-10-05T11:00:04+00:00",
      "new": true,
-     "key": "ad1cde01db45067d",
-     "title": "Copper gains as US jobs data eases Fed tightening concerns",
-     "summary": "Copper rose after US jobs data eased concerns about further Federal Reserve tightening."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcVE1LUh3N29JRWt5a0lIXzZUVTIzUkx4VHBUbGRrUHFJaHVnWm0ycG0wQUhSZDItSkFKZ0hnNTdDN0FFbmRiWUtRRTFkVkJwTE54YjZZSndUcy1qMmZaMU5tM0d5SWhSWGpVcENwLUw3QXNuLVZHNFBLbUFvUzJ3azBPRXN1OUd1UjNzNTl6Zms1dGl1Q3FxaTNxRHNSQmZpNVVLaUJaMkVNZTdXSGdsbXdqVEE?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-05T07:39:57+00:00",
-     "new": true,
-     "key": "ba9ae5bc26b03d2d",
-     "title": "US and India trade-deal talks appear stalled",
-     "summary": "Officials from the United States and India signalled that trade-deal talks were at an impasse."
+     "key": "dede9943a09fdaef",
+     "title": "Big Oil takes climate-damages claim to U.S. Supreme Court",
+     "summary": "ExxonMobil and Suncor are asking the Supreme Court to block state action over a climate-damages claim."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-05T11:00:39.107363+00:00",
-   "input_fingerprint": "sha256:144d1321918ad5d6ef30c0e31df77493f318a9433a585143cea2cf7cc1f93be4",
-   "last_success_at": "2026-10-05T11:00:39.107363+00:00",
+   "source_checked_at": "2026-10-05T12:06:06.381748+00:00",
+   "input_fingerprint": "sha256:baa428691b9af8f4b3ff251d51eb812d6c36ec2a93bb5355b2ef5f9be0492f11",
+   "last_success_at": "2026-10-05T12:06:06.381748+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 576.2,
-     "change_pct": 0.66,
+     "price": 576.6,
+     "change_pct": 0.73,
      "currency": "CHF",
      "as_of": "2026-10-04T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1224,8 +1194,8 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 742.32,
-     "change_pct": 0.38,
+     "price": 743.1,
+     "change_pct": 0.49,
      "currency": "EUR",
      "as_of": "2026-10-04T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1235,8 +1205,8 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 104.36,
-     "change_pct": 0.31,
+     "price": 104.6,
+     "change_pct": 0.54,
      "currency": "EUR",
      "as_of": "2026-10-04T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1246,8 +1216,8 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 293.0,
-     "change_pct": 0.57,
+     "price": 293.5,
+     "change_pct": 0.74,
      "currency": "EUR",
      "as_of": "2026-10-04T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1257,8 +1227,8 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 312.25,
-     "change_pct": 0.19,
+     "price": 313.2,
+     "change_pct": 0.5,
      "currency": "EUR",
      "as_of": "2026-10-04T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1268,8 +1238,8 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 9.61,
-     "change_pct": 1.51,
+     "price": 9.63,
+     "change_pct": 1.67,
      "currency": "EUR",
      "as_of": "2026-10-04T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1279,8 +1249,8 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 56.59,
-     "change_pct": -0.3,
+     "price": 56.7,
+     "change_pct": -0.11,
      "currency": "EUR",
      "as_of": "2026-10-04T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1290,8 +1260,8 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 71.97,
-     "change_pct": 0.81,
+     "price": 71.89,
+     "change_pct": 0.7,
      "currency": "EUR",
      "as_of": "2026-10-04T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1301,8 +1271,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 86043.13,
-     "change_pct": -0.51,
+     "price": 86154.4,
+     "change_pct": -0.38,
      "currency": "USD",
      "as_of": "2026-10-05T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1312,8 +1282,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2714.01,
-     "change_pct": -0.46,
+     "price": 2718.0,
+     "change_pct": -0.31,
      "currency": "USD",
      "as_of": "2026-10-05T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1321,8 +1291,8 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 202,
-   "new_count": 8
+   "candidate_count": 224,
+   "new_count": 6
   },
   "media": {
    "briefing": "",
@@ -1366,24 +1336,14 @@
      "duration_s": null,
      "new": false,
      "key": "7275c2b06738428a"
-    },
-    {
-     "title": "The Taliban Could Lose Afghanistan: They’re Being Attacked On Four Fronts At Once",
-     "url": "https://www.youtube.com/watch?v=eH4UvsrSWDc",
-     "source": "VisualPolitik EN",
-     "kind": "video",
-     "published": "2026-10-02T12:00:27+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "a8da266a8c4c02e6"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-10-05T11:00:39.107363+00:00",
-   "candidate_count": 5,
+   "source_checked_at": "2026-10-05T12:06:06.381748+00:00",
+   "candidate_count": 4,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-10-05T11:00:00.000Z"
+ "scheduled_slot": "2026-10-05T11:00:00Z"
 }
