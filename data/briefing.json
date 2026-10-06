@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261006T110038355692Z",
- "generated_at": "2026-10-06T11:00:38.355692+00:00",
- "generated_local": "Tue 06 Oct 2026, 13:00",
- "source_checked_at": "2026-10-06T11:00:38.355692+00:00",
+ "edition_id": "ed-20261006T115054189869Z",
+ "generated_at": "2026-10-06T11:50:54.189869+00:00",
+ "generated_local": "Tue 06 Oct 2026, 13:50",
+ "source_checked_at": "2026-10-06T11:50:54.189869+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-10-06T11:00:38.355692+00:00"
+  "run-2026-10-06T11:50:54.189869+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-10-06T11:00:38.355692+00:00"
+  "completed_at": "2026-10-06T11:50:54.189869+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 25,
+   "item_count": 26,
    "reason": null,
    "failure": null,
-   "parsed_count": 25,
+   "parsed_count": 26,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -189,10 +189,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 111,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 111,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -271,7 +271,7 @@
    "diagnostic": {
     "status_code": 403,
     "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html;"
+    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html"
    }
   },
   {
@@ -422,10 +422,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 9,
+   "item_count": 10,
    "reason": null,
    "failure": null,
-   "parsed_count": 9,
+   "parsed_count": 10,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -689,9 +689,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002182,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.002291,
+  "est_month_usd": 0.21,
+  "forecast_month_usd": 0.21,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -699,60 +699,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6627,
+    "latency_ms": 9781,
     "unknown": false,
     "provider_request_ids": [
-     "resp_047361167d9c069a016ac4d4e9574087d1bc122294bdb965b3"
+     "resp_0cb3a3041c841570016ac4e0a5b2c887d29097a00733f3749c"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3188,
-    "output_tokens": 538,
-    "reasoning_tokens": 130
+    "cache_write_tokens": 3323,
+    "output_tokens": 710,
+    "reasoning_tokens": 201
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7455,
+    "latency_ms": 7562,
     "unknown": false,
     "provider_request_ids": [
-     "resp_086d8495da75877b016ac4d4ef4e0c87d19ba0bf8f696afb6b"
+     "resp_07503bea505312f4016ac4e0ae970c87d2a7e1f8a92f309658"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3633,
-    "output_tokens": 564,
-    "reasoning_tokens": 191
+    "cache_write_tokens": 3542,
+    "output_tokens": 569,
+    "reasoning_tokens": 214
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7465,
+    "latency_ms": 7782,
     "unknown": false,
     "provider_request_ids": [
-     "resp_094e7a0ce25899ab016ac4d4f6c5c087d187297d4d3f2197f4"
+     "resp_08dcdd3a19886aeb016ac4e0b629cc87d289a150c02c3e5cea"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3449,
-    "output_tokens": 693,
-    "reasoning_tokens": 156
+    "cache_write_tokens": 3370,
+    "output_tokens": 740,
+    "reasoning_tokens": 275
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10270,
-  "output_tokens": 1795,
-  "reasoning_tokens": 477,
+  "cache_write_tokens": 10235,
+  "output_tokens": 2019,
+  "reasoning_tokens": 690,
   "recorded_month_to_date": {
    "month_utc": "2026-10",
-   "recorded_runs": 23,
-   "attempts": 69,
-   "known_cost_usd": 0.051303,
+   "recorded_runs": 24,
+   "attempts": 72,
+   "known_cost_usd": 0.053594,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -761,344 +761,357 @@
   "news": {
    "briefing": [
     {
-     "text": "Fresh attacks on Black Sea vessels have left sailors missing as Russia steps up strikes in the region; responsibility for the attacks remains unclear.",
+     "text": "European shares advanced in mid-session trading as bond yields and oil prices fell; Milan was among the stronger markets.",
      "sources": [
       {
-       "key": "e8d3bfd1f5b03d76",
-       "title": "Sailors missing after fresh attacks on Black Sea vessels, Bulgaria says",
-       "url": "https://www.bbc.co.uk/news/articles/c8ly0v5r602eo?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Students and teachers staged what Reuters describes as France’s biggest day of high-school protests, putting domestic unrest among the week’s key developments.",
-     "sources": [
-      {
-       "key": "6a63f9801fd6f355",
-       "title": "Students and teachers march in France on biggest day of high school protests - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTmtvTm9vbkpQcVdlWl9Lall5TlIyS1g2aWpJSEh3Z0hKbzdOYmZkRUlNWVRHMkZsOFNaMkwyNjhpVEtfQW9vUjhnTV93VlRGOXVnOUg1M0loSmk1bzF2dFJldExORU9tYTdabmQtTWNMOHkxbWhLZUR4bElDYUp5bWN2RmV2bVhVYVB3WW1KLXJaRVREdVQ1WXpuMUJtUXFk?oc=5",
-       "source": "Reuters",
+       "key": "88c7ab524d85cfbb",
+       "title": "Borsa: Europa positiva a meta' seduta con calo rendimenti e petrolio, Milano +0,8% - Il Sole 24 ORE",
+       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA2OUhlZXpHT3ZLYU9Rb3E2RGZvdGc1WU5iaUg5bE1Eb3N3c1NxVnAta3owVld0RGN1UDlPMzVyRUtYT1c3djRPVWxja3I5YXRrWXpraGVSRm1iVS1YbEJxRnJLc1AyMkxEZEZvSlhuVmxBempr?oc=5",
+       "source": "Il Sole 24 ORE",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "EU officials are due to discuss the release of oil reserves, though the report gives no details on the proposed position or timing.",
+     "text": "AMD’s valuation reached $1 trillion as demand for CPUs used in AI-agent workloads lifted the chipmaker, highlighting a shift in AI infrastructure spending.",
      "sources": [
       {
-       "key": "27714e8dfeec6e43",
-       "title": "Domani la riunione del gruppo Ue sul petrolio, focus sul rilascio scorte",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/06/domani-la-riunione-del-gruppo-ue-sul-petrolio-focus-sul-rilascio-scorte_388157bf-b10a-442d-bf30-f81f00b7f402.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Banks are expanding AI use even as regulators urge caution, while a separate insurance-sector report highlights insurers’ continuing reservations about trusting the technology.",
-     "sources": [
-      {
-       "key": "16a9d1b44af6f0c3",
-       "title": "Banks accelerate AI adoption as regulators urge caution - The Banker magazine",
-       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9DZTdlTHpXSTNndkR3V1JhQnZTYWlzakZkaFFlbzhheHhPVFdkZFhRakVjMjM2N3NzWFV2UGplRzRkcHRaQkEyTEFLdHoyWl9PeTYyS0ZhVTJpMDVUN1ZpSXBXdnc4RG9HM0lqVUNBNFVwckhQRGZyZnFR?oc=5",
-       "source": "The Banker magazine",
-       "via": "Google News"
-      },
-      {
-       "key": "5c36d0322f01b17d",
-       "title": "Why insurers don't fully trust AI yet - Insurance Business",
-       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYU1yR0tiZTBWbkM3TS0zWXVlaWJ3ZG1ka2lhQ1h4b0JmakVGQ0VPcWplVVJobm02ektONDltMUM5bVlYMWhxRHVwbkF2Y0tGQndOTHdqeVdhRGx5X2Y1SzN6NWJjdHZuRXpMcmRmMHlFQ2t6RmRQTzc4WHNOenl5QnRKY1pIWXh4anUzRGYtaWlpdm8zbEE?oc=5",
-       "source": "Insurance Business",
+       "key": "9d7fd3d4c2a53e8e",
+       "title": "AMD hits $1 trillion market cap as AI agents boost CPU demand - qz.com",
+       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9RNW5lQ0oxMWppaENfczlzNENiaTlMaEVSLVdTdXdGd2VaTDlCY0t3bXI4bzhFcThmelhfUTlMT2luVkpYRDhNUFVhQ2Jndm80eEUtTFpQc09EM0hmVFdzZklYOEk0RlpKMThUM0lTYmN6RTJWYzVv?oc=5",
+       "source": "qz.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Spain’s Constitutional Court has opened a path toward amnesty for Carles Puigdemont, according to ANSA’s report on its order to the Supreme Court.",
+     "text": "OpenAI and Anthropic face rising price pressure from major AI users, a potential challenge to the economics of their services.",
      "sources": [
       {
-       "key": "9cd29710356cf9f7",
-       "title": "La Corte costituzionale spagnola apre la strada all'amnistia per Puigdemont",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/06/la-corte-costituzionale-spagnola-apre-la-strada-allamnistia-per-puigdemont_66c4e94a-1e7a-4cd7-89d5-812d80b7f07b.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://www.bbc.co.uk/news/articles/c8ly0v5r602eo?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-10-06T10:37:19+00:00",
-     "new": true,
-     "key": "e8d3bfd1f5b03d76",
-     "title": "Sailors missing after fresh attacks on Black Sea vessels",
-     "summary": "Bulgaria says sailors are missing after new attacks on Black Sea vessels, whose perpetrators remain unclear."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTmtvTm9vbkpQcVdlWl9Lall5TlIyS1g2aWpJSEh3Z0hKbzdOYmZkRUlNWVRHMkZsOFNaMkwyNjhpVEtfQW9vUjhnTV93VlRGOXVnOUg1M0loSmk1bzF2dFJldExORU9tYTdabmQtTWNMOHkxbWhLZUR4bElDYUp5bWN2RmV2bVhVYVB3WW1KLXJaRVREdVQ1WXpuMUJtUXFk?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-06T10:22:21+00:00",
-     "new": true,
-     "key": "6a63f9801fd6f355",
-     "title": "Students and teachers march in France amid high-school protests",
-     "summary": "Students and teachers marched in France on what Reuters called the biggest day of high-school protests."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/06/domani-la-riunione-del-gruppo-ue-sul-petrolio-focus-sul-rilascio-scorte_388157bf-b10a-442d-bf30-f81f00b7f402.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-10-06T10:16:17+00:00",
-     "new": true,
-     "key": "27714e8dfeec6e43",
-     "title": "EU group to discuss oil reserves",
-     "summary": "An EU group is due to meet to define the bloc’s position on releasing oil reserves."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9DZTdlTHpXSTNndkR3V1JhQnZTYWlzakZkaFFlbzhheHhPVFdkZFhRakVjMjM2N3NzWFV2UGplRzRkcHRaQkEyTEFLdHoyWl9PeTYyS0ZhVTJpMDVUN1ZpSXBXdnc4RG9HM0lqVUNBNFVwckhQRGZyZnFR?oc=5",
-     "source": "The Banker magazine",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-10-06T10:46:55+00:00",
-     "new": true,
-     "key": "16a9d1b44af6f0c3",
-     "title": "Banks accelerate AI adoption as regulators urge caution",
-     "summary": "Banks are accelerating AI adoption while regulators warn of risks."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYU1yR0tiZTBWbkM3TS0zWXVlaWJ3ZG1ka2lhQ1h4b0JmakVGQ0VPcWplVVJobm02ektONDltMUM5bVlYMWhxRHVwbkF2Y0tGQndOTHdqeVdhRGx5X2Y1SzN6NWJjdHZuRXpMcmRmMHlFQ2t6RmRQTzc4WHNOenl5QnRKY1pIWXh4anUzRGYtaWlpdm8zbEE?oc=5",
-     "source": "Insurance Business",
-     "feed_name": "Topic: insurance industry",
-     "via": "Google News",
-     "published": "2026-10-06T10:33:46+00:00",
-     "new": true,
-     "key": "5c36d0322f01b17d",
-     "title": "Why insurers don’t fully trust AI yet",
-     "summary": "The article examines insurers’ reservations about trusting AI."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/06/la-corte-costituzionale-spagnola-apre-la-strada-allamnistia-per-puigdemont_66c4e94a-1e7a-4cd7-89d5-812d80b7f07b.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-10-06T10:33:13+00:00",
-     "new": true,
-     "key": "9cd29710356cf9f7",
-     "title": "Spain’s Constitutional Court opens path to Puigdemont amnesty",
-     "summary": "Spain’s Constitutional Court ordered the Supreme Court to grant amnesty to independence leaders."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-10-06T11:00:38.355692+00:00",
-   "input_fingerprint": "sha256:d66f672e2d016f03dc0b88868631fc7e687ddbc2d30abbff3feae57abd258abd",
-   "last_success_at": "2026-10-06T11:00:38.355692+00:00",
-   "candidate_count": 509,
-   "new_count": 6
-  },
-  "sport": {
-   "briefing": [
-    {
-     "text": "Warren Zaïre-Emery is among the Golden Boy finalists, alongside a former PSG player, keeping the club represented among Europe’s leading young talents.",
-     "sources": [
-      {
-       "key": "10a72e5c4a81629f",
-       "title": "Club : Zaïre-Emery et un ancien du PSG parmi les finalistes du Golden Boy 2026 - culturepsg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTmJvNFpmeE5lVVRZNkhVdFZ1RkNBQXU3bXJmOXNUVkk1UEhoTGtuWW9UUktZQUpsNEdjMkdrZEhtNnlXTkdjaXVzUmpHZzdpLWlnZ1NfVmVtblBHVnJYaFJLSlRoX2pKX2kzT0FZRGhuZnZBbm95MUNIXzZkQ2QwcE9YblhsYlUzOUR1SFFlZ0RNTzYtV1FyX1dWbVB1UHJUTncyN0o5anNOQzBvd0I5QkdFcXg?oc=5",
-       "source": "culturepsg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Zinedine Zidane has matched a 24-year-old record in his early run as France coach; the next gathering is scheduled for Bordeaux in November.",
-     "sources": [
-      {
-       "key": "675eaab72083e42d",
-       "title": "Équipe de France : Zinedine Zidane égale un record vieux de 24 ans - Le Parisien",
-       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNVXR5SlloZTB0UjZQcDh3WFJ3TFpIYVhQUWJSX2FuX084clN2RjBmb0JhX28zUnpGRmJMOHVQWERYamMzUjZCUHBCdjh0dzl6WTNuWlpfZ2xoakp0MF9ScThKSnVSUmZWM2lpdWE3NlBoRHBDUkFpQnRrWVk3Z2dZYWJrWGZaYnVHdS14c2tLMzBXRGFRTXltTUNzN3dZanl2eVhjeWpXcWhvTzV3Y3RfNHQyTGYwNlAwQUF3bkhWMlk2RU5QU2sxcUNoaHZQOUc1YkNmRkEyQ09FdWhmUDYxM09lMVhYQnJPNE9RaG9OUmEzQ1NoMWtLVg?oc=5",
-       "source": "Le Parisien",
-       "via": "Google News"
-      },
-      {
-       "key": "ea3bfec69628c9c1",
-       "title": "L’équipe de France à Bordeaux en novembre : Mbappé, Dembélé, Tchouaméni… Après les premières réussies de Zidane, les enjeux du prochain rassemblement - Sud Ouest",
-       "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOQlZqc0JhSVBpWGx3elRrZ2lKNXlaUHJIR3F3a3BCNi0taTFPSXhfS19VYng1ZlBYRTdqRmZFUTZmZEY2V1FpZkZHc2tjZVN4Qm43ajRmS2RNb3JwMVdzbGs2dy0tUFZMZGliV2dyeEFLRXVYUnJkZzlsZkRkTWZ0dHhNZ0RURTVtNXUxS1FKTC1SZkdWLVBXNHBKbmc1Vi1SczE1S3NBNDdscFZpLVhsanN4ZjdRSFVoVGo3T0p0d3JGdEVVWENtTjVZNVpHQlcwNjdzSHhHUHB5OXV1SFZ1VkR3RDNIVWhOa25IWlRaUUVBQnJkdlhWMzk2dVMwSHdVVnJrcGNxYng1ckVSWUNFUjFwdEE?oc=5",
-       "source": "Sud Ouest",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Talks over PSG’s future stadium are advancing, with a possible sale of the Parc des Princes reportedly becoming more concrete.",
-     "sources": [
-      {
-       "key": "2bb4312752b7bb1a",
-       "title": "️[News-Club] Futur stade du PSG : les discussions avancent, la vente du Parc des Princes se précise (Le Parisien) - Les Titis du PSG",
-       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNVi1YT09KR0hYMXd1ckZBWjg1SUZ2dTA4ZWkyVXlhRjVwWlVLZWtCVEEyYzNzeFlQa0dEZ2d4dmNVQ25YSnM0ank2SkY1S2RvcHhzNjBKeFEyc29IQUt5X2R4SU5GNGtxcXVlX1lCOVFxXy1BNmR4NkQtRGI4Ri1jSkVpZmRPajZDek9sa2NlY3JjOGxCZVBPZUlNMFd1eHJWRC1ReUFvd1BfS05yajBJRWk2RkJtaXVvMnlBZGREM2hkTnE5dHA3Z1NoV1F5RDJXdUR6dXRBMldkZy1Hc005bGN1Y1RwWHV4aWpTZk12LWtoMElxSGtDXw?oc=5",
-       "source": "Les Titis du PSG",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The early assessment of Zidane’s France side is positive: reports highlight three wins and promising beginnings, though the candidate summaries offer little detail on performances.",
-     "sources": [
-      {
-       "key": "d43ed390d0df24e6",
-       "title": "Football: Trois victoires et des promesses pour les débuts de Zidane à la tête des Bleus - Boursorama",
-       "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQMHNENEtyT2k4M2I0V1QzVmlQRHplQk1CWUtUaG44anJ1UWNjTnFGZlFNNE1nUzVpTUlTVElxSHdqUUVjU3RydW1lQVZ5Y3llX2VZV3NJNFhYZ2hyMm9ocEtBQlFzbWR5XzZERjM3aE43WVlKMVRyYUp3dDBkY2RkWWY5eEVjbFdYVEc0andkaGg3YnFra21Mck1sYnh0QWVrZzI3V0R2TXZKRTRCYks5Nk5FZGR5UTZEVDBObEFEY0o0QVlxdU9DYVpWalRleTktWnZ2NUd3VXFZRDROZ3VlTzdBb29FMzRyMTFnVl9HSlF1OTdZcTRNYkxxV1hoRzlCV0Z0RDNIUy00MUnSAZACQVVfeXFMTzh6X2lDUHlqN2NoTWR4NDNCUkJ5X2lyVUNDYUlaWEUzNkJvWnlLUkhRdmY3eVVGdDNJMXdZZGFvbzAxdC1zUDVRZVFmXzQ5d1JOekZaTF9qbUo1ZERKQ0NMRHV0ck1vbnFQd1R0Q1g0OVF1dnFhUTkyTUxPRlBrWnktUENSRDVvQnB1NFlCQmstckNXak9tX0NDMmlwNmdoODBnY3AyUENIWmlvUzlDVERXVmttUG8tZFlyRlJ3YUFwSG9PWV9Sc0VFMW1mZUJIa1FhcjczNmo0YlRCd0ZHeVVEUEhFSlZUOWVTa1h2Z3QzWER5WDh2VlFSZERYMVdDVHV3VkJRV1NvRXJxN3ZXVUo?oc=5",
-       "source": "Boursorama",
-       "via": "Google News"
-      },
-      {
-       "key": "6c1d1ac5b3a226a4",
-       "title": "Equipe de France : Après quatre matches, que faut-il retenir des Bleus de Zinédine Zidane ? - CANAL+",
-       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPSVpxWFp6UFJaVlEwUWVCWWlKVFVhWEFKSkJpZ3ZzMTduWkZlUjFDRjNOaFNtZWQ1QllKeWRmb2JGYmxVeU1mdktUYUI1RHF3Q1Y2Q3luTzdkRlBXX0p5bGN6X3g4cXp0WkVCd2JPa3g2NXFIOXM3MkZZcjAxaDladGNjY05BajJJZDJqMEk3bW51bmUyQ0lZN1B5aDRWMGVZUXQtc2NLWi04SUlZa2o4VjBUTWtUOVlTc0FMOXN1LUFSalpfVzJj?oc=5",
-       "source": "CANAL+",
-       "via": "Google News"
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTmJvNFpmeE5lVVRZNkhVdFZ1RkNBQXU3bXJmOXNUVkk1UEhoTGtuWW9UUktZQUpsNEdjMkdrZEhtNnlXTkdjaXVzUmpHZzdpLWlnZ1NfVmVtblBHVnJYaFJLSlRoX2pKX2kzT0FZRGhuZnZBbm95MUNIXzZkQ2QwcE9YblhsYlUzOUR1SFFlZ0RNTzYtV1FyX1dWbVB1UHJUTncyN0o5anNOQzBvd0I5QkdFcXg?oc=5",
-     "source": "culturepsg.com",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-06T10:36:00+00:00",
-     "new": true,
-     "key": "10a72e5c4a81629f",
-     "title": "Zaïre-Emery among Golden Boy finalists",
-     "summary": "Warren Zaïre-Emery and a former PSG player are among the Golden Boy 2026 finalists."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNVXR5SlloZTB0UjZQcDh3WFJ3TFpIYVhQUWJSX2FuX084clN2RjBmb0JhX28zUnpGRmJMOHVQWERYamMzUjZCUHBCdjh0dzl6WTNuWlpfZ2xoakp0MF9ScThKSnVSUmZWM2lpdWE3NlBoRHBDUkFpQnRrWVk3Z2dZYWJrWGZaYnVHdS14c2tLMzBXRGFRTXltTUNzN3dZanl2eVhjeWpXcWhvTzV3Y3RfNHQyTGYwNlAwQUF3bkhWMlk2RU5QU2sxcUNoaHZQOUc1YkNmRkEyQ09FdWhmUDYxM09lMVhYQnJPNE9RaG9OUmEzQ1NoMWtLVg?oc=5",
-     "source": "Le Parisien",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-10-06T10:19:08+00:00",
-     "new": true,
-     "key": "675eaab72083e42d",
-     "title": "Zidane equals 24-year-old record with France",
-     "summary": "Zinedine Zidane has equalled a record that had stood for 24 years as France coach."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNVi1YT09KR0hYMXd1ckZBWjg1SUZ2dTA4ZWkyVXlhRjVwWlVLZWtCVEEyYzNzeFlQa0dEZ2d4dmNVQ25YSnM0ank2SkY1S2RvcHhzNjBKeFEyc29IQUt5X2R4SU5GNGtxcXVlX1lCOVFxXy1BNmR4NkQtRGI4Ri1jSkVpZmRPajZDek9sa2NlY3JjOGxCZVBPZUlNMFd1eHJWRC1ReUFvd1BfS05yajBJRWk2RkJtaXVvMnlBZGREM2hkTnE5dHA3Z1NoV1F5RDJXdUR6dXRBMldkZy1Hc005bGN1Y1RwWHV4aWpTZk12LWtoMElxSGtDXw?oc=5",
-     "source": "Les Titis du PSG",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-06T09:55:00+00:00",
-     "new": true,
-     "key": "2bb4312752b7bb1a",
-     "title": "PSG stadium discussions advance",
-     "summary": "Discussions over PSG’s future stadium are advancing, and a sale of the Parc des Princes is reportedly becoming more likely."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOQlZqc0JhSVBpWGx3elRrZ2lKNXlaUHJIR3F3a3BCNi0taTFPSXhfS19VYng1ZlBYRTdqRmZFUTZmZEY2V1FpZkZHc2tjZVN4Qm43ajRmS2RNb3JwMVdzbGs2dy0tUFZMZGliV2dyeEFLRXVYUnJkZzlsZkRkTWZ0dHhNZ0RURTVtNXUxS1FKTC1SZkdWLVBXNHBKbmc1Vi1SczE1S3NBNDdscFZpLVhsanN4ZjdRSFVoVGo3T0p0d3JGdEVVWENtTjVZNVpHQlcwNjdzSHhHUHB5OXV1SFZ1VkR3RDNIVWhOa25IWlRaUUVBQnJkdlhWMzk2dVMwSHdVVnJrcGNxYng1ckVSWUNFUjFwdEE?oc=5",
-     "source": "Sud Ouest",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-10-06T10:06:21+00:00",
-     "new": true,
-     "key": "ea3bfec69628c9c1",
-     "title": "France set for Bordeaux gathering in November",
-     "summary": "France will meet in Bordeaux in November, with the next squad gathering following Zidane’s successful early results."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQMHNENEtyT2k4M2I0V1QzVmlQRHplQk1CWUtUaG44anJ1UWNjTnFGZlFNNE1nUzVpTUlTVElxSHdqUUVjU3RydW1lQVZ5Y3llX2VZV3NJNFhYZ2hyMm9ocEtBQlFzbWR5XzZERjM3aE43WVlKMVRyYUp3dDBkY2RkWWY5eEVjbFdYVEc0andkaGg3YnFra21Mck1sYnh0QWVrZzI3V0R2TXZKRTRCYks5Nk5FZGR5UTZEVDBObEFEY0o0QVlxdU9DYVpWalRleTktWnZ2NUd3VXFZRDROZ3VlTzdBb29FMzRyMTFnVl9HSlF1OTdZcTRNYkxxV1hoRzlCV0Z0RDNIUy00MUnSAZACQVVfeXFMTzh6X2lDUHlqN2NoTWR4NDNCUkJ5X2lyVUNDYUlaWEUzNkJvWnlLUkhRdmY3eVVGdDNJMXdZZGFvbzAxdC1zUDVRZVFmXzQ5d1JOekZaTF9qbUo1ZERKQ0NMRHV0ck1vbnFQd1R0Q1g0OVF1dnFhUTkyTUxPRlBrWnktUENSRDVvQnB1NFlCQmstckNXak9tX0NDMmlwNmdoODBnY3AyUENIWmlvUzlDVERXVmttUG8tZFlyRlJ3YUFwSG9PWV9Sc0VFMW1mZUJIa1FhcjczNmo0YlRCd0ZHeVVEUEhFSlZUOWVTa1h2Z3QzWER5WDh2VlFSZERYMVdDVHV3VkJRV1NvRXJxN3ZXVUo?oc=5",
-     "source": "Boursorama",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-10-06T09:52:00+00:00",
-     "new": true,
-     "key": "d43ed390d0df24e6",
-     "title": "Three wins and promise for Zidane’s France",
-     "summary": "A report describes three victories and promising signs in Zidane’s first games as France coach."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-10-06T11:00:38.355692+00:00",
-   "input_fingerprint": "sha256:b223266c04f607cf6cc633b3302ed8d7a0d3ad21a6ec9f5052ec8fd1cb804593",
-   "last_success_at": "2026-10-06T11:00:38.355692+00:00",
-   "error": "Source check failed: CulturePSG, L'Équipe",
-   "candidate_count": 264,
-   "new_count": 5
-  },
-  "finance": {
-   "briefing": [
-    {
-     "text": "Franco-German alignment on China trade could clear the way for a tougher EU approach, a consequential shift for European trade and industry.",
-     "sources": [
-      {
-       "key": "195a241cac4f9672",
-       "title": "Franco-German Unity on China Trade Paves Way for Tougher EU Line - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbklZV0VHZGl4bUFtRkZtbEc3VnVmeHJKZHR6cXVmVkhlWTAwUTNnOVh6OHFkY050b3ZfTGRVcWpIUzJWVVBTTlJQRTV4ZVQyTXhCQjlQZ3hRN3BncTdsWFhvdWk3MVhWcG9adEtXWktWbUNSR0lpTFVJcE42UzVNT2VxX1hNSGE5ck13WHdwU0hNeXN2R3Fyczh6Q3NqeFZ3VUgxTUxsUVBrX0hOTDVaRUlKem1Ndw?oc=5",
+       "key": "1b7d4e0f60deb79d",
+       "title": "OpenAI and Anthropic Face Rising Price Pressure From Big AI Users - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRHhUUnpNdE5CR1VFVEx2Q1NsTjg5cjNCb2VYazhWeERKMVpMOWdlQVFteW52b1o5UTRONGt4TmdJbE8xbld4RHFkaE5vSHQ2MHBFdVlOY1ZSeVJsamNVc0VERHp3dE5xUmV6Ymk5S1FvblZlcTU4REVZQ2kwVHRBck9Ma1dkVk9Bb3VfVUphN3V3X1FsNThpVzlMTktSSGV4SHlhZzU1MEZicW5vQTQ3SlNoUldWcFBMVlMw?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Rising interest rates are weighing on French mortgage demand, with lenders fearing a subdued year-end for new credit.",
+     "text": "Spain’s Supreme Court revoked the arrest order for former Catalan leader Carles Puigdemont, clearing the way for him to return without being detained.",
      "sources": [
       {
-       "key": "97078d80d9360230",
-       "title": "« Le téléphone sonne moins »﻿ : pour le crédit immobilier, l'envolée des taux fait craindre une fin d'année en berne - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPYXh5SXQyeExzVzJZRGkzbUctWWM4NmJheG5vZzNpeFE4Mkc3cHpTQTdMRVRvZFhQWnJ2VHc0Z3B3bVdhWndCNFpOVEprakZQNFNHT0dKUlhlZTFfbjd4bFZsX1Rpd3NtVUtVSEp5QlQxZkRsTXMzZUE0cndUZWZQRGN3cUZId1NBZ0p4dmNkaHlkT1ZwZGd0Y3p2b2xyMnVXTXFyWjJuQUUzdE9uVHBCcjVMVGwwWjE4U3E2RURMSDZZNkI2eEhFYjNZYWxVWTBPa2lPUjA0NGVNNDhpeWQzYWMyWU1KZGZLLXZDZUEyakFrdGNidHF5cVJMckcwakFxTHc?oc=5",
-       "source": "Les Echos",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Energy supply risks remain in focus: Chevron’s CEO says oil and fuel buffers are thinning amid the Middle East conflict, while Goldman expects diesel prices to stay high through 2027.",
-     "sources": [
-      {
-       "key": "375457dd0805268e",
-       "title": "Oil, fuel supply buffers are thinning as Middle East conflict continues, Chevron CEO says - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaWJWU2xXSFpjTHEtWi1hZUZwNnFaWWk0OTVoNGJYWE1wdHp3cFdVWXdibnlUdWV2MmhhakJDWV9fLW1ZSDNEZ0tCZlRzaVRWYlVFbFNZa2poZjB2ZnVVSVQ1emFNVnFWUVJmYUptU3pYNGN5MzQ1UVVUSjlLeGppcHM2THJIbHNCV2FPSmhPREZMdWY1aDFzZ084SUJCaTA1WTd5eDRhQnh5U1BON01wSzltLVFsbXpva3JieExQb19jYTZiYXNpRjJR?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      },
-      {
-       "key": "4a5a8591fd0c3d6c",
-       "title": "Goldman: Diesel prices set to stay high through 2027 as refineries struggle to meet demand",
-       "url": "https://www.cnbc.com/2026/10/06/diesel-oil-refinery-price-capacity-demand.html",
-       "source": "CNBC Markets",
+       "key": "853ad4628f1af9ca",
+       "title": "Il Tribunale Supremo ha revocato l'ordine di arresto per Puigdemont",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/06/il-tribunale-supremo-ha-revocato-lordine-di-arresto-per-puigdemont_e95cfbac-ae2f-46f6-a480-e69ca5503647.html",
+       "source": "ANSA Top News",
        "via": null
       }
      ]
     },
     {
-     "text": "BPCE is buying a 7% stake in Spain’s Sabadell for €1.2 billion, a notable French banking move into a major European market.",
+     "text": "Quebec separatists are projected to win a minority government and have pledged to hold an independence referendum in the future.",
      "sources": [
       {
-       "key": "ec8a1ac4e1e88830",
-       "title": "France’s BPCE buys ‘friendly’ stake in Spain’s Sabadell - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTF9uUmhoMm1ob0I4ZjBNZXFwZV9PdG9ueFdEOUJFN2tWa0ZQN0RqbXgybnhqT1ZrRXROUkoxbWdlR1lQaVAyR2wzZUVqYWRoREZsTjJ1V0FLYzVPRHduNFlLUFJEaDAzYWc4eHFLZDFzNGZGT250bUpYemxXSGVKTHBudlY?oc=5",
+       "key": "570ba73f57e4076a",
+       "title": "Separatist party projected to win Quebec election, adding new test to Canada's unity",
+       "url": "https://www.bbc.co.uk/news/articles/crly09gz7ew4o?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA2OUhlZXpHT3ZLYU9Rb3E2RGZvdGc1WU5iaUg5bE1Eb3N3c1NxVnAta3owVld0RGN1UDlPMzVyRUtYT1c3djRPVWxja3I5YXRrWXpraGVSRm1iVS1YbEJxRnJLc1AyMkxEZEZvSlhuVmxBempr?oc=5",
+     "source": "Il Sole 24 ORE",
+     "feed_name": "Topic: Milano",
+     "via": "Google News",
+     "published": "2026-10-06T11:33:36+00:00",
+     "new": true,
+     "key": "88c7ab524d85cfbb",
+     "title": "European shares rise as yields and oil fall",
+     "summary": "European markets traded higher at mid-session as bond yields and oil prices declined, with Milan up 0.8%."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9RNW5lQ0oxMWppaENfczlzNENiaTlMaEVSLVdTdXdGd2VaTDlCY0t3bXI4bzhFcThmelhfUTlMT2luVkpYRDhNUFVhQ2Jndm80eEUtTFpQc09EM0hmVFdzZklYOEk0RlpKMThUM0lTYmN6RTJWYzVv?oc=5",
+     "source": "qz.com",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-10-06T11:32:11+00:00",
+     "new": true,
+     "key": "9d7fd3d4c2a53e8e",
+     "title": "AMD reaches $1 trillion market value amid AI-agent demand",
+     "summary": "AMD hit a $1 trillion market capitalisation as AI-agent demand boosted CPU demand."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRHhUUnpNdE5CR1VFVEx2Q1NsTjg5cjNCb2VYazhWeERKMVpMOWdlQVFteW52b1o5UTRONGt4TmdJbE8xbld4RHFkaE5vSHQ2MHBFdVlOY1ZSeVJsamNVc0VERHp3dE5xUmV6Ymk5S1FvblZlcTU4REVZQ2kwVHRBck9Ma1dkVk9Bb3VfVUphN3V3X1FsNThpVzlMTktSSGV4SHlhZzU1MEZicW5vQTQ3SlNoUldWcFBMVlMw?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-10-06T11:03:21+00:00",
+     "new": true,
+     "key": "1b7d4e0f60deb79d",
+     "title": "OpenAI and Anthropic face pricing pressure from big AI users",
+     "summary": "Large AI customers are putting growing pressure on OpenAI and Anthropic’s prices."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/06/il-tribunale-supremo-ha-revocato-lordine-di-arresto-per-puigdemont_e95cfbac-ae2f-46f6-a480-e69ca5503647.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-10-06T11:20:14+00:00",
+     "new": true,
+     "key": "853ad4628f1af9ca",
+     "title": "Spain’s Supreme Court revokes Puigdemont arrest order",
+     "summary": "The court revoked the arrest order for former Catalan leader Carles Puigdemont, allowing him to return to Spain without detention."
+    },
+    {
+     "url": "https://www.bbc.co.uk/news/articles/crly09gz7ew4o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
+     "via": null,
+     "published": "2026-10-06T11:42:52+00:00",
+     "new": true,
+     "key": "570ba73f57e4076a",
+     "title": "Quebec separatists projected to win election",
+     "summary": "The Parti Québécois is projected to win a minority government and has pledged a future independence referendum."
+    },
+    {
+     "url": "https://www.theguardian.com/uk-news/2026/oct/06/argentina-to-stop-falkland-islands-exploiting-offshore-oilfields-sovereignty",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-10-06T11:40:03+00:00",
+     "new": true,
+     "key": "58d15ca5c079de77",
+     "title": "Argentina says it will stop Falklands offshore oil development",
+     "summary": "Argentina’s foreign minister said the country would seek to stop offshore oil exploitation around the Falkland Islands."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWlJLbDdiRHg5YS1UZEJ1anM5UjA4S25hS0hNSnRWNHNvb2xnaGVxYkpBVWhSVC1Pdm9vZ3ltbzJsY2RwV0xYSjQ3TGRhT3hOSkxLTElLSUxqV3QxOHpzOVJPNlhyWFIwYzI4RnlkODBWU0hZR3BWMmhNdkpfZGxYVzN0Z05RcUhnYTFQdldFTFV4SzhYaTk3UDBYY1hkdHJLRHIta1JYc2g1NVhzbkxENU9SZ3RJaDVLWFh4cklWYXhLa1l1SmdtdUxCc2pKQlhz?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-06T11:26:59+00:00",
+     "new": true,
+     "key": "433dee525cf2e81e",
+     "title": "Kenya confirms Ebola case imported from Congo",
+     "summary": "Kenya confirmed its first Ebola case, involving a patient who arrived from the Democratic Republic of Congo."
+    },
+    {
+     "url": "https://www.theguardian.com/technology/2026/oct/06/ai-misuse-brand-reputation",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-10-06T11:00:35+00:00",
+     "new": true,
+     "key": "780ae69d366d738a",
+     "title": "AI misuse is brands’ leading reputational threat, survey finds",
+     "summary": "A new survey found that brands consider misuse of artificial intelligence their leading reputational threat."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-10-06T11:50:54.189869+00:00",
+   "input_fingerprint": "sha256:c8e83ff540f45a2047dae3c237ec12d8871df16ed6c46df6bbb1e332a31425d1",
+   "last_success_at": "2026-10-06T11:50:54.189869+00:00",
+   "candidate_count": 514,
+   "new_count": 8
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "Guillaume Restes became the youngest France goalkeeper in more than 50 years, according to coverage of France–Belgium.",
+     "sources": [
+      {
+       "key": "86480dcd0b40a08c",
+       "title": "France-Belgique : Guillaume Restes, plus jeune portier des Bleus depuis plus de 50 ans - Le Figaro",
+       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPLUNkTmNNbWY0dDVQOHhORW9lc0NXbGRqVDIwd0ExVnBVNmdnYUp4NzV0LVUtNXNNekVBMHBmcnhfTWFqSUZieUlEMnZhM0pnQTJoTjRCOHl2ZFA3dzM1T0VlVHpxenhqdlBfQWZBcWxZXzRsTE5SOXlpclhIdmxPdmttVXlfVXVNc09Lck43cTF1VFc1a3Ytb2thNllDNlVPa0piVXpsWjJFQkloU3lDaG1XakJRby1BVjdvRGRWY0RfQlV2alVUaC1jOGs?oc=5",
+       "source": "Le Figaro",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Zidane praised Ousmane Dembélé’s performance for France; separate post-camp analysis named winners and disappointments, including Maghnes Akliouche.",
+     "sources": [
+      {
+       "key": "bf1b546f3ed76d8b",
+       "title": "️[News-Sélections] EdF A : « Je l’ai trouvé très bien », Zidane rassure sur la prestation de Dembélé - Les Titis du PSG",
+       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZVQtZGJGbDM0dTBCbG94Vk51anUwLUlUZnB0QWlza0lfaVlJSzlFQ3V0Q3BhNHhPTEV2cHBXN2ZQUkRjY2ZvNVA5RTYxSGpyMFBSV2cwYUc4cGdFRTdJQVc3UU9ULXNMcmRGaUtzTWhiOUd3cUZFbFhHdlR1dmpPYVV5N0ppRTJRMVRTN2dra0hoeDludTNhZFBZeUFYb254TmJNdzJzZHpwendCdVllS2NsTlprMUN3bng4a2xzaEVhTE9CdUJhN1YzNlF0OURfam9wOHVHTUhfUjlFMXdib1Y4RQ?oc=5",
+       "source": "Les Titis du PSG",
+       "via": "Google News"
+      },
+      {
+       "key": "eb5e4af44cd95104",
+       "title": "Équipe de France. Jacquet et Da Cunha ont pris date, Akliouche décevant… Les gagnants et les perdants du rassemblement - Ouest-France",
+       "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPYkR0UzExalFjT3hQVnpCem10V2ZjdlFMdzhRalFpQmJvdXp5eW1kdnRxbXZrX2hVYVRYNmpqalF4aV9FYVpZNFJ3QTNVcGJMV3lGcVZCaERNUWNHdjJuNld6cnFVQXUzdlEza2s2QXZNS3dTSVlNZTFyd1pLaV82WExYbHhLS08tY005MWs1VDRIRDlZVlN0SHJoVTBITnFnZklWb3RDT09kMVlSeHlZNTVUaWlFdHFiSUp4RU9ENVdYNDZHUXoxRUJZbWFnUE5ELUFQMkRpbDNQZE9XYkJmY3NmS0l4Wk1zeHJYY1BKX1VJd0Q3SWc2MmhibjkyUTQyUnlTZTc0NzFzWnkzOXBsVVFsY2QyUEkxS0t5ZnU2V1RqRTlkZl9HbFEzUW9vN3JvRjl1RTA3Zw?oc=5",
+       "source": "Ouest-France",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "PSG transfer speculation continues around young prospect JJ Gabriel, though the report offers no concrete deal details.",
+     "sources": [
+      {
+       "key": "711bddb6cb69e373",
+       "title": "Mercato : ça va bouger pour JJ Gabriel, le PSG encore cité - AllezParis",
+       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPd25OTFEzaHA0UjZLRmh3aUlkc2swRTdMb0o0b0c0YzJOM1RHbWRneERocnVKNXlKblVvVmxyT0lSV0RJRW00U1dURFFyeVV1NGp1Mlp6ZjNuRkYtUG1VWW9CTXZoMUxFb0k1RnZ2eFZnVW5FWEdvYUNMc21neHlkMklpT0hIUmltR1MxR2ZFY2RySWFnN1E?oc=5",
+       "source": "AllezParis",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "David Ainu’u has agreed to join another Top 14 club after winning six French titles with Toulouse.",
+     "sources": [
+      {
+       "key": "3aa00cf8085a6564",
+       "title": "Six fois champion de France avec Toulouse, David Ainu'u a donné son accord pour rejoindre une autre écurie de l'élite - Rugbynistere",
+       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQbF9qdk95LWN1RnV0ZHNJU0VSYnl3VWctLUl4ZE5JN2JrLU1KeENJVXNWVF9mUjNhdklXa1hIX1pzN29lQzNmWXRzT3J4UFFkVXR2RWZpTzByQnVjR0luQkZuaC01VGZJNkgzejRLSXlrWHNvVWQxOXhVeFh2X3RyeVNQNEhlejRQTmtJTTZlRTlJTjFXQkRfc3RNSWtyZjl3aWx2SlQyTHhURXpRZnFBT0tVYU9YNDlDU3A4THdQbzhpY19sQXdrU195ZlhNYlZsNXpUdy1yUzhmZFpEMWRZR1lUT1Y?oc=5",
+       "source": "Rugbynistere",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPLUNkTmNNbWY0dDVQOHhORW9lc0NXbGRqVDIwd0ExVnBVNmdnYUp4NzV0LVUtNXNNekVBMHBmcnhfTWFqSUZieUlEMnZhM0pnQTJoTjRCOHl2ZFA3dzM1T0VlVHpxenhqdlBfQWZBcWxZXzRsTE5SOXlpclhIdmxPdmttVXlfVXVNc09Lck43cTF1VFc1a3Ytb2thNllDNlVPa0piVXpsWjJFQkloU3lDaG1XakJRby1BVjdvRGRWY0RfQlV2alVUaC1jOGs?oc=5",
+     "source": "Le Figaro",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-10-06T10:57:25+00:00",
+     "new": true,
+     "key": "86480dcd0b40a08c",
+     "title": "Guillaume Restes becomes France’s youngest goalkeeper in more than 50 years",
+     "summary": "The 21-year-old became France’s youngest goalkeeper in more than 50 years."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZVQtZGJGbDM0dTBCbG94Vk51anUwLUlUZnB0QWlza0lfaVlJSzlFQ3V0Q3BhNHhPTEV2cHBXN2ZQUkRjY2ZvNVA5RTYxSGpyMFBSV2cwYUc4cGdFRTdJQVc3UU9ULXNMcmRGaUtzTWhiOUd3cUZFbFhHdlR1dmpPYVV5N0ppRTJRMVRTN2dra0hoeDludTNhZFBZeUFYb254TmJNdzJzZHpwendCdVllS2NsTlprMUN3bng4a2xzaEVhTE9CdUJhN1YzNlF0OURfam9wOHVHTUhfUjlFMXdib1Y4RQ?oc=5",
+     "source": "Les Titis du PSG",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-06T10:55:00+00:00",
+     "new": true,
+     "key": "bf1b546f3ed76d8b",
+     "title": "Zidane reassures on Dembélé’s France performance",
+     "summary": "Zinédine Zidane said he thought Ousmane Dembélé performed well for France."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPYkR0UzExalFjT3hQVnpCem10V2ZjdlFMdzhRalFpQmJvdXp5eW1kdnRxbXZrX2hVYVRYNmpqalF4aV9FYVpZNFJ3QTNVcGJMV3lGcVZCaERNUWNHdjJuNld6cnFVQXUzdlEza2s2QXZNS3dTSVlNZTFyd1pLaV82WExYbHhLS08tY005MWs1VDRIRDlZVlN0SHJoVTBITnFnZklWb3RDT09kMVlSeHlZNTVUaWlFdHFiSUp4RU9ENVdYNDZHUXoxRUJZbWFnUE5ELUFQMkRpbDNQZE9XYkJmY3NmS0l4Wk1zeHJYY1BKX1VJd0Q3SWc2MmhibjkyUTQyUnlTZTc0NzFzWnkzOXBsVVFsY2QyUEkxS0t5ZnU2V1RqRTlkZl9HbFEzUW9vN3JvRjl1RTA3Zw?oc=5",
+     "source": "Ouest-France",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-10-06T10:01:06+00:00",
+     "new": true,
+     "key": "eb5e4af44cd95104",
+     "title": "France camp: Jacquet and Da Cunha impress, Akliouche disappoints",
+     "summary": "Ouest-France assessed the winners and losers of the France squad gathering."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPd25OTFEzaHA0UjZLRmh3aUlkc2swRTdMb0o0b0c0YzJOM1RHbWRneERocnVKNXlKblVvVmxyT0lSV0RJRW00U1dURFFyeVV1NGp1Mlp6ZjNuRkYtUG1VWW9CTXZoMUxFb0k1RnZ2eFZnVW5FWEdvYUNMc21neHlkMklpT0hIUmltR1MxR2ZFY2RySWFnN1E?oc=5",
+     "source": "AllezParis",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-06T11:29:00+00:00",
+     "new": true,
+     "key": "711bddb6cb69e373",
+     "title": "JJ Gabriel’s future could move forward, with PSG again linked",
+     "summary": "A report says developments are expected around JJ Gabriel and mentions PSG."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQbF9qdk95LWN1RnV0ZHNJU0VSYnl3VWctLUl4ZE5JN2JrLU1KeENJVXNWVF9mUjNhdklXa1hIX1pzN29lQzNmWXRzT3J4UFFkVXR2RWZpTzByQnVjR0luQkZuaC01VGZJNkgzejRLSXlrWHNvVWQxOXhVeFh2X3RyeVNQNEhlejRQTmtJTTZlRTlJTjFXQkRfc3RNSWtyZjl3aWx2SlQyTHhURXpRZnFBT0tVYU9YNDlDU3A4THdQbzhpY19sQXdrU195ZlhNYlZsNXpUdy1yUzhmZFpEMWRZR1lUT1Y?oc=5",
+     "source": "Rugbynistere",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-10-06T10:37:00+00:00",
+     "new": true,
+     "key": "3aa00cf8085a6564",
+     "title": "David Ainu’u agrees to leave Toulouse for another Top 14 club",
+     "summary": "The six-time French champion has agreed to join another club in the French top flight."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "degraded",
+   "source_checked_at": "2026-10-06T11:50:54.189869+00:00",
+   "input_fingerprint": "sha256:bf86708bf2812d6bb46715cd46d961b5aedd48ca6e30c337365e496b75207531",
+   "last_success_at": "2026-10-06T11:50:54.189869+00:00",
+   "error": "Source check failed: CulturePSG, L'Équipe",
+   "candidate_count": 266,
+   "new_count": 5
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "The FT flags elevated bond yields as a major market question, though its piece is an analysis rather than a report of a new catalyst.",
+     "sources": [
+      {
+       "key": "899fca85275cc358",
+       "title": "Why are bond yields so high?",
+       "url": "https://www.ft.com/content/a6161dfd-bfb9-4bf5-866f-1ca0a0c8e6aa?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Warnings of a possible Iranian drone attack prompted the US to withdraw bombers from RAF Fairford, underscoring geopolitical risk.",
+     "sources": [
+      {
+       "key": "a5105f9f92e7d420",
+       "title": "Warnings of possible Iranian drone attack led US to pull bombers from RAF Fairford - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOS012WmtMMmd1Q0JrZ0NtTHRaaWEzWWhUbDF0X2dmWkRrWVFybktsSnFJdUlJR1ZuZTQ5NFVEaXF5ZkhHVkN3NnFFNUhYWXJ5VlpIYVdHZkVoWnJwVlNWMDgtb1hXOTJmdGREdzBvMmJIQ1ZGX2k0TnJBTWk5WTQ2OVI5TUk?oc=5",
        "source": "Financial Times",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Nvidia is approaching a $6 trillion valuation as its shares return to a record, keeping the AI investment boom firmly in market focus.",
+     "text": "Marine Le Pen has pledged to rein in French public spending, putting fiscal policy back in focus ahead of the country’s political contest.",
      "sources": [
       {
-       "key": "68ace641ebd6f0ff",
-       "title": "Nvidia Heads for $6 Trillion Value With Chipmaker Back at Record - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaC1sSmpWVUxkVXZSLXM3dWU5azIzMFRlZjRMMllaNGVMZGp2MmhxMDVWOVlNdS1JaE5OSU4tUTZGV2hRVG1VQ00yVmJLRHRFTE9JRHRRRkxnR3Z0eXh5SWMzMjc0TGM0MlJKZ3Q0Qm5tQ2JRcG5UTG1HVEdHY256dkRFX3Ywc1JObE00empFNjRIM19seXlSSWRyYmlkSkg3VUdpVU9fb25jUjJGaWJGR3BzaVE?oc=5",
+       "key": "445c12b0bdd964eb",
+       "title": "France’s Marine Le Pen pledges to rein in public spending - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPczZqZXlQUGZvR2gwdGxmRzZfSjRlcGlFNHg5TlpXQVNCbDVDcDVrY2FKLThKelhEcndyczFvVk9nYVhOelFPQ3FkNFRneWl1T0xZaGp6a014dTJuRDRsRDJWTE0wSGh3anEwYlFiVWhoWFBSUzdoLVo4bklPOVZnaVBGRXM?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The EU plans to give exporters an additional year to comply with methane rules, easing the near-term timetable for affected businesses.",
+     "sources": [
+      {
+       "key": "6acc8f88ed97c66f",
+       "title": "EU's von der Leyen: exporters to get an extra year on methane rules - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNU3dFYmhWem1RMlVDQmtzbGVUbEJDdy0wMXF0WTIxaEdVWVNXd05EMTdLUHdKV0dnSkU4SGR6UWlKVWQ1alhHeHRnR1A1V184cE0wakQ1S3VyVUtCLW1OVGl2MmF0MU1uQXE2WDRWTFZBbTd3VDVwOWJxZ091WDA3UmE3LXFrVXJRRTZ0T0pxb3BickNTWXlTeWtjMF9sa2xaTnFwZmN4NWF3STR4Ti1vbg?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "CVC and GBL have raised their Recordati offer to €53 a share, with the acceptance period extended to October 23.",
+     "sources": [
+      {
+       "key": "10d0798437a111d3",
+       "title": "Cvc e Gbl alzano l’offerta su Recordati a 53 euro per azione",
+       "url": "https://www.ilsole24ore.com/art/cvc-e-gbl-alzano-l-offerta-recordati-53-euro-azione-AJbA2caB",
+       "source": "Il Sole 24 Ore Finanza",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Moonshot is reportedly considering an early-2027 IPO after its valuation reached $50 billion, adding to signs of renewed AI-company funding activity.",
+     "sources": [
+      {
+       "key": "ed04dc2933caa1c7",
+       "title": "Moonshot Said to Eye Early 2027 IPO After Value Hits $50 Billion - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUWxadFhQQmw2UHl3OU1mdTl5a0RrT1d2X1FlS1BYV2FIS0I5Z0RRWW9RazFFNG10WlhLaXZXTUZRYUM1X0lpRjZlYmszSXg2bUgwYjlodjk5VmJiSUJFSU5qeGw0Vzg4bk53NFNsZXNUMmJWcmRFcEgxSUdUaWFjWGhlMTh2dlB6TnR3em9BSmFCc1VxQjRGU1JYSmxwdGlkdG93QnhFUExkYkp1ZGRVeFNfOFo?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
       }
@@ -1107,105 +1120,83 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbklZV0VHZGl4bUFtRkZtbEc3VnVmeHJKZHR6cXVmVkhlWTAwUTNnOVh6OHFkY050b3ZfTGRVcWpIUzJWVVBTTlJQRTV4ZVQyTXhCQjlQZ3hRN3BncTdsWFhvdWk3MVhWcG9adEtXWktWbUNSR0lpTFVJcE42UzVNT2VxX1hNSGE5ck13WHdwU0hNeXN2R3Fyczh6Q3NqeFZ3VUgxTUxsUVBrX0hOTDVaRUlKem1Ndw?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-06T07:04:16+00:00",
+     "url": "https://www.ft.com/content/a6161dfd-bfb9-4bf5-866f-1ca0a0c8e6aa?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-06T11:30:11+00:00",
      "new": true,
-     "key": "195a241cac4f9672",
-     "title": "Franco-German unity on China trade paves way for tougher EU line",
-     "summary": "Franco-German alignment on China trade could pave the way for a tougher EU approach."
+     "key": "899fca85275cc358",
+     "title": "Why are bond yields so high?",
+     "summary": "The FT examines the forces behind persistently high bond yields."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPYXh5SXQyeExzVzJZRGkzbUctWWM4NmJheG5vZzNpeFE4Mkc3cHpTQTdMRVRvZFhQWnJ2VHc0Z3B3bVdhWndCNFpOVEprakZQNFNHT0dKUlhlZTFfbjd4bFZsX1Rpd3NtVUtVSEp5QlQxZkRsTXMzZUE0cndUZWZQRGN3cUZId1NBZ0p4dmNkaHlkT1ZwZGd0Y3p2b2xyMnVXTXFyWjJuQUUzdE9uVHBCcjVMVGwwWjE4U3E2RURMSDZZNkI2eEhFYjNZYWxVWTBPa2lPUjA0NGVNNDhpeWQzYWMyWU1KZGZLLXZDZUEyakFrdGNidHF5cVJMckcwakFxTHc?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOS012WmtMMmd1Q0JrZ0NtTHRaaWEzWWhUbDF0X2dmWkRrWVFybktsSnFJdUlJR1ZuZTQ5NFVEaXF5ZkhHVkN3NnFFNUhYWXJ5VlpIYVdHZkVoWnJwVlNWMDgtb1hXOTJmdGREdzBvMmJIQ1ZGX2k0TnJBTWk5WTQ2OVI5TUk?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
      "via": "Google News",
-     "published": "2026-10-06T09:30:20+00:00",
+     "published": "2026-10-06T08:09:25+00:00",
      "new": true,
-     "key": "97078d80d9360230",
-     "title": "Rising rates weigh on French mortgage demand",
-     "summary": "Rising interest rates are dampening French mortgage demand, prompting concern about a subdued year-end."
+     "key": "a5105f9f92e7d420",
+     "title": "Iran drone warning prompted US bomber withdrawal from RAF Fairford",
+     "summary": "Warnings of a possible Iranian drone attack led the US to pull bombers from RAF Fairford."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaWJWU2xXSFpjTHEtWi1hZUZwNnFaWWk0OTVoNGJYWE1wdHp3cFdVWXdibnlUdWV2MmhhakJDWV9fLW1ZSDNEZ0tCZlRzaVRWYlVFbFNZa2poZjB2ZnVVSVQ1emFNVnFWUVJmYUptU3pYNGN5MzQ1UVVUSjlLeGppcHM2THJIbHNCV2FPSmhPREZMdWY1aDFzZ084SUJCaTA1WTd5eDRhQnh5U1BON01wSzltLVFsbXpva3JieExQb19jYTZiYXNpRjJR?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPczZqZXlQUGZvR2gwdGxmRzZfSjRlcGlFNHg5TlpXQVNCbDVDcDVrY2FKLThKelhEcndyczFvVk9nYVhOelFPQ3FkNFRneWl1T0xZaGp6a014dTJuRDRsRDJWTE0wSGh3anEwYlFiVWhoWFBSUzdoLVo4bklPOVZnaVBGRXM?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-06T09:04:06+00:00",
+     "new": true,
+     "key": "445c12b0bdd964eb",
+     "title": "Marine Le Pen pledges to rein in French public spending",
+     "summary": "Marine Le Pen has pledged to rein in public spending in France."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNU3dFYmhWem1RMlVDQmtzbGVUbEJDdy0wMXF0WTIxaEdVWVNXd05EMTdLUHdKV0dnSkU4SGR6UWlKVWQ1alhHeHRnR1A1V184cE0wakQ1S3VyVUtCLW1OVGl2MmF0MU1uQXE2WDRWTFZBbTd3VDVwOWJxZ091WDA3UmE3LXFrVXJRRTZ0T0pxb3BickNTWXlTeWtjMF9sa2xaTnFwZmN4NWF3STR4Ti1vbg?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-10-06T09:23:02+00:00",
+     "published": "2026-10-06T07:22:09+00:00",
      "new": true,
-     "key": "375457dd0805268e",
-     "title": "Oil and fuel supply buffers thin amid Middle East conflict",
-     "summary": "Chevron’s CEO says oil and fuel supply buffers are thinning as the Middle East conflict continues."
+     "key": "6acc8f88ed97c66f",
+     "title": "EU exporters to get extra year on methane rules",
+     "summary": "EU Commission President Ursula von der Leyen said exporters would get an extra year to comply with methane rules."
     },
     {
-     "url": "https://www.cnbc.com/2026/10/06/diesel-oil-refinery-price-capacity-demand.html",
-     "source": "CNBC Markets",
-     "feed_name": "CNBC Markets",
+     "url": "https://www.ilsole24ore.com/art/cvc-e-gbl-alzano-l-offerta-recordati-53-euro-azione-AJbA2caB",
+     "source": "Il Sole 24 Ore Finanza",
+     "feed_name": "Il Sole 24 Ore Finanza",
      "via": null,
-     "published": "2026-10-06T08:47:30+00:00",
+     "published": "2026-10-06T08:13:00+00:00",
      "new": true,
-     "key": "4a5a8591fd0c3d6c",
-     "title": "Goldman sees diesel prices staying high through 2027",
-     "summary": "Goldman Sachs expects tight refinery capacity to keep diesel prices elevated through 2027."
+     "key": "10d0798437a111d3",
+     "title": "CVC and GBL raise Recordati offer to €53 a share",
+     "summary": "CVC and GBL raised their offer for Recordati to €53 per share and extended the acceptance period to October 23."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTF9uUmhoMm1ob0I4ZjBNZXFwZV9PdG9ueFdEOUJFN2tWa0ZQN0RqbXgybnhqT1ZrRXROUkoxbWdlR1lQaVAyR2wzZUVqYWRoREZsTjJ1V0FLYzVPRHduNFlLUFJEaDAzYWc4eHFLZDFzNGZGT250bUpYemxXSGVKTHBudlY?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-06T06:59:43+00:00",
-     "new": true,
-     "key": "ec8a1ac4e1e88830",
-     "title": "BPCE buys a friendly stake in Spain’s Sabadell",
-     "summary": "France’s BPCE is investing €1.2 billion for a 7% stake in Spain’s Banco Sabadell."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaC1sSmpWVUxkVXZSLXM3dWU5azIzMFRlZjRMMllaNGVMZGp2MmhxMDVWOVlNdS1JaE5OSU4tUTZGV2hRVG1VQ00yVmJLRHRFTE9JRHRRRkxnR3Z0eXh5SWMzMjc0TGM0MlJKZ3Q0Qm5tQ2JRcG5UTG1HVEdHY256dkRFX3Ywc1JObE00empFNjRIM19seXlSSWRyYmlkSkg3VUdpVU9fb25jUjJGaWJGR3BzaVE?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUWxadFhQQmw2UHl3OU1mdTl5a0RrT1d2X1FlS1BYV2FIS0I5Z0RRWW9RazFFNG10WlhLaXZXTUZRYUM1X0lpRjZlYmszSXg2bUgwYjlodjk5VmJiSUJFSU5qeGw0Vzg4bk53NFNsZXNUMmJWcmRFcEgxSUdUaWFjWGhlMTh2dlB6TnR3em9BSmFCc1VxQjRGU1JYSmxwdGlkdG93QnhFUExkYkp1ZGRVeFNfOFo?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-10-06T08:43:36+00:00",
+     "published": "2026-10-06T10:18:18+00:00",
      "new": true,
-     "key": "68ace641ebd6f0ff",
-     "title": "Nvidia approaches $6 trillion valuation as shares hit record",
-     "summary": "Nvidia shares returned to a record, putting the chipmaker on course for a $6 trillion valuation."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUmx1Q09mYlhrN1RkQ1l2eUdGekZwTnhCSTNrRkxZTGk1UVB6NElQaGdscWk2UE9VZlUzZS1BWmRPa0g0elBqSWlrOGNDVnlXZFNocER5OEdEM2d0NktDSHJIT0x2QzU4NmxXaFR6TFhUUjJRRWZqMHlhc2ItdDFEc3hTZ00?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-06T07:05:18+00:00",
-     "new": true,
-     "key": "42a4a8c27ec9cde0",
-     "title": "Informa to buy Clarion from Blackstone for £2.2bn",
-     "summary": "Informa agreed to acquire rival events business Clarion from Blackstone for £2.2 billion."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLWtJVDNxaldQMWl4Q2FFMDJSallVSkk0UTJPLURfTEdOR2Zvb0t2VzljTDc4WGswM3RTZGlTaFFoYm9LMVVYZVQxUXk5emVNa3dyYjRRc2FYTHRyWU1QZmYtcVhZWDBVZlJrZGpWV1ZlT3pXeHlST1k0MERhOVJONGxmQVc?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-06T08:35:09+00:00",
-     "new": true,
-     "key": "083c0cc01f87bfbe",
-     "title": "AI models used in bank cyber attacks, South Korean president warns",
-     "summary": "South Korea’s president warned that AI models are being used in cyber attacks on banks."
+     "key": "ed04dc2933caa1c7",
+     "title": "Moonshot weighs early-2027 IPO after valuation reaches $50 billion",
+     "summary": "Moonshot is said to be considering an early-2027 IPO after its valuation reached $50 billion."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-06T11:00:38.355692+00:00",
-   "input_fingerprint": "sha256:bf360d4fe677bac8c28492583d99f030575c5868aba8511fd939a47ac2af70f3",
-   "last_success_at": "2026-10-06T11:00:38.355692+00:00",
+   "source_checked_at": "2026-10-06T11:50:54.189869+00:00",
+   "input_fingerprint": "sha256:d70b7f4bb4d9feebc3530b41f91a1af38442a106825525f14e7d9c045456c3b4",
+   "last_success_at": "2026-10-06T11:50:54.189869+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 575.6,
-     "change_pct": 0.28,
+     "price": 575.4,
+     "change_pct": 0.24,
      "currency": "CHF",
      "as_of": "2026-10-05T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1215,8 +1206,8 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 748.08,
-     "change_pct": 1.16,
+     "price": 747.96,
+     "change_pct": 1.15,
      "currency": "EUR",
      "as_of": "2026-10-05T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1226,8 +1217,8 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 104.96,
-     "change_pct": 0.88,
+     "price": 104.92,
+     "change_pct": 0.85,
      "currency": "EUR",
      "as_of": "2026-10-05T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1237,8 +1228,8 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 295.0,
-     "change_pct": 1.25,
+     "price": 294.9,
+     "change_pct": 1.22,
      "currency": "EUR",
      "as_of": "2026-10-05T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1248,8 +1239,8 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 314.8,
-     "change_pct": 1.01,
+     "price": 314.6,
+     "change_pct": 0.95,
      "currency": "EUR",
      "as_of": "2026-10-05T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1260,7 +1251,7 @@
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
      "price": 9.63,
-     "change_pct": 1.71,
+     "change_pct": 1.74,
      "currency": "EUR",
      "as_of": "2026-10-05T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1270,8 +1261,8 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 56.84,
-     "change_pct": 0.14,
+     "price": 56.94,
+     "change_pct": 0.32,
      "currency": "EUR",
      "as_of": "2026-10-05T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1281,8 +1272,8 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 71.75,
-     "change_pct": 0.51,
+     "price": 71.77,
+     "change_pct": 0.53,
      "currency": "EUR",
      "as_of": "2026-10-05T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1292,8 +1283,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 86141.84,
-     "change_pct": 0.41,
+     "price": 86303.33,
+     "change_pct": 0.6,
      "currency": "USD",
      "as_of": "2026-10-06T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1303,8 +1294,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2713.25,
-     "change_pct": 0.08,
+     "price": 2714.63,
+     "change_pct": 0.13,
      "currency": "USD",
      "as_of": "2026-10-06T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1313,7 +1304,7 @@
     }
    ],
    "candidate_count": 336,
-   "new_count": 8
+   "new_count": 6
   },
   "media": {
    "briefing": "",
@@ -1361,10 +1352,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-10-06T11:00:38.355692+00:00",
+   "source_checked_at": "2026-10-06T11:50:54.189869+00:00",
    "candidate_count": 4,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-10-06T11:00:00.000Z"
+ "scheduled_slot": "2026-10-06T11:00:00Z"
 }
