@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261006T170035344271Z",
- "generated_at": "2026-10-06T17:00:35.344271+00:00",
- "generated_local": "Tue 06 Oct 2026, 19:00",
- "source_checked_at": "2026-10-06T17:00:35.344271+00:00",
+ "edition_id": "ed-20261006T212758704876Z",
+ "generated_at": "2026-10-06T21:27:58.704876+00:00",
+ "generated_local": "Tue 06 Oct 2026, 23:27",
+ "source_checked_at": "2026-10-06T21:27:58.704876+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-10-06T17:00:35.344271+00:00"
+  "run-2026-10-06T21:27:58.704876+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-10-06T17:00:35.344271+00:00"
+  "completed_at": "2026-10-06T21:27:58.704876+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 26,
+   "item_count": 28,
    "reason": null,
    "failure": null,
-   "parsed_count": 26,
+   "parsed_count": 28,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -177,10 +177,10 @@
    "name": "Topic: European Central Bank",
    "section": "news",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -189,10 +189,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 110,
+   "item_count": 109,
    "reason": null,
    "failure": null,
-   "parsed_count": 110,
+   "parsed_count": 109,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -213,10 +213,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 105,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 105,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -271,17 +271,17 @@
    "diagnostic": {
     "status_code": 403,
     "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/"
+    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html;"
    }
   },
   {
    "name": "L'Équipe",
    "section": "sport",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "Invalid feed XML",
-   "failure": "parse",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 50,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 50,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -410,10 +410,10 @@
    "name": "Ethereum",
    "section": "finance",
    "status": "ok",
-   "item_count": 19,
+   "item_count": 20,
    "reason": null,
    "failure": null,
-   "parsed_count": 19,
+   "parsed_count": 20,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -689,9 +689,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002307,
-  "est_month_usd": 0.21,
-  "forecast_month_usd": 0.21,
+  "est_cost_usd": 0.002202,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -699,60 +699,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7765,
+    "latency_ms": 7985,
     "unknown": false,
     "provider_request_ids": [
-     "resp_05924234c276800d016ac52958481c87d18306253ed881a26f"
+     "resp_0d0b0d81145f1039016ac567e688ec87d2919379f9da2483d5"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3238,
-    "output_tokens": 602,
-    "reasoning_tokens": 152
+    "cache_write_tokens": 3279,
+    "output_tokens": 541,
+    "reasoning_tokens": 161
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 10211,
+    "latency_ms": 8895,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0adfbbe4ec767f4a016ac5295f19bc87d19624308d34d716e7"
+     "resp_0b96c3cee38bb906016ac567edc08087d2ace5710cab1cd51d"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3670,
-    "output_tokens": 681,
-    "reasoning_tokens": 326
+    "cache_write_tokens": 3447,
+    "output_tokens": 707,
+    "reasoning_tokens": 275
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 11083,
+    "latency_ms": 7803,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0d1021c834f6aeec016ac529694fec87d1b03910187fd6f399"
+     "resp_0c3bf1e11cd0b444016ac567f6992087d29667f12fa7e7f40f"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3422,
-    "output_tokens": 746,
-    "reasoning_tokens": 244
+    "cache_write_tokens": 3293,
+    "output_tokens": 649,
+    "reasoning_tokens": 201
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10330,
-  "output_tokens": 2029,
-  "reasoning_tokens": 722,
+  "cache_write_tokens": 10019,
+  "output_tokens": 1897,
+  "reasoning_tokens": 637,
   "recorded_month_to_date": {
    "month_utc": "2026-10",
-   "recorded_runs": 25,
-   "attempts": 75,
-   "known_cost_usd": 0.055901,
+   "recorded_runs": 26,
+   "attempts": 78,
+   "known_cost_usd": 0.058103,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -761,355 +761,362 @@
   "news": {
    "briefing": [
     {
-     "text": "Sweden says it will send a Patriot air-defence system and 100 personnel to Poland to protect the logistics hub supporting Ukraine.",
+     "text": "US equities reached record highs as oil stabilized and bond yields retreated, extending a rally despite signs of economic instability.",
      "sources": [
       {
-       "key": "ec0fc8996ee7f73d",
-       "title": "EN DIRECT, guerre en Ukraine : la Suède envoie un système Patriot en Pologne pour protéger la logistique ukrainienne",
-       "url": "https://www.lemonde.fr/international/live/2026/10/06/en-direct-guerre-en-ukraine-la-suede-envoie-un-systeme-patriot-en-pologne-pour-proteger-la-logistique-ukrainienne_6787996_3210.html",
-       "source": "Le Monde",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Trump’s comments about Iran potentially striking Los Angeles and San Diego drew condemnation in California; the White House said he was warning about the risk of a nuclear Iran.",
-     "sources": [
-      {
-       "key": "85915a905b75f0b9",
-       "title": "White House defends Trump comment to let Iran 'take out' LA and San Diego",
-       "url": "https://www.bbc.co.uk/news/articles/c6r7yn8pknyxo?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
-      },
-      {
-       "key": "08d459ef564760cd",
-       "title": "Californians blast Trump remark that Iran could 'take out' Los Angeles, San Diego - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMTY3RjZOMDVYS2VsdWNRS0ZWR0FoRTU1V1MtQk8wLWdEMmdvTXYwVUxORXFpQXNFM25wbU9uVFFKNnhMSmlYUkFEQ0xhNnNKMk5hTjZURGhtV3piTlhieVVhb3h4N3hCYmtTQUVZZUh5dkhPaERqT0hFWXdPQl8wYVNfemd6VkZqSXVEVHQ0Q2NzWWpQUlVjVUhpdHhDWnZUMWl4RUZKTVplVWp6c3prRDhGZw?oc=5",
+       "key": "9aa800f218a04d53",
+       "title": "Wall Street shares notch records as oil prices stabilize, bond yields retreat - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZlMwQU1nbHRaZ2dnOUVOM1c1LXBxNXhWUTNzS1ROWDZyODk1NldRTHB2ODNKbnI0am5tUUcwMU9YekUxMWtLOFVGMFczTU12cHpCclQ1cnhDRzBMVGRBWTYwRjZPVUZidVFlT1FMZGdUcnR6MENjNXVMUXRzTlVzdVJkSQ?oc=5",
        "source": "Reuters",
        "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Student protests in Paris have turned violent, with investigations under way into allegations of police brutality.",
-     "sources": [
+      },
       {
-       "key": "d52e358bd78fadfb",
-       "title": "‘This is state violence’: Paris students rage at politicians and heavy-handed policing",
-       "url": "https://www.theguardian.com/world/2026/oct/06/french-student-protests-barricades-paris-police",
+       "key": "d7beea0e300050f3",
+       "title": "S&P 500 and Nasdaq surge to record highs after AI chipmaker rally",
+       "url": "https://www.theguardian.com/business/2026/oct/06/sp-500-nasdaq-stocks-ai-chipmakers",
        "source": "The Guardian World",
        "via": null
       }
      ]
     },
     {
-     "text": "European shares rose as oil prices fell and bond yields remained stable; Milan’s market was supported by renewed focus on banks. Separately, a PIMCO adviser described US Treasury yields as attractive value.",
+     "text": "A whistleblower alleges Trump directed the FBI to investigate anti-ICE protesters in Los Angeles; the White House denies the allegation.",
      "sources": [
       {
-       "key": "b6d3e8fc4efb7159",
-       "title": "Borsa: Milano in rialzo, banche sempre sotto i riflettori",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/06/borsa-milano-in-rialzo-banche-sempre-sotto-i-riflettori_3ee48ce1-d0cb-4db3-bbda-1a901dcf5f09.html",
-       "source": "ANSA Top News",
+       "key": "49cb9e85af0236ff",
+       "title": "Whistleblower suit alleges Trump ordered FBI investigation on LA anti-ICE protesters",
+       "url": "https://www.theguardian.com/us-news/2026/oct/06/trump-fbi-ice-la-protesters",
+       "source": "The Guardian World",
        "via": null
-      },
+      }
+     ]
+    },
+    {
+     "text": "Reuters reports Yemeni government fighters were shown driving vehicles over Houthi opponents, underscoring the brutality of the conflict.",
+     "sources": [
       {
-       "key": "56a0e130f52128b2",
-       "title": "US Treasury yields are \"screaming good value\" says PIMCO senior advisor - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWmVRdHA4bVRsVmVyUThxTVdUb3AzNklqYnNDS2JvVVVEa2hnbk1qaHVWcHBnN1Bya2piTTM3eEkxRWxrZVE4WDRidzAyZGFocEFVYjN6RENUWm9rbFBKQ1hQRlM5Qi12eTFKV2dxNF80MHF1Xy12NkR6SG9kcllSR2JlalFQZXdPYUtOeXhfMHlwdGdZbEZXTk96ZzhPS3MtUjFfRkNXNzFiWkJzTFNLTVJVQk8?oc=5",
+       "key": "a5796817d80f61e9",
+       "title": "Yemeni government fighters shown driving vehicles over Houthi opponents - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdTUtR05NTWVJVFBWcjJmSVZRb0RuVXl6Zk5ocVBacHBIMm1yeWo2VWQ4U2ZqNVFPcTFqeExXUjFyMlpONkU5blQyekxfbGpwM3ZBay05dFU4WkRqZ3lIcmw3VG9UQ3NxSWczQU9qMjFRbHV3QVd3LXl3ZElxaHVRMkFVdHVfajl5SV81YkF1X1ZYX0ZNbW0yMFdjUWFnY3JTLXhZd1gzSU5pNTR5MU1mT0RneVlsLU1uaVdEd1lSRnd0M19Yd1JF?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
+    },
+    {
+     "text": "TikTok plans to add AI-powered product discovery and one-click checkout, combining recommendations with purchasing on its platform.",
+     "sources": [
+      {
+       "key": "92bd86139cda6ce2",
+       "title": "TikTok to add AI-powered discovery and one-click checkout to its platform - CX Dive",
+       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPYXRmMU41ZU5mblA0NnJ2dmRWRVlXRkhFUjRqUVdjRVV4aU5rY3gtb0NYejZCM3dMS29UbzBDVXlIN1ZCLWVBRTBiMmpsSGNDNENSWWJQeG5rOE5aZzR5U0EybjcxZ2luc2VobUEtck9qei0wMHAyVFAtb2c2RlVxSzFjNWtSUlNtLUp4RmExc0xOZEowX1M3eVlhX3BBOFM4NTZoWA?oc=5",
+       "source": "CX Dive",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A Palestinian photographer said Israeli settlers beat him while he covered violence against olive farmers in the West Bank; soldiers reportedly watched.",
+     "sources": [
+      {
+       "key": "51223284097a51d2",
+       "title": "Israeli settlers beat press photographer as soldiers watch in West Bank",
+       "url": "https://www.theguardian.com/world/2026/oct/06/israeli-settlers-beat-press-photographer-as-soldiers-watch-in-west-bank",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
     }
    ],
    "items": [
     {
-     "url": "https://www.lemonde.fr/international/live/2026/10/06/en-direct-guerre-en-ukraine-la-suede-envoie-un-systeme-patriot-en-pologne-pour-proteger-la-logistique-ukrainienne_6787996_3210.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-10-06T16:53:22+00:00",
-     "new": true,
-     "key": "ec0fc8996ee7f73d",
-     "title": "Sweden to send Patriot system to Poland to protect Ukraine logistics",
-     "summary": "Sweden announced it will send a Patriot air-defence system and 100 personnel to protect the logistics hub at Rzeszów."
-    },
-    {
-     "url": "https://www.bbc.co.uk/news/articles/c6r7yn8pknyxo?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-10-06T16:22:37+00:00",
-     "new": true,
-     "key": "85915a905b75f0b9",
-     "title": "White House defends Trump’s Iran remarks about Los Angeles and San Diego",
-     "summary": "The White House said Trump was warning of the risk of a nuclear Iran after remarks about Iran striking US cities."
-    },
-    {
-     "url": "https://www.theguardian.com/world/2026/oct/06/french-student-protests-barricades-paris-police",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-10-06T16:23:12+00:00",
-     "new": true,
-     "key": "d52e358bd78fadfb",
-     "title": "Paris student protests raise allegations of police brutality",
-     "summary": "Protests in Paris have turned violent, and investigations are under way into allegations of police brutality."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/06/borsa-milano-in-rialzo-banche-sempre-sotto-i-riflettori_3ee48ce1-d0cb-4db3-bbda-1a901dcf5f09.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-10-06T16:28:58+00:00",
-     "new": true,
-     "key": "b6d3e8fc4efb7159",
-     "title": "Milan shares rise as banks remain in focus",
-     "summary": "European markets rose as oil fell and yields stayed stable, with Milan’s banks drawing investor attention."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWmVRdHA4bVRsVmVyUThxTVdUb3AzNklqYnNDS2JvVVVEa2hnbk1qaHVWcHBnN1Bya2piTTM3eEkxRWxrZVE4WDRidzAyZGFocEFVYjN6RENUWm9rbFBKQ1hQRlM5Qi12eTFKV2dxNF80MHF1Xy12NkR6SG9kcllSR2JlalFQZXdPYUtOeXhfMHlwdGdZbEZXTk96ZzhPS3MtUjFfRkNXNzFiWkJzTFNLTVJVQk8?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZlMwQU1nbHRaZ2dnOUVOM1c1LXBxNXhWUTNzS1ROWDZyODk1NldRTHB2ODNKbnI0am5tUUcwMU9YekUxMWtLOFVGMFczTU12cHpCclQ1cnhDRzBMVGRBWTYwRjZPVUZidVFlT1FMZGdUcnR6MENjNXVMUXRzTlVzdVJkSQ?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-10-06T16:15:50+00:00",
+     "published": "2026-10-06T20:42:27+00:00",
      "new": true,
-     "key": "56a0e130f52128b2",
-     "title": "PIMCO adviser says US Treasury yields offer strong value",
-     "summary": "A senior PIMCO adviser described US Treasury yields as offering strong value."
+     "key": "9aa800f218a04d53",
+     "title": "Wall Street shares notch records as oil stabilizes and bond yields retreat",
+     "summary": "US shares reached records as oil prices stabilized and bond yields fell."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTXVGR19vM3ZQTzdDSEdzbXBVdk8tTkM1YXVtdU9RZzE2aEU1UWgtZU1waUphOVdGRnVHSC1ueU5iN1MtLTNsQUVCNFk5NXdmMm9DOWZYZ0pyY29HeTRrYWNUeFFHdllyTnRVSXZycHF1NGNtQUU1U0toM1Jaalp2S0ZFN01DZWgwR19SQ2xLenhsQ081LTdnVDl4TzA2d3lPeFl2dTRZWGloTXQ4SXg1cFhONA?oc=5",
-     "source": "Enterprise Times",
-     "feed_name": "Topic: insurance industry",
-     "via": "Google News",
-     "published": "2026-10-06T16:52:56+00:00",
+     "url": "https://www.theguardian.com/us-news/2026/oct/06/trump-fbi-ice-la-protesters",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-10-06T21:14:57+00:00",
      "new": true,
-     "key": "693e55d849b75e74",
-     "title": "Sapiens launches AI tool targeting insurance hallucinations",
-     "summary": "Sapiens unveiled Sapiens Brain, a product aimed at addressing hallucinations in insurance AI."
+     "key": "49cb9e85af0236ff",
+     "title": "Whistleblower alleges Trump ordered FBI investigation of LA anti-ICE protesters",
+     "summary": "A whistleblower alleges Trump ordered an FBI investigation of Los Angeles anti-ICE protesters; the White House called the claim false."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQN0xnNVUyZmt5bE53cERyUlJHOWIyb1M0R3lhaklUNDJoXzlBYi03ZlhiSHFTMU1SUHhTc0piQzIwclhxeXVoUGE0eVJXaWtMWk1xbVZ2MERXV1JwbzRCTnVpcldLMHdOYjNLenliZ25keGZJVUhNRkhWTG8tdGZMSC1YWElwSExEXzZmc0QyRjhvVHBTam5mYjNCSlZWQWdQaWEzUUJwQ1phSnpSeXlLM0FtemE3NDhpVm9hX1R2dEVNaERpZEQ0?oc=5",
-     "source": "Insurance Business",
-     "feed_name": "Topic: insurance industry",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdTUtR05NTWVJVFBWcjJmSVZRb0RuVXl6Zk5ocVBacHBIMm1yeWo2VWQ4U2ZqNVFPcTFqeExXUjFyMlpONkU5blQyekxfbGpwM3ZBay05dFU4WkRqZ3lIcmw3VG9UQ3NxSWczQU9qMjFRbHV3QVd3LXl3ZElxaHVRMkFVdHVfajl5SV81YkF1X1ZYX0ZNbW0yMFdjUWFnY3JTLXhZd1gzSU5pNTR5MU1mT0RneVlsLU1uaVdEd1lSRnd0M19Yd1JF?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-10-06T16:18:45+00:00",
+     "published": "2026-10-06T20:43:50+00:00",
      "new": true,
-     "key": "e62c1c7914ab1f4f",
-     "title": "Insurers formalize alliance across four countries",
-     "summary": "Insurers have formalized a four-country alliance as risks converge."
+     "key": "a5796817d80f61e9",
+     "title": "Yemeni government fighters shown driving vehicles over Houthi opponents",
+     "summary": "A video reportedly showed Yemeni government fighters driving vehicles over Houthi opponents."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPYXRmMU41ZU5mblA0NnJ2dmRWRVlXRkhFUjRqUVdjRVV4aU5rY3gtb0NYejZCM3dMS29UbzBDVXlIN1ZCLWVBRTBiMmpsSGNDNENSWWJQeG5rOE5aZzR5U0EybjcxZ2luc2VobUEtck9qei0wMHAyVFAtb2c2RlVxSzFjNWtSUlNtLUp4RmExc0xOZEowX1M3eVlhX3BBOFM4NTZoWA?oc=5",
+     "source": "CX Dive",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-10-06T21:15:07+00:00",
+     "new": true,
+     "key": "92bd86139cda6ce2",
+     "title": "TikTok to add AI-powered discovery and one-click checkout",
+     "summary": "TikTok plans to add AI-powered discovery and one-click checkout to its platform."
+    },
+    {
+     "url": "https://www.theguardian.com/world/2026/oct/06/israeli-settlers-beat-press-photographer-as-soldiers-watch-in-west-bank",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-10-06T21:00:28+00:00",
+     "new": true,
+     "key": "51223284097a51d2",
+     "title": "Israeli settlers beat press photographer as soldiers watch in West Bank",
+     "summary": "A photographer covering violence against olive farmers said settlers beat him while soldiers watched."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-06T17:00:35.344271+00:00",
-   "input_fingerprint": "sha256:0d8644280cf178a88a4595bb6b10c0fb2e9174563537569495523320af0d1f0b",
-   "last_success_at": "2026-10-06T17:00:35.344271+00:00",
-   "candidate_count": 533,
-   "new_count": 7
+   "source_checked_at": "2026-10-06T21:27:58.704876+00:00",
+   "input_fingerprint": "sha256:aed0e1860b6ad076c3a2a38a3e69d008c89cec69ad501a5e91bb4e5b08a6ddab",
+   "last_success_at": "2026-10-06T21:27:58.704876+00:00",
+   "candidate_count": 535,
+   "new_count": 5
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG’s Parc des Princes plans are back in focus, with reports describing a major redevelopment project and discussions over the stadium’s future.",
+     "text": "France–Belgium match ratings offer a snapshot of the national team’s latest performance; separate commentary has also focused on the Olise–Cherki pairing.",
      "sources": [
       {
-       "key": "053aa58ca76e4c46",
-       "title": "PSG : 70 000 places, musée, padel… le projet XXL pour transformer le Parc des Princes - Sport.fr",
-       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOMFR5VEdGOTB1RDlTMmdtYVdRdWxIRmhwcS1UZHFuUWxpRE9lMUVqSDNOLWYyQ2VyZnpSZV9qRmRUU2MyMUxFdi10bm5NQkxudmlhZTBtNEJocGZfT293SnpNUHVUck9fYnJIRVNFSEZHQUtMRzg4dklCVEtmdjFkd3Z3b25raXVIUkNIUGRiTnBOMGJkUEtaeUpSc3E4Y3MyNlJpb3VPVzhLamVXcHN0dmRxenlJdDNDVVNfVWZQNkc?oc=5",
+       "key": "dc7ebbcad1636411",
+       "title": "France - Belgique : les notes du match - Foot Mercato",
+       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdnFaNkhkRlBRNzZYWno5RUxLZkNSNFFVUjRpaTcyQmJ2NzRCS3drQTJXbll5ZF92SlJKLTNqSGU0aGNXLUFfNUhfVk03ek9NUzRMMkIxVGhIVnY4bU11SnFObUFveG5pbWdKU3NMcUU5VDh3cGlRZDZlUXVmTUppaDhfdnNseldTRjlZ?oc=5",
+       "source": "Foot Mercato",
+       "via": "Google News"
+      },
+      {
+       "key": "39b6c1d0b6b0ecf4",
+       "title": "EdF : Giresse valide le duo Olise-Cherki - Maxifoot",
+       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMU84QmZkb2U4QWE5VDdiM2JCeUdiLUVwQzlBb2hLLVB6Q2NyV2RPVmo0RmJNQi1CUDl1emVhMkNzeFhXRjRuU3pXSDM3ejNWTUdTazhKaC1sbG5HcmtHZXE0eG1Va2dPWndPbEhhMHdSVFJvMllhaVFvd2pZVF9NLXBwYU9qUTV1YUHSAYgBQVVfeXFMTjFQM0YtUmduejRDWlpSQUlzV2xUeTJnd2ZhM1M0cUZkTVdqamZ4WFpFSE4ya0YzeHhPVVNaSkJ0V0dzVXo4NWlnb1kzNmxuNnNKZFBNSXRRTUVmN3d4ZVNoV2htaWFodGR0VXFnQU1Za1BvMm1OQUl5N1puUDV6UnJER3pTSWJHRg?oc=5",
+       "source": "Maxifoot",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "PSG’s upcoming Le Mans match is drawing attention to possible lineups, while Lucas Beraldo has publicly thanked Luis Enrique for his role.",
+     "sources": [
+      {
+       "key": "77c31922fd6a68c9",
+       "title": "PSG – Le Mans : Doué, Dembélé, Kvaratskhelia… les compos probables - Sport.fr",
+       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQc0NYeVJoa3kxdEdtZldiYU1YYzNvYVVmNEotSElRaGtWR3NnYzZDZWQ5UVo4WloyMHdXNUJ6bjEzR0NURzlFUWg5WmJaOEVXUENfdFZuWGF5TFpGMTBQbmNOZV9QaDRseTV5cDBONUlucVZQdWh5bHN0QmhBN245WWdQQWU0WFhNYTdON3NWLVAwclN1bEptMFdoSVVLSHdqNHkyUA?oc=5",
        "source": "Sport.fr",
        "via": "Google News"
       },
       {
-       "key": "bb2cf5fc7fc4c3c7",
-       "title": "PSG - Les discussions avancent sur la vente du Parc des Princes - Canal Supporters PSG 24-7",
-       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRTdaQW55MDRxajBRTHlNMzBEdW5KS0ltQlhXMHpwd3FCekZEdkNmQ3ZSeUREZTdBSVpmb2EyNE5zQlZucTFqVnNKcFBqVWJVUkRFRGhNdHVtbDZWMklpOXZvclc0XzFOY1VIQk5wNkNJMjlMbTV0cy1nNWRGRjVIUWtrQ3d5dEhIU1NQb19uSGhOVmM2R0HSAZsBQVVfeXFMTU9qQ1BiT2xOU2JBam1Yem1RZFh3MEozUWpLV0I1UEFkOVd2dnV3QTRhVFBYdjBMdmJVUW9iWE9xa2RWbUlKVDlncndqZ0hLaEVyVThoUk1zZVJ1NVFrSXdDZ2RoSjJfeXEtQ1d0elhXU3VfMF9BVUtHUHBxQ1NnTDdxQ1FNWDI1eXZ6Sk8wMzhOOEpzdzBzX0tHOFE?oc=5",
-       "source": "Canal Supporters PSG 24-7",
+       "key": "4de427b0751701a2",
+       "title": "PSG : son rôle, Beraldo remercie Luis Enrique - Maxifoot",
+       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQQ0lVMU1xb0w4V3J1MG9SajU5T1NWNHpRc0NCRkhWeDBfS3VLSHJKZVB5ODBZa3JIbWFkdFdndE5fWHlndEhyTnNCUzFZWHU4M2Y0SDQ3OUJWak1ONmpPRE02UFJRZjh1U19tVGRHVjlmNlREbkFWdUE1TXhYdmkxdlFuWTVVT3PSAYoBQVVfeXFMTXVJT3NaLUpCMjc2aEFfbEJrM1NPNXpBMjVCOTc0OFFHdVk4aGZZNUtqNXlnTXFwYVVGd0dNS0J2dmxwYW5nbnRNV2JHSEdLOE1MSUhuNW9mOGNyVzhHbWJ4b0laYlVPVnZGSGstbGs2Q2l1TFkzbUFuVjlLTlZhRHRCSmc0VXRRdE9n?oc=5",
+       "source": "Maxifoot",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Coverage of Zinédine Zidane’s first France camp is assessing which players gained or lost ground under the new coach.",
+     "text": "Zinédine Zidane’s early spell as France coach is prompting enthusiastic reactions from members of the 1998 team.",
      "sources": [
       {
-       "key": "564fe8df55685225",
-       "title": "Les 5 gagnants et les 3 perdants du premier rassemblement de Zinédine Zidane en équipe de France - L'Équipe",
-       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNbWdUN2puY25lNGw2M0NPUG9xcmk1azFtcFQ4TEkwQUNtV1RuOEJoRTVISFlVU0RqdWw2Y0ozZGtqbEtETjVGcjFNREJWUlRvMWpydTBEUFJlNmV1TmVtbnRubnRwRG1JQk9WdVlJNmNrT0llRm1NMVYxRlg1THplSktjcmd2TS1ST01zU2dfMEZBMlNIQzZnXzZYeE9FOThCTFB3aEh3QTRDa2YwUk10dm5LV3ZUSUNVVy1IOVgxemR4SjM1MFZKeENoZ3VSMXhBem5GSmRrZW9QZURUZ0VXdQ?oc=5",
-       "source": "L'Équipe",
+       "key": "d0357df3a037654e",
+       "title": "\"On vit un fantasme\": les Bleus de France 98 savourent les débuts de Zidane comme sélectionneur - RMC Sport",
+       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQSFhRdnkxUTNKM3psdUlFaTQ4aF9LYWs2MEZ1UG1SSzV1QTBzbWV2RHJ6U19SVEEwNE94bENBN25aSllSTWcxOTFCQ2IzQktlOWtsT1I1RzRhVmFaYXE0bVBJYTRDdkZPZWdveUg0cENfMkpXc0tNNmxHc0dzT2JLWWRKd0Y2UEloNHVUSDhDRmJFVEx2QlFJODJialEzM2RvZ2NjNnhpS1pPU1Z0Qy1iMWFsSENoZktMYzBaYVc0anA5ZGwzTklnS25Gay1xMURFdEdIdDFHZ1FCaDlRWHVIMGJPZTNpbjN2eXR2SVN6WDNjV25EbmMtag?oc=5",
+       "source": "RMC Sport",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "PSG injury-watch: one report says the latest news on Khvicha Kvaratskhelia is concerning, while another says Achraf Hakimi has returned.",
+     "text": "In Counter-Strike, M80 have secured a Major place, with uncertainty remaining over sticker proceeds; the team has also eliminated Legacy from ESL Pro League.",
      "sources": [
       {
-       "key": "94819f1f59bf88a2",
-       "title": "PSG : les nouvelles ne sont pas rassurantes pour Khvicha Kvaratskhelia - AllezParis",
-       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMWd1VEx4ZW1BaXJoUVozR0tXSWtCb3IzYnYyNTBuWEplTXYwWV9Ib1EwdERaUFVUWjRXVUlWMHhoMkVkN1U5czUtQUhOZ0ZVMzIyRmtlbmRlNm9IbFV2WHBKUzB5cVA4WDk2RXI3N1dTX19kTEYwRUhhVmlKTnVRY1ctaHVYTnJOeEE4SFpkWWpnMjV3bDdqejBDdllfYWxENk5IQkpMOV9iNnM?oc=5",
-       "source": "AllezParis",
-       "via": "Google News"
+       "key": "03e8c1bca0dee917",
+       "title": "Swisher: \"Everyone is hoping that Valve rethink their stance on the stickers\"",
+       "url": "https://www.hltv.org/news/45658/swisher-everyone-is-hoping-that-valve-rethink-their-stance-on-the-stickers",
+       "source": "HLTV",
+       "via": null
       },
       {
-       "key": "8889a89702c4adc4",
-       "title": "PSG : Achraf Hakimi est déjà de retour ! - AllezParis",
-       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lMmRXZ3FCV1I1azg0eGJUZThMV1JnczlPTjJKaUM2b2wyVHdYZ2NmVDQ2QlVrYkdPQXBCS2s0dUNNOEpXNlRpOU9iS09XcDA5ZmxXSGV0bDV2VTNkQlNOOEc2eEFMX01LTE50SWZBTEZNMlVSYWZ3Vw?oc=5",
-       "source": "AllezParis",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Mickaël Guillard could benefit from Emmanuel Meafou’s withdrawal from the France squad, according to a report on the XV’s forward options.",
-     "sources": [
-      {
-       "key": "b36068dd40a5eb35",
-       "title": "320 minutes et 74 plaquages en quatre matchs : pourquoi Mickaël Guillard peut profiter du forfait de Meafou avec le XV de France - Rugbynistere",
-       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQVWFiX2Y2SzlsNFB0Vnk3T0w3aXlEQS15R2pUUUFaZTVmUUtqcDBfdEQ1UjhzTmEwTEczbHlLUzJNbF9mNURvVnYxb1hDdTJELVhLbm1Zb0I0UUlZWXUwNWxJMHBvSk9CaHl0Y2x1Vm5ZZ0FKdW5NTzdaY1BTQzd5Vy1LTXAtTW9YR3JtaXh2WkpWaDNjbFVELXBjUEdPaDlDdl9EVlpxV3NRLXBicW1FQXk1a2tKMDlIenNERUdFTmpaMnFWYW1ha3EtWWpNRUtOTGg0cFVoQnp6YmdMSFp4WE9xMFg4NVpzUERZRUQyZmJMVU9o?oc=5",
-       "source": "Rugbynistere",
-       "via": "Google News"
+       "key": "4a491ea6c70590d2",
+       "title": "M80 eliminate arT-less Legacy from EPL",
+       "url": "https://www.hltv.org/news/45657/m80-eliminate-art-less-legacy-from-epl",
+       "source": "HLTV",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOMFR5VEdGOTB1RDlTMmdtYVdRdWxIRmhwcS1UZHFuUWxpRE9lMUVqSDNOLWYyQ2VyZnpSZV9qRmRUU2MyMUxFdi10bm5NQkxudmlhZTBtNEJocGZfT293SnpNUHVUck9fYnJIRVNFSEZHQUtMRzg4dklCVEtmdjFkd3Z3b25raXVIUkNIUGRiTnBOMGJkUEtaeUpSc3E4Y3MyNlJpb3VPVzhLamVXcHN0dmRxenlJdDNDVVNfVWZQNkc?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdnFaNkhkRlBRNzZYWno5RUxLZkNSNFFVUjRpaTcyQmJ2NzRCS3drQTJXbll5ZF92SlJKLTNqSGU0aGNXLUFfNUhfVk03ek9NUzRMMkIxVGhIVnY4bU11SnFObUFveG5pbWdKU3NMcUU5VDh3cGlRZDZlUXVmTUppaDhfdnNseldTRjlZ?oc=5",
+     "source": "Foot Mercato",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-10-06T20:46:32+00:00",
+     "new": true,
+     "key": "dc7ebbcad1636411",
+     "title": "France–Belgium: Match ratings",
+     "summary": "Foot Mercato published its player ratings for France’s match against Belgium."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMU84QmZkb2U4QWE5VDdiM2JCeUdiLUVwQzlBb2hLLVB6Q2NyV2RPVmo0RmJNQi1CUDl1emVhMkNzeFhXRjRuU3pXSDM3ejNWTUdTazhKaC1sbG5HcmtHZXE0eG1Va2dPWndPbEhhMHdSVFJvMllhaVFvd2pZVF9NLXBwYU9qUTV1YUHSAYgBQVVfeXFMTjFQM0YtUmduejRDWlpSQUlzV2xUeTJnd2ZhM1M0cUZkTVdqamZ4WFpFSE4ya0YzeHhPVVNaSkJ0V0dzVXo4NWlnb1kzNmxuNnNKZFBNSXRRTUVmN3d4ZVNoV2htaWFodGR0VXFnQU1Za1BvMm1OQUl5N1puUDV6UnJER3pTSWJHRg?oc=5",
+     "source": "Maxifoot",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-10-06T20:02:00+00:00",
+     "new": true,
+     "key": "39b6c1d0b6b0ecf4",
+     "title": "Giresse backs the Olise–Cherki partnership",
+     "summary": "Alain Giresse endorsed the pairing of Michael Olise and Rayan Cherki for France."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQc0NYeVJoa3kxdEdtZldiYU1YYzNvYVVmNEotSElRaGtWR3NnYzZDZWQ5UVo4WloyMHdXNUJ6bjEzR0NURzlFUWg5WmJaOEVXUENfdFZuWGF5TFpGMTBQbmNOZV9QaDRseTV5cDBONUlucVZQdWh5bHN0QmhBN245WWdQQWU0WFhNYTdON3NWLVAwclN1bEptMFdoSVVLSHdqNHkyUA?oc=5",
      "source": "Sport.fr",
      "feed_name": "Team: PSG",
      "via": "Google News",
-     "published": "2026-10-06T16:50:00+00:00",
+     "published": "2026-10-06T20:50:00+00:00",
      "new": true,
-     "key": "053aa58ca76e4c46",
-     "title": "PSG’s proposed Parc des Princes redevelopment",
-     "summary": "A report outlines a large-scale PSG project to transform the Parc des Princes."
+     "key": "77c31922fd6a68c9",
+     "title": "PSG–Le Mans: Predicted lineups",
+     "summary": "Sport.fr outlined its predicted teams for PSG’s match against Le Mans."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNbWdUN2puY25lNGw2M0NPUG9xcmk1azFtcFQ4TEkwQUNtV1RuOEJoRTVISFlVU0RqdWw2Y0ozZGtqbEtETjVGcjFNREJWUlRvMWpydTBEUFJlNmV1TmVtbnRubnRwRG1JQk9WdVlJNmNrT0llRm1NMVYxRlg1THplSktjcmd2TS1ST01zU2dfMEZBMlNIQzZnXzZYeE9FOThCTFB3aEh3QTRDa2YwUk10dm5LV3ZUSUNVVy1IOVgxemR4SjM1MFZKeENoZ3VSMXhBem5GSmRrZW9QZURUZ0VXdQ?oc=5",
-     "source": "L'Équipe",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQQ0lVMU1xb0w4V3J1MG9SajU5T1NWNHpRc0NCRkhWeDBfS3VLSHJKZVB5ODBZa3JIbWFkdFdndE5fWHlndEhyTnNCUzFZWHU4M2Y0SDQ3OUJWak1ONmpPRE02UFJRZjh1U19tVGRHVjlmNlREbkFWdUE1TXhYdmkxdlFuWTVVT3PSAYoBQVVfeXFMTXVJT3NaLUpCMjc2aEFfbEJrM1NPNXpBMjVCOTc0OFFHdVk4aGZZNUtqNXlnTXFwYVVGd0dNS0J2dmxwYW5nbnRNV2JHSEdLOE1MSUhuNW9mOGNyVzhHbWJ4b0laYlVPVnZGSGstbGs2Q2l1TFkzbUFuVjlLTlZhRHRCSmc0VXRRdE9n?oc=5",
+     "source": "Maxifoot",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-06T20:54:00+00:00",
+     "new": true,
+     "key": "4de427b0751701a2",
+     "title": "Beraldo thanks Luis Enrique for his role",
+     "summary": "Lucas Beraldo spoke about his role at PSG and thanked coach Luis Enrique."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQSFhRdnkxUTNKM3psdUlFaTQ4aF9LYWs2MEZ1UG1SSzV1QTBzbWV2RHJ6U19SVEEwNE94bENBN25aSllSTWcxOTFCQ2IzQktlOWtsT1I1RzRhVmFaYXE0bVBJYTRDdkZPZWdveUg0cENfMkpXc0tNNmxHc0dzT2JLWWRKd0Y2UEloNHVUSDhDRmJFVEx2QlFJODJialEzM2RvZ2NjNnhpS1pPU1Z0Qy1iMWFsSENoZktMYzBaYVc0anA5ZGwzTklnS25Gay1xMURFdEdIdDFHZ1FCaDlRWHVIMGJPZTNpbjN2eXR2SVN6WDNjV25EbmMtag?oc=5",
+     "source": "RMC Sport",
      "feed_name": "Team: équipe de France football",
      "via": "Google News",
-     "published": "2026-10-06T16:31:40+00:00",
+     "published": "2026-10-06T20:38:21+00:00",
      "new": true,
-     "key": "564fe8df55685225",
-     "title": "Zidane’s first France camp: winners and losers",
-     "summary": "L’Équipe assesses which players emerged stronger or weaker from Zidane’s first France gathering."
+     "key": "d0357df3a037654e",
+     "title": "France 1998 players welcome Zidane’s start as coach",
+     "summary": "Members of France’s 1998 team expressed excitement about Zinédine Zidane’s first steps as national-team coach."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMWd1VEx4ZW1BaXJoUVozR0tXSWtCb3IzYnYyNTBuWEplTXYwWV9Ib1EwdERaUFVUWjRXVUlWMHhoMkVkN1U5czUtQUhOZ0ZVMzIyRmtlbmRlNm9IbFV2WHBKUzB5cVA4WDk2RXI3N1dTX19kTEYwRUhhVmlKTnVRY1ctaHVYTnJOeEE4SFpkWWpnMjV3bDdqejBDdllfYWxENk5IQkpMOV9iNnM?oc=5",
-     "source": "AllezParis",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-06T15:50:02+00:00",
+     "url": "https://www.hltv.org/news/45658/swisher-everyone-is-hoping-that-valve-rethink-their-stance-on-the-stickers",
+     "source": "HLTV",
+     "feed_name": "HLTV",
+     "via": null,
+     "published": "2026-10-06T20:14:00+00:00",
      "new": true,
-     "key": "94819f1f59bf88a2",
-     "title": "Kvaratskhelia injury update",
-     "summary": "AllezParis reports that the latest news on Khvicha Kvaratskhelia is not reassuring."
+     "key": "03e8c1bca0dee917",
+     "title": "M80 await Major sticker proceeds",
+     "summary": "M80 have clinched a Major place and are waiting to learn how lucrative their sticker proceeds will be."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lMmRXZ3FCV1I1azg0eGJUZThMV1JnczlPTjJKaUM2b2wyVHdYZ2NmVDQ2QlVrYkdPQXBCS2s0dUNNOEpXNlRpOU9iS09XcDA5ZmxXSGV0bDV2VTNkQlNOOEc2eEFMX01LTE50SWZBTEZNMlVSYWZ3Vw?oc=5",
-     "source": "AllezParis",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-06T15:28:00+00:00",
+     "url": "https://www.hltv.org/news/45657/m80-eliminate-art-less-legacy-from-epl",
+     "source": "HLTV",
+     "feed_name": "HLTV",
+     "via": null,
+     "published": "2026-10-06T19:49:00+00:00",
      "new": true,
-     "key": "8889a89702c4adc4",
-     "title": "Hakimi returns to PSG",
-     "summary": "AllezParis reports that Achraf Hakimi is already back."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQVWFiX2Y2SzlsNFB0Vnk3T0w3aXlEQS15R2pUUUFaZTVmUUtqcDBfdEQ1UjhzTmEwTEczbHlLUzJNbF9mNURvVnYxb1hDdTJELVhLbm1Zb0I0UUlZWXUwNWxJMHBvSk9CaHl0Y2x1Vm5ZZ0FKdW5NTzdaY1BTQzd5Vy1LTXAtTW9YR3JtaXh2WkpWaDNjbFVELXBjUEdPaDlDdl9EVlpxV3NRLXBicW1FQXk1a2tKMDlIenNERUdFTmpaMnFWYW1ha3EtWWpNRUtOTGg0cFVoQnp6YmdMSFp4WE9xMFg4NVpzUERZRUQyZmJMVU9o?oc=5",
-     "source": "Rugbynistere",
-     "feed_name": "Team: XV de France rugby",
-     "via": "Google News",
-     "published": "2026-10-06T16:31:00+00:00",
-     "new": true,
-     "key": "b36068dd40a5eb35",
-     "title": "Guillard could benefit from Meafou’s withdrawal",
-     "summary": "Mickaël Guillard may gain an opportunity with France after Emmanuel Meafou’s withdrawal, the report says."
+     "key": "4a491ea6c70590d2",
+     "title": "M80 eliminate Legacy from ESL Pro League",
+     "summary": "M80 eliminated Legacy from ESL Pro League after the Brazilian side struggled without its captain."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-10-06T17:00:35.344271+00:00",
-   "input_fingerprint": "sha256:223772ea077654a31909c941dd91f7c3af95a20c6634d769617f4e4c6d5281d3",
-   "last_success_at": "2026-10-06T17:00:35.344271+00:00",
-   "error": "Source check failed: CulturePSG, L'Équipe",
-   "candidate_count": 273,
-   "new_count": 5
+   "source_checked_at": "2026-10-06T21:27:58.704876+00:00",
+   "input_fingerprint": "sha256:b159fb92c6f4eaaa16b6c4df2a44b915b094522a3c1e63684fb613108d9642eb",
+   "last_success_at": "2026-10-06T21:27:58.704876+00:00",
+   "error": "Source check failed: CulturePSG",
+   "candidate_count": 282,
+   "new_count": 7
   },
   "finance": {
    "briefing": [
     {
-     "text": "The S&P 500 reached a record, but the rally is increasingly concentrated in a small group of technology stocks—a potential weakness behind the headline strength.",
+     "text": "Oil-market resilience remains exposed to the Iran conflict: the EIA raised its price forecasts as the war drains global stockpiles, while shipowners are routing around danger and paying sharply higher wages for Hormuz transits.",
      "sources": [
       {
-       "key": "ce104afb85f51e71",
-       "title": "S&P 500 hits record high as AI stocks shrug off bond market slump",
-       "url": "https://www.ft.com/content/1c1ee003-f041-4c66-a971-f08d488d11f7?syn-25a6b1a6=1",
+       "key": "a0feaa0813f08354",
+       "title": "US EIA hikes oil price forecasts again as Iran war drains global stockpile - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZk8xUmkwZm83ZUdaTWpWaEVibFZzckNxOVFNOG9OTjlWdzJBdXRqWk5GUUFoME5DWXJmNThNRlIzdVBxUXNfeGd5cTFFNjlVZmg1VkFwVXdONzVLNGh0RVF5S203NlRieWFBNEY3b0dnZlZ3MERxUGlYWTRDaGwzYUJaYWJxWjI1WTlJbDNfMFJ0TVlqSjdFNnl6SVF6UVhmQlhNM2pRUnltSDVMMXNmS21JZkMySWNFVjhtbXVSMUw?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      },
+      {
+       "key": "a27a48649bf8e01a",
+       "title": "Ships’ captains paid $100,000 a month to transit Strait of Hormuz",
+       "url": "https://www.ft.com/content/0d665e5b-d8c8-4f1e-acf5-bba7193b4e6e?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "US Treasury yields are described by a PIMCO senior adviser as offering strong value, even as the bond market has recently come under pressure.",
+     "text": "US equities reached a fresh intraday record, with technology gains and easing oil prices and Treasury yields helping stocks push higher.",
      "sources": [
       {
-       "key": "56a0e130f52128b2",
-       "title": "US Treasury yields are \"screaming good value\" says PIMCO senior advisor - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWmVRdHA4bVRsVmVyUThxTVdUb3AzNklqYnNDS2JvVVVEa2hnbk1qaHVWcHBnN1Bya2piTTM3eEkxRWxrZVE4WDRidzAyZGFocEFVYjN6RENUWm9rbFBKQ1hQRlM5Qi12eTFKV2dxNF80MHF1Xy12NkR6SG9kcllSR2JlalFQZXdPYUtOeXhfMHlwdGdZbEZXTk96ZzhPS3MtUjFfRkNXNzFiWkJzTFNLTVJVQk8?oc=5",
-       "source": "Reuters",
+       "key": "a3f50a4513ac4314",
+       "title": "Chart: A look at the S&P 500's remarkable and defiant trip to a new record",
+       "url": "https://www.cnbc.com/2026/10/06/chart-a-look-at-the-sp-500s-remarkable-and-defiant-trip-a-new-record.html",
+       "source": "CNBC Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Emerging-market assets also advanced, with lower oil prices and Brazil’s vote cited as sentiment supports.",
+     "sources": [
+      {
+       "key": "4cc5a9636c57f821",
+       "title": "Emerging Markets Gain as Oil Drop, Brazil Vote Boost Sentiment - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRGdFWFMtTlVWa09FZ1BBQzJSaTF5OUExVmNqNDRlYkpRZDA3QXdGSldVUjJSZXp2c2FRWWFmWkd2eExNR0hlM2lNdDZzUTB1TkVGMTg0MGVxNENBR2ZTODhqM1luQ0NmbTA3ZUR4MktjckIzZUJIeHB4NkpZY1NBWXp5NUJGbVZEVjE2WkdYTjRaZUZtRzZBeVJjcUxGS05fNWdpNGtLQy1SWVYxcFhRSUlB?oc=5",
+       "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Google has struck a 3.6-GW power deal with Constellation Energy, underscoring the scale of electricity demand tied to AI and data centres.",
+     "text": "Credit stress is building in the US: JPMorgan says deeply distressed loans have reached their highest level since the pandemic.",
      "sources": [
       {
-       "key": "467bafc799c4a804",
-       "title": "Google enters massive 3.6-GW power deal with Constellation Energy - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUGptbnU1SUxQWEJrRlFLQUhoSU9WMDhMQmhtZ29ZSGtMRHdvaFI4MGdJXzFWbmVuSHc0bFVkamJVTzBfY3VjRmVmNjN3ekpFMEtyS1Bxc2NMTmhiZlJGQUk5Tml5b2Q0NGZPc1REcExtWElITFFlOW01VWNETGMyZXVMM0x0cGJjWVFfaXZqSzlSNlUxdnFvVFNOMUg2ekVPRktkdVptSFRHa3lNcHREaktPU2RTZGs?oc=5",
-       "source": "Reuters",
+       "key": "5e414b0b1e6e58e1",
+       "title": "Deeply Distressed US Loans Rise to Highest Level Since Pandemic, JPMorgan Says - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPYm9yVjdPa3dZSFRnaXlKeUJDSzZocm52TUN5a0VKUGhPVmhyVS1UdFVzNDh0UWZzdFJmM1k0WmJoMnZ3YzNHb3dnUFNEcGc4aHJvbVF4WXVXc3V5aTZGVVVHaWVrTzJEYmJ5SmNVa0JQbzhpWEpmR1JtLTRKblJsRTdMem5Va1FOeW5FcVp3dFMycGJuMWZPaUVjZERtNXA5UzVldDZkYmhYNjEyZ3RDVVA3RE0?oc=5",
+       "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "US software shares hit fresh 2026 highs as concerns about AI-driven disruption eased, a notable shift in sentiment toward the sector.",
+     "text": "AI infrastructure remains a major capital-raising story: Nvidia-backed Lambda is reportedly targeting a $4bn raise ahead of a planned IPO.",
      "sources": [
       {
-       "key": "2689327e3e7cd4e1",
-       "title": "US software stocks scale fresh 2026 highs as AI disruption worries fade - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdnhFSTVnZUJoZGRnMDJIQmZyM3RKR2c5X2FReUNWbmVwQ29uMnN6R1RUS1p2aG1hTlJYWFdRWElvNEpxYjJpMmFFWmtCVWJVZWpUVWNBcTJXQzllczlZWG5xWTkzbTJadkg1NUY0T2Nob3R1aDlRbDlhUUx5M3p4MTk0MXlWTmlWc1hIMHhMMzJGb1V1ZTlIaXNZTVlWbk5Ed29VWWtJMTlWRElZVk03QWxkaw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "BPCE has taken a stake in Sabadell, a move Les Echos frames as protection against a takeover bid.",
-     "sources": [
-      {
-       "key": "122d76ba94e76247",
-       "title": "Sabadell s'achète une protection anti-OPA avec l'entrée de BPCE dans son capital - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQdGVlSk50QjVPNnlJOVA2elY5WlRfQzFvMFEzYS1wa29PcWJ3cTViZ3dxNmhsc1dPR0NBNDlieTcyZ25UOTBXbldyRTk0M1NLcGFGM3NqdlVVUGo2Ti1mM09qbXktRVdVd3pXbDUwYTNVcWV6RkcyaWlvMHNHbmpsMHY2S2NBWFZpckNwTUJFQlVvRm5lVndTaGpXX2oxdGpMendrclFMbGNoZmxQYS1lNlVBdTlCWFA5MHZsWDRDR2lQUHRQRG4wUV9ncWZoMVppRU1Xek1qTWxHZmtz?oc=5",
-       "source": "Les Echos",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "US imports hit a record in August, pushing the trade balance further into deficit.",
-     "sources": [
-      {
-       "key": "ba06f083d5f1cef8",
-       "title": "Record imports push US trade balance deep into the red in August - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxON1IxdUZmenNPcXZRSTEwWDdEUVJNdjBnSEFlYm5JLWRsZm1EaE9iVmV1bGhZLU5Pb3BlRVQwbFZHT2dDbEppNkN6REZZd0JkeXFUbEt4Ync5RW5qREFscFZNVHA1RjdKVjRRcmZPb1ZyaDFhdnVKM2prcHRYd0NUQVVYdHRMdU9lakVQc0NocERlU0JRMDU1V19oMA?oc=5",
+       "key": "67af6cbcf8dbc2b7",
+       "title": "Nvidia-backed Lambda targets $4 billion raise ahead of planned IPO, WSJ reports - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQR3dfcjJxclVWTV9faDZyaUpIZ3F3cl95X2dFdzRaN0IxTWFuX0VwdWFBeEFtdjdqNVlKRHVCNVUzZF9paU9Cb0F3Y1NLR1l1UnNMVXNudDVYTEg4SVlVSHl2b1QwWjR6WV92ZV92MEUzRnozaEx4cHF6ZURxdUY2VDNlWWZSaGIxX3hsWEsxalhvZjhpSk85dWEwNWN6U0ZKeUNPdklHYnZpQjlORGpKemZOY0NfWkZFWHdvUkd3?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
@@ -1118,88 +1125,77 @@
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/1c1ee003-f041-4c66-a971-f08d488d11f7?syn-25a6b1a6=1",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZk8xUmkwZm83ZUdaTWpWaEVibFZzckNxOVFNOG9OTjlWdzJBdXRqWk5GUUFoME5DWXJmNThNRlIzdVBxUXNfeGd5cTFFNjlVZmg1VkFwVXdONzVLNGh0RVF5S203NlRieWFBNEY3b0dnZlZ3MERxUGlYWTRDaGwzYUJaYWJxWjI1WTlJbDNfMFJ0TVlqSjdFNnl6SVF6UVhmQlhNM2pRUnltSDVMMXNmS21JZkMySWNFVjhtbXVSMUw?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-06T17:39:05+00:00",
+     "new": true,
+     "key": "a0feaa0813f08354",
+     "title": "EIA raises oil price forecasts as Iran war drains global stockpile",
+     "summary": "The US EIA raised its oil price forecasts as the Iran war drains global stockpiles."
+    },
+    {
+     "url": "https://www.ft.com/content/0d665e5b-d8c8-4f1e-acf5-bba7193b4e6e?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-10-06T15:12:02+00:00",
+     "published": "2026-10-06T20:00:08+00:00",
      "new": true,
-     "key": "ce104afb85f51e71",
-     "title": "S&P 500 hits record as AI stocks shrug off bond-market slump",
-     "summary": "The index reached a fresh high, while its rally became increasingly reliant on a handful of technology stocks."
+     "key": "a27a48649bf8e01a",
+     "title": "Hormuz transit risks drive seafarer pay higher",
+     "summary": "Seafarer salaries and bonuses have risen sharply for crews willing to transit the Strait of Hormuz amid Iranian attacks."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWmVRdHA4bVRsVmVyUThxTVdUb3AzNklqYnNDS2JvVVVEa2hnbk1qaHVWcHBnN1Bya2piTTM3eEkxRWxrZVE4WDRidzAyZGFocEFVYjN6RENUWm9rbFBKQ1hQRlM5Qi12eTFKV2dxNF80MHF1Xy12NkR6SG9kcllSR2JlalFQZXdPYUtOeXhfMHlwdGdZbEZXTk96ZzhPS3MtUjFfRkNXNzFiWkJzTFNLTVJVQk8?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-06T16:15:50+00:00",
-     "new": true,
-     "key": "56a0e130f52128b2",
-     "title": "PIMCO adviser says US Treasury yields offer strong value",
-     "summary": "A PIMCO senior adviser called US Treasury yields “screaming good value.”"
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUGptbnU1SUxQWEJrRlFLQUhoSU9WMDhMQmhtZ29ZSGtMRHdvaFI4MGdJXzFWbmVuSHc0bFVkamJVTzBfY3VjRmVmNjN3ekpFMEtyS1Bxc2NMTmhiZlJGQUk5Tml5b2Q0NGZPc1REcExtWElITFFlOW01VWNETGMyZXVMM0x0cGJjWVFfaXZqSzlSNlUxdnFvVFNOMUg2ekVPRktkdVptSFRHa3lNcHREaktPU2RTZGs?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-06T15:54:49+00:00",
-     "new": true,
-     "key": "467bafc799c4a804",
-     "title": "Google strikes 3.6-GW power deal with Constellation Energy",
-     "summary": "Google entered a 3.6-GW power deal with Constellation Energy."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdnhFSTVnZUJoZGRnMDJIQmZyM3RKR2c5X2FReUNWbmVwQ29uMnN6R1RUS1p2aG1hTlJYWFdRWElvNEpxYjJpMmFFWmtCVWJVZWpUVWNBcTJXQzllczlZWG5xWTkzbTJadkg1NUY0T2Nob3R1aDlRbDlhUUx5M3p4MTk0MXlWTmlWc1hIMHhMMzJGb1V1ZTlIaXNZTVlWbk5Ed29VWWtJMTlWRElZVk03QWxkaw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-06T14:17:40+00:00",
-     "new": true,
-     "key": "2689327e3e7cd4e1",
-     "title": "US software stocks reach fresh 2026 highs as AI disruption concerns fade",
-     "summary": "US software shares rose to new 2026 highs as worries about AI disruption eased."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQdGVlSk50QjVPNnlJOVA2elY5WlRfQzFvMFEzYS1wa29PcWJ3cTViZ3dxNmhsc1dPR0NBNDlieTcyZ25UOTBXbldyRTk0M1NLcGFGM3NqdlVVUGo2Ti1mM09qbXktRVdVd3pXbDUwYTNVcWV6RkcyaWlvMHNHbmpsMHY2S2NBWFZpckNwTUJFQlVvRm5lVndTaGpXX2oxdGpMendrclFMbGNoZmxQYS1lNlVBdTlCWFA5MHZsWDRDR2lQUHRQRG4wUV9ncWZoMVppRU1Xek1qTWxHZmtz?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
-     "via": "Google News",
-     "published": "2026-10-06T15:54:16+00:00",
-     "new": true,
-     "key": "122d76ba94e76247",
-     "title": "BPCE takes stake in Sabadell amid takeover concerns",
-     "summary": "Sabadell has brought BPCE into its share capital in a move described as protection against a takeover bid."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxON1IxdUZmenNPcXZRSTEwWDdEUVJNdjBnSEFlYm5JLWRsZm1EaE9iVmV1bGhZLU5Pb3BlRVQwbFZHT2dDbEppNkN6REZZd0JkeXFUbEt4Ync5RW5qREFscFZNVHA1RjdKVjRRcmZPb1ZyaDFhdnVKM2prcHRYd0NUQVVYdHRMdU9lakVQc0NocERlU0JRMDU1V19oMA?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-06T14:46:54+00:00",
-     "new": true,
-     "key": "ba06f083d5f1cef8",
-     "title": "Record imports deepen US trade deficit in August",
-     "summary": "Record imports pushed the US trade balance further into deficit in August."
-    },
-    {
-     "url": "https://www.ft.com/content/fba91434-70d3-40e6-adb1-8d0c5d6f4fe6?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
+     "url": "https://www.cnbc.com/2026/10/06/chart-a-look-at-the-sp-500s-remarkable-and-defiant-trip-a-new-record.html",
+     "source": "CNBC Markets",
+     "feed_name": "CNBC Markets",
      "via": null,
-     "published": "2026-10-06T15:48:41+00:00",
+     "published": "2026-10-06T20:50:54+00:00",
      "new": true,
-     "key": "5e05df337969f0ab",
-     "title": "Ion tells creditors it will not play hardball over $11bn debt",
-     "summary": "The Italian data group says it aims to repay lenders in full."
+     "key": "a3f50a4513ac4314",
+     "title": "S&P 500 returns to an intraday record",
+     "summary": "Technology gains, easing oil prices and lower Treasury yields helped the S&P 500 reach a new intraday record."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRGdFWFMtTlVWa09FZ1BBQzJSaTF5OUExVmNqNDRlYkpRZDA3QXdGSldVUjJSZXp2c2FRWWFmWkd2eExNR0hlM2lNdDZzUTB1TkVGMTg0MGVxNENBR2ZTODhqM1luQ0NmbTA3ZUR4MktjckIzZUJIeHB4NkpZY1NBWXp5NUJGbVZEVjE2WkdYTjRaZUZtRzZBeVJjcUxGS05fNWdpNGtLQy1SWVYxcFhRSUlB?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-06T20:53:12+00:00",
+     "new": true,
+     "key": "4cc5a9636c57f821",
+     "title": "Emerging markets gain on lower oil and Brazil vote",
+     "summary": "Emerging markets advanced as lower oil prices and Brazil’s vote boosted sentiment."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPYm9yVjdPa3dZSFRnaXlKeUJDSzZocm52TUN5a0VKUGhPVmhyVS1UdFVzNDh0UWZzdFJmM1k0WmJoMnZ3YzNHb3dnUFNEcGc4aHJvbVF4WXVXc3V5aTZGVVVHaWVrTzJEYmJ5SmNVa0JQbzhpWEpmR1JtLTRKblJsRTdMem5Va1FOeW5FcVp3dFMycGJuMWZPaUVjZERtNXA5UzVldDZkYmhYNjEyZ3RDVVA3RE0?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-06T18:10:49+00:00",
+     "new": true,
+     "key": "5e414b0b1e6e58e1",
+     "title": "Deeply distressed US loans reach highest level since pandemic",
+     "summary": "JPMorgan says deeply distressed US loans have risen to their highest level since the pandemic."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQR3dfcjJxclVWTV9faDZyaUpIZ3F3cl95X2dFdzRaN0IxTWFuX0VwdWFBeEFtdjdqNVlKRHVCNVUzZF9paU9Cb0F3Y1NLR1l1UnNMVXNudDVYTEg4SVlVSHl2b1QwWjR6WV92ZV92MEUzRnozaEx4cHF6ZURxdUY2VDNlWWZSaGIxX3hsWEsxalhvZjhpSk85dWEwNWN6U0ZKeUNPdklHYnZpQjlORGpKemZOY0NfWkZFWHdvUkd3?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-06T19:01:28+00:00",
+     "new": true,
+     "key": "67af6cbcf8dbc2b7",
+     "title": "Nvidia-backed Lambda targets $4bn raise ahead of IPO",
+     "summary": "Nvidia-backed Lambda is targeting a $4bn fundraising ahead of a planned IPO, according to the Wall Street Journal."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-06T17:00:35.344271+00:00",
-   "input_fingerprint": "sha256:c545a8e702157f5f215b201723251349dd10b68d8dc997b6b0a66b628c4903dc",
-   "last_success_at": "2026-10-06T17:00:35.344271+00:00",
+   "source_checked_at": "2026-10-06T21:27:58.704876+00:00",
+   "input_fingerprint": "sha256:3c50b4c44ed413e61db617935efb170195255d381d9975a35ba6d4d8445c22ae",
+   "last_success_at": "2026-10-06T21:27:58.704876+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1292,8 +1288,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 85620.35,
-     "change_pct": -0.19,
+     "price": 85545.4,
+     "change_pct": -0.28,
      "currency": "USD",
      "as_of": "2026-10-06T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1303,8 +1299,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2696.07,
-     "change_pct": -0.55,
+     "price": 2696.63,
+     "change_pct": -0.53,
      "currency": "USD",
      "as_of": "2026-10-06T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1312,12 +1308,22 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 316,
-   "new_count": 7
+   "candidate_count": 313,
+   "new_count": 6
   },
   "media": {
    "briefing": "",
    "items": [
+    {
+     "title": "Yemen Declares War on the Houthis as Saudi Allies Mobilize",
+     "url": "https://www.youtube.com/watch?v=NcPHTb3y7bo",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-10-06T17:00:02+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "879bcf101ff6fee3"
+    },
     {
      "title": "😂 Laissez-moi vous convaincre...",
      "url": "https://www.youtube.com/watch?v=caM0SitXlrk",
@@ -1325,7 +1331,7 @@
      "kind": "video",
      "published": "2026-10-06T16:05:25+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "9cb0eb1247bc02e3"
     },
     {
@@ -1357,24 +1363,14 @@
      "duration_s": null,
      "new": false,
      "key": "e9e430f792784198"
-    },
-    {
-     "title": "Ukraine's Offensive Isn't Stopping Anytime Soon",
-     "url": "https://www.youtube.com/watch?v=zxF5PxxI0rg",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-10-03T18:00:31+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "798c4ed19f1d4437"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-10-06T17:00:35.344271+00:00",
+   "source_checked_at": "2026-10-06T21:27:58.704876+00:00",
    "candidate_count": 5,
    "new_count": 1
   }
  },
- "scheduled_slot": "2026-10-06T17:00:00.000Z"
+ "scheduled_slot": "2026-10-06T17:00:00Z"
 }
