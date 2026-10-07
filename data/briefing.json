@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261007T113553632023Z",
- "generated_at": "2026-10-07T11:35:53.632023+00:00",
- "generated_local": "Wed 07 Oct 2026, 13:35",
- "source_checked_at": "2026-10-07T11:35:53.632023+00:00",
+ "edition_id": "ed-20261007T172035762832Z",
+ "generated_at": "2026-10-07T17:20:35.762832+00:00",
+ "generated_local": "Wed 07 Oct 2026, 19:20",
+ "source_checked_at": "2026-10-07T17:20:35.762832+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-10-07T11:35:53.632023+00:00"
+  "run-2026-10-07T17:20:35.762832+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-10-07T11:35:53.632023+00:00"
+  "completed_at": "2026-10-07T17:20:35.762832+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 22,
+   "item_count": 21,
    "reason": null,
    "failure": null,
-   "parsed_count": 22,
+   "parsed_count": 21,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 108,
+   "item_count": 103,
    "reason": null,
    "failure": null,
-   "parsed_count": 108,
+   "parsed_count": 103,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -213,10 +213,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -422,10 +422,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 10,
+   "item_count": 11,
    "reason": null,
    "failure": null,
-   "parsed_count": 10,
+   "parsed_count": 11,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -689,9 +689,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002215,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.002103,
+  "est_month_usd": 0.19,
+  "forecast_month_usd": 0.19,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -699,60 +699,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 9991,
+    "latency_ms": 7189,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0e3f3119bd8fbd44016ac62ea193e887d1b4ccaf598d040898"
+     "resp_03cb1e270e051eea016ac67f6d145487d0b7fbaa8d06645749"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3306,
-    "output_tokens": 758,
-    "reasoning_tokens": 309
+    "cache_write_tokens": 3317,
+    "output_tokens": 577,
+    "reasoning_tokens": 131
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6287,
+    "latency_ms": 4951,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0d00bde0f0c29df1016ac62eab0f9487d193585ddd3fa249fb"
+     "resp_0c810f7e2fb42146016ac67f73b0d887d082fea691375933eb"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3419,
-    "output_tokens": 503,
-    "reasoning_tokens": 254
+    "cache_write_tokens": 3431,
+    "output_tokens": 504,
+    "reasoning_tokens": 183
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6674,
+    "latency_ms": 6749,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0677a457e6d6429c016ac62eb14a7487d1a524aaeccb02682a"
+     "resp_059e19e7daf8a195016ac67f78a57887d09089cd53692bc621"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3435,
-    "output_tokens": 627,
-    "reasoning_tokens": 279
+    "cache_write_tokens": 3373,
+    "output_tokens": 595,
+    "reasoning_tokens": 0
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10160,
-  "output_tokens": 1888,
-  "reasoning_tokens": 842,
+  "cache_write_tokens": 10121,
+  "output_tokens": 1676,
+  "reasoning_tokens": 314,
   "recorded_month_to_date": {
    "month_utc": "2026-10",
-   "recorded_runs": 29,
-   "attempts": 87,
-   "known_cost_usd": 0.064781,
+   "recorded_runs": 30,
+   "attempts": 90,
+   "known_cost_usd": 0.066884,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -761,297 +761,195 @@
   "news": {
    "briefing": [
     {
-     "text": "Russian strikes on Ukraine killed 15, according to Ukrainian officials; a residential building in Pryluky was destroyed, and rescue workers are still searching for residents.",
+     "text": "The reported $8.9 billion Boots sale would put the UK pharmacy chain in the hands of Canada’s Weston family, making it a major cross-border retail transaction.",
      "sources": [
       {
-       "key": "5d0d9e1cb9751d49",
-       "title": "Zelensky condemns 'vile' large-scale Russian attacks that killed 15",
-       "url": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Milan shares fell about 2% as technology and bank stocks dropped, while the Italian 10-year government bond yield rose to 4.67%.",
-     "sources": [
-      {
-       "key": "6cea1ebd1d72044d",
-       "title": "Borsa: Milano -2,1% con tecnologici e banche, Btp vola al 4,67%",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/07/borsa-milano-21-con-tecnologici-e-banche-btp-vola-al-467_60eba99a-d15f-4f68-aab7-65998792fd85.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "The ECB’s Moulin said conditions for intervention in France have not been met, as political tensions also draw criticism from the French central bank chief.",
-     "sources": [
-      {
-       "key": "e9d985992bb91772",
-       "title": "ECB’s Moulin Says Conditions for France Intervention Aren’t Met - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYlhhaUJITkZaUDlRZ2RCVmZVT254NllJeWVJQjJ5eExEZnV2UjlfUXRNT19LcV9SSVU3aEszLU9SX0o0QmE1U25wUlBJZ3hrTmdsWWlmU1dKLUdjdEdMZGpjdHBiTDlqWTlLU3ZJeHNNVHgwcV9uaXY0N2F2MlAtNVR1OUdXNUpQRXFmdGlPT0t3YWhTNnRnUllyOWtncms4SWFERU4yaDB5OFRLaG9pMWNPa3M?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      },
-      {
-       "key": "37c7cc42e37455e1",
-       "title": "French central bank chief hits out at ‘Trump-style’ threats from far-left - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNNURPNnotdzEzckVpUkdkMzM4UjJJVE5VVnU1b0t4UWpPYkNseEFyc3BLQW80Q0ZBM0ZLV3U2SjJjQTFIajlMMVMwV0xac25Mam1IckwwV3dWc1ZVS0NzbjVWRHF2Z19DaDRCZ0k3Yk9ubi16Mm5Jb0UzcVc2LTJBb1U0TFI?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A Zurich-backed venture has launched haulage insurance, a relevant new product move in the commercial insurance market.",
-     "sources": [
-      {
-       "key": "ff300d3fe4bfe844",
-       "title": "rrelentless launches Zurich-backed haulage insurance - Coverager",
-       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNSnVBbF90akxIcUJDdWNlM3BTZmMzeTN1QmVXeUdKcXEzUDFJc0pNWUUyM3Jwa2ozUGs0ZEtXTHZxWGFaY2p3ZDNvSGhrQVYxWkFQMTdrSnlNeWdxTVlINkUzWWxfN1Y5UU5pLW0xNkhyTHNqcmQzQ2xBVVd6Z0R0cA?oc=5",
-       "source": "Coverager",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The London Market Group’s data council is extending its Core Data Record to cover the full insurance lifecycle, a market-wide data standardisation development.",
-     "sources": [
-      {
-       "key": "04be8d4c94ae2b69",
-       "title": "LMG Data Council expands Core Data Record to cover full insurance lifecycle - Reinsurance News",
-       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTWstWW9BM1hfNGdpLWhGNV85a19oOVpYbFlISjJmM05zaDdmaks1aHNpTW1IbFh6YlBzU0FZTEhTOFFBRFNqczFUNUc4cFBxanRUMllBaGtxODNVQS1LRVF3TEdMT3dPanB4cnREYjI2SWxPa3h5TEVsVXZpbjA2TFRNNnZlZGItYXA5eGdhYzc1OFYzQjV0eW9PSWpuWDZTdDJscTMxVTg?oc=5",
-       "source": "Reinsurance News",
-       "via": "Google News"
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-10-07T11:05:37+00:00",
-     "new": true,
-     "key": "5d0d9e1cb9751d49",
-     "title": "Zelensky condemns Russian attacks that killed 15",
-     "summary": "Ukraine says Russian attacks killed 15, and rescue workers continue searching after an apartment building in Pryluky was destroyed."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/07/borsa-milano-21-con-tecnologici-e-banche-btp-vola-al-467_60eba99a-d15f-4f68-aab7-65998792fd85.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-10-07T11:11:55+00:00",
-     "new": true,
-     "key": "6cea1ebd1d72044d",
-     "title": "Milan falls 2.1% as tech and bank stocks slide",
-     "summary": "Milan shares fell 2.1%, with technology and bank stocks among the decliners, while the BTP yield reached 4.67%."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYlhhaUJITkZaUDlRZ2RCVmZVT254NllJeWVJQjJ5eExEZnV2UjlfUXRNT19LcV9SSVU3aEszLU9SX0o0QmE1U25wUlBJZ3hrTmdsWWlmU1dKLUdjdEdMZGpjdHBiTDlqWTlLU3ZJeHNNVHgwcV9uaXY0N2F2MlAtNVR1OUdXNUpQRXFmdGlPT0t3YWhTNnRnUllyOWtncms4SWFERU4yaDB5OFRLaG9pMWNPa3M?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-10-07T11:03:42+00:00",
-     "new": true,
-     "key": "e9d985992bb91772",
-     "title": "ECB’s Moulin says conditions for French intervention aren’t met",
-     "summary": "ECB’s Moulin said conditions for intervention in France have not been met."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNNURPNnotdzEzckVpUkdkMzM4UjJJVE5VVnU1b0t4UWpPYkNseEFyc3BLQW80Q0ZBM0ZLV3U2SjJjQTFIajlMMVMwV0xac25Mam1IckwwV3dWc1ZVS0NzbjVWRHF2Z19DaDRCZ0k3Yk9ubi16Mm5Jb0UzcVc2LTJBb1U0TFI?oc=5",
-     "source": "Financial Times",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-10-07T11:19:07+00:00",
-     "new": true,
-     "key": "37c7cc42e37455e1",
-     "title": "French central bank chief criticises threats from the far left",
-     "summary": "The French central bank chief criticised what he described as “Trump-style” threats from the far left."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNSnVBbF90akxIcUJDdWNlM3BTZmMzeTN1QmVXeUdKcXEzUDFJc0pNWUUyM3Jwa2ozUGs0ZEtXTHZxWGFaY2p3ZDNvSGhrQVYxWkFQMTdrSnlNeWdxTVlINkUzWWxfN1Y5UU5pLW0xNkhyTHNqcmQzQ2xBVVd6Z0R0cA?oc=5",
-     "source": "Coverager",
-     "feed_name": "Topic: Zurich Insurance",
-     "via": "Google News",
-     "published": "2026-10-07T11:15:12+00:00",
-     "new": true,
-     "key": "ff300d3fe4bfe844",
-     "title": "Zurich-backed venture launches haulage insurance",
-     "summary": "A Zurich-backed venture has launched a haulage insurance offering."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTWstWW9BM1hfNGdpLWhGNV85a19oOVpYbFlISjJmM05zaDdmaks1aHNpTW1IbFh6YlBzU0FZTEhTOFFBRFNqczFUNUc4cFBxanRUMllBaGtxODNVQS1LRVF3TEdMT3dPanB4cnREYjI2SWxPa3h5TEVsVXZpbjA2TFRNNnZlZGItYXA5eGdhYzc1OFYzQjV0eW9PSWpuWDZTdDJscTMxVTg?oc=5",
-     "source": "Reinsurance News",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-10-07T11:34:40+00:00",
-     "new": true,
-     "key": "04be8d4c94ae2b69",
-     "title": "LMG expands Core Data Record across insurance lifecycle",
-     "summary": "The London Market Group’s Data Council is expanding its Core Data Record to cover the full insurance lifecycle."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-10-07T11:35:53.632023+00:00",
-   "input_fingerprint": "sha256:41e03f05b58010410bc895dce8c8a4213d307373f9a9c230b88977abf6ea61a8",
-   "last_success_at": "2026-10-07T11:35:53.632023+00:00",
-   "candidate_count": 499,
-   "new_count": 6
-  },
-  "sport": {
-   "briefing": [
-    {
-     "text": "PSG’s latest squad update points to a definitive medical verdict on Senny Mayulu, positive news for Warren Zaïre-Emery and continued uncertainty over Achraf Hakimi.",
-     "sources": [
-      {
-       "key": "e97061746960ab41",
-       "title": "PSG : verdict médical définitif pour Mayulu, bonne nouvelle pour Zaïre-Emery, suspens pour Hakimi ! - Onze Mondial",
-       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPU3ZITTdfbEJlQTRuVW5xdnhFa3ZTazFqNEhYUjBScjAyOE9OVm5MTUQxemVaUVdHRTNJTEJUNlVXN29yNWNMMnJTUUY2RFVnbVMtejdoYTFrWWhvYlNhaG5UV0lfTERvR3EyMmw3RjN2WGZEblZjYVpzcktJdVhqckVDRTlDRElZN0VhVlhuV1YxUW0tcWEtcGJtN2dYWmRLd09iWV9VODJ5eGFoYzZJNndvNHZ0Z3BBNGJIYTNmc3ZzNjYyc1dVSVJjRFhya0dzYXNN?oc=5",
-       "source": "Onze Mondial",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A report says Fabian Ruiz has received a major approach, though it offers no detail here on the interested party or the midfielder’s response.",
-     "sources": [
-      {
-       "key": "ad321aa5833bcd9e",
-       "title": "Mercato PSG : Fabian Ruiz reçoit un énorme appel du pied - AllezParis",
-       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOQXpEMzlhQ0JndzlCZUJDM1RFcmY4REVSbHJhZW5zUE1hRE1peUNZRDExR0ZfbWJfdG1OeFhab0JhX3JKb2JQQ2xVUm9HdlhpbUx4VjhjSGdiMVVSN1BkSzVLLWN6XzVHczRQZlZKZVN4T3NKQVd0VjRUeHJ0cnJWZ1ZsSUxLYUVuRmszbFE2MXktYXdv?oc=5",
-       "source": "AllezParis",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The Nations League quarter-final line-up has been confirmed; the report does not specify the qualified teams in its summary.",
-     "sources": [
-      {
-       "key": "73df4ad3e22842e7",
-       "title": "Ligue des nations : les équipes qualifiées pour les quarts de finale - CNews",
-       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPN1dxU1B4aGRrU3NrcmlNUHdwOTBiZUJnWG44YmdsdTRMZGVxcXB2a3Z6eDQzMy1UM0x2YUR5R0ZaZzh0cUUweGttWGJaWjJWX2hOQTZVU1ByWjZtVUtlS2NoUFhnUEZPSXNvbmxJWTJ5X2FjdXU2VVpyd09CSnEzVUc2Ulc1dFlIY2JsVWh5bkhWM1dVc2VXNUszaUdESmV0cmwtWGtoVy02bm9KaDJPYmhB0gG3AUFVX3lxTE85Slk4OUdKYnRlbnQ0aVRQakI1YUtDb1FvMy11QWVSbFp5WEI2WDVNMzBSdEdBZ0pXal9GZlVFZjRhRnZUbkxrNVFtYjB3LWVQYW5qVmMteldnbDdmZldDWFA3V1U1WncyT2IzcFk3VFNYTjJmRXhGMDI0T2wycGFoWTVZZlE1UDV0RlI0SlZBUHdvZGNkMFZNRlZOSEJCRVR3ZWZGZm9zd3BHQUJyallpM2VHVzdLYw?oc=5",
-       "source": "CNews",
-       "via": "Google News"
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPU3ZITTdfbEJlQTRuVW5xdnhFa3ZTazFqNEhYUjBScjAyOE9OVm5MTUQxemVaUVdHRTNJTEJUNlVXN29yNWNMMnJTUUY2RFVnbVMtejdoYTFrWWhvYlNhaG5UV0lfTERvR3EyMmw3RjN2WGZEblZjYVpzcktJdVhqckVDRTlDRElZN0VhVlhuV1YxUW0tcWEtcGJtN2dYWmRLd09iWV9VODJ5eGFoYzZJNndvNHZ0Z3BBNGJIYTNmc3ZzNjYyc1dVSVJjRFhya0dzYXNN?oc=5",
-     "source": "Onze Mondial",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-07T10:30:00+00:00",
-     "new": true,
-     "key": "e97061746960ab41",
-     "title": "PSG injury update: Mayulu, Zaïre-Emery and Hakimi",
-     "summary": "The report gives Mayulu’s medical verdict, positive news for Zaïre-Emery and leaves Hakimi’s status uncertain."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOQXpEMzlhQ0JndzlCZUJDM1RFcmY4REVSbHJhZW5zUE1hRE1peUNZRDExR0ZfbWJfdG1OeFhab0JhX3JKb2JQQ2xVUm9HdlhpbUx4VjhjSGdiMVVSN1BkSzVLLWN6XzVHczRQZlZKZVN4T3NKQVd0VjRUeHJ0cnJWZ1ZsSUxLYUVuRmszbFE2MXktYXdv?oc=5",
-     "source": "AllezParis",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-07T11:01:00+00:00",
-     "new": true,
-     "key": "ad321aa5833bcd9e",
-     "title": "Fabian Ruiz receives a major approach",
-     "summary": "AllezParis reports that PSG midfielder Fabian Ruiz has received a major approach."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPN1dxU1B4aGRrU3NrcmlNUHdwOTBiZUJnWG44YmdsdTRMZGVxcXB2a3Z6eDQzMy1UM0x2YUR5R0ZaZzh0cUUweGttWGJaWjJWX2hOQTZVU1ByWjZtVUtlS2NoUFhnUEZPSXNvbmxJWTJ5X2FjdXU2VVpyd09CSnEzVUc2Ulc1dFlIY2JsVWh5bkhWM1dVc2VXNUszaUdESmV0cmwtWGtoVy02bm9KaDJPYmhB0gG3AUFVX3lxTE85Slk4OUdKYnRlbnQ0aVRQakI1YUtDb1FvMy11QWVSbFp5WEI2WDVNMzBSdEdBZ0pXal9GZlVFZjRhRnZUbkxrNVFtYjB3LWVQYW5qVmMteldnbDdmZldDWFA3V1U1WncyT2IzcFk3VFNYTjJmRXhGMDI0T2wycGFoWTVZZlE1UDV0RlI0SlZBUHdvZGNkMFZNRlZOSEJCRVR3ZWZGZm9zd3BHQUJyallpM2VHVzdLYw?oc=5",
-     "source": "CNews",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-10-07T11:04:09+00:00",
-     "new": true,
-     "key": "73df4ad3e22842e7",
-     "title": "Nations League quarter-finalists confirmed",
-     "summary": "CNews lists the teams that have qualified for the Nations League quarter-finals."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-10-07T11:35:53.632023+00:00",
-   "input_fingerprint": "sha256:02a704dcd7d9381425c4a782f140d7f72fe60f20c7647834f3394ed439c1d23c",
-   "last_success_at": "2026-10-07T11:35:53.632023+00:00",
-   "error": "Source check failed: CulturePSG",
-   "candidate_count": 305,
-   "new_count": 3
-  },
-  "finance": {
-   "briefing": [
-    {
-     "text": "Russian strikes have caused deadly damage and cut power in several Kyiv districts, adding to geopolitical risk.",
-     "sources": [
-      {
-       "key": "4a78deb07d57aa04",
-       "title": "Deadly Russian strikes cut power in several Kyiv districts - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeGhycTlWYlRSOVhzUXJVckR0YXhjTm9VcVVPdGo2RWgwcXgzY2V5QVFRdE8xRVpDdkphcTFMN0hkXzlFTnB6SlUxM2tFX2xYdk1YWXhaMkdQTGhneVZKckY2dEJ4QWVvSS1DeUNad3QtNGp1RFlDV18tazY2ZTJncUpZdk4?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "An ECB official says conditions for intervention in France are not met, a relevant signal amid scrutiny of French sovereign risk.",
-     "sources": [
-      {
-       "key": "e9d985992bb91772",
-       "title": "ECB’s Moulin Says Conditions for France Intervention Aren’t Met - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYlhhaUJITkZaUDlRZ2RCVmZVT254NllJeWVJQjJ5eExEZnV2UjlfUXRNT19LcV9SSVU3aEszLU9SX0o0QmE1U25wUlBJZ3hrTmdsWWlmU1dKLUdjdEdMZGpjdHBiTDlqWTlLU3ZJeHNNVHgwcV9uaXY0N2F2MlAtNVR1OUdXNUpQRXFmdGlPT0t3YWhTNnRnUllyOWtncms4SWFERU4yaDB5OFRLaG9pMWNPa3M?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Bitcoin and ether fell as risk appetite weakened; one report linked the move to rising oil prices and Treasury yields.",
-     "sources": [
-      {
-       "key": "06eb933f1ead5ffb",
-       "title": "Live updates: BitMine announces ETH buying limit. Ether, bitcoin slide",
-       "url": "https://www.coindesk.com/business/2026/10/07/live-updates-bitcoin-slides-under-usd84-000-as-usd550-million-in-bets-get-liquidated",
-       "source": "CoinDesk",
-       "via": null
-      },
-      {
-       "key": "2afab3b590cfe9ff",
-       "title": "Bitcoin Stays Weaker as Dollar, Treasury Yields Rise",
-       "url": "https://finance.yahoo.com/m/83392ff2-3a10-34e5-a46e-58c825784139/bitcoin-stays-weaker-as.html?.tsrc=rss",
-       "source": "Bitcoin",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "South Korea announced a $747 billion energy-transition plan through 2035, a major long-term investment commitment.",
-     "sources": [
-      {
-       "key": "c3bfcd04c22923bf",
-       "title": "South Korea unveils $747 billion energy transition plan through 2035 - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRlBuXzYzbm5CTTctaUg1bWRZU1hvMEFPYmdRSUstNW5DRE4tNjFDTlpKZ0IwTm5EMDR2OUpHREpUUkpBSEpnaXU1UW9BUUxRWWM2elMwM3Q2YXlZS3kzQzN3T0pDV3hsWUduLW9WYUNNanh5TUVaTFZfdjR0VS1rd2V5VTl6NmlGdGd5eDAxS01IS2MyUUtHdE40QTNhTWFFWTFfMzB0Sm1vMXFxZTBtN2tEYm5kUTdFaHNF?oc=5",
+       "key": "60276815380d84df",
+       "title": "Canada's Weston family to buy UK's Boots in $8.9 billion deal - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUG11N3dHZGxrZ1B6aTRhakp3TkRiZVFsUmtocWZwTkR6VVhQX1FPS19jR1c0aXRkSWZZUVhVbHoxUFJoZWlGbWdEWjlJT0pOMjVZZDJJRXlDSVUyaWR0dVdPTWp1bDJ4bzFhMTl4TmZEaGpjVXBKR0xHM0FvU29kVUFmZlNkZWRDQnZGNlFoSlIyZjhscXhmYWhSaXhPQ19hcExCNkVmYUs2bWQybm5sMlozWmk?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Japan’s Topix is set for a major overhaul that would remove hundreds of stocks, with implications for index constituents.",
+     "text": "Succession planning at the ECB is becoming more complex: replacing Christine Lagarde would also require filling two other senior posts.",
      "sources": [
       {
-       "key": "38c53896dd5a9d69",
-       "title": "Topix’s Biggest Ever Revamp to Cull Hundreds of Japanese Stocks - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPN0tPZHFFUnFvd0ZMcFF4RHVTQWlXeFNydFhsZjBQZ2dfRUZfa0NmNm40a2pIM1BzckZyeHp1dVFGMzl5MVZIWHBBZ2hoRVUzazRzdGdoZzd3d3ByYlpzYUVMZkNHbXZTYmxsT1M5clNjbDJwN2ZsUms3cWlTcl9zUzBhRUVuZVNLbE43OU1Lby1mS3VQMm9pN2JzanlvSmJPTTJLTWQ1SGZtVWJ4OG5oQ1AteGE?oc=5",
+       "key": "b9455c72fea984e5",
+       "title": "Replacing Lagarde at the ECB Will Require Filling Two Other Top Jobs - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOa2VwQ1p3aG1XbGR0SGIxZlRzeGh5N1U2SVVyTk9EQUV5OVIzZ1RNM3FhSkV0ZS1pdXZqR2pOMk9zODJDWi1ndDBrZmhuTktjcWVhczZ5eTRTRzdCaGIyZVpqRl9oWFNGWGdyLUlrSDVtWV9veGFTR2J1Q0NiaWdrOC1vcXFxOXhJUk81cDFjaXAtUmd6Ny1UeDdIOHVlSURqRHhjNU9BdWh4TkU?oc=5",
        "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "San Francisco has approved a moratorium on data centers, a notable policy response to infrastructure demands from the AI boom.",
+     "sources": [
+      {
+       "key": "76463b0d0ab1d822",
+       "title": "San Francisco Passes Data Center Moratorium in Hometown of AI - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZVk5MmVNVGZpLTF0OEV0NHU5OFdtNGFjZUFpSVRaWnBZYVc4Yno5NTBja1kxc0t1SUZqQVZCaVMtSDF2WW92elBJclkzNjVNdXZ5TEdTM0U3bE5NcDdpQ1pQSFVZbmxlUm9WM09lTmw0d09mMXhtWk9pUnUteXMtbHc1Q2VQWTMxZUNFSW1zcDRMUk1UVlMzb2NtOXB6TTlkS0ptV2ttZGNWOC1WTzFFa0l3?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Israeli strikes in Gaza killed five people on the 7 October anniversary, according to ANSA.",
+     "sources": [
+      {
+       "key": "bc56c8b1b51f2d75",
+       "title": "Sale a 5 morti il bilancio dei raid israeliani a Gaza nell'anniversario del 7 ottobre",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/07/sale-a-5-morti-il-bilancio-dei-raid-israeliani-a-gaza-nellanniversario-del-7-ottobre_739283ad-d66d-4f81-9994-d3721757241c.html",
+       "source": "ANSA Top News",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Republicans facing close midterm contests are increasingly distancing themselves from Trump, while a separate report highlights concern within the party about the Iran war and fuel costs.",
+     "sources": [
+      {
+       "key": "1b79db149b1bfeed",
+       "title": "Most Republicans in tight midterm races distance themselves from Trump, Reuters review finds - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUWpHUU05ZlNYUVZhUDRvOEtsU2tKOWJWLWM4OUZFWm1PRkJDZDJCZzBIenFyenhDT3o2T1c0QzhJRG4xS2xQTUMxX0VyZVZoSm92ZG8wdGlKdjRmeTI3SldqeHgxM3FabHRZMHI1SXA2dUsySGtza0dWNllWT21ZeVdPWEwwaHdoeUowSEJ2dWdqakxFTDNiQ1dUNkZhT0xyRThrZTM2Z0lmM1JKa2xManNhLUphOVlOOUJ0eVJzdw?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      },
+      {
+       "key": "16f879a9e17e1f4d",
+       "title": "Paxton admits Trump’s Iran war and US gas prices are plaguing Republicans in leaked audio",
+       "url": "https://www.theguardian.com/us-news/2026/oct/07/ken-paxton-trumps-iran-war-gas-prices-republicans",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUG11N3dHZGxrZ1B6aTRhakp3TkRiZVFsUmtocWZwTkR6VVhQX1FPS19jR1c0aXRkSWZZUVhVbHoxUFJoZWlGbWdEWjlJT0pOMjVZZDJJRXlDSVUyaWR0dVdPTWp1bDJ4bzFhMTl4TmZEaGpjVXBKR0xHM0FvU29kVUFmZlNkZWRDQnZGNlFoSlIyZjhscXhmYWhSaXhPQ19hcExCNkVmYUs2bWQybm5sMlozWmk?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-07T16:53:59+00:00",
+     "new": true,
+     "key": "60276815380d84df",
+     "title": "Canada’s Weston family to buy Boots in $8.9 billion deal",
+     "summary": "The Weston family has agreed to buy UK pharmacy chain Boots in a deal valued at $8.9 billion."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOa2VwQ1p3aG1XbGR0SGIxZlRzeGh5N1U2SVVyTk9EQUV5OVIzZ1RNM3FhSkV0ZS1pdXZqR2pOMk9zODJDWi1ndDBrZmhuTktjcWVhczZ5eTRTRzdCaGIyZVpqRl9oWFNGWGdyLUlrSDVtWV9veGFTR2J1Q0NiaWdrOC1vcXFxOXhJUk81cDFjaXAtUmd6Ny1UeDdIOHVlSURqRHhjNU9BdWh4TkU?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Topic: European Central Bank",
+     "via": "Google News",
+     "published": "2026-10-07T17:02:34+00:00",
+     "new": true,
+     "key": "b9455c72fea984e5",
+     "title": "Replacing Lagarde at the ECB will require filling two other top jobs",
+     "summary": "A Bloomberg report says replacing ECB President Christine Lagarde would also mean filling two other senior positions."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZVk5MmVNVGZpLTF0OEV0NHU5OFdtNGFjZUFpSVRaWnBZYVc4Yno5NTBja1kxc0t1SUZqQVZCaVMtSDF2WW92elBJclkzNjVNdXZ5TEdTM0U3bE5NcDdpQ1pQSFVZbmxlUm9WM09lTmw0d09mMXhtWk9pUnUteXMtbHc1Q2VQWTMxZUNFSW1zcDRMUk1UVlMzb2NtOXB6TTlkS0ptV2ttZGNWOC1WTzFFa0l3?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-10-07T16:54:11+00:00",
+     "new": true,
+     "key": "76463b0d0ab1d822",
+     "title": "San Francisco passes data center moratorium",
+     "summary": "San Francisco has passed a moratorium on data centers in the city."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/07/sale-a-5-morti-il-bilancio-dei-raid-israeliani-a-gaza-nellanniversario-del-7-ottobre_739283ad-d66d-4f81-9994-d3721757241c.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-10-07T16:41:38+00:00",
+     "new": true,
+     "key": "bc56c8b1b51f2d75",
+     "title": "Israeli raids in Gaza kill five on 7 October anniversary",
+     "summary": "ANSA reports that five people were killed in Israeli raids in Gaza on the anniversary of 7 October."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUWpHUU05ZlNYUVZhUDRvOEtsU2tKOWJWLWM4OUZFWm1PRkJDZDJCZzBIenFyenhDT3o2T1c0QzhJRG4xS2xQTUMxX0VyZVZoSm92ZG8wdGlKdjRmeTI3SldqeHgxM3FabHRZMHI1SXA2dUsySGtza0dWNllWT21ZeVdPWEwwaHdoeUowSEJ2dWdqakxFTDNiQ1dUNkZhT0xyRThrZTM2Z0lmM1JKa2xManNhLUphOVlOOUJ0eVJzdw?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-07T16:33:40+00:00",
+     "new": true,
+     "key": "1b79db149b1bfeed",
+     "title": "Republicans in tight midterm races distance themselves from Trump, Reuters review finds",
+     "summary": "A Reuters review finds that most Republicans in competitive midterm races are distancing themselves from Trump."
+    },
+    {
+     "url": "https://www.theguardian.com/us-news/2026/oct/07/ken-paxton-trumps-iran-war-gas-prices-republicans",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-10-07T16:36:34+00:00",
+     "new": true,
+     "key": "16f879a9e17e1f4d",
+     "title": "Paxton says Trump’s Iran war and US gas prices are hurting Republicans",
+     "summary": "Leaked audio captures Texas Attorney General Ken Paxton describing the Iran war and fuel prices as political problems for Republicans."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-10-07T17:20:35.762832+00:00",
+   "input_fingerprint": "sha256:48afe9362fe2aa82d593bc06474087c7bb1d525b8398752b6432b6bbadb85f1b",
+   "last_success_at": "2026-10-07T17:20:35.762832+00:00",
+   "candidate_count": 504,
+   "new_count": 6
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "Warren Zaïre-Emery is a doubt for PSG’s match against Le Mans; Luis Enrique is reportedly unwilling to take risks with him. [id 0]",
+     "sources": [
+      {
+       "key": "b7c7d0aecb773651",
+       "title": "PSG : vers un forfait de Zaïre-Emery face au Mans - Foot Mercato",
+       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOT2VpdkpSbzBMY0ttbFhYTjF3UmN3d1NNY2kzLTBzaW9yV0tZeXl4Q1d0WGh1Vm1PRThyakVUV01VVVl6NXlVVTVVb04zRERrLUkzcWVMNWFUNjZkaVJvVGsyWWRZbkRQZVlMd2JlU1BySFFPeWxKRUNrRFJsRW5pMDgzY1VQWU5FRkdnMjF1WHAxYXVSeERnUXdpWW8?oc=5",
+       "source": "Foot Mercato",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A proposed Parc des Princes expansion hinges on whether the stadium roof would need to be removed, according to Le Parisien. [id 1]",
+     "sources": [
+      {
+       "key": "cb665059f32a0f09",
+       "title": "Agrandissement du Parc des Princes : casser le toit ou non, la solution qui peut tout changer pour le PSG - Le Parisien",
+       "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPbHZoQWx2OHdGb0hsOE54aHM3SHBfOGxzM29YRE5fbGR6VmI5SjUtUEZMdzAwWU5STnZSdkhxX3U1akwwRmNVMmczZDM4angwRVNHc3Yxdmt2R2l5emE5T3NVUGZpbXRpazhyRWtCMm8xYVUzMzd6S3VEdGtRd09vT2JuMVVmM1BtZGRjQnBicTlpOEF1WjRYdHhRaUhCaUZpSmRNM0lqNFRHS3R6YUNydnFjYjlJcWZnX3BZZW03OXlNQ3J0aEctWUFMaTR5bU9LcnI4Y3JmY0o2eEdQclNtRUNHUnk0eHRmU0lWdktiQTFhTjFhWlMyLWdvbTBQYTNWSGxDUVNzcHJJampxNmFveVc5ZENRblF6eHc?oc=5",
+       "source": "Le Parisien",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "France’s women lost to Spain, which came from behind to win. [id 15]",
+     "sources": [
+      {
+       "key": "e5acdee54e27d816",
+       "title": "L'Espagne renverse les Bleues - Fédération Française de Football (FFF)",
+       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9GRUNRN0VMVmlOZm5TaVVTaXB5Wm1VYk9uRHJDQW5NN090M3RIVkNyb0Fncl8zYUJQNmZBTFhTNlo1VV9jbWpEbFpFS0JLTS1uWUxKcFg5NVU4QncyUTFwMUVRelRtMEZNS2E3Y1JGQ1c5aWQ2QlE?oc=5",
+       "source": "Fédération Française de Football (FFF)",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Romain Ntamack says he is back to full fitness after injuries and has refocused on enjoying rugby. [id 14]",
+     "sources": [
+      {
+       "key": "0195eccbfa967533",
+       "title": "De retour à 100 % après des blessures, Romain Ntamack raconte comment il s'est recentré pour retrouver le plaisir de jouer : « Si la tête va, le corps suit » - L'Équipe",
+       "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPRmF6UWFZNjlnUXZkWEpXTjY3VzNCT2Q0V2FzRnBFYXBVY1JZSi1TSkNtVTk3YW10TGNQTE9KWTNIN1VjbFZTZUx0aEVZTjg2RU43emtjTVU4SFpEdDZFdE5hTGUtbktCZjlfTjBZYWFNRXVjUGF0VGczYW9CMlBJZG93TmFnb24zXzk0TDJ4eWV4cUkxcTRzYkRZX0N6QXhYM3dvVGFQeWt6dUwtU0F6VzN0UjJRQ3pxSFowS0ZJbHZ4dHQ0WmhpVGlXVENuT2ZYYmd2OE5WWDM3LWNQVjZVdldTV1o1M3Z2TUVoQlQ1Z2tKemlQcmZDcFpZT2VENjJpZEhnNEdHcE95X3NjWWludVBSZlVJXzk0S3JaVQ?oc=5",
+       "source": "L'Équipe",
        "via": "Google News"
       }
      ]
@@ -1059,72 +957,256 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeGhycTlWYlRSOVhzUXJVckR0YXhjTm9VcVVPdGo2RWgwcXgzY2V5QVFRdE8xRVpDdkphcTFMN0hkXzlFTnB6SlUxM2tFX2xYdk1YWXhaMkdQTGhneVZKckY2dEJ4QWVvSS1DeUNad3QtNGp1RFlDV18tazY2ZTJncUpZdk4?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOT2VpdkpSbzBMY0ttbFhYTjF3UmN3d1NNY2kzLTBzaW9yV0tZeXl4Q1d0WGh1Vm1PRThyakVUV01VVVl6NXlVVTVVb04zRERrLUkzcWVMNWFUNjZkaVJvVGsyWWRZbkRQZVlMd2JlU1BySFFPeWxKRUNrRFJsRW5pMDgzY1VQWU5FRkdnMjF1WHAxYXVSeERnUXdpWW8?oc=5",
+     "source": "Foot Mercato",
+     "feed_name": "Team: PSG",
      "via": "Google News",
-     "published": "2026-10-07T09:46:00+00:00",
+     "published": "2026-10-07T17:12:40+00:00",
      "new": true,
-     "key": "4a78deb07d57aa04",
-     "title": "Russian strikes cut power in Kyiv districts",
-     "summary": "Deadly Russian strikes cut power in several districts of Kyiv."
+     "key": "b7c7d0aecb773651",
+     "title": "Zaïre-Emery a doubt for PSG against Le Mans",
+     "summary": "Warren Zaïre-Emery is uncertain for PSG’s match against Le Mans, with Luis Enrique reportedly unwilling to take risks."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYlhhaUJITkZaUDlRZ2RCVmZVT254NllJeWVJQjJ5eExEZnV2UjlfUXRNT19LcV9SSVU3aEszLU9SX0o0QmE1U25wUlBJZ3hrTmdsWWlmU1dKLUdjdEdMZGpjdHBiTDlqWTlLU3ZJeHNNVHgwcV9uaXY0N2F2MlAtNVR1OUdXNUpQRXFmdGlPT0t3YWhTNnRnUllyOWtncms4SWFERU4yaDB5OFRLaG9pMWNPa3M?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPbHZoQWx2OHdGb0hsOE54aHM3SHBfOGxzM29YRE5fbGR6VmI5SjUtUEZMdzAwWU5STnZSdkhxX3U1akwwRmNVMmczZDM4angwRVNHc3Yxdmt2R2l5emE5T3NVUGZpbXRpazhyRWtCMm8xYVUzMzd6S3VEdGtRd09vT2JuMVVmM1BtZGRjQnBicTlpOEF1WjRYdHhRaUhCaUZpSmRNM0lqNFRHS3R6YUNydnFjYjlJcWZnX3BZZW03OXlNQ3J0aEctWUFMaTR5bU9LcnI4Y3JmY0o2eEdQclNtRUNHUnk0eHRmU0lWdktiQTFhTjFhWlMyLWdvbTBQYTNWSGxDUVNzcHJJampxNmFveVc5ZENRblF6eHc?oc=5",
+     "source": "Le Parisien",
+     "feed_name": "Team: PSG",
      "via": "Google News",
-     "published": "2026-10-07T11:03:42+00:00",
+     "published": "2026-10-07T17:12:04+00:00",
      "new": true,
-     "key": "e9d985992bb91772",
-     "title": "ECB official says conditions for France intervention are not met",
-     "summary": "An ECB official said conditions for intervention in France have not been met."
+     "key": "cb665059f32a0f09",
+     "title": "Parc des Princes expansion: the roof question",
+     "summary": "A possible PSG stadium expansion could depend on whether the Parc des Princes roof needs to be removed."
     },
     {
-     "url": "https://www.coindesk.com/business/2026/10/07/live-updates-bitcoin-slides-under-usd84-000-as-usd550-million-in-bets-get-liquidated",
-     "source": "CoinDesk",
-     "feed_name": "CoinDesk",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9GRUNRN0VMVmlOZm5TaVVTaXB5Wm1VYk9uRHJDQW5NN090M3RIVkNyb0Fncl8zYUJQNmZBTFhTNlo1VV9jbWpEbFpFS0JLTS1uWUxKcFg5NVU4QncyUTFwMUVRelRtMEZNS2E3Y1JGQ1c5aWQ2QlE?oc=5",
+     "source": "Fédération Française de Football (FFF)",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-10-07T16:23:00+00:00",
+     "new": true,
+     "key": "e5acdee54e27d816",
+     "title": "Spain come from behind to beat France",
+     "summary": "Spain overturned the score to defeat France’s women."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPRmF6UWFZNjlnUXZkWEpXTjY3VzNCT2Q0V2FzRnBFYXBVY1JZSi1TSkNtVTk3YW10TGNQTE9KWTNIN1VjbFZTZUx0aEVZTjg2RU43emtjTVU4SFpEdDZFdE5hTGUtbktCZjlfTjBZYWFNRXVjUGF0VGczYW9CMlBJZG93TmFnb24zXzk0TDJ4eWV4cUkxcTRzYkRZX0N6QXhYM3dvVGFQeWt6dUwtU0F6VzN0UjJRQ3pxSFowS0ZJbHZ4dHQ0WmhpVGlXVENuT2ZYYmd2OE5WWDM3LWNQVjZVdldTV1o1M3Z2TUVoQlQ1Z2tKemlQcmZDcFpZT2VENjJpZEhnNEdHcE95X3NjWWludVBSZlVJXzk0S3JaVQ?oc=5",
+     "source": "L'Équipe",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-10-07T16:32:00+00:00",
+     "new": true,
+     "key": "0195eccbfa967533",
+     "title": "Ntamack says he is back to full fitness",
+     "summary": "Romain Ntamack says he has recovered from injuries and rediscovered the pleasure of playing."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "degraded",
+   "source_checked_at": "2026-10-07T17:20:35.762832+00:00",
+   "input_fingerprint": "sha256:1ad6617ff70e1aef156ecdd320651e6ba4fc739c50be8cf772d20894f6b491f5",
+   "last_success_at": "2026-10-07T17:20:35.762832+00:00",
+   "error": "Source check failed: CulturePSG",
+   "candidate_count": 291,
+   "new_count": 4
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "The bond sell-off has broadened across the US and Europe: the 30-year Treasury yield reached its highest level since 2002, while French, Italian and UK debt also came under pressure. France’s central-bank chief says ECB intervention is not needed.",
+     "sources": [
+      {
+       "key": "79283ced1b390a92",
+       "title": "Global bond sell-off resumes as 30-year Treasury yield hits highest since 2002",
+       "url": "https://www.ft.com/content/33c67aa0-bfdb-457b-84bb-960b4fed94b6?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      },
+      {
+       "key": "04a1c3e34e781982",
+       "title": "French central bank chief says ECB intervention not needed to ease bond rout",
+       "url": "https://www.ft.com/content/d9ba8e1f-54f9-4739-9ce3-94e62d585e26?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Iranian attacks on tankers around the Strait of Hormuz are driving oil-market concern, adding to pressure on bonds and risk assets; the dollar is nearing a new high for the year as investors seek safety.",
+     "sources": [
+      {
+       "key": "bfd3e9cd3548a3e3",
+       "title": "Iran tanker attacks push oil higher and Bitcoin lower",
+       "url": "http://videos.coindesk.com/previews/Gfgdtpmz?.tsrc=rss",
+       "source": "Bitcoin",
+       "via": null
+      },
+      {
+       "key": "cd5aa23f80456c2f",
+       "title": "Dollar Nears New High of the Year as Investors Rush to Safety - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMFZma0RuZlFjajJ3ejAwbHpUTy1SSkhQT0w2TC0xblVQTmw0QVpiOWROLWRqNTRnV0VWVElES182ZjdrdWs5LTJBT2VTT0dsM080ZFI2RXhaODY0cGd5d1VuWV9DMGhHSEl0OXpZbjNVS2ZjYmFhSHc4djNYRC03MTBJMTFXVHpLZzJyTnIyaUFYdnpyd2t1OU5OUXViSTRFdV9DdTB0anltb0pOdVY1bjFB?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "China rejected the EU’s request for voluntary limits on hybrid-car exports, raising the prospect of temporary European restrictions and a sharper trade dispute.",
+     "sources": [
+      {
+       "key": "8b39d8814d8b94f6",
+       "title": "China slaps down EU request for voluntary curbs on hybrid car exports",
+       "url": "https://www.ft.com/content/32e1c801-fe7d-4389-b3fc-ab687cbb087b?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Apollo has made a non-binding bid for German energy company Uniper, a significant potential transaction in Europe’s energy sector.",
+     "sources": [
+      {
+       "key": "a969c05ee81438c2",
+       "title": "EXCLUSIVE: Apollo submits non-binding bid for German energy firm Uniper, sources say - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPaGx1XzF0em1TZkNycEZ5cHR1MzJIZW4zMWNfOUdLTUhUaGVyenhVenZGTjdnR0VUNFFLQUhIUjBRSVZ1RFExX0ZWNjhpWWpxN3k2emFtbDZTd0V2d1ZxTjgzY0VlVnB0WGR3UEFoaW5jYjNvSXRpa2pjcVd4cU9SV25ZbWpaZE5WeWkyck8yRWNzSXdyUmhzby1mNjN1WXQ4WDR5RWZUcklMUWhJWXNjOGhZOVp6R1NVclh5a3RQbWNsdw?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "French insurers are facing a sharp rise in agricultural claims, a relevant signal for property and casualty underwriting exposure.",
+     "sources": [
+      {
+       "key": "1858987724cf7962",
+       "title": "Les assureurs confrontés à une explosion des sinistres agricoles - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOeWdOTGxQQkRqYjE5UUZpangwVXczWUVtVXpYRm1zVHRtbXAyb0g2VHptdHk1eVdFS0I0bjVXMlAtRzVUdHlUQlRiaXRTMmRZa21fcGs3ck8xXzJHaEVXalA5bVZ4Zng5NTdoSzVSZHpBVVMyQkMyUlJ4UkxsMG0yNTZmNjNHM0JxV3NUWHV0dXZLRnlsQktjRXlZX0hTSUhSc253QVFrSjBBdWltR1FrYmhDVHBBdHMyaHdNdXBpR05wVjUtSFNxejFB?oc=5",
+       "source": "Les Echos",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Bitcoin has fallen below $84,000 amid higher oil prices and yields, adding to weakness in crypto markets; the available coverage links the move to the same broader risk-off pressures.",
+     "sources": [
+      {
+       "key": "bfd3e9cd3548a3e3",
+       "title": "Iran tanker attacks push oil higher and Bitcoin lower",
+       "url": "http://videos.coindesk.com/previews/Gfgdtpmz?.tsrc=rss",
+       "source": "Bitcoin",
+       "via": null
+      },
+      {
+       "key": "9ce4bd76cba48181",
+       "title": "Bitcoin falls below $84K as it faces pressure from oil prices, bonds",
+       "url": "https://finance.yahoo.com/video/bitcoin-falls-below-84k-faces-160000497.html?.tsrc=rss",
+       "source": "Bitcoin",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.ft.com/content/33c67aa0-bfdb-457b-84bb-960b4fed94b6?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
      "via": null,
-     "published": "2026-10-07T11:09:50+00:00",
+     "published": "2026-10-07T16:25:16+00:00",
      "new": true,
-     "key": "06eb933f1ead5ffb",
-     "title": "Bitcoin and ether slide amid risk-off trading",
-     "summary": "Crypto prices fell as leveraged traders faced forced selling and oil climbed after Iranian tanker attacks."
+     "key": "79283ced1b390a92",
+     "title": "Global bond sell-off resumes as 30-year Treasury yield hits highest since 2002",
+     "summary": "The 30-year Treasury yield reached its highest level since 2002 as French, Italian and UK government bonds also sold off."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRlBuXzYzbm5CTTctaUg1bWRZU1hvMEFPYmdRSUstNW5DRE4tNjFDTlpKZ0IwTm5EMDR2OUpHREpUUkpBSEpnaXU1UW9BUUxRWWM2elMwM3Q2YXlZS3kzQzN3T0pDV3hsWUduLW9WYUNNanh5TUVaTFZfdjR0VS1rd2V5VTl6NmlGdGd5eDAxS01IS2MyUUtHdE40QTNhTWFFWTFfMzB0Sm1vMXFxZTBtN2tEYm5kUTdFaHNF?oc=5",
+     "url": "http://videos.coindesk.com/previews/Gfgdtpmz?.tsrc=rss",
+     "source": "Bitcoin",
+     "feed_name": "Bitcoin",
+     "via": null,
+     "published": "2026-10-07T16:14:17+00:00",
+     "new": true,
+     "key": "bfd3e9cd3548a3e3",
+     "title": "Iran tanker attacks push oil higher and Bitcoin lower",
+     "summary": "Iranian tanker attacks lifted oil and pressured Bitcoin, Treasury yields and the dollar."
+    },
+    {
+     "url": "https://www.ft.com/content/d9ba8e1f-54f9-4739-9ce3-94e62d585e26?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-07T17:03:07+00:00",
+     "new": true,
+     "key": "04a1c3e34e781982",
+     "title": "French central bank chief says ECB intervention not needed to ease bond rout",
+     "summary": "Emmanuel Moulin said ECB intervention was unnecessary to ease the bond-market sell-off."
+    },
+    {
+     "url": "https://www.ft.com/content/32e1c801-fe7d-4389-b3fc-ab687cbb087b?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-07T16:56:00+00:00",
+     "new": true,
+     "key": "8b39d8814d8b94f6",
+     "title": "China rejects EU request for voluntary limits on hybrid-car exports",
+     "summary": "The European Commission is considering temporary export limits after China rejected its request for voluntary curbs."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPaGx1XzF0em1TZkNycEZ5cHR1MzJIZW4zMWNfOUdLTUhUaGVyenhVenZGTjdnR0VUNFFLQUhIUjBRSVZ1RFExX0ZWNjhpWWpxN3k2emFtbDZTd0V2d1ZxTjgzY0VlVnB0WGR3UEFoaW5jYjNvSXRpa2pjcVd4cU9SV25ZbWpaZE5WeWkyck8yRWNzSXdyUmhzby1mNjN1WXQ4WDR5RWZUcklMUWhJWXNjOGhZOVp6R1NVclh5a3RQbWNsdw?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-10-07T09:22:50+00:00",
+     "published": "2026-10-07T15:07:26+00:00",
      "new": true,
-     "key": "c3bfcd04c22923bf",
-     "title": "South Korea unveils $747 billion energy-transition plan",
-     "summary": "South Korea announced a $747 billion energy-transition plan running through 2035."
+     "key": "a969c05ee81438c2",
+     "title": "Apollo submits non-binding bid for German energy firm Uniper",
+     "summary": "Apollo submitted a non-binding bid for German energy company Uniper, according to sources cited by Reuters."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPN0tPZHFFUnFvd0ZMcFF4RHVTQWlXeFNydFhsZjBQZ2dfRUZfa0NmNm40a2pIM1BzckZyeHp1dVFGMzl5MVZIWHBBZ2hoRVUzazRzdGdoZzd3d3ByYlpzYUVMZkNHbXZTYmxsT1M5clNjbDJwN2ZsUms3cWlTcl9zUzBhRUVuZVNLbE43OU1Lby1mS3VQMm9pN2JzanlvSmJPTTJLTWQ1SGZtVWJ4OG5oQ1AteGE?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMFZma0RuZlFjajJ3ejAwbHpUTy1SSkhQT0w2TC0xblVQTmw0QVpiOWROLWRqNTRnV0VWVElES182ZjdrdWs5LTJBT2VTT0dsM080ZFI2RXhaODY0cGd5d1VuWV9DMGhHSEl0OXpZbjNVS2ZjYmFhSHc4djNYRC03MTBJMTFXVHpLZzJyTnIyaUFYdnpyd2t1OU5OUXViSTRFdV9DdTB0anltb0pOdVY1bjFB?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-10-07T08:37:32+00:00",
+     "published": "2026-10-07T15:20:23+00:00",
      "new": true,
-     "key": "38c53896dd5a9d69",
-     "title": "Topix overhaul to remove hundreds of Japanese stocks",
-     "summary": "Bloomberg reports that Japan’s Topix is set for its largest-ever revamp, culling hundreds of stocks."
+     "key": "cd5aa23f80456c2f",
+     "title": "Dollar nears new high of the year as investors rush to safety",
+     "summary": "The dollar approached a new yearly high as investors sought safety."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOeWdOTGxQQkRqYjE5UUZpangwVXczWUVtVXpYRm1zVHRtbXAyb0g2VHptdHk1eVdFS0I0bjVXMlAtRzVUdHlUQlRiaXRTMmRZa21fcGs3ck8xXzJHaEVXalA5bVZ4Zng5NTdoSzVSZHpBVVMyQkMyUlJ4UkxsMG0yNTZmNjNHM0JxV3NUWHV0dXZLRnlsQktjRXlZX0hTSUhSc253QVFrSjBBdWltR1FrYmhDVHBBdHMyaHdNdXBpR05wVjUtSFNxejFB?oc=5",
+     "source": "Les Echos",
+     "feed_name": "Les Echos Finance",
+     "via": "Google News",
+     "published": "2026-10-07T14:59:37+00:00",
+     "new": true,
+     "key": "1858987724cf7962",
+     "title": "French insurers face sharp rise in agricultural claims",
+     "summary": "French insurers are confronting a sharp increase in agricultural claims."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOWTdsWTdFWVdPWUFDRjN1RGd6el9PR3NQNFN5blFINGVqVUNRcXMtaW5JcDQ0OV9IejBJa0stOHFnaG9Kd0Q3N3BObTEtQWFXYW9ad2JCS09oQV9iWlB6dU1RSktCSnExdWVUdnRXQmE3aTNCdm5LV01TTW9vbG9sRkctZFhoNm1wdGlqcGtRd3RhRFlzUWt1dElpV0NocGtvYlgyenBlUG5ZV0N6eHUzTXVYSDhzWWROWUhDNlJRYnhwc3Q0SVZzUjUxQUp0OFNkbmFrZEpiNDZweEdRbG9nLUgtZw?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-07T15:02:48+00:00",
+     "new": true,
+     "key": "159d0aa75a98f226",
+     "title": "US government, Google join Biohub in $1.8 billion AI biology data push",
+     "summary": "The US government and Google joined Biohub in a $1.8 billion effort focused on AI biology data."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-07T11:35:53.632023+00:00",
-   "input_fingerprint": "sha256:4af384f0e87ac3493ed2a22eaeaaa105b03a8eb2f256683c96a716e77dde9e91",
-   "last_success_at": "2026-10-07T11:35:53.632023+00:00",
+   "source_checked_at": "2026-10-07T17:20:35.762832+00:00",
+   "input_fingerprint": "sha256:6f12f57d152a14915c3febeb653257b0ec1be1e1174336abdb3db46a830f9c00",
+   "last_success_at": "2026-10-07T17:20:35.762832+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 572.4,
-     "change_pct": -0.8,
+     "price": 573.0,
+     "change_pct": -0.69,
      "currency": "CHF",
      "as_of": "2026-10-06T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1134,8 +1216,8 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 751.56,
-     "change_pct": 0.66,
+     "price": 750.62,
+     "change_pct": 0.53,
      "currency": "EUR",
      "as_of": "2026-10-06T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1145,8 +1227,8 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 105.74,
-     "change_pct": 0.86,
+     "price": 105.0,
+     "change_pct": 0.15,
      "currency": "EUR",
      "as_of": "2026-10-06T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1156,8 +1238,8 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 294.65,
-     "change_pct": 0.07,
+     "price": 294.55,
+     "change_pct": 0.03,
      "currency": "EUR",
      "as_of": "2026-10-06T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1167,8 +1249,8 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 311.0,
-     "change_pct": -0.53,
+     "price": 311.1,
+     "change_pct": -0.5,
      "currency": "EUR",
      "as_of": "2026-10-06T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1179,7 +1261,7 @@
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
      "price": 9.52,
-     "change_pct": -1.6,
+     "change_pct": -1.58,
      "currency": "EUR",
      "as_of": "2026-10-06T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1189,8 +1271,8 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 56.79,
-     "change_pct": -0.25,
+     "price": 56.14,
+     "change_pct": -1.39,
      "currency": "EUR",
      "as_of": "2026-10-06T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1200,8 +1282,8 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 71.4,
-     "change_pct": -0.27,
+     "price": 71.24,
+     "change_pct": -0.5,
      "currency": "EUR",
      "as_of": "2026-10-06T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1211,8 +1293,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 83614.71,
-     "change_pct": -2.27,
+     "price": 83484.68,
+     "change_pct": -2.42,
      "currency": "USD",
      "as_of": "2026-10-07T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1222,8 +1304,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2573.16,
-     "change_pct": -4.61,
+     "price": 2569.6,
+     "change_pct": -4.74,
      "currency": "USD",
      "as_of": "2026-10-07T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1231,12 +1313,22 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 289,
-   "new_count": 5
+   "candidate_count": 306,
+   "new_count": 8
   },
   "media": {
    "briefing": "",
    "items": [
+    {
+     "title": "Ukrainian Commander Explains How They Clear Russian Positions",
+     "url": "https://www.youtube.com/watch?v=JidqZnbeQ_0",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-10-07T17:00:32+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "79788707eeb45e67"
+    },
     {
      "title": "Yemen Declares War on the Houthis as Saudi Allies Mobilize",
      "url": "https://www.youtube.com/watch?v=NcPHTb3y7bo",
@@ -1290,10 +1382,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-10-07T11:35:53.632023+00:00",
-   "candidate_count": 5,
-   "new_count": 0
+   "source_checked_at": "2026-10-07T17:20:35.762832+00:00",
+   "candidate_count": 6,
+   "new_count": 1
   }
  },
- "scheduled_slot": "2026-10-07T11:00:00Z"
+ "scheduled_slot": "2026-10-07T17:00:00.000Z"
 }
