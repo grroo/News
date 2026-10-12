@@ -1,0 +1,1357 @@
+{
+ "schema_version": 2,
+ "edition_id": "ed-20261012T050036599093Z",
+ "generated_at": "2026-10-12T05:00:36.599093+00:00",
+ "generated_local": "Mon 12 Oct 2026, 07:00",
+ "source_checked_at": "2026-10-12T05:00:36.599093+00:00",
+ "timezone": "Europe/Rome",
+ "schedule": {
+  "timezone": "Europe/Rome",
+  "hours": [
+   7,
+   13,
+   19
+  ],
+  "minute": 0,
+  "grace_minutes": 45
+ },
+ "trigger": "scheduled",
+ "request_ids": [
+  "run-2026-10-12T05:00:36.599093+00:00"
+ ],
+ "quality": {
+  "overall": "degraded"
+ },
+ "refresh": {
+  "outcome": "generated",
+  "completed_at": "2026-10-12T05:00:36.599093+00:00"
+ },
+ "mode": "llm",
+ "model": "gpt-6-luna",
+ "feed_health": [
+  {
+   "name": "BBC World",
+   "section": "news",
+   "status": "ok",
+   "item_count": 25,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 25,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Reuters (via Google News)",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Guardian World",
+   "section": "news",
+   "status": "ok",
+   "item_count": 45,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 45,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Le Monde",
+   "section": "news",
+   "status": "ok",
+   "item_count": 16,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 16,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "ANSA Top News",
+   "section": "news",
+   "status": "ok",
+   "item_count": 10,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 10,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere della Sera",
+   "section": "news",
+   "status": "ok",
+   "item_count": 69,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 69,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere Esteri",
+   "section": "news",
+   "status": "ok",
+   "item_count": 49,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 49,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere Economia",
+   "section": "news",
+   "status": "ok",
+   "item_count": 23,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 23,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: AI",
+   "section": "news",
+   "status": "ok",
+   "item_count": 104,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 104,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: insurance industry",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: Zurich Insurance",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: reinsurance",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: European Central Bank",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: Milano",
+   "section": "news",
+   "status": "ok",
+   "item_count": 112,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 112,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: PSG",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 107,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 107,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: équipe de France football",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 102,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 102,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: XV de France rugby",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: Champions League",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: Team Vitality Counter-Strike",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CulturePSG",
+   "section": "sport",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 403",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html;"
+   }
+  },
+  {
+   "name": "L'Équipe",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 50,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 50,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "HLTV",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 10,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 10,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Zurich Insurance",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 17,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 17,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "S&P 500 (iShares Core)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "S&P 500 Equal Weight (Xtrackers)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "MSCI ACWI (SPDR)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Stoxx Europe 600 (Amundi)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "MSCI EM IMI (iShares)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Smart Grid (First Trust)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 1,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 1,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "PPFB",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Bitcoin",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 20,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 20,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Ethereum",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 20,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 20,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 10,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 10,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT Markets",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 25,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 25,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Reuters Business (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Bloomberg (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CNBC Markets",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 30,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 30,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Il Sole 24 Ore Finanza",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 8,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 8,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Les Echos Finance",
+   "section": "finance",
+   "status": "fallback",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CoinDesk",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 25,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 25,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Wiloo",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
+  },
+  {
+   "name": "Crypto Currently",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
+  },
+  {
+   "name": "VisualPolitik EN",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
+  },
+  {
+   "name": "Preston Stewart",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
+  },
+  {
+   "name": "Marques Brownlee",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
+  },
+  {
+   "name": "The Christo Files",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
+  },
+  {
+   "name": "Making Sense with Sam Harris",
+   "section": "media",
+   "status": "ok",
+   "item_count": 514,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 514,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The DeFi Report",
+   "section": "media",
+   "status": "ok",
+   "item_count": 41,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 41,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Lex Fridman Podcast",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "ConnectionError",
+   "failure": "transport",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null
+  },
+  {
+   "name": "Bankless",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null
+  },
+  {
+   "name": "Podcast de CulturePSG",
+   "section": "media",
+   "status": "ok",
+   "item_count": 537,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 537,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Dwarkesh Podcast",
+   "section": "media",
+   "status": "ok",
+   "item_count": 142,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 142,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Daily Gwei",
+   "section": "media",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  }
+ ],
+ "usage": {
+  "price_table_version": "2026-09-23",
+  "calls": 3,
+  "attempts": 3,
+  "unknown": false,
+  "unreported_cost": false,
+  "est_cost_usd": 0.002335,
+  "est_month_usd": 0.21,
+  "forecast_month_usd": 0.21,
+  "forecast_basis": "3 editions/day x 30, labelled forecast",
+  "sections": [
+   {
+    "section": "news",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 9678,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_05b08b13ac60bdd0016acc6992f9f087d0aebb4cff7a9c09c1"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3265,
+    "output_tokens": 783,
+    "reasoning_tokens": 281
+   },
+   {
+    "section": "sport",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 6618,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_031fcbd3cdeb341a016acc699c243887d09b0715e912d798d4"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3671,
+    "output_tokens": 522,
+    "reasoning_tokens": 216
+   },
+   {
+    "section": "finance",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 9389,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_02644d2f1bf42823016acc69a30a0c87d0a162f2c505ca79be"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3231,
+    "output_tokens": 822,
+    "reasoning_tokens": 348
+   }
+  ],
+  "input_tokens": 9,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 10167,
+  "output_tokens": 2127,
+  "reasoning_tokens": 845,
+  "recorded_month_to_date": {
+   "month_utc": "2026-10",
+   "recorded_runs": 52,
+   "attempts": 156,
+   "known_cost_usd": 0.115224,
+   "unknown_cost_runs": 0,
+   "coverage": "committed runs only; token-priced lower bound, not an invoice"
+  }
+ },
+ "sections": {
+  "news": {
+   "briefing": [
+    {
+     "text": "Trump and Putin’s announced ceasefire covering energy infrastructure has left Ukraine and European governments seeking to keep pressure on Moscow; Kyiv was not involved in the announcement, according to Le Monde.",
+     "sources": [
+      {
+       "key": "2034ba7378e664b7",
+       "title": "Après l’accord entre Donald Trump et Vladimir Poutine sur le diesel russe, l’Ukraine et l’Europe s’efforcent de maintenir la pression sur le Kremlin",
+       "url": "https://www.lemonde.fr/international/article/2026/10/12/apres-l-accord-entre-donald-trump-et-vladimir-poutine-sur-le-diesel-russe-l-ukraine-et-l-europe-s-efforcent-de-maintenir-la-pression-sur-le-kremlin_6792418_3210.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Markets are watching US inflation data, with gold rising as oil and the dollar weakened.",
+     "sources": [
+      {
+       "key": "f67723a77c46231e",
+       "title": "Gold gains on weaker oil, dollar; US inflation data in focus - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSTdfbFRJUWVBUW5ndjBGSlJ6aGRQYi1saWxfVU5haEdOVXJaNzFuRnlyZ1F6eGVPb2tGYVczeXlRWEI5WmVHeVFGMTVqd2I5dEZCVDNrNDBkS2N1Q2NWWlRQMzhSa3BPMlZnVElqaFhaQkRLWnJrMG1NUnlvYVE5OWZGTXZucUJoaTUzTmxJeS1mUHpRSVVNT2xlRUI5dmtoQmc?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The FT examines the leverage building among AI hyperscalers, a potential financing vulnerability as investment in the sector expands.",
+     "sources": [
+      {
+       "key": "fc625a025501125f",
+       "title": "The huge lurking leverage of AI hyperscalers - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaHFkSlBubzdPS0Z4ZmlyV1lpOVZ0WkZ4bGJNMVNPQTctNnpJR3ZSSl9QNWpkUHU5YnJwZGFTb2NnNnVCVk9Ja1ZUcWFfVzY1RW82bFVMd09EdFJCU1JwdGFEQ0pHZ25YZF9MUFJFLUx6U0VwS1VLYzd3VHZmUUFkSWxlMks?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Two insurance-sector developments: SageSure has bought a stake in ILS manager Pillar, while OAK Global is launching a multi-class MGA capacity unit at Lloyd’s.",
+     "sources": [
+      {
+       "key": "52d776e695ee1781",
+       "title": "SageSure buys stake in ILS manager Pillar - Insurance Business",
+       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQkQ2N21yN3hzSGtWbHNjV1o3OGprWmMtUy1BUC0zdFBoVUsxVlJMaFpsVTZPNS1zVFVIdzc5ZlBoZVBDWDRyN0ZrLXZwNTlJVGNDaHl0M2cxN2Q0bm15T1ZUMHgxTzYzYXF4SHR5Y2VKZlZHRGFLdE5hNlhIYVg5M3FReTZwQVBYZ2s0SjZGb2ZvdlhZV1BnTVY0bHRLVktfVHlkSkxjX3ZUYnNZWVdWUldnZW5WNVJ1VUxZ?oc=5",
+       "source": "Insurance Business",
+       "via": "Google News"
+      },
+      {
+       "key": "7d163bcfdafb9df4",
+       "title": "OAK Global launches multi-class MGA capacity unit at Lloyd’s - Insurance Business",
+       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxONG4tRGVHeDhxU1NDX2JRRWYtNjJyNzdtRW1OYXJraERCb0lnd25yWG9QNnFPckJzZjVUNDNKUmtaY1Vzb3hkZDEtRGhmejBmZG1RX2Etc0JQVjJYNGxsYkpER3NVSkNldGNzUjNjRUllLTVEYWc3U1BEQ2Nwc25LRXpCWjR2RGRfSEZxNUhSTEl5SS1tQjVPTjFNYk9ZYU9IeDYwbEJBcGpHSF90UE1CMTItbW1YeXc2c212cHA3aF9HTVpVWDQ2RA?oc=5",
+       "source": "Insurance Business",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The EU climate commissioner is looking to European-made technology and nuclear power to cut emissions, amid unresolved French-German disagreements.",
+     "sources": [
+      {
+       "key": "1274f3d9c47b8d6b",
+       "title": "Le commissaire européen au climat compte sur le « made in Europe » et le nucléaire pour réduire les émissions de carbone",
+       "url": "https://www.lemonde.fr/economie/article/2026/10/12/le-commissaire-europeen-au-climat-compte-sur-le-made-in-europe-et-le-nucleaire-pour-reduire-les-emissions-de-carbone_6792422_3234.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Singapore’s president has warned that AI could threaten employment prospects for new graduates, adding a workforce dimension to the debate over adoption.",
+     "sources": [
+      {
+       "key": "3d1674684fcda2e7",
+       "title": "Singapore's President warns of AI's risk to employment for fresh graduates - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMkVwSXVfR1EwdThFLVd2ZWxiTWFQZlBGT0FYUkpvd2pfTENTdFJFZ2xtMDNRSTFkcFhUeE5uYnFDNU1URnAtUlpVbVY5VGZoZUR2WmxTR1lDYVFDV2F1eWk3T3V5SnJXREc5THR0Rll2eUVhRVJqdV9LbGs4dDJFeWZ5SDRGR1BGY2I3bVB6a3cwNzVpRjBnU200YjdxdndNdmdybGQ2OVdCdzZIU2pNZGFRNk9OZzRq?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/10/12/apres-l-accord-entre-donald-trump-et-vladimir-poutine-sur-le-diesel-russe-l-ukraine-et-l-europe-s-efforcent-de-maintenir-la-pression-sur-le-kremlin_6792418_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-10-12T04:00:08+00:00",
+     "new": true,
+     "key": "2034ba7378e664b7",
+     "title": "Ukraine and Europe seek to maintain pressure on Russia after Trump-Putin energy announcement",
+     "summary": "After Trump announced a ceasefire on Russian and Ukrainian energy infrastructure, Ukraine and European governments are trying to maintain pressure on the Kremlin."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSTdfbFRJUWVBUW5ndjBGSlJ6aGRQYi1saWxfVU5haEdOVXJaNzFuRnlyZ1F6eGVPb2tGYVczeXlRWEI5WmVHeVFGMTVqd2I5dEZCVDNrNDBkS2N1Q2NWWlRQMzhSa3BPMlZnVElqaFhaQkRLWnJrMG1NUnlvYVE5OWZGTXZucUJoaTUzTmxJeS1mUHpRSVVNT2xlRUI5dmtoQmc?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-12T03:13:00+00:00",
+     "new": true,
+     "key": "f67723a77c46231e",
+     "title": "Gold rises as oil and dollar weaken ahead of US inflation data",
+     "summary": "Gold gained as oil and the dollar weakened, with US inflation data in focus."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaHFkSlBubzdPS0Z4ZmlyV1lpOVZ0WkZ4bGJNMVNPQTctNnpJR3ZSSl9QNWpkUHU5YnJwZGFTb2NnNnVCVk9Ja1ZUcWFfVzY1RW82bFVMd09EdFJCU1JwdGFEQ0pHZ25YZF9MUFJFLUx6U0VwS1VLYzd3VHZmUUFkSWxlMks?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-10-12T04:00:28+00:00",
+     "new": true,
+     "key": "fc625a025501125f",
+     "title": "The hidden leverage of AI hyperscalers",
+     "summary": "The Financial Times examines the leverage accumulating among AI hyperscalers."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQkQ2N21yN3hzSGtWbHNjV1o3OGprWmMtUy1BUC0zdFBoVUsxVlJMaFpsVTZPNS1zVFVIdzc5ZlBoZVBDWDRyN0ZrLXZwNTlJVGNDaHl0M2cxN2Q0bm15T1ZUMHgxTzYzYXF4SHR5Y2VKZlZHRGFLdE5hNlhIYVg5M3FReTZwQVBYZ2s0SjZGb2ZvdlhZV1BnTVY0bHRLVktfVHlkSkxjX3ZUYnNZWVdWUldnZW5WNVJ1VUxZ?oc=5",
+     "source": "Insurance Business",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-10-12T03:39:48+00:00",
+     "new": true,
+     "key": "52d776e695ee1781",
+     "title": "SageSure buys stake in ILS manager Pillar",
+     "summary": "SageSure has bought a stake in insurance-linked securities manager Pillar."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxONG4tRGVHeDhxU1NDX2JRRWYtNjJyNzdtRW1OYXJraERCb0lnd25yWG9QNnFPckJzZjVUNDNKUmtaY1Vzb3hkZDEtRGhmejBmZG1RX2Etc0JQVjJYNGxsYkpER3NVSkNldGNzUjNjRUllLTVEYWc3U1BEQ2Nwc25LRXpCWjR2RGRfSEZxNUhSTEl5SS1tQjVPTjFNYk9ZYU9IeDYwbEJBcGpHSF90UE1CMTItbW1YeXc2c212cHA3aF9HTVpVWDQ2RA?oc=5",
+     "source": "Insurance Business",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-10-12T03:31:02+00:00",
+     "new": true,
+     "key": "7d163bcfdafb9df4",
+     "title": "OAK Global launches multi-class MGA capacity unit at Lloyd’s",
+     "summary": "OAK Global is launching a multi-class MGA capacity unit at Lloyd’s."
+    },
+    {
+     "url": "https://www.lemonde.fr/economie/article/2026/10/12/le-commissaire-europeen-au-climat-compte-sur-le-made-in-europe-et-le-nucleaire-pour-reduire-les-emissions-de-carbone_6792422_3234.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-10-12T04:00:44+00:00",
+     "new": true,
+     "key": "1274f3d9c47b8d6b",
+     "title": "EU climate commissioner backs European industry and nuclear power to cut emissions",
+     "summary": "Wopke Hoekstra is looking to European-made products and nuclear power to reduce emissions amid French-German disagreements."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMkVwSXVfR1EwdThFLVd2ZWxiTWFQZlBGT0FYUkpvd2pfTENTdFJFZ2xtMDNRSTFkcFhUeE5uYnFDNU1URnAtUlpVbVY5VGZoZUR2WmxTR1lDYVFDV2F1eWk3T3V5SnJXREc5THR0Rll2eUVhRVJqdV9LbGs4dDJFeWZ5SDRGR1BGY2I3bVB6a3cwNzVpRjBnU200YjdxdndNdmdybGQ2OVdCdzZIU2pNZGFRNk9OZzRq?oc=5",
+     "source": "Reuters",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-10-12T04:01:00+00:00",
+     "new": true,
+     "key": "3d1674684fcda2e7",
+     "title": "Singapore president warns AI could threaten graduate employment",
+     "summary": "Singapore’s president warned that AI poses a risk to employment for fresh graduates."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-10-12T05:00:36.599093+00:00",
+   "input_fingerprint": "sha256:cfc0f26c0ccfeaae2d983da095d0279f69e0a76ee534bf2d2fd8f9a18d8cfbe0",
+   "last_success_at": "2026-10-12T05:00:36.599093+00:00",
+   "candidate_count": 320,
+   "new_count": 7
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "Ousmane Dembélé and Nuno Mendes have returned to PSG training ahead of the Champions League, a timely boost before the European fixture.",
+     "sources": [
+      {
+       "key": "834dcbaf46a40aab",
+       "title": "LDC - Dembélé et Nuno Mendes de retour à l'entraînement du PSG - Canal Supporters PSG 24-7",
+       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPM0J1RHBhM0ZBbG1XdWpjazdabjhpQVdZN2lDQ0pZUFlFT3FSSDFOZFViTDJHNGZ6V0x0OS1mdkNsdVd6ZnJjUTNVbmRrd1Zybm1GOXRpUDdlOEthRjh2dGUwTnV6Y2hyckdJUWtFSUNsWlRubFFoMExYaEhwOUtheUpVUG1Wa1NreWhmVXJ1M1I1c1XSAZgBQVVfeXFMTWhLZUktTEJ5VG5TM3YtZUZBR2xpTVp2QkNSS01NZnpYcF9mTlo3N3I1ODE5WVFtU09JN2N2Z1FXNUlyU18wUWlrN3hDX0gzeEs0UlVQbXpycklYOHpGVFJXbUU2dGIteEJwNzhsc0daT2V0NkFCTFUtc3V2NHFha1NaM29nSEJ5a0RmZ0xnWHRzdGVpdlRPelU?oc=5",
+       "source": "Canal Supporters PSG 24-7",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "PSG’s weekend restart was described as successful, though the recap offers no further detail on the performance.",
+     "sources": [
+      {
+       "key": "df86aceccdefbfb0",
+       "title": "Seixas monumental, Verstappen à nouveau conquérant, reprise réussie pour le PSG... Le récap sport du week-end - franceinfo",
+       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQM296OG1NQzJ4SG4zWF9Jb0MzcnRMOHd5SkZVVFVlV3pucjF2SXlxakl2VVAwbDJqbEE5ZDJOVnFadGYzM0IwUzY2WTU3RjRPMFpqNjQxTGszOTdhajBIWmNSY3JsRUpuWWhxV0E5TUpfTGdqNmxiOGhuUnF4SDRaVTJGZUR5enJnN2gwcVhRRWkxeGlJUVpSa0lOMTZzWUR0NzFfSGlPeEZpYnNEdmJiM2ZLYl9rTGEzeFl3Rmo0TXV2cFFYWjJUWWtOc2hkczE4cEpNT2VLUi1wYzhyYlV0Nms2dHVZOFFmSEFKMkE2RmY?oc=5",
+       "source": "franceinfo",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The race over PSG’s future stadium is entering a potentially important week, with Poissy in the frame.",
+     "sources": [
+      {
+       "key": "095e93d6c3acc5c1",
+       "title": "Poissy : semaine clé dans la course au stade du PSG - InfosYvelines",
+       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMlpwbVZKRFVoZmZLOVd3aTRYNmpMVXJmcHg2TVFpRFpRN1BGOUgwVU8zRVBhQW83SHFSWUh4ZDd6YVB5UldvWmRzRERVTHZ2cUQxY3FZOGk0eG9oN0ZKb0xJTEloTVdMTlQ4dWgtaDA2YlVnX0tuX0tEMmltY0o4XzNVNUthSXJxSGU3UzRhWHZWc2Rn?oc=5",
+       "source": "InfosYvelines",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "PSG’s upcoming European opponents are in focus this week; Manchester City, Arsenal and Olympiacos are among the teams covered in a preview of French clubs’ fixtures.",
+     "sources": [
+      {
+       "key": "1fed3363adedb541",
+       "title": "Manchester City se balade, Arsenal et l'Olympiakos sur le fil : les résultats des prochains adversaires des clubs français en Coupe d'Europe",
+       "url": "https://www.lequipe.fr/Football/Actualites/Manchester-city-se-balade-arsenal-et-l-olympiakos-sur-le-fil-les-resultats-des-prochains-adversaires-des-clubs-francais-en-coupe-d-europe/1725099#at_medium=RSS_feeds",
+       "source": "L'Équipe",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPM0J1RHBhM0ZBbG1XdWpjazdabjhpQVdZN2lDQ0pZUFlFT3FSSDFOZFViTDJHNGZ6V0x0OS1mdkNsdVd6ZnJjUTNVbmRrd1Zybm1GOXRpUDdlOEthRjh2dGUwTnV6Y2hyckdJUWtFSUNsWlRubFFoMExYaEhwOUtheUpVUG1Wa1NreWhmVXJ1M1I1c1XSAZgBQVVfeXFMTWhLZUktTEJ5VG5TM3YtZUZBR2xpTVp2QkNSS01NZnpYcF9mTlo3N3I1ODE5WVFtU09JN2N2Z1FXNUlyU18wUWlrN3hDX0gzeEs0UlVQbXpycklYOHpGVFJXbUU2dGIteEJwNzhsc0daT2V0NkFCTFUtc3V2NHFha1NaM29nSEJ5a0RmZ0xnWHRzdGVpdlRPelU?oc=5",
+     "source": "Canal Supporters PSG 24-7",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-11T22:45:47+00:00",
+     "new": true,
+     "key": "834dcbaf46a40aab",
+     "title": "Dembélé and Nuno Mendes return to PSG training",
+     "summary": "Ousmane Dembélé and Nuno Mendes returned to PSG training ahead of a Champions League match."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQM296OG1NQzJ4SG4zWF9Jb0MzcnRMOHd5SkZVVFVlV3pucjF2SXlxakl2VVAwbDJqbEE5ZDJOVnFadGYzM0IwUzY2WTU3RjRPMFpqNjQxTGszOTdhajBIWmNSY3JsRUpuWWhxV0E5TUpfTGdqNmxiOGhuUnF4SDRaVTJGZUR5enJnN2gwcVhRRWkxeGlJUVpSa0lOMTZzWUR0NzFfSGlPeEZpYnNEdmJiM2ZLYl9rTGEzeFl3Rmo0TXV2cFFYWjJUWWtOc2hkczE4cEpNT2VLUi1wYzhyYlV0Nms2dHVZOFFmSEFKMkE2RmY?oc=5",
+     "source": "franceinfo",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-12T04:00:02+00:00",
+     "new": true,
+     "key": "df86aceccdefbfb0",
+     "title": "PSG’s weekend restart",
+     "summary": "A weekend sports roundup described PSG’s return to action as successful."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMlpwbVZKRFVoZmZLOVd3aTRYNmpMVXJmcHg2TVFpRFpRN1BGOUgwVU8zRVBhQW83SHFSWUh4ZDd6YVB5UldvWmRzRERVTHZ2cUQxY3FZOGk0eG9oN0ZKb0xJTEloTVdMTlQ4dWgtaDA2YlVnX0tuX0tEMmltY0o4XzNVNUthSXJxSGU3UzRhWHZWc2Rn?oc=5",
+     "source": "InfosYvelines",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-12T03:02:10+00:00",
+     "new": true,
+     "key": "095e93d6c3acc5c1",
+     "title": "Poissy stadium bid enters a key week",
+     "summary": "A report says the week is important in the race over PSG’s stadium, with Poissy under consideration."
+    },
+    {
+     "url": "https://www.lequipe.fr/Football/Actualites/Manchester-city-se-balade-arsenal-et-l-olympiakos-sur-le-fil-les-resultats-des-prochains-adversaires-des-clubs-francais-en-coupe-d-europe/1725099#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
+     "via": null,
+     "published": "2026-10-11T22:12:12+00:00",
+     "new": true,
+     "key": "1fed3363adedb541",
+     "title": "European fixtures for French clubs: opponents’ latest results",
+     "summary": "A preview of French clubs’ upcoming European opponents highlights Manchester City, Arsenal and Olympiacos."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "degraded",
+   "source_checked_at": "2026-10-12T05:00:36.599093+00:00",
+   "input_fingerprint": "sha256:a989e543683163a5d23145fd6d4e35ff26ef1f0b2fdb58757d90750e062cb43c",
+   "last_success_at": "2026-10-12T05:00:36.599093+00:00",
+   "error": "Source check failed: CulturePSG",
+   "candidate_count": 255,
+   "new_count": 4
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "France’s bond-market stress is raising concern about spillover across Europe, a risk to monitor alongside the country’s ongoing political uncertainty.",
+     "sources": [
+      {
+       "key": "d6dff8ea9d5d0ed7",
+       "title": "France’s Bond Turmoil Raises the Specter of Contagion in Europe - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNTFVRWpDWlEtbmdYMGwxYVVNNE4xc1NIbmp1YVFKRGlUS0lkaVF2RXE1S1ctMGJvSEtKSG80alZaZm82NDdydEsxZ2Rsa1U4T01tc3pPbkRqcGl1R0loNEJDVFBySUFhYnVmMjRjVDMxWjNqV1NuYjV6NVdQTE45WnpPc3R2QmF3dnhUQkZ5WDBJLVpLckp2VEFDZkhsTTVCbUgzUTVlbW11aTVzbTJPeGttZndSUkph?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Oil fell after Trump announced a proposed Ukraine energy ceasefire, but recent attacks on Saudi infrastructure had stoked supply fears—leaving energy markets exposed to shifting geopolitical risks.",
+     "sources": [
+      {
+       "key": "e9e4c7ab8852ffd7",
+       "title": "Oil prices fall after Trump claims ‘energy ceasefire’ in Ukraine war",
+       "url": "https://www.ft.com/content/a663781e-2709-41f2-99df-4fb5a6162e6b?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      },
+      {
+       "key": "cea386cebf551b28",
+       "title": "Oil Rises as Saudi Airport and Tanker Attacks Stoke Supply Fears - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWk1ab2N5dmRGQlBJS0ZLdmpBSWhMNWpGZ3o0ZDQ1NXFOdHdVYVBNMUpXY01naktFbkw2dmFmenhVeDBYZEdBeFVLRF95Sm1jempLdUdoc1JyR1RCQlg3dUdrMW1fVEZTdVdFejdBRTBJVmI1RV90OHNvSV90Y0U3dFZXRThzbWdPT0lPdXl3NU9HVlh6dzZlMm1BMDNRQQ?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The global economy has remained resilient to the Iran shock, but rising public debt is emerging as a concern ahead of IMF and World Bank discussions.",
+     "sources": [
+      {
+       "key": "a4c3563b7e7a8d8c",
+       "title": "‘Worrying omens’ lurk over global economy despite resilient growth",
+       "url": "https://www.ft.com/content/e0457dd5-8e75-4803-8ce8-6651157d2229?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Creditors are scrutinising the liabilities behind AI data-centre expansion, including hyperscalers’ lease commitments, even as equity investors focus on growth prospects.",
+     "sources": [
+      {
+       "key": "b288c1ded0c74714",
+       "title": "The huge lurking leverage of AI hyperscalers",
+       "url": "https://www.ft.com/content/17a207f4-1563-48af-91e3-14bac89ab4b8?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The EU has agreed safeguards for the hybrid-car sector in a deal addressing Chinese imports, a notable development for European industry and trade policy.",
+     "sources": [
+      {
+       "key": "9f024ca0d800273c",
+       "title": "EU ‘safeguards’ hybrid car sector from Chinese imports under new deal - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOREYtQU45cmhRUFFGWkV6VU9qTlNDM2pYdHhFeHEwZ3o1bDZvZXJ2SXRHN0lJREc5dEw0SWZ0Wm12NW1xblpRcTRxZUVXTmtHUm5qczVmdklnLXVTVVhNNzdWV0d3XzdGYXJQSHZkd2tVUzVRN1BxTmtCZ0pvMXVUdm0tVy0?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNTFVRWpDWlEtbmdYMGwxYVVNNE4xc1NIbmp1YVFKRGlUS0lkaVF2RXE1S1ctMGJvSEtKSG80alZaZm82NDdydEsxZ2Rsa1U4T01tc3pPbkRqcGl1R0loNEJDVFBySUFhYnVmMjRjVDMxWjNqV1NuYjV6NVdQTE45WnpPc3R2QmF3dnhUQkZ5WDBJLVpLckp2VEFDZkhsTTVCbUgzUTVlbW11aTVzbTJPeGttZndSUkph?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-11T21:00:02+00:00",
+     "new": true,
+     "key": "d6dff8ea9d5d0ed7",
+     "title": "France’s bond turmoil raises fears of contagion in Europe",
+     "summary": "France’s bond-market stress is raising concern about possible spillovers to other European markets."
+    },
+    {
+     "url": "https://www.ft.com/content/a663781e-2709-41f2-99df-4fb5a6162e6b?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-12T04:43:13+00:00",
+     "new": true,
+     "key": "e9e4c7ab8852ffd7",
+     "title": "Oil falls after Trump claims Ukraine energy ceasefire",
+     "summary": "Oil prices fell after Trump said an energy ceasefire in Ukraine had been reached."
+    },
+    {
+     "url": "https://www.ft.com/content/e0457dd5-8e75-4803-8ce8-6651157d2229?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-12T04:00:16+00:00",
+     "new": true,
+     "key": "a4c3563b7e7a8d8c",
+     "title": "Debt concerns cloud resilient global growth",
+     "summary": "Major economies have withstood the Iran shock, but rising public debt is a growing concern."
+    },
+    {
+     "url": "https://www.ft.com/content/17a207f4-1563-48af-91e3-14bac89ab4b8?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-12T04:00:07+00:00",
+     "new": true,
+     "key": "b288c1ded0c74714",
+     "title": "AI hyperscalers’ leverage comes under scrutiny",
+     "summary": "Creditors are examining liabilities, including data-centre leases, as AI hyperscalers expand."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOREYtQU45cmhRUFFGWkV6VU9qTlNDM2pYdHhFeHEwZ3o1bDZvZXJ2SXRHN0lJREc5dEw0SWZ0Wm12NW1xblpRcTRxZUVXTmtHUm5qczVmdklnLXVTVVhNNzdWV0d3XzdGYXJQSHZkd2tVUzVRN1BxTmtCZ0pvMXVUdm0tVy0?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-11T20:00:01+00:00",
+     "new": true,
+     "key": "9f024ca0d800273c",
+     "title": "EU agrees safeguards for hybrid-car sector amid Chinese imports",
+     "summary": "The EU has agreed safeguards for the hybrid-car sector under a deal addressing Chinese imports."
+    },
+    {
+     "url": "https://www.ft.com/content/5f0e16b5-15ba-4496-a4c1-15bc0287f7f1?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-12T04:00:08+00:00",
+     "new": true,
+     "key": "aaaf1cafc566616b",
+     "title": "Paris airport owner linked to services for sanctioned Russian airline",
+     "summary": "A Groupe ADP subsidiary has not stopped all work for Russia’s Ural Airlines, according to the report."
+    },
+    {
+     "url": "https://www.ft.com/content/0c5a10f4-5aca-456e-9c3a-4c4dc8132a63?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-12T04:00:16+00:00",
+     "new": true,
+     "key": "d55af9bfd385e3d5",
+     "title": "Poland warns NATO to prepare for deadly Russian hybrid attack",
+     "summary": "Poland’s foreign minister says the risk of casualties is rising as Russia escalates sabotage in Europe."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-10-12T05:00:36.599093+00:00",
+   "input_fingerprint": "sha256:54a3dcc8bfb3d5fefc81b333308d66e050e923d605e0575f2510f394015e9149",
+   "last_success_at": "2026-10-12T05:00:36.599093+00:00",
+   "tickers": [
+    {
+     "symbol": "ZURN.SW",
+     "label": "Zurich Insurance",
+     "price": 576.0,
+     "change_pct": 0.56,
+     "currency": "CHF",
+     "as_of": "2026-10-08T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "SXR8.DE",
+     "label": "S&P 500 (iShares Core)",
+     "price": 751.32,
+     "change_pct": 0.31,
+     "currency": "EUR",
+     "as_of": "2026-10-08T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "XDEW.DE",
+     "label": "S&P 500 Equal Weight (Xtrackers)",
+     "price": 106.12,
+     "change_pct": 1.32,
+     "currency": "EUR",
+     "as_of": "2026-10-08T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "SPYY.DE",
+     "label": "MSCI ACWI (SPDR)",
+     "price": 294.4,
+     "change_pct": 0.53,
+     "currency": "EUR",
+     "as_of": "2026-10-08T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "MEUD.PA",
+     "label": "Stoxx Europe 600 (Amundi)",
+     "price": 311.8,
+     "change_pct": 1.04,
+     "currency": "EUR",
+     "as_of": "2026-10-08T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "AYEM.DE",
+     "label": "MSCI EM IMI (iShares)",
+     "price": 9.42,
+     "change_pct": 0.66,
+     "currency": "EUR",
+     "as_of": "2026-10-08T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "GRID.DE",
+     "label": "Smart Grid (First Trust)",
+     "price": 56.4,
+     "change_pct": 1.04,
+     "currency": "EUR",
+     "as_of": "2026-10-08T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "PPFB.DE",
+     "label": "PPFB",
+     "price": 72.58,
+     "change_pct": 1.82,
+     "currency": "EUR",
+     "as_of": "2026-10-08T22:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "BTC-USD",
+     "label": "Bitcoin",
+     "price": 84043.58,
+     "change_pct": 1.36,
+     "currency": "USD",
+     "as_of": "2026-10-12T00:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "ETH-USD",
+     "label": "Ethereum",
+     "price": 2563.57,
+     "change_pct": 2.38,
+     "currency": "USD",
+     "as_of": "2026-10-12T00:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    }
+   ],
+   "candidate_count": 121,
+   "new_count": 7
+  },
+  "media": {
+   "briefing": "",
+   "items": [
+    {
+     "title": "#497 — The Confidence Man",
+     "url": "https://wakingup.libsyn.com/497-the-confidence-man",
+     "source": "Making Sense with Sam Harris",
+     "kind": "podcast",
+     "published": "2026-10-09T18:00:00+00:00",
+     "duration_s": 1317,
+     "new": false,
+     "key": "20207d2dfb39fbe1"
+    }
+   ],
+   "reviewed_count": 0,
+   "state": "skipped",
+   "source_checked_at": "2026-10-12T05:00:36.599093+00:00",
+   "candidate_count": 1,
+   "new_count": 0
+  }
+ },
+ "scheduled_slot": "2026-10-12T05:00:00.000Z"
+}
