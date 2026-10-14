@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261014T110139688913Z",
- "generated_at": "2026-10-14T11:01:39.688913+00:00",
- "generated_local": "Wed 14 Oct 2026, 13:01",
- "source_checked_at": "2026-10-14T11:01:39.688913+00:00",
+ "edition_id": "ed-20261014T154414479565Z",
+ "generated_at": "2026-10-14T15:44:14.479565+00:00",
+ "generated_local": "Wed 14 Oct 2026, 17:44",
+ "source_checked_at": "2026-10-14T15:44:14.479565+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-10-14T11:01:39.688913+00:00"
+  "run-2026-10-14T15:44:14.479565+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-10-14T11:01:39.688913+00:00"
+  "completed_at": "2026-10-14T15:44:14.479565+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,6 +201,18 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
+   "item_count": 105,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 105,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: équipe de France football",
+   "section": "sport",
+   "status": "ok",
    "item_count": 106,
    "reason": null,
    "failure": null,
@@ -210,25 +222,13 @@
    "cache": "refreshed"
   },
   {
-   "name": "Team: équipe de France football",
-   "section": "sport",
-   "status": "ok",
-   "item_count": 104,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 104,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
    "name": "Team: XV de France rugby",
    "section": "sport",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 110,
+   "item_count": 108,
    "reason": null,
    "failure": null,
-   "parsed_count": 110,
+   "parsed_count": 108,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -271,7 +271,7 @@
    "diagnostic": {
     "status_code": 403,
     "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html;"
+    "body_prefix": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/"
    }
   },
   {
@@ -398,10 +398,10 @@
    "name": "Bitcoin",
    "section": "finance",
    "status": "ok",
-   "item_count": 19,
+   "item_count": 20,
    "reason": null,
    "failure": null,
-   "parsed_count": 19,
+   "parsed_count": 20,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -627,8 +627,8 @@
    "section": "media",
    "status": "unavailable",
    "item_count": 0,
-   "reason": "ConnectionError",
-   "failure": "transport",
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
    "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
@@ -689,9 +689,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002424,
-  "est_month_usd": 0.22,
-  "forecast_month_usd": 0.22,
+  "est_cost_usd": 0.00229,
+  "est_month_usd": 0.21,
+  "forecast_month_usd": 0.21,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -699,60 +699,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 12526,
+    "latency_ms": 11596,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0a323e9a4dfa7be7016acf612b903087d0908abe320a2a0a6a"
+     "resp_0f5ea86a7f60df87016acfa35750f487d1a146f55eb0aa73be"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3298,
-    "output_tokens": 886,
-    "reasoning_tokens": 256
+    "cache_write_tokens": 3240,
+    "output_tokens": 794,
+    "reasoning_tokens": 278
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7246,
+    "latency_ms": 7664,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0cbc4c4b9a4f4c07016acf6137774087d0bab1081db22682f8"
+     "resp_069491859143cf04016acfa362159c87d1a5c697a573ca13f3"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3397,
-    "output_tokens": 560,
-    "reasoning_tokens": 180
+    "cache_write_tokens": 3456,
+    "output_tokens": 538,
+    "reasoning_tokens": 235
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 10203,
+    "latency_ms": 8674,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0ae0b29d520f2c0d016acf613eb78487d09066716e27482c7b"
+     "resp_0d6a877370bc8a56016acfa369c0c487d181315652147bbb91"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3324,
-    "output_tokens": 895,
-    "reasoning_tokens": 367
+    "cache_write_tokens": 3379,
+    "output_tokens": 729,
+    "reasoning_tokens": 231
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10019,
-  "output_tokens": 2341,
-  "reasoning_tokens": 803,
+  "cache_write_tokens": 10075,
+  "output_tokens": 2061,
+  "reasoning_tokens": 744,
   "recorded_month_to_date": {
    "month_utc": "2026-10",
-   "recorded_runs": 64,
-   "attempts": 192,
-   "known_cost_usd": 0.142105,
+   "recorded_runs": 65,
+   "attempts": 195,
+   "known_cost_usd": 0.144395,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -761,80 +761,75 @@
   "news": {
    "briefing": [
     {
-     "text": "The Houthis have threatened further attacks on Saudi airports and oil facilities after an attack on Aramco’s headquarters, raising fresh regional security risks.",
+     "text": "US inflation accelerated to 3.7% year over year in September, more than expected, with higher motor-fuel costs contributing to the rise.",
      "sources": [
       {
-       "key": "7f81db8e3fcd9821",
-       "title": "Yemen's Houthis vow more attacks on Saudi airports, oil facilities after Aramco HQ hit - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNV3VzaTd1VDVxNXczQ2FRa2FsXzdOV0Y5ZlFoaUthcVJhUnlFMHROUUMtWWZzUGZNWFd5WVNZbnJyZ3A4azRaUzNabVQ1U2ZMMmNYTzM1R2ZoeDF5dVQ0Q3FldDNEMW5lVC1oaVQ3Rmdaei01eS1GaFVla0prYUVZeEtJZlBZV2hoUm8yVTJNR3RYSXlhZTBPVWswNmdTWE5nclRiSldzUE91cXNZbzRGZzVOSFpMX294VWs3UlFpV2Q1Z09xTnl4Rw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A Starlink outage has restricted Ukrainian troops’ access to satellite internet as Russia launches ballistic missiles without advance US warning, according to the report.",
-     "sources": [
-      {
-       "key": "d96a844684333c93",
-       "title": "Ukrainian soldiers in combat have access to Starlink satellite internet restricted",
-       "url": "https://www.theguardian.com/world/2026/oct/14/ukraine-soldiers-combat-access-starlink-satellite-internet-restricted",
-       "source": "The Guardian World",
+       "key": "928277f3a9d06586",
+       "title": "US inflation rises more than expected - here's what is happening with prices",
+       "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
        "via": null
       }
      ]
     },
     {
-     "text": "Insurers are being approached as potential financiers of CoreWeave’s AI data-centre expansion, a development relevant to both AI infrastructure and insurance capital deployment.",
+     "text": "Ukraine diplomacy is in focus as President Zelensky is due to meet the UK prime minister at Downing Street, amid efforts to repair US-Ukraine ties.",
      "sources": [
       {
-       "key": "509d7207c6997753",
-       "title": "CoreWeave wants insurers to help bankroll its AI data center boom - Startup Fortune",
-       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPaFhyU0FjRGVQVXJzMFFBVVR4RzhKM1YxTjRaMm8xYm5GR1JBMG03cFo4bmhnYUVmZkpwWHdPaTJDUjZ2ZUNhRzZZRTRTX0I5RFBjYUUwbzZIT2tuZWxrc1VNc0R1dG1qRXdNQ3pQc2hXQWpXb1VjYjBCS1RkZS12TkQ4bnBhSlctbnhwa3FkbHdMZ0h3MnZxbQ?oc=5",
-       "source": "Startup Fortune",
+       "key": "ddb7184c19609822",
+       "title": "Andy Burnham to host Volodymyr Zelenskyy at Downing Street – UK politics live",
+       "url": "https://www.theguardian.com/politics/live/2026/oct/14/pmqs-andy-burnham-kemi-badenoch-zelenskyy-uk-politics-latest-news",
+       "source": "The Guardian World",
+       "via": null
+      },
+      {
+       "key": "779a1c17bfdc8a6d",
+       "title": "Burnham says he wants to 'repair bridges' between Ukraine and US",
+       "url": "https://www.bbc.co.uk/news/articles/cq98z59xdny5o?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Insurance-market developments include PICC P&C’s first Hong Kong sidecar issuance and Constellation Re Bermuda’s first reinsurance transaction, with an ‘A’ Fitch rating.",
+     "sources": [
+      {
+       "key": "2d24d58fe690162f",
+       "title": "PICC P&C announces first sidecar issuance in Hong Kong - Reinsurance News",
+       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbGNKTzVjNDJLakRyU0JWR29sT3RtQ2Zib3djVExJNXZtSG1KbXdUT2N2THNZZjl2T0xHMFZVTlplOHREMUcyMmszcXBPTG53OFYtN0dqQmdad3VpQXhwLXhqRzRQdEtOVzI0VWlXYlh0Ykx4YzRTQUJnTnptWVZRdGJMWFBGLTJxNmtV?oc=5",
+       "source": "Reinsurance News",
+       "via": "Google News"
+      },
+      {
+       "key": "ce82ef18c5203686",
+       "title": "Constellation Re Bermuda completes first reinsurance transaction, receives ‘A’ Fitch rating - Reinsurance News",
+       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOeFBkem14V3RLaldjVnFvOU1PREc3VS1FUWt0WnczMk1jUEVmNzhoNXV4R2MyU2wtQ3VVUlZ0S0tWejlURWFSMmlGV2VpTzg3WlJOeHJINFpGaWJCZm45RUVRUVI5NUNfRjFmazJRRnpkZzJXRXJWY1EyeVVqNWlLbmRWX042NUdEVTd1VjRUcENqQWdYUHdaRU5hT2plOHV3VVZadGVWdS1pQW5JZVEza0M4R0NUMUtWMEE?oc=5",
+       "source": "Reinsurance News",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Google DeepMind’s Demis Hassabis has described recent AI hacks as “early warning shots,” underscoring growing security concerns around AI systems.",
+     "text": "Italy’s industry minister says the government is working to extend the fuel price cap into coming months.",
      "sources": [
       {
-       "key": "3b0dbc12d1aeb39d",
-       "title": "Google Deepmind's Hassabis calls AI hacks 'early warning shots' - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRUpQLTQySlpPSFREYzVycnZUeHhKeWh5TFZTSmw0elFKaVB0THNKYU44eHdhQnJBOS1aNFk2MzlRblBlbzZEa0J4ZFk0VFkxaTdubmpWNVUwaFNwV3pkbHpHYU1XWFlaTGp1MU1vRlNMdkU0Tm9ZU3BweUktbDgxbktvWXl2UzZsVW93LVFPbkZyVDFudHQ2Z3FzQjM1bnZRa3RfbWQ1ME44RFBhVXJiM19aWQ?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Italy says it is pursuing radar coverage in neighbouring Balkan countries to help protect against threats, extending its security posture beyond its borders.",
-     "sources": [
-      {
-       "key": "7091e7cd3a4150a8",
-       "title": "Crosetto, radar nei Balcani per difendere anche l'Italia",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/14/crosetto-radar-nei-balcani-per-difendere-anche-litalia_5a210027-292d-4610-bb60-e6eb90156301.html",
+       "key": "c2ef81f066d0b12e",
+       "title": "Urso, lavoriamo per prorogare price cap sui carburanti ai prossimi mesi",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/14/urso-lavoriamo-per-prorogare-price-cap-sui-carburanti-ai-prossimi-mesi_85a4428f-c192-4285-b57a-de1ab255a8f9.html",
        "source": "ANSA Top News",
        "via": null
       }
      ]
     },
     {
-     "text": "Two insurance-market developments to watch: PICC P&C has issued a Hong Kong sidecar, while Zurich has hired an Axa Tianping executive to lead China growth.",
+     "text": "Meta CEO Mark Zuckerberg said the company committed up to $200 billion to AI without knowing whether the investment would work.",
      "sources": [
       {
-       "key": "152822a10f1b96a7",
-       "title": "PICC P&C’s new $12m Great Wall Re is the first Hong Kong sidecar ILS issuance - Artemis.bm",
-       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaEdRTXZ0UVhqUEZ1QzFubE5TSjJZZkZSQVIzS1h0a3RQQ1NNampYNWhhNUMwZGI2b01NMGxGT0Z5bnB2Mm04OHhubnZtSi1IeGo2NDczM2lYZHhDZmhKSS10azVVck9QSTQ2anEtdDd0Si0ybEM3YndETGVQbndXWlM4X3dSdXQ5TWlyM0dhRzlJVFFRaUV4MnllYmdrVjJKTFhCM1ZR?oc=5",
-       "source": "Artemis.bm",
-       "via": "Google News"
-      },
-      {
-       "key": "7627357f0d70d95d",
-       "title": "Zurich hires Axa Tianping executive to lead China growth - Intelligent Insurer",
-       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOT0M3QUhmSU1DcmRxTkRDQS1CblR1dzBsRENTQTV0VXYyZ0ZVRkR2UjJ5MElSVkFmb0tXakhMc3pvTjYzSm9NMWk4RjR2MVNiUjhqeE9acXM1azBEMHEtQVE0TG1nT1ZkaG9acl9hNFpnQkNDRWlhTHRLYmZnaDUyVzltQnFNcGwtNVR6RHZrRDhhX2tVTmc?oc=5",
-       "source": "Intelligent Insurer",
+       "key": "7e45168e05b22ffb",
+       "title": "Zuckerberg says Meta bet up to $200 billion on AI without knowing if it would work - Los Angeles Times",
+       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUUo0MDZFc1JHdkhaUWRybHMxemI4SURFczJzaGZWamp4U0VQWlF4SFRveFpQVUF6MEZWMTJuWEFfSndIcTZ6THBzR1hQUWpBdnJCUGdVMS1HR0dGdmVXNWtWc0tobk81ZDVPYlNnTUZxcF9qQm9IR2VNM0FKSm9ISGRiMVB2Ykw3MFdPZTZuc0ZvUEF0ODlJcXUtVl82U3RaY3pQWFhyV2s0cGF6OWR3dWhpTWhDMHExU21pWEcxTkJEbGtoVEtnRWwtQQ?oc=5",
+       "source": "Los Angeles Times",
        "via": "Google News"
       }
      ]
@@ -842,412 +837,375 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNV3VzaTd1VDVxNXczQ2FRa2FsXzdOV0Y5ZlFoaUthcVJhUnlFMHROUUMtWWZzUGZNWFd5WVNZbnJyZ3A4azRaUzNabVQ1U2ZMMmNYTzM1R2ZoeDF5dVQ0Q3FldDNEMW5lVC1oaVQ3Rmdaei01eS1GaFVla0prYUVZeEtJZlBZV2hoUm8yVTJNR3RYSXlhZTBPVWswNmdTWE5nclRiSldzUE91cXNZbzRGZzVOSFpMX294VWs3UlFpV2Q1Z09xTnl4Rw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-14T10:29:28+00:00",
+     "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
+     "via": null,
+     "published": "2026-10-14T15:26:14+00:00",
      "new": true,
-     "key": "7f81db8e3fcd9821",
-     "title": "Houthis threaten further attacks on Saudi airports and oil facilities",
-     "summary": "The Houthis vowed further attacks on Saudi airports and oil facilities after an attack on Aramco’s headquarters."
+     "key": "928277f3a9d06586",
+     "title": "US inflation rises more than expected",
+     "summary": "US prices rose 3.7% year over year in September, driven by higher motor-fuel costs."
     },
     {
-     "url": "https://www.theguardian.com/world/2026/oct/14/ukraine-soldiers-combat-access-starlink-satellite-internet-restricted",
+     "url": "https://www.theguardian.com/politics/live/2026/oct/14/pmqs-andy-burnham-kemi-badenoch-zelenskyy-uk-politics-latest-news",
      "source": "The Guardian World",
      "feed_name": "The Guardian World",
      "via": null,
-     "published": "2026-10-14T10:05:36+00:00",
+     "published": "2026-10-14T15:20:50+00:00",
      "new": true,
-     "key": "d96a844684333c93",
-     "title": "Starlink outage restricts Ukrainian soldiers’ internet access",
-     "summary": "An outage affecting SpaceX-managed terminals has restricted Starlink access for Ukrainian soldiers in combat."
+     "key": "ddb7184c19609822",
+     "title": "Zelensky to meet UK prime minister at Downing Street",
+     "summary": "Ukrainian President Volodymyr Zelensky is due to meet the UK prime minister at Downing Street."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPaFhyU0FjRGVQVXJzMFFBVVR4RzhKM1YxTjRaMm8xYm5GR1JBMG03cFo4bmhnYUVmZkpwWHdPaTJDUjZ2ZUNhRzZZRTRTX0I5RFBjYUUwbzZIT2tuZWxrc1VNc0R1dG1qRXdNQ3pQc2hXQWpXb1VjYjBCS1RkZS12TkQ4bnBhSlctbnhwa3FkbHdMZ0h3MnZxbQ?oc=5",
-     "source": "Startup Fortune",
-     "feed_name": "Topic: insurance industry",
-     "via": "Google News",
-     "published": "2026-10-14T10:14:51+00:00",
-     "new": true,
-     "key": "509d7207c6997753",
-     "title": "CoreWeave seeks insurers to help finance AI data-centre expansion",
-     "summary": "CoreWeave is seeking insurer financing for its AI data-centre expansion."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRUpQLTQySlpPSFREYzVycnZUeHhKeWh5TFZTSmw0elFKaVB0THNKYU44eHdhQnJBOS1aNFk2MzlRblBlbzZEa0J4ZFk0VFkxaTdubmpWNVUwaFNwV3pkbHpHYU1XWFlaTGp1MU1vRlNMdkU0Tm9ZU3BweUktbDgxbktvWXl2UzZsVW93LVFPbkZyVDFudHQ2Z3FzQjM1bnZRa3RfbWQ1ME44RFBhVXJiM19aWQ?oc=5",
-     "source": "Reuters",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-10-14T10:29:17+00:00",
-     "new": true,
-     "key": "3b0dbc12d1aeb39d",
-     "title": "DeepMind chief calls AI hacks ‘early warning shots’",
-     "summary": "Demis Hassabis described recent AI hacks as early warning signs."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/14/crosetto-radar-nei-balcani-per-difendere-anche-litalia_5a210027-292d-4610-bb60-e6eb90156301.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-10-14T10:55:12+00:00",
-     "new": true,
-     "key": "7091e7cd3a4150a8",
-     "title": "Italy plans Balkan radar coverage to address security threats",
-     "summary": "Italy says it plans to monitor neighbouring Balkan countries to help protect against threats."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaEdRTXZ0UVhqUEZ1QzFubE5TSjJZZkZSQVIzS1h0a3RQQ1NNampYNWhhNUMwZGI2b01NMGxGT0Z5bnB2Mm04OHhubnZtSi1IeGo2NDczM2lYZHhDZmhKSS10azVVck9QSTQ2anEtdDd0Si0ybEM3YndETGVQbndXWlM4X3dSdXQ5TWlyM0dhRzlJVFFRaUV4MnllYmdrVjJKTFhCM1ZR?oc=5",
-     "source": "Artemis.bm",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbGNKTzVjNDJLakRyU0JWR29sT3RtQ2Zib3djVExJNXZtSG1KbXdUT2N2THNZZjl2T0xHMFZVTlplOHREMUcyMmszcXBPTG53OFYtN0dqQmdad3VpQXhwLXhqRzRQdEtOVzI0VWlXYlh0Ykx4YzRTQUJnTnptWVZRdGJMWFBGLTJxNmtV?oc=5",
+     "source": "Reinsurance News",
      "feed_name": "Topic: reinsurance",
      "via": "Google News",
-     "published": "2026-10-14T10:11:47+00:00",
+     "published": "2026-10-14T15:01:39+00:00",
      "new": true,
-     "key": "152822a10f1b96a7",
-     "title": "PICC P&C launches first Hong Kong sidecar ILS issuance",
-     "summary": "PICC P&C’s $12 million Great Wall Re is the first Hong Kong sidecar ILS issuance."
+     "key": "2d24d58fe690162f",
+     "title": "PICC P&C announces first Hong Kong sidecar issuance",
+     "summary": "PICC P&C announced its first sidecar issuance in Hong Kong."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOT0M3QUhmSU1DcmRxTkRDQS1CblR1dzBsRENTQTV0VXYyZ0ZVRkR2UjJ5MElSVkFmb0tXakhMc3pvTjYzSm9NMWk4RjR2MVNiUjhqeE9acXM1azBEMHEtQVE0TG1nT1ZkaG9acl9hNFpnQkNDRWlhTHRLYmZnaDUyVzltQnFNcGwtNVR6RHZrRDhhX2tVTmc?oc=5",
-     "source": "Intelligent Insurer",
-     "feed_name": "Topic: Zurich Insurance",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOeFBkem14V3RLaldjVnFvOU1PREc3VS1FUWt0WnczMk1jUEVmNzhoNXV4R2MyU2wtQ3VVUlZ0S0tWejlURWFSMmlGV2VpTzg3WlJOeHJINFpGaWJCZm45RUVRUVI5NUNfRjFmazJRRnpkZzJXRXJWY1EyeVVqNWlLbmRWX042NUdEVTd1VjRUcENqQWdYUHdaRU5hT2plOHV3VVZadGVWdS1pQW5JZVEza0M4R0NUMUtWMEE?oc=5",
+     "source": "Reinsurance News",
+     "feed_name": "Topic: reinsurance",
      "via": "Google News",
-     "published": "2026-10-14T10:09:04+00:00",
+     "published": "2026-10-14T15:31:41+00:00",
      "new": true,
-     "key": "7627357f0d70d95d",
-     "title": "Zurich hires Axa Tianping executive to lead China growth",
-     "summary": "Zurich has hired an Axa Tianping executive to lead its growth in China."
+     "key": "ce82ef18c5203686",
+     "title": "Constellation Re Bermuda completes first reinsurance transaction",
+     "summary": "Constellation Re Bermuda completed its first reinsurance transaction and received an ‘A’ Fitch rating."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWkZXOGQtY20wYks4cjUyN3lSZEFCNDJvYWVlSGxra0IyOHQ5bEVUTC1jU0E5aU1WY1Y4NFZuT3lvX2JOdjhIeHJyaWVwWG5QVExsUjZSeUhQS2tObzM2Wlg1RjY4bGtzaWhOclRDNnRqMXdINTI4bGJtNkxYOEEtUFo0VDNwUWFuT3Z4b2tFRGIxWlNwXzhnTzI1Mnl5OGl3WXZxS25rblVrbTZtdlNjNFVRbXI?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-10-14T10:30:00+00:00",
-     "new": true,
-     "key": "4fa7646f448a251f",
-     "title": "Apple and OpenAI face trade-secret court fight",
-     "summary": "Apple and OpenAI are heading to court in a high-stakes dispute over AI trade secrets."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOUDBvX1lsM0hSWFVxTU9nUGZXLXFkZmlORG1DNVI4LThGN250cTdjZzN4TmR2UTJNeXNTODMxbFB6QXFxTUpZWVlMbU9sQk5CanZpamhBSWExdnZMZkpibk5iUDl4aFY2SWhVdlFVbTZ0NFR0V0ppbzM2ZVJQWVFMT0J1d0NSN2hXTUlPclE3UGZKbTFsb1E?oc=5",
-     "source": "marketscreener.com",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-10-14T10:08:38+00:00",
-     "new": true,
-     "key": "78e8273e6646d138",
-     "title": "Belgium’s Wunsch discusses ECB policy outlook",
-     "summary": "Belgian central banker Pierre Wunsch discussed the ECB’s policy outlook."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/14/emergency-a-gaza-entro-dicembre-14-milioni-in-grave-insicurezza-alimentare_c5eceb75-9ece-4b3f-a720-2732811e4c2f.html",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/14/urso-lavoriamo-per-prorogare-price-cap-sui-carburanti-ai-prossimi-mesi_85a4428f-c192-4285-b57a-de1ab255a8f9.html",
      "source": "ANSA Top News",
      "feed_name": "ANSA Top News",
      "via": null,
-     "published": "2026-10-14T10:11:51+00:00",
+     "published": "2026-10-14T15:06:59+00:00",
      "new": true,
-     "key": "551c04af1388eab5",
-     "title": "Emergency warns of severe food insecurity in Gaza",
-     "summary": "Emergency says 1.4 million people in Gaza could face severe food insecurity by December amid shortages of food and clean water."
+     "key": "c2ef81f066d0b12e",
+     "title": "Italy seeks to extend fuel price cap",
+     "summary": "Industry Minister Adolfo Urso said Italy is working to extend the fuel price cap into coming months."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUUo0MDZFc1JHdkhaUWRybHMxemI4SURFczJzaGZWamp4U0VQWlF4SFRveFpQVUF6MEZWMTJuWEFfSndIcTZ6THBzR1hQUWpBdnJCUGdVMS1HR0dGdmVXNWtWc0tobk81ZDVPYlNnTUZxcF9qQm9IR2VNM0FKSm9ISGRiMVB2Ykw3MFdPZTZuc0ZvUEF0ODlJcXUtVl82U3RaY3pQWFhyV2s0cGF6OWR3dWhpTWhDMHExU21pWEcxTkJEbGtoVEtnRWwtQQ?oc=5",
+     "source": "Los Angeles Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-10-14T15:02:17+00:00",
+     "new": true,
+     "key": "7e45168e05b22ffb",
+     "title": "Zuckerberg says Meta bet up to $200 billion on AI",
+     "summary": "Mark Zuckerberg said Meta committed up to $200 billion to AI without knowing whether the investment would work."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRWUtaE11VFBUVzl6LTZPZENsMk5sSkM3SG1zTkt1M2JXN1JQXzlRczlDQ05PN1JMYVhCMWZXcFBqUHJrUTQySnRldVh4MG05dkxBNE5ROHE5MHBKUHZ3VVkwQVhycWoxdGU0bjk1TkVPTHlIQm4zdmRFTGc4M2k2amF4cmRrWEtQM2F2OHRrcUNEMVVPLTNWQQ?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-14T15:01:44+00:00",
+     "new": true,
+     "key": "d85db7ca127c40d4",
+     "title": "Lufthansa wins race for stake in TAP",
+     "summary": "Lufthansa won the race for a €1.2 billion stake in Portuguese carrier TAP."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOd0ZaMTJ1V3FHVGlTQWNRaVRwS1pvaEZJZjMtdkFWM1llcDA4VVMzejI1YzhUbUk4WXBsRTdMZGZJWGx3azJZVTZIWG5YQ0twUEx2RzNzMGJpa2Nqc2NaQTFHUU01UVF4YjlPcTlPVVJTVXlyRi0wSXZUYmprUTAwZHJvd1Bzem9DdjI2OGM0Qk1pdVBLUGY1Um1iV2syTHVIYVJEMkVqdE1oajdiMnhjLVcyLWl5bUR2U094UW1Gbw?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-14T15:07:11+00:00",
+     "new": true,
+     "key": "71be33d969a335b6",
+     "title": "Berkshire deepens Bending Spoons investment",
+     "summary": "Berkshire invested a further $330 million in Bending Spoons, prompting a share rally."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-14T11:01:39.688913+00:00",
-   "input_fingerprint": "sha256:7ab527cd3b72563480c0f4dc795084b9d9eae4278692dc9eaa39ed6c9a8ff105",
-   "last_success_at": "2026-10-14T11:01:39.688913+00:00",
-   "candidate_count": 487,
-   "new_count": 10
+   "source_checked_at": "2026-10-14T15:44:14.479565+00:00",
+   "input_fingerprint": "sha256:951c7b2e26871134cc366275c0646466004a598ab138e21a3e7581def098f91c",
+   "last_success_at": "2026-10-14T15:44:14.479565+00:00",
+   "candidate_count": 523,
+   "new_count": 8
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG’s Champions League meeting with Manchester City is the main immediate story; a CulturePSG preview looks back at the clubs’ past encounters, while lineup coverage raises the possibility of João Neves starting on the bench.",
+     "text": "PSG’s Champions League meeting with Manchester City is the main immediate fixture; one preview flags a possible Parisian starter on the bench, but gives no further lineup detail.",
      "sources": [
       {
-       "key": "a62902fd325201b1",
-       "title": "Match : MSN, 3-5-2, etc, Manchester City/PSG, quel historique entre les deux clubs - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQX2dwSVpBaXNBSk02SkJtUjVzLVZwcGhzTU5TYjh2TkF4bGlEM1BvU1lvWUphNURkdEhONXZ2WTNsVEpPcENrLVBBTVAxNkpUN2tjOEZSSlRNemltMHd6NVJUNzFMSjJVUXIzbTFnVVM2V3BSaE05dWhzVUs2UVFyU0V1SVF5Q1hTeWFfVURkQ1hUX2JWUmxsb2c1X19FY2VjbkdYVER1c1R1aWlSM0M0bTdFM1A?oc=5",
-       "source": "CulturePSG",
-       "via": "Google News"
-      },
-      {
-       "key": "e21cf8b438e188e4",
-       "title": "João Neves sur le banc face à Manchester City ? - SO FOOT.com",
-       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTDJMby1DWF9PN0oxSVg2cmxQbXNfMFVDX3U0Szh4MGs3eDd1OVUzZ3JxLWFad3F4akY4aWt0Ml81U20xanZRVUpHYS13c25VUThaclJtbEYwS1JSQVgwLVZWc0FnQ19fWWVFMkF6TUtkUUs4YmJ6WXFhYS1RenN5Q1FCTzNPbnpwZ0UyOF81aUtpY2FQZk1QRC0wNEM0dHU2WkRjbFFaOFltdXBMMG9Xenl3?oc=5",
-       "source": "SO FOOT.com",
+       "key": "d3515124d274f30b",
+       "title": "DIRECT. Manchester City - PSG : une star parisienne sur le banc... Les compos probables et chaîne TV - Linternaute.com",
+       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAzTDVaN3FkeTFpNElrUFZicVVtVVlBLTQwN3ozUUVFSHVodXd6RDFMYklfSWJFOE4zVnVYdXRQVG9NMGV0enA5VENYR3RnSlJfVVpSeW5kNEhJdDQ5bllrZnFHWGk2NWozeHk0X1JhemlPcmoyTkl3?oc=5",
+       "source": "Linternaute.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "A CulturePSG article says a study supports PSG’s recent transfer-market policy, though the candidate summary gives no details of the study’s findings.",
+     "text": "Ousmane Dembélé has responded to criticism, though the available report does not specify what he said.",
      "sources": [
       {
-       "key": "13993eec1ab957de",
-       "title": "Mercato : La récente politique mercato du PSG validée par une étude - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUGo3bEQzX2g3d2FmQVFoWm9JLUlGMTY0YW9XQUxEaG8zbUNrRExaTUE3ajhwZ1VsOUlWWEpnLVdRdFprU1FrMTJ1bm9PdUpIdzI5YkNUZnpsa1I3cmhOTld2am9OMXpfUk55ZEFZLXJKdDBDUkpUTDJkT09uRW5mXzdXM3N4bGE4c3VlZlAyR2lSUHFrYXcxSmtCSXFXNXNtQVdmN3JB?oc=5",
-       "source": "CulturePSG",
+       "key": "b04ef3bfe775df20",
+       "title": "PSG : la réponse d'Ousmane Dembélé aux critiques - AllezParis",
+       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWWZnd0xwNEdRMEQ1TF9qSGZJT1puNkFKSWhjRkQ0Ylg4emp4cnpwNXdRQzZILUNvODNCbUVjMDdCTUpJZHNYMHRiQ2xQdFhTT0ZiOF9zT1A5X3dXZzJiUnZXZmEtNWVwMkpxWnJacm1PclFPMEcydGR6WVllS1hTdjdkVnBILU0?oc=5",
+       "source": "AllezParis",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s women’s XV is set to face the British and Irish Lions next summer, in the team’s first-ever meeting with them.",
+     "text": "Didier Deschamps has withdrawn his appeal in the case involving Daniel Riolo, so the appeal hearing will not take place.",
      "sources": [
       {
-       "key": "13f23ef5ccbd4759",
-       "title": "Le XV de France féminin sera le premier adversaire des Lions britanniques et irlandais l'été prochain - Rugbyrama",
-       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNWEt2V2ZWeW1PbDQtRUtZLW1qcEkxd2xubWppaVFjX1k4dnl2NldqS3plZHczRERIX2hBWTkyOXkzNV9uQ3NBVkpIUm9ZUGoySy1YZnIyMHU0VkxtODYxRGZoeWwxbXV1dTJ1N3MyZFFKYm1WN2ZZbUliYU1YUE5xOXUzOEhYUlVmV3dlYWJpOG5VUEZMVVZtQUtBUUdUNW1hU1hPYjVlTmlxcUFCbHVjdUx2WkI5NzBINmt4XzlvbGVvYTg3V2RUci1MZjRFNFZfNDFIakswYjlqd0hlV1lnd2hFYXJYbzNvMFFJX2hlN2g3c2daT3FqRW43QmxINzd1eUE?oc=5",
-       "source": "Rugbyrama",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A separate report examines why Manchester City’s alleged financial fraud case may not lead to equivalent sanctions for PSG; it is relevant context ahead of the clubs’ meeting.",
-     "sources": [
-      {
-       "key": "fdbd56b33a7a1337",
-       "title": "Fraude à un milliard de Manchester City: pourquoi le PSG ne risque pas les mêmes sanctions malgré les investissements du Qatar - RMC Sport",
-       "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxNLVpHcWxSS3A5ekNtSUhzWkw5WXB0ajNKM0h0TjR4TF9oeThuYUNLSlZ3Rnk3dkhiRkVlZzRhUkJaVW1KRGJUYU1xUlFxT1J1ZU1La3FldEg4LVg0bGs2RlZkdHNWTXo1aVhwbkN0cld0M2JwWFFrR0NOVFVuUDVMUnF3Nlc3THY2ek45WHp5OFBZZVJ6VVBzMUJhbmtkOVhmZDFjejlMTE9fenUycFFPeU90OGpMZjBnemp4TTJ4VkQ0NXNlX09qanh5ZDlKNXk0MkZ4X0xTeF9BTGVyQUhRSXlhM3hidHpQc1dWZ2xnVjBFVU1zcGE0U2FKWnE3OU1OaUFuQ0xsNzYwRzhaQVlTMjM1YThuajd4OVpzYTZsOGlwS1dSY3libHln?oc=5",
-       "source": "RMC Sport",
-       "via": "Google News"
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQX2dwSVpBaXNBSk02SkJtUjVzLVZwcGhzTU5TYjh2TkF4bGlEM1BvU1lvWUphNURkdEhONXZ2WTNsVEpPcENrLVBBTVAxNkpUN2tjOEZSSlRNemltMHd6NVJUNzFMSjJVUXIzbTFnVVM2V3BSaE05dWhzVUs2UVFyU0V1SVF5Q1hTeWFfVURkQ1hUX2JWUmxsb2c1X19FY2VjbkdYVER1c1R1aWlSM0M0bTdFM1A?oc=5",
-     "source": "CulturePSG",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-14T09:57:00+00:00",
-     "new": true,
-     "key": "a62902fd325201b1",
-     "title": "Manchester City–PSG: a history of their meetings",
-     "summary": "CulturePSG reviews the history of encounters between Manchester City and PSG ahead of their match."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUGo3bEQzX2g3d2FmQVFoWm9JLUlGMTY0YW9XQUxEaG8zbUNrRExaTUE3ajhwZ1VsOUlWWEpnLVdRdFprU1FrMTJ1bm9PdUpIdzI5YkNUZnpsa1I3cmhOTld2am9OMXpfUk55ZEFZLXJKdDBDUkpUTDJkT09uRW5mXzdXM3N4bGE4c3VlZlAyR2lSUHFrYXcxSmtCSXFXNXNtQVdmN3JB?oc=5",
-     "source": "CulturePSG",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-14T10:27:00+00:00",
-     "new": true,
-     "key": "13993eec1ab957de",
-     "title": "A study backs PSG’s recent transfer policy",
-     "summary": "CulturePSG reports that a study validates PSG’s recent transfer-market policy."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTDJMby1DWF9PN0oxSVg2cmxQbXNfMFVDX3U0Szh4MGs3eDd1OVUzZ3JxLWFad3F4akY4aWt0Ml81U20xanZRVUpHYS13c25VUThaclJtbEYwS1JSQVgwLVZWc0FnQ19fWWVFMkF6TUtkUUs4YmJ6WXFhYS1RenN5Q1FCTzNPbnpwZ0UyOF81aUtpY2FQZk1QRC0wNEM0dHU2WkRjbFFaOFltdXBMMG9Xenl3?oc=5",
-     "source": "SO FOOT.com",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-10-14T10:08:13+00:00",
-     "new": true,
-     "key": "e21cf8b438e188e4",
-     "title": "João Neves could start on the bench against Manchester City",
-     "summary": "SO FOOT raises the possibility of João Neves being left out of PSG’s starting lineup against Manchester City."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNWEt2V2ZWeW1PbDQtRUtZLW1qcEkxd2xubWppaVFjX1k4dnl2NldqS3plZHczRERIX2hBWTkyOXkzNV9uQ3NBVkpIUm9ZUGoySy1YZnIyMHU0VkxtODYxRGZoeWwxbXV1dTJ1N3MyZFFKYm1WN2ZZbUliYU1YUE5xOXUzOEhYUlVmV3dlYWJpOG5VUEZMVVZtQUtBUUdUNW1hU1hPYjVlTmlxcUFCbHVjdUx2WkI5NzBINmt4XzlvbGVvYTg3V2RUci1MZjRFNFZfNDFIakswYjlqd0hlV1lnd2hFYXJYbzNvMFFJX2hlN2g3c2daT3FqRW43QmxINzd1eUE?oc=5",
-     "source": "Rugbyrama",
-     "feed_name": "Team: XV de France rugby",
-     "via": "Google News",
-     "published": "2026-10-14T10:06:00+00:00",
-     "new": true,
-     "key": "13f23ef5ccbd4759",
-     "title": "France’s women to face the British and Irish Lions next summer",
-     "summary": "France’s women will be the first opponents of the British and Irish Lions next summer."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxNLVpHcWxSS3A5ekNtSUhzWkw5WXB0ajNKM0h0TjR4TF9oeThuYUNLSlZ3Rnk3dkhiRkVlZzRhUkJaVW1KRGJUYU1xUlFxT1J1ZU1La3FldEg4LVg0bGs2RlZkdHNWTXo1aVhwbkN0cld0M2JwWFFrR0NOVFVuUDVMUnF3Nlc3THY2ek45WHp5OFBZZVJ6VVBzMUJhbmtkOVhmZDFjejlMTE9fenUycFFPeU90OGpMZjBnemp4TTJ4VkQ0NXNlX09qanh5ZDlKNXk0MkZ4X0xTeF9BTGVyQUhRSXlhM3hidHpQc1dWZ2xnVjBFVU1zcGE0U2FKWnE3OU1OaUFuQ0xsNzYwRzhaQVlTMjM1YThuajd4OVpzYTZsOGlwS1dSY3libHln?oc=5",
-     "source": "RMC Sport",
-     "feed_name": "Team: PSG",
-     "via": "Google News",
-     "published": "2026-10-14T09:57:49+00:00",
-     "new": true,
-     "key": "fdbd56b33a7a1337",
-     "title": "Why PSG may avoid sanctions like Manchester City’s",
-     "summary": "RMC Sport examines why PSG may not face sanctions comparable to Manchester City’s in its financial case."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-10-14T11:01:39.688913+00:00",
-   "input_fingerprint": "sha256:53ceeb13a3426c27c20dec827c769ee1a415162e978e091198e34e6d2d0e66ab",
-   "last_success_at": "2026-10-14T11:01:39.688913+00:00",
-   "error": "Source check failed: CulturePSG",
-   "candidate_count": 295,
-   "new_count": 5
-  },
-  "finance": {
-   "briefing": [
-    {
-     "text": "Insurers are being pitched as a funding source for the AI data-centre boom: CoreWeave’s co-founder is targeting insurance capital for loans, bringing potential structured-finance opportunities—and concentration risks—into focus.",
-     "sources": [
-      {
-       "key": "9a4c62a3ef70c517",
-       "title": "CoreWeave targets ‘unlimited’ insurance money to fund AI build-out",
-       "url": "https://www.ft.com/content/4ffa1853-0e2c-424f-b941-88c6bcac5765?syn-25a6b1a6=1",
-       "source": "FT",
+       "key": "f32d4c8da1a957f9",
+       "title": "Le procès Riolo - Deschamps en appel n'aura pas lieu",
+       "url": "https://www.lequipe.fr/Football/Actualites/Le-proces-riolo-deschamps-en-appel-n-aura-pas-lieu/1725723#at_medium=RSS_feeds",
+       "source": "L'Équipe",
        "via": null
       }
      ]
     },
     {
-     "text": "ASML expects AI demand to outstrip supply for another two years, underscoring the persistence of capacity constraints across the semiconductor supply chain.",
+     "text": "FIFA plans to improve how it applies disciplinary rules following the Balogun case, according to L’Équipe.",
      "sources": [
       {
-       "key": "2839d8baa91823c8",
-       "title": "AI demand to exceed supply for 2 more years, says ASML - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYnVxcEhNdWRLQzZWT29PR2p5dnQ1Z0RfdU5OZU9YbDVHMkVTQzBHYWNnU0JKT3hhdGJqa080ZWNZVkZ0eHk2MzcxbFNXTGtuR0VzbVI2YU5vMHJkVVh0NzhJX2RKRVdtcTZLa2JZUGwyMGJZNGVmV1ROUUZKWFpoNHhVaTQ?oc=5",
-       "source": "Financial Times",
+       "key": "b49c291e59e320cf",
+       "title": "Embarrassée par « l'affaire Balogun », la FIFA prévoit « d'améliorer » l'application de son règlement disciplinaire",
+       "url": "https://www.lequipe.fr/Football/Actualites/Embarrassee-par-l-affaire-balogun-la-fifa-prevoit-d-ameliorer-l-application-de-son-reglement-disciplinaire/1725724#at_medium=RSS_feeds",
+       "source": "L'Équipe",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAzTDVaN3FkeTFpNElrUFZicVVtVVlBLTQwN3ozUUVFSHVodXd6RDFMYklfSWJFOE4zVnVYdXRQVG9NMGV0enA5VENYR3RnSlJfVVpSeW5kNEhJdDQ5bllrZnFHWGk2NWozeHk0X1JhemlPcmoyTkl3?oc=5",
+     "source": "Linternaute.com",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-14T15:32:56+00:00",
+     "new": true,
+     "key": "d3515124d274f30b",
+     "title": "Manchester City–PSG: probable lineups and broadcast details",
+     "summary": "A preview of Manchester City–PSG highlights a possible Parisian starter on the bench."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWWZnd0xwNEdRMEQ1TF9qSGZJT1puNkFKSWhjRkQ0Ylg4emp4cnpwNXdRQzZILUNvODNCbUVjMDdCTUpJZHNYMHRiQ2xQdFhTT0ZiOF9zT1A5X3dXZzJiUnZXZmEtNWVwMkpxWnJacm1PclFPMEcydGR6WVllS1hTdjdkVnBILU0?oc=5",
+     "source": "AllezParis",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-14T15:35:05+00:00",
+     "new": true,
+     "key": "b04ef3bfe775df20",
+     "title": "Dembélé responds to criticism",
+     "summary": "Ousmane Dembélé has responded to criticism directed at him."
+    },
+    {
+     "url": "https://www.lequipe.fr/Football/Actualites/Le-proces-riolo-deschamps-en-appel-n-aura-pas-lieu/1725723#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
+     "via": null,
+     "published": "2026-10-14T14:35:05+00:00",
+     "new": true,
+     "key": "f32d4c8da1a957f9",
+     "title": "Deschamps withdraws appeal in Riolo case",
+     "summary": "Didier Deschamps withdrew his appeal, meaning the hearing will not take place."
+    },
+    {
+     "url": "https://www.lequipe.fr/Football/Actualites/Embarrassee-par-l-affaire-balogun-la-fifa-prevoit-d-ameliorer-l-application-de-son-reglement-disciplinaire/1725724#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
+     "via": null,
+     "published": "2026-10-14T14:36:11+00:00",
+     "new": true,
+     "key": "b49c291e59e320cf",
+     "title": "FIFA plans disciplinary-rule changes after Balogun case",
+     "summary": "FIFA plans to improve application of its disciplinary rules following the Balogun case."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "degraded",
+   "source_checked_at": "2026-10-14T15:44:14.479565+00:00",
+   "input_fingerprint": "sha256:ccbdf985d680946f809a66287fb3c45a8d0aca8be2aa91e4f3b2b10b55bc665e",
+   "last_success_at": "2026-10-14T15:44:14.479565+00:00",
+   "error": "Source check failed: CulturePSG",
+   "candidate_count": 309,
+   "new_count": 4
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "US inflation accelerated to 3.7% as fuel costs rose amid the Iran war, pushing Treasury yields higher and strengthening expectations of a possible Fed rate hike; the dollar reached its highest level since May 2025.",
+     "sources": [
+      {
+       "key": "bb828c8e067e26a5",
+       "title": "US inflation jumps to 3.7% as Iran war drives up prices",
+       "url": "https://www.ft.com/content/c1e4c8b1-8fe0-414d-b52f-c74a6d927b3d?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      },
+      {
+       "key": "0331c9b49384d919",
+       "title": "Dollar Advances to Highest Since May 2025 on Fed Hike Views - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVUhMQy1nNnBUaUw4SDBHaTVxZHNEYWd5Tm9wQkxHRUMzOC1hbWNFSFNPQnpKaElveUtFRjJtdmRzOGFXTHFRVy1iWWVucmRoWWxPdzhONmg0MUtXUlFfUEsxbzY0dHVaNUcwZXdtbVZPZzlRV19XWWd0LU5KLXdPWnlqazEzQnloTUdzazM0YXItTElsc2laVmZZcHZQaERhUUhnamZVMnpnbjZpWG5V?oc=5",
+       "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Spain’s inflation is rising at its fastest pace in more than three years, a euro-area data point to watch for its implications for the ECB outlook.",
+     "text": "Bank of America missed profit estimates as trading weakness weighed on results, and it booked a $1.2 billion charge.",
      "sources": [
       {
-       "key": "bafecdf5f01e0c35",
-       "title": "Spain's inflation rises at fastest pace in more than three years - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTDhaREIyYllJX0htTGZZa1ByMUJOTTFqcTdOMnNoWkRHMS1IWGZ5d29hUUFsd2xHMHpRZy1tQnZ5czZrcHhGVTNBeGZtWXVuQ3dEVDBjU2ctMzdIRkRIMzFSU3NzWVljRHBhRk0wZlJ4dEJ5UUdMdTVLMHl5UWpVSU56eW9kQ1lFSEh6QlE1TGJnSjVGcFVuS2trMjlXMEtsMFpzRQ?oc=5",
+       "key": "36d0a46289fbd861",
+       "title": "BofA misses profit estimates on trading weakness, books $1.2 billion charge - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSERjcDdENDA2c180cFVhdW01WTVBaEdQdjRvejB6eGpkNklKUE8xM05mX1YybXZmMExUUXVkVDhMZUxGS0g5MWN0S3NtOHk1TjBISzBTWHB6VElZSjFjTHFUdU5sZXZtcHFxa0VybC1qR2Y2R0doZThnbGJoQVE5LVg5bHBDZmFvUm9ONGVUdUszODFvWV9aWlROdnE4NWs5R0FYZmJIVFAxaHZCQlJVRmtidS1IUlhVM1ZIM09MeEk?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Bank of America reported a third-quarter profit drop after the US Treasury announced a $1.2 billion penalty, a major compliance and earnings development for the bank.",
+     "text": "BlackRock reported sharply higher quarterly revenue and profits, a notable update for asset managers amid volatile markets.",
      "sources": [
       {
-       "key": "f39a16a4a873ad7c",
-       "title": "Bank of America posts third-quarter profit drop due to $1.2 billion Treasury fine",
-       "url": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
-       "source": "CNBC Markets",
-       "via": null
+       "key": "6b0b89b273d8c0a6",
+       "title": "BlackRock voit ses revenus et profits trimestriels flamber - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPQWdacFgxZnExWDlhaVpPaS1CLXRrMVRCZ2NwWGFreU1LY3RGOFJlNlpQSWN0YzVMVlhYQ2ZnTjdCazV3bGQ1WUpNUlVyQ1RIX2JJZmZkdTJxTTJtWm42UWJHVXlhUkFTaFprRmhGcTZwQ2o1bmtoUkhzb3ZvMzRZRFNBMUNjbE15djc1YlBNY3pVcE5VMndZd1VuejcxeTY4RHhOd1FOdFhGd0pfRk5mZGhhenZJaXRTcWliMFF3?oc=5",
+       "source": "Les Echos",
+       "via": "Google News"
       }
      ]
     },
     {
-     "text": "BlackRock drew in $205 billion and reached record assets, while expanding its presence in private capital after recent acquisitions.",
+     "text": "Eutelsat shares rose after Ukraine flagged possible restrictions on Starlink’s military-grade service, bringing satellite communications into focus in the war.",
      "sources": [
       {
-       "key": "6d70f2f9d081d433",
-       "title": "BlackRock pulls in $205bn to take assets to record high",
-       "url": "https://www.ft.com/content/63e3c39b-357f-4a87-adf0-090c60c929a7?syn-25a6b1a6=1",
-       "source": "FT Markets",
-       "via": null
+       "key": "362f5f7356917295",
+       "title": "Eutelsat shares jump as Ukraine flags curbs on Starlink military-grade service - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVWhWbm1PUEtEQWFtY2lHdjRoWHhiVDdhaHo5U2NoLWMwVXlydnFvYUowbHRHMXNyX2NKSlJQZWY4VTZ1emotSGNkVHZUaEc2OGRJZjhmWFFZbGtVWHBXbzdUdUdJcmRnN2xpOFIxSU5NRzRKZzVtOUNqVXFvNThadVZZa0E0Um5FTUJUMEdhYkV0cjNlemFXUnFrMUViTjljVW9hSGRObGkySjJLcXY5OXBoN3FpQ3ZH?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The IMF chief warned that US growth plans will not resolve the country’s debt problem; separately, Japan plans up to $21 billion of investment in two US chip factories.",
+     "sources": [
+      {
+       "key": "32ec3a42efb0206f",
+       "title": "Bessent’s Growth Plan Can’t Fix US Debt Problem, IMF Chief Warns - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYnBHbGQzVEJ1ZzRIbThkU3ZxamRZZk9qT09jUDBYMFVSTnVtQk9SX0dJa3dBMEZUY3o2bzY2VjlQZXZlRU9iZGx3SV8yX2lCd1ZIM2EwalRaakFuTVprOENhZDZxR3g5a2NoNFlXcW1IZmp2LW1wLVh3dzJEdGJKTzJCZGNfb1d1aUN0NmlTbkw0bXo3ZndGQXVmc3l0WmtadmZqeFVqYkxQMnowY2hGZmozWVo?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      },
+      {
+       "key": "5dda20ca578ad6e7",
+       "title": "Japan to invest up to $21 billion in two US chip factories to be run by GlobalFoundries - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZjM3SC1iaHFNLTdkS2N5U3JVS3lMR0p4Q1ZTclVOa2RDbFpzR2E3R2I5UlFlYWlsWHJfeGlKSEpockRseEpCTGpsNFAzanBPUkVVa3FiUFNVeVZ3S0daZ2JRWGc3Zy04RmFSbFRHeU5kRy1HaGJ2ZmViUHlfYk5CN0xYMEhXb250eE41clpvVHF1RDhIRWF4Z1p0NS1rQmVtbjFNc2FjMzVTaTlvM24weWtzS1V4M1RVdHpXWVNCU2REdDVkd2FwZWQ1V1kxZUZU?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/4ffa1853-0e2c-424f-b941-88c6bcac5765?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/c1e4c8b1-8fe0-414d-b52f-c74a6d927b3d?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-10-14T09:58:48+00:00",
+     "published": "2026-10-14T13:51:24+00:00",
      "new": true,
-     "key": "9a4c62a3ef70c517",
-     "title": "CoreWeave targets insurers to fund AI build-out",
-     "summary": "The Nvidia-backed cloud provider is seeking loans funded by insurers’ capital to finance its data-centre expansion."
+     "key": "bb828c8e067e26a5",
+     "title": "US inflation jumps to 3.7% as Iran war drives up prices",
+     "summary": "US inflation rose to 3.7% as higher fuel costs added pressure ahead of the midterm elections."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYnVxcEhNdWRLQzZWT29PR2p5dnQ1Z0RfdU5OZU9YbDVHMkVTQzBHYWNnU0JKT3hhdGJqa080ZWNZVkZ0eHk2MzcxbFNXTGtuR0VzbVI2YU5vMHJkVVh0NzhJX2RKRVdtcTZLa2JZUGwyMGJZNGVmV1ROUUZKWFpoNHhVaTQ?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-14T06:57:31+00:00",
-     "new": true,
-     "key": "2839d8baa91823c8",
-     "title": "ASML sees AI demand exceeding supply for two more years",
-     "summary": "ASML says demand driven by AI will exceed supply for another two years."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTDhaREIyYllJX0htTGZZa1ByMUJOTTFqcTdOMnNoWkRHMS1IWGZ5d29hUUFsd2xHMHpRZy1tQnZ5czZrcHhGVTNBeGZtWXVuQ3dEVDBjU2ctMzdIRkRIMzFSU3NzWVljRHBhRk0wZlJ4dEJ5UUdMdTVLMHl5UWpVSU56eW9kQ1lFSEh6QlE1TGJnSjVGcFVuS2trMjlXMEtsMFpzRQ?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-14T07:34:48+00:00",
-     "new": true,
-     "key": "bafecdf5f01e0c35",
-     "title": "Spain’s inflation rises at fastest pace in more than three years",
-     "summary": "Spanish inflation rose at its fastest pace in more than three years."
-    },
-    {
-     "url": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
-     "source": "CNBC Markets",
-     "feed_name": "CNBC Markets",
-     "via": null,
-     "published": "2026-10-14T11:00:33+00:00",
-     "new": true,
-     "key": "f39a16a4a873ad7c",
-     "title": "Bank of America posts third-quarter profit drop after $1.2 billion penalty",
-     "summary": "Bank of America’s third-quarter profit fell after the US Treasury announced a $1.2 billion penalty."
-    },
-    {
-     "url": "https://www.ft.com/content/63e3c39b-357f-4a87-adf0-090c60c929a7?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-10-14T10:33:32+00:00",
-     "new": true,
-     "key": "6d70f2f9d081d433",
-     "title": "BlackRock draws in $205 billion as assets hit record",
-     "summary": "BlackRock attracted $205 billion and expanded further into private capital after acquisitions."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQazViUHl2SmRiSUdDb0dNelo2Y2JjdkNLOG40Q0FpMnFBZ1JPNUNBc3pMeGlWbE5CQlUwcEVJWE93WmlJRkZTbzllQ1pfNV9HYXVHLUV2YVdkWW1TMWVJTElsNklvSzVYdTZPXzhIV0JHdHBCQzhhcklUSHhQaTFXUUNjNVlZTVZQNWd0UHM5LTlwRmpobUdiR1RiWDhTYUNTUGloY256S1l2blk0M0JZ?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVUhMQy1nNnBUaUw4SDBHaTVxZHNEYWd5Tm9wQkxHRUMzOC1hbWNFSFNPQnpKaElveUtFRjJtdmRzOGFXTHFRVy1iWWVucmRoWWxPdzhONmg0MUtXUlFfUEsxbzY0dHVaNUcwZXdtbVZPZzlRV19XWWd0LU5KLXdPWnlqazEzQnloTUdzazM0YXItTElsc2laVmZZcHZQaERhUUhnamZVMnpnbjZpWG5V?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-10-14T09:16:57+00:00",
+     "published": "2026-10-14T13:55:34+00:00",
      "new": true,
-     "key": "2f0bc9352cc4463c",
-     "title": "Fed official’s remarks temper rate-hike bets, supporting gold",
-     "summary": "Gold held steady as remarks from a Federal Reserve official tempered rate-hike bets."
+     "key": "0331c9b49384d919",
+     "title": "Dollar reaches highest level since May 2025 on Fed hike views",
+     "summary": "The dollar climbed to its highest level since May 2025 amid views that the Fed could raise rates."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNThmWTFtdHAtZG1oNzJxbzdqc1R6bjFiTmlmZF9Ha2MxRlVBZkoxOWt4N0dFU3h4dkFJWmNGVzFpQVR3QllvSDRfc2F1MGpxYUZ4LW1NSkMwcmREVS1mYVNCR3VlQXBzNWg2ajRGQ2l6OG5vYS1QWmxvTHVuU3ZkX1JvVTI2QzJQZXpvQ3JvQ2F3QVFKSGVuTlNGeEJtS3FDSWtRQ0lIbW5uSUEwdlhBbkhRZmtvQ0dUMWg3cktZNWM3Y0VZNTdHak8xVmVGdw?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSERjcDdENDA2c180cFVhdW01WTVBaEdQdjRvejB6eGpkNklKUE8xM05mX1YybXZmMExUUXVkVDhMZUxGS0g5MWN0S3NtOHk1TjBISzBTWHB6VElZSjFjTHFUdU5sZXZtcHFxa0VybC1qR2Y2R0doZThnbGJoQVE5LVg5bHBDZmFvUm9ONGVUdUszODFvWV9aWlROdnE4NWs5R0FYZmJIVFAxaHZCQlJVRmtidS1IUlhVM1ZIM09MeEk?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-10-14T06:46:00+00:00",
+     "published": "2026-10-14T14:31:48+00:00",
      "new": true,
-     "key": "83fc65b23e1aa347",
-     "title": "China solar giants cut another 40,000 jobs amid overcapacity",
-     "summary": "Chinese solar companies shed another 40,000 jobs last year as industry overcapacity persisted."
+     "key": "36d0a46289fbd861",
+     "title": "Bank of America misses profit estimates on trading weakness",
+     "summary": "Bank of America missed profit estimates amid weaker trading and booked a $1.2 billion charge."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQamEyS2JWLWg2WmRPY2w0cUdESjRGMjhUYWZ4RUtPN2NsUjF1Y2ZyS3h6LUh4Y1V3X3VvTkV4YS1GeGJwYkVQN3RmQlh0ZHdZdlZxOWh1MTNqZ1k1bTJfa09EWEZrZm9OMHJ1MUE4X2V5Zks0SzFQRzhqdElfRHFmSVprUzN3a2htNzNGMnJNZm5MS1RESnNmWUJwd25GQ2tQZjJfU3hPcVJsSnVOcUdBWkxpWVptUQ?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPQWdacFgxZnExWDlhaVpPaS1CLXRrMVRCZ2NwWGFreU1LY3RGOFJlNlpQSWN0YzVMVlhYQ2ZnTjdCazV3bGQ1WUpNUlVyQ1RIX2JJZmZkdTJxTTJtWm42UWJHVXlhUkFTaFprRmhGcTZwQ2o1bmtoUkhzb3ZvMzRZRFNBMUNjbE15djc1YlBNY3pVcE5VMndZd1VuejcxeTY4RHhOd1FOdFhGd0pfRk5mZGhhenZJaXRTcWliMFF3?oc=5",
+     "source": "Les Echos",
+     "feed_name": "Les Echos Finance",
+     "via": "Google News",
+     "published": "2026-10-14T15:02:27+00:00",
+     "new": true,
+     "key": "6b0b89b273d8c0a6",
+     "title": "BlackRock reports sharp rise in quarterly revenue and profits",
+     "summary": "BlackRock’s quarterly revenue and profits rose sharply."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVWhWbm1PUEtEQWFtY2lHdjRoWHhiVDdhaHo5U2NoLWMwVXlydnFvYUowbHRHMXNyX2NKSlJQZWY4VTZ1emotSGNkVHZUaEc2OGRJZjhmWFFZbGtVWHBXbzdUdUdJcmRnN2xpOFIxSU5NRzRKZzVtOUNqVXFvNThadVZZa0E0Um5FTUJUMEdhYkV0cjNlemFXUnFrMUViTjljVW9hSGRObGkySjJLcXY5OXBoN3FpQ3ZH?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-14T14:04:13+00:00",
+     "new": true,
+     "key": "362f5f7356917295",
+     "title": "Eutelsat shares jump as Ukraine flags possible Starlink curbs",
+     "summary": "Eutelsat shares rose after Ukraine flagged curbs on Starlink’s military-grade service."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYnBHbGQzVEJ1ZzRIbThkU3ZxamRZZk9qT09jUDBYMFVSTnVtQk9SX0dJa3dBMEZUY3o2bzY2VjlQZXZlRU9iZGx3SV8yX2lCd1ZIM2EwalRaakFuTVprOENhZDZxR3g5a2NoNFlXcW1IZmp2LW1wLVh3dzJEdGJKTzJCZGNfb1d1aUN0NmlTbkw0bXo3ZndGQXVmc3l0WmtadmZqeFVqYkxQMnowY2hGZmozWVo?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-10-14T09:20:19+00:00",
+     "published": "2026-10-14T13:45:31+00:00",
      "new": true,
-     "key": "e06da74817288123",
-     "title": "Rupee’s slide draws importers into currency intervention efforts",
-     "summary": "India’s weakening rupee is drawing importers into efforts to support the currency."
+     "key": "32ec3a42efb0206f",
+     "title": "IMF chief warns US growth plan cannot solve debt problem",
+     "summary": "The IMF chief warned that Bessent’s growth plan cannot fix the US debt problem."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZjM3SC1iaHFNLTdkS2N5U3JVS3lMR0p4Q1ZTclVOa2RDbFpzR2E3R2I5UlFlYWlsWHJfeGlKSEpockRseEpCTGpsNFAzanBPUkVVa3FiUFNVeVZ3S0daZ2JRWGc3Zy04RmFSbFRHeU5kRy1HaGJ2ZmViUHlfYk5CN0xYMEhXb250eE41clpvVHF1RDhIRWF4Z1p0NS1rQmVtbjFNc2FjMzVTaTlvM24weWtzS1V4M1RVdHpXWVNCU2REdDVkd2FwZWQ1V1kxZUZU?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-14T13:35:05+00:00",
+     "new": true,
+     "key": "5dda20ca578ad6e7",
+     "title": "Japan to invest up to $21 billion in US chip factories",
+     "summary": "Japan plans to invest up to $21 billion in two US chip factories operated by GlobalFoundries."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-14T11:01:39.688913+00:00",
-   "input_fingerprint": "sha256:96d31c05403d0ccac8d9173afe5328599307231e5f6fdaf4c71a64a1bf63ab01",
-   "last_success_at": "2026-10-14T11:01:39.688913+00:00",
+   "source_checked_at": "2026-10-14T15:44:14.479565+00:00",
+   "input_fingerprint": "sha256:27cab7cbf7d35a0d99f8f19b7984b531ba34ece90ccd5fee76ea9a150369e178",
+   "last_success_at": "2026-10-14T15:44:14.479565+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 590.6,
-     "change_pct": 0.27,
+     "price": 593.0,
+     "change_pct": 0.68,
      "currency": "CHF",
      "as_of": "2026-10-13T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1257,8 +1215,8 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 754.16,
-     "change_pct": -0.07,
+     "price": 751.38,
+     "change_pct": -0.44,
      "currency": "EUR",
      "as_of": "2026-10-13T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1268,8 +1226,8 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 106.74,
-     "change_pct": 0.07,
+     "price": 106.16,
+     "change_pct": -0.47,
      "currency": "EUR",
      "as_of": "2026-10-13T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1279,8 +1237,8 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 294.9,
-     "change_pct": -0.19,
+     "price": 293.8,
+     "change_pct": -0.56,
      "currency": "EUR",
      "as_of": "2026-10-13T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1290,8 +1248,8 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 314.85,
-     "change_pct": 0.33,
+     "price": 314.95,
+     "change_pct": 0.37,
      "currency": "EUR",
      "as_of": "2026-10-13T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1301,8 +1259,8 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 9.26,
-     "change_pct": -1.27,
+     "price": 9.22,
+     "change_pct": -1.73,
      "currency": "EUR",
      "as_of": "2026-10-13T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1312,8 +1270,8 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 56.19,
-     "change_pct": -0.41,
+     "price": 55.08,
+     "change_pct": -2.38,
      "currency": "EUR",
      "as_of": "2026-10-13T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1323,8 +1281,8 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 71.83,
-     "change_pct": -0.75,
+     "price": 71.37,
+     "change_pct": -1.38,
      "currency": "EUR",
      "as_of": "2026-10-13T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1334,8 +1292,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 83310.36,
-     "change_pct": 0.26,
+     "price": 81593.53,
+     "change_pct": -1.81,
      "currency": "USD",
      "as_of": "2026-10-14T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1345,8 +1303,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2501.36,
-     "change_pct": 0.19,
+     "price": 2432.11,
+     "change_pct": -2.58,
      "currency": "USD",
      "as_of": "2026-10-14T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1354,8 +1312,8 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 317,
-   "new_count": 8
+   "candidate_count": 332,
+   "new_count": 7
   },
   "media": {
    "briefing": "",
@@ -1429,24 +1387,14 @@
      "duration_s": null,
      "new": false,
      "key": "6203177e30693161"
-    },
-    {
-     "title": "Pakistan And Afghanistan At WAR: Is This The End Of The Taliban? | VisualPolitik EN",
-     "url": "https://www.youtube.com/watch?v=PxnJ65QbniE",
-     "source": "VisualPolitik EN",
-     "kind": "video",
-     "published": "2026-10-11T15:22:53+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "6704a55170c195f3"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-10-14T11:01:39.688913+00:00",
-   "candidate_count": 8,
+   "source_checked_at": "2026-10-14T15:44:14.479565+00:00",
+   "candidate_count": 7,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-10-14T11:00:00.000Z"
+ "scheduled_slot": "2026-10-14T11:00:00Z"
 }
