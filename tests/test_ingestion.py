@@ -293,6 +293,33 @@ class FeedBehaviorTests(unittest.TestCase):
         self.assertEqual(fetcher.feed_health[0]["status"], "fallback")
         self.assertEqual(items[0]["title"], "Fallback")
 
+    def test_culturepsg_403_uses_configured_french_google_news_fallback(self):
+        import yaml
+
+        root = Path(__file__).resolve().parents[1]
+        cfg = yaml.safe_load((root / "config.yml").read_text())
+        source = next(src for src in cfg["sport_sites"] if src["name"] == "CulturePSG")
+        fallback_url = ingestion.google_news_rss("site:culturepsg.com", "fr")
+        body = (
+            b"<rss><channel>"
+            b"<item><title>PSG wins</title><link>https://news.google.com/rss/articles/one</link>"
+            b"<source url='https://www.culturepsg.com'>CulturePSG</source></item>"
+            b"<item><title>PSG prepares</title><link>https://news.google.com/rss/articles/two</link>"
+            b"<source url='https://www.culturepsg.com'>CulturePSG</source></item>"
+            b"</channel></rss>"
+        )
+        fetcher = self._fetcher({
+            source["url"]: _Response(403, b"<html>Just a moment...</html>", {"Content-Type": "text/html"}),
+            fallback_url: _Response(200, body, {"Content-Type": "application/rss+xml"}),
+        })
+
+        items = fetch_all(fetcher, [source], "sport", now=NOW)
+
+        self.assertEqual([item["title"] for item in items], ["PSG wins", "PSG prepares"])
+        self.assertEqual([item["source"] for item in items], ["CulturePSG", "CulturePSG"])
+        self.assertEqual(fetcher.feed_health[0]["status"], "fallback")
+        self.assertEqual(fetcher.calls[1]["url"], fallback_url)
+
 
 if __name__ == "__main__":
     unittest.main()
