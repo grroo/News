@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261017T170124519280Z",
- "generated_at": "2026-10-17T17:01:24.519280+00:00",
- "generated_local": "Sat 17 Oct 2026, 19:01",
- "source_checked_at": "2026-10-17T17:01:24.519280+00:00",
+ "edition_id": "ed-20261018T050127762605Z",
+ "generated_at": "2026-10-18T05:01:27.762605+00:00",
+ "generated_local": "Sun 18 Oct 2026, 07:01",
+ "source_checked_at": "2026-10-18T05:01:27.762605+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-10-17T17:01:24.519280+00:00"
+  "run-2026-10-18T05:01:27.762605+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-10-17T17:01:24.519280+00:00"
+  "completed_at": "2026-10-18T05:01:27.762605+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 23,
+   "item_count": 28,
    "reason": null,
    "failure": null,
-   "parsed_count": 23,
+   "parsed_count": 28,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 112,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 112,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -417,10 +417,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 12,
+   "item_count": 11,
    "reason": null,
    "failure": null,
-   "parsed_count": 12,
+   "parsed_count": 11,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -524,74 +524,104 @@
   {
    "name": "Wiloo",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "VisualPolitik EN",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Preston Stewart",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Marques Brownlee",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "The Christo Files",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Making Sense with Sam Harris",
@@ -622,8 +652,8 @@
    "section": "media",
    "status": "unavailable",
    "item_count": 0,
-   "reason": "response exceeds 2000000 bytes",
-   "failure": "oversize",
+   "reason": "ConnectionError",
+   "failure": "transport",
    "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
@@ -684,9 +714,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002228,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.00215,
+  "est_month_usd": 0.19,
+  "forecast_month_usd": 0.19,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,60 +724,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8269,
+    "latency_ms": 8574,
     "unknown": false,
     "provider_request_ids": [
-     "resp_028496c582eceac8016ad3a9ed5ae887d0bb71b9290674b8b5"
+     "resp_00a149cec4adecb1016ad452bfb14087d0b2d68d7707ae6c32"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3522,
-    "output_tokens": 554,
-    "reasoning_tokens": 189
+    "cache_write_tokens": 3272,
+    "output_tokens": 680,
+    "reasoning_tokens": 173
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6764,
+    "latency_ms": 7965,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0ee487914e2719db016ad3a9f501c087d0a23e4a5b2987bb5d"
+     "resp_069e49af63aa1904016ad452c7b6a887d089c975cc35f75f63"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3702,
-    "output_tokens": 572,
-    "reasoning_tokens": 335
+    "cache_write_tokens": 3934,
+    "output_tokens": 597,
+    "reasoning_tokens": 228
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 9143,
+    "latency_ms": 4273,
     "unknown": false,
     "provider_request_ids": [
-     "resp_070dec70dc290483016ad3a9fbf95c87d0880337bbb661041a"
+     "resp_061e426bcee3a4b9016ad452cf9c8c87d0bae83c86dd994b71"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3479,
-    "output_tokens": 652,
-    "reasoning_tokens": 270
+    "cache_write_tokens": 3381,
+    "output_tokens": 374,
+    "reasoning_tokens": 0
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10703,
-  "output_tokens": 1778,
-  "reasoning_tokens": 794,
+  "cache_write_tokens": 10587,
+  "output_tokens": 1651,
+  "reasoning_tokens": 401,
   "recorded_month_to_date": {
    "month_utc": "2026-10",
-   "recorded_runs": 77,
-   "attempts": 231,
-   "known_cost_usd": 0.172094,
+   "recorded_runs": 78,
+   "attempts": 234,
+   "known_cost_usd": 0.174244,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,358 +786,404 @@
   "news": {
    "briefing": [
     {
-     "text": "A cost-of-living march in central Milan turned violent, with reports of stones thrown at police, clashes and injuries; disorder was also reported in Bologna and Turin.",
+     "text": "A major fire at Canada’s CFB Wainwright has caused deaths and injuries; officials say the situation remains active, with the cause still unknown.",
      "sources": [
       {
-       "key": "0e800b59bf84ca75",
-       "title": "A Milano lancio di sassi e cariche della polizia, feriti e fermati. Scontri a Torino e a Bologna - ANSA",
-       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPZFE4NkZoYVhGd2dRemRLWVBsd19hRE9Sd2puZ25ua1JfZEdvbEFzR25iTTc1Q0JVUjhZN055UUhrQk9MNXB6bzNnX0hxM1Jxb01IclFSZ0FnNmV4VHREVjc1ck5BYVhvOW82a1BTTTdhMDUzMHlCUmFydHplTzVJTWdWYk1GdkZJOWNwZHRqRmFDdU5xRlE3dUJjT3BKUnR1M2YzaVdQSjRhb096bzJOdW9UV3Z2V0xuUmgzVWJnUDBGY29rTmFhUHJFajcydUlpc1phVmxxRGczZ0lfTkh0QjBwcGgwSXhSQVBlNnIybjB3V0FpSF9KaHNtNDZWVDRYU1gxWW1MRGXSAY4CQVVfeXFMUHZkNXNFZV9QYl9XQ2EtTkdlSmdsRUY0RUNacnoyQVhNcWxiMnBJQkxjSVluZE9ZSHpDUjFZSzFrelp5SjVwVXhJbk52WFVlQURjNU9YUkZtaXpLNGtrVVBoeHFFZnpQVElWX3NCdVpQNHpJSzVGZjVWcldXQmJiWnFfYmludlFXcE8tUUFnRnpoTi11M2t1YWo4SWJweE1NOHg0YXlORVBEX0ZUNW5NVlN0TGUtRGFFMEFPa0dUY01FbFFYSjBtVWVLMUZ0R0dOUTJjaGJfSWRnODJoRnlpMnFOU05PNEFOX1h4b01KV1YyQXV1M2M5d2RvYzJXRk5fbV92bzRNdGdnaHRBRnNn?oc=5",
-       "source": "ANSA",
+       "key": "4d25b69222337049",
+       "title": "Deaths confirmed after 'serious incident,' fire at Canada military base in Alberta - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOU2FXR2gxVGRZLXlocTZDQnduRHpvT3JVUHotdTZsTmczb1B4TDE0OWktQmlDNm1WcGdqcEE2Zm9HTmtpN19Pb29YNnVyVHI4d1hXUG1lb0U2ejg2cDF4VGE5Wng0TGdrVDRaSU85WnNQVmw2WmpOaHhMNlpnTFo0cC1tRkRjTDZJVllKdDJIaUhmM1laR01KS2FrQTRKb1lpQThJZlRIeVd0OVZQUnlFX2tnamx6bHladV95MWZHNUVsSldx?oc=5",
+       "source": "Reuters",
        "via": "Google News"
       },
       {
-       "key": "0170c38e433b10ca",
-       "title": "Corteo a Milano, lancio di sassi contro la polizia. Alcuni feriti e fermati. Disordini a Bologna - Il Sole 24 ORE",
-       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPRXpaY3JON1hHOUNFOFRtVl81OFppdWc3WXFvNml2aHhvQ0hmUDRnRjdGaWpxbklZTnZ0YXNtSWJma1JodFVtOTM3NEdxSWFXV3ZuVDhXalVrWlJnZWhfMjhlLXJaUmVPVkt6ZFRHTC1xN2VneGJFWl85cE5fSHlpSFlPX0x4QUdBUVE?oc=5",
-       "source": "Il Sole 24 ORE",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Large demonstrations across France saw police use tear gas in Paris and protesters storm a town hall in Marseille, according to reports.",
-     "sources": [
-      {
-       "key": "c03750b5a9f88d55",
-       "title": "Police clash with protesters as tens of thousands take to streets across France",
-       "url": "https://www.theguardian.com/world/2026/oct/17/protests-france-high-prices-social-security-gilets-jaunes",
+       "key": "e55e7fdfe86dd710",
+       "title": "‘Serious incident’ at Alberta military base causes deaths and injuries, Canada officials say",
+       "url": "https://www.theguardian.com/world/2026/oct/18/serious-incident-alberta-military-base-deaths-injuries-canada-carney-cfb-wainwright",
        "source": "The Guardian World",
        "via": null
       }
      ]
     },
     {
-     "text": "A reported rift between Trump and Zelenskiy could jeopardise vital US support for Kyiv, adding uncertainty to Ukraine’s wartime backing.",
+     "text": "The Trump administration has paused new Russia sanctions, with Secretary of State Rubio saying the president may take up to 60 days to decide whether to proceed.",
      "sources": [
       {
-       "key": "3a0462414bb204ec",
-       "title": "Trump-Zelenskiy rift threatens vital support for Kyiv - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOS1zSXlGaS1sbWV1RHJiN2s1S1o5WWQxY01nZmh0ZVA2ZHo3cEZ0NUhERFZFT2kzT0FPQXgxVmFqNzhlNUNtNFB1WkFENHZEU2xKdWRuYmt5ZUhTcUJrY1ktbXEtSU1mOGUyZkxYOVF6Y1hqYkFZSGJuZ2s4MWZ1NmRZY09kQThIZXlndE1GRFlIVkNvTWFzbUxhaDJaNEE?oc=5",
+       "key": "dd0c1a41f9830fed",
+       "title": "Rubio says Trump to take up to 60 days to weigh Russia sanctions - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRlRkQlBQYXFvck1VQUYxcVpwM2dEVDMwQThIY3ZHRldBd0M0dmV5NXFnZlBXMnpuUnozQlhLbkg4ZjZCT3kzVW5mcnl3RVEwUXRpdUJsZGViRlE1MFdJbHZWZ3pRTXNOUDQtOTRsQU5nSzd4a3d5Z3c2dTkzZWZSNlZsbXZBamFSMS1qVEVnaHc2MTZJUHZ4YU1zS0hfNVM4eVE?oc=5",
        "source": "Reuters",
+       "via": "Google News"
+      },
+      {
+       "key": "f4ea3e884b029222",
+       "title": "Trump exempte la Russie de nouvelles sanctions, alors que Moscou cible les infrastructures énergétiques ukrainiennes",
+       "url": "https://www.lemonde.fr/international/article/2026/10/18/trump-exempte-la-russie-de-nouvelles-sanctions-alors-que-moscou-cible-les-infrastructures-energetiques-ukrainiennes_6796993_3210.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "An FT report flags strains in America’s AI infrastructure boom, a potentially important shift for investment in data centres and related technology.",
+     "sources": [
+      {
+       "key": "8858354d6cd22ac2",
+       "title": "America’s $10tn AI infrastructure boom is starting to fray - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQUlwOUY2SXQzRy00SDBweWtyS0hkQ3I1ak5XNlBnNXlPbmktcDJCZ2N4MGdlVGhScmRoWGZRZWl1aGlpVjIxZVVENVB2blExdnpENzNrZkk1Z2xPcXlOakFxYVBXYlE5NkRWamdqZU9nZkg1SF9PNTJkXzFwQUJTdUViT0c?oc=5",
+       "source": "Financial Times",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Kenya confirmed four further Ebola cases, bringing the reported total to seven.",
+     "text": "An Austrian MEP is pressing for EU action against sexually explicit deepfakes, framing them as a threat to women and democratic life.",
      "sources": [
       {
-       "key": "7849cd8aee86d863",
-       "title": "Kenya confirms four new Ebola cases, bringing total number to seven - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUTZzMGJpaXBieHFQeHRDYkRPM1BGLUtyVWRUd1UxVDE1TF92ZDZHMXF6WjB0YmhLNlpuZkhhVTN4TGc5MVBCaS1SSmNzTnk1YXhhYTE4NWlmLXU0ejhDUTFtOG9ROTF5Qkl3LUw2bkRnT1p3VlJWbEdfRVZlSGF2dC1RRk9semdrMWtBTEZiUE1kSkFqV2M2R3ByWmZEVHRyOHZiU1FYTW1ZbEdBTWtJZzhhQ19RTmt6XzFaWDBLTE9tZHRrUW5Mb21WMDByaXJm?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
+       "key": "32e0abd3c996322e",
+       "title": "‘I felt disgusted’: MEP speaks out over nude deepfakes and urges EU action",
+       "url": "https://www.theguardian.com/society/2026/oct/18/mep-lena-schilling-nude-deepfakes-eu-action",
+       "source": "The Guardian World",
+       "via": null
       }
      ]
     },
     {
-     "text": "Albanian police fired rubber bullets amid continuing student protests, Reuters reports.",
+     "text": "Large demonstrations in France drew sharply different attendance estimates from organisers and the interior minister, highlighting the scale of the mobilisation.",
      "sources": [
       {
-       "key": "bff5a0e137e89b91",
-       "title": "Albanian police fire rubber bullets as student protests rage - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVlJCekoweVlrYktkQmJZZ2V4aFFnRFpHdnRBMlYzZDlJS0xFS1JWQVMtOVNvbURNdUNHU09BTnBkNjBwdi0yaFVNR2Nqbm9sTUxHTFZQQk1PWkU2ZzdVeC04UVdLb2lJNFoxWHVsSWJJQTlrNXBYZ0NfNWJ4YTdENjlBYmwtdDlOMHhMOWtJY2NxUDJHRlJ1emtpa2h4UmFwZlBOQ0dEQlBORTREQ0E?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
+       "key": "881cbb59c2d6e213",
+       "title": "Mobilisation du 17 octobre : des manifestations d’ampleur conclues dans le chaos",
+       "url": "https://www.lemonde.fr/societe/article/2026/10/18/mobilisation-du-17-octobre-des-manifestations-d-ampleur-conclues-dans-le-chaos_6797034_3224.html",
+       "source": "Le Monde",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPRXpaY3JON1hHOUNFOFRtVl81OFppdWc3WXFvNml2aHhvQ0hmUDRnRjdGaWpxbklZTnZ0YXNtSWJma1JodFVtOTM3NEdxSWFXV3ZuVDhXalVrWlJnZWhfMjhlLXJaUmVPVkt6ZFRHTC1xN2VneGJFWl85cE5fSHlpSFlPX0x4QUdBUVE?oc=5",
-     "source": "Il Sole 24 ORE",
-     "feed_name": "Topic: Milano",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOU2FXR2gxVGRZLXlocTZDQnduRHpvT3JVUHotdTZsTmczb1B4TDE0OWktQmlDNm1WcGdqcEE2Zm9HTmtpN19Pb29YNnVyVHI4d1hXUG1lb0U2ejg2cDF4VGE5Wng0TGdrVDRaSU85WnNQVmw2WmpOaHhMNlpnTFo0cC1tRkRjTDZJVllKdDJIaUhmM1laR01KS2FrQTRKb1lpQThJZlRIeVd0OVZQUnlFX2tnamx6bHladV95MWZHNUVsSldx?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-10-17T16:07:30+00:00",
+     "published": "2026-10-18T02:13:00+00:00",
      "new": true,
-     "key": "0170c38e433b10ca",
-     "title": "Clashes at cost-of-living march in Milan and disorder in Bologna",
-     "summary": "A Milan march saw stones thrown at police, with injuries and arrests reported; disorder also occurred in Bologna."
+     "key": "4d25b69222337049",
+     "title": "Deaths confirmed after serious incident and fire at Canadian military base",
+     "summary": "Deaths have been confirmed after a major fire at CFB Wainwright in Alberta, where officials describe an active and delicate situation."
     },
     {
-     "url": "https://www.theguardian.com/world/2026/oct/17/protests-france-high-prices-social-security-gilets-jaunes",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRlRkQlBQYXFvck1VQUYxcVpwM2dEVDMwQThIY3ZHRldBd0M0dmV5NXFnZlBXMnpuUnozQlhLbkg4ZjZCT3kzVW5mcnl3RVEwUXRpdUJsZGViRlE1MFdJbHZWZ3pRTXNOUDQtOTRsQU5nSzd4a3d5Z3c2dTkzZWZSNlZsbXZBamFSMS1qVEVnaHc2MTZJUHZ4YU1zS0hfNVM4eVE?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-18T03:38:00+00:00",
+     "new": true,
+     "key": "dd0c1a41f9830fed",
+     "title": "Rubio says Trump may take up to 60 days to weigh Russia sanctions",
+     "summary": "Secretary of State Marco Rubio said President Trump could take up to 60 days to decide on new Russia sanctions."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQUlwOUY2SXQzRy00SDBweWtyS0hkQ3I1ak5XNlBnNXlPbmktcDJCZ2N4MGdlVGhScmRoWGZRZWl1aGlpVjIxZVVENVB2blExdnpENzNrZkk1Z2xPcXlOakFxYVBXYlE5NkRWamdqZU9nZkg1SF9PNTJkXzFwQUJTdUViT0c?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-10-18T04:00:18+00:00",
+     "new": true,
+     "key": "8858354d6cd22ac2",
+     "title": "America’s AI infrastructure boom is starting to fray",
+     "summary": "The Financial Times reports signs of strain in the investment boom behind US AI infrastructure."
+    },
+    {
+     "url": "https://www.theguardian.com/society/2026/oct/18/mep-lena-schilling-nude-deepfakes-eu-action",
      "source": "The Guardian World",
      "feed_name": "The Guardian World",
      "via": null,
-     "published": "2026-10-17T16:55:57+00:00",
+     "published": "2026-10-18T04:00:50+00:00",
      "new": true,
-     "key": "c03750b5a9f88d55",
-     "title": "Police clash with protesters during demonstrations across France",
-     "summary": "Police used tear gas in Paris and protesters stormed a town hall in Marseille during demonstrations across France."
+     "key": "32e0abd3c996322e",
+     "title": "MEP urges EU action over nude deepfakes",
+     "summary": "Austrian MEP Lena Schilling has urged action against nude deepfakes, calling them digital violence and a threat to democracy."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOS1zSXlGaS1sbWV1RHJiN2s1S1o5WWQxY01nZmh0ZVA2ZHo3cEZ0NUhERFZFT2kzT0FPQXgxVmFqNzhlNUNtNFB1WkFENHZEU2xKdWRuYmt5ZUhTcUJrY1ktbXEtSU1mOGUyZkxYOVF6Y1hqYkFZSGJuZ2s4MWZ1NmRZY09kQThIZXlndE1GRFlIVkNvTWFzbUxhaDJaNEE?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-17T16:17:52+00:00",
+     "url": "https://www.lemonde.fr/societe/article/2026/10/18/mobilisation-du-17-octobre-des-manifestations-d-ampleur-conclues-dans-le-chaos_6797034_3224.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-10-18T04:20:45+00:00",
      "new": true,
-     "key": "3a0462414bb204ec",
-     "title": "Trump-Zelenskiy rift threatens vital support for Kyiv",
-     "summary": "Reuters reports that a rift between Trump and Zelenskiy threatens vital support for Kyiv."
+     "key": "881cbb59c2d6e213",
+     "title": "Large demonstrations in France end amid disorder",
+     "summary": "Saturday’s demonstrations drew estimates of 800,000 participants from organisers and 550,000 from the interior minister."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUTZzMGJpaXBieHFQeHRDYkRPM1BGLUtyVWRUd1UxVDE1TF92ZDZHMXF6WjB0YmhLNlpuZkhhVTN4TGc5MVBCaS1SSmNzTnk1YXhhYTE4NWlmLXU0ejhDUTFtOG9ROTF5Qkl3LUw2bkRnT1p3VlJWbEdfRVZlSGF2dC1RRk9semdrMWtBTEZiUE1kSkFqV2M2R3ByWmZEVHRyOHZiU1FYTW1ZbEdBTWtJZzhhQ19RTmt6XzFaWDBLTE9tZHRrUW5Mb21WMDByaXJm?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-17T15:21:43+00:00",
+     "url": "https://www.lemonde.fr/planete/article/2026/10/18/au-bresil-la-perspective-d-un-retour-de-l-extreme-droite-fait-craindre-de-nouveaux-reculs-pour-l-environnement_6796998_3244.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-10-18T04:05:10+00:00",
      "new": true,
-     "key": "7849cd8aee86d863",
-     "title": "Kenya confirms four new Ebola cases",
-     "summary": "Kenya confirmed four new Ebola cases, bringing the reported total to seven."
+     "key": "4401941036344be5",
+     "title": "Brazil’s far-right prospect raises environmental concerns",
+     "summary": "A potential return of the far right in Brazil has raised fears of environmental rollbacks under Flavio Bolsonaro."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVlJCekoweVlrYktkQmJZZ2V4aFFnRFpHdnRBMlYzZDlJS0xFS1JWQVMtOVNvbURNdUNHU09BTnBkNjBwdi0yaFVNR2Nqbm9sTUxHTFZQQk1PWkU2ZzdVeC04UVdLb2lJNFoxWHVsSWJJQTlrNXBYZ0NfNWJ4YTdENjlBYmwtdDlOMHhMOWtJY2NxUDJHRlJ1emtpa2h4UmFwZlBOQ0dEQlBORTREQ0E?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPdXZPcUFuVklWcVVOUmtlNXBSQVlKeWJ6dlJMOEJZU3prU3owdG10YVljN0U3VEU4czZmV0U4akFvZldmLTFuNHgyMkYxTERzeEpBVy1KcFJ1ZGV0TGhOLUVRZXRlWDlIaGV6S3NFQWdvUFQwcmVXajRRYkljY2FyVlBkd1k4TmJWdGcwMFJyZk5tcXhqTTdj?oc=5",
+     "source": "Yahoo Finance",
+     "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-10-17T15:42:29+00:00",
+     "published": "2026-10-18T02:18:00+00:00",
      "new": true,
-     "key": "bff5a0e137e89b91",
-     "title": "Albanian police fire rubber bullets as student protests rage",
-     "summary": "Police fired rubber bullets as student protests continued in Albania."
+     "key": "1ae481203483f1f0",
+     "title": "Kroger plans 3,000 corporate job cuts as it leans on AI",
+     "summary": "Kroger plans 3,000 corporate job cuts, with its new CEO citing AI as a way to reduce duplicated work."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-17T17:01:24.519280+00:00",
-   "input_fingerprint": "sha256:e6ff485555a55a7962475b744a060b7027b77cb32ca45f8f266b21f20daf20f9",
-   "last_success_at": "2026-10-17T17:01:24.519280+00:00",
-   "candidate_count": 427,
-   "new_count": 5
+   "source_checked_at": "2026-10-18T05:01:27.762605+00:00",
+   "input_fingerprint": "sha256:cef7d65fd2b299650bee9bfbae378a9f5c9a73155d002bd8a89b672713ad188a",
+   "last_success_at": "2026-10-18T05:01:27.762605+00:00",
+   "candidate_count": 341,
+   "new_count": 7
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG drew 1-1 away to Strasbourg; CulturePSG has the match report and Zabarnyi’s goal video.",
+     "text": "PSG beat Strasbourg 3-1, with CulturePSG’s player-by-player review offering the clearest read on the performance.",
      "sources": [
       {
-       "key": "1836f7e27987a646",
-       "title": "Match : Strasbourg/PSG (1-1), le but de Zabarnyi en video - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQjlpYXh1NFVTSVh3Zy1PcWNKQkVEN2tfRjFGVDBONldSTUJ0OThxRWt4bFZzZ1gzMy0zX245YTRCU0xEb2VCU0RGYmUzOVo1djVncjZUYVB6X1Z6MV9XMGNpemtHNURqTmd5aUtWd0NFZS03REdRbmpxRFJVb21CUWFpMUxVZ2dXaHdXZzVkOXR4V3NFUjJVQQ?oc=5",
+       "key": "53b595d26a443579",
+       "title": "Match : Strasbourg/PSG (1-3), les performances individuelles - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNejRnVThLVEdaOEFScHhBWnpMT0tudXV6NU9Ca0RDV3ZwMm03REh0S0U5SmlWSS14Z3kwZUI2ZDFQT09CMjVpcjFFUXVHVVp6bmtSOXpMMnJLN2tfclJaazNKYjFzSDgwejc1MG9OWF9tRUU3dzBLMlVrN2F0b0F2MXF0VFVOSUNILWhlb2dEUzU0cUk1MEVmQQ?oc=5",
        "source": "CulturePSG",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s rugby squad may be without Thomas Ramos and Julien Marchand against Fiji, with reports citing fresh injury concerns.",
+     "text": "Ahead of the Barcelona clash, Nuno Mendes and Akliouche were reported injured; the available report gives no further detail on their status.",
      "sources": [
       {
-       "key": "2f7164e5f6155688",
-       "title": "Julien Marchand et Thomas Ramos vers un forfait contre les Fidji avant la liste de Fabien Galthié - Quinze Ovalie",
-       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZTE0SFdYZXVnWjNWTFdmZnBGS2FDNGJlLUY5XzdzRldiSEJ0QkNKanpRY3NNLVVqSkFfVERjS1RJTVNQeG04MEJmSlNqSUVQNmtEY3Fwa1hVZ3UxV2w1TS15dlg1Q0k3dDJEcjRtZ1pMUUFVbnFLdlAyZHNzZDhBbURjTDZCYl9vc2c?oc=5",
-       "source": "Quinze Ovalie",
+       "key": "734dd34013e73e97",
+       "title": "Club : Nuno Mendes et Akliouche touchés juste avant PSG/Barça - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdDhaaTlWN2ZFeU1PSXFWY01jaEhycERGWkhDQTltbk01a1Jyc1FUMllUZTFpSlY2SVFySVdGZ3pKQ19GQnQ4aExqTmNUdnIwSnI4NDdqTkVWdDZtejlKbHppTHBMWWhBR1JUN25XSUszYXQ2ZHBlaThpMFViV0JfczVLOVpwVnNNb3hOeVhlX2FsS2c0?oc=5",
+       "source": "CulturePSG",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "FURIA reached the Thunderpick World Championship final and are in position to defend their title.",
+     "text": "PSG’s women lost 4-0 to OL, a heavy defeat CulturePSG says showed the side was below the required level.",
      "sources": [
       {
-       "key": "6464941bd8ba4f60",
-       "title": "FURIA ease past Aurora into TWC final",
-       "url": "https://www.hltv.org/news/45743/furia-ease-past-aurora-into-twc-final",
-       "source": "HLTV",
-       "via": null
+       "key": "3c144bb7c6342cf2",
+       "title": "Féminines : PSG/OL (0-4 APL), le PSG pas au niveau requis - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONldiR1ZEYTFCc0ZtV25ndDNyajhyOFVzcm9ZZ0pLOWl4aEFUNHhrWTNScGEwMmctUFNab01maVhzbTlLUFN2dVlIbjY2TzVYWXQ1SXlyS3NiVlFITlUtQXpMdUtzZDlSY1huYVIySzRuZHo1UWlBalVCd3l0dXd4emJPb3BkSklVN2R6NlFVZw?oc=5",
+       "source": "CulturePSG",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Team Vitality’s Paris headquarters was looted during riots, with CS2 trophies and equipment reported stolen.",
+     "sources": [
+      {
+       "key": "6181d559e8e0a235",
+       "title": "Team Vitality's V.Hive headquarters looted during Paris riots, CS2 trophies and equipment stolen - GosuGamers",
+       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPbXpWbjV6N19nYmNYVDJja2w1X2FwV0pBVklXbEtUMDkzRDlBajVBckFSUm1LUnR4U3dLelY2bVRmVW50Ti1YRFZOWEstajZ3SzRTMS1KUVl0SGltNndvOFE1UDRidG5feTRFWEhBXzVETXRjRmlNNC16U3RTcEVQUUNjbXNpcVZLOTRseDdMWnJwbHpHRW5xWXFuanJzTFkxdU5DQzdSbHBVZWlTVGRTYUY1UjdoQkhOVllheXEwd2JNUGNOd0hhVFRqZVJTMUF5U2lQVVI2b1EycmFidjI5Vg?oc=5",
+       "source": "GosuGamers",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Two further France rugby XV withdrawals may be looming, though the report does not identify the players in its summary.",
+     "sources": [
+      {
+       "key": "9ef2b14c91849585",
+       "title": "XV de France : deux nouveaux forfaits à l’horizon des Bleus ? - Rugby Scope",
+       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSTkzeDB1TFZRRGlzMVdaUkdtT0ZLM0NVLS1ZZ3RjamxQZ0dmMGNFMXNlWDM4RXJtZHIxTk5DVDNMdlFJWl90VlhOZmZ2MGpKNzJ5WkxHanRSWUl2YVZObFJpMWw2VndvdWdDeXpYTlpsSEozUnpNb1VyQkloWElQWkNSdnBWSC1DMnZF?oc=5",
+       "source": "Rugby Scope",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQjlpYXh1NFVTSVh3Zy1PcWNKQkVEN2tfRjFGVDBONldSTUJ0OThxRWt4bFZzZ1gzMy0zX245YTRCU0xEb2VCU0RGYmUzOVo1djVncjZUYVB6X1Z6MV9XMGNpemtHNURqTmd5aUtWd0NFZS03REdRbmpxRFJVb21CUWFpMUxVZ2dXaHdXZzVkOXR4V3NFUjJVQQ?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNejRnVThLVEdaOEFScHhBWnpMT0tudXV6NU9Ca0RDV3ZwMm03REh0S0U5SmlWSS14Z3kwZUI2ZDFQT09CMjVpcjFFUXVHVVp6bmtSOXpMMnJLN2tfclJaazNKYjFzSDgwejc1MG9OWF9tRUU3dzBLMlVrN2F0b0F2MXF0VFVOSUNILWhlb2dEUzU0cUk1MEVmQQ?oc=5",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-17T16:55:00+00:00",
+     "published": "2026-10-17T21:50:00+00:00",
      "new": true,
-     "key": "1836f7e27987a646",
-     "title": "Strasbourg 1-1 PSG: Zabarnyi’s goal",
-     "summary": "PSG drew 1-1 with Strasbourg, with CulturePSG publishing a video of Zabarnyi’s goal."
+     "key": "53b595d26a443579",
+     "title": "Strasbourg 1-3 PSG: individual performances",
+     "summary": "CulturePSG assesses PSG’s players after their 3-1 win away to Strasbourg."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdW1NS1d0NlRKeldVSzR5bkZSMVhTY2p0VzRuWGppSHBjalRLb2tOSEFHdFlYbGI5MlVBaFhORGhseFZ1UVlGdWRGZVpkZDh4Yk5wVGxkQ2ZRTEVWSHRUc1JLZGlwZ05GMHBpR3UtSmxhajNIaG5fWGJ5MGxrTVBad0Q2Z1FSOS1pMl84aFpUbkFmRmRJbk14TWhwd2F5WWNvNlVaVmp0aUlmaGNkcmRZ?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdDhaaTlWN2ZFeU1PSXFWY01jaEhycERGWkhDQTltbk01a1Jyc1FUMllUZTFpSlY2SVFySVdGZ3pKQ19GQnQ4aExqTmNUdnIwSnI4NDdqTkVWdDZtejlKbHppTHBMWWhBR1JUN25XSUszYXQ2ZHBlaThpMFViV0JfczVLOVpwVnNNb3hOeVhlX2FsS2c0?oc=5",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-17T14:38:00+00:00",
+     "published": "2026-10-17T18:14:00+00:00",
      "new": true,
-     "key": "7cb7b753c8d64ffc",
-     "title": "Match : Strasbourg/PSG, le live - CulturePSG",
-     "summary": "Match : Strasbourg/PSG, le live CulturePSG"
+     "key": "734dd34013e73e97",
+     "title": "Nuno Mendes and Akliouche injured ahead of PSG–Barcelona",
+     "summary": "Both players were reported injured just before PSG’s clash with Barcelona."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZTE0SFdYZXVnWjNWTFdmZnBGS2FDNGJlLUY5XzdzRldiSEJ0QkNKanpRY3NNLVVqSkFfVERjS1RJTVNQeG04MEJmSlNqSUVQNmtEY3Fwa1hVZ3UxV2w1TS15dlg1Q0k3dDJEcjRtZ1pMUUFVbnFLdlAyZHNzZDhBbURjTDZCYl9vc2c?oc=5",
-     "source": "Quinze Ovalie",
+     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONldiR1ZEYTFCc0ZtV25ndDNyajhyOFVzcm9ZZ0pLOWl4aEFUNHhrWTNScGEwMmctUFNab01maVhzbTlLUFN2dVlIbjY2TzVYWXQ1SXlyS3NiVlFITlUtQXpMdUtzZDlSY1huYVIySzRuZHo1UWlBalVCd3l0dXd4emJPb3BkSklVN2R6NlFVZw?oc=5",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": "Google News",
+     "published": "2026-10-17T21:02:00+00:00",
+     "new": true,
+     "key": "3c144bb7c6342cf2",
+     "title": "PSG women fall 4-0 to OL",
+     "summary": "CulturePSG says PSG’s women were below the required level in a 4-0 defeat to OL."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPbXpWbjV6N19nYmNYVDJja2w1X2FwV0pBVklXbEtUMDkzRDlBajVBckFSUm1LUnR4U3dLelY2bVRmVW50Ti1YRFZOWEstajZ3SzRTMS1KUVl0SGltNndvOFE1UDRidG5feTRFWEhBXzVETXRjRmlNNC16U3RTcEVQUUNjbXNpcVZLOTRseDdMWnJwbHpHRW5xWXFuanJzTFkxdU5DQzdSbHBVZWlTVGRTYUY1UjdoQkhOVllheXEwd2JNUGNOd0hhVFRqZVJTMUF5U2lQVVI2b1EycmFidjI5Vg?oc=5",
+     "source": "GosuGamers",
+     "feed_name": "Team: Team Vitality Counter-Strike",
+     "via": "Google News",
+     "published": "2026-10-18T04:49:40+00:00",
+     "new": true,
+     "key": "6181d559e8e0a235",
+     "title": "Team Vitality headquarters looted in Paris",
+     "summary": "The V.Hive headquarters was looted during Paris riots, with trophies and equipment reportedly stolen."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSTkzeDB1TFZRRGlzMVdaUkdtT0ZLM0NVLS1ZZ3RjamxQZ0dmMGNFMXNlWDM4RXJtZHIxTk5DVDNMdlFJWl90VlhOZmZ2MGpKNzJ5WkxHanRSWUl2YVZObFJpMWw2VndvdWdDeXpYTlpsSEozUnpNb1VyQkloWElQWkNSdnBWSC1DMnZF?oc=5",
+     "source": "Rugby Scope",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-10-17T16:22:23+00:00",
+     "published": "2026-10-18T03:45:00+00:00",
      "new": true,
-     "key": "2f7164e5f6155688",
-     "title": "Ramos and Marchand may miss Fiji match",
-     "summary": "Thomas Ramos and Julien Marchand are reportedly set to miss France’s match against Fiji after injury concerns."
-    },
-    {
-     "url": "https://www.hltv.org/news/45743/furia-ease-past-aurora-into-twc-final",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-10-17T16:05:00+00:00",
-     "new": true,
-     "key": "6464941bd8ba4f60",
-     "title": "FURIA reach Thunderpick World Championship final",
-     "summary": "FURIA beat Aurora to reach the final and remain on course to defend their title."
+     "key": "9ef2b14c91849585",
+     "title": "Possible further France rugby withdrawals",
+     "summary": "A report flags the possibility of two more France rugby XV withdrawals."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-17T17:01:24.519280+00:00",
-   "input_fingerprint": "sha256:39df8af37bee5e6632c997defe4a36604c7d7f7721906aae2d004b7e26f67f83",
-   "last_success_at": "2026-10-17T17:01:24.519280+00:00",
-   "candidate_count": 239,
-   "new_count": 4
+   "source_checked_at": "2026-10-18T05:01:27.762605+00:00",
+   "input_fingerprint": "sha256:936f6d672b856fb2654ee4cd09590b3e43072bb40c46a536e00792b473e2b5b1",
+   "last_success_at": "2026-10-18T05:01:27.762605+00:00",
+   "candidate_count": 267,
+   "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "AI finance has two different pressure points: investors are tempering expectations for Anthropic’s IPO valuation amid slower revenue growth, while CoreWeave’s difficulties may threaten the AI high-yield credit market.",
+     "text": "The economics of the AI infrastructure boom are coming under scrutiny, as the enormous investment push confronts physical-world constraints—an important test for technology valuations and capital spending.",
      "sources": [
       {
-       "key": "6c97feaf5b06ce49",
-       "title": "Investors temper Anthropic IPO valuation expectations over revenue growth slowdown, sources say - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRW4tSGppV2U0ZWtvaXBsQmlyaDVVLVFCSmJNMWdmMHpod0FWd25kUXRNQzFvZXJPTmhoQUNvMlFrQzI3NjBQVG9McWFPRHdUODhMbVItOGg4S0N3ZmJ4R2psZVd1aWFZM2M0aEY4R3VaYnFZWUxhOFZiRXAxTnc5UG9hMm1ERGpKbURkX3BWYzQ5UWl3THBFTDhWUWR0SVhUSWJsekpMZjM4OUZRQl9BVmY2djVKRENDSldCSUpOWmdvbHVK?oc=5",
+       "key": "ffb7b8294fe97d5a",
+       "title": "America’s $10tn AI infrastructure boom is starting to fray",
+       "url": "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The risk around frozen Russian assets in Belgium is drawing attention: the FT raises the prospect of US efforts to take control of funds held at Euroclear, a potential source of financial and geopolitical strain for Europe.",
+     "sources": [
+      {
+       "key": "99662c585a67a549",
+       "title": "Europe must liberate Belgium from its huge Russian assets risk",
+       "url": "https://www.ft.com/content/c3d73770-4d91-4bd0-bf6d-7f9375e2b938?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The FT’s latest survey of 94 economists sees AI boosting growth beyond the US and China, a more optimistic macro view that contrasts with questions about whether the infrastructure buildout can pay off.",
+     "sources": [
+      {
+       "key": "d846a21b47ca4acb",
+       "title": "Global economy set for AI-driven surge, FT survey suggests",
+       "url": "https://www.ft.com/content/c6aeb3a1-1874-4947-8ffc-4d993301244a?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      },
+      {
+       "key": "ffb7b8294fe97d5a",
+       "title": "America’s $10tn AI infrastructure boom is starting to fray",
+       "url": "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Venezuela is forecasting nearly $76 billion in oil investment over five years, according to its acting president; the claim is notable for energy markets, though the candidate gives no detail on commitments or execution.",
+     "sources": [
+      {
+       "key": "bcef2a78a38699f8",
+       "title": "Venezuela expects nearly $76 billion in oil investment over five years, acting president says - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNjRrMjhGV0NJUjVPZmZUdm1Da3JxcUFDaW9PTTVhVjZqSUszdzlLMGIwdjk4MFc0UXlUU0ZSZ1h4aGNTMmE1V3ZfdGJNcFVIUVIzbGFwTFdjd2xMVWtLWlBlV21QNlNxY0ZBcXVWTS05Z0c5UnY5d0tIWVFXOEdnLUZUTk84UXB1ektOV3A3OHhXSmxVYnhMZktTMl9PZUFaRGdpUkF4VXlGMlBoWVdhclhOa2p0bFExTTljdWtRZGs1bXM?oc=5",
        "source": "Reuters",
        "via": "Google News"
-      },
-      {
-       "key": "816a80d6751e770b",
-       "title": "CoreWeave Woes Risk Shutting Down AI Junk Market: Credit Weekly - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZ1Z0ODZTMmZ1cGhteHZXUXRpemdYenhIVWJNR0h4bnBublpZRlBRdUxGRUg4Q2hOSU1uYWR6MlMtVXF0Q0NjOGVJaTJPR24wVG1kT0hmWDdNVEFmZmFBRU8zRTZ0bUpsTHNVUHVqcHotUjd1VFY3OENsSGZWcWlrRjlvRF9CSjRvZmRNdDg0bXdJQ3ZmdmE5Z0x3NHIwS2VaTjVwZzFtdVhOQm5FSzU5am5Oaw?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Tokenization is drawing major banks toward potential trading, payments and advisory opportunities, though the question of who captures the value remains open.",
-     "sources": [
-      {
-       "key": "a085272c190df593",
-       "title": "Goldman, Wells Fargo, Morgan Stanley see tokenization as a growth play, not a threat",
-       "url": "https://www.coindesk.com/business/2026/10/17/goldman-wells-fargo-morgan-stanley-see-tokenization-as-a-growth-play-not-a-threat",
-       "source": "CoinDesk",
-       "via": null
-      },
-      {
-       "key": "07341b89e9435d38",
-       "title": "Citrini sees a tokenization boom. The harder question is who profits",
-       "url": "https://www.coindesk.com/business/2026/10/17/citrini-sees-a-tokenization-boom-the-harder-question-is-who-profits",
-       "source": "CoinDesk",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "A BIS working paper finds that higher US bank deposit rates were associated with slower stablecoin growth, highlighting competition between deposits and tokenized money.",
-     "sources": [
-      {
-       "key": "85d39d7f8f78ecce",
-       "title": "Banks could slow stablecoin growth by paying savers more, BIS paper finds",
-       "url": "https://www.coindesk.com/business/2026/10/14/banks-could-slow-stablecoin-growth-by-paying-savers-more-bis-paper-finds",
-       "source": "CoinDesk",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Bank of England Governor Andrew Bailey warned that rapid AI development poses a financial-stability issue and called for concerns about AI agents to be addressed.",
-     "sources": [
-      {
-       "key": "e566d4211549726a",
-       "title": "BoE’s Bailey tells G30 they ‘have got to address’ AI agent concerns",
-       "url": "https://www.ft.com/content/3185b4cd-ab35-4efc-9d75-dcecc1631625?syn-25a6b1a6=1",
-       "source": "FT Markets",
-       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZ1Z0ODZTMmZ1cGhteHZXUXRpemdYenhIVWJNR0h4bnBublpZRlBRdUxGRUg4Q2hOSU1uYWR6MlMtVXF0Q0NjOGVJaTJPR24wVG1kT0hmWDdNVEFmZmFBRU8zRTZ0bUpsTHNVUHVqcHotUjd1VFY3OENsSGZWcWlrRjlvRF9CSjRvZmRNdDg0bXdJQ3ZmdmE5Z0x3NHIwS2VaTjVwZzFtdVhOQm5FSzU5am5Oaw?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-17T14:27:13+00:00",
+     "url": "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-18T04:00:18+00:00",
      "new": true,
-     "key": "816a80d6751e770b",
-     "title": "CoreWeave woes threaten the AI high-yield credit market",
-     "summary": "Bloomberg reports that CoreWeave’s difficulties risk shutting down the AI junk-bond market."
+     "key": "ffb7b8294fe97d5a",
+     "title": "America’s $10tn AI infrastructure boom is starting to fray",
+     "summary": "The AI infrastructure investment boom is running into the economic constraints of the physical world."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRW4tSGppV2U0ZWtvaXBsQmlyaDVVLVFCSmJNMWdmMHpod0FWd25kUXRNQzFvZXJPTmhoQUNvMlFrQzI3NjBQVG9McWFPRHdUODhMbVItOGg4S0N3ZmJ4R2psZVd1aWFZM2M0aEY4R3VaYnFZWUxhOFZiRXAxTnc5UG9hMm1ERGpKbURkX3BWYzQ5UWl3THBFTDhWUWR0SVhUSWJsekpMZjM4OUZRQl9BVmY2djVKRENDSldCSUpOWmdvbHVK?oc=5",
+     "url": "https://www.ft.com/content/c3d73770-4d91-4bd0-bf6d-7f9375e2b938?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-18T04:00:09+00:00",
+     "new": true,
+     "key": "99662c585a67a549",
+     "title": "Europe must liberate Belgium from its huge Russian assets risk",
+     "summary": "The FT examines risks to Belgium and Euroclear if the US seeks control of hundreds of billions in blocked Russian assets."
+    },
+    {
+     "url": "https://www.ft.com/content/c6aeb3a1-1874-4947-8ffc-4d993301244a?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-18T04:00:09+00:00",
+     "new": true,
+     "key": "d846a21b47ca4acb",
+     "title": "Global economy set for AI-driven surge, FT survey suggests",
+     "summary": "A survey of 94 economists sees AI’s economic benefits extending well beyond the US and China."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNjRrMjhGV0NJUjVPZmZUdm1Da3JxcUFDaW9PTTVhVjZqSUszdzlLMGIwdjk4MFc0UXlUU0ZSZ1h4aGNTMmE1V3ZfdGJNcFVIUVIzbGFwTFdjd2xMVWtLWlBlV21QNlNxY0ZBcXVWTS05Z0c5UnY5d0tIWVFXOEdnLUZUTk84UXB1ektOV3A3OHhXSmxVYnhMZktTMl9PZUFaRGdpUkF4VXlGMlBoWVdhclhOa2p0bFExTTljdWtRZGs1bXM?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-10-17T10:10:22+00:00",
+     "published": "2026-10-17T22:53:43+00:00",
      "new": true,
-     "key": "6c97feaf5b06ce49",
-     "title": "Investors temper Anthropic IPO valuation expectations",
-     "summary": "Investors are lowering expectations for Anthropic’s IPO valuation amid a slowdown in revenue growth, sources told Reuters."
-    },
-    {
-     "url": "https://www.coindesk.com/business/2026/10/17/goldman-wells-fargo-morgan-stanley-see-tokenization-as-a-growth-play-not-a-threat",
-     "source": "CoinDesk",
-     "feed_name": "CoinDesk",
-     "via": null,
-     "published": "2026-10-17T17:00:00+00:00",
-     "new": true,
-     "key": "a085272c190df593",
-     "title": "Major banks view tokenization as a growth opportunity",
-     "summary": "Goldman Sachs, Wells Fargo and Morgan Stanley see potential in tokenization for trading, payments and advisory services."
-    },
-    {
-     "url": "https://www.coindesk.com/business/2026/10/14/banks-could-slow-stablecoin-growth-by-paying-savers-more-bis-paper-finds",
-     "source": "CoinDesk",
-     "feed_name": "CoinDesk",
-     "via": null,
-     "published": "2026-10-17T12:00:00+00:00",
-     "new": true,
-     "key": "85d39d7f8f78ecce",
-     "title": "Higher bank deposit rates may slow stablecoin growth, BIS paper finds",
-     "summary": "A BIS working paper links a one-basis-point rise in US deposit rates with slower stablecoin growth."
-    },
-    {
-     "url": "https://www.ft.com/content/3185b4cd-ab35-4efc-9d75-dcecc1631625?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-10-17T10:31:21+00:00",
-     "new": true,
-     "key": "e566d4211549726a",
-     "title": "Bailey warns of AI-agent concerns for financial stability",
-     "summary": "The Bank of England governor said rapid AI development is a major financial-stability issue."
+     "key": "bcef2a78a38699f8",
+     "title": "Venezuela expects nearly $76 billion in oil investment over five years",
+     "summary": "Venezuela’s acting president says the country expects nearly $76 billion in oil investment over five years."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-17T17:01:24.519280+00:00",
-   "input_fingerprint": "sha256:8ff4653b6891a093fa62eadbe952f06d3acfd09660903144ce496d7428b58526",
-   "last_success_at": "2026-10-17T17:01:24.519280+00:00",
+   "source_checked_at": "2026-10-18T05:01:27.762605+00:00",
+   "input_fingerprint": "sha256:9d7c2ceadfe9dfa2aba7a10a7f66a257a7c387b635e8b3ba6db9d4d747504d67",
+   "last_success_at": "2026-10-18T05:01:27.762605+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1123,10 +1199,10 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 744.48,
-     "change_pct": -0.93,
+     "price": 740.78,
+     "change_pct": -0.5,
      "currency": "EUR",
-     "as_of": "2026-10-14T22:00:00+00:00",
+     "as_of": "2026-10-15T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1134,10 +1210,10 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 106.84,
-     "change_pct": 0.56,
+     "price": 106.86,
+     "change_pct": 0.02,
      "currency": "EUR",
-     "as_of": "2026-10-14T22:00:00+00:00",
+     "as_of": "2026-10-15T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1145,10 +1221,10 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 291.1,
-     "change_pct": -0.9,
+     "price": 290.2,
+     "change_pct": -0.31,
      "currency": "EUR",
-     "as_of": "2026-10-14T22:00:00+00:00",
+     "as_of": "2026-10-15T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1156,10 +1232,10 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 315.9,
-     "change_pct": 0.33,
+     "price": 318.2,
+     "change_pct": 0.73,
      "currency": "EUR",
-     "as_of": "2026-10-14T22:00:00+00:00",
+     "as_of": "2026-10-15T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1167,10 +1243,10 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 9.02,
-     "change_pct": -1.96,
+     "price": 8.93,
+     "change_pct": -1.03,
      "currency": "EUR",
-     "as_of": "2026-10-14T22:00:00+00:00",
+     "as_of": "2026-10-15T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1178,10 +1254,10 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 53.39,
-     "change_pct": -3.12,
+     "price": 53.09,
+     "change_pct": -0.56,
      "currency": "EUR",
-     "as_of": "2026-10-14T22:00:00+00:00",
+     "as_of": "2026-10-15T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1189,10 +1265,10 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 71.89,
-     "change_pct": 0.81,
+     "price": 72.01,
+     "change_pct": 0.16,
      "currency": "EUR",
-     "as_of": "2026-10-14T22:00:00+00:00",
+     "as_of": "2026-10-15T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1200,10 +1276,10 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 81114.97,
-     "change_pct": -0.47,
+     "price": 81682.0,
+     "change_pct": 0.22,
      "currency": "USD",
-     "as_of": "2026-10-17T00:00:00+00:00",
+     "as_of": "2026-10-18T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1211,51 +1287,21 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2399.99,
-     "change_pct": -0.82,
+     "price": 2412.18,
+     "change_pct": -0.31,
      "currency": "USD",
-     "as_of": "2026-10-17T00:00:00+00:00",
+     "as_of": "2026-10-18T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 225,
-   "new_count": 5
+   "candidate_count": 138,
+   "new_count": 4
   },
   "media": {
    "briefing": "",
    "items": [
-    {
-     "title": "\"Enough Is Enough\" Conservatives Demand Hearings on Trump-Putin Alliance",
-     "url": "https://www.youtube.com/watch?v=GVeGIZOqZCg",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-10-17T15:00:24+00:00",
-     "duration_s": null,
-     "new": true,
-     "key": "9b55c27d218ac977"
-    },
-    {
-     "title": "The NEW Tesla Roadster: My Honest Reaction",
-     "url": "https://www.youtube.com/watch?v=scwlR0QHGOk",
-     "source": "Marques Brownlee",
-     "kind": "video",
-     "published": "2026-10-17T02:09:23+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "5fe4101a916c9cb8"
-    },
-    {
-     "title": "Russian Military Just Used AI To Fake Battlefield Progress",
-     "url": "https://www.youtube.com/watch?v=VQwlCl73c7Y",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-10-16T21:00:25+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "4a022f850dd3f9c6"
-    },
     {
      "title": "Podcast 15/10/26 : Manchester City/PSG (2-4)",
      "url": "https://shows.acast.com/culturepsg/episodes/podcast-151026-manchester-citypsg-2-4",
@@ -1265,84 +1311,14 @@
      "duration_s": 7264,
      "new": false,
      "key": "c8783f6b24c74628"
-    },
-    {
-     "title": "Ukraine Just Took Out Four Russian Su-34s",
-     "url": "https://www.youtube.com/watch?v=Udmc_-Cw2vE",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-10-15T21:00:04+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "06ce76e5aa3cd5da"
-    },
-    {
-     "title": "Russian Bot Farms Were NOT Destroyed by Data Center Strikes",
-     "url": "https://www.youtube.com/shorts/yY0uUeA9tAw",
-     "source": "The Christo Files",
-     "kind": "video",
-     "published": "2026-10-15T20:37:19+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "02fbf785c7ae6698"
-    },
-    {
-     "title": "😂 Bon...",
-     "url": "https://www.youtube.com/watch?v=m6aFpS1RDz4",
-     "source": "Wiloo",
-     "kind": "video",
-     "published": "2026-10-15T11:59:01+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "91c434e3f445b77b"
-    },
-    {
-     "title": "Zelensky Responds as Starlink Drops Across Ukraine",
-     "url": "https://www.youtube.com/watch?v=3wVibNEIoxg",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-10-14T22:00:10+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "e0244766065e8c85"
-    },
-    {
-     "title": "From TV Actor to Planning Murders #news #fbi #russia",
-     "url": "https://www.youtube.com/shorts/Odlkb2J8b_Q",
-     "source": "The Christo Files",
-     "kind": "video",
-     "published": "2026-10-14T21:17:42+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "1e12bd4f0ef87d74"
-    },
-    {
-     "title": "It's Not Too Late",
-     "url": "https://www.youtube.com/watch?v=7hMftUOm2Cg",
-     "source": "Crypto Currently",
-     "kind": "video",
-     "published": "2026-10-14T18:48:37+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "93108df3af70704b"
-    },
-    {
-     "title": "Early Bull Reset? Why 2026 Looks Like 2023",
-     "url": "https://share.transistor.fm/s/453b5dcf",
-     "source": "The DeFi Report",
-     "kind": "podcast",
-     "published": "2026-10-14T18:09:45+00:00",
-     "duration_s": 2780,
-     "new": false,
-     "key": "a370a1c6368338e5"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-10-17T17:01:24.519280+00:00",
-   "candidate_count": 11,
-   "new_count": 1
+   "source_checked_at": "2026-10-18T05:01:27.762605+00:00",
+   "candidate_count": 1,
+   "new_count": 0
   }
  },
- "scheduled_slot": "2026-10-17T17:00:00.000Z"
+ "scheduled_slot": "2026-10-18T05:00:00.000Z"
 }
