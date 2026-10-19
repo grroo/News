@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261019T110125805803Z",
- "generated_at": "2026-10-19T11:01:25.805803+00:00",
- "generated_local": "Mon 19 Oct 2026, 13:01",
- "source_checked_at": "2026-10-19T11:01:25.805803+00:00",
+ "edition_id": "ed-20261019T170128319303Z",
+ "generated_at": "2026-10-19T17:01:28.319303+00:00",
+ "generated_local": "Mon 19 Oct 2026, 19:01",
+ "source_checked_at": "2026-10-19T17:01:28.319303+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-10-19T11:01:25.805803+00:00"
+  "run-2026-10-19T17:01:28.319303+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-10-19T11:01:25.805803+00:00"
+  "completed_at": "2026-10-19T17:01:28.319303+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 27,
+   "item_count": 26,
    "reason": null,
    "failure": null,
-   "parsed_count": 27,
+   "parsed_count": 26,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 105,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 105,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -189,10 +189,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 107,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 107,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -225,10 +225,10 @@
    "name": "Team: XV de France rugby",
    "section": "sport",
    "status": "ok",
-   "item_count": 99,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 99,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 105,
+   "item_count": 103,
    "reason": null,
    "failure": null,
-   "parsed_count": 105,
+   "parsed_count": 103,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -393,10 +393,10 @@
    "name": "Bitcoin",
    "section": "finance",
    "status": "ok",
-   "item_count": 20,
+   "item_count": 19,
    "reason": null,
    "failure": null,
-   "parsed_count": 20,
+   "parsed_count": 19,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -622,8 +622,8 @@
    "section": "media",
    "status": "unavailable",
    "item_count": 0,
-   "reason": "ConnectionError",
-   "failure": "transport",
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
    "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
@@ -684,7 +684,7 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002279,
+  "est_cost_usd": 0.002374,
   "est_month_usd": 0.21,
   "forecast_month_usd": 0.21,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
@@ -694,60 +694,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6273,
+    "latency_ms": 12096,
     "unknown": false,
     "provider_request_ids": [
-     "resp_008e89a2919036ea016ad5f89d833087d08f96a3372bbe84bf"
+     "resp_068082333a83e78c016ad64cf2276887d1959b6a66e1b257a3"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3538,
-    "output_tokens": 430,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3276,
+    "output_tokens": 777,
+    "reasoning_tokens": 347
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 10899,
+    "latency_ms": 8285,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0f286951f935300e016ad5f8a3216487d081976c9f24b17cdc"
+     "resp_059b0c3fb57a6b19016ad64cfd6b2887d18e1d9a154159a2fc"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3573,
-    "output_tokens": 833,
-    "reasoning_tokens": 455
+    "cache_write_tokens": 3520,
+    "output_tokens": 723,
+    "reasoning_tokens": 300
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8193,
+    "latency_ms": 7766,
     "unknown": false,
     "provider_request_ids": [
-     "resp_06d74af6f81ad956016ad5f8ae02f087d0b517031d7331e6cd"
+     "resp_0e3213351e231304016ad64d05b86487d19d726a5d939ab21d"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3396,
-    "output_tokens": 667,
-    "reasoning_tokens": 213
+    "cache_write_tokens": 3463,
+    "output_tokens": 681,
+    "reasoning_tokens": 249
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10507,
-  "output_tokens": 1930,
-  "reasoning_tokens": 668,
+  "cache_write_tokens": 10259,
+  "output_tokens": 2181,
+  "reasoning_tokens": 896,
   "recorded_month_to_date": {
    "month_utc": "2026-10",
-   "recorded_runs": 82,
-   "attempts": 246,
-   "known_cost_usd": 0.183346,
+   "recorded_runs": 83,
+   "attempts": 249,
+   "known_cost_usd": 0.18572,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,191 +756,202 @@
   "news": {
    "briefing": [
     {
-     "text": "Milan’s unrest remains the immediate local story: clashes left 14 police officers injured and 32 people arrested, including 23 minors, as Prime Minister Giorgia Meloni convenes a security meeting.",
+     "text": "Unrest in Milan has prompted luxury shops to close, while the government is preparing a security crackdown; the developments put public order and the city’s commercial centre in focus.",
      "sources": [
       {
-       "key": "62d0b13403772b1b",
-       "title": "Scontri a Milano, 14 feriti tra forze di polizia: 32 arrestati (23 sono minori). Oggi vertice sulla sicurezza con Meloni - Il Messaggero",
-       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNYlZuOWJzSGctdlVPa1ppOEZaNWZ3RzIxQV9kZTdTSmdyUnVPbXRCclhlbmVGckFyWG9wU3NHeEN0UndzbTAyWXYwajdlZUpMYkxvSjNSODlLX1BNMjZaZWlRSk5GT0x3NmNYRC1HRHdtY3UzY3RFUDBOcEY3UGpJcVpBUHdYSmvSAYwBQVVfeXFMTXhaRGltYmhqd0tHTkN4U1E5NUtrbUI4dnJtalFmSjBOMHhMMXhDRXpVQ3o5cDVsd1haX0ZJRWJ5RGo4cFRwSTJydzNqQ2RPUEhZWm9fVzdJVERKeDRYd2RFME9NMUROX2NBdVZRc3RyR3FjbGJfVnBuV3dfekZMLXJ1X3pXWEVvU3hlck8?oc=5",
-       "source": "Il Messaggero",
-       "via": "Google News"
-      },
-      {
-       "key": "de3cbb30ccd9d30b",
-       "title": "Ancora violenze a Milano, Meloni convoca vertice sulla sicurezza. LIVE - Sky TG24",
-       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdXRkNXR5dkM0cFVCWVphaGdFSFZ5MmgtRG1DTEhmWHJmZnprbVJSSk1Mc09kaHdPNnE4Mk1fSE0wQ0hJZUo1RkhCS00zWDV1ZWdYX3lqWVhhTHhTd3Jpb3VsZmJWUkd5MUk1eWhCdTdpQ29TQXBZNjA2ZV9JYkVZWVZTcw?oc=5",
-       "source": "Sky TG24",
+       "key": "7c2b61cfe7ed9239",
+       "title": "Milan luxury shops close for fear of further unrest, govt prepares new crackdown - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZWNGMGIzTEZwQjVYM1BNU3lmemRQZTk3OGtQTnhXTWM0UXRFNXhqTTg3WFFQYXdQWVZZTUphR3FGZDd3SE5RaGZlTWdWZ1owRklLYnQzSWN5RlotVjY2OEdjMUtsUGpMZ1RxRk5QS1djT3hnbDZwR0lUSmVwZjlYX243eGIyRHpKLV80NkltM3NmZkk2ZEl0WGNGVEpGRHZUei1LRGJYMnRoME0?oc=5",
+       "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s protest movement is expected to continue for weeks, while unrest has spread to Italy; the developments are drawing attention to broader European tensions.",
+     "text": "Italy’s BTP–Bund spread widened to 111.3 basis points, with the Italian 10-year yield at 4.56%, a fresh signal to monitor for domestic funding conditions.",
      "sources": [
       {
-       "key": "7531210b22825006",
-       "title": "France braces for weeks more of protests as unrest spreads to Italy – Europe live",
-       "url": "https://www.theguardian.com/world/live/2026/oct/19/europe-france-protests-riots-macron-ukraine-russia-zelenskyy-sweden-latest-news-updates",
+       "key": "8f7a7247a41c13b4",
+       "title": "Lo spread Btp-Bund si allarga e chiude a 111,3 punti",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/19/lo-spread-btp-bund-si-allarga-e-chiude-a-1113-punti_e2738af7-fe43-497e-bbe4-89c6e5b64024.html",
+       "source": "ANSA Top News",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Macron faces criticism from across the political spectrum, with strategic missteps deepening the impression of isolation and potentially carrying wider consequences for France and Europe.",
+     "sources": [
+      {
+       "key": "5f952e56adbe7337",
+       "title": "Ferocious criticism from all sides underlines Macron’s isolation",
+       "url": "https://www.theguardian.com/world/2026/oct/19/emmanuel-macron-criticism-isolation-france",
        "source": "The Guardian World",
        "via": null
       }
      ]
     },
     {
-     "text": "A Reuters investigation reports that a hacker used AI agents and a few thousand dollars to breach dozens of websites, highlighting the technology’s potential to lower the cost of cyberattacks.",
+     "text": "A new poll found that 66% of Americans think Trump is using the presidency for personal financial gain, including 34% of Republicans, according to the Guardian.",
      "sources": [
       {
-       "key": "5dedf9e5460777e7",
-       "title": "EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSUVKUWRvY0tQeUZscHhGcDBLYjI5VVZaYXRFRklFbmEzX29RaVFuMmt6cDlpMURENUtWRFpBQVBnNngwcWJla3NJZllZVDFBb2NKU21YUnBkMTNKb1NEM3BNLXk2OXpVbVpyZXM3NHVaOUNrWGZzRWhGQlRFSDhPa0E4TVdCTnBuZjNBS2R2UU9ySzV1c2hCbUVycmFHUTNpVk1vX0kxSEEyMUllRlpsakRfNEdZUlJUWVBVRTFqYkZiYm5jR1E?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The Fed sees the AI investment boom as adding to inflation pressures, though Reuters reports that the burden of addressing them may fall unevenly.",
-     "sources": [
-      {
-       "key": "00b8e8c47e95136d",
-       "title": "Fed sees AI boom adding to inflation headache, but others may pay for the medicine - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbWZLVGpmVmN6M1o1UUJnRXhSMmVWdjY2Mm4tR0IyeXk0OHZzOVRPamx6eEdEVjhEUHVXMlkzeFhoWkg4Qnl0a3lYQ0xJdWNzVHcydDA0NFdVb0ctbEVoMExGek50RHoxWF9TRThVMXRENDhWV2RUbVRGOVhvOEtoTmlTS1NlZGk0UldmSEY4N0tRVVRBeWc5SmJqRGlaVWwzeHRPa1hHZDNHZ3UxUjhwZHBGQXo0YlIw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Bloomberg reports growing friction and scrutiny around the global AI buildout, a watchpoint for investors assessing the sector’s scale-up.",
-     "sources": [
-      {
-       "key": "a23cc893d963f854",
-       "title": "Global AI Buildout Is Getting Bumpier — and More Scrutiny - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbUlKcXdnN0txeGF3dVkxMlBEenRaU0lFNVNEeFVhZ0xTSDVEcUFvdUJvNkZRak0wM0RlVV9LblQwZnlUTXpJWjB2dVVvNmlQbUxxMU9DQTB2eUFQRkRXa0wtU3JGUndaaFlEdUlvNF9jZGJzNEd0ZWltYWE4MXpQZG5MR1NEckN6N0J2QXNhTkZEWFd4ZDgybzAyX2pyMWgxZHB1ZERHVE1wRURsM3JwckFsV0xSZmNGLXRRU2M1Y3dvdGRNRkt5VlVkeUhDNDZHcDZhY3huRW4?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
+       "key": "ca8667a5b7bec4a0",
+       "title": "Most Americans think Trump is using presidency to enrich himself, poll finds",
+       "url": "https://www.theguardian.com/us-news/2026/oct/19/trump-presidency-rich-poll",
+       "source": "The Guardian World",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNYlZuOWJzSGctdlVPa1ppOEZaNWZ3RzIxQV9kZTdTSmdyUnVPbXRCclhlbmVGckFyWG9wU3NHeEN0UndzbTAyWXYwajdlZUpMYkxvSjNSODlLX1BNMjZaZWlRSk5GT0x3NmNYRC1HRHdtY3UzY3RFUDBOcEY3UGpJcVpBUHdYSmvSAYwBQVVfeXFMTXhaRGltYmhqd0tHTkN4U1E5NUtrbUI4dnJtalFmSjBOMHhMMXhDRXpVQ3o5cDVsd1haX0ZJRWJ5RGo4cFRwSTJydzNqQ2RPUEhZWm9fVzdJVERKeDRYd2RFME9NMUROX2NBdVZRc3RyR3FjbGJfVnBuV3dfekZMLXJ1X3pXWEVvU3hlck8?oc=5",
-     "source": "Il Messaggero",
-     "feed_name": "Topic: Milano",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZWNGMGIzTEZwQjVYM1BNU3lmemRQZTk3OGtQTnhXTWM0UXRFNXhqTTg3WFFQYXdQWVZZTUphR3FGZDd3SE5RaGZlTWdWZ1owRklLYnQzSWN5RlotVjY2OEdjMUtsUGpMZ1RxRk5QS1djT3hnbDZwR0lUSmVwZjlYX243eGIyRHpKLV80NkltM3NmZkk2ZEl0WGNGVEpGRHZUei1LRGJYMnRoME0?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-10-19T10:24:49+00:00",
+     "published": "2026-10-19T16:23:27+00:00",
      "new": true,
-     "key": "62d0b13403772b1b",
-     "title": "Milan clashes injure 14 police officers; 32 arrested as Meloni calls security meeting",
-     "summary": "Clashes in Milan left 14 police officers injured and 32 people arrested, including 23 minors, ahead of a government security meeting."
+     "key": "7c2b61cfe7ed9239",
+     "title": "Milan luxury shops close as government prepares crackdown",
+     "summary": "Luxury shops in Milan closed amid fears of further unrest as the government prepared a new security crackdown."
     },
     {
-     "url": "https://www.theguardian.com/world/live/2026/oct/19/europe-france-protests-riots-macron-ukraine-russia-zelenskyy-sweden-latest-news-updates",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/19/lo-spread-btp-bund-si-allarga-e-chiude-a-1113-punti_e2738af7-fe43-497e-bbe4-89c6e5b64024.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-10-19T16:23:26+00:00",
+     "new": true,
+     "key": "8f7a7247a41c13b4",
+     "title": "Italy’s BTP–Bund spread widens to 111.3 basis points",
+     "summary": "The spread closed at 111.3 basis points, with Italy’s bond yield at 4.56%."
+    },
+    {
+     "url": "https://www.theguardian.com/world/2026/oct/19/emmanuel-macron-criticism-isolation-france",
      "source": "The Guardian World",
      "feed_name": "The Guardian World",
      "via": null,
-     "published": "2026-10-19T10:34:18+00:00",
+     "published": "2026-10-19T16:33:23+00:00",
      "new": true,
-     "key": "7531210b22825006",
-     "title": "France braces for more protests as unrest spreads to Italy",
-     "summary": "The Gilets jaunes movement has called further demonstrations in France as unrest spreads to Italy."
+     "key": "5f952e56adbe7337",
+     "title": "Macron faces criticism from across the political spectrum",
+     "summary": "Criticism from across the political spectrum has reinforced perceptions of Macron’s isolation and strategic missteps."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSUVKUWRvY0tQeUZscHhGcDBLYjI5VVZaYXRFRklFbmEzX29RaVFuMmt6cDlpMURENUtWRFpBQVBnNngwcWJla3NJZllZVDFBb2NKU21YUnBkMTNKb1NEM3BNLXk2OXpVbVpyZXM3NHVaOUNrWGZzRWhGQlRFSDhPa0E4TVdCTnBuZjNBS2R2UU9ySzV1c2hCbUVycmFHUTNpVk1vX0kxSEEyMUllRlpsakRfNEdZUlJUWVBVRTFqYkZiYm5jR1E?oc=5",
+     "url": "https://www.theguardian.com/us-news/2026/oct/19/trump-presidency-rich-poll",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-10-19T16:41:15+00:00",
+     "new": true,
+     "key": "ca8667a5b7bec4a0",
+     "title": "Poll finds most Americans think Trump is using presidency to enrich himself",
+     "summary": "A poll found 66% of Americans think Trump is using his position for monetary gain, while his approval rating hit a new low."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWmxMTDYtS1VOLVA5TE5qSGZzeW96a0g0N2dXWlpSaUVZMk93MkNIS2ZsLUpHNmtCNElLaXdmVHNaalNzbTdyUkxsMUdNUFFEZTZES0hmMmxSNERLWnlJUjB6MkE3bXExVW9mMTI2WmZOeGVrcDhlUkpLRjRKSXRGeUVmMU5FUUhHUkw3TGpmdFp5UDRHSnVwMlBXdDI4T2JwR1kwOVZydmROQlFzQlE?oc=5",
      "source": "Reuters",
-     "feed_name": "Topic: AI",
+     "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-10-19T10:33:25+00:00",
+     "published": "2026-10-19T16:32:12+00:00",
      "new": true,
-     "key": "5dedf9e5460777e7",
-     "title": "How a hacker used AI agents to breach scores of websites",
-     "summary": "A Reuters investigation describes how a hacker used AI agents and a few thousand dollars to break into scores of websites."
+     "key": "752deeeef905ca47",
+     "title": "Governments warn citizens over security in France after riots",
+     "summary": "Governments issued security warnings to citizens in France following riots."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbWZLVGpmVmN6M1o1UUJnRXhSMmVWdjY2Mm4tR0IyeXk0OHZzOVRPamx6eEdEVjhEUHVXMlkzeFhoWkg4Qnl0a3lYQ0xJdWNzVHcydDA0NFdVb0ctbEVoMExGek50RHoxWF9TRThVMXRENDhWV2RUbVRGOVhvOEtoTmlTS1NlZGk0UldmSEY4N0tRVVRBeWc5SmJqRGlaVWwzeHRPa1hHZDNHZ3UxUjhwZHBGQXo0YlIw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Topic: AI",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1nWHNuNHZOWUxiWnktaGlwNDJBQmNxRlNaYjNMNkpYUGxwalF1ejJ5SHNQWGlrQXZfOFpXcEJWUmRuaWFTNVBxWlpNbTR6aU5zbml1UWRLR1ZfVDU2OGJuVkRhS1NicFBuQWZFLUZSRlp4MjN1RlY4?oc=5",
+     "source": "Insurance Journal",
+     "feed_name": "Topic: insurance industry",
      "via": "Google News",
-     "published": "2026-10-19T10:24:37+00:00",
+     "published": "2026-10-19T16:25:45+00:00",
      "new": true,
-     "key": "00b8e8c47e95136d",
-     "title": "Fed sees AI boom adding to inflation pressures",
-     "summary": "The Fed sees the AI boom adding to inflation pressures, with the costs of addressing them potentially falling unevenly."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbUlKcXdnN0txeGF3dVkxMlBEenRaU0lFNVNEeFVhZ0xTSDVEcUFvdUJvNkZRak0wM0RlVV9LblQwZnlUTXpJWjB2dVVvNmlQbUxxMU9DQTB2eUFQRkRXa0wtU3JGUndaaFlEdUlvNF9jZGJzNEd0ZWltYWE4MXpQZG5MR1NEckN6N0J2QXNhTkZEWFd4ZDgybzAyX2pyMWgxZHB1ZERHVE1wRURsM3JwckFsV0xSZmNGLXRRU2M1Y3dvdGRNRkt5VlVkeUhDNDZHcDZhY3huRW4?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-10-19T10:28:01+00:00",
-     "new": true,
-     "key": "a23cc893d963f854",
-     "title": "AI buildout faces more friction and scrutiny",
-     "summary": "Bloomberg reports that the global AI buildout is encountering increased friction and scrutiny."
+     "key": "0a597db30e10792e",
+     "title": "Industry panel highlights challenges selling cyber insurance to SMEs",
+     "summary": "An industry panel highlighted challenges in selling cyber insurance to small and medium-sized businesses."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-19T11:01:25.805803+00:00",
-   "input_fingerprint": "sha256:2eaf614348e3aa7c758bac76685884f78990573216d27fc8ff394aee5b4bc94d",
-   "last_success_at": "2026-10-19T11:01:25.805803+00:00",
-   "candidate_count": 454,
-   "new_count": 5
+   "source_checked_at": "2026-10-19T17:01:28.319303+00:00",
+   "input_fingerprint": "sha256:617d209a06334e238761b627196d1a64689d4e1bc1a471e80cee410d104040ce",
+   "last_success_at": "2026-10-19T17:01:28.319303+00:00",
+   "candidate_count": 487,
+   "new_count": 6
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG head into the Barcelona match with almost the full squad available, while Barcelona’s announced group has three absentees.",
+     "text": "The PSG–Barcelona build-up is intensifying: Hansi Flick praised PSG’s maturity, while Lamine Yamal looked ahead to facing Paris.",
      "sources": [
       {
-       "key": "75e942bf918dc30e",
-       "title": "Match : Presque tout le PSG présent à la veille du Barça - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPODVqM1JtdDZveXFhMDNSZFNxR3E3bWloOWs4VE5DdWx5dU1QcDNWSDRINk5zV296eHRoMF9EV3VvZXpiaDNNRDN4Q2RqN3dmZWdXelhzSlp2a0EyN0FiN25UWXZDWk5Mc3FSbEFpZXdPUm04S2E5YlotUzU1dTdNcnFFRzRDN0RDTW1IM2l6dktHaWhWeThr?oc=5",
+       "key": "de9d9b8d197dde5c",
+       "title": "« Ils sont plus mûrs », Flick élogieux avant PSG/Barça - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWER3VDlxd2Q3TlROb1RDQ2FaaDlEdm1ackxPUHctU3VtY2I3a3RwNTdzRm1yWW5VanM4dVFyd052NTVPN0Z0QTlOWDVjYWhrVUJ0VXBDTnVSa0w2enRINm9YbDhXTUliTVd1SDFJQ3pITlpSTFluMTFOcXhPZVVpczB2WGk4eklSa1AtTW9nU3cyQkF6bHVkcg?oc=5",
        "source": "CulturePSG",
        "via": "Google News"
       },
       {
-       "key": "724c8f4d7efac7cf",
-       "title": "Match : Le groupe du Barça face au PSG avec finalement 3 absents - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTGR6ZmlMU0s4SUZxdjJ5WERqbnFvWDZKQjB0bFRhY2RBQnFKbzdXQmhWM243UDRabF81LXc4YV9hX3ZtR2FPaWgtRHpUOW1Fb3E4WEZQdTZLaURJSlgzX1NuZzRqNEFVcS1hdkd4NzVOVmszeWJXU2o5SHlpb0lhLXdkOXY1blAzQ210TTdZdnZfRHdCUklhZU1weDVlQ2NuSkE?oc=5",
+       "key": "9aad2828468ea4cc",
+       "title": "« Paris, j'arrive ! », Yamal donne rendez-vous au PSG - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQd2J5RzlULVRFMURDb1FXcFlXdUVGZFVOUldrNDFNcG9CMm9ra2dlVzdiY0k4QndtajgxZnRVVkRWajVZYktXNGowLTNubVFGRm1MT0R3QzliR1hDYS0yOXdwUWdfa1ozZHYtYlNGdk5WaWJ2Qi1tdTVfUXhVMzdYbUpwVThiNGFwRmZBYXdub1BXXzhZeFMxR2dIVDdTOWRO?oc=5",
        "source": "CulturePSG",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Barcelona’s preparation has also been disrupted ahead of the clash, though the report does not specify the nature of the disruption.",
+     "text": "A postponement of PSG–Barcelona is not currently on the table, according to CulturePSG.",
      "sources": [
       {
-       "key": "a1be7a3a73005ca3",
-       "title": "Match : La préparation du Barça encore perturbée avant le choc face au PSG - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNRjZrUWtmcjJjTF9SU1VGY05FVGhmTUg3NkQ1Q3VRaHhTeVFPMGgtVU9zUHpfaFZPWWlEOWs1VkZ4aUZuUWhobXlYQVJmWjFWZzlQN18yVXpJMTc1QUU0d0pBYVpHWjR6bVJrRE93dzd3N2s3NzdiM0VzQVg3VnN4bXNzWE1lcHQzbEtPWXIwUHRGOGZiV0RJTUpVaXJYWUJUaEVJbF92MFUxR0l2aldJ?oc=5",
+       "key": "bfacbb7094ed74df",
+       "title": "Match : Un report de PSG/Barça pas (encore) à l'ordre du jour - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZnhPeVdyTm5Pb1R2bjhHZTdGSmFyUkoxY2R1blBMd1NjMUR4TUdydmxEd1p2Tm5wMVhhVVdxWmZBVEpTRzhrWjB5TWpoeTM3LVpzX3pRSFd0MDNCbk9YVklQX3JWd09mODB6dTlKMUVnSXpHSVEzSWZ4b3dtaUJES1JXVFlWSlRrbVNOSVRYakZjQnBrX1RMVF9wQQ?oc=5",
        "source": "CulturePSG",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Team Vitality claimed the top three places in HLTV’s ESL Pro League Season 24 awards, underlining their dominance at the event.",
+     "text": "Vitinha and Luis Enrique have both addressed the high-stakes feel of the Barcelona clash in pre-match press conferences.",
      "sources": [
       {
-       "key": "37dbf80673306b84",
-       "title": "The EVPs and All-Stars of ESL Pro League S24",
-       "url": "https://www.hltv.org/news/45751/the-evps-and-all-stars-of-esl-pro-league-s24",
-       "source": "HLTV",
-       "via": null
+       "key": "6bba7a792d9e3b30",
+       "title": "Match : Finale avant l'heure, Neves, duel face à Pedri, etc, la conf complète de Vitinha avant PSG/Barça - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSGU4dVFvYm90a3Rrd19ZaHlvX1VueXBsYnRJZ1ZVd2RsbzJNRHVaWUU1YXlhZ3NfNzBpaWJJZ3RLd2xITFl4MF9PTTl5MDJ6eVdWZVFpUTdlU2lOVm5XbWZmcHRBUDJ3X1VmQ2MzTGlqYVY2Z3NSSVdQTjVoUi1jclpJakpqbTV0aU1aOUhHQkVMdTRDa0ZVSVNmZ3BLcEF0dFQ5aDZ0bWFscEp6SFBQYXRWSDdQRU5EbTRkUFgzTGNraE9laUkzUDJuSzE0MmI4cWc?oc=5",
+       "source": "CulturePSG",
+       "via": "Google News"
+      },
+      {
+       "key": "5fefe7de72749bb4",
+       "title": "Match : Yamal, contexte tendu, finale avant l'heure, etc, la conf complète de Luis Enrique avant PSG/Barça - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNeW9FSGROUG4zUm9PaFNERzE0eXo0V3ZwbHBqMXdadTY4Q21FX09JdWd2cG5FYnNXbnFDTnlKUlctTDhHa0hSR0lGR0ZhYzdUVTBGZnlyY3UxNms1cUloNTNKUzlpUWJ1Y1FLbEh1QXV2Qjc3YXNOSzRiSnpWXzJIUjBWNTRpc09JeDMweGdlMkg0VlFXR3dGQlNkUmRIS2V3LWJlSDY1dEhramZySzZCU3FqdEE1R1hJOTd3TmxwNFRzYmxjb1N4czYwZ0FnSWg5RFJiQUUycFE?oc=5",
+       "source": "CulturePSG",
+       "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s women’s rugby staff say they stand by their choices after a heavy defeat in which the team conceded 81 points.",
+     "text": "France’s 42-player rugby squad for the upcoming international window is taking shape, with some selections expected to draw attention.",
      "sources": [
       {
-       "key": "242d2f969a0c5bb4",
-       "title": "81 points encaissés, 37 plaquages manqués : le staff des Bleues \"assume\" ses choix malgré la déroute - Actu.fr",
-       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNd2FKX3VRVmNKREhTQkZrUWdsV0RST1Z6ZDM0YlF1b0FnV1VSZWFpYXYyZ3U0SzZFUi1PbDZrelZZbUptVjJOQXp0X2ZFN09WU3hDMkFKUHdrSEN2RHFaX1ZWR3prY0c1aG1na0RTSWkxczFleFJWOEZhYmNQYVZBVTEtWV90d1laM1MyZDBtUUVwb1hjcnFBOUo5ZG9pbC1BdnBqdlRac3J2c3pkN2xiLS1Fcjk3d1ZUanZzT2staFlEaFhWeTRkOW5zZHduUERnMUVaZ29JbEFyOXZDTEVJNXh3?oc=5",
-       "source": "Actu.fr",
+       "key": "69351c85483d42a2",
+       "title": "XV de France : la liste des 42 se précise et certains noms vont faire parler - Quinze Mondial",
+       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYUNOUmtwalpYbVlnMFY3ZVdJLUh3dndud1lCOVlHLVZOVUtadDlPX3ZUTTdPUFR3VC03SWZtUHNYXzdXMVVody16UUxBdEpjei1EbXM0bW5SU01vNG5XeUV6U3ZhMEhhRVlHaFJDVHRobFVCTHNaMk9OcV9pamFXOHJkbVM4djZXcjJYUEtjNTJIX2JzRUVvajBtTEVUanFtLUxPcDJyS2p5WUlfVldTVUdKZzJPLXNTRElRcGc2eTIwZw?oc=5",
+       "source": "Quinze Mondial",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A projected PSG lineup features Warren Zaïre-Emery and Khvicha Kvaratskhelia on the left side.",
+     "sources": [
+      {
+       "key": "2706eafe44ac4888",
+       "title": "PSG-Barcelone : La composition probable de Paris, avec un côté gauche Zaïre-Emery - Kvaratskhelia - Le Parisien",
+       "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxQZjBycDh6X2hEY2N6VWJ6YkxfRXhzWnd2ZWd3bVNEcWdsX2VGOE5LMHZfYmg4ZWtPRE11M0h4b1lLVG9fajdKLXg4alhpUE5mTVA1ZU5JRnhFUmpqMDhjS1M3empsSVlHR2RwZ042MmFtSHMyd096NDJmVzViUDJSamNHamZMTTg1NXlfV0hTdDhXcWdqdWdmR1ZFRTBLRWtBMEszYnE4WkNiMG4xSWtpdXBMejVUY2Q3WkV0NkRnQ194OEZNVDM2TmRRMl9vTUNJM1V1WVlZQ0poRDNtSFB5SXdxOXZnQUNHZUFYNFRrSnJ2WXdTdUktQzFYanRxVDd2ajBtZnJrQU1NX3FRdmZrNVFQX1h4cUpVQ3pWVzlvbW00QQ?oc=5",
+       "source": "Le Parisien",
        "via": "Google News"
       }
      ]
@@ -948,240 +959,239 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPODVqM1JtdDZveXFhMDNSZFNxR3E3bWloOWs4VE5DdWx5dU1QcDNWSDRINk5zV296eHRoMF9EV3VvZXpiaDNNRDN4Q2RqN3dmZWdXelhzSlp2a0EyN0FiN25UWXZDWk5Mc3FSbEFpZXdPUm04S2E5YlotUzU1dTdNcnFFRzRDN0RDTW1IM2l6dktHaWhWeThr?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWER3VDlxd2Q3TlROb1RDQ2FaaDlEdm1ackxPUHctU3VtY2I3a3RwNTdzRm1yWW5VanM4dVFyd052NTVPN0Z0QTlOWDVjYWhrVUJ0VXBDTnVSa0w2enRINm9YbDhXTUliTVd1SDFJQ3pITlpSTFluMTFOcXhPZVVpczB2WGk4eklSa1AtTW9nU3cyQkF6bHVkcg?oc=5",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-19T09:22:00+00:00",
+     "published": "2026-10-19T16:23:00+00:00",
      "new": true,
-     "key": "75e942bf918dc30e",
-     "title": "Almost the entire PSG squad available on the eve of Barcelona match",
-     "summary": "Almost the entire PSG squad was present the day before the Barcelona match."
+     "key": "de9d9b8d197dde5c",
+     "title": "Flick praises PSG’s maturity before Barcelona clash",
+     "summary": "Hansi Flick praised PSG’s maturity ahead of the sides’ Champions League meeting."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTGR6ZmlMU0s4SUZxdjJ5WERqbnFvWDZKQjB0bFRhY2RBQnFKbzdXQmhWM243UDRabF81LXc4YV9hX3ZtR2FPaWgtRHpUOW1Fb3E4WEZQdTZLaURJSlgzX1NuZzRqNEFVcS1hdkd4NzVOVmszeWJXU2o5SHlpb0lhLXdkOXY1blAzQ210TTdZdnZfRHdCUklhZU1weDVlQ2NuSkE?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQd2J5RzlULVRFMURDb1FXcFlXdUVGZFVOUldrNDFNcG9CMm9ra2dlVzdiY0k4QndtajgxZnRVVkRWajVZYktXNGowLTNubVFGRm1MT0R3QzliR1hDYS0yOXdwUWdfa1ozZHYtYlNGdk5WaWJ2Qi1tdTVfUXhVMzdYbUpwVThiNGFwRmZBYXdub1BXXzhZeFMxR2dIVDdTOWRO?oc=5",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-19T08:38:00+00:00",
+     "published": "2026-10-19T14:54:00+00:00",
      "new": true,
-     "key": "724c8f4d7efac7cf",
-     "title": "Barcelona name squad for PSG match with three absentees",
-     "summary": "Barcelona’s squad for the PSG match includes three absentees."
+     "key": "9aad2828468ea4cc",
+     "title": "Yamal looks ahead to facing PSG",
+     "summary": "Lamine Yamal issued a challenge ahead of Barcelona’s meeting with PSG."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNRjZrUWtmcjJjTF9SU1VGY05FVGhmTUg3NkQ1Q3VRaHhTeVFPMGgtVU9zUHpfaFZPWWlEOWs1VkZ4aUZuUWhobXlYQVJmWjFWZzlQN18yVXpJMTc1QUU0d0pBYVpHWjR6bVJrRE93dzd3N2s3NzdiM0VzQVg3VnN4bXNzWE1lcHQzbEtPWXIwUHRGOGZiV0RJTUpVaXJYWUJUaEVJbF92MFUxR0l2aldJ?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZnhPeVdyTm5Pb1R2bjhHZTdGSmFyUkoxY2R1blBMd1NjMUR4TUdydmxEd1p2Tm5wMVhhVVdxWmZBVEpTRzhrWjB5TWpoeTM3LVpzX3pRSFd0MDNCbk9YVklQX3JWd09mODB6dTlKMUVnSXpHSVEzSWZ4b3dtaUJES1JXVFlWSlRrbVNOSVRYakZjQnBrX1RMVF9wQQ?oc=5",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-19T09:40:00+00:00",
+     "published": "2026-10-19T12:20:00+00:00",
      "new": true,
-     "key": "a1be7a3a73005ca3",
-     "title": "Barcelona preparation disrupted before PSG clash",
-     "summary": "Barcelona’s preparations have been disrupted ahead of the match against PSG."
+     "key": "bfacbb7094ed74df",
+     "title": "PSG–Barcelona postponement not currently being considered",
+     "summary": "A postponement of PSG–Barcelona is not currently under consideration."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNUGdva1NvTE5EMUlRNE1Bay1VYk5IZHRqOVpHUDg3WmlBa0Y4Q1JpNnJ0aXVJQmdGV3QxdDFydjlWZXI5bWZ5aVFKcFFHdHg4Z0xwOTllMkdEV0J3VVBRZ0tHd2JiQXB4RVllVk1fWExidkJtWWMyLWd0RTFMV1pRTGNMU2pjWW5ENDBCZ0RIbkJHdkl2VnExLTdCUXZnT09WTG9oLVNjM3FhQU1qTXhRTXRyT09RMzZpanREYw?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSGU4dVFvYm90a3Rrd19ZaHlvX1VueXBsYnRJZ1ZVd2RsbzJNRHVaWUU1YXlhZ3NfNzBpaWJJZ3RLd2xITFl4MF9PTTl5MDJ6eVdWZVFpUTdlU2lOVm5XbWZmcHRBUDJ3X1VmQ2MzTGlqYVY2Z3NSSVdQTjVoUi1jclpJakpqbTV0aU1aOUhHQkVMdTRDa0ZVSVNmZ3BLcEF0dFQ5aDZ0bWFscEp6SFBQYXRWSDdQRU5EbTRkUFgzTGNraE9laUkzUDJuSzE0MmI4cWc?oc=5",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-19T10:50:00+00:00",
+     "published": "2026-10-19T12:00:00+00:00",
      "new": true,
-     "key": "0a18a5f81cf10909",
-     "title": "Luis Enrique and Vitinha to speak before PSG–Barcelona",
-     "summary": "Luis Enrique and Vitinha are scheduled to speak to the press at 13:00 before PSG host Barcelona."
+     "key": "6bba7a792d9e3b30",
+     "title": "Vitinha previews PSG–Barcelona",
+     "summary": "Vitinha spoke to the press ahead of PSG’s match against Barcelona."
     },
     {
-     "url": "https://www.hltv.org/news/45751/the-evps-and-all-stars-of-esl-pro-league-s24",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-10-19T10:39:00+00:00",
+     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNeW9FSGROUG4zUm9PaFNERzE0eXo0V3ZwbHBqMXdadTY4Q21FX09JdWd2cG5FYnNXbnFDTnlKUlctTDhHa0hSR0lGR0ZhYzdUVTBGZnlyY3UxNms1cUloNTNKUzlpUWJ1Y1FLbEh1QXV2Qjc3YXNOSzRiSnpWXzJIUjBWNTRpc09JeDMweGdlMkg0VlFXR3dGQlNkUmRIS2V3LWJlSDY1dEhramZySzZCU3FqdEE1R1hJOTd3TmxwNFRzYmxjb1N4czYwZ0FnSWg5RFJiQUUycFE?oc=5",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": "Google News",
+     "published": "2026-10-19T11:51:00+00:00",
      "new": true,
-     "key": "37dbf80673306b84",
-     "title": "Vitality sweep top three in ESL Pro League S24 awards",
-     "summary": "Team Vitality occupied the top three places in HLTV’s ESL Pro League Season 24 awards."
+     "key": "5fefe7de72749bb4",
+     "title": "Luis Enrique previews PSG–Barcelona",
+     "summary": "Luis Enrique addressed the media ahead of PSG’s match against Barcelona."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNd2FKX3VRVmNKREhTQkZrUWdsV0RST1Z6ZDM0YlF1b0FnV1VSZWFpYXYyZ3U0SzZFUi1PbDZrelZZbUptVjJOQXp0X2ZFN09WU3hDMkFKUHdrSEN2RHFaX1ZWR3prY0c1aG1na0RTSWkxczFleFJWOEZhYmNQYVZBVTEtWV90d1laM1MyZDBtUUVwb1hjcnFBOUo5ZG9pbC1BdnBqdlRac3J2c3pkN2xiLS1Fcjk3d1ZUanZzT2staFlEaFhWeTRkOW5zZHduUERnMUVaZ29JbEFyOXZDTEVJNXh3?oc=5",
-     "source": "Actu.fr",
+     "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxQZjBycDh6X2hEY2N6VWJ6YkxfRXhzWnd2ZWd3bVNEcWdsX2VGOE5LMHZfYmg4ZWtPRE11M0h4b1lLVG9fajdKLXg4alhpUE5mTVA1ZU5JRnhFUmpqMDhjS1M3empsSVlHR2RwZ042MmFtSHMyd096NDJmVzViUDJSamNHamZMTTg1NXlfV0hTdDhXcWdqdWdmR1ZFRTBLRWtBMEszYnE4WkNiMG4xSWtpdXBMejVUY2Q3WkV0NkRnQ194OEZNVDM2TmRRMl9vTUNJM1V1WVlZQ0poRDNtSFB5SXdxOXZnQUNHZUFYNFRrSnJ2WXdTdUktQzFYanRxVDd2ajBtZnJrQU1NX3FRdmZrNVFQX1h4cUpVQ3pWVzlvbW00QQ?oc=5",
+     "source": "Le Parisien",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-19T16:11:45+00:00",
+     "new": true,
+     "key": "2706eafe44ac4888",
+     "title": "Projected PSG lineup against Barcelona",
+     "summary": "A projected PSG lineup places Warren Zaïre-Emery and Khvicha Kvaratskhelia on the left."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYUNOUmtwalpYbVlnMFY3ZVdJLUh3dndud1lCOVlHLVZOVUtadDlPX3ZUTTdPUFR3VC03SWZtUHNYXzdXMVVody16UUxBdEpjei1EbXM0bW5SU01vNG5XeUV6U3ZhMEhhRVlHaFJDVHRobFVCTHNaMk9OcV9pamFXOHJkbVM4djZXcjJYUEtjNTJIX2JzRUVvajBtTEVUanFtLUxPcDJyS2p5WUlfVldTVUdKZzJPLXNTRElRcGc2eTIwZw?oc=5",
+     "source": "Quinze Mondial",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-10-19T10:04:44+00:00",
+     "published": "2026-10-19T16:01:53+00:00",
      "new": true,
-     "key": "242d2f969a0c5bb4",
-     "title": "France women’s rugby staff defend choices after heavy defeat",
-     "summary": "The staff defended their choices after France conceded 81 points and missed 37 tackles."
+     "key": "69351c85483d42a2",
+     "title": "France rugby squad list taking shape",
+     "summary": "France’s 42-player squad list is taking shape, with some names expected to prompt discussion."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-19T11:01:25.805803+00:00",
-   "input_fingerprint": "sha256:f19d4409ef0ac3eedb91c949ca2c2fcb16bb1af2f6538301c1e083083157dee1",
-   "last_success_at": "2026-10-19T11:01:25.805803+00:00",
-   "candidate_count": 244,
-   "new_count": 6
+   "source_checked_at": "2026-10-19T17:01:28.319303+00:00",
+   "input_fingerprint": "sha256:8f206433a109da9c2302e4488314b3b8513030b44e169abd4d66d5cbf32ff66b",
+   "last_success_at": "2026-10-19T17:01:28.319303+00:00",
+   "candidate_count": 270,
+   "new_count": 7
   },
   "finance": {
    "briefing": [
     {
-     "text": "French assets are under renewed pressure: rioting has added to political uncertainty, and government bonds fell as markets reassessed the outlook.",
+     "text": "US technology shares led a rebound, with the Nasdaq up more than 1% as AI-linked stocks recovered ahead of major earnings; the S&P 500 ETF in your portfolio was modestly higher.",
      "sources": [
       {
-       "key": "510e1ba1f35ee091",
-       "title": "Macron rejects interior minister’s resignation after French riots",
-       "url": "https://www.ft.com/content/cc7e577a-db7a-4e12-9a42-443696b98ec5?syn-25a6b1a6=1",
-       "source": "FT",
+       "key": "cc0151d5ca3e79a0",
+       "title": "Nasdaq climbs over 1% as AI-linked stocks recover ahead of key earnings - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX21SVVhfUjZRQ255YlFzVWVEZ3BFMmt3aWlDdkVPVENFOExuRE9KOXZ6WjNqbzdHelUwdzZudy02TjlyNkxVZWcxQmFzZF9NaUE0SFZYaWI3dmxlYTBVdjdULWhLMkNQNnlMUXFaM1J5T1dPMEo3ajhkb0RQLUM3M0pkYlFqbHNKQ1U1c3k5WlUtdjR1UkNCV0JkdjJZTzdIa2c?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Indonesia is changing index eligibility rules after repeated MSCI concerns about investability, a development to watch for emerging-market investors.",
+     "sources": [
+      {
+       "key": "8498c735486ad63d",
+       "title": "Indonesia expels tightly held companies from Jakarta index in bid to avoid MSCI downgrade",
+       "url": "https://www.ft.com/content/472ad6cf-438f-4d62-a41c-8725cbf53383?syn-25a6b1a6=1",
+       "source": "FT Markets",
        "via": null
+      }
+     ]
+    },
+    {
+     "text": "JPMorgan is extending its deposit-token offering to Ethereum, citing the network’s liquidity and institutional use—a notable step in banks’ tokenisation efforts.",
+     "sources": [
+      {
+       "key": "07993d5041ea3de4",
+       "title": "JPMorgan brings JPM Coin to Ethereum",
+       "url": "http://videos.coindesk.com/previews/3fZvJpfi?.tsrc=rss",
+       "source": "Bitcoin",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Ukraine-Russia strikes have revived wheat supply concerns, while traders also eased rate-hike bets after a speech by Kevin Warsh, lifting gold.",
+     "sources": [
+      {
+       "key": "800f4483eed34a41",
+       "title": "Wheat Futures Rise as Ukraine-Russia Strikes Stoke Supply Fears - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPU2pPaUxrRjdacENOdHVJZHI1ZEFwZkRFMHM3eTBLOHZWb3lXbUxhTFUzNV9BczU3MXBUYUZ1M045N0Y4ZFBMY2djaGZmd3dpZXk3SzZXWGN2TllpVU5ZN1BfTkwwX1NrbW9qTjdJWFZNQXM5MlBCeWFWM0NKWTFhMWl0eFpjc3JlWENGbHRWcU9FdFI0ZVMwaWplUVg5Um4tbGRhVkYybnNlU3pXZjBDX1BiSHg?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
       },
       {
-       "key": "371924a829d770ed",
-       "title": "France’s Bonds Drop as Rioting Heaps Pressure on Government - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWVg0eHBZcTVSdUEyTlhhb0F5RFVaSFBsdFFZQkpMWDN0TDhwNnBLZHBLNDhSMy0xMU5LdlN3YjlSRUFtZS1ORFlMYTRWWDltZ01iazlDMDd5elhDOVA0RTJRNU53ZmFhN1MzUzE1bDV3OHo1aE5KblZ5NGc4bWNiMm1KU2Nmc2s2TFp5c0p0TWpXQU5tMXdPSHFRMVlGU3JWMFBfMXpHQmctWmR6bW93?oc=5",
+       "key": "f2df11f131eb2a50",
+       "title": "Gold Edges Higher as Traders Ease Rate-Hike Bets on Warsh Speech - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPREhDWC00MVloSzQ4QWFaYzl1MTdFTG1fRURVRmZzZF8yTms3MGpaYkhYSWd6Z2V6U1U2a1pNVDVKRl80OHdZY0YxSklldWVPR1g0YklVTGQ1MVhNdDJlUXh4dDNsQm1TQnBrMkp5NV9CTzlnS2VEeGR2a3V0bFhNNVBRejRlZlVRUE9sSUtEakxmMUlyQlQzdEYyanI1WXJaVjV2WXFUQjd1Tm9NR29tZUJCMWRGZw?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "China is signalling that its overnight rate will become the main policy benchmark, a change with potential implications for how markets read monetary policy.",
-     "sources": [
-      {
-       "key": "0d7150feb88dfe8d",
-       "title": "China Signals Overnight Rate Set to Become Main Policy Benchmark - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQTJ2Yk9DZFpac05XbzR1VnA1Wmo0OVdiN2JIdXk2YnVhMTgwTUNxT0RFUDhRdnExaC1WSlFMeUdBc2dDVDdrV3lXaVV0NXVLcWNQZm5LQWRlWi1mcHhYX05odGNEXzZ4Vi1zWmZaQ3hRQVFzX29GUUVRYjV3VGV1dkh3SDFQUkppQmo0QXN3d0gxN3BtWWpsdmZVZTE0aWVRb2NhdmdSZnFKLWNEZzdoaUs5czJwUQ?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Indonesia’s selloff has spread across stocks and bonds amid MSCI-related risk, adding a fresh stress point for emerging markets.",
-     "sources": [
-      {
-       "key": "4604fb673d0bc567",
-       "title": "Indonesia’s Selloff Deepens Across Stocks, Bonds on MSCI Risk - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQWJhTTQ3dV9IdnFneUl5YTJCbGZWSkRNZUJjMFFsek5MV2FJOXBLZmdZaUs1eF9kTnpEMVo4SDZTOFl3WnhRYldZbVEzcW53TXlsZ2diV0lvNm82dVdYYWZ2eEo4eGR3Q3NmcXZicWhpNTN0ZzZNZ3JwcXFVZjNmS2pzVnJIdGpPR05Yb1M4SGs0Ti1uSXF5ZkJTZkllaGdxTF9oRG9qMXVEY2FpOVdDQWRuejVkdw?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "JPMorgan plans to extend its dollar deposit token to Ethereum for institutional clients, bringing a major bank’s tokenised deposits onto a public blockchain.",
-     "sources": [
-      {
-       "key": "4e3f041cfa464755",
-       "title": "JPMorgan's JPM Coin, representing dollar deposits, is coming to Ethereum: Bloomberg",
-       "url": "https://www.coindesk.com/markets/2026/10/19/jpmorgan-s-jpm-coin-representing-dollar-deposits-is-coming-to-ethereum-bloomberg",
-       "source": "CoinDesk",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "The EU has challenged KKR over allegedly inaccurate and misleading information in its acquisition of Telecom Italia’s Netco assets.",
-     "sources": [
-      {
-       "key": "a75f17ad04fe0918",
-       "title": "La Ue contro Kkr: «Informazioni inesatte e fuorvianti sull’acquisto di Netco»",
-       "url": "https://www.ilsole24ore.com/art/la-ue-contro-kkr-informazioni-inesatte-e-fuorvianti-sull-acquisto-netco-AJXqb8nB",
-       "source": "Il Sole 24 Ore Finanza",
-       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/cc7e577a-db7a-4e12-9a42-443696b98ec5?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-10-19T10:26:05+00:00",
-     "new": true,
-     "key": "510e1ba1f35ee091",
-     "title": "Macron rejects interior minister’s resignation after French riots",
-     "summary": "Political recriminations and falling bonds followed riots as authorities acknowledged failures in police oversight."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQTJ2Yk9DZFpac05XbzR1VnA1Wmo0OVdiN2JIdXk2YnVhMTgwTUNxT0RFUDhRdnExaC1WSlFMeUdBc2dDVDdrV3lXaVV0NXVLcWNQZm5LQWRlWi1mcHhYX05odGNEXzZ4Vi1zWmZaQ3hRQVFzX29GUUVRYjV3VGV1dkh3SDFQUkppQmo0QXN3d0gxN3BtWWpsdmZVZTE0aWVRb2NhdmdSZnFKLWNEZzdoaUs5czJwUQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-19T08:58:31+00:00",
-     "new": true,
-     "key": "0d7150feb88dfe8d",
-     "title": "China signals overnight rate set to become main policy benchmark",
-     "summary": "China signalled that its overnight rate is set to become the country’s main policy benchmark."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQWJhTTQ3dV9IdnFneUl5YTJCbGZWSkRNZUJjMFFsek5MV2FJOXBLZmdZaUs1eF9kTnpEMVo4SDZTOFl3WnhRYldZbVEzcW53TXlsZ2diV0lvNm82dVdYYWZ2eEo4eGR3Q3NmcXZicWhpNTN0ZzZNZ3JwcXFVZjNmS2pzVnJIdGpPR05Yb1M4SGs0Ti1uSXF5ZkJTZkllaGdxTF9oRG9qMXVEY2FpOVdDQWRuejVkdw?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-19T09:15:59+00:00",
-     "new": true,
-     "key": "4604fb673d0bc567",
-     "title": "Indonesia’s selloff deepens across stocks and bonds on MSCI risk",
-     "summary": "Indonesia’s selloff intensified across equity and bond markets amid MSCI-related risk."
-    },
-    {
-     "url": "https://www.coindesk.com/markets/2026/10/19/jpmorgan-s-jpm-coin-representing-dollar-deposits-is-coming-to-ethereum-bloomberg",
-     "source": "CoinDesk",
-     "feed_name": "CoinDesk",
-     "via": null,
-     "published": "2026-10-19T10:03:47+00:00",
-     "new": true,
-     "key": "4e3f041cfa464755",
-     "title": "JPMorgan’s dollar deposit token is coming to Ethereum",
-     "summary": "JPMorgan plans to expand its dollar deposit token to Ethereum for a wider set of institutional clients."
-    },
-    {
-     "url": "https://www.ilsole24ore.com/art/la-ue-contro-kkr-informazioni-inesatte-e-fuorvianti-sull-acquisto-netco-AJXqb8nB",
-     "source": "Il Sole 24 Ore Finanza",
-     "feed_name": "Il Sole 24 Ore Finanza",
-     "via": null,
-     "published": "2026-10-19T10:56:07+00:00",
-     "new": true,
-     "key": "a75f17ad04fe0918",
-     "title": "EU challenges KKR over Netco acquisition information",
-     "summary": "The EU says KKR provided inaccurate and misleading information concerning its acquisition of Netco."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOb0NZaFloZVlFZGlYUFRnSTJ3c2xtRFBobVFta2pZV2ZBSTRYY1BGREZlQTQta2pEbXBTc1VjY0VJMHFDaDNzOHNmN0ItUjg2OWNHN3NBLUNqcXJ5cVFnbVNYTzhwUjhIN045Z3lBVkc4U0tXT2cxSkpsTVY0eTgxaklkaHNCVEpuUWtZSzVXb3hIOVhyMS01OThUcTVSWjRUSUJDeXU3Y2l3aWtQR2U3bU93?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX21SVVhfUjZRQ255YlFzVWVEZ3BFMmt3aWlDdkVPVENFOExuRE9KOXZ6WjNqbzdHelUwdzZudy02TjlyNkxVZWcxQmFzZF9NaUE0SFZYaWI3dmxlYTBVdjdULWhLMkNQNnlMUXFaM1J5T1dPMEo3ajhkb0RQLUM3M0pkYlFqbHNKQ1U1c3k5WlUtdjR1UkNCV0JkdjJZTzdIa2c?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-10-19T07:47:02+00:00",
+     "published": "2026-10-19T16:17:44+00:00",
      "new": true,
-     "key": "a3d929d72333c435",
-     "title": "Rheinmetall and MSC jointly acquire Romanian shipyard",
-     "summary": "Rheinmetall and MSC have jointly acquired a Romanian shipyard."
+     "key": "cc0151d5ca3e79a0",
+     "title": "Nasdaq climbs as AI-linked stocks recover ahead of earnings",
+     "summary": "The Nasdaq rose more than 1% as AI-linked stocks recovered ahead of key earnings."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNLUhQOGZhek4taTV1UnBiTWRJVnBuTjdtcWJfUVd3bDR3M1AzN1o0MTdCdFRSUGwyTHg0cENka2NiMHRFY01LUld6V1E0RXFPTWNNMzRfTm5BTWR0SlFmeXRfaFRiTUZybDIwVllYZ2F6NVh5ckdBQzJnMzh3YTQyZURYTEhXWE9nUHlwR28tMjhqdjFTcUJCNDg3b3RCX1dHQktkTkxqVEFkRldYS3NsbDJB?oc=5",
+     "url": "https://www.ft.com/content/472ad6cf-438f-4d62-a41c-8725cbf53383?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-10-19T15:59:35+00:00",
+     "new": true,
+     "key": "8498c735486ad63d",
+     "title": "Indonesia changes rules to address MSCI investability concerns",
+     "summary": "Indonesia is excluding tightly held companies from its Jakarta index after repeated MSCI concerns about investability."
+    },
+    {
+     "url": "http://videos.coindesk.com/previews/3fZvJpfi?.tsrc=rss",
+     "source": "Bitcoin",
+     "feed_name": "Bitcoin",
+     "via": null,
+     "published": "2026-10-19T15:29:14+00:00",
+     "new": true,
+     "key": "07993d5041ea3de4",
+     "title": "JPMorgan brings JPM Coin to Ethereum",
+     "summary": "JPMorgan is expanding its dollar deposit token to Ethereum, citing deeper liquidity and institutional use."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPU2pPaUxrRjdacENOdHVJZHI1ZEFwZkRFMHM3eTBLOHZWb3lXbUxhTFUzNV9BczU3MXBUYUZ1M045N0Y4ZFBMY2djaGZmd3dpZXk3SzZXWGN2TllpVU5ZN1BfTkwwX1NrbW9qTjdJWFZNQXM5MlBCeWFWM0NKWTFhMWl0eFpjc3JlWENGbHRWcU9FdFI0ZVMwaWplUVg5Um4tbGRhVkYybnNlU3pXZjBDX1BiSHg?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-10-19T08:28:35+00:00",
+     "published": "2026-10-19T15:53:15+00:00",
      "new": true,
-     "key": "a1343aa71cc91b2d",
-     "title": "UK debt attracts buyers betting on a cautious budget",
-     "summary": "Bloomberg reports that UK government debt could appeal to investors expecting a cautious budget."
+     "key": "800f4483eed34a41",
+     "title": "Ukraine-Russia strikes lift wheat futures on supply fears",
+     "summary": "Wheat futures rose as strikes between Ukraine and Russia stoked concerns about supplies."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPREhDWC00MVloSzQ4QWFaYzl1MTdFTG1fRURVRmZzZF8yTms3MGpaYkhYSWd6Z2V6U1U2a1pNVDVKRl80OHdZY0YxSklldWVPR1g0YklVTGQ1MVhNdDJlUXh4dDNsQm1TQnBrMkp5NV9CTzlnS2VEeGR2a3V0bFhNNVBRejRlZlVRUE9sSUtEakxmMUlyQlQzdEYyanI1WXJaVjV2WXFUQjd1Tm9NR29tZUJCMWRGZw?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-19T16:04:02+00:00",
+     "new": true,
+     "key": "f2df11f131eb2a50",
+     "title": "Gold edges higher as rate-hike bets ease",
+     "summary": "Gold rose as traders eased rate-hike bets after a speech by Kevin Warsh."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObkJQaUwwV2NFUzM4T3l0R2RQQS1OMFBndGJLcTZ4V3Bubm9QYk80eldBV09SSVdvaHVid1JleW8xQzZHR2E1VDdGbDFvYjhPUVdoYkllYTlVcFBwOEdPTVNlUFJjTHZLYkdtZkU4MnRmd2NOSUxWQ3NzYmNCbjlyYy0wdWNwR3lMNWhSVkljSjl1c1BoUVNoRDBHWWJkeU1tbWpsQi1YUE5kMWpEUDJCVw?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-19T15:26:06+00:00",
+     "new": true,
+     "key": "273584fcb52c24be",
+     "title": "Optiver seeks $900 million debt package",
+     "summary": "High-frequency trader Optiver is seeking a $900 million debt package."
+    },
+    {
+     "url": "https://www.ft.com/content/75a2ee4e-ead9-4d37-b1ea-6fd759c4691d?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-10-19T15:40:33+00:00",
+     "new": true,
+     "key": "434906f37d0cf39e",
+     "title": "Saudi Arabia postpones flagship FII summit",
+     "summary": "Saudi Arabia postponed its Future Investment Initiative summit until next year after Houthi attacks."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-19T11:01:25.805803+00:00",
-   "input_fingerprint": "sha256:16c8a4c14c0d63d9950712f5a2986e25cca3092684fc96efa7b1d79f7bbb9bf7",
-   "last_success_at": "2026-10-19T11:01:25.805803+00:00",
+   "source_checked_at": "2026-10-19T17:01:28.319303+00:00",
+   "input_fingerprint": "sha256:1fe143e255222136719d2ab93be2e07320d9aa27cb0eae91680a5150841d733d",
+   "last_success_at": "2026-10-19T17:01:28.319303+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 615.0,
-     "change_pct": 0.26,
+     "price": 613.4,
+     "change_pct": 0.0,
      "currency": "CHF",
      "as_of": "2026-10-18T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1191,8 +1201,8 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 741.42,
-     "change_pct": 0.09,
+     "price": 743.44,
+     "change_pct": 0.36,
      "currency": "EUR",
      "as_of": "2026-10-18T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1202,8 +1212,8 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 106.96,
-     "change_pct": 0.09,
+     "price": 106.54,
+     "change_pct": -0.3,
      "currency": "EUR",
      "as_of": "2026-10-18T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1213,8 +1223,8 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 290.5,
-     "change_pct": 0.1,
+     "price": 290.95,
+     "change_pct": 0.26,
      "currency": "EUR",
      "as_of": "2026-10-18T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1224,8 +1234,8 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 315.8,
-     "change_pct": -0.75,
+     "price": 315.7,
+     "change_pct": -0.79,
      "currency": "EUR",
      "as_of": "2026-10-18T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1235,8 +1245,8 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 9.0,
-     "change_pct": 0.79,
+     "price": 9.01,
+     "change_pct": 0.86,
      "currency": "EUR",
      "as_of": "2026-10-18T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1246,8 +1256,8 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 53.32,
-     "change_pct": 0.43,
+     "price": 53.04,
+     "change_pct": -0.09,
      "currency": "EUR",
      "as_of": "2026-10-18T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1257,8 +1267,8 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 72.0,
-     "change_pct": -0.01,
+     "price": 71.65,
+     "change_pct": -0.5,
      "currency": "EUR",
      "as_of": "2026-10-18T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1268,8 +1278,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 82278.71,
-     "change_pct": 0.32,
+     "price": 81909.39,
+     "change_pct": -0.13,
      "currency": "USD",
      "as_of": "2026-10-19T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1279,8 +1289,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2420.78,
-     "change_pct": 0.5,
+     "price": 2400.13,
+     "change_pct": -0.36,
      "currency": "USD",
      "as_of": "2026-10-19T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1288,12 +1298,22 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 183,
+   "candidate_count": 252,
    "new_count": 7
   },
   "media": {
    "briefing": "",
    "items": [
+    {
+     "title": "The U.S. Is Giving Saudi Arabia What It Has Denied Iran For 40 Years | VisualPolitik EN",
+     "url": "https://www.youtube.com/watch?v=jX6Y26XloAA",
+     "source": "VisualPolitik EN",
+     "kind": "video",
+     "published": "2026-10-19T13:00:12+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "e56c048e32ecd232"
+    },
     {
      "title": "NATO Just Shot Down Two Drones Over Romania",
      "url": "https://www.youtube.com/watch?v=aT4T_IeVUpw",
@@ -1301,7 +1321,7 @@
      "kind": "video",
      "published": "2026-10-18T17:30:29+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "f80c3345dbcb24af"
     },
     {
@@ -1347,10 +1367,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-10-19T11:01:25.805803+00:00",
-   "candidate_count": 5,
+   "source_checked_at": "2026-10-19T17:01:28.319303+00:00",
+   "candidate_count": 6,
    "new_count": 1
   }
  },
- "scheduled_slot": "2026-10-19T11:00:00.000Z"
+ "scheduled_slot": "2026-10-19T17:00:00.000Z"
 }
