@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261024T092021066383Z",
- "generated_at": "2026-10-24T09:20:21.066383+00:00",
- "generated_local": "Sat 24 Oct 2026, 11:20",
- "source_checked_at": "2026-10-24T09:20:21.066383+00:00",
+ "edition_id": "ed-20261024T110125223866Z",
+ "generated_at": "2026-10-24T11:01:25.223866+00:00",
+ "generated_local": "Sat 24 Oct 2026, 13:01",
+ "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-10-24T09:20:21.066383+00:00"
+  "run-2026-10-24T11:01:25.223866+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-10-24T09:20:21.066383+00:00"
+  "completed_at": "2026-10-24T11:01:25.223866+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 27,
+   "item_count": 26,
    "reason": null,
    "failure": null,
-   "parsed_count": 27,
+   "parsed_count": 26,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -189,10 +189,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 111,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 111,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 107,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 107,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -417,10 +417,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 11,
+   "item_count": 10,
    "reason": null,
    "failure": null,
-   "parsed_count": 11,
+   "parsed_count": 10,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -622,8 +622,8 @@
    "section": "media",
    "status": "unavailable",
    "item_count": 0,
-   "reason": "response exceeds 2000000 bytes",
-   "failure": "oversize",
+   "reason": "ConnectionError",
+   "failure": "transport",
    "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
@@ -684,9 +684,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002227,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.002312,
+  "est_month_usd": 0.21,
+  "forecast_month_usd": 0.21,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,60 +694,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8210,
+    "latency_ms": 11021,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0acf24089169110e016adc785e191887d1b59b9c639f0ae41e"
+     "resp_06576a3bab4f06ec016adc901dae9087d19cddfa235b633f67"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3610,
-    "output_tokens": 564,
-    "reasoning_tokens": 152
+    "cache_write_tokens": 3704,
+    "output_tokens": 811,
+    "reasoning_tokens": 300
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7747,
+    "latency_ms": 8239,
     "unknown": false,
     "provider_request_ids": [
-     "resp_01df7697440cce95016adc78657a8c87d19a6afa20249bd24b"
+     "resp_041b2201c26fa2a4016adc9027aed887d19312e4fa420f1b6c"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3465,
-    "output_tokens": 601,
-    "reasoning_tokens": 273
+    "cache_write_tokens": 3443,
+    "output_tokens": 585,
+    "reasoning_tokens": 308
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8878,
+    "latency_ms": 8251,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0a3717715141c715016adc786d477887d1a49db5d71ae5b0d8"
+     "resp_0526ad2572a463b3016adc902ff20487d1b27bac749697989d"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3188,
-    "output_tokens": 721,
-    "reasoning_tokens": 257
+    "cache_write_tokens": 3173,
+    "output_tokens": 646,
+    "reasoning_tokens": 227
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10263,
-  "output_tokens": 1886,
-  "reasoning_tokens": 682,
+  "cache_write_tokens": 10320,
+  "output_tokens": 2042,
+  "reasoning_tokens": 835,
   "recorded_month_to_date": {
    "month_utc": "2026-10",
-   "recorded_runs": 97,
-   "attempts": 291,
-   "known_cost_usd": 0.217787,
+   "recorded_runs": 98,
+   "attempts": 294,
+   "known_cost_usd": 0.220099,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,56 +756,73 @@
   "news": {
    "briefing": [
     {
-     "text": "Protests are expected across France and several other European countries; France is deploying 70,000 officers. Milan is also on high alert, with more than 150 police searches reported across the city and other locations.",
+     "text": "Milan is under heavy security ahead of demonstrations, with nearly 1,500 police and soldiers deployed and more than 150 searches linked to unrest on 17 October.",
      "sources": [
       {
-       "key": "85a48481e4d46bd1",
-       "title": "Hundreds of protests expected across France, with shops, businesses and tourist sites closed – Europe live",
-       "url": "https://www.theguardian.com/world/live/2026/oct/24/france-demonstrations-police-macron-italy-albania-belgium-spain-ukraine-russia-europe-latest-news",
+       "key": "a804bcaa8d6ecca6",
+       "title": "Oltre 150 perquisizioni in Lombardia per i disordini del 17 ottobre. Il presidio per i cortei di oggi: a Milano quasi 1.500 tra agenti e militari - Il Sole 24 ORE",
+       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNS19XQmFPRGdGbURJQU91cjk2aGhKU3NGUWpKX0RqNWV5ellDV0RORmZOVmppQUZjdHdNb1QyTTV6NGdRbEdJV2ZsUURmaXg2UXVxdXhQb0hFWkpaQ3dURnAzMjRkbjhlNXp0NjYzNXY2d1lzYUFVRmM1UEdUNG03TGpReTJpLUgzTGhOa0hPSFRmVGVkQkJaN2hYMmZnQWNzVUkyUHktUQ?oc=5",
+       "source": "Il Sole 24 ORE",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A gun attack at a funeral in Jordan killed eight people and injured 40, according to the Guardian’s report.",
+     "sources": [
+      {
+       "key": "4ebdb696244cb2ba",
+       "title": "Eight killed and 40 injured after gunmen open fire at church funeral in Jordan",
+       "url": "https://www.theguardian.com/world/2026/oct/24/seven-killed-and-40-injured-after-gunmen-open-fire-at-church-funeral-in-jordan",
        "source": "The Guardian World",
        "via": null
-      },
+      }
+     ]
+    },
+    {
+     "text": "Protests in Albania are continuing, with demonstrators demanding Prime Minister Edi Rama’s resignation after an initially tourism-focused dispute broadened.",
+     "sources": [
       {
-       "key": "b923c52782c0b5c2",
-       "title": "Cortei, oltre 150 perquisizioni a Milano e in altre 20 città",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/24/cortei-oltre-150-perquisizioni-a-milano-e-in-altre-20-citta_055c4167-ca82-44f5-85bb-882298320c3a.html",
+       "key": "48470f269e906e0b",
+       "title": "En Albanie, nouvelle journée de mobilisation pour réclamer la démission du premier ministre, Edi Rama",
+       "url": "https://www.lemonde.fr/international/article/2026/10/24/en-albanie-nouvelle-journee-de-mobilisation-pour-reclamer-la-demission-du-premier-ministre-edi-rama_6799688_3210.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Italy says five women detained in the West Bank have been repatriated and were in good condition when visited by consular officials.",
+     "sources": [
+      {
+       "key": "5dafdfe6657e9a17",
+       "title": "Farnesina, rimpatriate le cinque italiane fermate in Cisgiordania",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/24/farnesina-rimpatriate-le-cinque-italiane-fermate-in-cisgiordania_bda270f9-51b7-43df-ba68-b154f7aa6ace.html",
        "source": "ANSA Top News",
        "via": null
       }
      ]
     },
     {
-     "text": "Israel votes on 27 October, with a Le Monde report highlighting the electoral challenge to Benjamin Netanyahu and centrist Gadi Eisenkot’s opposition to a settlement plan.",
+     "text": "A storm warning is in force in Pas-de-Calais, while 120,000 homes in western and northern France are without electricity.",
      "sources": [
       {
-       "key": "37afbf3517e6b606",
-       "title": "En Israël, les impasses de la campagne des législatives",
-       "url": "https://www.lemonde.fr/idees/article/2026/10/24/en-israel-les-impasses-de-la-campagne-des-legislatives_6799681_3232.html",
+       "key": "8e24bd53bf0f45c3",
+       "title": "Tempête Austen : le Pas-de-Calais maintenu en vigilance orange pluie-inondation, 120 000 foyers sans électricité dans l’Ouest et le Nord",
+       "url": "https://www.lemonde.fr/planete/article/2026/10/24/tempete-austen-le-pas-de-calais-maintenu-en-vigilance-orange-pluie-inondation-120-000-foyers-sans-electricite-dans-l-ouest-et-le-nord_6799655_3245.html",
        "source": "Le Monde",
        "via": null
       }
      ]
     },
     {
-     "text": "Brazil’s presidential contenders Lula and Flávio Bolsonaro faced a crucial debate, with polling showing them level, according to Le Monde.",
+     "text": "Bloomberg reports risks facing a Gulf nation’s AI ambitions, though the available summary does not specify the risks.",
      "sources": [
       {
-       "key": "deb0a2f51c942dd1",
-       "title": "Présidentielle au Brésil : Flavio Bolsonaro plus policé, Lula plus offensif lors d’un second débat crucial",
-       "url": "https://www.lemonde.fr/international/article/2026/10/24/presidentielle-au-bresil-flavio-bolsonaro-plus-police-lula-plus-offensif-lors-d-un-second-debat-crucial_6799678_3210.html",
-       "source": "Le Monde",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Swiss shares outperformed European peers as investors pulled back from AI-related trades, Bloomberg reported.",
-     "sources": [
-      {
-       "key": "aa30b9b2245641da",
-       "title": "Swiss stocks outperform Europe as investors retreat from AI trade - Bloomberg - Yahoo Finance",
-       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZmtoT1R1NWh2TE9mXzFYNV9KSUszbF80NFBhUV9uVVF3aHhmRVBUM05zWDFmTVAwVDc2WXdXdkNna1hibi1DQmh3M09KdmdFV2xDMHdhd002enpIcWlhU2pxNFhGMXRvaXVHR3FfN19SVnhybk9wUkFCeGJWSFdJOTlGSWwteVdLRVNsVEFvV2FpSmR2cUxXanZIRVlpWlRLTHBpZ25iVnY?oc=5",
-       "source": "Yahoo Finance",
+       "key": "7367cef58a08b8a0",
+       "title": "Gulf Nation AI Ambitions Face Risks at Home and Abroad: New Economy - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQenM5eWEwSk50RHk0RjN4ZTBuaWRxcldjclBTMzFpUEtnZkRoODZ5Z3NzSVJXeWFrdHRTXzNZQURFMkFDd0NUaTVaVW13M0lJMnd1ZmZrelI5dEtjZnRFRi1QLVktODZyMEJ4S1hJanlueXFGNG9NU1dxSzBxVUFlZFVUQTN6eEhFX0U4bW1mcG5GVFhKamZRNHhQWE8xTER4VnFDbGFtSE04MWxNU1RnWlZmbHJCcTlmWTc5RQ?oc=5",
+       "source": "Bloomberg",
        "via": "Google News"
       }
      ]
@@ -813,133 +830,121 @@
    ],
    "items": [
     {
-     "url": "https://www.theguardian.com/world/live/2026/oct/24/france-demonstrations-police-macron-italy-albania-belgium-spain-ukraine-russia-europe-latest-news",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNS19XQmFPRGdGbURJQU91cjk2aGhKU3NGUWpKX0RqNWV5ellDV0RORmZOVmppQUZjdHdNb1QyTTV6NGdRbEdJV2ZsUURmaXg2UXVxdXhQb0hFWkpaQ3dURnAzMjRkbjhlNXp0NjYzNXY2d1lzYUFVRmM1UEdUNG03TGpReTJpLUgzTGhOa0hPSFRmVGVkQkJaN2hYMmZnQWNzVUkyUHktUQ?oc=5",
+     "source": "Il Sole 24 ORE",
+     "feed_name": "Topic: Milano",
+     "via": "Google News",
+     "published": "2026-10-24T10:22:28+00:00",
+     "new": true,
+     "key": "a804bcaa8d6ecca6",
+     "title": "Over 150 searches in Lombardy as Milan deploys nearly 1,500 officers and soldiers",
+     "summary": "More than 150 searches were carried out over unrest on 17 October as Milan prepared for demonstrations with nearly 1,500 officers and soldiers."
+    },
+    {
+     "url": "https://www.theguardian.com/world/2026/oct/24/seven-killed-and-40-injured-after-gunmen-open-fire-at-church-funeral-in-jordan",
      "source": "The Guardian World",
      "feed_name": "The Guardian World",
      "via": null,
-     "published": "2026-10-24T09:07:35+00:00",
+     "published": "2026-10-24T10:23:13+00:00",
      "new": true,
-     "key": "85a48481e4d46bd1",
-     "title": "Protests expected across France and Europe",
-     "summary": "France will deploy 70,000 officers as protests are expected across the country and several other European states."
+     "key": "4ebdb696244cb2ba",
+     "title": "Eight killed and 40 injured in gun attack at Jordan church funeral",
+     "summary": "Gunmen opened fire at a funeral at a Greek Orthodox church in Jordan, killing eight people and injuring 40."
     },
     {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/24/cortei-oltre-150-perquisizioni-a-milano-e-in-altre-20-citta_055c4167-ca82-44f5-85bb-882298320c3a.html",
+     "url": "https://www.lemonde.fr/international/article/2026/10/24/en-albanie-nouvelle-journee-de-mobilisation-pour-reclamer-la-demission-du-premier-ministre-edi-rama_6799688_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-10-24T10:00:27+00:00",
+     "new": true,
+     "key": "48470f269e906e0b",
+     "title": "Albanian protesters demand Prime Minister Rama’s resignation",
+     "summary": "A protest movement that began over a tourism project linked to Jared Kushner has broadened to demand Edi Rama’s resignation."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/24/farnesina-rimpatriate-le-cinque-italiane-fermate-in-cisgiordania_bda270f9-51b7-43df-ba68-b154f7aa6ace.html",
      "source": "ANSA Top News",
      "feed_name": "ANSA Top News",
      "via": null,
-     "published": "2026-10-24T08:01:55+00:00",
+     "published": "2026-10-24T10:04:22+00:00",
      "new": true,
-     "key": "b923c52782c0b5c2",
-     "title": "More than 150 searches as Milan braces for protests",
-     "summary": "Police carried out more than 150 searches in Milan and 20 other cities, with checks concentrated mainly in Lombardy."
+     "key": "5dafdfe6657e9a17",
+     "title": "Five Italian women detained in the West Bank repatriated",
+     "summary": "Italy’s foreign ministry said the five women were repatriated after consular officials visited them and found them in good condition."
     },
     {
-     "url": "https://www.lemonde.fr/idees/article/2026/10/24/en-israel-les-impasses-de-la-campagne-des-legislatives_6799681_3232.html",
+     "url": "https://www.lemonde.fr/planete/article/2026/10/24/tempete-austen-le-pas-de-calais-maintenu-en-vigilance-orange-pluie-inondation-120-000-foyers-sans-electricite-dans-l-ouest-et-le-nord_6799655_3245.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-10-24T08:30:05+00:00",
+     "published": "2026-10-24T10:12:09+00:00",
      "new": true,
-     "key": "37afbf3517e6b606",
-     "title": "Israel election campaign faces impasses",
-     "summary": "Ahead of Israel’s 27 October vote, centrist challenger Gadi Eisenkot has opposed a settlement plan associated with Benjamin Netanyahu."
+     "key": "8e24bd53bf0f45c3",
+     "title": "Storm warning issued in Pas-de-Calais as 120,000 homes lose power",
+     "summary": "Pas-de-Calais is under an orange rain-and-flood warning, while 120,000 homes in western and northern France are without electricity."
     },
     {
-     "url": "https://www.lemonde.fr/international/article/2026/10/24/presidentielle-au-bresil-flavio-bolsonaro-plus-police-lula-plus-offensif-lors-d-un-second-debat-crucial_6799678_3210.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-10-24T08:16:35+00:00",
-     "new": true,
-     "key": "deb0a2f51c942dd1",
-     "title": "Lula and Bolsonaro face crucial debate in Brazil",
-     "summary": "Brazilian presidential candidates Lula and Flávio Bolsonaro debated while polls showed them level."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZmtoT1R1NWh2TE9mXzFYNV9KSUszbF80NFBhUV9uVVF3aHhmRVBUM05zWDFmTVAwVDc2WXdXdkNna1hibi1DQmh3M09KdmdFV2xDMHdhd002enpIcWlhU2pxNFhGMXRvaXVHR3FfN19SVnhybk9wUkFCeGJWSFdJOTlGSWwteVdLRVNsVEFvV2FpSmR2cUxXanZIRVlpWlRLTHBpZ25iVnY?oc=5",
-     "source": "Yahoo Finance",
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQenM5eWEwSk50RHk0RjN4ZTBuaWRxcldjclBTMzFpUEtnZkRoODZ5Z3NzSVJXeWFrdHRTXzNZQURFMkFDd0NUaTVaVW13M0lJMnd1ZmZrelI5dEtjZnRFRi1QLVktODZyMEJ4S1hJanlueXFGNG9NU1dxSzBxVUFlZFVUQTN6eEhFX0U4bW1mcG5GVFhKamZRNHhQWE8xTER4VnFDbGFtSE04MWxNU1RnWlZmbHJCcTlmWTc5RQ?oc=5",
+     "source": "Bloomberg",
      "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-10-24T08:37:38+00:00",
+     "published": "2026-10-24T10:45:01+00:00",
      "new": true,
-     "key": "aa30b9b2245641da",
-     "title": "Swiss shares outperform as investors retreat from AI trade",
-     "summary": "Swiss stocks outperformed European markets as investors retreated from AI-related trades."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/24/kiev-starlink-e-stabile-e-ha-ripreso-le-operazioni-a-velocita-400kmh_3855b8bf-c459-4476-86ac-e7651c300481.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-10-24T08:21:47+00:00",
-     "new": true,
-     "key": "c6cb5167321e9f59",
-     "title": "Ukraine says Starlink operations have resumed at high speed",
-     "summary": "Ukraine’s defence ministry said Starlink was stable and had resumed operations at speeds of up to 400 km/h."
+     "key": "7367cef58a08b8a0",
+     "title": "Risks cloud Gulf nation’s AI ambitions",
+     "summary": "Bloomberg examines risks facing a Gulf nation’s ambitions in artificial intelligence."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-24T09:20:21.066383+00:00",
-   "input_fingerprint": "sha256:74d7390c3cd3f2843e93319525d4ed88e81a0f71984a3fac10b92d1cfd1db10e",
-   "last_success_at": "2026-10-24T09:20:21.066383+00:00",
-   "candidate_count": 429,
+   "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
+   "input_fingerprint": "sha256:b8acdea12ac1ce5d630f04206c3132f2fbd6913a819f481b4e1ca286b8eb1adc",
+   "last_success_at": "2026-10-24T11:01:25.223866+00:00",
+   "candidate_count": 424,
    "new_count": 6
   },
   "sport": {
    "briefing": [
     {
-     "text": "CulturePSG reports that the LFP has responded to the Paris police prefecture over PSG–Lyon, while the fixture has been shifted to an unusual time. The available reports do not explain the response or the reason for the change.",
+     "text": "Désiré Doué is attracting interest from clubs, sponsors and coaches across Europe, according to CulturePSG.",
      "sources": [
       {
-       "key": "022ac085489fefa7",
-       "title": "Match : La LFP a répondu à la PP pour PSG/OL - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMjVSNWtJTEJUV3B0eEl4ZHhHbmV2MEFvcTgtbnRhTU90QkJhb0pmUEVoWnZzcnJuMm80Vy1KYXRkWFA0SklzcGFhV0s1WlYwb3ZzeEEzX3Q4VTdHVWJWaW5JYUlLbVZjdGZmUUppWW5RdnhfWnoxTUNmWGJrR2pRckg0WV9sXzg?oc=5",
+       "key": "6be77d9bffc224f1",
+       "title": "Club : L'Europe, les sponsors, les coachs, tout le monde adore Doué - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdXNLQ2VvZ3Vod2otM2hCbWJWd0RPWmtOcHlxcnJRaDB1dmZiVWk4dlRtY1RsRktJNVJpR1hJSlBpbjE4RXlGYWlBTEhLOVJVSUlWZnhnU2JIeVAySmY4eEpJUkZ0dzhDZllVRTdyNVYycHFWUDZreWVfZDA0WGFmVHMyMG1sZHVKSWhfLXVsY1BXQ1JKcFRreVVUVVAxZGowZFVFeUJ3?oc=5",
        "source": "CulturePSG",
        "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The PSG–Lyon match has been moved to Monday, giving Lyon an extra day to prepare.",
+     "sources": [
+      {
+       "key": "053aa2d6c10add84",
+       "title": "Muet lors de ses trois derniers matches disputés un lundi face à des clubs de Ligue 1, le PSG va tenter de mettre fin à cette malédiction contre l'OL",
+       "url": "https://www.lequipe.fr/Football/Actualites/Muet-lors-de-ses-trois-derniers-matches-disputes-un-lundi-face-a-des-clubs-de-ligue-1-le-psg-va-tenter-de-mettre-fin-a-cette-malediction-contre-l-ol/1738269#at_medium=RSS_feeds",
+       "source": "L'Équipe",
+       "via": null
       },
       {
-       "key": "1ecd9f7b989ddf67",
-       "title": "Match : Le choc PSG/OL décalé à un horaire inhabituel - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeHdFRTNtZFc0RGNuWmZwRnQ2NFBRUXVJVkUtZkU3Q25xMWw3RlVvdGxabDFNajc0TGs1cktFdnNleVJnZld4R0FvUHBuLU12cG1SMkVQdzR1MVh3NGVHajJqd0VEalEzQWM5cldxSmo2em9POWVlcXZtSjhFLXYyV2xvY1ZyTGN1bWNteHljNjBxYnc?oc=5",
-       "source": "CulturePSG",
+       "key": "c385f41be8e46d1c",
+       "title": "PSG - OL : le report offre un jour de préparation supplémentaire - Olympique & Lyonnais",
+       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRWlFVjh6ZGtkUjc2WDhTUUFKWnZjcTVYQnh6T2RYcEtsM1hpbEdPc1dSN0w2X3VPZHkxOVplYUpCQk82eEJweTZ1d3N0dUJnM2RLM1hrTzBRajlFbURULVZvTGNTV0N2T28wTVMtU2RZckR0ZXd1ODg0dmhjSjZVbEhoeGJoTUpVc01YamFkVUJBX0YxVW9CODkzR2pKSDBtbHJiRWI4SHV5cXU0OFBR?oc=5",
+       "source": "Olympique & Lyonnais",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "CulturePSG says a Ballon d’Or evening was cancelled for some PSG members; the brief report gives no further details.",
+     "text": "PSG are set to earn a substantial sum from the Intercontinental Cup, though the report does not specify the amount.",
      "sources": [
       {
-       "key": "43c77bb701578919",
-       "title": "Club : Soirée Ballon d'Or annulée pour quelques membres du PSG - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYWd2V1JvLXdjb1dLVlJoMXJDd3RMNFdBTVlxclJSRTd3Wmw5YjhIM1k3Tkx0WjlxZG5SNkdiTlNJVmV5cGlIenVmN1ZlZzNWeTNGcG5OZ3lld1pjVWZWS0c2WHc1ai1raG1zNmowUktDQnZDRTcwVHlDRXo1SDF5VlZ0OGR6N2Fsazhud2JzWW11S1pqSXVCWFBKNFlqX2s?oc=5",
-       "source": "CulturePSG",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A report says PSG–Barcelona set a French record, though the candidate summary does not specify what record was broken.",
-     "sources": [
-      {
-       "key": "931d1fb442cdc954",
-       "title": "PSG – Barcelona breaks historic French record - Yahoo Sports",
-       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVmtKdjRfNmkzMEF2aDZXa3hJb3lJTGFrWHJUVGdSSmJHcWcwYjhKQ2xUMlFTNWdBUDhoMjczQm81YmgyTUVNNTZLRWFMNTB6LThkd1A5LXl0VTFETzJQWGlyUnZnYjl6bGVxSUk3OW5PNDZSTFd5eVdteUpsWlpXbHR0THRyU2Z2RDVMYXp3?oc=5",
-       "source": "Yahoo Sports",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "France’s women’s XV showed improvement against New Zealand but lost again in the WXV Global Series.",
-     "sources": [
-      {
-       "key": "384d45194096d5c9",
-       "title": "VIDEO. Women XV Global Series : nouveau revers mais du mieux pour les Bleues contre la Nouvelle-Zélande - franceinfo",
-       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOWGJESGJPeGNiZmVDVXFidTRlc1Z6dFlVQTE3UFh4ZHpERWxUazFoQXlVMnRLcTNUNjNfdFRJTFNoSnYydTRFU3UtUGdHZkt6clRVWUt4TEJKdi1QRWZGT3lYaHk0RWlaQXJOWGtLVDZuTFh1d2VXdE04a3FkY1ZYQ0I4bkJSTTdPaUxSb1FCMW5YNVFramFRejNtLUlTUC0wSDl4QjhGVl9PMGtEVGIzTkRCLUhHVURvX2l2ZEh4OG81MjhpTXlLNnRWRTFvYjJnbWRMMWdLaHhTUUx2VHUwSW9vWmlGN01IWDFsTjdBNTg?oc=5",
-       "source": "franceinfo",
+       "key": "c312a2ddf20a1809",
+       "title": "Coupe Intercontinentale - Le PSG va empocher une jolie somme grâce à cette compétition - MadeInParisiens",
+       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPdHJpbm0tRVZnbzV1a1pfVDctVzZ4ZWpaNzYySWhLRndTRG1BSkYzc3RUbm01QXdEZ3lBN1lUcXBMYzNhRFNpZkNmR3huV2wzWjdnX2lJbDVZRHJXSks3Z3JMQVcxVjlfLV9WWnpmMlVkN2QxNUFDeTZ1SkZwazhpS0Jjd2owZlJicDJXRHphWWJheURLX29wVFE3M3Z3TW03bWh6S2trV2ppLWRGOHVRR2w3QUtYTWY2dXZ0TXdnM1ZlUVA2YkJLdDNJYU9POERBVWltWWNrZVFJbk1YZnFHNkZ0Sks?oc=5",
+       "source": "MadeInParisiens",
        "via": "Google News"
       }
      ]
@@ -947,219 +952,212 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMjVSNWtJTEJUV3B0eEl4ZHhHbmV2MEFvcTgtbnRhTU90QkJhb0pmUEVoWnZzcnJuMm80Vy1KYXRkWFA0SklzcGFhV0s1WlYwb3ZzeEEzX3Q4VTdHVWJWaW5JYUlLbVZjdGZmUUppWW5RdnhfWnoxTUNmWGJrR2pRckg0WV9sXzg?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdXNLQ2VvZ3Vod2otM2hCbWJWd0RPWmtOcHlxcnJRaDB1dmZiVWk4dlRtY1RsRktJNVJpR1hJSlBpbjE4RXlGYWlBTEhLOVJVSUlWZnhnU2JIeVAySmY4eEpJUkZ0dzhDZllVRTdyNVYycHFWUDZreWVfZDA0WGFmVHMyMG1sZHVKSWhfLXVsY1BXQ1JKcFRreVVUVVAxZGowZFVFeUJ3?oc=5",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-23T07:34:00+00:00",
+     "published": "2026-10-24T09:27:00+00:00",
      "new": true,
-     "key": "022ac085489fefa7",
-     "title": "The LFP responds to the police prefecture over PSG–Lyon",
-     "summary": "CulturePSG reports that the LFP responded to the police prefecture concerning PSG–Lyon."
+     "key": "6be77d9bffc224f1",
+     "title": "Doué attracts attention across Europe",
+     "summary": "CulturePSG reports that clubs, sponsors and coaches across Europe are showing strong interest in Désiré Doué."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYWd2V1JvLXdjb1dLVlJoMXJDd3RMNFdBTVlxclJSRTd3Wmw5YjhIM1k3Tkx0WjlxZG5SNkdiTlNJVmV5cGlIenVmN1ZlZzNWeTNGcG5OZ3lld1pjVWZWS0c2WHc1ai1raG1zNmowUktDQnZDRTcwVHlDRXo1SDF5VlZ0OGR6N2Fsazhud2JzWW11S1pqSXVCWFBKNFlqX2s?oc=5",
-     "source": "CulturePSG",
+     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1wbXpCYlI3TGFrMXN2WXZZNTB6OWkwUXZOUXVlcmZhQ2RNbS1mT3lSSzZSb0NtQURZNnZSQ1V6OVUyanQ5UkZKaEo5N1J5MkVXajZra3BLVnAwSjFjRnlDUThEZlJlNzJQY2U2b3dXOW1Uand4bmlQRE04Yw?oc=5",
+     "source": "Forum de Culture PSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-24T08:50:00+00:00",
+     "published": "2026-10-23T09:24:02+00:00",
      "new": true,
-     "key": "43c77bb701578919",
-     "title": "Ballon d’Or evening cancelled for some PSG members",
-     "summary": "CulturePSG reports that a Ballon d’Or evening was cancelled for some PSG members."
+     "key": "8a295fac936c55b1",
+     "title": "[Ligue 1] Paris Saint-Germain - Olympique Lyonnais, J8 , Dimanche 25 octobre ? - 20h45 - Ligue 1+ - Forum de Culture PSG",
+     "summary": "[Ligue 1] Paris Saint-Germain - Olympique Lyonnais, J8 , Dimanche 25 octobre ? - 20h45 - Ligue 1+ Forum de Culture PSG"
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVmtKdjRfNmkzMEF2aDZXa3hJb3lJTGFrWHJUVGdSSmJHcWcwYjhKQ2xUMlFTNWdBUDhoMjczQm81YmgyTUVNNTZLRWFMNTB6LThkd1A5LXl0VTFETzJQWGlyUnZnYjl6bGVxSUk3OW5PNDZSTFd5eVdteUpsWlpXbHR0THRyU2Z2RDVMYXp3?oc=5",
-     "source": "Yahoo Sports",
-     "feed_name": "Team: Champions League",
-     "via": "Google News",
-     "published": "2026-10-24T09:00:00+00:00",
+     "url": "https://www.lequipe.fr/Football/Actualites/Muet-lors-de-ses-trois-derniers-matches-disputes-un-lundi-face-a-des-clubs-de-ligue-1-le-psg-va-tenter-de-mettre-fin-a-cette-malediction-contre-l-ol/1738269#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
+     "via": null,
+     "published": "2026-10-24T10:30:12+00:00",
      "new": true,
-     "key": "931d1fb442cdc954",
-     "title": "PSG–Barcelona sets a French record",
-     "summary": "A report says the PSG–Barcelona match broke a historic French record."
+     "key": "053aa2d6c10add84",
+     "title": "PSG–Lyon moved to Monday",
+     "summary": "The PSG–Lyon match was postponed to Monday, when PSG will try to end a run of three goalless Monday games against Ligue 1 clubs."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOWGJESGJPeGNiZmVDVXFidTRlc1Z6dFlVQTE3UFh4ZHpERWxUazFoQXlVMnRLcTNUNjNfdFRJTFNoSnYydTRFU3UtUGdHZkt6clRVWUt4TEJKdi1QRWZGT3lYaHk0RWlaQXJOWGtLVDZuTFh1d2VXdE04a3FkY1ZYQ0I4bkJSTTdPaUxSb1FCMW5YNVFramFRejNtLUlTUC0wSDl4QjhGVl9PMGtEVGIzTkRCLUhHVURvX2l2ZEh4OG81MjhpTXlLNnRWRTFvYjJnbWRMMWdLaHhTUUx2VHUwSW9vWmlGN01IWDFsTjdBNTg?oc=5",
-     "source": "franceinfo",
-     "feed_name": "Team: XV de France rugby",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRWlFVjh6ZGtkUjc2WDhTUUFKWnZjcTVYQnh6T2RYcEtsM1hpbEdPc1dSN0w2X3VPZHkxOVplYUpCQk82eEJweTZ1d3N0dUJnM2RLM1hrTzBRajlFbURULVZvTGNTV0N2T28wTVMtU2RZckR0ZXd1ODg0dmhjSjZVbEhoeGJoTUpVc01YamFkVUJBX0YxVW9CODkzR2pKSDBtbHJiRWI4SHV5cXU0OFBR?oc=5",
+     "source": "Olympique & Lyonnais",
+     "feed_name": "Team: PSG",
      "via": "Google News",
-     "published": "2026-10-24T07:32:14+00:00",
+     "published": "2026-10-24T10:40:00+00:00",
      "new": true,
-     "key": "384d45194096d5c9",
-     "title": "France improve but lose to New Zealand in the WXV Global Series",
-     "summary": "France’s women’s XV showed improvement but lost again against New Zealand in the WXV Global Series."
+     "key": "c385f41be8e46d1c",
+     "title": "Lyon gain an extra day to prepare for PSG",
+     "summary": "The postponement gives Olympique Lyonnais an additional day to prepare for the match against PSG."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPdHJpbm0tRVZnbzV1a1pfVDctVzZ4ZWpaNzYySWhLRndTRG1BSkYzc3RUbm01QXdEZ3lBN1lUcXBMYzNhRFNpZkNmR3huV2wzWjdnX2lJbDVZRHJXSks3Z3JMQVcxVjlfLV9WWnpmMlVkN2QxNUFDeTZ1SkZwazhpS0Jjd2owZlJicDJXRHphWWJheURLX29wVFE3M3Z3TW03bWh6S2trV2ppLWRGOHVRR2w3QUtYTWY2dXZ0TXdnM1ZlUVA2YkJLdDNJYU9POERBVWltWWNrZVFJbk1YZnFHNkZ0Sks?oc=5",
+     "source": "MadeInParisiens",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-10-24T09:32:00+00:00",
+     "new": true,
+     "key": "c312a2ddf20a1809",
+     "title": "PSG set for Intercontinental Cup windfall",
+     "summary": "PSG are expected to receive a significant sum from the Intercontinental Cup."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-24T09:20:21.066383+00:00",
-   "input_fingerprint": "sha256:265f177832f31eeb77cde96764c05749501fd91b5f8aa7f37f6a3f4f6d86e8e2",
-   "last_success_at": "2026-10-24T09:20:21.066383+00:00",
-   "candidate_count": 198,
-   "new_count": 4
+   "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
+   "input_fingerprint": "sha256:49321baa617bfd4ad8daa8ed053a3c255ffaf4772170196d0bca734c2f6e0313",
+   "last_success_at": "2026-10-24T11:01:25.223866+00:00",
+   "candidate_count": 219,
+   "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "France faces renewed unrest alongside mounting fiscal and political strain, a combination that could keep domestic risk in focus for investors.",
+     "text": "French corporate bond yields are converging with—and in some cases falling below—sovereign yields, a notable shift in relative credit pricing.",
      "sources": [
       {
-       "key": "cbff8c5828c8124e",
-       "title": "France is looking ungovernable. And it’s going to get worse",
-       "url": "https://www.ft.com/content/62b83fcf-efad-418d-ba6a-569344fa7ecb",
+       "key": "6b3961efdeae9688",
+       "title": "French government and corporate bond yields are converging",
+       "url": "https://www.ft.com/content/473c0e0b-d4f7-449c-9192-648b82077222?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "In Italy, Norges is opposing Siena’s takeover bids involving Banco BPM and Banca Generali; antitrust authorities have also signalled remedies for Intesa-MPS.",
+     "sources": [
+      {
+       "key": "19069c7ecc3129aa",
+       "title": "Mps, il fondo Norges contro le Ops di Siena su Bpm e Banca Generali",
+       "url": "https://www.ilsole24ore.com/art/mps-fondo-norges-contro-ops-siena-bpm-e-banca-generali-AJxJiTtB",
+       "source": "Il Sole 24 Ore Finanza",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Swiss equities are attracting attention as investors seek shelter from market turbulence tied to AI concerns.",
+     "sources": [
+      {
+       "key": "b5a8bf0780f7a4c8",
+       "title": "Swiss Stocks Are Becoming a Haven From AI Fears Roiling Markets - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbzFYQ092SkZUUExOVUVnU3YwbHJ5UWdxUHVSNjRDOFlaZGs2RUs2RTBMMG9WaDVNcHFzb2xhd0pkSHF6TnpEekxtR01iUFVWekJVTjg3blVMZlZ2MlB5Nmo1RjlsYV8xRFF5VWZBWHBhVWtQYTJXdHV6bkV2Y1lGOWNFSG9CUHFnUDQ3TU9DNTNlMEhVdm5STnpwM3FHUVMtaE5ib184NmdqUHVycFpOTC1oV3k?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The UK’s Andy Burnham is testing Labour’s support for a budget framed around bond-market constraints, while a separate plan would add £20bn to public business and infrastructure lending.",
+     "sources": [
+      {
+       "key": "dc0f411870ad50a6",
+       "title": "Andy Burnham Tests Labour Loyalty With Budget Built for Bond Market - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQTjlMbGpqOHdpeFhGVjMyT3p3MWhDNThqRm9NcGI2WW93SkdBZjdfLVE2QjNMenFlNlRoTlBLU0hWMy02ZE9rZS1JbDAtSkZTYmhXUS1CLUxNUHpGcVhEb1JkUnY0WE9sWldZRm02bWRtUDNIUlRGMy02QkV1LUtlTUo5VE1xaWJMOHV5QU0xenR6eTFWdDc2QVdLZUg3dGQ5bVIzRXRhMmJDaC1zcGtBbnlnQ0JVNjVwemc?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      },
+      {
+       "key": "ffc753f04d91248a",
+       "title": "John Healey to give £20bn boost to UK’s business lender and infrastructure bank - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOX3VYLWczWFVpajlsVE43Mm9JZXNCdWhLOGNZQ3VubUpBUDJIN3RmRWVKaW5zeWVOMk10VUZjZm5EeUhXbE9JeDYtMTJETm9mdTVGT2NoTVVUd1FSR3BOSlRSY2hiUXZ5VXdRRGNWY1RTb0tGNUx1b21JX2pFZzBqS1BRY2c?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A reported slowdown in Starlink communications had hampered Ukraine’s defence against Russian strikes before service restrictions were removed.",
+     "sources": [
+      {
+       "key": "bea0eb181b66e1b6",
+       "title": "Ukraine military says Starlink service restrictions have been removed",
+       "url": "https://www.ft.com/content/5b5592f4-c59d-4eb1-af78-078dc32fcab8",
        "source": "FT",
        "via": null
-      }
-     ]
-    },
-    {
-     "text": "UK budget expectations are benefiting from a possible easing in global bond-market pressure; separately, the government plans a £20bn capital boost for two state-backed lenders.",
-     "sources": [
-      {
-       "key": "84b09e06d4c6c589",
-       "title": "A little bit of luck is lifting UK Budget expectations",
-       "url": "https://www.ft.com/content/6a059ab0-a9fc-4e4c-8ae7-1d110faf5adf",
-       "source": "FT Markets",
-       "via": null
-      },
-      {
-       "key": "39b1523f9d22ec7e",
-       "title": "UK's Healey to give two state-backed lenders £20 billion capital boost in budget - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVlkwNlhJbDZMSlFaZnpESjFQMnk5aS0zaE1ZWm43RnVTbFhENWR5bUk4b0tldXZzU1BHbF9EbXBHaWtGSDZKZ2dMN2syS2p3bVdTallROTZhNFJ1MVpzSmdtZ3JtWC1oNnRBYzN2blp6cU9rR2xiYm1fdUdXWnRzZUZyUm9TQjQzWWp6VXhSV29mZld5WURwV0J2TlJMeG9zTkFaWTJ1VUJaOE4za090Qk1QYlRHa2ZUdnBZemgzU2tVRWs?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Competition among US exchanges is intensifying as ETF growth and derivative-heavy funds reshape where companies choose to list.",
-     "sources": [
-      {
-       "key": "a6479351b7de337e",
-       "title": "‘Disrupter’ exchanges battle for ETFs in challenge to NYSE and Nasdaq",
-       "url": "https://www.ft.com/content/8dd8e115-c45e-4b66-8390-b5eeea4671d5?syn-25a6b1a6=1",
-       "source": "FT Markets",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "AI-related job cuts are spreading across banking, while S&P index-rule changes are set to trigger a reshuffle between growth and value classifications.",
-     "sources": [
-      {
-       "key": "94a16ba60371d64a",
-       "title": "Les suppressions de postes liées à l'IA se multiplient dans le secteur bancaire - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOOHliQl90MVRUdzhVb1FHRGl0dm1leUQwU1pnTnhTNVdBVUF4VVBrZnNFTW1CNTlDdDlMS0RQd3dFbGt1Vmd1M2hCYm1sV0pDcXNTUWYtRFVVUFhEdVA4cW52aUgwMTlIeEdTd1ZjSmE5eWRkSnZQMGE1M213TzQ3aE1lUDVuRUlpckNXWmtSZlNMbF95ZkF3WlRYM1VCZkpQRUJRSzZkYzdwcFA0ZGtPSk9fT1pGcFlPamctRkZuVV9mZlBVVE44dDh3RjhJYmhpM3RDdi1ZRVZrXzh3?oc=5",
-       "source": "Les Echos",
-       "via": "Google News"
-      },
-      {
-       "key": "23e3aee6d09c0a9c",
-       "title": "Growth, Value Stocks Set for Reshuffle as S&P Adopts New Rules - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZ2tqajltVGJCblkydEtiYktvUXZidnBETVNhUVU0cUFhTzNFTXZtdjJhQThEYUh2UHRRQWxMTEFTTldvT2NJUV9RdzhsYmhhaFhEb0U1MVBVS2pqYlc3eG5PR1doYWVVeGlHckZoamg1MXg3VW9pYzhwUmxSTmJ1OGozY01pX2lYSjF1ZjF1alBFN3BWUnBQWi1xMVczbWo3bmRSaU1TZWUzMXp0UU1IYWRB?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "JetBlue creditors are working with restructuring adviser PJT Partners, according to a Reuters report citing the Wall Street Journal.",
-     "sources": [
-      {
-       "key": "80e414c1f774c3ad",
-       "title": "JetBlue creditors working with restructuring adviser PJT Partners, WSJ reports - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMFR5TDg3MnpoV0ZfYXVnWUR6MVI4RURsX0VaTFV1WDc3SDk1eUI0TWdwaGhvQ0RxS2JUTGJidzBTLUdJam9obUxmNnRUTVFJY18zY2dWQVl4UGFNbGg0U2dQOGx0UTh1SU02RGdKbV9jZk5EeHB4M3BlQW9rN1BzclZOWFNZZUxLNC1zMHp6amRxQ3hzSnVfZlpEUmxsRWtNM256cFMtV3VIdmZqckJxd1ZSMm1IUkMxNEpnenc2aw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/62b83fcf-efad-418d-ba6a-569344fa7ecb",
+     "url": "https://www.ft.com/content/473c0e0b-d4f7-449c-9192-648b82077222?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-10-24T09:30:04+00:00",
+     "new": true,
+     "key": "6b3961efdeae9688",
+     "title": "French corporate and government bond yields converge",
+     "summary": "Some French corporate bonds now yield less than government bonds."
+    },
+    {
+     "url": "https://www.ilsole24ore.com/art/mps-fondo-norges-contro-ops-siena-bpm-e-banca-generali-AJxJiTtB",
+     "source": "Il Sole 24 Ore Finanza",
+     "feed_name": "Il Sole 24 Ore Finanza",
+     "via": null,
+     "published": "2026-10-24T09:17:00+00:00",
+     "new": true,
+     "key": "19069c7ecc3129aa",
+     "title": "Norges opposes Siena bids involving Banco BPM and Banca Generali",
+     "summary": "Norges is against Siena’s takeover bids; antitrust authorities have signalled remedies for the Intesa-MPS operation."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbzFYQ092SkZUUExOVUVnU3YwbHJ5UWdxUHVSNjRDOFlaZGs2RUs2RTBMMG9WaDVNcHFzb2xhd0pkSHF6TnpEekxtR01iUFVWekJVTjg3blVMZlZ2MlB5Nmo1RjlsYV8xRFF5VWZBWHBhVWtQYTJXdHV6bkV2Y1lGOWNFSG9CUHFnUDQ3TU9DNTNlMEhVdm5STnpwM3FHUVMtaE5ib184NmdqUHVycFpOTC1oV3k?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-24T07:00:00+00:00",
+     "new": true,
+     "key": "b5a8bf0780f7a4c8",
+     "title": "Swiss stocks attract investors amid AI-market fears",
+     "summary": "Swiss stocks are becoming a haven as AI concerns roil markets."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQTjlMbGpqOHdpeFhGVjMyT3p3MWhDNThqRm9NcGI2WW93SkdBZjdfLVE2QjNMenFlNlRoTlBLU0hWMy02ZE9rZS1JbDAtSkZTYmhXUS1CLUxNUHpGcVhEb1JkUnY0WE9sWldZRm02bWRtUDNIUlRGMy02QkV1LUtlTUo5VE1xaWJMOHV5QU0xenR6eTFWdDc2QVdLZUg3dGQ5bVIzRXRhMmJDaC1zcGtBbnlnQ0JVNjVwemc?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-24T05:00:00+00:00",
+     "new": true,
+     "key": "dc0f411870ad50a6",
+     "title": "Burnham’s budget tests Labour’s bond-market priorities",
+     "summary": "Andy Burnham is testing Labour loyalty with a budget built for bond-market concerns."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOX3VYLWczWFVpajlsVE43Mm9JZXNCdWhLOGNZQ3VubUpBUDJIN3RmRWVKaW5zeWVOMk10VUZjZm5EeUhXbE9JeDYtMTJETm9mdTVGT2NoTVVUd1FSR3BOSlRSY2hiUXZ5VXdRRGNWY1RTb0tGNUx1b21JX2pFZzBqS1BRY2c?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
+     "published": "2026-10-23T23:01:00+00:00",
+     "new": true,
+     "key": "ffc753f04d91248a",
+     "title": "UK plans £20bn boost for business lender and infrastructure bank",
+     "summary": "John Healey plans a £20bn boost for the UK’s business lender and infrastructure bank."
+    },
+    {
+     "url": "https://www.ft.com/content/5b5592f4-c59d-4eb1-af78-078dc32fcab8",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-10-24T04:00:23+00:00",
+     "published": "2026-10-24T10:20:39+00:00",
      "new": true,
-     "key": "cbff8c5828c8124e",
-     "title": "France is looking ungovernable, and it’s going to get worse",
-     "summary": "France faces disorder and political uncertainty as the country struggles with fiscal pressures."
-    },
-    {
-     "url": "https://www.ft.com/content/6a059ab0-a9fc-4e4c-8ae7-1d110faf5adf",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-10-24T04:00:33+00:00",
-     "new": true,
-     "key": "84b09e06d4c6c589",
-     "title": "A little bit of luck is lifting UK Budget expectations",
-     "summary": "UK budget expectations have improved as this year’s pressure on global bonds appears to be easing."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVlkwNlhJbDZMSlFaZnpESjFQMnk5aS0zaE1ZWm43RnVTbFhENWR5bUk4b0tldXZzU1BHbF9EbXBHaWtGSDZKZ2dMN2syS2p3bVdTallROTZhNFJ1MVpzSmdtZ3JtWC1oNnRBYzN2blp6cU9rR2xiYm1fdUdXWnRzZUZyUm9TQjQzWWp6VXhSV29mZld5WURwV0J2TlJMeG9zTkFaWTJ1VUJaOE4za090Qk1QYlRHa2ZUdnBZemgzU2tVRWs?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-24T00:54:00+00:00",
-     "new": true,
-     "key": "39b1523f9d22ec7e",
-     "title": "UK to give two state-backed lenders £20bn capital boost in budget",
-     "summary": "The UK plans to provide £20bn in capital to two state-backed lenders."
-    },
-    {
-     "url": "https://www.ft.com/content/8dd8e115-c45e-4b66-8390-b5eeea4671d5?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-10-24T04:00:04+00:00",
-     "new": true,
-     "key": "a6479351b7de337e",
-     "title": "Disrupter exchanges battle for ETFs in challenge to NYSE and Nasdaq",
-     "summary": "Cboe has captured nearly half of US listings as competition grows alongside derivative-heavy funds."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOOHliQl90MVRUdzhVb1FHRGl0dm1leUQwU1pnTnhTNVdBVUF4VVBrZnNFTW1CNTlDdDlMS0RQd3dFbGt1Vmd1M2hCYm1sV0pDcXNTUWYtRFVVUFhEdVA4cW52aUgwMTlIeEdTd1ZjSmE5eWRkSnZQMGE1M213TzQ3aE1lUDVuRUlpckNXWmtSZlNMbF95ZkF3WlRYM1VCZkpQRUJRSzZkYzdwcFA0ZGtPSk9fT1pGcFlPamctRkZuVV9mZlBVVE44dDh3RjhJYmhpM3RDdi1ZRVZrXzh3?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
-     "via": "Google News",
-     "published": "2026-10-24T06:30:14+00:00",
-     "new": true,
-     "key": "94a16ba60371d64a",
-     "title": "AI-linked job cuts spread across banking",
-     "summary": "Les Echos reports that AI-related job cuts are multiplying in the banking sector."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZ2tqajltVGJCblkydEtiYktvUXZidnBETVNhUVU0cUFhTzNFTXZtdjJhQThEYUh2UHRRQWxMTEFTTldvT2NJUV9RdzhsYmhhaFhEb0U1MVBVS2pqYlc3eG5PR1doYWVVeGlHckZoamg1MXg3VW9pYzhwUmxSTmJ1OGozY01pX2lYSjF1ZjF1alBFN3BWUnBQWi1xMVczbWo3bmRSaU1TZWUzMXp0UU1IYWRB?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-24T00:12:00+00:00",
-     "new": true,
-     "key": "23e3aee6d09c0a9c",
-     "title": "Growth and value stocks set for reshuffle as S&P adopts new rules",
-     "summary": "New S&P rules will change how stocks are classified as growth or value."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMFR5TDg3MnpoV0ZfYXVnWUR6MVI4RURsX0VaTFV1WDc3SDk1eUI0TWdwaGhvQ0RxS2JUTGJidzBTLUdJam9obUxmNnRUTVFJY18zY2dWQVl4UGFNbGg0U2dQOGx0UTh1SU02RGdKbV9jZk5EeHB4M3BlQW9rN1BzclZOWFNZZUxLNC1zMHp6amRxQ3hzSnVfZlpEUmxsRWtNM256cFMtV3VIdmZqckJxd1ZSMm1IUkMxNEpnenc2aw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-23T22:48:00+00:00",
-     "new": true,
-     "key": "80e414c1f774c3ad",
-     "title": "JetBlue creditors work with restructuring adviser PJT Partners",
-     "summary": "JetBlue creditors are working with restructuring adviser PJT Partners, Reuters reports, citing the Wall Street Journal."
+     "key": "bea0eb181b66e1b6",
+     "title": "Ukraine says Starlink restrictions have been removed",
+     "summary": "Ukraine’s military said Starlink restrictions that hampered defence against Russian strikes have been removed."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-24T09:20:21.066383+00:00",
-   "input_fingerprint": "sha256:fe0554ef05dcd4340549d017f9d69f1e4a8bce2095c18445bca93815ac59ff99",
-   "last_success_at": "2026-10-24T09:20:21.066383+00:00",
+   "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
+   "input_fingerprint": "sha256:71751bd6ce3030f0d1da59ac5e9c684f63115f2da57fe214b47e6d9928a153a3",
+   "last_success_at": "2026-10-24T11:01:25.223866+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1175,10 +1173,10 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 738.22,
-     "change_pct": -0.91,
+     "price": 738.04,
+     "change_pct": -0.02,
      "currency": "EUR",
-     "as_of": "2026-10-21T22:00:00+00:00",
+     "as_of": "2026-10-22T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1186,10 +1184,10 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 108.02,
-     "change_pct": 0.35,
+     "price": 108.28,
+     "change_pct": 0.24,
      "currency": "EUR",
-     "as_of": "2026-10-21T22:00:00+00:00",
+     "as_of": "2026-10-22T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1197,10 +1195,10 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 288.4,
-     "change_pct": -1.18,
+     "price": 288.35,
+     "change_pct": -0.02,
      "currency": "EUR",
-     "as_of": "2026-10-21T22:00:00+00:00",
+     "as_of": "2026-10-22T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1208,10 +1206,10 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 314.8,
-     "change_pct": -1.12,
+     "price": 313.9,
+     "change_pct": -0.29,
      "currency": "EUR",
-     "as_of": "2026-10-21T22:00:00+00:00",
+     "as_of": "2026-10-22T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1219,10 +1217,10 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 8.77,
-     "change_pct": -2.56,
+     "price": 8.79,
+     "change_pct": 0.24,
      "currency": "EUR",
-     "as_of": "2026-10-21T22:00:00+00:00",
+     "as_of": "2026-10-22T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1230,10 +1228,10 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 50.92,
-     "change_pct": -3.71,
+     "price": 50.87,
+     "change_pct": -0.1,
      "currency": "EUR",
-     "as_of": "2026-10-21T22:00:00+00:00",
+     "as_of": "2026-10-22T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1241,10 +1239,10 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 70.2,
-     "change_pct": -1.83,
+     "price": 69.22,
+     "change_pct": -1.39,
      "currency": "EUR",
-     "as_of": "2026-10-21T22:00:00+00:00",
+     "as_of": "2026-10-22T22:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1252,8 +1250,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 80467.09,
-     "change_pct": -0.75,
+     "price": 80555.67,
+     "change_pct": -0.64,
      "currency": "USD",
      "as_of": "2026-10-24T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1263,8 +1261,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2358.92,
-     "change_pct": -1.06,
+     "price": 2366.6,
+     "change_pct": -0.73,
      "currency": "USD",
      "as_of": "2026-10-24T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1273,7 +1271,7 @@
     }
    ],
    "candidate_count": 262,
-   "new_count": 7
+   "new_count": 6
   },
   "media": {
    "briefing": "",
@@ -1285,7 +1283,7 @@
      "kind": "video",
      "published": "2026-10-23T23:00:12+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "6addb7010f3a8a8a"
     },
     {
@@ -1295,7 +1293,7 @@
      "kind": "video",
      "published": "2026-10-23T17:00:23+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "97c2a4d53988efdb"
     },
     {
@@ -1421,10 +1419,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-10-24T09:20:21.066383+00:00",
+   "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
    "candidate_count": 14,
-   "new_count": 2
+   "new_count": 0
   }
  },
- "scheduled_slot": "2026-10-24T05:00:00Z"
+ "scheduled_slot": "2026-10-24T11:00:00.000Z"
 }
