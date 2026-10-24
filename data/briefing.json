@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261024T110125223866Z",
- "generated_at": "2026-10-24T11:01:25.223866+00:00",
- "generated_local": "Sat 24 Oct 2026, 13:01",
- "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
+ "edition_id": "ed-20261024T170125855523Z",
+ "generated_at": "2026-10-24T17:01:25.855523+00:00",
+ "generated_local": "Sat 24 Oct 2026, 19:01",
+ "source_checked_at": "2026-10-24T17:01:25.855523+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-10-24T11:01:25.223866+00:00"
+  "run-2026-10-24T17:01:25.855523+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-10-24T11:01:25.223866+00:00"
+  "completed_at": "2026-10-24T17:01:25.855523+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 26,
+   "item_count": 30,
    "reason": null,
    "failure": null,
-   "parsed_count": 26,
+   "parsed_count": 30,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 101,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 101,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -153,10 +153,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 39,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 39,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -189,10 +189,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 110,
+   "item_count": 109,
    "reason": null,
    "failure": null,
-   "parsed_count": 110,
+   "parsed_count": 109,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 109,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 109,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -225,10 +225,10 @@
    "name": "Team: XV de France rugby",
    "section": "sport",
    "status": "ok",
-   "item_count": 99,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 99,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -249,10 +249,10 @@
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 52,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 52,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -622,8 +622,8 @@
    "section": "media",
    "status": "unavailable",
    "item_count": 0,
-   "reason": "ConnectionError",
-   "failure": "transport",
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
    "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
@@ -684,9 +684,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002312,
-  "est_month_usd": 0.21,
-  "forecast_month_usd": 0.21,
+  "est_cost_usd": 0.002277,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,60 +694,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 11021,
+    "latency_ms": 9632,
     "unknown": false,
     "provider_request_ids": [
-     "resp_06576a3bab4f06ec016adc901dae9087d19cddfa235b633f67"
+     "resp_0e7092ecb3b5fbde016adce46e222087d1b5fd754457639c01"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3704,
-    "output_tokens": 811,
-    "reasoning_tokens": 300
+    "cache_write_tokens": 3637,
+    "output_tokens": 587,
+    "reasoning_tokens": 167
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8239,
+    "latency_ms": 15644,
     "unknown": false,
     "provider_request_ids": [
-     "resp_041b2201c26fa2a4016adc9027aed887d19312e4fa420f1b6c"
+     "resp_0acd5ff350cac5b4016adce476ff6887d19d6ed36bf45a04d8"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3443,
-    "output_tokens": 585,
-    "reasoning_tokens": 308
+    "cache_write_tokens": 3715,
+    "output_tokens": 724,
+    "reasoning_tokens": 268
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8251,
+    "latency_ms": 8189,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0526ad2572a463b3016adc902ff20487d1b27bac749697989d"
+     "resp_054407709d9232e2016adce486aa5c87d1bc98f1c1ce60dfd0"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3173,
-    "output_tokens": 646,
-    "reasoning_tokens": 227
+    "cache_write_tokens": 3399,
+    "output_tokens": 554,
+    "reasoning_tokens": 263
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10320,
-  "output_tokens": 2042,
-  "reasoning_tokens": 835,
+  "cache_write_tokens": 10751,
+  "output_tokens": 1865,
+  "reasoning_tokens": 698,
   "recorded_month_to_date": {
    "month_utc": "2026-10",
-   "recorded_runs": 98,
-   "attempts": 294,
-   "known_cost_usd": 0.220099,
+   "recorded_runs": 99,
+   "attempts": 297,
+   "known_cost_usd": 0.222376,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,73 +756,68 @@
   "news": {
    "briefing": [
     {
-     "text": "Milan is under heavy security ahead of demonstrations, with nearly 1,500 police and soldiers deployed and more than 150 searches linked to unrest on 17 October.",
+     "text": "France saw large demonstrations, with turnout estimates sharply diverging: the interior ministry counted about 410,000 people nationwide, while the CGT claimed more than 800,000; clashes were reported in several cities.",
      "sources": [
       {
-       "key": "a804bcaa8d6ecca6",
-       "title": "Oltre 150 perquisizioni in Lombardia per i disordini del 17 ottobre. Il presidio per i cortei di oggi: a Milano quasi 1.500 tra agenti e militari - Il Sole 24 ORE",
-       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNS19XQmFPRGdGbURJQU91cjk2aGhKU3NGUWpKX0RqNWV5ellDV0RORmZOVmppQUZjdHdNb1QyTTV6NGdRbEdJV2ZsUURmaXg2UXVxdXhQb0hFWkpaQ3dURnAzMjRkbjhlNXp0NjYzNXY2d1lzYUFVRmM1UEdUNG03TGpReTJpLUgzTGhOa0hPSFRmVGVkQkJaN2hYMmZnQWNzVUkyUHktUQ?oc=5",
-       "source": "Il Sole 24 ORE",
+       "key": "547d0b474a89187d",
+       "title": "EN DIRECT, manifestations du 24 octobre : près de 410 000 personnes mobilisées en France, selon le ministère de l’intérieur, plus de 800 000, selon la CGT",
+       "url": "https://www.lemonde.fr/societe/live/2026/10/24/en-direct-manifestations-du-24-octobre-pres-de-410-000-personnes-mobilisees-en-france-selon-le-ministere-de-l-interieur-plus-de-800-000-selon-la-cgt_6799445_3224.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Protests across Italy included clashes in Turin and Bologna and police tensions during demonstrations in Milan, among other cities.",
+     "sources": [
+      {
+       "key": "9b1cbce15839f1a4",
+       "title": "Cortei, scontri a Torino e Bologna: lanci di pietre e bottiglie e cariche. Migliaia di studenti in corteo a Milano, tensioni con la polizia - Il Messaggero",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOFhWYXpDZEgxZldNd3ZIcVFUdG4yamlLNDMzRzdGeWNZMWVKb3I3Umg3bGh4NkEtckFWQ0R4LU1Kd2xHc09rZklNc1VOY3I2YVZOU2tvQi1BX1FaYnBJdV9CODFGaHpwanB5RDVVdkdIN21xZ0RXcVVLUVpoNDdNZDJyR2Y4elo1QkRWa0cwMXJ4eFlLWWV0OHVyNTg1SmtEZkdtWG5HX0haMWxSUzdSZ3c0TdIBuAFBVV95cUxOeWNXTjJtazlSa3RjLVB0N0hwMUh6b0F2T3Vya3h4RGprYVdRbE1rWWlMamt5UjJFU3RYUW1zckc5SGg3SmpUUEpvVnByTGVLZDFyUEhEeEJUc0JuczlxN01VQjNtTE4tcWxCb3RKQkJfeXNWczJkQUFaQzZzQWZveTUwRTljTElzbmZuQ2hQY3FSUXlMaUpZR25OZDJQSV9ZYllqX0U0VHg1MEdtVVcyVU9XSGVGck1l?oc=5",
+       "source": "Il Messaggero",
+       "via": "Google News"
+      },
+      {
+       "key": "321aae6caae77d81",
+       "title": "Città blindate, cortei in tutta Italia. Tensioni a Torino, Milano, Firenze. A Roma manifestanti al Colosseo - ANSA",
+       "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNd3pyQ0NGaG5iM3h4VkNKdXdBYjZLMm9XWTFPTm1PY1pZVVdxWWR3V1U4Yzh5XzJyeHg5M2NkbW05bTJzOFpMVmp2c2FkcEhFVkpubU9CTTFLd3NjOUl3ZzlqdGI4NUNmWG9CLTRISXpLazhLVE5RYTcyWFN6dVZKMWgtcWNXeW1MUnoyZXdSZDgyMG5kMXVmSEJsUWpEYnMtUTR6cDhfN1QzdUNmUFJhSWcxRGpOUEs3RDMtdTZ0M3I1WGQwdmx3dTh4MnFaRlNUbXpxNWVLTENGXzludV9BMG1FWlNWV1dxOWVxa2lhZkFxc2pSQ28wRHREcWRrNnViX2VZ0gGIAkFVX3lxTE9jZzJJcEszaHZTNkR3R29DdDJDTGNzSzhXb00zZ2U2WlBzTVRsMFYzbmNWUF8zSGdpUU1oZDU1NXhWMFFjYkQwM2FkRGVEcExRU1RlMGJvdzVmYWJBTHVnUEc2Y0JPemJWS2lHZTd0Q0VHR3pBVi0wOG1nVjgya0NvTDR6UWNzcU9QSkRPLUVLcTdHWHZVdFVSRUNDV2JaZ1d5S0o0YWp3R1VvWG56R2NtWGtjbEg5cmN5ajFlb18xWlY3UVNOUTFvanNaOV8yUFpsTG9idEQ1UFR5RnFYUkJjanlscmsyeVpWa2YydHlyMENxT0FDUXBGWUJNUXdsYW5UcGxtUFhVYg?oc=5",
+       "source": "ANSA",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "A gun attack at a funeral in Jordan killed eight people and injured 40, according to the Guardian’s report.",
+     "text": "Latvia’s military says a drone of unknown origin was found after it apparently entered Latvian airspace on 18 October, amid Russia’s war against Ukraine.",
      "sources": [
       {
-       "key": "4ebdb696244cb2ba",
-       "title": "Eight killed and 40 injured after gunmen open fire at church funeral in Jordan",
-       "url": "https://www.theguardian.com/world/2026/oct/24/seven-killed-and-40-injured-after-gunmen-open-fire-at-church-funeral-in-jordan",
-       "source": "The Guardian World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Protests in Albania are continuing, with demonstrators demanding Prime Minister Edi Rama’s resignation after an initially tourism-focused dispute broadened.",
-     "sources": [
-      {
-       "key": "48470f269e906e0b",
-       "title": "En Albanie, nouvelle journée de mobilisation pour réclamer la démission du premier ministre, Edi Rama",
-       "url": "https://www.lemonde.fr/international/article/2026/10/24/en-albanie-nouvelle-journee-de-mobilisation-pour-reclamer-la-demission-du-premier-ministre-edi-rama_6799688_3210.html",
+       "key": "fb3c865006754f21",
+       "title": "EN DIRECT, guerre en Ukraine : un drone à l’origine inconnue retrouvé en Lettonie",
+       "url": "https://www.lemonde.fr/international/live/2026/10/24/en-direct-guerre-en-ukraine-un-drone-a-l-origine-inconnue-retrouve-en-lettonie_6796922_3210.html",
        "source": "Le Monde",
        "via": null
       }
      ]
     },
     {
-     "text": "Italy says five women detained in the West Bank have been repatriated and were in good condition when visited by consular officials.",
+     "text": "A leak of more than 420,000 emails and tens of thousands of other documents is embarrassing Germany’s far-right AfD party.",
      "sources": [
       {
-       "key": "5dafdfe6657e9a17",
-       "title": "Farnesina, rimpatriate le cinque italiane fermate in Cisgiordania",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/24/farnesina-rimpatriate-le-cinque-italiane-fermate-in-cisgiordania_bda270f9-51b7-43df-ba68-b154f7aa6ace.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "A storm warning is in force in Pas-de-Calais, while 120,000 homes in western and northern France are without electricity.",
-     "sources": [
-      {
-       "key": "8e24bd53bf0f45c3",
-       "title": "Tempête Austen : le Pas-de-Calais maintenu en vigilance orange pluie-inondation, 120 000 foyers sans électricité dans l’Ouest et le Nord",
-       "url": "https://www.lemonde.fr/planete/article/2026/10/24/tempete-austen-le-pas-de-calais-maintenu-en-vigilance-orange-pluie-inondation-120-000-foyers-sans-electricite-dans-l-ouest-et-le-nord_6799655_3245.html",
+       "key": "f31c87072d284420",
+       "title": "En Allemagne, une fuite massive de documents internes à l’AFD embarrasse le parti d’extrême droite",
+       "url": "https://www.lemonde.fr/international/article/2026/10/24/en-allemagne-une-fuite-massive-de-documents-internes-a-l-afd-embarrasse-le-parti-d-extreme-droite_6799718_3210.html",
        "source": "Le Monde",
        "via": null
       }
      ]
     },
     {
-     "text": "Bloomberg reports risks facing a Gulf nation’s AI ambitions, though the available summary does not specify the risks.",
+     "text": "Concerns about AI-related funding are rattling Wall Street, though the available report does not specify the market moves or companies affected.",
      "sources": [
       {
-       "key": "7367cef58a08b8a0",
-       "title": "Gulf Nation AI Ambitions Face Risks at Home and Abroad: New Economy - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQenM5eWEwSk50RHk0RjN4ZTBuaWRxcldjclBTMzFpUEtnZkRoODZ5Z3NzSVJXeWFrdHRTXzNZQURFMkFDd0NUaTVaVW13M0lJMnd1ZmZrelI5dEtjZnRFRi1QLVktODZyMEJ4S1hJanlueXFGNG9NU1dxSzBxVUFlZFVUQTN6eEhFX0U4bW1mcG5GVFhKamZRNHhQWE8xTER4VnFDbGFtSE04MWxNU1RnWlZmbHJCcTlmWTc5RQ?oc=5",
-       "source": "Bloomberg",
+       "key": "568daa5fc7bee260",
+       "title": "AI funding fears rattle Wall Street. Here's how we're adjusting our portfolio - CNBC",
+       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQUFnNnBmeFFYOGM4WGYtQjlTaTNpcWhhdDZVbnFYZHRyb29fOUE3YV96eENvNE1haVBuNWJVOG0zdVZMYktYMkkzaFZrWmRlZHR5am94b0RPVEtVTXV1MzRPOHNRVmpWS1NVYmpRTmk3YlFzRGh3OEczWXlUZjJvUVV2UDdFbjhCQ3JaOW8wZkEyaEZEaEtkREs0U2VQXzUxUW94NDhRYnp6d0RXbGRmZHJwd2YweDA3ZW9VT2ZQOXZPM2c?oc=5",
+       "source": "CNBC",
        "via": "Google News"
       }
      ]
@@ -830,121 +825,134 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNS19XQmFPRGdGbURJQU91cjk2aGhKU3NGUWpKX0RqNWV5ellDV0RORmZOVmppQUZjdHdNb1QyTTV6NGdRbEdJV2ZsUURmaXg2UXVxdXhQb0hFWkpaQ3dURnAzMjRkbjhlNXp0NjYzNXY2d1lzYUFVRmM1UEdUNG03TGpReTJpLUgzTGhOa0hPSFRmVGVkQkJaN2hYMmZnQWNzVUkyUHktUQ?oc=5",
-     "source": "Il Sole 24 ORE",
+     "url": "https://www.lemonde.fr/societe/live/2026/10/24/en-direct-manifestations-du-24-octobre-pres-de-410-000-personnes-mobilisees-en-france-selon-le-ministere-de-l-interieur-plus-de-800-000-selon-la-cgt_6799445_3224.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-10-24T16:20:51+00:00",
+     "new": true,
+     "key": "547d0b474a89187d",
+     "title": "France demonstrations: turnout estimates diverge as clashes reported",
+     "summary": "The interior ministry estimated 410,000 people demonstrated nationwide, compared with more than 800,000 claimed by the CGT, amid clashes in several cities."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOFhWYXpDZEgxZldNd3ZIcVFUdG4yamlLNDMzRzdGeWNZMWVKb3I3Umg3bGh4NkEtckFWQ0R4LU1Kd2xHc09rZklNc1VOY3I2YVZOU2tvQi1BX1FaYnBJdV9CODFGaHpwanB5RDVVdkdIN21xZ0RXcVVLUVpoNDdNZDJyR2Y4elo1QkRWa0cwMXJ4eFlLWWV0OHVyNTg1SmtEZkdtWG5HX0haMWxSUzdSZ3c0TdIBuAFBVV95cUxOeWNXTjJtazlSa3RjLVB0N0hwMUh6b0F2T3Vya3h4RGprYVdRbE1rWWlMamt5UjJFU3RYUW1zckc5SGg3SmpUUEpvVnByTGVLZDFyUEhEeEJUc0JuczlxN01VQjNtTE4tcWxCb3RKQkJfeXNWczJkQUFaQzZzQWZveTUwRTljTElzbmZuQ2hQY3FSUXlMaUpZR25OZDJQSV9ZYllqX0U0VHg1MEdtVVcyVU9XSGVGck1l?oc=5",
+     "source": "Il Messaggero",
      "feed_name": "Topic: Milano",
      "via": "Google News",
-     "published": "2026-10-24T10:22:28+00:00",
+     "published": "2026-10-24T16:58:19+00:00",
      "new": true,
-     "key": "a804bcaa8d6ecca6",
-     "title": "Over 150 searches in Lombardy as Milan deploys nearly 1,500 officers and soldiers",
-     "summary": "More than 150 searches were carried out over unrest on 17 October as Milan prepared for demonstrations with nearly 1,500 officers and soldiers."
+     "key": "9b1cbce15839f1a4",
+     "title": "Clashes at protests in Turin and Bologna; tensions in Milan",
+     "summary": "Protests in Italy included stone and bottle throwing, police charges and tensions during demonstrations in Milan."
     },
     {
-     "url": "https://www.theguardian.com/world/2026/oct/24/seven-killed-and-40-injured-after-gunmen-open-fire-at-church-funeral-in-jordan",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-10-24T10:23:13+00:00",
-     "new": true,
-     "key": "4ebdb696244cb2ba",
-     "title": "Eight killed and 40 injured in gun attack at Jordan church funeral",
-     "summary": "Gunmen opened fire at a funeral at a Greek Orthodox church in Jordan, killing eight people and injuring 40."
-    },
-    {
-     "url": "https://www.lemonde.fr/international/article/2026/10/24/en-albanie-nouvelle-journee-de-mobilisation-pour-reclamer-la-demission-du-premier-ministre-edi-rama_6799688_3210.html",
+     "url": "https://www.lemonde.fr/international/live/2026/10/24/en-direct-guerre-en-ukraine-un-drone-a-l-origine-inconnue-retrouve-en-lettonie_6796922_3210.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-10-24T10:00:27+00:00",
+     "published": "2026-10-24T16:47:51+00:00",
      "new": true,
-     "key": "48470f269e906e0b",
-     "title": "Albanian protesters demand Prime Minister Rama’s resignation",
-     "summary": "A protest movement that began over a tourism project linked to Jared Kushner has broadened to demand Edi Rama’s resignation."
+     "key": "fb3c865006754f21",
+     "title": "Drone of unknown origin found in Latvia",
+     "summary": "Latvia’s military said a drone apparently entered Latvian airspace on 18 October before being found."
     },
     {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/24/farnesina-rimpatriate-le-cinque-italiane-fermate-in-cisgiordania_bda270f9-51b7-43df-ba68-b154f7aa6ace.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-10-24T10:04:22+00:00",
-     "new": true,
-     "key": "5dafdfe6657e9a17",
-     "title": "Five Italian women detained in the West Bank repatriated",
-     "summary": "Italy’s foreign ministry said the five women were repatriated after consular officials visited them and found them in good condition."
-    },
-    {
-     "url": "https://www.lemonde.fr/planete/article/2026/10/24/tempete-austen-le-pas-de-calais-maintenu-en-vigilance-orange-pluie-inondation-120-000-foyers-sans-electricite-dans-l-ouest-et-le-nord_6799655_3245.html",
+     "url": "https://www.lemonde.fr/international/article/2026/10/24/en-allemagne-une-fuite-massive-de-documents-internes-a-l-afd-embarrasse-le-parti-d-extreme-droite_6799718_3210.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-10-24T10:12:09+00:00",
+     "published": "2026-10-24T16:00:04+00:00",
      "new": true,
-     "key": "8e24bd53bf0f45c3",
-     "title": "Storm warning issued in Pas-de-Calais as 120,000 homes lose power",
-     "summary": "Pas-de-Calais is under an orange rain-and-flood warning, while 120,000 homes in western and northern France are without electricity."
+     "key": "f31c87072d284420",
+     "title": "Massive document leak embarrasses Germany’s AfD",
+     "summary": "An archive containing more than 420,000 emails and tens of thousands of documents, including account excerpts, has been revealed."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQenM5eWEwSk50RHk0RjN4ZTBuaWRxcldjclBTMzFpUEtnZkRoODZ5Z3NzSVJXeWFrdHRTXzNZQURFMkFDd0NUaTVaVW13M0lJMnd1ZmZrelI5dEtjZnRFRi1QLVktODZyMEJ4S1hJanlueXFGNG9NU1dxSzBxVUFlZFVUQTN6eEhFX0U4bW1mcG5GVFhKamZRNHhQWE8xTER4VnFDbGFtSE04MWxNU1RnWlZmbHJCcTlmWTc5RQ?oc=5",
-     "source": "Bloomberg",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQUFnNnBmeFFYOGM4WGYtQjlTaTNpcWhhdDZVbnFYZHRyb29fOUE3YV96eENvNE1haVBuNWJVOG0zdVZMYktYMkkzaFZrWmRlZHR5am94b0RPVEtVTXV1MzRPOHNRVmpWS1NVYmpRTmk3YlFzRGh3OEczWXlUZjJvUVV2UDdFbjhCQ3JaOW8wZkEyaEZEaEtkREs0U2VQXzUxUW94NDhRYnp6d0RXbGRmZHJwd2YweDA3ZW9VT2ZQOXZPM2c?oc=5",
+     "source": "CNBC",
      "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-10-24T10:45:01+00:00",
+     "published": "2026-10-24T16:11:39+00:00",
      "new": true,
-     "key": "7367cef58a08b8a0",
-     "title": "Risks cloud Gulf nation’s AI ambitions",
-     "summary": "Bloomberg examines risks facing a Gulf nation’s ambitions in artificial intelligence."
+     "key": "568daa5fc7bee260",
+     "title": "AI funding fears rattle Wall Street",
+     "summary": "A CNBC report says concerns about AI funding are unsettling Wall Street investors."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
-   "input_fingerprint": "sha256:b8acdea12ac1ce5d630f04206c3132f2fbd6913a819f481b4e1ca286b8eb1adc",
-   "last_success_at": "2026-10-24T11:01:25.223866+00:00",
-   "candidate_count": 424,
-   "new_count": 6
+   "source_checked_at": "2026-10-24T17:01:25.855523+00:00",
+   "input_fingerprint": "sha256:a080d0479a9341af7a054abc6bfc3e70fab1deecdce6d7541313a65cbc3c36f4",
+   "last_success_at": "2026-10-24T17:01:25.855523+00:00",
+   "candidate_count": 462,
+   "new_count": 5
   },
   "sport": {
    "briefing": [
     {
-     "text": "Désiré Doué is attracting interest from clubs, sponsors and coaches across Europe, according to CulturePSG.",
+     "text": "PSG may soon welcome one of its injured players back, while Luis Enrique described Kvaratskhelia as a fighter amid the winger’s injury. The available reports do not identify the player nearing a return or give a timeline for Kvaratskhelia.",
      "sources": [
       {
-       "key": "6be77d9bffc224f1",
-       "title": "Club : L'Europe, les sponsors, les coachs, tout le monde adore Doué - CulturePSG",
-       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdXNLQ2VvZ3Vod2otM2hCbWJWd0RPWmtOcHlxcnJRaDB1dmZiVWk4dlRtY1RsRktJNVJpR1hJSlBpbjE4RXlGYWlBTEhLOVJVSUlWZnhnU2JIeVAySmY4eEpJUkZ0dzhDZllVRTdyNVYycHFWUDZreWVfZDA0WGFmVHMyMG1sZHVKSWhfLXVsY1BXQ1JKcFRreVVUVVAxZGowZFVFeUJ3?oc=5",
+       "key": "8499910829a889db",
+       "title": "Club : Un des blessés du PSG très bientôt de retour - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSTRKUUswWk9iMGVCYm1WUnNyWGRZNDViN2JyZllvd2JZSzVVdFc3NldQZDZZZlFJVVIyeDdhN3FFMkR6UWhCMmlNbHlPZkVVTG5jbGtENHlzN3RyTzV4NHhvRjI3YVdfb3BXNE1SREtEU25odUhpWWlFTmVURW5YUmF6akxBUlIwX0dFR01DSnY?oc=5",
+       "source": "CulturePSG",
+       "via": "Google News"
+      },
+      {
+       "key": "a92ed828436315c0",
+       "title": "« C'est un guerrier », Luis Enrique rend hommage au blessé Kvaratskhelia - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMnhUeFNpSjJiTFJqYmxoakk5WTJmSndCeDlHc096b1JLLTZ4R1NEMFZMb2pmUXd1aThxZjlSaXIzb2trdURkWTN1Zjl2QmlSMEVITWFyemVkeVhQZ0xZSEdzSWFOVE9kZ2RIazdvNXctbkNhZU1sMXJhMU5IQjBPeHdmX19qNFR2WFBzNzRLQjUxcU5hbWlEakZKdnFKRURXV3p5Q25MbzdCSW9rWWpz?oc=5",
        "source": "CulturePSG",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "The PSG–Lyon match has been moved to Monday, giving Lyon an extra day to prepare.",
+     "text": "Luis Enrique held his pre-match press conference ahead of PSG–Lyon, addressing the fixture and injury situation.",
      "sources": [
       {
-       "key": "053aa2d6c10add84",
-       "title": "Muet lors de ses trois derniers matches disputés un lundi face à des clubs de Ligue 1, le PSG va tenter de mettre fin à cette malédiction contre l'OL",
-       "url": "https://www.lequipe.fr/Football/Actualites/Muet-lors-de-ses-trois-derniers-matches-disputes-un-lundi-face-a-des-clubs-de-ligue-1-le-psg-va-tenter-de-mettre-fin-a-cette-malediction-contre-l-ol/1738269#at_medium=RSS_feeds",
-       "source": "L'Équipe",
-       "via": null
-      },
-      {
-       "key": "c385f41be8e46d1c",
-       "title": "PSG - OL : le report offre un jour de préparation supplémentaire - Olympique & Lyonnais",
-       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRWlFVjh6ZGtkUjc2WDhTUUFKWnZjcTVYQnh6T2RYcEtsM1hpbEdPc1dSN0w2X3VPZHkxOVplYUpCQk82eEJweTZ1d3N0dUJnM2RLM1hrTzBRajlFbURULVZvTGNTV0N2T28wTVMtU2RZckR0ZXd1ODg0dmhjSjZVbEhoeGJoTUpVc01YamFkVUJBX0YxVW9CODkzR2pKSDBtbHJiRWI4SHV5cXU0OFBR?oc=5",
-       "source": "Olympique & Lyonnais",
+       "key": "f770345e3a59e60b",
+       "title": "Match : Match reporté, le Ballon d'Or, les blessures, etc, la conf complète de Luis Enrique avant PSG/OL - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQXBBQy1nc1hDdmczZHQxeDgwLXhlazR0OGlhSHNsQ2d1TmlvM0hWWDBZSTNoWURGckhJcnhUdmRvNjZQSFhTclFBZDN5U3dHODJZNW9MVVpoLWJCVEExTmVhUF80NldHcWVubmxZNFdwWVdyZzgtV1pyVHgyQmVkVTBhN3FhUE1sVXlqRVBIOWFPZ1dsaFFrVlAwTHR2ZVE1RmpMTHVkZEthMjZlcDFkZHhzY3k5RWlTRWlMdXZ3MnctanpTSm0wTWlINmtiTUtldnc?oc=5",
+       "source": "CulturePSG",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "PSG are set to earn a substantial sum from the Intercontinental Cup, though the report does not specify the amount.",
+     "text": "A PSG attacking target has extended his contract with his current club, potentially complicating the pursuit; the report does not name the player.",
      "sources": [
       {
-       "key": "c312a2ddf20a1809",
-       "title": "Coupe Intercontinentale - Le PSG va empocher une jolie somme grâce à cette compétition - MadeInParisiens",
-       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPdHJpbm0tRVZnbzV1a1pfVDctVzZ4ZWpaNzYySWhLRndTRG1BSkYzc3RUbm01QXdEZ3lBN1lUcXBMYzNhRFNpZkNmR3huV2wzWjdnX2lJbDVZRHJXSks3Z3JMQVcxVjlfLV9WWnpmMlVkN2QxNUFDeTZ1SkZwazhpS0Jjd2owZlJicDJXRHphWWJheURLX29wVFE3M3Z3TW03bWh6S2trV2ppLWRGOHVRR2w3QUtYTWY2dXZ0TXdnM1ZlUVA2YkJLdDNJYU9POERBVWltWWNrZVFJbk1YZnFHNkZ0Sks?oc=5",
-       "source": "MadeInParisiens",
+       "key": "6a4d87ef4692d2d5",
+       "title": "Mercato : Une piste offensive du PSG prolonge dans son club - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVHpMV1JLOVY0aDdmUzhiTnVnWUJzZFJaVXhuLXhRNWdjSXNBeWFMOTdZcW9ndWV6TTk2Uzc2dGt3d0dJUnRHVUlxdURVYTUzTEtzOHczaFExMDgxZlVDY1hUdHNLRG9HQm1ORUtoRUhuWVZUX1IzVVFzVFhHR19mendUdUNhVVJnSUE0TVRTMVQ1UzkxZDJEbmtyWlJ2ZUU?oc=5",
+       "source": "CulturePSG",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Fiji beat Japan despite playing with 14 men and are set to add players from Europe, a warning for France’s XV ahead of their meeting.",
+     "sources": [
+      {
+       "key": "ff44451c1dec8489",
+       "title": "VIDEO. Les Fidji gagnent à 14 contre le Japon et attendent leurs renforts d'Europe : le XV de France est prévenu - Rugbynistere",
+       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbV9WT0JvT0xGWDFVX1cwUGRUZTVzbm9FOXFlVm42OVdCZGVxOHYxaDVuZjgyT1VZSXp1V3hoTklSM3JjRk1VaDd0Z3Y5dF96c1dKdlZyc0VNOXQ2blV4emUtTzloYm5nMkl3REdmclFvYXBtVGk0dWwtSEhvS3d5T212Nm05b2hHV21PQ2RvdE8wZTVUbVFrNlo3eWdrMXBhNEQ5aVBMam91MFRzZl9vM1BLbXpHdGFrVXVIdUFwQTlzcnRLUHhXYm5DdzB1bmVnYjJQanlSOXVQSm9Q?oc=5",
+       "source": "Rugbynistere",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Bordeaux-Bègles centre Nicolas Depoortere said he was disappointed to miss France’s initial squad selection, but is focused on his club’s trip to La Rochelle.",
+     "sources": [
+      {
+       "key": "3cf45ffd7e234fcd",
+       "title": "XV de France: \"Déçu et touché de ne pas y être\", Depoortère évoque son absence surprise de la première liste de Galthié pour le Championnat des nations - RMC Sport",
+       "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxQMG9LY2cwYnl3UGwtRHR6Q0FhX2w4ekdnVEZORFhubHBKUGZaS2Uwd2g4QmdTWHRQSWRJWnFPZFg2dDl1bng5X3VLNl9EeHZHUHN1aUlIZzF0T3JwWVFIRXF1bklZRkpWRnQwbUNUcHhkcS1rdnMzOTk4ckNJbHhoa004ZGpnUjRnRDM5YWo2YTJpaDBSd0ZyWEVNMFNMd2ZfT0dxenpRRXpfcWxOS1FHMkdFX0dvOXIyUWcwb3B6ckdRQ2tSVTVhd3lFM2d6M3N3bDRMMEJwOXRvZFMzX3I2aUFDT2wxdllMd3o4R2tNd194R0N3LWdQV3RMVUtuSkc2MHhta2hjWkhXRG9rSDdUUmJkUmxBWmVjc29GS2I5R1I4ckNWYU5TNkJiVGZVTm5vSEdEUXdKcUctdw?oc=5",
+       "source": "RMC Sport",
        "via": "Google News"
       }
      ]
@@ -952,134 +960,126 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdXNLQ2VvZ3Vod2otM2hCbWJWd0RPWmtOcHlxcnJRaDB1dmZiVWk4dlRtY1RsRktJNVJpR1hJSlBpbjE4RXlGYWlBTEhLOVJVSUlWZnhnU2JIeVAySmY4eEpJUkZ0dzhDZllVRTdyNVYycHFWUDZreWVfZDA0WGFmVHMyMG1sZHVKSWhfLXVsY1BXQ1JKcFRreVVUVVAxZGowZFVFeUJ3?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSTRKUUswWk9iMGVCYm1WUnNyWGRZNDViN2JyZllvd2JZSzVVdFc3NldQZDZZZlFJVVIyeDdhN3FFMkR6UWhCMmlNbHlPZkVVTG5jbGtENHlzN3RyTzV4NHhvRjI3YVdfb3BXNE1SREtEU25odUhpWWlFTmVURW5YUmF6akxBUlIwX0dFR01DSnY?oc=5",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-24T09:27:00+00:00",
+     "published": "2026-10-24T13:34:00+00:00",
      "new": true,
-     "key": "6be77d9bffc224f1",
-     "title": "Doué attracts attention across Europe",
-     "summary": "CulturePSG reports that clubs, sponsors and coaches across Europe are showing strong interest in Désiré Doué."
+     "key": "8499910829a889db",
+     "title": "A PSG player could soon return from injury",
+     "summary": "CulturePSG reports that one of PSG’s injured players may return soon, without identifying the player or giving a date."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1wbXpCYlI3TGFrMXN2WXZZNTB6OWkwUXZOUXVlcmZhQ2RNbS1mT3lSSzZSb0NtQURZNnZSQ1V6OVUyanQ5UkZKaEo5N1J5MkVXajZra3BLVnAwSjFjRnlDUThEZlJlNzJQY2U2b3dXOW1Uand4bmlQRE04Yw?oc=5",
-     "source": "Forum de Culture PSG",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMnhUeFNpSjJiTFJqYmxoakk5WTJmSndCeDlHc096b1JLLTZ4R1NEMFZMb2pmUXd1aThxZjlSaXIzb2trdURkWTN1Zjl2QmlSMEVITWFyemVkeVhQZ0xZSEdzSWFOVE9kZ2RIazdvNXctbkNhZU1sMXJhMU5IQjBPeHdmX19qNFR2WFBzNzRLQjUxcU5hbWlEakZKdnFKRURXV3p5Q25MbzdCSW9rWWpz?oc=5",
+     "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-23T09:24:02+00:00",
+     "published": "2026-10-24T11:49:00+00:00",
      "new": true,
-     "key": "8a295fac936c55b1",
-     "title": "[Ligue 1] Paris Saint-Germain - Olympique Lyonnais, J8 , Dimanche 25 octobre ? - 20h45 - Ligue 1+ - Forum de Culture PSG",
-     "summary": "[Ligue 1] Paris Saint-Germain - Olympique Lyonnais, J8 , Dimanche 25 octobre ? - 20h45 - Ligue 1+ Forum de Culture PSG"
+     "key": "a92ed828436315c0",
+     "title": "Luis Enrique praises injured Kvaratskhelia",
+     "summary": "Luis Enrique called the injured Kvaratskhelia a fighter."
     },
     {
-     "url": "https://www.lequipe.fr/Football/Actualites/Muet-lors-de-ses-trois-derniers-matches-disputes-un-lundi-face-a-des-clubs-de-ligue-1-le-psg-va-tenter-de-mettre-fin-a-cette-malediction-contre-l-ol/1738269#at_medium=RSS_feeds",
-     "source": "L'Équipe",
-     "feed_name": "L'Équipe",
-     "via": null,
-     "published": "2026-10-24T10:30:12+00:00",
-     "new": true,
-     "key": "053aa2d6c10add84",
-     "title": "PSG–Lyon moved to Monday",
-     "summary": "The PSG–Lyon match was postponed to Monday, when PSG will try to end a run of three goalless Monday games against Ligue 1 clubs."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRWlFVjh6ZGtkUjc2WDhTUUFKWnZjcTVYQnh6T2RYcEtsM1hpbEdPc1dSN0w2X3VPZHkxOVplYUpCQk82eEJweTZ1d3N0dUJnM2RLM1hrTzBRajlFbURULVZvTGNTV0N2T28wTVMtU2RZckR0ZXd1ODg0dmhjSjZVbEhoeGJoTUpVc01YamFkVUJBX0YxVW9CODkzR2pKSDBtbHJiRWI4SHV5cXU0OFBR?oc=5",
-     "source": "Olympique & Lyonnais",
-     "feed_name": "Team: PSG",
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQXBBQy1nc1hDdmczZHQxeDgwLXhlazR0OGlhSHNsQ2d1TmlvM0hWWDBZSTNoWURGckhJcnhUdmRvNjZQSFhTclFBZDN5U3dHODJZNW9MVVpoLWJCVEExTmVhUF80NldHcWVubmxZNFdwWVdyZzgtV1pyVHgyQmVkVTBhN3FhUE1sVXlqRVBIOWFPZ1dsaFFrVlAwTHR2ZVE1RmpMTHVkZEthMjZlcDFkZHhzY3k5RWlTRWlMdXZ3MnctanpTSm0wTWlINmtiTUtldnc?oc=5",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-24T10:40:00+00:00",
+     "published": "2026-10-24T11:33:00+00:00",
      "new": true,
-     "key": "c385f41be8e46d1c",
-     "title": "Lyon gain an extra day to prepare for PSG",
-     "summary": "The postponement gives Olympique Lyonnais an additional day to prepare for the match against PSG."
+     "key": "f770345e3a59e60b",
+     "title": "Luis Enrique’s pre-PSG–Lyon press conference",
+     "summary": "Luis Enrique addressed the media ahead of PSG’s match against Lyon."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPdHJpbm0tRVZnbzV1a1pfVDctVzZ4ZWpaNzYySWhLRndTRG1BSkYzc3RUbm01QXdEZ3lBN1lUcXBMYzNhRFNpZkNmR3huV2wzWjdnX2lJbDVZRHJXSks3Z3JMQVcxVjlfLV9WWnpmMlVkN2QxNUFDeTZ1SkZwazhpS0Jjd2owZlJicDJXRHphWWJheURLX29wVFE3M3Z3TW03bWh6S2trV2ppLWRGOHVRR2w3QUtYTWY2dXZ0TXdnM1ZlUVA2YkJLdDNJYU9POERBVWltWWNrZVFJbk1YZnFHNkZ0Sks?oc=5",
-     "source": "MadeInParisiens",
-     "feed_name": "Team: PSG",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVHpMV1JLOVY0aDdmUzhiTnVnWUJzZFJaVXhuLXhRNWdjSXNBeWFMOTdZcW9ndWV6TTk2Uzc2dGt3d0dJUnRHVUlxdURVYTUzTEtzOHczaFExMDgxZlVDY1hUdHNLRG9HQm1ORUtoRUhuWVZUX1IzVVFzVFhHR19mendUdUNhVVJnSUE0TVRTMVQ1UzkxZDJEbmtyWlJ2ZUU?oc=5",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
      "via": "Google News",
-     "published": "2026-10-24T09:32:00+00:00",
+     "published": "2026-10-23T08:36:00+00:00",
      "new": true,
-     "key": "c312a2ddf20a1809",
-     "title": "PSG set for Intercontinental Cup windfall",
-     "summary": "PSG are expected to receive a significant sum from the Intercontinental Cup."
+     "key": "6a4d87ef4692d2d5",
+     "title": "PSG attacking target extends with current club",
+     "summary": "A player linked with PSG has extended his contract with his current club."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbV9WT0JvT0xGWDFVX1cwUGRUZTVzbm9FOXFlVm42OVdCZGVxOHYxaDVuZjgyT1VZSXp1V3hoTklSM3JjRk1VaDd0Z3Y5dF96c1dKdlZyc0VNOXQ2blV4emUtTzloYm5nMkl3REdmclFvYXBtVGk0dWwtSEhvS3d5T212Nm05b2hHV21PQ2RvdE8wZTVUbVFrNlo3eWdrMXBhNEQ5aVBMam91MFRzZl9vM1BLbXpHdGFrVXVIdUFwQTlzcnRLUHhXYm5DdzB1bmVnYjJQanlSOXVQSm9Q?oc=5",
+     "source": "Rugbynistere",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-10-24T16:23:00+00:00",
+     "new": true,
+     "key": "ff44451c1dec8489",
+     "title": "Fiji beat Japan with 14 players",
+     "summary": "Fiji defeated Japan while down to 14 players and are expecting reinforcements from Europe."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxQMG9LY2cwYnl3UGwtRHR6Q0FhX2w4ekdnVEZORFhubHBKUGZaS2Uwd2g4QmdTWHRQSWRJWnFPZFg2dDl1bng5X3VLNl9EeHZHUHN1aUlIZzF0T3JwWVFIRXF1bklZRkpWRnQwbUNUcHhkcS1rdnMzOTk4ckNJbHhoa004ZGpnUjRnRDM5YWo2YTJpaDBSd0ZyWEVNMFNMd2ZfT0dxenpRRXpfcWxOS1FHMkdFX0dvOXIyUWcwb3B6ckdRQ2tSVTVhd3lFM2d6M3N3bDRMMEJwOXRvZFMzX3I2aUFDT2wxdllMd3o4R2tNd194R0N3LWdQV3RMVUtuSkc2MHhta2hjWkhXRG9rSDdUUmJkUmxBWmVjc29GS2I5R1I4ckNWYU5TNkJiVGZVTm5vSEdEUXdKcUctdw?oc=5",
+     "source": "RMC Sport",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-10-24T15:50:27+00:00",
+     "new": true,
+     "key": "3cf45ffd7e234fcd",
+     "title": "Depoortere reacts to France squad omission",
+     "summary": "Nicolas Depoortere said he was disappointed to miss France’s first squad list and is focusing on Bordeaux-Bègles."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
-   "input_fingerprint": "sha256:49321baa617bfd4ad8daa8ed053a3c255ffaf4772170196d0bca734c2f6e0313",
-   "last_success_at": "2026-10-24T11:01:25.223866+00:00",
-   "candidate_count": 219,
-   "new_count": 5
+   "source_checked_at": "2026-10-24T17:01:25.855523+00:00",
+   "input_fingerprint": "sha256:4838b80cd92296b6062646d1eaa80c52690d7f31f2e060df1cb5a23aa14db6cc",
+   "last_success_at": "2026-10-24T17:01:25.855523+00:00",
+   "candidate_count": 228,
+   "new_count": 6
   },
   "finance": {
    "briefing": [
     {
-     "text": "French corporate bond yields are converging with—and in some cases falling below—sovereign yields, a notable shift in relative credit pricing.",
+     "text": "Stress is emerging in the riskiest debt, though the available report gives no detail on the scale or market spillovers.",
      "sources": [
       {
-       "key": "6b3961efdeae9688",
-       "title": "French government and corporate bond yields are converging",
-       "url": "https://www.ft.com/content/473c0e0b-d4f7-449c-9192-648b82077222?syn-25a6b1a6=1",
-       "source": "FT Markets",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "In Italy, Norges is opposing Siena’s takeover bids involving Banco BPM and Banca Generali; antitrust authorities have also signalled remedies for Intesa-MPS.",
-     "sources": [
-      {
-       "key": "19069c7ecc3129aa",
-       "title": "Mps, il fondo Norges contro le Ops di Siena su Bpm e Banca Generali",
-       "url": "https://www.ilsole24ore.com/art/mps-fondo-norges-contro-ops-siena-bpm-e-banca-generali-AJxJiTtB",
-       "source": "Il Sole 24 Ore Finanza",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Swiss equities are attracting attention as investors seek shelter from market turbulence tied to AI concerns.",
-     "sources": [
-      {
-       "key": "b5a8bf0780f7a4c8",
-       "title": "Swiss Stocks Are Becoming a Haven From AI Fears Roiling Markets - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbzFYQ092SkZUUExOVUVnU3YwbHJ5UWdxUHVSNjRDOFlaZGs2RUs2RTBMMG9WaDVNcHFzb2xhd0pkSHF6TnpEekxtR01iUFVWekJVTjg3blVMZlZ2MlB5Nmo1RjlsYV8xRFF5VWZBWHBhVWtQYTJXdHV6bkV2Y1lGOWNFSG9CUHFnUDQ3TU9DNTNlMEhVdm5STnpwM3FHUVMtaE5ib184NmdqUHVycFpOTC1oV3k?oc=5",
-       "source": "Bloomberg",
+       "key": "ca9364e330cb6191",
+       "title": "‘Total Meltdown’ in Riskiest Debt Unnerves Market: Credit Weekly - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOaGdkV3gxaDZHd2ZxRDVhaFlBdWtLNFJ3Y0c5MXZiWktESnRPNmJlTWczMVdRZ29JaUVHa0R2Mmdabm5NdXhyLWlYam5xaU54Ty1UdHphaVotVkx5RGo1a1hYUkpsS1IxSlhsd3ZJcGxkWEh0Q016YkJHS1J1Sk4xS1pub0tnTjlCbDdrWU5sTi14dXNrZDVOLTdkUnFxQkdvQ2Y5TFROY3JFcGVQbWtjYTlnUQ?oc=5",
+       "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "The UK’s Andy Burnham is testing Labour’s support for a budget framed around bond-market constraints, while a separate plan would add £20bn to public business and infrastructure lending.",
+     "text": "French government and corporate bond yields are converging, a notable signal for sovereign and credit-market pricing.",
      "sources": [
       {
-       "key": "dc0f411870ad50a6",
-       "title": "Andy Burnham Tests Labour Loyalty With Budget Built for Bond Market - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQTjlMbGpqOHdpeFhGVjMyT3p3MWhDNThqRm9NcGI2WW93SkdBZjdfLVE2QjNMenFlNlRoTlBLU0hWMy02ZE9rZS1JbDAtSkZTYmhXUS1CLUxNUHpGcVhEb1JkUnY0WE9sWldZRm02bWRtUDNIUlRGMy02QkV1LUtlTUo5VE1xaWJMOHV5QU0xenR6eTFWdDc2QVdLZUg3dGQ5bVIzRXRhMmJDaC1zcGtBbnlnQ0JVNjVwemc?oc=5",
-       "source": "Bloomberg",
-       "via": "Google News"
-      },
-      {
-       "key": "ffc753f04d91248a",
-       "title": "John Healey to give £20bn boost to UK’s business lender and infrastructure bank - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOX3VYLWczWFVpajlsVE43Mm9JZXNCdWhLOGNZQ3VubUpBUDJIN3RmRWVKaW5zeWVOMk10VUZjZm5EeUhXbE9JeDYtMTJETm9mdTVGT2NoTVVUd1FSR3BOSlRSY2hiUXZ5VXdRRGNWY1RTb0tGNUx1b21JX2pFZzBqS1BRY2c?oc=5",
+       "key": "51160756a84144db",
+       "title": "Chart of the Week: French government and corporate bond yields are converging - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUEwtYnR3b0xGWTl5V29OaTd1c0RiaHBQZkpfMzNsVUpGNllFYVpHMzRsN2toZ09mVDJMR2F5NDMyNDhEbUJvcWNvXzIyLW5DYS0xMmx0bTBIU2NRc2M0RUFiTDNLbm42djN0RC1EOGQzcC1kX0Ziei1GYmdGbGdXY0R3Yzc?oc=5",
        "source": "Financial Times",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "A reported slowdown in Starlink communications had hampered Ukraine’s defence against Russian strikes before service restrictions were removed.",
+     "text": "An intelligence memo says plans to target Americans in the Middle East have reached advanced stages, adding to regional risk concerns.",
      "sources": [
       {
-       "key": "bea0eb181b66e1b6",
-       "title": "Ukraine military says Starlink service restrictions have been removed",
-       "url": "https://www.ft.com/content/5b5592f4-c59d-4eb1-af78-078dc32fcab8",
+       "key": "b9eef2fbc404b1b0",
+       "title": "Intelligence memo warns Iran is plotting to kill Americans in Middle East",
+       "url": "https://www.ft.com/content/e2e82393-c7ca-4bc1-b270-022b3702d9e7?syn-25a6b1a6=1",
        "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Oil rose amid renewed Middle East supply concerns, while Bitcoin ETFs recorded a $635 million daily outflow as BTC fell toward September levels.",
+     "sources": [
+      {
+       "key": "f495af8ff41206c9",
+       "title": "Bitcoin ETFs See $635M Outflow In A Day As BTC Slips Back To September Levels",
+       "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/bitcoin-etfs-see-635-m-outflow-in-a-day-as-btc-slips-back-to-september-levels/cZUGVn9RBU0?.tsrc=rss",
+       "source": "Bitcoin",
        "via": null
       }
      ]
@@ -1087,77 +1087,55 @@
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/473c0e0b-d4f7-449c-9192-648b82077222?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-10-24T09:30:04+00:00",
-     "new": true,
-     "key": "6b3961efdeae9688",
-     "title": "French corporate and government bond yields converge",
-     "summary": "Some French corporate bonds now yield less than government bonds."
-    },
-    {
-     "url": "https://www.ilsole24ore.com/art/mps-fondo-norges-contro-ops-siena-bpm-e-banca-generali-AJxJiTtB",
-     "source": "Il Sole 24 Ore Finanza",
-     "feed_name": "Il Sole 24 Ore Finanza",
-     "via": null,
-     "published": "2026-10-24T09:17:00+00:00",
-     "new": true,
-     "key": "19069c7ecc3129aa",
-     "title": "Norges opposes Siena bids involving Banco BPM and Banca Generali",
-     "summary": "Norges is against Siena’s takeover bids; antitrust authorities have signalled remedies for the Intesa-MPS operation."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbzFYQ092SkZUUExOVUVnU3YwbHJ5UWdxUHVSNjRDOFlaZGs2RUs2RTBMMG9WaDVNcHFzb2xhd0pkSHF6TnpEekxtR01iUFVWekJVTjg3blVMZlZ2MlB5Nmo1RjlsYV8xRFF5VWZBWHBhVWtQYTJXdHV6bkV2Y1lGOWNFSG9CUHFnUDQ3TU9DNTNlMEhVdm5STnpwM3FHUVMtaE5ib184NmdqUHVycFpOTC1oV3k?oc=5",
-     "source": "Bloomberg",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOaGdkV3gxaDZHd2ZxRDVhaFlBdWtLNFJ3Y0c5MXZiWktESnRPNmJlTWczMVdRZ29JaUVHa0R2Mmdabm5NdXhyLWlYam5xaU54Ty1UdHphaVotVkx5RGo1a1hYUkpsS1IxSlhsd3ZJcGxkWEh0Q016YkJHS1J1Sk4xS1pub0tnTjlCbDdrWU5sTi14dXNrZDVOLTdkUnFxQkdvQ2Y5TFROY3JFcGVQbWtjYTlnUQ?oc=5",
+     "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-10-24T07:00:00+00:00",
+     "published": "2026-10-24T15:21:35+00:00",
      "new": true,
-     "key": "b5a8bf0780f7a4c8",
-     "title": "Swiss stocks attract investors amid AI-market fears",
-     "summary": "Swiss stocks are becoming a haven as AI concerns roil markets."
+     "key": "ca9364e330cb6191",
+     "title": "Stress in the riskiest debt unnerves markets",
+     "summary": "A Bloomberg credit-market report describes mounting stress in the riskiest debt."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQTjlMbGpqOHdpeFhGVjMyT3p3MWhDNThqRm9NcGI2WW93SkdBZjdfLVE2QjNMenFlNlRoTlBLU0hWMy02ZE9rZS1JbDAtSkZTYmhXUS1CLUxNUHpGcVhEb1JkUnY0WE9sWldZRm02bWRtUDNIUlRGMy02QkV1LUtlTUo5VE1xaWJMOHV5QU0xenR6eTFWdDc2QVdLZUg3dGQ5bVIzRXRhMmJDaC1zcGtBbnlnQ0JVNjVwemc?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-10-24T05:00:00+00:00",
-     "new": true,
-     "key": "dc0f411870ad50a6",
-     "title": "Burnham’s budget tests Labour’s bond-market priorities",
-     "summary": "Andy Burnham is testing Labour loyalty with a budget built for bond-market concerns."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOX3VYLWczWFVpajlsVE43Mm9JZXNCdWhLOGNZQ3VubUpBUDJIN3RmRWVKaW5zeWVOMk10VUZjZm5EeUhXbE9JeDYtMTJETm9mdTVGT2NoTVVUd1FSR3BOSlRSY2hiUXZ5VXdRRGNWY1RTb0tGNUx1b21JX2pFZzBqS1BRY2c?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUEwtYnR3b0xGWTl5V29OaTd1c0RiaHBQZkpfMzNsVUpGNllFYVpHMzRsN2toZ09mVDJMR2F5NDMyNDhEbUJvcWNvXzIyLW5DYS0xMmx0bTBIU2NRc2M0RUFiTDNLbm42djN0RC1EOGQzcC1kX0Ziei1GYmdGbGdXY0R3Yzc?oc=5",
      "source": "Financial Times",
      "feed_name": "FT (via Google News)",
      "via": "Google News",
-     "published": "2026-10-23T23:01:00+00:00",
+     "published": "2026-10-24T09:30:04+00:00",
      "new": true,
-     "key": "ffc753f04d91248a",
-     "title": "UK plans £20bn boost for business lender and infrastructure bank",
-     "summary": "John Healey plans a £20bn boost for the UK’s business lender and infrastructure bank."
+     "key": "51160756a84144db",
+     "title": "French government and corporate bond yields converge",
+     "summary": "French government and corporate bond yields are converging, according to the Financial Times."
     },
     {
-     "url": "https://www.ft.com/content/5b5592f4-c59d-4eb1-af78-078dc32fcab8",
+     "url": "https://www.ft.com/content/e2e82393-c7ca-4bc1-b270-022b3702d9e7?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-10-24T10:20:39+00:00",
+     "published": "2026-10-24T15:09:52+00:00",
      "new": true,
-     "key": "bea0eb181b66e1b6",
-     "title": "Ukraine says Starlink restrictions have been removed",
-     "summary": "Ukraine’s military said Starlink restrictions that hampered defence against Russian strikes have been removed."
+     "key": "b9eef2fbc404b1b0",
+     "title": "Iran threat memo raises Middle East security concerns",
+     "summary": "An intelligence memo says plans to target Americans in the Middle East have reached advanced stages."
+    },
+    {
+     "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/bitcoin-etfs-see-635-m-outflow-in-a-day-as-btc-slips-back-to-september-levels/cZUGVn9RBU0?.tsrc=rss",
+     "source": "Bitcoin",
+     "feed_name": "Bitcoin",
+     "via": null,
+     "published": "2026-10-24T12:39:47+00:00",
+     "new": true,
+     "key": "f495af8ff41206c9",
+     "title": "Bitcoin ETFs see $635 million outflow as oil rises",
+     "summary": "Bitcoin ETFs recorded $635 million in outflows as oil prices rose on Middle East supply concerns."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
-   "input_fingerprint": "sha256:71751bd6ce3030f0d1da59ac5e9c684f63115f2da57fe214b47e6d9928a153a3",
-   "last_success_at": "2026-10-24T11:01:25.223866+00:00",
+   "source_checked_at": "2026-10-24T17:01:25.855523+00:00",
+   "input_fingerprint": "sha256:c309508a814d578ed88c714954586b96f866eca33b3870537f3dadfd99f13c69",
+   "last_success_at": "2026-10-24T17:01:25.855523+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1250,8 +1228,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 80555.67,
-     "change_pct": -0.64,
+     "price": 80061.81,
+     "change_pct": -1.25,
      "currency": "USD",
      "as_of": "2026-10-24T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1261,8 +1239,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2366.6,
-     "change_pct": -0.73,
+     "price": 2311.41,
+     "change_pct": -3.05,
      "currency": "USD",
      "as_of": "2026-10-24T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1270,8 +1248,8 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 262,
-   "new_count": 6
+   "candidate_count": 237,
+   "new_count": 4
   },
   "media": {
    "briefing": "",
@@ -1385,44 +1363,14 @@
      "duration_s": 2693,
      "new": false,
      "key": "08cd111032e97931"
-    },
-    {
-     "title": "ASMR iPhone Duo Unboxing",
-     "url": "https://www.youtube.com/shorts/_4ELeWAgMwo",
-     "source": "Marques Brownlee",
-     "kind": "video",
-     "published": "2026-10-21T14:00:33+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "b38fc984d47fc91b"
-    },
-    {
-     "title": "iPhone Duo Review: First Generation Fun!",
-     "url": "https://www.youtube.com/watch?v=ESABTN4VtrA",
-     "source": "Marques Brownlee",
-     "kind": "video",
-     "published": "2026-10-21T12:00:52+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "251908ef4ef744bf"
-    },
-    {
-     "title": "😂 J'ai la solution...",
-     "url": "https://www.youtube.com/shorts/J_fhX0YsNeo",
-     "source": "Wiloo",
-     "kind": "video",
-     "published": "2026-10-21T11:33:44+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "f7fe78c5ab347067"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-10-24T11:01:25.223866+00:00",
-   "candidate_count": 14,
+   "source_checked_at": "2026-10-24T17:01:25.855523+00:00",
+   "candidate_count": 11,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-10-24T11:00:00.000Z"
+ "scheduled_slot": "2026-10-24T17:00:00.000Z"
 }
