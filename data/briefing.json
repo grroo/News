@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261101T180125615627Z",
- "generated_at": "2026-11-01T18:01:25.615627+00:00",
- "generated_local": "Sun 01 Nov 2026, 19:01",
- "source_checked_at": "2026-11-01T18:01:25.615627+00:00",
+ "edition_id": "ed-20261102T060121090893Z",
+ "generated_at": "2026-11-02T06:01:21.090893+00:00",
+ "generated_local": "Mon 02 Nov 2026, 07:01",
+ "source_checked_at": "2026-11-02T06:01:21.090893+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-01T18:01:25.615627+00:00"
+  "run-2026-11-02T06:01:21.090893+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-01T18:01:25.615627+00:00"
+  "completed_at": "2026-11-02T06:01:21.090893+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 26,
+   "item_count": 30,
    "reason": null,
    "failure": null,
-   "parsed_count": 26,
+   "parsed_count": 30,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -141,10 +141,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 96,
+   "item_count": 92,
    "reason": null,
    "failure": null,
-   "parsed_count": 96,
+   "parsed_count": 92,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -153,10 +153,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 41,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 41,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -189,10 +189,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 109,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 109,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 105,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 105,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -417,10 +417,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 11,
+   "item_count": 9,
    "reason": null,
    "failure": null,
-   "parsed_count": 11,
+   "parsed_count": 9,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -524,74 +524,104 @@
   {
    "name": "Wiloo",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "VisualPolitik EN",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Preston Stewart",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Marques Brownlee",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "The Christo Files",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Making Sense with Sam Harris",
@@ -684,9 +714,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002108,
-  "est_month_usd": 0.19,
-  "forecast_month_usd": 0.19,
+  "est_cost_usd": 0.00239,
+  "est_month_usd": 0.22,
+  "forecast_month_usd": 0.22,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,60 +724,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8183,
+    "latency_ms": 9387,
     "unknown": false,
     "provider_request_ids": [
-     "resp_014387d12e9169aa016ae77e80278087d08ae7398822a7cb0a"
+     "resp_0745d1cd26daae68016ae82739778c87d1ae075b9e418725e6"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3383,
-    "output_tokens": 663,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3360,
+    "output_tokens": 747,
+    "reasoning_tokens": 194
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7468,
+    "latency_ms": 7365,
     "unknown": false,
     "provider_request_ids": [
-     "resp_070f9569cb30c52d016ae77e87c4b087d0b1f4795427302f1f"
+     "resp_05e966e6dfd28dbb016ae82741df5c87d1b7961b8ae31f4cd2"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3552,
-    "output_tokens": 557,
-    "reasoning_tokens": 315
+    "cache_write_tokens": 3739,
+    "output_tokens": 630,
+    "reasoning_tokens": 229
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 4639,
+    "latency_ms": 9130,
     "unknown": false,
     "provider_request_ids": [
-     "resp_055c81f55291dbda016ae77e8f2b3487d0b3c404642c5c042f"
+     "resp_0f96ea4cb0576837016ae827494e6c87d199d501285d99a7e2"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3267,
-    "output_tokens": 442,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3233,
+    "output_tokens": 818,
+    "reasoning_tokens": 266
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10202,
-  "output_tokens": 1662,
-  "reasoning_tokens": 315,
+  "cache_write_tokens": 10332,
+  "output_tokens": 2195,
+  "reasoning_tokens": 689,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 3,
-   "attempts": 9,
-   "known_cost_usd": 0.006412,
+   "recorded_runs": 4,
+   "attempts": 12,
+   "known_cost_usd": 0.008802,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,75 +786,75 @@
   "news": {
    "briefing": [
     {
-     "text": "US-Iran negotiations over reopening the Strait of Hormuz remain fraught, with Qatar reportedly seeking the release of $6 billion in Iranian assets as part of a possible deal.",
+     "text": "Ukraine reported cyberattacks on its air-raid alert app after the truce ended; Russian strikes also killed at least three people, according to Le Monde.",
      "sources": [
       {
-       "key": "17d074ce2b4c6145",
-       "title": "Negotiators ‘braced for worst’ over US-Iran talks to reopen strait of Hormuz",
-       "url": "https://www.theguardian.com/world/2026/nov/01/negotiators-braced-for-worst-over-us-iran-talks-to-reopen-strait-of-hormuz",
-       "source": "The Guardian World",
+       "key": "269f372d66c420cd",
+       "title": "EN DIRECT, guerre en Ukraine : Kiev et Moscou visés par des cyberattaques peu après la fin de la trêve à Olechky ; au moins trois personnes tuées dans des frappes russes dimanche",
+       "url": "https://www.lemonde.fr/international/live/2026/11/02/en-direct-guerre-en-ukraine-kiev-et-moscou-vises-par-des-cyberattaques-peu-apres-la-fin-de-la-treve-a-olechky-au-moins-trois-personnes-tuees-dans-des-frappes-russes-dimanche_6803934_3210.html",
+       "source": "Le Monde",
        "via": null
       }
      ]
     },
     {
-     "text": "Ukraine has resumed attacks on Russian oil facilities, defying reported US pressure; Zelensky has also signalled willingness to meet Putin in Turkey, with ceasefire terms under discussion.",
+     "text": "The global AI-led sell-off eased after the Nasdaq’s worst month in more than a year, though a separate FT analysis warns higher rates could challenge AI valuations.",
      "sources": [
       {
-       "key": "53a9518b1d447af7",
-       "title": "Ukraine defies Trump to resume attacks on Russian oil refineries",
-       "url": "https://www.theguardian.com/world/2026/nov/01/ukraine-defies-trump-resumes-attacks-russian-oil",
-       "source": "The Guardian World",
-       "via": null
-      },
-      {
-       "key": "03d26c35fab0c4b8",
-       "title": "Zelensky, 'sono pronto a incontrare Putin in Turchia'",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/01/zelensky-sono-pronto-a-incontrare-putin-in-turchia_516083df-7e30-4737-9ff6-48eec4624bb1.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "A Wisconsin city has halted a proposed $1.6 billion data-centre project after residents’ opposition, adding to local resistance to AI infrastructure expansion.",
-     "sources": [
-      {
-       "key": "3a540124a6897728",
-       "title": "How a small Wisconsin city scuttled a secretive $1.6bn datacenter project",
-       "url": "https://www.theguardian.com/us-news/ng-interactive/2026/nov/01/wisconsin-city-menomie-meta-datacenter",
-       "source": "The Guardian World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Insurance-market developments include Willis Re completing its acquisition of BMS Re US and growing use of sidecars to bring capital into long-tail casualty risk.",
-     "sources": [
-      {
-       "key": "fbc3f598cbec537f",
-       "title": "Willis Re completes acquisition of BMS Re US - theinsurer.com",
-       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQazZpZUVNM08zZzJ2WE5tTTVnNU5ubjlYNmFVa1Z5dUlRWGRtNlIwRHdvYlMwRzcyN05uaU1hVVUtaWxJRTV4dF8yeTFXcjQ2R3AydEVyOE9VVUZPTGF0NGVJb3hNX25fcnR3cG0xdGZmcUZNNXZZM2FWd1JNY21JRUd4STY5RTdHWXZwcmNvQ2p6V1g2aGc?oc=5",
-       "source": "theinsurer.com",
+       "key": "84e9f934029fb976",
+       "title": "Global AI sell-off eases after Nasdaq’s worst month in over a year - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOT08zMXJZU1Fibm1jZjRGMXpfTWtSaGNCS1FDWEZXQ3hJTm5vVjQ1S212bVhKdm1BOEJGTUxBcTBnTzhlMERmY0plSkNjdmhwYVY3a3pnUG5XTWVNOEhUcEFaazd3cGl4cWJKUndXNFNZd3EtNGR4S0x2cFNJc19NazBiSVc?oc=5",
+       "source": "Financial Times",
        "via": "Google News"
       },
       {
-       "key": "ea19958f6a189019",
-       "title": "Casualty sidecars: why long-tail risk has found a new class of capital - Intelligent Insurer",
-       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUWpPWHgyZXRkRjdfY2xENEZ2RV9KMTN0anowbmlVNE5HMHYwelYxRmRWX1JTbFlxbmlnN05DQTVjcmltQ1RzcFgtY2t4eE12bHBkbmV4SkpHZTlydFdvekZLVGxfZ3JTdVJCRlhTT1dBRUNOQ3Nsei1qSXV4VjA3dGRYbFo2dFVvSXVjN2FUYk9oemw2TGcwZjNGRm5yZEZkUlNGa1gwWHQ0UFdPVlJIVXVfZUdaeWs?oc=5",
+       "key": "7e4beb6cf8eb95b9",
+       "title": "AI mania can’t survive higher interest rates - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQc1VMQlF3OWRsamI3RF84QmNzTmNBa1FLbkQ1ckttMWxpRlFPeGZOdFotSnBDR0tTcnFEbHRkSW0walJKUHlfMEpfUFVrdjFVeXJpWHFuOWprYnlhUjhDVGR3bjZqSjJ0eDI3XzFWSm9UbmNrM0ZHaUZHR1NhM2FPUnplYUY?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "South Korea plans to double spending on AI and chips in 2027, a major public-sector push for the technology and semiconductor industries.",
+     "sources": [
+      {
+       "key": "ce8efd07a29a3ebd",
+       "title": "South Korea to double spending on AI and chips in 2027 - The Japan Times",
+       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQT01fOXk3eUJBYjRmZnBYUmpGdVk1WjVCc2VfLWJ1ZmxpQXdQVGNIei12QzBzQlk5eDktazhVdnlLNTFvQUk1ZWJaM1A3X3VZT0FiRjNlSm1pSTNrblR3UjlBSGhvNkNlc05jM09OdG1lNnhRWWxQdTN0eXlKeHhKTnJPUnVPYlZwUk1UMw?oc=5",
+       "source": "The Japan Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Two insurance-market developments are worth tracking: Hong Kong’s regulator proposed a revised framework for asset-intensive reinsurance, while Marsh Re highlighted better data as key to securing secondary-peril capacity.",
+     "sources": [
+      {
+       "key": "90a029cc3b9c20bf",
+       "title": "Hong Kong Insurance Authority proposes revised asset-intensive reinsurance regulatory framework - InsuranceAsia News",
+       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQWGNIMEtUT3dDckxidWRBUTUzMlFsZXhyVVBuS3ZEamhnUnByR1dhal9zcDBKVjNBLTdmZnp5NDE3NEwxcFZoQksxMEJ2ZjFhSXlPMURRc0FZQXBOcndvS3dmVDJZeFNyQkFZUE43ZXZBV1JrWGllTHh5eEhGejkzR1VLZVNDb25pakxFa1FDMWhZaFMwMi0yZlFtZmZGN3BMNXRrTlA1dzJCeU91LXBEeThXaC1JakZmNmJBVTNSVTBHV3pI?oc=5",
+       "source": "InsuranceAsia News",
+       "via": "Google News"
+      },
+      {
+       "key": "07e8c03eba852c33",
+       "title": "Better data key to accessing secondary peril capacity: Marsh Re - Intelligent Insurer",
+       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMkJDSGNSZ09aWEtqcXR0clZVSUg3V2FsOVRXMWtCMFFGNUl6MkZUNlROZFJ2MGhKcGxzOG5UT29YUkphNnY3UVFhS2Z1SDRpcFdkMklrVkEzSURFSDBlTzg1a3RIVUN3Z2VaTHNkQmRiZW1vdkxSblQ3MUZ0Sy0weHRZb3RBa0ZDY2o5QUNUVEpkbHNyRGZzd3UzZXBEdmt4YWpfNWhLZ1JLRXhnbGc?oc=5",
        "source": "Intelligent Insurer",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "AM Best says counterparty and governance risks are testing ratings for US reinsurers and MGAs, a relevant watchpoint for underwriting and distribution partners.",
+     "text": "Reuters reports that Asian crude oil imports have returned to pre-war levels, while refined-fuel imports continue to lag.",
      "sources": [
       {
-       "key": "cc19d12a37d4021d",
-       "title": "Counterparty, governance risks test ratings for US re/insurers and MGAs: AM Best - Intelligent Insurer",
-       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNM2FtLVBWajhRRkdFM2VuQVZXS09xMWxMSEktcjl6SnM1c2FFandYelh1UGRlYlAwLUlFejhSU05Fb2VSSzV3bi10ZDhKSDRsNUZUb3JkTzIzNElHUmtNOU85VlBtc3ZPMDlhS29fUDNQVVdtdFY1YzQ3X1hFRG10UEVKdTJzYjBzVTF5RDM4WkNZT19BZl9VVU5ma0Z2VXhYcVdLVzYyMlFNN3JQc1F1NEd0UHg4d2RVYlRTOWgwS3ozdw?oc=5",
-       "source": "Intelligent Insurer",
+       "key": "1e75bed8205a60ed",
+       "title": "COMMENTARY: Asia's crude oil imports back to pre-war levels but refined fuels lag - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNUjRWdTdnRzAwR2xkSU04ZHlmbHh0eXg5Wm8xS1k5Q2hLYWRWbWdOVzd4ckZHcjZkYktZVHEyV29yQ25XNE9Ga0Y3TG5Dc3Awd054Y2o3MU5rLTNZNmRRTkZXVjdyZWJNYnM4bVczRU1RRmlqOW5JOVZCVWpJSXFDazBHWm5hUXhGb2FGS2xUN3Q5cFFQelVqazAxYXNDamdDZ0pINE5mQUE3VGhFdDcxZkZ4cUdSOFVQTWRsdXl6LXdMTUpIWnFLQ0VB?oc=5",
+       "source": "Reuters",
        "via": "Google News"
       }
      ]
@@ -832,157 +862,159 @@
    ],
    "items": [
     {
-     "url": "https://www.theguardian.com/world/2026/nov/01/negotiators-braced-for-worst-over-us-iran-talks-to-reopen-strait-of-hormuz",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-01T17:49:28+00:00",
-     "new": true,
-     "key": "17d074ce2b4c6145",
-     "title": "US-Iran talks face difficulties over reopening the Strait of Hormuz",
-     "summary": "Indirect talks have entered a third day, with Qatar seeking the release of $6 billion in Iranian assets as a possible step toward reopening the strait."
-    },
-    {
-     "url": "https://www.theguardian.com/world/2026/nov/01/ukraine-defies-trump-resumes-attacks-russian-oil",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-01T17:20:18+00:00",
-     "new": true,
-     "key": "53a9518b1d447af7",
-     "title": "Ukraine resumes strikes on Russian oil refineries",
-     "summary": "Ukraine has resumed attacks on Russian oil sites, prompting the Kremlin to accuse Kyiv of ignoring US wishes."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/01/zelensky-sono-pronto-a-incontrare-putin-in-turchia_516083df-7e30-4737-9ff6-48eec4624bb1.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-11-01T17:22:38+00:00",
-     "new": true,
-     "key": "03d26c35fab0c4b8",
-     "title": "Zelensky says he is ready to meet Putin in Turkey",
-     "summary": "Media reports say discussions could focus on a ceasefire along the front line and compliance with agreements."
-    },
-    {
-     "url": "https://www.theguardian.com/us-news/ng-interactive/2026/nov/01/wisconsin-city-menomie-meta-datacenter",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-01T17:31:24+00:00",
-     "new": true,
-     "key": "3a540124a6897728",
-     "title": "Wisconsin city blocks proposed $1.6 billion data-centre project",
-     "summary": "Residents of Menomonie successfully opposed a major data-centre campus, amid wider resistance to AI infrastructure."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQazZpZUVNM08zZzJ2WE5tTTVnNU5ubjlYNmFVa1Z5dUlRWGRtNlIwRHdvYlMwRzcyN05uaU1hVVUtaWxJRTV4dF8yeTFXcjQ2R3AydEVyOE9VVUZPTGF0NGVJb3hNX25fcnR3cG0xdGZmcUZNNXZZM2FWd1JNY21JRUd4STY5RTdHWXZwcmNvQ2p6V1g2aGc?oc=5",
-     "source": "theinsurer.com",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-11-01T16:42:14+00:00",
-     "new": true,
-     "key": "fbc3f598cbec537f",
-     "title": "Willis Re completes acquisition of BMS Re US",
-     "summary": "Willis Re has completed its acquisition of BMS Re US."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUWpPWHgyZXRkRjdfY2xENEZ2RV9KMTN0anowbmlVNE5HMHYwelYxRmRWX1JTbFlxbmlnN05DQTVjcmltQ1RzcFgtY2t4eE12bHBkbmV4SkpHZTlydFdvekZLVGxfZ3JTdVJCRlhTT1dBRUNOQ3Nsei1qSXV4VjA3dGRYbFo2dFVvSXVjN2FUYk9oemw2TGcwZjNGRm5yZEZkUlNGa1gwWHQ0UFdPVlJIVXVfZUdaeWs?oc=5",
-     "source": "Intelligent Insurer",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-11-01T17:02:43+00:00",
-     "new": true,
-     "key": "ea19958f6a189019",
-     "title": "Casualty sidecars attract new capital for long-tail risk",
-     "summary": "A report examines how sidecars are bringing a new class of capital into long-tail casualty risk."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNM2FtLVBWajhRRkdFM2VuQVZXS09xMWxMSEktcjl6SnM1c2FFandYelh1UGRlYlAwLUlFejhSU05Fb2VSSzV3bi10ZDhKSDRsNUZUb3JkTzIzNElHUmtNOU85VlBtc3ZPMDlhS29fUDNQVVdtdFY1YzQ3X1hFRG10UEVKdTJzYjBzVTF5RDM4WkNZT19BZl9VVU5ma0Z2VXhYcVdLVzYyMlFNN3JQc1F1NEd0UHg4d2RVYlRTOWgwS3ozdw?oc=5",
-     "source": "Intelligent Insurer",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-11-01T17:02:28+00:00",
-     "new": true,
-     "key": "cc19d12a37d4021d",
-     "title": "AM Best flags counterparty and governance risks at US re/insurers and MGAs",
-     "summary": "AM Best says counterparty and governance concerns are testing ratings for US reinsurers and managing general agents."
-    },
-    {
-     "url": "https://www.theguardian.com/business/2026/nov/01/national-grid-to-site-biggest-substation-on-teesside-near-planned-ai-datacentre",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-01T17:10:52+00:00",
-     "new": true,
-     "key": "2d93e6ebb9aeca7f",
-     "title": "National Grid plans major Teesside substation near proposed AI data centre",
-     "summary": "National Grid has selected a site for its largest substation on Teesside to support generation and planned data-centre investment."
-    },
-    {
-     "url": "https://www.theguardian.com/politics/2026/nov/01/uk-willing-to-spend-450m-a-year-on-eu-students-if-it-can-join-made-in-europe-scheme",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-01T17:00:16+00:00",
-     "new": true,
-     "key": "5a23598834c45a6b",
-     "title": "UK offers £450 million annually for EU students under industrial-scheme deal",
-     "summary": "The UK plan would let EU students pay domestic fees, conditional on joining the Made in Europe industrial programme."
-    },
-    {
-     "url": "https://www.lemonde.fr/international/article/2026/11/01/en-ukraine-les-habitants-d-olechky-evacues-nous-ne-savons-pas-ou-aller-mais-une-chose-est-sure-nous-survivrons_6804529_3210.html",
+     "url": "https://www.lemonde.fr/international/live/2026/11/02/en-direct-guerre-en-ukraine-kiev-et-moscou-vises-par-des-cyberattaques-peu-apres-la-fin-de-la-treve-a-olechky-au-moins-trois-personnes-tuees-dans-des-frappes-russes-dimanche_6803934_3210.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-11-01T16:56:32+00:00",
+     "published": "2026-11-02T04:50:29+00:00",
      "new": true,
-     "key": "d5103e4d46c7704c",
-     "title": "Residents evacuated from Ukraine’s Oleshky during six-day ceasefire",
-     "summary": "About 700 people left Oleshky, a contested no-man’s-land, during a six-day ceasefire between Moscow and Kyiv."
+     "key": "269f372d66c420cd",
+     "title": "Ukraine reports cyberattacks after truce ends as Russian strikes kill at least three",
+     "summary": "Ukraine reported a cyberattack on its public alert app after the truce ended, amid Russian strikes that killed at least three people."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOT08zMXJZU1Fibm1jZjRGMXpfTWtSaGNCS1FDWEZXQ3hJTm5vVjQ1S212bVhKdm1BOEJGTUxBcTBnTzhlMERmY0plSkNjdmhwYVY3a3pnUG5XTWVNOEhUcEFaazd3cGl4cWJKUndXNFNZd3EtNGR4S0x2cFNJc19NazBiSVc?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-02T04:56:12+00:00",
+     "new": true,
+     "key": "84e9f934029fb976",
+     "title": "Global AI sell-off eases after Nasdaq’s worst month in over a year",
+     "summary": "The global AI-linked sell-off eased after the Nasdaq recorded its worst month in more than a year."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQT01fOXk3eUJBYjRmZnBYUmpGdVk1WjVCc2VfLWJ1ZmxpQXdQVGNIei12QzBzQlk5eDktazhVdnlLNTFvQUk1ZWJaM1A3X3VZT0FiRjNlSm1pSTNrblR3UjlBSGhvNkNlc05jM09OdG1lNnhRWWxQdTN0eXlKeHhKTnJPUnVPYlZwUk1UMw?oc=5",
+     "source": "The Japan Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-02T04:57:00+00:00",
+     "new": true,
+     "key": "ce8efd07a29a3ebd",
+     "title": "South Korea to double spending on AI and chips in 2027",
+     "summary": "South Korea plans to double spending on AI and chips in 2027."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQWGNIMEtUT3dDckxidWRBUTUzMlFsZXhyVVBuS3ZEamhnUnByR1dhal9zcDBKVjNBLTdmZnp5NDE3NEwxcFZoQksxMEJ2ZjFhSXlPMURRc0FZQXBOcndvS3dmVDJZeFNyQkFZUE43ZXZBV1JrWGllTHh5eEhGejkzR1VLZVNDb25pakxFa1FDMWhZaFMwMi0yZlFtZmZGN3BMNXRrTlA1dzJCeU91LXBEeThXaC1JakZmNmJBVTNSVTBHV3pI?oc=5",
+     "source": "InsuranceAsia News",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-11-02T05:59:50+00:00",
+     "new": true,
+     "key": "90a029cc3b9c20bf",
+     "title": "Hong Kong regulator proposes revised asset-intensive reinsurance framework",
+     "summary": "Hong Kong’s Insurance Authority proposed a revised regulatory framework for asset-intensive reinsurance."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMkJDSGNSZ09aWEtqcXR0clZVSUg3V2FsOVRXMWtCMFFGNUl6MkZUNlROZFJ2MGhKcGxzOG5UT29YUkphNnY3UVFhS2Z1SDRpcFdkMklrVkEzSURFSDBlTzg1a3RIVUN3Z2VaTHNkQmRiZW1vdkxSblQ3MUZ0Sy0weHRZb3RBa0ZDY2o5QUNUVEpkbHNyRGZzd3UzZXBEdmt4YWpfNWhLZ1JLRXhnbGc?oc=5",
+     "source": "Intelligent Insurer",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-11-02T05:00:44+00:00",
+     "new": true,
+     "key": "07e8c03eba852c33",
+     "title": "Marsh Re says better data is key to accessing secondary-peril capacity",
+     "summary": "Marsh Re said better data is important for accessing reinsurance capacity for secondary perils."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNUjRWdTdnRzAwR2xkSU04ZHlmbHh0eXg5Wm8xS1k5Q2hLYWRWbWdOVzd4ckZHcjZkYktZVHEyV29yQ25XNE9Ga0Y3TG5Dc3Awd054Y2o3MU5rLTNZNmRRTkZXVjdyZWJNYnM4bVczRU1RRmlqOW5JOVZCVWpJSXFDazBHWm5hUXhGb2FGS2xUN3Q5cFFQelVqazAxYXNDamdDZ0pINE5mQUE3VGhFdDcxZkZ4cUdSOFVQTWRsdXl6LXdMTUpIWnFLQ0VB?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-02T05:26:37+00:00",
+     "new": true,
+     "key": "1e75bed8205a60ed",
+     "title": "Asia's crude oil imports recover to pre-war levels, but refined fuels lag",
+     "summary": "Asian crude oil imports have returned to pre-war levels, while refined-fuel imports remain lower."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQc1VMQlF3OWRsamI3RF84QmNzTmNBa1FLbkQ1ckttMWxpRlFPeGZOdFotSnBDR0tTcnFEbHRkSW0walJKUHlfMEpfUFVrdjFVeXJpWHFuOWprYnlhUjhDVGR3bjZqSjJ0eDI3XzFWSm9UbmNrM0ZHaUZHR1NhM2FPUnplYUY?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-02T05:00:17+00:00",
+     "new": true,
+     "key": "7e4beb6cf8eb95b9",
+     "title": "AI valuations face a test from higher interest rates",
+     "summary": "The Financial Times argues that higher interest rates could put pressure on AI-sector valuations."
+    },
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/11/02/midterms-2026-les-reniements-de-donald-trump-l-exposent-a-un-vote-sanction-de-la-part-des-electeurs-americains_6804843_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-02T04:30:47+00:00",
+     "new": true,
+     "key": "80a13b6c2c4ce642",
+     "title": "Iran war and living costs expose Trump to a potential midterm backlash",
+     "summary": "Le Monde reports that the Iran war and rising living costs could expose Donald Trump to a midterm vote backlash."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-01T18:01:25.615627+00:00",
-   "input_fingerprint": "sha256:8e36d7c217a358ea26f29015f60bbbf090eb2a6ac202fe4da124ed73ffbac24b",
-   "last_success_at": "2026-11-01T18:01:25.615627+00:00",
-   "candidate_count": 369,
-   "new_count": 10
+   "source_checked_at": "2026-11-02T06:01:21.090893+00:00",
+   "input_fingerprint": "sha256:d49f2c0b75ac614430400822e880c24072135bbffe7291ecf6531934f5e9588a",
+   "last_success_at": "2026-11-02T06:01:21.090893+00:00",
+   "candidate_count": 382,
+   "new_count": 8
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG have offered David Boly his first professional contract after his Ligue 1 debut; the young player is reportedly prioritising the club.",
+     "text": "PSG head to Villarreal in the Champions League with several players already absent or doubtful, and the list could grow before Tuesday’s match.",
      "sources": [
       {
-       "key": "2262d32696f4644a",
-       "title": "Boly très courtisé, mais le PSG priorisé",
-       "url": "https://www.culturepsg.com/news/club/boly-tres-courtise-mais-le-psg-priorise/61395",
+       "key": "85b6670838fbf532",
+       "title": "Déjà six absents pour Villarreal/PSG, probablement plus",
+       "url": "https://www.culturepsg.com/news/match/deja-six-absents-pour-villarreal-psg-probablement-plus/61400",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "Sakina Karchaoui is expected to miss several weeks, a setback for both PSG and France’s women’s team.",
+     "text": "The 5–1 win at Le Havre both delivered a big result and extended PSG’s lead in Ligue 1.",
      "sources": [
       {
-       "key": "b079507b6908c708",
-       "title": "Football. Mauvaise nouvelle pour les Bleues et le PSG : Sakina Karchaoui absente plusieurs semaines - Ouest-France",
-       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNMFRYOHVPdzFPazJfeTVpUDhVYWV3NzAxVTV3dGNobG9WcTVnLV9QeHZQNXR1RmFvcGpscE1faDh4YS00Q29pWkxHTWdibGJjbzYxUTNlbm5uWTl2bHVicGFrQTRhcTA4bWNqMmFkMFVmRXRiNEJtWWhiaWtualZaNWhqTzdQSUNLT1FnWHhienJJNHB1Skx0eG03UGxsNUNHTlRXbWgzejduUmFWa0lES0dHRElmUHI2dzR0MGhEcUJxVDFHRUQwUFFyNjc0UHVRMVFrRlMxY1VIRExNcF90bFZhRk1jWXFDMHlKNU5HbU1MMFQtSnRqRU9VUmhNZ0ZEZkVoc1Ftb2FvS1RGc014VE10cw?oc=5",
+       "key": "a2a0cc6bbad29509",
+       "title": "Avec son succès au Havre, le PSG a augmenté son avance en L1",
+       "url": "https://www.culturepsg.com/news/ligue1/avec-son-succes-au-havre-le-psg-a-augmente-son-avance-en-l1/61401",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Michael Olise came off injured, while Mike Maignan was described as imperious and Kylian Mbappé as unperturbed in France’s latest match.",
+     "sources": [
+      {
+       "key": "08d61cfdb4faedbf",
+       "title": "Équipe de France. Kylian Mbappé imperturbable, Mike Maignan impérial, Michael Olise sort blessé… Le baromètre des Bleus - Ouest-France",
+       "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxNazlRLVNONm1KVWVOWTUwQl90VTFLeS1Iall6djN0cndNRmpqbnpIa2lsYjdmOUJ6SUNUaDl2emNweGpVVTI2dmN6bmFUbFRSdXJSbVJaRVhwUnFPajJvZ3Rrci0wZzZkSzZCTjVGZlh1LWpGcHhvZG1GaGtWUGlsUk40VDRqY0NEaTl0T0M1dUdNLWhSZDM0dWR4WmlCdktRdVkyeGxwQk14ZC04OHZzT0Rua09QRkNWUTd1MWN5X2h1S0wwZ3huWEYwaUF6NW82am9OdVp2d2ZnWEVwRm1sXy1EdFIyU3BVRUdnMnQ4cDZ5SHFKSWZ2dnBQaWdGZlF6c3MtcndYOG5JV0tRSUwxdmRjTUVkMF9UVjNSM2lTQ0NtbkdaR0h0dXNHY0RYdFZQeFBSQmRlVQ?oc=5",
        "source": "Ouest-France",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "PSG head to Villarreal on Tuesday after both sides played league matches on Friday to prepare for their European meeting.",
+     "text": "France forward Oscar Jegou says he is learning by watching Greg Alldritt as he looks to take another step with the national team.",
      "sources": [
       {
-       "key": "33c340d23c4a4f92",
-       "title": "Avant le PSG, Villarreal a peut-être perdu gros",
-       "url": "https://www.culturepsg.com/news/europe/avant-le-psg-villarreal-a-peut-etre-perdu-gros/61398",
+       "key": "e843a7c677ddef93",
+       "title": "\"J'apprends beaucoup en regardant Greg Alldritt\" : Oscar Jegou prêt à franchir un nouveau cap avec le XV de France - Actu.fr",
+       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPS2RzNWRLNWRMazVsQURENDh0NEFrRmQwaFlLMVhBVW51QkppNGw0cFlsZHZNdHBKckh3Ujk4ek5rUGY0VVQyeWV3am5qY3Y4Mm13MTQ1b0dXQVpiOWptWXBrRmxUWmpkbWVLOVNkcGxwVjZSME9TRkx4RjBtaGFLQ2Y2Nzd4aDNIeHZTMHBPYl9jOXpVWHlDRU52REdNdnhXenNza2hFamFyQ3BqNGNDWmFMZk9JS0VIVHNlVWgxV1BQVlN0MVBCYktYMWQ1SDY4aHh2dUVRN2laUGtMR2c2TmFmdkJMbnVSQnNFT0J5Rk5pbDVMeTV1YVcxVVZrVGdqQ3M2QTFiS0k?oc=5",
+       "source": "Actu.fr",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Reports of PSG interest in Ez Abde have been denied, according to CulturePSG.",
+     "sources": [
+      {
+       "key": "27a532726493c59d",
+       "title": "Une des prétendues cibles du PSG pour cet hiver démentie",
+       "url": "https://www.culturepsg.com/news/mercato/une-des-pretendues-cibles-du-psg-dementie/61399",
        "source": "CulturePSG",
        "via": null
       }
@@ -991,117 +1023,155 @@
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/club/boly-tres-courtise-mais-le-psg-priorise/61395",
+     "url": "https://www.culturepsg.com/news/match/deja-six-absents-pour-villarreal-psg-probablement-plus/61400",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-01T14:59:00+00:00",
+     "published": "2026-11-02T00:36:00+00:00",
      "new": true,
-     "key": "2262d32696f4644a",
-     "title": "PSG prioritise first professional contract for David Boly",
-     "summary": "After making his Ligue 1 debut, David Boly received a PSG offer for his first professional contract and reportedly prioritises the club."
+     "key": "85b6670838fbf532",
+     "title": "Several PSG absentees ahead of Villarreal match",
+     "summary": "Several players are absent or doubtful for PSG’s Champions League trip to Villarreal, with more absences possible."
     },
     {
-     "url": "https://www.culturepsg.com/news/europe/avant-le-psg-villarreal-a-peut-etre-perdu-gros/61398",
+     "url": "https://www.culturepsg.com/news/ligue1/avec-son-succes-au-havre-le-psg-a-augmente-son-avance-en-l1/61401",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-01T13:58:00+00:00",
+     "published": "2026-11-01T21:52:00+00:00",
      "new": true,
-     "key": "33c340d23c4a4f92",
-     "title": "Villarreal may have lost a key player ahead of PSG match",
-     "summary": "Villarreal played in the league on Friday ahead of Tuesday’s European meeting with PSG."
+     "key": "a2a0cc6bbad29509",
+     "title": "PSG extend their Ligue 1 lead after Le Havre win",
+     "summary": "PSG’s 5–1 victory at Le Havre helped them increase their lead in Ligue 1."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNMFRYOHVPdzFPazJfeTVpUDhVYWV3NzAxVTV3dGNobG9WcTVnLV9QeHZQNXR1RmFvcGpscE1faDh4YS00Q29pWkxHTWdibGJjbzYxUTNlbm5uWTl2bHVicGFrQTRhcTA4bWNqMmFkMFVmRXRiNEJtWWhiaWtualZaNWhqTzdQSUNLT1FnWHhienJJNHB1Skx0eG03UGxsNUNHTlRXbWgzejduUmFWa0lES0dHRElmUHI2dzR0MGhEcUJxVDFHRUQwUFFyNjc0UHVRMVFrRlMxY1VIRExNcF90bFZhRk1jWXFDMHlKNU5HbU1MMFQtSnRqRU9VUmhNZ0ZEZkVoc1Ftb2FvS1RGc014VE10cw?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxNazlRLVNONm1KVWVOWTUwQl90VTFLeS1Iall6djN0cndNRmpqbnpIa2lsYjdmOUJ6SUNUaDl2emNweGpVVTI2dmN6bmFUbFRSdXJSbVJaRVhwUnFPajJvZ3Rrci0wZzZkSzZCTjVGZlh1LWpGcHhvZG1GaGtWUGlsUk40VDRqY0NEaTl0T0M1dUdNLWhSZDM0dWR4WmlCdktRdVkyeGxwQk14ZC04OHZzT0Rua09QRkNWUTd1MWN5X2h1S0wwZ3huWEYwaUF6NW82am9OdVp2d2ZnWEVwRm1sXy1EdFIyU3BVRUdnMnQ4cDZ5SHFKSWZ2dnBQaWdGZlF6c3MtcndYOG5JV0tRSUwxdmRjTUVkMF9UVjNSM2lTQ0NtbkdaR0h0dXNHY0RYdFZQeFBSQmRlVQ?oc=5",
      "source": "Ouest-France",
-     "feed_name": "Team: PSG",
+     "feed_name": "Team: équipe de France football",
      "via": "Google News",
-     "published": "2026-11-01T17:28:51+00:00",
+     "published": "2026-11-02T05:18:03+00:00",
      "new": true,
-     "key": "b079507b6908c708",
-     "title": "Sakina Karchaoui out for several weeks",
-     "summary": "The PSG and France player will be absent for several weeks."
+     "key": "08d61cfdb4faedbf",
+     "title": "France team: Olise injured, Maignan and Mbappé impress",
+     "summary": "Michael Olise came off injured, while Mike Maignan and Kylian Mbappé were highlighted in France’s player ratings."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPS2RzNWRLNWRMazVsQURENDh0NEFrRmQwaFlLMVhBVW51QkppNGw0cFlsZHZNdHBKckh3Ujk4ek5rUGY0VVQyeWV3am5qY3Y4Mm13MTQ1b0dXQVpiOWptWXBrRmxUWmpkbWVLOVNkcGxwVjZSME9TRkx4RjBtaGFLQ2Y2Nzd4aDNIeHZTMHBPYl9jOXpVWHlDRU52REdNdnhXenNza2hFamFyQ3BqNGNDWmFMZk9JS0VIVHNlVWgxV1BQVlN0MVBCYktYMWQ1SDY4aHh2dUVRN2laUGtMR2c2TmFmdkJMbnVSQnNFT0J5Rk5pbDVMeTV1YVcxVVZrVGdqQ3M2QTFiS0k?oc=5",
+     "source": "Actu.fr",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-02T05:28:02+00:00",
+     "new": true,
+     "key": "e843a7c677ddef93",
+     "title": "Oscar Jegou aims to step up with France",
+     "summary": "France forward Oscar Jegou says he learns by watching Greg Alldritt as he targets another step forward."
+    },
+    {
+     "url": "https://www.culturepsg.com/news/mercato/une-des-pretendues-cibles-du-psg-dementie/61399",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-01T22:53:00+00:00",
+     "new": true,
+     "key": "27a532726493c59d",
+     "title": "Reports of PSG interest in Ez Abde denied",
+     "summary": "Claims that PSG are interested in Ez Abde have been denied."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-01T18:01:25.615627+00:00",
-   "input_fingerprint": "sha256:1a41698ce4491f989e8a6f6ad0a69bf4107abe3f37c30a350367e0f7c8a484f4",
-   "last_success_at": "2026-11-01T18:01:25.615627+00:00",
-   "candidate_count": 296,
-   "new_count": 3
+   "source_checked_at": "2026-11-02T06:01:21.090893+00:00",
+   "input_fingerprint": "sha256:37491627f4317caa025f642c28ff4a1ba8cfc6cda640edc46d21629de13a3be7",
+   "last_success_at": "2026-11-02T06:01:21.090893+00:00",
+   "candidate_count": 285,
+   "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "A sell-off in junk debt is intensifying as creditor-protection concerns compound pressure on credit investors, a development worth watching across leveraged credit markets.",
+     "text": "The AI-led tech sell-off is still weighing on Asian markets, though the FT reports US tech stocks are set to open higher after a bruising month. That leaves markets focused on whether the rebound can hold.",
      "sources": [
       {
-       "key": "85b56b3c34dfc720",
-       "title": "Junk debt rout sparks ‘bloodbath’ for credit investors",
-       "url": "https://www.ft.com/content/fdc9a85d-d2c4-465f-99ca-609d68b6d443?syn-25a6b1a6=1",
+       "key": "4b75fdbbf517e452",
+       "title": "Global AI sell-off eases after Nasdaq’s worst month in over a year",
+       "url": "https://www.ft.com/content/d7fe99f8-d292-4cb5-a8fd-45be0f8cc2b3?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      },
+      {
+       "key": "fda013a0a8a5b6b1",
+       "title": "Asian Stocks to Fall as Tech Rout Fuels AI Fears: Markets Wrap - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUXhSWUZpNlU1UFZVSEtvY3QwQVB4T3FuYlpCT3lpaE05MThfMFFTZVZWWllFZDZDYkJFdTBIWEx1X1ZMVXlESFdaX3Noc2VSSW1QRHFzYzhPZkowLVNZeWR1N2dBN2hlLXY1VlJ3SHJNR3Ayc29JOXN4cXN3bklZQzN5bEctRER1aGp1eFdUVjhITWM0?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Oil fell despite attacks around Hormuz, with a report that Trump wants to give diplomacy with Iran more time; renewed conflict remains a key energy-market risk.",
+     "sources": [
+      {
+       "key": "45305fa6765dc1bc",
+       "title": "Oil Declines Ahead of Midterm Elections Despite Hormuz Attacks - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQemlrUnpqR1g0OFFfbnJHTUktSE94dmx1MUQxbFpseThLLWNLaFVmdUp1ZFBHMjloZDFSR1Z2aDFVRHU0bmN4aE1vMGJRR1c4UldXMW9iWDY4clhNODVZVV9OQ0VvelF0Y2pKWlo2T0o3OWVCRTlGeU9fVXNiNEZfNTF5cnU0Rk5yX1htSDd6UW9oSDBNdU93NXNmV08?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      },
+      {
+       "key": "b9f9806ef54e2855",
+       "title": "Bitcoin claws back toward $79,000 as markets shake off crypto's biggest hack",
+       "url": "https://www.coindesk.com/markets/2026/11/02/bitcoin-claws-back-toward-usd79-000-as-markets-shake-off-crypto-s-biggest-hack",
+       "source": "CoinDesk",
+       "via": null
+      },
+      {
+       "key": "5aed930acc0063ef",
+       "title": "Gulf braced for escalation of war between US-Israel alliance and Iran",
+       "url": "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "Wall Street is bracing for further volatility after a tech-led stock rout, against a backdrop of sharp declines in the reader’s equity holdings.",
+     "text": "Japan’s finance minister says authorities are ready to act to stabilise the yen, keeping intervention risk in focus for currency markets.",
      "sources": [
       {
-       "key": "5bc9998cef01c748",
-       "title": "Wall Street Braces for More Wild Days in Stocks After Tech Rout - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbTZ6ZGV5UkI2dXIxcEtVdDVFTk5kSldVUkgySkxpV0xQdHFaY3RWdUYwV1BtMnJKNGdPZ1Q5ZW85X1dhRUJELVRvY2c3UnFUTUdyMDhJUzQ1QXFNWndoYUdVeDNrWlFfUkpTZzcxTnplOWtmYlRkRzhJeXdac2R2WXJtOTd4YkltMmlYZXNEYTVyOTJyZFEwS3pDU1d6dEExTHk3eXRRX3pHVVVQMnBrX3I5S3o?oc=5",
-       "source": "Bloomberg.com",
+       "key": "caedd5e6f1e3aa51",
+       "title": "Japan’s Katayama Says Ready to Take Steps for Stable FX Market - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQd1lPdWZRSl9ObzYzaE53dVQxLTdSekwzc2JqNEhPRVNLX2o3bzJoRFN3MlV6cEQ3RUI1UlVINlRqVnFWRS1GY0hhbXZ3c2lzVmRFMG1lZ1R3SkhnUXhwTFhpYXA0d3BUVDMydnpwZVh1TUdKTWplY2RGR0dKdmo0bGlfM3BKb1V2Y08yanlNQWplVXI3OUItZm9mbTByamE4b0RnZWxHNUhpdXZLZjZZSmFWVQ?oc=5",
+       "source": "Bloomberg",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Emerging-market positioning is under scrutiny after political upheaval in Brazil raised concerns about crowded trades, relevant as emerging-market equities fell sharply.",
+     "text": "Energy security is driving major corporate moves: Japanese groups are pursuing a $21bn US gas deal spree, while a report says Washington is pushing to restore Russian gas sales to Europe via Ukraine.",
      "sources": [
       {
-       "key": "efec07435e4dd782",
-       "title": "Brazil Shakeup Sounds Warning on Crowded Emerging-Market Trades - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNc3VqVE8zQ1pKQ1RyWUlzdmZ5OWo0M2FVTTc4Z0prbVVZUUs0QTJlNEkxZk12MDFuR04wbGZBQWdET3ljX3FvRWhVMnF4NjZhTkFDRkdvQmp3Z0xPTUZtMGVndWZnbDduR2RtRlJKdFJJZU41b0pwd0YtTjV4VzdzaUxYTzZMcTJpakpjaW1YbjEta1d4dENnSm9XQ1J4ZkRvX3Y2LXZzYjlHMlJyV0lyNThpaHA?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "German engineering workers have begun wage strikes, adding a fresh labour-market development to monitor in Europe’s largest economy.",
-     "sources": [
+       "key": "13ac96a69730337c",
+       "title": "Japanese groups stage $21bn deal spree to secure gas supplies",
+       "url": "https://www.ft.com/content/9652cb30-c8b1-4f36-993f-54f7827d2174?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
+      },
       {
-       "key": "90cba24c5173d6e3",
-       "title": "German engineering industry workers begin wage strikes - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRUxlWnZDNVAtUjJJU1dFSHZBM1E5Ul9nc3N3c295TzgtSnVKTGtTNk1fMXNZN29wV3lGdGthdkUtOHBnclpaSFJGdGdidTA5cFhwY3c0bGlycVNadFpUR2ZGNS12WGFDZ01lMThyMmxydzNmdXNXSDljelItc1JleWhfekhDNTZLN3VHSjdTQlFNd0ZTTDI1SXhKZkFFYTJWUENMeXpONUJtWVB6M18xNUdpSQ?oc=5",
+       "key": "d5c2050e8556a3a2",
+       "title": "US pushes to restore Russian gas sales to Europe via Ukraine, WSJ reports - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMkQyS0lzcURKNWt5Rk9fQlRvMGx5ejJiMTBRSnFsdTA1SWl6cncxdHNHR28wWDdCelVyWVctTkx3TjB6T3pCaHBDdm5veGVtZnJQWnRGNXVIQlRpamRENktDTU5SQ0JtZGFyWGFNYloyTTg5LTM5eTVKaklmZWlqRTNBM1FHRGdPYW9HS05QWlg3aEU5cXFjbVNvbm1BeVZBSk94RWFQbW9Cc2RGTVlGejBsT1RNZ0hZdlE?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Venture Global has begun supplying customers under long-term contracts from the first phase of its Plaquemines LNG project, a notable development in energy supply.",
+     "text": "Zurich-relevant Swiss banking news: UBS chief executive Sergio Ermotti’s reported high-stakes move is stirring debate in Switzerland, though the available summary gives few details.",
      "sources": [
       {
-       "key": "40e869801ea70c64",
-       "title": "Venture Global begins supplying Plaquemines phase 1 customers under long-term LNG contracts - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNUdFOHN2STIyaFRSZlNUbERCOTM2SkpuVzZUMmZmeGNidXpFQ3hpTEZYblE0N1VmdzZ4WExBRmxQTjB4OEpXV1hiOUlxWjFBTWZDYVBjSUNBYnMyRzR2N2VIa3dnTlNhWGhjWlpPOGdRVE5OWXYyNzFDOXJsZjBpVmVEUEYtUk5VREVKM2U5NjR4a2NKTGN0RlBwOHBKUHJSWWYxT0hrMThWSDNJS1ppQVUxZTBtTTRpajkzTzk2Rm90MnJObnV2Qw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Binance has begun restoring customer withdrawals in phases after a major hack; the disruption and crypto-market response are notable, though crypto remains a secondary focus.",
-     "sources": [
-      {
-       "key": "dab83e80ea2ec1ae",
-       "title": "Binance to Resume Customer Withdrawals in Phases After Hack - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNV2YyTGwzbUNaa2oxcUJoeDZoTTZOaDB0MENBc3Ewa2JURFRCVG00cDVxbW1BczVGNzBaa2hUUHFQSXlGaFl3WjdTUUUzbDJCUnZvdW9nZmczZVllNHV1QldfYnZjYVN2SU5wOXJqRVI4ejRYZUMteG1yWnUtMVdXbERMREh0bDIyTE9wTllxaGFGMWstM29NM3EtOGM0N1dObHBUQzMyWHVpZkNoSzlz?oc=5",
-       "source": "Bloomberg.com",
+       "key": "269f1ac1e90d2f1b",
+       "title": "« Trop grande pour mettre les voiles » ? Ce coup de poker risqué du patron d'UBS qui agite la Suisse - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOY0w1eERkWnNER1pJeXhIcy05MVF1SEFqMXpoRm95ejBZRDRpTUNCZFZkQUY3M3d3dlF0R1UwajBPaHZkUGlvYUFkdGhSVElKRVN1S3dqalFFeG5TQm5FakpSa1hxYVlFamFlcnF5eW9Vc3hxR2JKd010UnVIalBlV0hTX0pPaDNReXk1QUZiWkFFWVJwNElzUHpJNXVTTzhBWFFTT21OeXMzekVsdFZEdHZlcUsxcEJPVFVsc0JNeUl4bDNrZ3VZaUtUTU5DRV9hMklJbXQyX2g2aVRac3RERnJUQzY1cXY0Q2RVUGp5R1k?oc=5",
+       "source": "Les Echos",
        "via": "Google News"
       }
      ]
@@ -1109,77 +1179,99 @@
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/fdc9a85d-d2c4-465f-99ca-609d68b6d443?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/d7fe99f8-d292-4cb5-a8fd-45be0f8cc2b3?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-01T14:54:55+00:00",
+     "published": "2026-11-02T05:18:53+00:00",
      "new": true,
-     "key": "85b56b3c34dfc720",
-     "title": "Junk debt rout sparks ‘bloodbath’ for credit investors",
-     "summary": "A junk-debt sell-off has worsened as aggressive tactics to move assets beyond creditors’ reach add pressure."
+     "key": "4b75fdbbf517e452",
+     "title": "Global AI sell-off eases after Nasdaq’s worst month in over a year",
+     "summary": "US tech stocks are set to open higher after a bruising sell-off."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbTZ6ZGV5UkI2dXIxcEtVdDVFTk5kSldVUkgySkxpV0xQdHFaY3RWdUYwV1BtMnJKNGdPZ1Q5ZW85X1dhRUJELVRvY2c3UnFUTUdyMDhJUzQ1QXFNWndoYUdVeDNrWlFfUkpTZzcxTnplOWtmYlRkRzhJeXdac2R2WXJtOTd4YkltMmlYZXNEYTVyOTJyZFEwS3pDU1d6dEExTHk3eXRRX3pHVVVQMnBrX3I5S3o?oc=5",
-     "source": "Bloomberg.com",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQemlrUnpqR1g0OFFfbnJHTUktSE94dmx1MUQxbFpseThLLWNLaFVmdUp1ZFBHMjloZDFSR1Z2aDFVRHU0bmN4aE1vMGJRR1c4UldXMW9iWDY4clhNODVZVV9OQ0VvelF0Y2pKWlo2T0o3OWVCRTlGeU9fVXNiNEZfNTF5cnU0Rk5yX1htSDd6UW9oSDBNdU93NXNmV08?oc=5",
+     "source": "Bloomberg",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-01T15:00:00+00:00",
+     "published": "2026-11-02T05:10:00+00:00",
      "new": true,
-     "key": "5bc9998cef01c748",
-     "title": "Wall Street braces for more volatile trading after tech rout",
-     "summary": "Investors expect further volatile sessions in stocks after a technology-led market rout."
+     "key": "45305fa6765dc1bc",
+     "title": "Oil declines despite Hormuz attacks",
+     "summary": "Oil prices declined ahead of the US midterm elections despite attacks around the Strait of Hormuz."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNc3VqVE8zQ1pKQ1RyWUlzdmZ5OWo0M2FVTTc4Z0prbVVZUUs0QTJlNEkxZk12MDFuR04wbGZBQWdET3ljX3FvRWhVMnF4NjZhTkFDRkdvQmp3Z0xPTUZtMGVndWZnbDduR2RtRlJKdFJJZU41b0pwd0YtTjV4VzdzaUxYTzZMcTJpakpjaW1YbjEta1d4dENnSm9XQ1J4ZkRvX3Y2LXZzYjlHMlJyV0lyNThpaHA?oc=5",
-     "source": "Bloomberg.com",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQd1lPdWZRSl9ObzYzaE53dVQxLTdSekwzc2JqNEhPRVNLX2o3bzJoRFN3MlV6cEQ3RUI1UlVINlRqVnFWRS1GY0hhbXZ3c2lzVmRFMG1lZ1R3SkhnUXhwTFhpYXA0d3BUVDMydnpwZVh1TUdKTWplY2RGR0dKdmo0bGlfM3BKb1V2Y08yanlNQWplVXI3OUItZm9mbTByamE4b0RnZWxHNUhpdXZLZjZZSmFWVQ?oc=5",
+     "source": "Bloomberg",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-01T13:30:00+00:00",
+     "published": "2026-11-02T01:22:00+00:00",
      "new": true,
-     "key": "efec07435e4dd782",
-     "title": "Brazil shakeup warns of crowded emerging-market trades",
-     "summary": "Political upheaval in Brazil has raised concerns about crowded emerging-market positions."
+     "key": "caedd5e6f1e3aa51",
+     "title": "Japan ready to act for stable FX market",
+     "summary": "Japan’s finance minister said the government is ready to take steps to stabilise the foreign-exchange market."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRUxlWnZDNVAtUjJJU1dFSHZBM1E5Ul9nc3N3c295TzgtSnVKTGtTNk1fMXNZN29wV3lGdGthdkUtOHBnclpaSFJGdGdidTA5cFhwY3c0bGlycVNadFpUR2ZGNS12WGFDZ01lMThyMmxydzNmdXNXSDljelItc1JleWhfekhDNTZLN3VHSjdTQlFNd0ZTTDI1SXhKZkFFYTJWUENMeXpONUJtWVB6M18xNUdpSQ?oc=5",
+     "url": "https://www.ft.com/content/9652cb30-c8b1-4f36-993f-54f7827d2174?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-11-02T01:56:22+00:00",
+     "new": true,
+     "key": "13ac96a69730337c",
+     "title": "Japanese groups stage $21bn deal spree to secure gas supplies",
+     "summary": "Japanese companies are pursuing US Gulf Coast shale resources to secure gas supplies."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMkQyS0lzcURKNWt5Rk9fQlRvMGx5ejJiMTBRSnFsdTA1SWl6cncxdHNHR28wWDdCelVyWVctTkx3TjB6T3pCaHBDdm5veGVtZnJQWnRGNXVIQlRpamRENktDTU5SQ0JtZGFyWGFNYloyTTg5LTM5eTVKaklmZWlqRTNBM1FHRGdPYW9HS05QWlg3aEU5cXFjbVNvbm1BeVZBSk94RWFQbW9Cc2RGTVlGejBsT1RNZ0hZdlE?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-11-01T13:20:03+00:00",
+     "published": "2026-11-02T02:19:00+00:00",
      "new": true,
-     "key": "90cba24c5173d6e3",
-     "title": "German engineering industry workers begin wage strikes",
-     "summary": "German engineering industry workers have begun wage strikes."
+     "key": "d5c2050e8556a3a2",
+     "title": "US pushes to restore Russian gas sales to Europe via Ukraine",
+     "summary": "The US is pushing to restore Russian gas sales to Europe through Ukraine, according to a Wall Street Journal report."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNUdFOHN2STIyaFRSZlNUbERCOTM2SkpuVzZUMmZmeGNidXpFQ3hpTEZYblE0N1VmdzZ4WExBRmxQTjB4OEpXV1hiOUlxWjFBTWZDYVBjSUNBYnMyRzR2N2VIa3dnTlNhWGhjWlpPOGdRVE5OWXYyNzFDOXJsZjBpVmVEUEYtUk5VREVKM2U5NjR4a2NKTGN0RlBwOHBKUHJSWWYxT0hrMThWSDNJS1ppQVUxZTBtTTRpajkzTzk2Rm90MnJObnV2Qw?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOY0w1eERkWnNER1pJeXhIcy05MVF1SEFqMXpoRm95ejBZRDRpTUNCZFZkQUY3M3d3dlF0R1UwajBPaHZkUGlvYUFkdGhSVElKRVN1S3dqalFFeG5TQm5FakpSa1hxYVlFamFlcnF5eW9Vc3hxR2JKd010UnVIalBlV0hTX0pPaDNReXk1QUZiWkFFWVJwNElzUHpJNXVTTzhBWFFTT21OeXMzekVsdFZEdHZlcUsxcEJPVFVsc0JNeUl4bDNrZ3VZaUtUTU5DRV9hMklJbXQyX2g2aVRac3RERnJUQzY1cXY0Q2RVUGp5R1k?oc=5",
+     "source": "Les Echos",
+     "feed_name": "Les Echos Finance",
+     "via": "Google News",
+     "published": "2026-11-02T05:55:08+00:00",
+     "new": true,
+     "key": "269f1ac1e90d2f1b",
+     "title": "UBS chief’s high-stakes move stirs debate in Switzerland",
+     "summary": "A move by UBS’s chief executive has stirred debate in Switzerland."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEJKOC1RLXduX2tqZlppb0RRd3pIR3lwd3Z3aXh3THQ4U0NFWW1wZTNBYVRrOGVpU2ZpbTEwTWZKWmhsMFFUam5aaDNSRFVoU0RyTVZGdU5JdDlsTDdvUW5lQkk0OXZsa184Q3hwZTNqWWFxZzE4QmNkYVhuR3M3QUI4ZVZ2cnhpWFplY0dvQzFjQkdxSXhlcWM5djRGSjY4NGdrOThtbHM4elNrRkZtMm85aE8?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-02T03:04:00+00:00",
+     "new": true,
+     "key": "1bea9ba624ff837d",
+     "title": "Oaktree’s Howard Marks says AI stumbles have boosted skepticism",
+     "summary": "Howard Marks said recent AI setbacks have increased investor skepticism."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPU0NDNVVlWVpIN1dCT0JQN3ZVYWtBTHVQdkhKZjZwTVE5MmhGc2p6a2gtaF85LUVCY2ZlNlh2Sm5kSExna1ZsdTUyMmdhLXk1WS13U3BEbHVQejFJTVBOblIySFdHSFFRNEJtV1V1clVoSDk4NXE1blNTVEcxNV9MUi13RDZCajY5YnJVVEJPejBKNC1UTXI5dEpISXFzNk9FNEd5STFPOFczQzIteTJXUmthZC0zb29KQmIwUERoLUc?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-11-01T14:25:43+00:00",
+     "published": "2026-11-02T03:50:00+00:00",
      "new": true,
-     "key": "40e869801ea70c64",
-     "title": "Venture Global begins supplying Plaquemines LNG customers",
-     "summary": "Venture Global has started supplying phase-one Plaquemines customers under long-term LNG contracts."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNV2YyTGwzbUNaa2oxcUJoeDZoTTZOaDB0MENBc3Ewa2JURFRCVG00cDVxbW1BczVGNzBaa2hUUHFQSXlGaFl3WjdTUUUzbDJCUnZvdW9nZmczZVllNHV1QldfYnZjYVN2SU5wOXJqRVI4ejRYZUMteG1yWnUtMVdXbERMREh0bDIyTE9wTllxaGFGMWstM29NM3EtOGM0N1dObHBUQzMyWHVpZkNoSzlz?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-01T14:34:42+00:00",
-     "new": true,
-     "key": "dab83e80ea2ec1ae",
-     "title": "Binance to resume customer withdrawals in phases after hack",
-     "summary": "Binance is restoring customer withdrawals in phases following a major hack."
+     "key": "89e562b91dbfb162",
+     "title": "Reliance set for best day since January 2024 as outlook improves",
+     "summary": "Reliance shares were set for their strongest day since January 2024 as its oil business and Jio Platforms lifted its outlook."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-01T18:01:25.615627+00:00",
-   "input_fingerprint": "sha256:2a055ef8a118931c0f7d9b2edd329b21e6b722ee0d8a8fdd8f9fee43886cdebb",
-   "last_success_at": "2026-11-01T18:01:25.615627+00:00",
+   "source_checked_at": "2026-11-02T06:01:21.090893+00:00",
+   "input_fingerprint": "sha256:a42bf2b3085da059c0c40094b8133acfbb53979575c5b512b91dbcccc8b54260",
+   "last_success_at": "2026-11-02T06:01:21.090893+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1272,10 +1364,10 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 77869.11,
-     "change_pct": 0.56,
+     "price": 78254.08,
+     "change_pct": 1.06,
      "currency": "USD",
-     "as_of": "2026-11-01T00:00:00+00:00",
+     "as_of": "2026-11-02T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1283,41 +1375,21 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2261.75,
-     "change_pct": 0.4,
+     "price": 2289.51,
+     "change_pct": 1.63,
      "currency": "USD",
-     "as_of": "2026-11-01T00:00:00+00:00",
+     "as_of": "2026-11-02T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 115,
-   "new_count": 6
+   "candidate_count": 120,
+   "new_count": 8
   },
   "media": {
    "briefing": "",
    "items": [
-    {
-     "title": "Why Russia Can't Break Through The Fortress Belt",
-     "url": "https://www.youtube.com/watch?v=IghMfH7wJ6Q",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-01T16:00:32+00:00",
-     "duration_s": null,
-     "new": true,
-     "key": "16e2efdfc9e7855d"
-    },
-    {
-     "title": "Egypt Is Encircling Ethiopia And The Horn Of Africa Could Blow Up | VisualPolitik EN",
-     "url": "https://www.youtube.com/watch?v=ZQnUiUXXLf8",
-     "source": "VisualPolitik EN",
-     "kind": "video",
-     "published": "2026-11-01T14:04:36+00:00",
-     "duration_s": null,
-     "new": true,
-     "key": "4cbf4f99ce3465f0"
-    },
     {
      "title": "#500 — The Playing Animal",
      "url": "https://wakingup.libsyn.com/500-the-playing-animal",
@@ -1337,34 +1409,14 @@
      "duration_s": 3670,
      "new": false,
      "key": "69cf72c5fffcba32"
-    },
-    {
-     "title": "😂 Parlons-en sereinement...",
-     "url": "https://www.youtube.com/watch?v=5ENjceOpFGQ",
-     "source": "Wiloo",
-     "kind": "video",
-     "published": "2026-10-30T14:41:11+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "be5c81c930867cd5"
-    },
-    {
-     "title": "The Russian Army is Stuck in Ukraine",
-     "url": "https://www.youtube.com/watch?v=TH938nNN4UQ",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-10-29T22:00:29+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "7703d285c19adfd1"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-01T18:01:25.615627+00:00",
-   "candidate_count": 6,
-   "new_count": 2
+   "source_checked_at": "2026-11-02T06:01:21.090893+00:00",
+   "candidate_count": 2,
+   "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-01T18:00:00.000Z"
+ "scheduled_slot": "2026-11-02T06:00:00.000Z"
 }
