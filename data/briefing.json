@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261106T180124283363Z",
- "generated_at": "2026-11-06T18:01:24.283363+00:00",
- "generated_local": "Fri 06 Nov 2026, 19:01",
- "source_checked_at": "2026-11-06T18:01:24.283363+00:00",
+ "edition_id": "ed-20261107T060127080050Z",
+ "generated_at": "2026-11-07T06:01:27.080050+00:00",
+ "generated_local": "Sat 07 Nov 2026, 07:01",
+ "source_checked_at": "2026-11-07T06:01:27.080050+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-06T18:01:24.283363+00:00"
+  "run-2026-11-07T06:01:27.080050+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-06T18:01:24.283363+00:00"
+  "completed_at": "2026-11-07T06:01:27.080050+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 25,
+   "item_count": 27,
    "reason": null,
    "failure": null,
-   "parsed_count": 25,
+   "parsed_count": 27,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 103,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 103,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -141,10 +141,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 90,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 90,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -153,10 +153,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 46,
+   "item_count": 47,
    "reason": null,
    "failure": null,
-   "parsed_count": 46,
+   "parsed_count": 47,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -177,10 +177,10 @@
    "name": "Topic: European Central Bank",
    "section": "news",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 92,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 92,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 105,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 105,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 109,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 109,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -249,10 +249,10 @@
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 50,
+   "item_count": 49,
    "reason": null,
    "failure": null,
-   "parsed_count": 50,
+   "parsed_count": 49,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -260,11 +260,11 @@
   {
    "name": "CulturePSG",
    "section": "sport",
-   "status": "ok",
-   "item_count": 50,
+   "status": "fallback",
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 50,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -417,10 +417,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 13,
+   "item_count": 12,
    "reason": null,
    "failure": null,
-   "parsed_count": 13,
+   "parsed_count": 12,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -524,74 +524,104 @@
   {
    "name": "Wiloo",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "VisualPolitik EN",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Preston Stewart",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Marques Brownlee",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "The Christo Files",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Making Sense with Sam Harris",
@@ -684,7 +714,7 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002237,
+  "est_cost_usd": 0.002251,
   "est_month_usd": 0.2,
   "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
@@ -694,60 +724,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 11225,
+    "latency_ms": 7463,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0787a3ec65ebc6f8016aee15fb010087d2bfb6b94fc0780c0a"
+     "resp_0eff71fd883acf3e016aeebec6d55487d0bd641a5c91a2ceeb"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3403,
-    "output_tokens": 765,
-    "reasoning_tokens": 232
+    "cache_write_tokens": 3455,
+    "output_tokens": 505,
+    "reasoning_tokens": 0
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 3717,
+    "latency_ms": 8313,
     "unknown": false,
     "provider_request_ids": [
-     "resp_030b3987f617e6ce016aee160586ec87d29cbf78673adf56bd"
+     "resp_0424a60ac3a32909016aeebece50a887d080c8067a2ae5023c"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3815,
-    "output_tokens": 297,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3741,
+    "output_tokens": 695,
+    "reasoning_tokens": 415
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 9327,
+    "latency_ms": 7256,
     "unknown": false,
     "provider_request_ids": [
-     "resp_056f1167a5b306a1016aee16093c9c87d2829030ce2ae370b1"
+     "resp_00084e19fe039225016aeebed60f3887d08ae0f61fbb390d51"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3302,
-    "output_tokens": 779,
-    "reasoning_tokens": 346
+    "cache_write_tokens": 3245,
+    "output_tokens": 690,
+    "reasoning_tokens": 330
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10520,
-  "output_tokens": 1841,
-  "reasoning_tokens": 578,
+  "cache_write_tokens": 10441,
+  "output_tokens": 1890,
+  "reasoning_tokens": 745,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 18,
-   "attempts": 54,
-   "known_cost_usd": 0.040881,
+   "recorded_runs": 19,
+   "attempts": 57,
+   "known_cost_usd": 0.043132,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,61 +786,75 @@
   "news": {
    "briefing": [
     {
-     "text": "European equities fell, with Milan down 0.9%; a Nasdaq rebound did not dispel concerns about AI-related market exposure.",
+     "text": "Russia launched ballistic missiles at Kyiv, injuring at least five people and damaging the capital’s Northern Bridge, according to ANSA.",
      "sources": [
       {
-       "key": "92fd193210c2491e",
-       "title": "Borsa: Europa in rosso con Milano a -0,9%, rimbalzo Nasdaq non cancella timori su AI - Il Sole 24 ORE",
-       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFByVU1LaktBMzZESVdaQ2pfSm5rMEk3UjVVTHZsSnN1LVRWSW9GbUFHQVFFYTBJVWdwVmJldjB4TFE3SW4xV2kwbTU0eDlIMVdVWGhrbEJ5OFVyZm5CYTJMUTF4RklQTGttMktKUjF0VHZieW8?oc=5",
-       "source": "Il Sole 24 ORE",
-       "via": "Google News"
+       "key": "dec13abb2e06c7f4",
+       "title": "Missili balistici russi su Kiev, almeno cinque feriti",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/missili-balistici-russi-su-kiev-almeno-cinque-feriti_c4ecddfa-023b-4d8d-810c-b7ba31731286.html",
+       "source": "ANSA Top News",
+       "via": null
       }
      ]
     },
     {
-     "text": "Democrats are preparing a wave of AI legislation for when they take control of Congress, potentially changing the US regulatory outlook for technology firms.",
+     "text": "The US says it has carried out another round of limited strikes on Iran, as Tehran warns it will respond to any attack without geographic limits.",
      "sources": [
       {
-       "key": "2bb48ea4a7a66e08",
-       "title": "Democrats planning flood of AI bills when they take control of Congress - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSW1qclJEWjVTQTNNU0hWWndTVFlOWFpNY1RqQ1I5Z0F2anRxTE5IQnlTTDhjeU9uUGV2anlLaVBfMFdPc0k5eDJVTVk4VTlVbnVZX0VwVnBEMnhHX19fTGRvX2NrQnNJeGN5MzBBaXBLb3d3Y25JdHpjSXFQMENoa01vNk0yLXVLRVBGZjlHLVFuUmI0QWp5aFBBRzRUSDdNMkpCQ1lJVExIei0zVFFiY0x2eVBPcFJ3d2NCeGN6REF0dw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
+       "key": "8acdf42e10a9061d",
+       "title": "US carries out another round of ‘minor’ strikes on Iran, Trump says",
+       "url": "https://www.theguardian.com/world/2026/nov/07/us-carries-out-another-round-of-minor-strikes-on-iran-trump-says",
+       "source": "The Guardian World",
+       "via": null
+      },
+      {
+       "key": "ea8cb07be0626e59",
+       "title": "Iran: 'Il nostro esercito più forte rispetto all'inizio della guerra'",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/iran-il-nostro-esercito-piu-forte-rispetto-allinizio-della-guerra_3e8c0a95-4b9a-4cbc-ad30-ed76e48f6dca.html",
+       "source": "ANSA Top News",
+       "via": null
       }
      ]
     },
     {
-     "text": "Microsoft is winding down its deal to rent AI cloud capacity from Oracle, a notable shift in the competition to secure computing resources.",
+     "text": "Paraguay’s president was impeached and arrested after a banking crisis left millions unable to access their money, prompting protests.",
      "sources": [
       {
-       "key": "6da30875bcc5defb",
-       "title": "Microsoft Is Winding Down Oracle Deal to Rent AI Cloud Capacity - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeXFhaDRlRjBvZktGaFM2eExYdGpJakRNazYxc2Y2UWoyMDJzS1VFb2Z5ZTNkSVhMRHBTbUdtb25kZHJUdkpRVXRQU1hQVGtIbS1maVNoeGhSZ2pHOGF1aDY3R1AwSTU4TmlmSEdEc19RYlowVXAzc0NlSzdVZ2xBZXduc2FzT3ViQ0xDS3RYdklKMzFnVzRtUkZKQnVBWlBDTWtGcGZUU01ZSktQTG5aOE9lbXE?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
+       "key": "a41907c82a620190",
+       "title": "Paraguay's President Santiago Peña impeached and arrested",
+       "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
+       "via": null
+      },
+      {
+       "key": "d94247d11890a812",
+       "title": "Ousted Paraguay president under house arrest after banking crisis leaves 60% of country unable to access accounts",
+       "url": "https://www.theguardian.com/world/2026/nov/07/ousted-paraguay-president-under-house-arrest-after-banking-crisis-leaves-60-of-country-unable-to-access-accounts",
+       "source": "The Guardian World",
+       "via": null
       }
      ]
     },
     {
-     "text": "Aon and Blackstone funds are launching a Lloyd’s syndicate focused on reinsurance, bringing major insurance distribution and investment players together.",
+     "text": "The Houthis are reportedly issuing email permissions for ships seeking passage through the Red Sea, underscoring continuing security risks to shipping.",
      "sources": [
       {
-       "key": "c20412a24d1d6d7c",
-       "title": "Aon and Blackstone funds launch Cortina Lloyd’s syndicate - Coverager",
-       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYXBfTjE1TmVMZ2RQdl9CZUdyMnp5QW15SFZlVFNjaVlmM1BheEJxR0dWWnNqd3lpV0QzdGJvN1h2c0F1dzdJM3hoY0NCMW1VNC1WLW1WVF9sS2tKYUQ3VVY2eE1qLTd5bjlRazNnemJpTnZ4SGpjRUZmZjQyNkQzbXBBcnhoUQ?oc=5",
-       "source": "Coverager",
-       "via": "Google News"
+       "key": "9ffcd3a46dffbe28",
+       "title": "Les houthistes délivrent des autorisations par email aux navires pour traverser la mer Rouge",
+       "url": "https://www.lemonde.fr/international/article/2026/11/07/les-houthistes-delivrent-des-autorisations-par-email-aux-navires-pour-traverser-la-mer-rouge_6808034_3210.html",
+       "source": "Le Monde",
+       "via": null
       }
      ]
     },
     {
-     "text": "The Binance heist is expected to prompt closer scrutiny by insurers, underscoring the insurance implications of large crypto losses.",
+     "text": "A Dutch and a Spanish candidate are expected to compete to succeed Christine Lagarde at the ECB, according to a report.",
      "sources": [
       {
-       "key": "81e87550579c30f3",
-       "title": "Binance $6.3 billion heist to prompt closer scrutiny by insurers - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWG84THVjeHZPNm5hOXJKYzlNeVJsYXNxMnFiWXVLYVB4N2dCSVNZU2JGcHIyMjZ4MUZUV21uVmRGam5lMHNOZkZCMEZURXRqNzZUNUNKTU84ZHhxX3BJVzhTZ2I5UzZ4VUt4WW5PVEkyMmhOVGM0aTZHS1JCMlFwU0wteW5OcmI4WUV6M083b1dERXNUblRUWmdBR25sVHNBR01ZZVJMaE9SSXhFbDVuV0daLWhfQQ?oc=5",
-       "source": "Reuters",
+       "key": "b861db511c57847f",
+       "title": "Dutch, Spanish candidates will vie to succeed ECB’s Lagarde - Free Malaysia Today",
+       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNZ1ZoUzF1ZlFNdjdmS3kzQmJqSEE2bFNPNFMtNTNkMkZnS20yZ2twVkIyTmRwenVZa2gxNmJqUVFSWktTNlVmSURBVEtmOUhaczFtLVctXzJtcnkwZlpYN1BNcXRNYnNQRUcwdUJxYktGck1zRUFuTEpxeFFmUkZzZDVja2J0ZzNYVngxWXl1TVY0T05rUEZsa2dfSDM1dC1YYTN1eW1mUXA5eTdkNC1rSlhIVDlLMzdFNmdLOVFB?oc=5",
+       "source": "Free Malaysia Today",
        "via": "Google News"
       }
      ]
@@ -818,154 +862,150 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFByVU1LaktBMzZESVdaQ2pfSm5rMEk3UjVVTHZsSnN1LVRWSW9GbUFHQVFFYTBJVWdwVmJldjB4TFE3SW4xV2kwbTU0eDlIMVdVWGhrbEJ5OFVyZm5CYTJMUTF4RklQTGttMktKUjF0VHZieW8?oc=5",
-     "source": "Il Sole 24 ORE",
-     "feed_name": "Topic: Milano",
-     "via": "Google News",
-     "published": "2026-11-06T17:06:01+00:00",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/missili-balistici-russi-su-kiev-almeno-cinque-feriti_c4ecddfa-023b-4d8d-810c-b7ba31731286.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-11-07T05:53:57+00:00",
      "new": true,
-     "key": "92fd193210c2491e",
-     "title": "European stocks fall as AI concerns persist",
-     "summary": "European markets fell, with Milan down 0.9%, as a Nasdaq rebound failed to ease concerns about AI."
+     "key": "dec13abb2e06c7f4",
+     "title": "Russian ballistic missiles hit Kyiv, injuring at least five",
+     "summary": "A Russian missile attack injured at least five people and damaged Kyiv’s Northern Bridge."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSW1qclJEWjVTQTNNU0hWWndTVFlOWFpNY1RqQ1I5Z0F2anRxTE5IQnlTTDhjeU9uUGV2anlLaVBfMFdPc0k5eDJVTVk4VTlVbnVZX0VwVnBEMnhHX19fTGRvX2NrQnNJeGN5MzBBaXBLb3d3Y25JdHpjSXFQMENoa01vNk0yLXVLRVBGZjlHLVFuUmI0QWp5aFBBRzRUSDdNMkpCQ1lJVExIei0zVFFiY0x2eVBPcFJ3d2NCeGN6REF0dw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-06T17:23:07+00:00",
+     "url": "https://www.theguardian.com/world/2026/nov/07/us-carries-out-another-round-of-minor-strikes-on-iran-trump-says",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-07T03:07:01+00:00",
      "new": true,
-     "key": "2bb48ea4a7a66e08",
-     "title": "Democrats plan wave of AI bills",
-     "summary": "Democrats are planning a wave of AI legislation when they take control of Congress."
+     "key": "8acdf42e10a9061d",
+     "title": "US carries out another round of strikes on Iran",
+     "summary": "Donald Trump said the US had carried out another round of limited strikes on Iran amid diplomatic efforts to end the conflict."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeXFhaDRlRjBvZktGaFM2eExYdGpJakRNazYxc2Y2UWoyMDJzS1VFb2Z5ZTNkSVhMRHBTbUdtb25kZHJUdkpRVXRQU1hQVGtIbS1maVNoeGhSZ2pHOGF1aDY3R1AwSTU4TmlmSEdEc19RYlowVXAzc0NlSzdVZ2xBZXduc2FzT3ViQ0xDS3RYdklKMzFnVzRtUkZKQnVBWlBDTWtGcGZUU01ZSktQTG5aOE9lbXE?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-06T17:36:39+00:00",
+     "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
+     "via": null,
+     "published": "2026-11-07T03:25:00+00:00",
      "new": true,
-     "key": "6da30875bcc5defb",
-     "title": "Microsoft winds down Oracle AI cloud deal",
-     "summary": "Microsoft is winding down its deal to rent AI cloud capacity from Oracle."
+     "key": "a41907c82a620190",
+     "title": "Paraguay’s president impeached and arrested",
+     "summary": "Santiago Peña was ousted after a banking crisis left millions unable to access their money."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYXBfTjE1TmVMZ2RQdl9CZUdyMnp5QW15SFZlVFNjaVlmM1BheEJxR0dWWnNqd3lpV0QzdGJvN1h2c0F1dzdJM3hoY0NCMW1VNC1WLW1WVF9sS2tKYUQ3VVY2eE1qLTd5bjlRazNnemJpTnZ4SGpjRUZmZjQyNkQzbXBBcnhoUQ?oc=5",
-     "source": "Coverager",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-11-06T18:00:52+00:00",
+     "url": "https://www.lemonde.fr/international/article/2026/11/07/les-houthistes-delivrent-des-autorisations-par-email-aux-navires-pour-traverser-la-mer-rouge_6808034_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-07T01:29:04+00:00",
      "new": true,
-     "key": "c20412a24d1d6d7c",
-     "title": "Aon and Blackstone funds launch Cortina Lloyd’s syndicate",
-     "summary": "Aon and Blackstone funds are launching the Cortina syndicate at Lloyd’s."
+     "key": "9ffcd3a46dffbe28",
+     "title": "Houthis issue email permissions for Red Sea shipping",
+     "summary": "The Houthis have reportedly responded to ships seeking authorization to transit the Red Sea."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWG84THVjeHZPNm5hOXJKYzlNeVJsYXNxMnFiWXVLYVB4N2dCSVNZU2JGcHIyMjZ4MUZUV21uVmRGam5lMHNOZkZCMEZURXRqNzZUNUNKTU84ZHhxX3BJVzhTZ2I5UzZ4VUt4WW5PVEkyMmhOVGM0aTZHS1JCMlFwU0wteW5OcmI4WUV6M083b1dERXNUblRUWmdBR25sVHNBR01ZZVJMaE9SSXhFbDVuV0daLWhfQQ?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-06T17:19:00+00:00",
-     "new": true,
-     "key": "81e87550579c30f3",
-     "title": "Binance heist to prompt closer scrutiny by insurers",
-     "summary": "The $6.3 billion Binance heist is expected to prompt closer scrutiny by insurers."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcWhrQUpyVTdhQ29SMGFGNm81T3BCTUpMbzh5bE9ZM1lobU04bDBUT1NObFNab09sd0pHVkpsU1ozWHhIQUxGeHVVRjZWLURUYzctMGFPTHhxS3lOZHlXSFVGMmxXNjhKbU1Yd0FTZ1ZLaWxVNVBYSU84M3RJMWg5YktQZzZsUzZRbTBxYUZqaDdnUHZ2am1PR05UUkt2SmJFdXdqVGRLV1dGX1A2?oc=5",
-     "source": "Informat.ro",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNZ1ZoUzF1ZlFNdjdmS3kzQmJqSEE2bFNPNFMtNTNkMkZnS20yZ2twVkIyTmRwenVZa2gxNmJqUVFSWktTNlVmSURBVEtmOUhaczFtLVctXzJtcnkwZlpYN1BNcXRNYnNQRUcwdUJxYktGck1zRUFuTEpxeFFmUkZzZDVja2J0ZzNYVngxWXl1TVY0T05rUEZsa2dfSDM1dC1YYTN1eW1mUXA5eTdkNC1rSlhIVDlLMzdFNmdLOVFB?oc=5",
+     "source": "Free Malaysia Today",
      "feed_name": "Topic: European Central Bank",
      "via": "Google News",
-     "published": "2026-11-06T17:21:11+00:00",
+     "published": "2026-11-07T03:31:00+00:00",
      "new": true,
-     "key": "43b8f7c8eb3815a9",
-     "title": "Netherlands and Spain name candidates for ECB presidency",
-     "summary": "The Netherlands and Spain have announced candidates for the ECB presidency."
+     "key": "b861db511c57847f",
+     "title": "Dutch and Spanish candidates vie to succeed ECB’s Lagarde",
+     "summary": "A Dutch and a Spanish candidate are reported to be contenders to succeed Christine Lagarde at the ECB."
     },
     {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/06/domani-la-francia-di-nuovo-in-piazza-polizia-schierata-al-massimo-con-70.000-agenti_54f29a27-d4a4-4ccb-9ec3-df97a2ff6747.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
+     "url": "https://www.lemonde.fr/international/article/2026/11/07/stephen-miller-l-ideologue-reactionnaire-de-la-maison-blanche-devient-le-nouveau-chef-de-l-administration-trump_6808135_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-11-06T17:29:01+00:00",
+     "published": "2026-11-07T04:00:07+00:00",
      "new": true,
-     "key": "01a9570d19e4ef10",
-     "title": "France prepares for protests amid security warning",
-     "summary": "France is deploying 70,000 police officers ahead of planned demonstrations, after warnings of calls for violence and blockades."
+     "key": "23de5927776afe5c",
+     "title": "Stephen Miller named Trump’s new chief of staff",
+     "summary": "Donald Trump has chosen adviser Stephen Miller to replace Susie Wiles as White House chief of staff."
     },
     {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/06/lo-spread-btp-bund-chiude-in-flessione-a-1074-punti_7408e553-e869-4444-9df1-40b1474dd960.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
+     "url": "https://www.lemonde.fr/politique/article/2026/11/07/presidentielle-2027-raphael-glucksmann-met-en-ordre-de-bataille-la-famille-socialiste-pour-la-campagne_6808238_823448.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-11-06T17:10:34+00:00",
+     "published": "2026-11-07T05:00:20+00:00",
      "new": true,
-     "key": "71de2bf44158f2fd",
-     "title": "Italy’s BTP-Bund spread narrows",
-     "summary": "Italy’s 10-year yield fell to 4.32% as the BTP-Bund spread closed at 107.4 basis points."
+     "key": "ccf7c092c7161c6e",
+     "title": "Glucksmann prepares socialist campaign for France’s 2027 election",
+     "summary": "The social-democratic primary winner has announced the team for his presidential campaign."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZUFzVUkxUzd4dDhqN21jdXcxVzUwRndJbmE1bFFTZWJzdWxWN3Z0OTdldWI1YXoxcDJ6eWJnNl9Ua3dxbWZ2dEZPLXhQM0VlVm94OGdpbDhLMk1BUEFDYklZenlCNklDNVItNV9hZDVSYUJfMV9ycVBwSVp3cFQxb1d3MGJXWmNBb09iMUxEODRHOFRUMWlxVXJ6cHpUTmN4dUhGdFplN2ZOOV94UXlHWkxaZXN6b01hOXFFMl9ESGFSdVNBVnVv?oc=5",
-     "source": "Reuters",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-06T17:06:12+00:00",
+     "url": "https://www.lemonde.fr/economie/article/2026/11/07/thierry-cotillard-patron-d-intermarche-l-hypersensibilite-au-prix-est-telle-qu-il-y-a-un-risque-de-deconsommation-si-l-inflation-alimentaire-depasse-2-ou-3_6808204_3234.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-07T05:00:08+00:00",
      "new": true,
-     "key": "734108a7e49501c5",
-     "title": "BOJ governor says AI could help offset Japan’s labor shortages",
-     "summary": "BOJ Governor Kazuo Ueda said Japan could benefit from AI replacing labor amid existing shortages."
+     "key": "92e4c3348b2730be",
+     "title": "Intermarché chief warns on food-price inflation",
+     "summary": "Thierry Cotillard warned that food inflation above 2% to 3% could risk a drop in consumer spending."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-06T18:01:24.283363+00:00",
-   "input_fingerprint": "sha256:9fcfc7e33b3e59f076a5907d402aea695f0327e527c408888424a8024430959c",
-   "last_success_at": "2026-11-06T18:01:24.283363+00:00",
-   "candidate_count": 536,
-   "new_count": 9
+   "source_checked_at": "2026-11-07T06:01:27.080050+00:00",
+   "input_fingerprint": "sha256:b19551ff53470ce17543f1eaeb2e5d276607b6e3fd47e66f468ee144d616bbfc",
+   "last_success_at": "2026-11-07T06:01:27.080050+00:00",
+   "candidate_count": 489,
+   "new_count": 8
   },
   "sport": {
    "briefing": [
     {
-     "text": "Zidane’s second France squad includes two PSG players; Mbappé returns as captain, while Pablo Pagis earns a first call-up.",
+     "text": "PSG head into the Troyes match with Hakimi and another first-team regular unavailable; their high-pressing approach will be tested.",
      "sources": [
       {
-       "key": "07b7bc7fadcd376a",
-       "title": "2 joueurs du PSG dans la deuxième liste de Zidane en équipe de France",
-       "url": "https://www.culturepsg.com/news/selections/2-joueurs-du-psg-dans-la-deuxieme-liste-de-zidane-en-equipe-de-france/61465",
+       "key": "bf4bf44d53dc96a4",
+       "title": "Match : Après Hakimi, un autre titulaire absent pour PSG/Troyes - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUU15alJoX0ExOW8xa3hocVB1VHlDdzB2T3NHaHQtaDctNF9KU1k5ZmRyRUQzTW43eS12Vy1jWVpqbUJyRlZCTXFyTzNRWHNpck1NRGlxa2I0X00yclVfVXQ4bHB3aWF4NEhPc0RwU2NsdjJsazdSVkJkU2RjTWV3M3I4akwyVkFOcWd6bW02a20tUEpQZ1pURHNmZExGeG8?oc=5",
        "source": "CulturePSG",
-       "via": null
+       "via": "Google News"
       },
       {
-       "key": "7dc43b15b78962b3",
-       "title": "Équipe de France : la liste complète pour les deux prochains matchs de Ligue des nations, avec une surprise de taille - Le Parisien",
-       "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPdGV1alROZUp4LW96bmZ4VWhQYnhMY19fUHFfWVYtdzBRQXNGMkhXenNDR0lBeW9INEV2WHRmVE9BT0FRbnZvaVlab0QyclhmWDNyXzkwbEZhN24ySDFLX01RYmNlVGR5WXZZeWFOdWRzX3h5dHF0N2xXVGxVclA2ejY5RTVScGVYcGtid1liaGl6ejVNbFUySzItSzdqVFh6bXF4S19XeUdJYk9iUkVJcmtmUVF4LS1mem5PUjJGMnBoN3hQcFpOQlFFWWVRa204bWptRU9zdm5FcU1LX2ZrYUVRQTdQaWtIMDl4YTVMWFVkU1dWWUJSQm9ZMjVmZ2tILWU0aUdJWGN3cFdFd3VYanFiMC1zcDY4bzgyY2NtLU1ETUE4MHdCb2duZEpsMG5mUmMwaHlSUFRNd0k?oc=5",
-       "source": "Le Parisien",
+       "key": "58d3b4942c6aa404",
+       "title": "Football. Ligue 1 : « On presse toujours très haut », l'art du pressing du PSG mis à l'épreuve de Troyes - Le Dauphiné Libéré",
+       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZWZLOVRBdVJKRzA4M3N0by1uY3k1dDJERXQyUFp5dFRqc2hmVFd5YmdXRE1LSk1iS1V0d29JRmk0WE1CQmIwY3gzeFduN1g5eHJ0eXc1YkV0ZW1WbjZCdG1PcE5NY2FXVzNrMFVXa2FwSjl6Qm0zTVljMVJyVGtLdGs5MU1ESElwZnpPa3lQM0NOdWE3b29aZ0NSRTRXcEQ2Y2R1RmIySDVfOXRMbjBpc3lKMFlIVnZHU0Q3Tm5lS0RRQW5fWXF6QmZR?oc=5",
+       "source": "Le Dauphiné Libéré",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "PSG have issued an injury update on five players ahead of Saturday’s home match against Troyes, including confirmation of Maghnes Akliouche’s calf injury.",
+     "text": "Zidane’s latest France squad includes two PSG players, though the available report does not name them.",
      "sources": [
       {
-       "key": "fcde219688d0d831",
-       "title": "Le PSG donne des nouvelles de ses 5 blessés",
-       "url": "https://www.culturepsg.com/news/infirmerie/le-psg-donne-des-nouvelles-de-ses-5-blesses/61463",
+       "key": "faea7de3ddf147b9",
+       "title": "Sélections : 2 joueurs du PSG dans la deuxième liste de Zidane en équipe de France - CulturePSG",
+       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOR0JZUWVqWmdjTUNXa0tzbkNzQzNjNWRWTEw0bi04bVFnNldobUw5T3h6dUNIVk9XbmNQU0o0SURhbEdKdnFyWkdtdE9GNDhxb1M3UXJnMDhRMms3clRpdVlNR2pBbHlEMGFKMGxIOWs0NDFLMndvakVxVWo3M2tMSjhmZWhHUE12Mzh3ZmJMSTV2bHJ0b3JZSVZ3QVBQeXF2T2JxeUZRQ21LbVJtQ0h1M2ZTTHNCTU12WVFpdDNB?oc=5",
        "source": "CulturePSG",
-       "via": null
+       "via": "Google News"
       }
      ]
     },
     {
-     "text": "Ousmane Dembélé is reportedly close to extending his PSG contract, though the report offers no further detail.",
+     "text": "France face Fiji with 15 players absent, while Antoine Dupont and Romain Ntamack are set to reunite in the starting pairing for the first time since 2025.",
      "sources": [
       {
-       "key": "940b92f801e0c4c1",
-       "title": "Ligue 1. Ousmane Dembélé serait tout proche de prolonger au PSG - Ouest-France",
-       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQMmJ2aW5zUUhGQVpqaDZvWWpERmt0X014T3dWOW5fZENWZUI0bjVGc1plakNpSGxzTHBudlR4bnp5WHRHeGpVd0NOYlhQZS1nQ09ydXpxTTVxbFlaMFlBLWdNWWVYSlR2UGNDT0l0NVREUnc5VG5fTHV1SkE1cngtRDhFWkpzZF9NSlVWX0xsYnByVzVuNlU0b3dHcmh0aTBlaERiNHh4MGhSUUxMeUlSZEdtVU0wQm1RZXpOcDBvbUl0Ti1YM0hfN3gwS2p3bnJicThueXJhRDlkb2UzLTlhaFdZOG4xdENnaU1VRlJrTQ?oc=5",
-       "source": "Ouest-France",
+       "key": "17b885094066c511",
+       "title": "Quinze absents, des Fidjiens qui cognent et des Boks en embuscade : Marc Duzan présente France - Fidji - Rugbyrama",
+       "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxQM2tLa2x6SEstalVOSXhwVXRWR2VHZkZodjZ2dGEtOThKM2x3N0FuV0hHamI4WjZZUE9ZY3VabHNxdkR4cWxlSk50blR4ajFrWG1Zd3paNVc3bTZwVXpYUXNNR09HX1BBOU9NYVc1SjlZcmUtd2g4QnhIUHNwSWxlem1jbEtvZmd1SEJ2WG5QMjRqWGdEQWJuV2R1d1duTjBqVXppa055UlZhS2JCNzVOc1dmVTFZWjFiMlBKejVTTlF6dFZxQ0FkNFYtOFFuTzRUN2pBYVZoaUlRMGpuQnN4RlhkRWdZMTZNb1U3WWFYbV9mRHhMQm9RcGc2Um85aGs5M1AzRXdvcE5UdV9FbGROaHFHcHE4c3lrMUE?oc=5",
+       "source": "Rugbyrama",
+       "via": "Google News"
+      },
+      {
+       "key": "075ce6b775fd53c9",
+       "title": "Une première association avec les Bleus depuis 2025 : dans le couple Antoine Dupont-Romain Ntamack, la question du nouveau partage des tâches - L'Équipe",
+       "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQLXAwVGNTWWtUbzVSZlRXMTBtNmR4bHlsTDZCNTdqOVVPeVVhZ2QtTHozMldReFBQeDlXYnBtOXlHSWgwNWlhdjN3U214V1dCZnhOUzg0LUotTUk5RjBIY1AyaXNxSVFUZG13UlFDNkNZdjQ4UUd5cU84NllRc19lb2JtV3pvbktOSjNjcTBCejFpQkhUbFc5ZjdPT1pXdkd3azUtd2VqZHI0eG1LLUZjZjlPb3hNRzV5TVJZTk4zN3lOc1BXa18tLUJqajktZGpGUUJ5b05wVUlkaDNlZldJNkFWZGFLdHZSWUFUNF9EM0p0OEVYUXRNcmUyS2Z0WndjSnlaRGdyZW53OFJxbEhFRA?oc=5",
+       "source": "L'Équipe",
        "via": "Google News"
       }
      ]
@@ -973,219 +1013,178 @@
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/selections/2-joueurs-du-psg-dans-la-deuxieme-liste-de-zidane-en-equipe-de-france/61465",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUU15alJoX0ExOW8xa3hocVB1VHlDdzB2T3NHaHQtaDctNF9KU1k5ZmRyRUQzTW43eS12Vy1jWVpqbUJyRlZCTXFyTzNRWHNpck1NRGlxa2I0X00yclVfVXQ4bHB3aWF4NEhPc0RwU2NsdjJsazdSVkJkU2RjTWV3M3I4akwyVkFOcWd6bW02a20tUEpQZ1pURHNmZExGeG8?oc=5",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
-     "via": null,
+     "via": "Google News",
+     "published": "2026-11-06T11:40:00+00:00",
+     "new": true,
+     "key": "bf4bf44d53dc96a4",
+     "title": "Another PSG regular out against Troyes after Hakimi",
+     "summary": "After Hakimi, another PSG regular will miss the match against Troyes."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOR0JZUWVqWmdjTUNXa0tzbkNzQzNjNWRWTEw0bi04bVFnNldobUw5T3h6dUNIVk9XbmNQU0o0SURhbEdKdnFyWkdtdE9GNDhxb1M3UXJnMDhRMms3clRpdVlNR2pBbHlEMGFKMGxIOWs0NDFLMndvakVxVWo3M2tMSjhmZWhHUE12Mzh3ZmJMSTV2bHJ0b3JZSVZ3QVBQeXF2T2JxeUZRQ21LbVJtQ0h1M2ZTTHNCTU12WVFpdDNB?oc=5",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": "Google News",
      "published": "2026-11-06T17:03:00+00:00",
      "new": true,
-     "key": "07b7bc7fadcd376a",
-     "title": "Two PSG players named in Zidane’s France squad",
-     "summary": "Zidane’s second France squad contains 23 players, including two from PSG."
+     "key": "faea7de3ddf147b9",
+     "title": "Two PSG players named in Zidane’s latest France squad",
+     "summary": "Two PSG players feature in Zidane’s second France squad list."
     },
     {
-     "url": "https://www.culturepsg.com/news/infirmerie/le-psg-donne-des-nouvelles-de-ses-5-blesses/61463",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-06T12:49:07+00:00",
-     "new": true,
-     "key": "fcde219688d0d831",
-     "title": "PSG provide update on five injured players",
-     "summary": "The club confirmed Maghnes Akliouche has a calf injury and provided updates on four other players."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPdGV1alROZUp4LW96bmZ4VWhQYnhMY19fUHFfWVYtdzBRQXNGMkhXenNDR0lBeW9INEV2WHRmVE9BT0FRbnZvaVlab0QyclhmWDNyXzkwbEZhN24ySDFLX01RYmNlVGR5WXZZeWFOdWRzX3h5dHF0N2xXVGxVclA2ejY5RTVScGVYcGtid1liaGl6ejVNbFUySzItSzdqVFh6bXF4S19XeUdJYk9iUkVJcmtmUVF4LS1mem5PUjJGMnBoN3hQcFpOQlFFWWVRa204bWptRU9zdm5FcU1LX2ZrYUVRQTdQaWtIMDl4YTVMWFVkU1dWWUJSQm9ZMjVmZ2tILWU0aUdJWGN3cFdFd3VYanFiMC1zcDY4bzgyY2NtLU1ETUE4MHdCb2duZEpsMG5mUmMwaHlSUFRNd0k?oc=5",
-     "source": "Le Parisien",
-     "feed_name": "Team: équipe de France football",
+     "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQLXAwVGNTWWtUbzVSZlRXMTBtNmR4bHlsTDZCNTdqOVVPeVVhZ2QtTHozMldReFBQeDlXYnBtOXlHSWgwNWlhdjN3U214V1dCZnhOUzg0LUotTUk5RjBIY1AyaXNxSVFUZG13UlFDNkNZdjQ4UUd5cU84NllRc19lb2JtV3pvbktOSjNjcTBCejFpQkhUbFc5ZjdPT1pXdkd3azUtd2VqZHI0eG1LLUZjZjlPb3hNRzV5TVJZTk4zN3lOc1BXa18tLUJqajktZGpGUUJ5b05wVUlkaDNlZldJNkFWZGFLdHZSWUFUNF9EM0p0OEVYUXRNcmUyS2Z0WndjSnlaRGdyZW53OFJxbEhFRA?oc=5",
+     "source": "L'Équipe",
+     "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-06T17:57:24+00:00",
+     "published": "2026-11-07T05:30:00+00:00",
      "new": true,
-     "key": "7dc43b15b78962b3",
-     "title": "France squad: Mbappé returns as captain, Pagis earns first call-up",
-     "summary": "Zidane named his 23-man squad for the next two Nations League matches, with Mbappé returning and Pagis a surprise selection."
+     "key": "075ce6b775fd53c9",
+     "title": "Dupont and Ntamack reunite for France",
+     "summary": "Antoine Dupont and Romain Ntamack are set to play together for France for the first time since 2025."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQMmJ2aW5zUUhGQVpqaDZvWWpERmt0X014T3dWOW5fZENWZUI0bjVGc1plakNpSGxzTHBudlR4bnp5WHRHeGpVd0NOYlhQZS1nQ09ydXpxTTVxbFlaMFlBLWdNWWVYSlR2UGNDT0l0NVREUnc5VG5fTHV1SkE1cngtRDhFWkpzZF9NSlVWX0xsYnByVzVuNlU0b3dHcmh0aTBlaERiNHh4MGhSUUxMeUlSZEdtVU0wQm1RZXpOcDBvbUl0Ti1YM0hfN3gwS2p3bnJicThueXJhRDlkb2UzLTlhaFdZOG4xdENnaU1VRlJrTQ?oc=5",
-     "source": "Ouest-France",
-     "feed_name": "Team: PSG",
+     "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxQM2tLa2x6SEstalVOSXhwVXRWR2VHZkZodjZ2dGEtOThKM2x3N0FuV0hHamI4WjZZUE9ZY3VabHNxdkR4cWxlSk50blR4ajFrWG1Zd3paNVc3bTZwVXpYUXNNR09HX1BBOU9NYVc1SjlZcmUtd2g4QnhIUHNwSWxlem1jbEtvZmd1SEJ2WG5QMjRqWGdEQWJuV2R1d1duTjBqVXppa055UlZhS2JCNzVOc1dmVTFZWjFiMlBKejVTTlF6dFZxQ0FkNFYtOFFuTzRUN2pBYVZoaUlRMGpuQnN4RlhkRWdZMTZNb1U3WWFYbV9mRHhMQm9RcGc2Um85aGs5M1AzRXdvcE5UdV9FbGROaHFHcHE4c3lrMUE?oc=5",
+     "source": "Rugbyrama",
+     "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-06T17:27:50+00:00",
+     "published": "2026-11-07T05:02:00+00:00",
      "new": true,
-     "key": "940b92f801e0c4c1",
-     "title": "Dembélé reportedly close to PSG contract extension",
-     "summary": "Ousmane Dembélé is reportedly close to signing a contract extension with PSG."
+     "key": "17b885094066c511",
+     "title": "France face Fiji amid a depleted squad",
+     "summary": "France have 15 players absent ahead of their match against Fiji."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-06T18:01:24.283363+00:00",
-   "input_fingerprint": "sha256:99cd1cb2e1c01aac722caf2e57bcd9cc5d962532cde26dd012f721a1f591f875",
-   "last_success_at": "2026-11-06T18:01:24.283363+00:00",
-   "candidate_count": 403,
+   "source_checked_at": "2026-11-07T06:01:27.080050+00:00",
+   "input_fingerprint": "sha256:6464871b2df105b512f619336973b95c082caf3b5472ee26ff6a90567e7c2661",
+   "last_success_at": "2026-11-07T06:01:27.080050+00:00",
+   "candidate_count": 338,
    "new_count": 4
   },
   "finance": {
    "briefing": [
     {
-     "text": "The post-election US equity rout is rattling Wall Street; a separate market account describes a sudden chain reaction behind the selloff.",
+     "text": "US equities staged only a modest rebound after a $3.2tn sell-off driven by AI concerns, underscoring how tentative the recovery remains.",
      "sources": [
       {
-       "key": "d848b24c54052e33",
-       "title": "Wall Street’s Script Gets Flipped by Post-Election Rout - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdXVhN09VbTdkbDF5WHZhcEdNd2xpdy1QaWx4dVAyd21oZmgxc09ESUZuVUpoejIxNzdya19GZTcwOGt6T0J3dHIzckRvR2V2SUtPdEYxR1RoTnAxNWFjY1owWFpUbkdQVzNWQ2FvQ0hTOEJZcEtXNFhWU0ZFeUpsMTA0QkFHc1pZTTUzYzVFZXVkQVdJZVI2TUx4YVpXR2IzWXdERkViZkdaVjRiRHc?oc=5",
+       "key": "635687761bd9d2dd",
+       "title": "US stocks stage tepid recovery after $3.2tn rout fuelled by AI fears",
+       "url": "https://www.ft.com/content/088ed252-ea9c-4b61-b2d1-37295fd0f7c2?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "October hiring beat forecasts with 165,000 jobs added, strengthening expectations that the Federal Reserve could raise rates.",
+     "sources": [
+      {
+       "key": "68d9ad3862eae1ea",
+       "title": "US economy outstrips forecasts to add 165,000 jobs in October",
+       "url": "https://www.ft.com/content/f84c722c-99a9-4628-84dc-c42a192cb35c?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "OpenAI reportedly secured $11bn in funding at a $1.25tn valuation, a striking marker of the capital being committed to AI.",
+     "sources": [
+      {
+       "key": "b2c8e093f063fd6e",
+       "title": "OpenAI gets $11 billion funding at $1.25 trillion valuation, source says - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdlpNRm5XVy11c3hLY0NRdjh2T3VmOE1LOWQ2LXlvcFhmZlFJYkQya3N3QWxud2UteUZpWVlCTXVHUXZZTjIwRlVQaUhqOGhyM2lDaDJTSGcxMnE5MzhOZ1NHYlJIc1p5bHRxaVZjZDd4MFY2RWMtRkNlYkhSVkdpMlRBWi1PYUNmZGNydXZnOTZFMTFoOHR0azBpUlU1aHpVdFA4dlhCV0dDNm91VE0xSVg0bXZhcF9jaVAzcXYzaldOdw?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "China extended its gold-buying streak to two years even as prices fell; meanwhile, weak Canadian employment data sent the loonie to its worst week since September.",
+     "sources": [
+      {
+       "key": "b4b594c7298ffeb1",
+       "title": "China Extends Gold-Buying Streak to Two Years as Prices Drop - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQVdJdkgwZnBIUEhYS0ZGcUpvYVFmWW5tVlZqVFlRSkJuOWUyU3Z2Zi1sZ3F1S3BuMmFrSUtuSDhDbWkzWS1lM2Q0OE14WTVkaEk0SnZMOExTRDFUV3h1dUNvejhVTkRmdjVLb1VKUU40ZlliTTVXenVaN3M5ZEpoZVFqMW9WemRDWGV2YmNCeGpVci0zU2p4a0xhRUhYaDB4ZC13bHNISUdOc3J2RUNKUg?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
       },
       {
-       "key": "08915834d5624fd4",
-       "title": "Anatomy of a Selloff: Sudden Chain Reaction Rattles Wall Street - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRG02RXdnOUdVdG5heW1rdll4NGtPY2gzam5SbFNoY1RZZ0pQclREUjYtNFBPX3BnQlVsRU5leHVPcjJpN0JBcWFJck8wREhyczE1NGRIa1V3ei0tQVJjcVYtN0d3SHdwSVVMMS1jMVF0Vl91eXBSeXRCTHNXWFZOTmZkaEh2eGFNRjlnbl9UWUZBazlSeHNZb1RwTnppdGZRUTZNN1huYUNtSDUxSWY4LUxjaw?oc=5",
+       "key": "9574e65bd843e023",
+       "title": "Canadian Dollar Notches Worst Week Since September on Weak Jobs - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTkZrR1lieXFoN2dwRVppTTZTYjVqSTFLbVctczRKYzdmYllKcUlMT1BFXzV1a3Z2M1NOVlUxeVJzQkxfUER0dlFSOUxGU29hMHFwRTk5X21MSEtWLVZpMURfdWl1WktOWE5TbzRBenVhWjlDNVo1OWZXYmpLY3YyXzh2cWZOcm1Udzh1NHJmUV9Ra281ZE5oY04zXzM5T1BRTjNVY2FqOFpmSnhnNjRGdkp3Y3k?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "US Treasuries also weakened as strong labour-market data lifted expectations of Fed rate hikes, adding pressure to rate-sensitive assets.",
-     "sources": [
-      {
-       "key": "05b3efdcdb799628",
-       "title": "US Treasuries Stumble as Strong Labor Market Lifts Fed-Hike Bets - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQM3NNcGNRYkZlWG9POWd3eC1hYThVTjhmVEVfb1NEZy1qZlJhc3dBMGQyLTlmR0ZwN0hEUmdyclN0c0RiVjZwaGlPdGxuWDlHbW56WVhwcER1V2pxLWJ5YjZWSXE3bDZkc0pUWWlyZnEweER3TWJob2Rjb0pRSWd1c3lUZHBoeTFoZmNnc25feUszUWVMYy1uR014ekZkNGZLX1IxWnh2dkdSRTRDTFRsTUNVM204QQ?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Washington says China is not meeting commitments under the Busan trade deal, including on rare earths and other critical products.",
-     "sources": [
-      {
-       "key": "217ffdb69963cecc",
-       "title": "US warns China it must ‘immediately’ meet terms of Busan trade deal",
-       "url": "https://www.ft.com/content/391bb785-0247-4c39-b53b-35007187d603?syn-25a6b1a6=1",
-       "source": "FT Markets",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Two European officials are reportedly candidates to succeed Christine Lagarde at the ECB, putting future central-bank leadership in focus.",
-     "sources": [
-      {
-       "key": "dad8604a2a112f6d",
-       "title": "BCE : un Espagnol et un Néerlandais candidats pour succéder à Christine Lagarde - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQVTBVLXpaS0pVeGFHNXBQeVMwbm9VcFBMX2tId0Y5aVh6djdGallUTkJpZy13WkFoM1EtZmJRNVdWNnhTeW93bnZCNXlaVzVick0wcnAtUzU4aThOTHRNdERYVlNzalhCR21LZkFGaUxOY0lPcGdfZ3ExZS04OXZaWWZTOGpPTGs4UzkxbzRHMl9yY2NlSUROZzRzMmhVMHhrYXJCQ2lXUTNRd3V6YUFwdExHYTBkVHdtZWVwaFZlVzBqUUxJVUM3bFR4RElDSmVqRkRBdUNfNnduNFBj?oc=5",
-       "source": "Les Echos",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Stress is showing in AI-related financing: CoreWeave bond yields topped 16%, while copper fell on concerns about AI-driven demand.",
-     "sources": [
-      {
-       "key": "9c5da62bab376f7f",
-       "title": "The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%",
-       "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
-       "source": "CNBC Markets",
-       "via": null
-      },
-      {
-       "key": "8988680061a00cce",
-       "title": "Copper prices fall on fears of AI backlash",
-       "url": "https://www.ft.com/content/0a4e2a58-f83f-4445-8f32-892657cf8c27?syn-25a6b1a6=1",
-       "source": "FT Markets",
-       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdXVhN09VbTdkbDF5WHZhcEdNd2xpdy1QaWx4dVAyd21oZmgxc09ESUZuVUpoejIxNzdya19GZTcwOGt6T0J3dHIzckRvR2V2SUtPdEYxR1RoTnAxNWFjY1owWFpUbkdQVzNWQ2FvQ0hTOEJZcEtXNFhWU0ZFeUpsMTA0QkFHc1pZTTUzYzVFZXVkQVdJZVI2TUx4YVpXR2IzWXdERkViZkdaVjRiRHc?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-06T17:23:15+00:00",
-     "new": true,
-     "key": "d848b24c54052e33",
-     "title": "Wall Street’s post-election rout",
-     "summary": "A post-election market rout has overturned Wall Street’s expected script."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQM3NNcGNRYkZlWG9POWd3eC1hYThVTjhmVEVfb1NEZy1qZlJhc3dBMGQyLTlmR0ZwN0hEUmdyclN0c0RiVjZwaGlPdGxuWDlHbW56WVhwcER1V2pxLWJ5YjZWSXE3bDZkc0pUWWlyZnEweER3TWJob2Rjb0pRSWd1c3lUZHBoeTFoZmNnc25feUszUWVMYy1uR014ekZkNGZLX1IxWnh2dkdSRTRDTFRsTUNVM204QQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-06T16:27:58+00:00",
-     "new": true,
-     "key": "05b3efdcdb799628",
-     "title": "Treasuries stumble as Fed-hike bets rise",
-     "summary": "Strong US labour-market data lifted expectations of Fed rate hikes and weighed on Treasuries."
-    },
-    {
-     "url": "https://www.ft.com/content/391bb785-0247-4c39-b53b-35007187d603?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
+     "url": "https://www.ft.com/content/088ed252-ea9c-4b61-b2d1-37295fd0f7c2?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
      "via": null,
-     "published": "2026-11-06T17:20:21+00:00",
+     "published": "2026-11-06T22:00:56+00:00",
      "new": true,
-     "key": "217ffdb69963cecc",
-     "title": "US warns China over trade-deal commitments",
-     "summary": "Washington says Beijing is not meeting commitments to increase supplies of rare earths and other critical products."
+     "key": "635687761bd9d2dd",
+     "title": "US stocks stage a tepid recovery after AI-fuelled rout",
+     "summary": "US stocks rebounded modestly after an AI-fuelled sell-off that erased $3.2tn in market value."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQVTBVLXpaS0pVeGFHNXBQeVMwbm9VcFBMX2tId0Y5aVh6djdGallUTkJpZy13WkFoM1EtZmJRNVdWNnhTeW93bnZCNXlaVzVick0wcnAtUzU4aThOTHRNdERYVlNzalhCR21LZkFGaUxOY0lPcGdfZ3ExZS04OXZaWWZTOGpPTGs4UzkxbzRHMl9yY2NlSUROZzRzMmhVMHhrYXJCQ2lXUTNRd3V6YUFwdExHYTBkVHdtZWVwaFZlVzBqUUxJVUM3bFR4RElDSmVqRkRBdUNfNnduNFBj?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
-     "via": "Google News",
-     "published": "2026-11-06T17:03:36+00:00",
-     "new": true,
-     "key": "dad8604a2a112f6d",
-     "title": "Candidates emerge to succeed Lagarde at the ECB",
-     "summary": "A Spaniard and a Dutch official are candidates to succeed Christine Lagarde as ECB president."
-    },
-    {
-     "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
-     "source": "CNBC Markets",
-     "feed_name": "CNBC Markets",
+     "url": "https://www.ft.com/content/f84c722c-99a9-4628-84dc-c42a192cb35c?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
      "via": null,
-     "published": "2026-11-06T17:09:53+00:00",
+     "published": "2026-11-06T22:16:13+00:00",
      "new": true,
-     "key": "9c5da62bab376f7f",
-     "title": "CoreWeave bond yield tops 16%",
-     "summary": "CoreWeave’s bond yield topped 16% amid investor concerns about data-centre demand."
+     "key": "68d9ad3862eae1ea",
+     "title": "US economy adds 165,000 jobs in October",
+     "summary": "US hiring exceeded forecasts, reinforcing expectations that the Federal Reserve may raise interest rates."
     },
     {
-     "url": "https://www.ft.com/content/0a4e2a58-f83f-4445-8f32-892657cf8c27?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-11-06T16:31:51+00:00",
-     "new": true,
-     "key": "8988680061a00cce",
-     "title": "Copper falls on fears of an AI backlash",
-     "summary": "Copper prices fell as investors questioned forecasts of AI data-centre demand."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZXlYcFdWcV9JU25ST013NGFEdWszTUFKS0xKNG5vYVhnVm1fbHFoa2lUWk16RGhqMmVXdzFkQ0NwRGcwaTdSdl82VjdUZWREdnhJZ1VIYXJUQzdWbVJCUTlySUJHVFFzc0M1QlNieFRSTU81bkF2MWpfbUlWQUxnUEhsUzdnUlBwRGo1a0hPcWh3VkFmYnJOX3E2UnE?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdlpNRm5XVy11c3hLY0NRdjh2T3VmOE1LOWQ2LXlvcFhmZlFJYkQya3N3QWxud2UteUZpWVlCTXVHUXZZTjIwRlVQaUhqOGhyM2lDaDJTSGcxMnE5MzhOZ1NHYlJIc1p5bHRxaVZjZDd4MFY2RWMtRkNlYkhSVkdpMlRBWi1PYUNmZGNydXZnOTZFMTFoOHR0azBpUlU1aHpVdFA4dlhCV0dDNm91VE0xSVg0bXZhcF9jaVAzcXYzaldOdw?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-11-06T16:44:46+00:00",
+     "published": "2026-11-06T23:19:47+00:00",
      "new": true,
-     "key": "c587875a146db5ab",
-     "title": "Alphabet takes a stake in Qualcomm",
-     "summary": "Alphabet took a $548 million stake in partner Qualcomm as it pushes into data centres."
+     "key": "b2c8e093f063fd6e",
+     "title": "OpenAI raises $11bn at a $1.25tn valuation",
+     "summary": "OpenAI secured $11bn in funding at a reported valuation of $1.25tn."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQVdJdkgwZnBIUEhYS0ZGcUpvYVFmWW5tVlZqVFlRSkJuOWUyU3Z2Zi1sZ3F1S3BuMmFrSUtuSDhDbWkzWS1lM2Q0OE14WTVkaEk0SnZMOExTRDFUV3h1dUNvejhVTkRmdjVLb1VKUU40ZlliTTVXenVaN3M5ZEpoZVFqMW9WemRDWGV2YmNCeGpVci0zU2p4a0xhRUhYaDB4ZC13bHNISUdOc3J2RUNKUg?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-07T03:32:00+00:00",
+     "new": true,
+     "key": "b4b594c7298ffeb1",
+     "title": "China extends gold-buying streak to two years",
+     "summary": "China continued buying gold for a second year as prices fell."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTkZrR1lieXFoN2dwRVppTTZTYjVqSTFLbVctczRKYzdmYllKcUlMT1BFXzV1a3Z2M1NOVlUxeVJzQkxfUER0dlFSOUxGU29hMHFwRTk5X21MSEtWLVZpMURfdWl1WktOWE5TbzRBenVhWjlDNVo1OWZXYmpLY3YyXzh2cWZOcm1Udzh1NHJmUV9Ra281ZE5oY04zXzM5T1BRTjNVY2FqOFpmSnhnNjRGdkp3Y3k?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-06T22:14:43+00:00",
+     "new": true,
+     "key": "9574e65bd843e023",
+     "title": "Canadian dollar has worst week since September on weak jobs",
+     "summary": "Weak Canadian employment data contributed to the currency’s worst week since September."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-06T18:01:24.283363+00:00",
-   "input_fingerprint": "sha256:466f144980f69e03de25f4bd2dd4d182c1f1a39c66a80b86043e04edc74a63c8",
-   "last_success_at": "2026-11-06T18:01:24.283363+00:00",
+   "source_checked_at": "2026-11-07T06:01:27.080050+00:00",
+   "input_fingerprint": "sha256:6d211fcc978e5bf508dfbffa80b26ccc9778256c7fbdfe943d8a6f134cab96e9",
+   "last_success_at": "2026-11-07T06:01:27.080050+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1201,10 +1200,10 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 719.16,
-     "change_pct": -0.1,
+     "price": 719.88,
+     "change_pct": -2.51,
      "currency": "EUR",
-     "as_of": "2026-11-05T23:00:00+00:00",
+     "as_of": "2026-11-04T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1212,10 +1211,10 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 108.66,
-     "change_pct": -0.48,
+     "price": 109.18,
+     "change_pct": -1.34,
      "currency": "EUR",
-     "as_of": "2026-11-05T23:00:00+00:00",
+     "as_of": "2026-11-04T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1223,10 +1222,10 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 282.45,
-     "change_pct": -0.05,
+     "price": 282.6,
+     "change_pct": -2.37,
      "currency": "EUR",
-     "as_of": "2026-11-05T23:00:00+00:00",
+     "as_of": "2026-11-04T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1234,10 +1233,10 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 320.1,
-     "change_pct": -1.05,
+     "price": 323.5,
+     "change_pct": -0.52,
      "currency": "EUR",
-     "as_of": "2026-11-05T23:00:00+00:00",
+     "as_of": "2026-11-04T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1245,10 +1244,10 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 8.48,
-     "change_pct": 1.33,
+     "price": 8.37,
+     "change_pct": -3.82,
      "currency": "EUR",
-     "as_of": "2026-11-05T23:00:00+00:00",
+     "as_of": "2026-11-04T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1256,10 +1255,10 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 48.26,
-     "change_pct": 0.44,
+     "price": 48.05,
+     "change_pct": -4.02,
      "currency": "EUR",
-     "as_of": "2026-11-05T23:00:00+00:00",
+     "as_of": "2026-11-04T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1267,10 +1266,10 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 70.64,
-     "change_pct": -0.65,
+     "price": 71.1,
+     "change_pct": 1.59,
      "currency": "EUR",
-     "as_of": "2026-11-05T23:00:00+00:00",
+     "as_of": "2026-11-04T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1278,10 +1277,10 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 75596.63,
-     "change_pct": -0.45,
+     "price": 75926.68,
+     "change_pct": -0.02,
      "currency": "USD",
-     "as_of": "2026-11-06T00:00:00+00:00",
+     "as_of": "2026-11-07T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1289,41 +1288,21 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2221.42,
-     "change_pct": -0.58,
+     "price": 2245.76,
+     "change_pct": 0.5,
      "currency": "USD",
-     "as_of": "2026-11-06T00:00:00+00:00",
+     "as_of": "2026-11-07T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 357,
-   "new_count": 7
+   "candidate_count": 291,
+   "new_count": 5
   },
   "media": {
    "briefing": "",
    "items": [
-    {
-     "title": "What AI Is Doing To Jobs Is Worse Than We Thought | VisualPolitik EN",
-     "url": "https://www.youtube.com/watch?v=-tV4xm2TipQ",
-     "source": "VisualPolitik EN",
-     "kind": "video",
-     "published": "2026-11-06T13:55:22+00:00",
-     "duration_s": null,
-     "new": true,
-     "key": "3d82845e7196618b"
-    },
-    {
-     "title": "Russia is 31 YEARS Away From Taking Donetsk",
-     "url": "https://www.youtube.com/watch?v=9pxkDv5rXPA",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-05T22:30:03+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "5e07baa8c5b0e250"
-    },
     {
      "title": "Podcast 04/11/26 : Villarreal/PSG (0-6)",
      "url": "https://shows.acast.com/culturepsg/episodes/podcast-041126-villarrealpsg-0-6",
@@ -1343,64 +1322,14 @@
      "duration_s": 2457,
      "new": false,
      "key": "c589b087819efa4c"
-    },
-    {
-     "title": "Russia Just Hit an Aid Center With a Double Tap Strike",
-     "url": "https://www.youtube.com/watch?v=dJOdjEmn6gA",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-04T22:00:06+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "2de1ffd16e01ea58"
-    },
-    {
-     "title": "This is Incredible",
-     "url": "https://www.youtube.com/watch?v=UNZM1Q8V2Ok",
-     "source": "Crypto Currently",
-     "kind": "video",
-     "published": "2026-11-04T20:26:52+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "3653ea52055067c2"
-    },
-    {
-     "title": "US Just Struck Multiple Targets in Iran",
-     "url": "https://www.youtube.com/watch?v=YG8zbFlC698",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-04T00:00:37+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "ff42c137e39f441e"
-    },
-    {
-     "title": "Meet the Russian Fighting FOR Ukraine Against Putin",
-     "url": "https://www.youtube.com/watch?v=AD4Wyh0TEoY",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-03T21:00:18+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "142ddaaa755cf140"
-    },
-    {
-     "title": "#501 — The Performance of Empathy",
-     "url": "https://wakingup.libsyn.com/501-the-performance-of-empathy",
-     "source": "Making Sense with Sam Harris",
-     "kind": "podcast",
-     "published": "2026-11-03T19:35:00+00:00",
-     "duration_s": 1415,
-     "new": false,
-     "key": "ceff887298074810"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-06T18:01:24.283363+00:00",
-   "candidate_count": 9,
-   "new_count": 1
+   "source_checked_at": "2026-11-07T06:01:27.080050+00:00",
+   "candidate_count": 2,
+   "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-06T18:00:00.000Z"
+ "scheduled_slot": "2026-11-07T06:00:00.000Z"
 }
