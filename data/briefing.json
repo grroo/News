@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261107T180122125950Z",
- "generated_at": "2026-11-07T18:01:22.125950+00:00",
- "generated_local": "Sat 07 Nov 2026, 19:01",
- "source_checked_at": "2026-11-07T18:01:22.125950+00:00",
+ "edition_id": "ed-20261108T060119253944Z",
+ "generated_at": "2026-11-08T06:01:19.253944+00:00",
+ "generated_local": "Sun 08 Nov 2026, 07:01",
+ "source_checked_at": "2026-11-08T06:01:19.253944+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-07T18:01:22.125950+00:00"
+  "run-2026-11-08T06:01:19.253944+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-07T18:01:22.125950+00:00"
+  "completed_at": "2026-11-08T06:01:19.253944+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 21,
+   "item_count": 25,
    "reason": null,
    "failure": null,
-   "parsed_count": 21,
+   "parsed_count": 25,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 103,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 103,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -141,10 +141,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 83,
+   "item_count": 76,
    "reason": null,
    "failure": null,
-   "parsed_count": 83,
+   "parsed_count": 76,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -153,10 +153,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 40,
+   "item_count": 38,
    "reason": null,
    "failure": null,
-   "parsed_count": 40,
+   "parsed_count": 38,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -189,10 +189,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 107,
+   "item_count": 109,
    "reason": null,
    "failure": null,
-   "parsed_count": 107,
+   "parsed_count": 109,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 106,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 106,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -417,10 +417,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 10,
+   "item_count": 7,
    "reason": null,
    "failure": null,
-   "parsed_count": 10,
+   "parsed_count": 7,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -524,62 +524,87 @@
   {
    "name": "Wiloo",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "VisualPolitik EN",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Preston Stewart",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Marques Brownlee",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "The Christo Files",
@@ -684,9 +709,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002249,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.002404,
+  "est_month_usd": 0.22,
+  "forecast_month_usd": 0.22,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,60 +719,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 9148,
+    "latency_ms": 12651,
     "unknown": false,
     "provider_request_ids": [
-     "resp_04b7a4f06425f3cc016aef6779e76087d192bfc48120d9c315"
+     "resp_089eac740e6bd2d2016af01035003087d2aff14f6298da2d93"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3513,
-    "output_tokens": 601,
-    "reasoning_tokens": 230
+    "cache_write_tokens": 3336,
+    "output_tokens": 914,
+    "reasoning_tokens": 307
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8912,
+    "latency_ms": 7099,
     "unknown": false,
     "provider_request_ids": [
-     "resp_03656f8f4ea30c07016aef6782599487d19a432758801f2a2a"
+     "resp_0d82f5371751d620016af01040e83487d2b72e0f884e2f3577"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3604,
-    "output_tokens": 738,
-    "reasoning_tokens": 397
+    "cache_write_tokens": 3823,
+    "output_tokens": 612,
+    "reasoning_tokens": 250
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6665,
+    "latency_ms": 8291,
     "unknown": false,
     "provider_request_ids": [
-     "resp_077f7b0beef2bb04016aef678b45d487d19bc0fc250fe949c2"
+     "resp_0dd108ccb0bc86df016af01047f4dc87d2a95992b94b1b9772"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3297,
-    "output_tokens": 553,
-    "reasoning_tokens": 282
+    "cache_write_tokens": 3209,
+    "output_tokens": 690,
+    "reasoning_tokens": 267
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10414,
-  "output_tokens": 1892,
-  "reasoning_tokens": 909,
+  "cache_write_tokens": 10368,
+  "output_tokens": 2216,
+  "reasoning_tokens": 824,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 21,
-   "attempts": 63,
-   "known_cost_usd": 0.047393,
+   "recorded_runs": 22,
+   "attempts": 66,
+   "known_cost_usd": 0.049797,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,61 +781,73 @@
   "news": {
    "briefing": [
     {
-     "text": "A shooting in Kraków killed at least six people; reports say the attacker drove into the old-town square and fired randomly before being detained.",
+     "text": "A BBC report says at least 33 people were killed in a Saudi air strike in Yemen; Saudi Arabia has not commented.",
      "sources": [
       {
-       "key": "026a3ce81823e8ba",
-       "title": "En Pologne, au moins six morts dans une attaque par arme à feu à Cracovie, le tireur interpellé",
-       "url": "https://www.lemonde.fr/international/article/2026/11/07/en-pologne-au-moins-six-morts-dans-une-attaque-par-arme-a-feu-a-cracovie-le-tireur-interpelle_6808293_3211.html",
-       "source": "Le Monde",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "The US military is considering extending its Iran blockade to restrict land commerce, according to a Reuters report.",
-     "sources": [
-      {
-       "key": "3fb293fdc46d99b1",
-       "title": "EXCLUSIVE: Expanding on naval blockade, US military looks to restrict Iranian land commerce - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQTGRyZ1FFOWdNalpDbFdEeHZqc1JMNVVkekpWT3NULUU4N0hXTkN3MTQ5dlNSWjdhaUVCWlVUQVdhbkZrOEdDZ2FlNS1qOENqVnhOWGNYcmgtSU8xN3pHUjIzdDZ5akJZNzhnR3g4U0w5NjR1NUNka204MWRxak1WN056VUQ1MEhpNnpnaWVGSF90RlBMaTBWY1R5NFJDa3Q0SE1rMDhUUHRJZ01EMDJHdkhqMTY5aFU5TGd6WTNsekRoQkcyUkE?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Berkshire Hathaway accelerated share buybacks even as its profit fell, a notable move amid market volatility.",
-     "sources": [
-      {
-       "key": "44612f31fc5f8e52",
-       "title": "Berkshire Hathaway speeds up stock buybacks, though profit falls - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPa29SbTRWcFpWdFpiekRVRjRvNmZjM1BnNzhOeVY3ajB5S25PaGgxVFAyTTItcjRDZkRmcHROSkJIZ3lNdXZkaGp0R2hOZE51eHBzR1U3MXlFRXhGOUhzV1pJR0I2RWtUZnRrQU1MVXZaSm1haDUtTHo3NEJvNGJhLU1rM2N4a240NWp2VFh5Vkd5LW1DOTd6emN0S1QyengzS1ZjdE04LVluRGppX19oSkxtVktEcDdoWXVIVk93?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Italy’s foreign minister says hackers leaked his personal data; Prime Minister Giorgia Meloni blamed pro-Russian hackers.",
-     "sources": [
-      {
-       "key": "ad35b3d935e96bb7",
-       "title": "Italian foreign minister says hackers leaked his personal data",
-       "url": "https://www.bbc.co.uk/news/articles/cr20wvge32j3o?at_medium=RSS&at_campaign=rss",
+       "key": "b3534df0c8743592",
+       "title": "Houthis say at least 33 killed in Saudi air strike",
+       "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo?at_medium=RSS&at_campaign=rss",
        "source": "BBC World",
        "via": null
       }
      ]
     },
     {
-     "text": "A Washington Post report says AI-enabled jobs are widening career-advancement differences, with men gaining ground as women lose it.",
+     "text": "A report flags eurozone inflation’s return to 4%, alongside renewed pressure in France’s bond market and a critical window for choosing ECB leadership.",
      "sources": [
       {
-       "key": "3ad35cf19a64b934",
-       "title": "Men see more career advancement in jobs with AI, as women lose ground - The Washington Post",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNk5OVzNZenhsMVlXMHRod1RNSGlOTklPd1NPZjZiaFpYdGdBMWRWdUJ3c21sNEwwUWpEX21xMEdJQjV1bVhvNm1qXzZaNU5QazRUMGZoNmZCVy1BYkVONm53aUlXVm5jLWpHdjNSSHJiNmY1czZYMXRJZnY4TXVWRDdLSlZKSVBKTjItUWx0NFNOa19EUzg3WF9Zc0NMYkFpc2J6bGhpOEtsUy1pRG5XQW15aWU?oc=5",
-       "source": "The Washington Post",
+       "key": "dafcb92e80cdeda8",
+       "title": "Eurozone Inflation Returns to 4% as French Bond Market Stirs, ECB Leadership Selection Enters Critical Window - finance.biggo.com",
+       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBiVVFUSUlWZlZqWlFCclFQbC1CNWJCZ0lOLTBmY1VMNUxfcjhZT3ZkeUNCaWZucmV1VDJvcG45bE9sa1BQRjVDLW1PRnJvSzc3TldfYkJNUVlXRkxUOXdwZUZkdlgwOFdDZlNoUDRPdVRZamM4MHc?oc=5",
+       "source": "finance.biggo.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Israel’s president is due to formally task opposition leader Gadi Eisenkot with forming a government, according to Le Monde.",
+     "sources": [
+      {
+       "key": "c056892f72acae87",
+       "title": "En Israël, les défis de Gadi Eisenkot, général novice en politique chargé de former un gouvernement",
+       "url": "https://www.lemonde.fr/international/article/2026/11/08/en-israel-les-defis-de-gadi-eisenkot-general-novice-en-politique-charge-de-former-un-gouvernement_6808385_3210.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The FT reports that businesses are looking to AI to reduce management headcount, a potentially important signal for workforce and productivity trends.",
+     "sources": [
+      {
+       "key": "a8ad8ef452164cca",
+       "title": "AI is coming for managers’ headcount - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQlF5Y0M0RG80eUtkc01tb1lLd1cyVUxncWxRYjZmZkUtV2VsYW1Nc204ZzFzZU9EaE5JRzBWdnZrQXBxSGZ5cC1wZVdrdThZYlQzQjNILWNOdktVa0dBRnRSN0xWVmFwMTZpVFp6Xzd1X1VGMThPdmVXOHRSZ3VBbkRZRFA?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A Le Monde report, citing the New York Times, says Nvidia chief Jensen Huang is suspected of being spied on by a Chinese entrepreneur; the report concerns an alleged personal relationship.",
+     "sources": [
+      {
+       "key": "7c4b8b53da79ebc4",
+       "title": "Jensen Huang, le patron de Nvidia, soupçonné aux Etats-Unis d’avoir été espionné par une entrepreneuse chinoise dans le cadre d’une relation sentimentale",
+       "url": "https://www.lemonde.fr/international/article/2026/11/08/jensen-huang-le-patron-de-nvidia-soupconne-aux-etats-unis-d-avoir-ete-espionne-par-une-entrepreneuse-chinoise-dans-le-cadre-d-une-relation-sentimentale_6808394_3210.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Jane Kim has declared victory in California’s insurance commissioner race and pledged a wildfire-insurance overhaul, according to ABC7.",
+     "sources": [
+      {
+       "key": "2982aa9e36fb21fa",
+       "title": "California election: Jane Kim declares victory in insurance commissioner race, vows wildfire insurance overhaul - ABC7 Bay Area",
+       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPV19wQk5DTjdOYzJmdHRxRmZzTHZGbEN4T25DMHBTUDNwb0lfZHNXb0d1SHFFWVFKcTBDQXJIcjZlZ3VMc2xlV3FNdG90d3pTZG9SNzBrLTFMY3BNYUoxcXcxeWwycnNuYjlrVXpFNFhXWUhSdEdmdkJFSmVYTkxIQjNNUEhlM3F0TW9rc2NiQ29wN3kxS1hDMENHeXdlZFNQMVU4MlRxWVpadmJiOFFtelVrNTNkSGdlQUlDZXRaa1ZsakdYQi00c1d0Q3HSAdIBQVVfeXFMT210MmFVZEp5c2laRmFOUzhyRTJlV29iNUNqQk9mVUVVdWhXMkE0alhXSWRrQ2Z2ckNidnluRzVFdzlCWXVWbExOZWVTbElJODFUQUpnNmUwcktyS2EwUUt3ZlRhS0o2c2F4cEJaS0RreWhwejJwaWxxVFJhLThsSXpodFd1NDczVVpmWDJnYlNzZTRmNUxyVHZfSlotajNoQXdUbTRKMWpoN19pTzZxWFcxdWRWLVEyN3EzcTFOQkVwb050bXVmUGZkSjAzbkhkcld3?oc=5",
+       "source": "ABC7 Bay Area",
        "via": "Google News"
       }
      ]
@@ -818,264 +855,372 @@
    ],
    "items": [
     {
-     "url": "https://www.lemonde.fr/international/article/2026/11/07/en-pologne-au-moins-six-morts-dans-une-attaque-par-arme-a-feu-a-cracovie-le-tireur-interpelle_6808293_3211.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-07T17:34:57+00:00",
-     "new": true,
-     "key": "026a3ce81823e8ba",
-     "title": "At least six killed in Kraków shooting",
-     "summary": "A gunman reportedly drove into Kraków’s old-town square and fired randomly, killing at least six people before being detained."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQTGRyZ1FFOWdNalpDbFdEeHZqc1JMNVVkekpWT3NULUU4N0hXTkN3MTQ5dlNSWjdhaUVCWlVUQVdhbkZrOEdDZ2FlNS1qOENqVnhOWGNYcmgtSU8xN3pHUjIzdDZ5akJZNzhnR3g4U0w5NjR1NUNka204MWRxak1WN056VUQ1MEhpNnpnaWVGSF90RlBMaTBWY1R5NFJDa3Q0SE1rMDhUUHRJZ01EMDJHdkhqMTY5aFU5TGd6WTNsekRoQkcyUkE?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-07T16:57:15+00:00",
-     "new": true,
-     "key": "3fb293fdc46d99b1",
-     "title": "US military considers restricting Iranian land commerce",
-     "summary": "The US military is looking at expanding its naval blockade strategy to restrict Iran’s land commerce."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPa29SbTRWcFpWdFpiekRVRjRvNmZjM1BnNzhOeVY3ajB5S25PaGgxVFAyTTItcjRDZkRmcHROSkJIZ3lNdXZkaGp0R2hOZE51eHBzR1U3MXlFRXhGOUhzV1pJR0I2RWtUZnRrQU1MVXZaSm1haDUtTHo3NEJvNGJhLU1rM2N4a240NWp2VFh5Vkd5LW1DOTd6emN0S1QyengzS1ZjdE04LVluRGppX19oSkxtVktEcDdoWXVIVk93?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-07T17:37:38+00:00",
-     "new": true,
-     "key": "44612f31fc5f8e52",
-     "title": "Berkshire Hathaway accelerates buybacks as profit falls",
-     "summary": "Berkshire Hathaway stepped up stock buybacks despite a fall in profit."
-    },
-    {
-     "url": "https://www.bbc.co.uk/news/articles/cr20wvge32j3o?at_medium=RSS&at_campaign=rss",
+     "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo?at_medium=RSS&at_campaign=rss",
      "source": "BBC World",
      "feed_name": "BBC World",
      "via": null,
-     "published": "2026-11-07T16:50:06+00:00",
+     "published": "2026-11-08T04:03:12+00:00",
      "new": true,
-     "key": "ad35b3d935e96bb7",
-     "title": "Italy’s foreign minister says hackers leaked his personal data",
-     "summary": "Italy’s foreign minister said hackers leaked his personal data, with Meloni blaming pro-Russian hackers."
+     "key": "b3534df0c8743592",
+     "title": "Houthis say at least 33 killed in Saudi air strike",
+     "summary": "The Houthis say a Saudi air strike killed at least 33 people; Saudi Arabia has not commented."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNk5OVzNZenhsMVlXMHRod1RNSGlOTklPd1NPZjZiaFpYdGdBMWRWdUJ3c21sNEwwUWpEX21xMEdJQjV1bVhvNm1qXzZaNU5QazRUMGZoNmZCVy1BYkVONm53aUlXVm5jLWpHdjNSSHJiNmY1czZYMXRJZnY4TXVWRDdLSlZKSVBKTjItUWx0NFNOa19EUzg3WF9Zc0NMYkFpc2J6bGhpOEtsUy1pRG5XQW15aWU?oc=5",
-     "source": "The Washington Post",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBiVVFUSUlWZlZqWlFCclFQbC1CNWJCZ0lOLTBmY1VMNUxfcjhZT3ZkeUNCaWZucmV1VDJvcG45bE9sa1BQRjVDLW1PRnJvSzc3TldfYkJNUVlXRkxUOXdwZUZkdlgwOFdDZlNoUDRPdVRZamM4MHc?oc=5",
+     "source": "finance.biggo.com",
+     "feed_name": "Topic: European Central Bank",
+     "via": "Google News",
+     "published": "2026-11-08T05:25:00+00:00",
+     "new": true,
+     "key": "dafcb92e80cdeda8",
+     "title": "Eurozone inflation returns to 4% as French bond market stirs",
+     "summary": "A report says eurozone inflation has returned to 4% as France’s bond market stirs and ECB leadership selection enters a critical window."
+    },
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/11/08/en-israel-les-defis-de-gadi-eisenkot-general-novice-en-politique-charge-de-former-un-gouvernement_6808385_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-08T04:00:08+00:00",
+     "new": true,
+     "key": "c056892f72acae87",
+     "title": "Gadi Eisenkot faces challenges forming an Israeli government",
+     "summary": "Israel’s opposition leader is due to be formally tasked with forming a government."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQlF5Y0M0RG80eUtkc01tb1lLd1cyVUxncWxRYjZmZkUtV2VsYW1Nc204ZzFzZU9EaE5JRzBWdnZrQXBxSGZ5cC1wZVdrdThZYlQzQjNILWNOdktVa0dBRnRSN0xWVmFwMTZpVFp6Xzd1X1VGMThPdmVXOHRSZ3VBbkRZRFA?oc=5",
+     "source": "Financial Times",
      "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-07T17:50:10+00:00",
+     "published": "2026-11-08T05:00:19+00:00",
      "new": true,
-     "key": "3ad35cf19a64b934",
-     "title": "AI-linked jobs show a widening career-advancement gap",
-     "summary": "A Washington Post report says men see more advancement in jobs involving AI while women lose ground."
+     "key": "a8ad8ef452164cca",
+     "title": "AI is coming for managers’ headcount",
+     "summary": "The Financial Times reports that companies are considering AI as a way to reduce management headcount."
+    },
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/11/08/jensen-huang-le-patron-de-nvidia-soupconne-aux-etats-unis-d-avoir-ete-espionne-par-une-entrepreneuse-chinoise-dans-le-cadre-d-une-relation-sentimentale_6808394_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-08T04:55:15+00:00",
+     "new": true,
+     "key": "7c4b8b53da79ebc4",
+     "title": "Jensen Huang suspected of being spied on by Chinese entrepreneur",
+     "summary": "Le Monde, citing the New York Times, reports that Nvidia chief Jensen Huang was allegedly spied on in the context of a personal relationship."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPV19wQk5DTjdOYzJmdHRxRmZzTHZGbEN4T25DMHBTUDNwb0lfZHNXb0d1SHFFWVFKcTBDQXJIcjZlZ3VMc2xlV3FNdG90d3pTZG9SNzBrLTFMY3BNYUoxcXcxeWwycnNuYjlrVXpFNFhXWUhSdEdmdkJFSmVYTkxIQjNNUEhlM3F0TW9rc2NiQ29wN3kxS1hDMENHeXdlZFNQMVU4MlRxWVpadmJiOFFtelVrNTNkSGdlQUlDZXRaa1ZsakdYQi00c1d0Q3HSAdIBQVVfeXFMT210MmFVZEp5c2laRmFOUzhyRTJlV29iNUNqQk9mVUVVdWhXMkE0alhXSWRrQ2Z2ckNidnluRzVFdzlCWXVWbExOZWVTbElJODFUQUpnNmUwcktyS2EwUUt3ZlRhS0o2c2F4cEJaS0RreWhwejJwaWxxVFJhLThsSXpodFd1NDczVVpmWDJnYlNzZTRmNUxyVHZfSlotajNoQXdUbTRKMWpoN19pTzZxWFcxdWRWLVEyN3EzcTFOQkVwb050bXVmUGZkSjAzbkhkcld3?oc=5",
+     "source": "ABC7 Bay Area",
+     "feed_name": "Topic: insurance industry",
+     "via": "Google News",
+     "published": "2026-11-08T01:22:08+00:00",
+     "new": true,
+     "key": "2982aa9e36fb21fa",
+     "title": "Jane Kim declares victory in California insurance commissioner race",
+     "summary": "Kim declared victory and vowed to overhaul wildfire insurance in California."
+    },
+    {
+     "url": "https://www.theguardian.com/global-development/2026/nov/08/uyghurs-thailand-china-forced-deportation",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-08T03:00:28+00:00",
+     "new": true,
+     "key": "b454e695ed8cfd35",
+     "title": "Uyghurs facing deportation by Thailand fear being sent to China",
+     "summary": "Uyghurs facing deportation from Thailand fear abuse in China, while activists warn Bangkok may yield to Beijing’s pressure."
+    },
+    {
+     "url": "https://www.lemonde.fr/m-perso/article/2026/11/08/j-ai-un-entretien-ce-vendredi-c-est-mon-dernier-espoir-quand-la-realite-de-la-crise-envahit-les-reseaux-sociaux_6808389_4497916.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-08T04:00:31+00:00",
+     "new": true,
+     "key": "82c304c448a3f27e",
+     "title": "French youth unemployment exceeds 21%",
+     "summary": "France’s unemployment rate for people under 25 exceeded 21% in the second quarter, according to INSEE."
+    },
+    {
+     "url": "https://www.lemonde.fr/politique/article/2026/11/08/presidentielle-2027-en-meeting-au-bourget-jean-luc-melenchon-s-attelle-a-mobiliser-sa-base-tout-en-elargissant-son-electorat_6808387_823448.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-08T04:00:04+00:00",
+     "new": true,
+     "key": "c9efaa7a800f63b3",
+     "title": "Mélenchon presents 2027 presidential programme at Bourget rally",
+     "summary": "Jean-Luc Mélenchon presented his programme to thousands of supporters at a rally near Paris."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-07T18:01:22.125950+00:00",
-   "input_fingerprint": "sha256:dad1b5983033d19a1f1848743917a0829052e7d538e05a5ab9ec3b31c21e1a47",
-   "last_success_at": "2026-11-07T18:01:22.125950+00:00",
-   "candidate_count": 469,
-   "new_count": 5
+   "source_checked_at": "2026-11-08T06:01:19.253944+00:00",
+   "input_fingerprint": "sha256:b06388be01b6dd1563aeb2c3944e6511534f47733c45bbf64b5109458452b349",
+   "last_success_at": "2026-11-08T06:01:19.253944+00:00",
+   "candidate_count": 350,
+   "new_count": 9
   },
   "sport": {
    "briefing": [
     {
-     "text": "Luis Enrique urged PSG to move on from the 6-0 win at Villarreal ahead of Saturday’s Troyes match, their final game before the international break.",
+     "text": "PSG edged Troyes 1-0 at the Parc des Princes, with Ilya Zabarnyi scoring; CulturePSG’s analysis describes a controlled but unconvincing performance.",
      "sources": [
       {
-       "key": "0dbe9a7257bbbf08",
-       "title": "« Il faut oublier Villarreal », la conf' complète de Luis Enrique avant PSG/Troyes",
-       "url": "https://www.culturepsg.com/news/match/il-faut-oublier-villarreal-la-conf-complete-de-luis-enrique-avant-psg-troyes/61464",
+       "key": "7026fcde4c317f52",
+       "title": "PSG/Troyes (1-0), les performances individuelles",
+       "url": "https://www.culturepsg.com/news/match/psg-troyes-1-0-les-performances-individuelles/61483",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "South Africa beat Italy 66-7 in Turin, six days before their scheduled meeting with France’s XV.",
+     "text": "France beat Fiji 54-17 and now face South Africa; Fabien Galthié said the team has six days to prepare for a daunting challenge.",
      "sources": [
       {
-       "key": "5129371235cff580",
-       "title": "Les Springboks écrasent l’Italie 66-7 à Turin, six jours avant d’affronter le XV de France - Quinze Ovalie",
-       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWHJfbTV6M1l2b0JKMHcxQ3BLOG9xRVQ4XzgtWGZ3czNsRFFnYkJNZmZBVmpWa25fQ2pGaDFqcXFXMlRXcVB6WkMtYjllcXo4THhOV001R0F5WGxleUpwRVVaUFQ2cjRDVUNzbkxFelRWVFFKWk45YS01aHJ5S3NIaWNn?oc=5",
-       "source": "Quinze Ovalie",
+       "key": "15ca7f367f3fcbe6",
+       "title": "Après France - Fidji (54-17). Fabien Galthié : « On a six jours pour faire quelque chose d’inimaginable » - Sud Ouest",
+       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOY1M3T0o4UGJUQTVOdVU3NXZMUzBOaVA1d2p2NUJnS1psYkNVaGE4b0NsUHZVTk5GVEVDbTNqbWtycHZrOHJjSWtLbXF2SFJMaV9xN3owamM4S0pVZ3k5d0pSNkhKaG5LelJrUWtKMWVIc1FTNVJaMGlNVG5xV3BJT2w3dFVBUmFFWWdGQ0p5Um1Wd3BZLWZwR0JrRVRZalQ3c2lxQWZWQ0EyNkcwVmw2UURjbDM0TTJKbi1iSE1QTlRKTTB3NXBMQWlHam43N21TUFRNUXlRbll5NzFqRUVRaVdfZmJXQQ?oc=5",
+       "source": "Sud Ouest",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s football team is back in action against Fiji, with first place in the Nations Championship at stake.",
+     "text": "Gaël Fickou, Julien Marchand, Teddy Thomas and Louis Carbonel have been called into the France squad ahead of the Springboks match.",
      "sources": [
       {
-       "key": "6cf43acf9548e094",
-       "title": "EN DIRECT - France-Fidji : la 1ʳᵉ place du Championnat des nations dans le viseur, suivez la rentrée des Bleus sur TF1 - TF1 Info",
-       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOLThKZ3YxbFRoS09fZElnenpVc3FoTW4tNWhNVlJFZVl0WU1BckhxOFM1TzNaMmN3R0hCRTBFUEhjdkZmajRKQ1cxTlFKN2xRWm8tQ202RGVMczhnVW1yOGNHeU1VSlNkMV9UUVlSQV9nR0wzN1hMUTB1RXpKb2J5VUkybm42WXZKbG9GQVU3MXNXQmVhYnYwaUJLcnZVM0twdzdxTjRzeVlGMFZpVUQxYVU1NFd3amVXVlVKTWpsbGFpYTV0Vm93a2xBdzV0Q2s2YVN6TmUxTkxGbmRDeEIwT19hQjVDUC1o?oc=5",
-       "source": "TF1 Info",
+       "key": "54149c476b3cf9e1",
+       "title": "XV de France : Gaël Fickou, Julien Marchand, Teddy Thomas et Louis Carbonel appelés avant le choc contre les Springboks - Le Figaro",
+       "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOMjlDUEJEUjRNRnY3S0dTZmpybmN6YTBCblh3al9lWEN2d2RycVhoV0FIb2k2S1RBR1hYbjJRdWR4TlJsRkpiT2dXeEhtVkxlX2JpNmtsYkNnZnp4ZGM0NGd5RzNnRldaV3Rxa0ZTbG5QR3Y5X3NOaGdTOGFfYnRiYUoxaEJDUmg4RzRBZExMZE9aRjRlYzlhcUJjSkdBM0cwbEZLb0hlLVY3Ny01dG13VGhQVlc2Sm9uT3YzQ1hzMjItN3VxU3JDMmtGZnYtOGlPeXdTSzdOdTJ5RUszcEVXdEdlTmlCX1ZlWE5ZakVzOEdmTWU0LURCNjFoRWVoczl5SGlDWA?oc=5",
+       "source": "Le Figaro",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Counter-Strike in-game leader chopper has announced he will not return to playing competitively.",
+     "text": "Romain Ntamack is set for several weeks out, a setback for France as they prepare for South Africa.",
      "sources": [
       {
-       "key": "45f93a100fc3f962",
-       "title": "chopper announces retirement",
-       "url": "https://www.hltv.org/news/45925/chopper-announces-retirement",
-       "source": "HLTV",
-       "via": null
+       "key": "8a0ee9e35ee85d3f",
+       "title": "XV de France : la nouvelle tuile pour Romain Ntamack ! Alors qu'il enchaînait de nouveau avec les Bleus, l'ouvreur toulousain est rattrapé par la malchance et sera absent de nombreuses semaines -…",
+       "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOWTlSSEVsNkl6X3VLZDdCVktWZTdxdjhsREFUclpLb2FsdFY4akRaQlZpblBnMjhRalJLWDRqZDVkM1Z5UmJoTVVGUXdOeFZuMlBYcnBsSGJ3N1RibUFpaExhdFplOEkwSW10QmljVmdhYmxlVUQwZURtTnV5bUhhR1lIS0JZdVJGdjhoc0NibGZtOFR3QXh1bkUzanZDMERUaURHQ1M0T2pLNW42M0lfbHlfLWRNbG5aRkRhTV9jeG5WLVdpRmhyWkdSRTc3QzgyT1ZGd0FLR0t3U2hnSF9jZ04wOGMxY2VuTEpVRnJJLXpGdUM0UG5BRlFBaWZibFNiOFRpdGhhYlJ5N0plSHNacm9nWEF4RDlUeVZCLVNoZENMcGs?oc=5",
+       "source": "ladepeche.fr",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/match/il-faut-oublier-villarreal-la-conf-complete-de-luis-enrique-avant-psg-troyes/61464",
+     "url": "https://www.culturepsg.com/news/match/psg-troyes-1-0-les-performances-individuelles/61483",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-06T12:49:00+00:00",
+     "published": "2026-11-08T00:52:00+00:00",
      "new": true,
-     "key": "0dbe9a7257bbbf08",
-     "title": "Luis Enrique: “We have to forget Villarreal”",
-     "summary": "The PSG coach spoke ahead of Saturday’s Ligue 1 match against Troyes, the team’s last fixture before the international break."
+     "key": "7026fcde4c317f52",
+     "title": "PSG–Troyes: individual performances",
+     "summary": "PSG beat Troyes 1-0 through a goal from defender Ilya Zabarnyi in a match that was controlled more than dominated."
     },
     {
-     "url": "https://www.culturepsg.com/news/match/si-on-peut-marquer-on-marque-des-images-inedites-de-villarreal-psg-diffusees/61475",
+     "url": "https://www.culturepsg.com/news/match/le-match-mayulu-torres-zabarnyi-35-ans-etc-la-conf-complete-de-luis-enrique-apres-psg-troyes-1-0/61482",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-07T11:12:00+00:00",
+     "published": "2026-11-08T00:13:00+00:00",
      "new": true,
-     "key": "5af9f37ff856f1f2",
-     "title": "Canal+ releases behind-the-scenes footage from PSG’s Villarreal win",
-     "summary": "Canal+ released previously unseen footage from PSG’s 6-0 Champions League victory over Villarreal."
+     "key": "6c61456b34d6c68d",
+     "title": "Le match, Mayulu, Torres, Zabarnyi, 35 ans, etc, la conf' complète de Luis Enrique après PSG/Troyes (1-0)",
+     "summary": "Après un PSG/Troyes peu emballant mais plutôt maîtrisé, c'est un Luis Enrique bien conscient des difficultés rencontrées qui s'est exprimé en conférence de presse. Il a été question du match, compliqué, mais aussi de quelques joueurs (Mayulu, Torres, Zabarnyi, etc). Voici ses propos complets,…"
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWHJfbTV6M1l2b0JKMHcxQ3BLOG9xRVQ4XzgtWGZ3czNsRFFnYkJNZmZBVmpWa25fQ2pGaDFqcXFXMlRXcVB6WkMtYjllcXo4THhOV001R0F5WGxleUpwRVVaUFQ2cjRDVUNzbkxFelRWVFFKWk45YS01aHJ5S3NIaWNn?oc=5",
-     "source": "Quinze Ovalie",
+     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOY1M3T0o4UGJUQTVOdVU3NXZMUzBOaVA1d2p2NUJnS1psYkNVaGE4b0NsUHZVTk5GVEVDbTNqbWtycHZrOHJjSWtLbXF2SFJMaV9xN3owamM4S0pVZ3k5d0pSNkhKaG5LelJrUWtKMWVIc1FTNVJaMGlNVG5xV3BJT2w3dFVBUmFFWWdGQ0p5Um1Wd3BZLWZwR0JrRVRZalQ3c2lxQWZWQ0EyNkcwVmw2UURjbDM0TTJKbi1iSE1QTlRKTTB3NXBMQWlHam43N21TUFRNUXlRbll5NzFqRUVRaVdfZmJXQQ?oc=5",
+     "source": "Sud Ouest",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-07T17:55:28+00:00",
+     "published": "2026-11-08T05:44:04+00:00",
      "new": true,
-     "key": "5129371235cff580",
-     "title": "South Africa thrash Italy ahead of France match",
-     "summary": "The Springboks beat Italy 66-7 in Turin, six days before facing France."
+     "key": "15ca7f367f3fcbe6",
+     "title": "Galthié: France have six days to prepare for South Africa",
+     "summary": "After France’s 54-17 win over Fiji, Fabien Galthié said the team has six days to prepare for the Springboks."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOLThKZ3YxbFRoS09fZElnenpVc3FoTW4tNWhNVlJFZVl0WU1BckhxOFM1TzNaMmN3R0hCRTBFUEhjdkZmajRKQ1cxTlFKN2xRWm8tQ202RGVMczhnVW1yOGNHeU1VSlNkMV9UUVlSQV9nR0wzN1hMUTB1RXpKb2J5VUkybm42WXZKbG9GQVU3MXNXQmVhYnYwaUJLcnZVM0twdzdxTjRzeVlGMFZpVUQxYVU1NFd3amVXVlVKTWpsbGFpYTV0Vm93a2xBdzV0Q2s2YVN6TmUxTkxGbmRDeEIwT19hQjVDUC1o?oc=5",
-     "source": "TF1 Info",
+     "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOMjlDUEJEUjRNRnY3S0dTZmpybmN6YTBCblh3al9lWEN2d2RycVhoV0FIb2k2S1RBR1hYbjJRdWR4TlJsRkpiT2dXeEhtVkxlX2JpNmtsYkNnZnp4ZGM0NGd5RzNnRldaV3Rxa0ZTbG5QR3Y5X3NOaGdTOGFfYnRiYUoxaEJDUmg4RzRBZExMZE9aRjRlYzlhcUJjSkdBM0cwbEZLb0hlLVY3Ny01dG13VGhQVlc2Sm9uT3YzQ1hzMjItN3VxU3JDMmtGZnYtOGlPeXdTSzdOdTJ5RUszcEVXdEdlTmlCX1ZlWE5ZakVzOEdmTWU0LURCNjFoRWVoczl5SGlDWA?oc=5",
+     "source": "Le Figaro",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-07T17:00:27+00:00",
+     "published": "2026-11-08T05:50:00+00:00",
      "new": true,
-     "key": "6cf43acf9548e094",
-     "title": "France face Fiji with top spot in sight",
-     "summary": "France’s return match against Fiji could help them claim first place in the Nations Championship."
+     "key": "54149c476b3cf9e1",
+     "title": "Four players called up ahead of the Springboks match",
+     "summary": "Gaël Fickou, Julien Marchand, Teddy Thomas and Louis Carbonel have been called into France’s squad before the South Africa match."
     },
     {
-     "url": "https://www.hltv.org/news/45925/chopper-announces-retirement",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-11-07T17:45:00+00:00",
+     "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOWTlSSEVsNkl6X3VLZDdCVktWZTdxdjhsREFUclpLb2FsdFY4akRaQlZpblBnMjhRalJLWDRqZDVkM1Z5UmJoTVVGUXdOeFZuMlBYcnBsSGJ3N1RibUFpaExhdFplOEkwSW10QmljVmdhYmxlVUQwZURtTnV5bUhhR1lIS0JZdVJGdjhoc0NibGZtOFR3QXh1bkUzanZDMERUaURHQ1M0T2pLNW42M0lfbHlfLWRNbG5aRkRhTV9jeG5WLVdpRmhyWkdSRTc3QzgyT1ZGd0FLR0t3U2hnSF9jZ04wOGMxY2VuTEpVRnJJLXpGdUM0UG5BRlFBaWZibFNiOFRpdGhhYlJ5N0plSHNacm9nWEF4RDlUeVZCLVNoZENMcGs?oc=5",
+     "source": "ladepeche.fr",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-08T05:31:00+00:00",
      "new": true,
-     "key": "45f93a100fc3f962",
-     "title": "Chopper announces retirement",
-     "summary": "The Russian in-game leader says he will not return to competitive play."
+     "key": "8a0ee9e35ee85d3f",
+     "title": "Ntamack ruled out for several weeks",
+     "summary": "France fly-half Romain Ntamack is set to miss several weeks after another injury setback."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-07T18:01:22.125950+00:00",
-   "input_fingerprint": "sha256:f496318413db8eb65b46813d00d9fe454f786127ac63efe4638ee16aefa972c4",
-   "last_success_at": "2026-11-07T18:01:22.125950+00:00",
-   "candidate_count": 380,
+   "source_checked_at": "2026-11-08T06:01:19.253944+00:00",
+   "input_fingerprint": "sha256:2fe9b86b55e88d4c0d1793579ec5565e8247c629df1ef46ff08a106efb497d58",
+   "last_success_at": "2026-11-08T06:01:19.253944+00:00",
+   "candidate_count": 367,
    "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "Berkshire increased share repurchases to $9.6bn as operating income fell 5.8% year on year, highlighting a weaker insurance contribution despite the buyback acceleration.",
+     "text": "Meta’s bond sale is being framed as evidence of a changed landscape for technology-company debt, a relevant signal for corporate credit markets.",
      "sources": [
       {
-       "key": "63307c236c9d1d41",
-       "title": "Berkshire Hathaway steps up share buybacks with $9.6bn of purchases",
-       "url": "https://www.ft.com/content/1f153350-2377-4e48-a073-0539376eab4c?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "China’s economic planning agency flagged weak demand as a challenge, keeping the demand outlook in focus for global markets.",
-     "sources": [
-      {
-       "key": "96b656a859663de1",
-       "title": "China’s NDRC Flags Weak Demand as Challenge for Nation’s Economy - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQazZrSXp5OW54TDNYaF9CWXNHMXVLb2FYTmRUejBKNTBGcEdBeEFXZVNKMWhna2FFeWJla3BZVTlKcktQQ2FhVmtNUW5fUzgxVURaVkcyNVNkamxRbEpuMnFwZXBnLXdhMU5PWkJPT0YwTWl5TFlWQ0VFZG9Hb2VqRU9rdEpBY2d3bUVCVTBaZmRlRk1wdzd0WGRnbTZianVWbTd5a1E5cmtnOVZ1NDJoUmtOOUdGZw?oc=5",
+       "key": "a6ba973b969e1da5",
+       "title": "Meta’s Bond Sale Shows New Reality for Tech Debt - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNN0h6NGhPQzBpZTdwV29ra0U5UUhycGhPb3FHT3JvUksyYTZFZjVPbVpBdURxeVMxM2dxS0Z1Y21XbVctWVY5Q3ltR09IOG9tNUdSMXZ5eUFHYUpaaWpaVGZoQzFvVnZOdUhEclJKVENTbVpNeFMwbC1pV1ppa3JhWjZMQzEtWkQ4UGlVWXJENXNWRGNEVEotZjBnMnJ6WFJzQWFTcnI1Wi1WZzAwXzRUdy1YMA?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "The US Treasury moved to cut off crypto exchange MEXC, alleging links to illicit finance involving Russia; the action also sits within its campaign against Iran.",
+     "text": "Berkshire’s cash pile reached $377.4 billion as it increased buybacks while earnings fell, highlighting its cautious capital allocation.",
      "sources": [
       {
-       "key": "41fe170edde9cf36",
-       "title": "U.S. Treasury moves to cut off crypto exchange MEXC over $16 billion in alleged illicit flows",
-       "url": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
-       "source": "CoinDesk",
+       "key": "0b91ae98cf819026",
+       "title": "Berkshire Hathaway, cresce a 377 miliardi di dollari la montagna di liquidità",
+       "url": "https://www.ilsole24ore.com/art/berkshire-hathaway-cresce-377-miliardi-dollari-montagna-liquidita-AJc4sY8B",
+       "source": "Il Sole 24 Ore Finanza",
        "via": null
+      },
+      {
+       "key": "966a7bf899c830cb",
+       "title": "Berkshire Hathaway’s Operating Earnings Fall, Buybacks Rise - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOc2ZtOW9LNl81SlBjQ3dkekluZDI1WmhWV1Znckw0MGlnWUF6WWF4cjd5MFlVTWQ4MTRjc1lWbWRrSzZ5RkY5SnIzQUpKcGZ4Y09rOGxqQ2FNNzRwaE90aExSOENLa2dGd1BrY2xKYVRwNW9nV2Rtckx2LTJlaGNrME5nT3JYVlo4cmNRaXVoZ0RnVGFnZnpDWXVGOUVodWtpWTQ5WEN1eXBtdEZuOUE?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Apple’s Singapore profit bookings have made the city-state its largest tax shelter, according to new disclosures, with potential implications for scrutiny of multinationals’ tax arrangements.",
+     "sources": [
+      {
+       "key": "dddc4e49b87d5111",
+       "title": "Apple saves $2.7bn in taxes by booking profits in Singapore",
+       "url": "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Wall Street strategists are treating the stock rout as a reason to buy, offering a counterpoint to recent market weakness.",
+     "sources": [
+      {
+       "key": "405ed782cb229580",
+       "title": "Wall Street Strategists Call Stock Rout a Fresh Reason to Buy - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRjJsWU9HVVVVTlJNRjYxYkJ6UFBBdnQzNklIM0w5X1R0YUtlT2RSeG5XR2JqMkF6Q3J5NVVBMm5sSVd4TVRfRFpYNHBLVDdSRFlmRXZxTHpJbllDVHM2Vm9lMmVBNGVWSUFrc1c2NEMzc0tBV0p3Yk16R1IwUTdsa2ZzNkNvYXpnM250dGYzZVFsV0FZbXE5YTZwYnllR1hXZkl5a2w3YVFtMXdKSGZkZzdR?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A bank collapse is exposing vulnerabilities in Latin America’s leading economy, according to the Financial Times.",
+     "sources": [
+      {
+       "key": "f90e952111d92c73",
+       "title": "A bank collapse exposes the dark side of Latin America’s star economy - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUFh1OVhXalFwZng4aThEV051RU5JbnB4T0R6OXM3U3pwaFFKXzJoTUpYc2s4ZW5OT2d1NUJ0bXhIRmdRLWlISUV3UGZoVE1FTVlBYlFwQ2VBekNQalk0UXd0WHY3cUx5WDNTZ1RGZ1Voa01CZ2xWcnl6MDNXQkJ3dDI1d2g?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/1f153350-2377-4e48-a073-0539376eab4c?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-11-07T16:43:06+00:00",
-     "new": true,
-     "key": "63307c236c9d1d41",
-     "title": "Berkshire steps up share buybacks as operating income falls",
-     "summary": "Berkshire bought back $9.6bn of shares as quarterly operating income fell 5.8% year on year, with insurance performance weighing on results."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQazZrSXp5OW54TDNYaF9CWXNHMXVLb2FYTmRUejBKNTBGcEdBeEFXZVNKMWhna2FFeWJla3BZVTlKcktQQ2FhVmtNUW5fUzgxVURaVkcyNVNkamxRbEpuMnFwZXBnLXdhMU5PWkJPT0YwTWl5TFlWQ0VFZG9Hb2VqRU9rdEpBY2d3bUVCVTBaZmRlRk1wdzd0WGRnbTZianVWbTd5a1E5cmtnOVZ1NDJoUmtOOUdGZw?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNN0h6NGhPQzBpZTdwV29ra0U5UUhycGhPb3FHT3JvUksyYTZFZjVPbVpBdURxeVMxM2dxS0Z1Y21XbVctWVY5Q3ltR09IOG9tNUdSMXZ5eUFHYUpaaWpaVGZoQzFvVnZOdUhEclJKVENTbVpNeFMwbC1pV1ppa3JhWjZMQzEtWkQ4UGlVWXJENXNWRGNEVEotZjBnMnJ6WFJzQWFTcnI1Wi1WZzAwXzRUdy1YMA?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-07T08:45:02+00:00",
+     "published": "2026-11-07T20:00:00+00:00",
      "new": true,
-     "key": "96b656a859663de1",
-     "title": "China flags weak demand as an economic challenge",
-     "summary": "China’s National Development and Reform Commission identified weak demand as a challenge for the economy."
+     "key": "a6ba973b969e1da5",
+     "title": "Meta’s bond sale signals a new reality for tech debt",
+     "summary": "Bloomberg says Meta’s bond sale reflects a changed environment for technology-company debt."
     },
     {
-     "url": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
-     "source": "CoinDesk",
-     "feed_name": "CoinDesk",
-     "via": null,
-     "published": "2026-11-07T17:36:46+00:00",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOc2ZtOW9LNl81SlBjQ3dkekluZDI1WmhWV1Znckw0MGlnWUF6WWF4cjd5MFlVTWQ4MTRjc1lWbWRrSzZ5RkY5SnIzQUpKcGZ4Y09rOGxqQ2FNNzRwaE90aExSOENLa2dGd1BrY2xKYVRwNW9nV2Rtckx2LTJlaGNrME5nT3JYVlo4cmNRaXVoZ0RnVGFnZnpDWXVGOUVodWtpWTQ5WEN1eXBtdEZuOUE?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-07T15:49:00+00:00",
      "new": true,
-     "key": "41fe170edde9cf36",
-     "title": "US Treasury moves to cut off crypto exchange MEXC",
-     "summary": "The Treasury action cites MEXC’s alleged role in illicit Russian finance and is framed as part of its campaign against Iran."
+     "key": "966a7bf899c830cb",
+     "title": "Berkshire operating earnings fall as buybacks rise",
+     "summary": "Berkshire’s operating earnings declined while it increased share repurchases."
+    },
+    {
+     "url": "https://www.ilsole24ore.com/art/berkshire-hathaway-cresce-377-miliardi-dollari-montagna-liquidita-AJc4sY8B",
+     "source": "Il Sole 24 Ore Finanza",
+     "feed_name": "Il Sole 24 Ore Finanza",
+     "via": null,
+     "published": "2026-11-07T16:03:17+00:00",
+     "new": true,
+     "key": "0b91ae98cf819026",
+     "title": "Berkshire’s cash pile reaches $377.4 billion",
+     "summary": "Berkshire Hathaway’s cash holdings rose to $377.4 billion from $365.5 billion."
+    },
+    {
+     "url": "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-08T05:00:11+00:00",
+     "new": true,
+     "key": "dddc4e49b87d5111",
+     "title": "Apple books profits in Singapore, saving $2.7 billion in taxes",
+     "summary": "New disclosures indicate Apple saved $2.7 billion in taxes by booking profits in Singapore."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRjJsWU9HVVVVTlJNRjYxYkJ6UFBBdnQzNklIM0w5X1R0YUtlT2RSeG5XR2JqMkF6Q3J5NVVBMm5sSVd4TVRfRFpYNHBLVDdSRFlmRXZxTHpJbllDVHM2Vm9lMmVBNGVWSUFrc1c2NEMzc0tBV0p3Yk16R1IwUTdsa2ZzNkNvYXpnM250dGYzZVFsV0FZbXE5YTZwYnllR1hXZkl5a2w3YVFtMXdKSGZkZzdR?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-07T13:30:00+00:00",
+     "new": true,
+     "key": "405ed782cb229580",
+     "title": "Wall Street strategists see stock rout as a reason to buy",
+     "summary": "Strategists are describing the stock-market rout as a fresh reason to buy."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUFh1OVhXalFwZng4aThEV051RU5JbnB4T0R6OXM3U3pwaFFKXzJoTUpYc2s4ZW5OT2d1NUJ0bXhIRmdRLWlISUV3UGZoVE1FTVlBYlFwQ2VBekNQalk0UXd0WHY3cUx5WDNTZ1RGZ1Voa01CZ2xWcnl6MDNXQkJ3dDI1d2g?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-07T13:27:15+00:00",
+     "new": true,
+     "key": "f90e952111d92c73",
+     "title": "Bank collapse exposes risks in Latin America’s star economy",
+     "summary": "The Financial Times reports that a bank collapse has revealed vulnerabilities in Latin America’s leading economy."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-07T18:01:22.125950+00:00",
-   "input_fingerprint": "sha256:b4be03658d864ebaec0a18dae94416679817b12ffa66c406608bf1165c5c80da",
-   "last_success_at": "2026-11-07T18:01:22.125950+00:00",
+   "source_checked_at": "2026-11-08T06:01:19.253944+00:00",
+   "input_fingerprint": "sha256:b44ba1cc491354c72927e31279700556a5a243bdc2d7c0bb8f9028a317b1f521",
+   "last_success_at": "2026-11-08T06:01:19.253944+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1168,10 +1313,10 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 75734.38,
-     "change_pct": -0.02,
+     "price": 75702.18,
+     "change_pct": -0.06,
      "currency": "USD",
-     "as_of": "2026-11-07T00:00:00+00:00",
+     "as_of": "2026-11-08T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1179,41 +1324,21 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2232.53,
-     "change_pct": -0.11,
+     "price": 2230.64,
+     "change_pct": -0.2,
      "currency": "USD",
-     "as_of": "2026-11-07T00:00:00+00:00",
+     "as_of": "2026-11-08T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 250,
-   "new_count": 3
+   "candidate_count": 139,
+   "new_count": 6
   },
   "media": {
    "briefing": "",
    "items": [
-    {
-     "title": "Russia Is Losing Control All Across the Front",
-     "url": "https://www.youtube.com/watch?v=uRgPQoG18RQ",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-06T22:00:22+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "4b5a8b9039ff2518"
-    },
-    {
-     "title": "Meta VR Glasses: What Vision Pro 2 COULD Have Been!",
-     "url": "https://www.youtube.com/watch?v=_x58r9TBois",
-     "source": "Marques Brownlee",
-     "kind": "video",
-     "published": "2026-11-06T21:29:30+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "2511c0dfdf780d2e"
-    },
     {
      "title": "Unmasking the FSB Agents Tied to WSJ Reporter’s Arrest in Russia #news #spy #investigation #russia",
      "url": "https://www.youtube.com/shorts/3At14b-eygc",
@@ -1223,74 +1348,14 @@
      "duration_s": null,
      "new": false,
      "key": "cb50cae453a1469d"
-    },
-    {
-     "title": "What AI Is Doing To Jobs Is Worse Than We Thought | VisualPolitik EN",
-     "url": "https://www.youtube.com/watch?v=-tV4xm2TipQ",
-     "source": "VisualPolitik EN",
-     "kind": "video",
-     "published": "2026-11-06T13:55:22+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "3d82845e7196618b"
-    },
-    {
-     "title": "Russia is 31 YEARS Away From Taking Donetsk",
-     "url": "https://www.youtube.com/watch?v=9pxkDv5rXPA",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-05T22:30:03+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "5e07baa8c5b0e250"
-    },
-    {
-     "title": "Podcast 04/11/26 : Villarreal/PSG (0-6)",
-     "url": "https://shows.acast.com/culturepsg/episodes/podcast-041126-villarrealpsg-0-6",
-     "source": "Podcast de CulturePSG",
-     "kind": "podcast",
-     "published": "2026-11-04T23:53:37+00:00",
-     "duration_s": 6149,
-     "new": false,
-     "key": "b59135dda57582ad"
-    },
-    {
-     "title": "Crypto Survived the $6.3B Binance Hack...Is the Bull Market Still Intact?",
-     "url": "https://share.transistor.fm/s/3519ade6",
-     "source": "The DeFi Report",
-     "kind": "podcast",
-     "published": "2026-11-04T23:20:18+00:00",
-     "duration_s": 2457,
-     "new": false,
-     "key": "c589b087819efa4c"
-    },
-    {
-     "title": "Russia Just Hit an Aid Center With a Double Tap Strike",
-     "url": "https://www.youtube.com/watch?v=dJOdjEmn6gA",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-04T22:00:06+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "2de1ffd16e01ea58"
-    },
-    {
-     "title": "This is Incredible",
-     "url": "https://www.youtube.com/watch?v=UNZM1Q8V2Ok",
-     "source": "Crypto Currently",
-     "kind": "video",
-     "published": "2026-11-04T20:26:52+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "3653ea52055067c2"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-07T18:01:22.125950+00:00",
-   "candidate_count": 9,
+   "source_checked_at": "2026-11-08T06:01:19.253944+00:00",
+   "candidate_count": 1,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-07T18:00:00.000Z"
+ "scheduled_slot": "2026-11-08T06:00:00.000Z"
 }
