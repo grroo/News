@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261110T180125287707Z",
- "generated_at": "2026-11-10T18:01:25.287707+00:00",
- "generated_local": "Tue 10 Nov 2026, 19:01",
- "source_checked_at": "2026-11-10T18:01:25.287707+00:00",
+ "edition_id": "ed-20261111T060123063356Z",
+ "generated_at": "2026-11-11T06:01:23.063356+00:00",
+ "generated_local": "Wed 11 Nov 2026, 07:01",
+ "source_checked_at": "2026-11-11T06:01:23.063356+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-10T18:01:25.287707+00:00"
+  "run-2026-11-11T06:01:23.063356+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-10T18:01:25.287707+00:00"
+  "completed_at": "2026-11-11T06:01:23.063356+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 28,
+   "item_count": 38,
    "reason": null,
    "failure": null,
-   "parsed_count": 28,
+   "parsed_count": 38,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 109,
+   "item_count": 103,
    "reason": null,
    "failure": null,
-   "parsed_count": 109,
+   "parsed_count": 103,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -141,10 +141,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 94,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 94,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -153,10 +153,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 49,
+   "item_count": 48,
    "reason": null,
    "failure": null,
-   "parsed_count": 49,
+   "parsed_count": 48,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -213,10 +213,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 98,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 98,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 105,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 105,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -249,10 +249,10 @@
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 55,
+   "item_count": 57,
    "reason": null,
    "failure": null,
-   "parsed_count": 55,
+   "parsed_count": 57,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -393,18 +393,6 @@
    "name": "Bitcoin",
    "section": "finance",
    "status": "ok",
-   "item_count": 20,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 20,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
-   "name": "Ethereum",
-   "section": "finance",
-   "status": "ok",
    "item_count": 19,
    "reason": null,
    "failure": null,
@@ -414,13 +402,25 @@
    "cache": "refreshed"
   },
   {
+   "name": "Ethereum",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 18,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 18,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 12,
+   "item_count": 11,
    "reason": null,
    "failure": null,
-   "parsed_count": 12,
+   "parsed_count": 11,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -524,74 +524,104 @@
   {
    "name": "Wiloo",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "VisualPolitik EN",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Preston Stewart",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Marques Brownlee",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "The Christo Files",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Making Sense with Sam Harris",
@@ -684,9 +714,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002198,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.002067,
+  "est_month_usd": 0.19,
+  "forecast_month_usd": 0.19,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,60 +724,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 12288,
+    "latency_ms": 8374,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0baaa3ec27d12f03016af35bfd77ac87d1811d70f3a2d06aeb"
+     "resp_0da7f9defb0c9c03016af404b9a62087d18fdc45882f984429"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3165,
-    "output_tokens": 721,
-    "reasoning_tokens": 137
+    "cache_write_tokens": 3473,
+    "output_tokens": 587,
+    "reasoning_tokens": 102
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7422,
+    "latency_ms": 6522,
     "unknown": false,
     "provider_request_ids": [
-     "resp_046d7bb35d9cc865016af35c09579c87d1a1a45d52909aa422"
+     "resp_0691ad7b29397fdb016af404c16dfc87d1b20b3d7909a702d1"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3592,
-    "output_tokens": 562,
-    "reasoning_tokens": 256
+    "cache_write_tokens": 3617,
+    "output_tokens": 532,
+    "reasoning_tokens": 227
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7416,
+    "latency_ms": 5627,
     "unknown": false,
     "provider_request_ids": [
-     "resp_00c3998f542d75ea016af35c1096cc87d1b96644e33c76d607"
+     "resp_0563ca6109bcf013016af404c7f12887d19220a1809f43768f"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3390,
-    "output_tokens": 575,
-    "reasoning_tokens": 188
+    "cache_write_tokens": 3192,
+    "output_tokens": 443,
+    "reasoning_tokens": 0
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10147,
-  "output_tokens": 1858,
-  "reasoning_tokens": 581,
+  "cache_write_tokens": 10282,
+  "output_tokens": 1562,
+  "reasoning_tokens": 329,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 30,
-   "attempts": 90,
-   "known_cost_usd": 0.067785,
+   "recorded_runs": 31,
+   "attempts": 93,
+   "known_cost_usd": 0.069852,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,87 +786,75 @@
   "news": {
    "briefing": [
     {
-     "text": "Ukraine, Russia and the United States have begun trilateral peace talks in the UAE; Kyiv’s delegation described the first day as constructive, but the talks’ outcome remains uncertain.",
+     "text": "ECB policymaker Joachim Nagel has described a December rate hike as “rather obvious,” a notable signal for euro-area rate expectations.",
      "sources": [
       {
-       "key": "6c22ff3622d0e17f",
-       "title": "First day of Ukraine peace talks constructive, Zelensky says",
-       "url": "https://www.bbc.co.uk/news/articles/cqpvgvrpjvv8o?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
+       "key": "fd9fcbc60387dcda",
+       "title": "ECB’s Joachim Nagel says December rate hike ‘rather obvious’ - Irish Independent",
+       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZVk4bHVpQVlRRW03REhENXNRd3Bvd3dzZ24zMWhVYjJmUk5iM3pBWDVJeXdHcFdabE1XaXlQYjdFbXA0ZC1sMDg4OG1UdHctUkVYakpoakFYSEJNeHk5cHdQMHluVEt2WVc1VkxoUURHeFQzcnVQUzZPb016aGZsemZPZzZkcElwRDlGUmFhekRJMDhHZkJRV3k0dl9rNVgwYkdRVmt1V1ZpZGtVQnZGSFllRC1IWEE?oc=5",
+       "source": "Irish Independent",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Ukraine-Russia talks in Abu Dhabi appear to have made little progress, with the two sides offering sharply different assessments of the meeting.",
+     "sources": [
+      {
+       "key": "d3e2b8e7e856ce57",
+       "title": "Guerre en Ukraine : à Abou Dhabi, les pourparlers russo-ukrainiens condamnés à l’impasse",
+       "url": "https://www.lemonde.fr/international/article/2026/11/11/guerre-en-ukraine-a-abu-dhabi-les-pourparlers-russo-ukrainiens-condamnes-a-l-impasse_6808927_3210.html",
+       "source": "Le Monde",
        "via": null
       }
      ]
     },
     {
-     "text": "ECB rate expectations are shifting toward possible tightening: Philip Lane said decisions depend on inflation spillovers, while a separate report flagged Bundesbank concerns about inflation risks.",
+     "text": "Markets are weighing inflation concerns against demand for AI chips: Wall Street retreated while most Asian markets rose, and strategists warn the AI trade could weaken if hyperscaler spending slows.",
      "sources": [
       {
-       "key": "19f3452dab4930ad",
-       "title": "ECB's rate path hinges on how far inflation spreads, Lane says - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNi1BQm93NlpxZHNuaGE4a0dxNWRmN0VSaDd5YTFFQTlxSEY3bFJWNUpGcFQ0cVZfRjRuMl9sV1NNclBfejJQb0RkUHlQcG45VzZNTW1CWktsTExSMmhWMHJCdU1uTUhLLTU2ZUJOTlRPLVgtWkJqWnRKN3JheXM2OThWRjRYVUJFR2l2b2VOY3puS18wdjBTVXh2WlJZZ1VValZGdTRPWWJLQjlkaENN?oc=5",
-       "source": "Reuters",
+       "key": "90606bb28a14d496",
+       "title": "Asian Shares Mostly Rise on AI Chip Demand Despite Wall Street's Retreat on Inflation Data - U.S. News & World Report",
+       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOYVpEVGNiSkU4MzQzVkxMbVd0NC14djV5ZWRiQTI3TVJURHh5eHA0U3NYZEV4azN6VF9KeDVuYXViMzcwWGlWdmJKcVpMVFJybXNweC0zSDZvVl9aRkxXSnIxVVplLUoxQmZXMm1lekNPM2lVaGxWekhZMmQ0M19HWExZdzlNOUcyZkJsTEQ0OElaMTM3WkVVLUpFYzBna0lsa0ZZdnp6THpoejl0aUxxU1hwOW13TXBRNWxyRHlDMFkwdXlURWVZOHR5aUw1dTRteTl3SmhhMUlobjNqOVY0?oc=5",
+       "source": "U.S. News & World Report",
        "via": "Google News"
       },
       {
-       "key": "3d27698c0bae6cfe",
-       "title": "ECB December rate hike expectations rise as Bundesbank chief flags inflation risks - Yahoo Finance Singapore",
-       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQlRiM2szdHVTc1RVbjBpRHExeW1mcWlYU09XcXc1MWlnNEdnXzJhNVJPZE14YW9tSmJva3VhN0JnQVIzWXdYOUV3ZTFzYVFibGZvRmJneTRfSGlOYzNVeEJOVEFQekF2SElEZWdFVDByb2wxODhRQndwdk1XUk1qZFFhWXZnN1JQN05SMA?oc=5",
-       "source": "Yahoo Finance Singapore",
+       "key": "e47593e7e5246ea1",
+       "title": "AI trade could unwind further if hyperscaler spending slows: Strategist - CNBC",
+       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYTVzTFROcllqNUFRRFVkcTExUFZLRGdKd3Fma0tqb3FwYm9zQkptYU5oS2lWRWdpX0RXZ2pOUTBUYjVYd0RESXJuUkVtalB3MFlTTVNRdWI4d0JrcWpfSVdrQVdmYlRQN1FHSTllOHZCcVBTczBZZGVNeGotYjBxeW51eUQ1eDJXZTNhOG91bFh2dVhlY2cyU2FyQ1k0VC1vYTBOdjBOWk1fTFhFTmZz?oc=5",
+       "source": "CNBC",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Anthropic is reportedly considering an IPO valuation of $1.4 trillion, a striking test of investor appetite for AI companies.",
+     "text": "Aon says dependency risk deserves greater attention as a soft insurance market creates a window for buyers; lithium-battery fires are also prompting underwriting and pricing questions.",
      "sources": [
       {
-       "key": "deaa6d3af7268b22",
-       "title": "EXCLUSIVE: Anthropic eyes $1.4 trillion IPO valuation in test of Wall Street's AI fervor - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaUtnS210c1pKNVpEZXJ1V1JpdUdyZ0h5OGh2SzVCXzJaVGRwaDZnb0NQZUxFS0ZFWmxwbU53ZlJtdlBkOWplZHdaNkloU0xwV3hvdlpjNnh0R1FISXdMOExfc09JckJqTWxjSWlZSjZpN0RWR1kyRUF6YUlXN0dqSm5XQU5TUmFmbWpFbGlzT3FZRllaMGU4cld0cDlsaFVYY0IzV2ZNYmwxYW0yd1FDaw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A Reuters report says Nvidia is heading toward a $470 billion two-day market-value loss, with the CEO-related fallout cited as a factor.",
-     "sources": [
-      {
-       "key": "ef13b9cf6f75b59f",
-       "title": "Nvidia heads for $470 billion two-day wipeout as CEO affair fallout deepens - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNUWZQSk5PbzdVdVhLaVFuakFlTy16TkhEdzcyaDJ6dmQyeDh1UFpBWFk3VjNrT24yZDgtNVU3cUZZODZyTFNxS3JScWdYWmxzcGFLOHNvVEJWSlBVckZHelJDcENpb0t1QkVyRkNON2hXX2hjcWRHN3piNFJxVWRDSEN3VHRWNVJZdHVRUHlhbFVUQ242emtCUXl5cmV4RVlnSWNjeEU1UklHZ3pBWGNCNUo5clRaWkVjRjNJUnVMbmlhUQ?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A new UK-led initiative with Nordic and Baltic partners aims to counter increased Russian naval activity with a network of drones and AI systems to detect submarines.",
-     "sources": [
-      {
-       "key": "99692c680a80d013",
-       "title": "U.K. to Develop North Atlantic Network of Drones, AI Systems to Find Russian Subs - USNI News",
-       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOV3BSQ3IxS3dJZnV4dTJnLXMxTUFjcFRxV2NpNUJROUpxakdYUmtsR0toMGY2Q1hOcHFTSGg2bld0SklXbTJ1X29SaFRpNkNwZ2tnSDlwU1ZxVEpXTkU2andNSW9NanFudGVqYi1sYTc5aUxwU2oyVUVWZ19PT0s5OHJadkcyY3ROc2tIXy1yVVRwQjZmUjR4cWptUEJ2TG5FeVh3NDdmaXJVM0s3LTQ1NWt3?oc=5",
-       "source": "USNI News",
+       "key": "1a41beeb74e81bab",
+       "title": "Aon report puts dependency risk on the agenda as soft market opens a buying window - Insurance Business",
+       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOYy1DWXp0YUI0X1JIeE1Db3cxdkNTc0tiU0dycWkzNjhRb21lUWtocW5TVTZrXzRoVktCcjNoMTlSWjU3MTlUYndrZ0lRbWlGUFRqTS1JTmxnaWVKLThaZ3phWkQtQWVaQXNnNHY4UDFIdkpDeXozaEI5eDNlSmtPNTdTWkd6WElvVExhQWxIS0lsQl95TnBTQmtHR2swcHVCVjV5c0RkWVg0NTc3N0FPYUZES3NNTUtHanNaaHBpQXRmUS1vZFhmQkFVbWh2WlUwYmlqM25kS2VrNmdJckd0eDVoamRWV2N2Y2Q2dkRKRQ?oc=5",
+       "source": "Insurance Business",
        "via": "Google News"
       },
       {
-       "key": "d4402c5a71c3e47d",
-       "title": "Russian naval aggression prompts new defensive initiative with ‘beer-drinking nations’",
-       "url": "https://www.theguardian.com/uk-news/2026/nov/10/russian-naval-aggression-defensive-initiative-beer-drinking-nations",
-       "source": "The Guardian World",
-       "via": null
+       "key": "2655748b3a552ddc",
+       "title": "Lithium battery fires push insurers into underwriting questions and pricing: report - Insurance Business",
+       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUUhxc1FhOXpUM281djdzb1FST1k1eEdPY2QzM1QxNXo4X3MwaXRkMjA5ZnoyTGU0UG5LVURRN3Vkd3NYOVBjaUdFUEJISnc0SGdWNUcyVlV4Nkd5UnhWcDdEejZNcHBScHhicWZTMHlVZy1FT3RCalpFSmxWdFFZQVpiMzFLLUQ1bEt6MVJiOS10OEZrWkt1eHMxTWlZME9QRWEtVktkcnZZWXJmVGlYWmdRNlZMbklOc055Y0Z2eDNJejJTNUVRd1Y3ZVIyS0p3a3c0UEVtSGwxYnFUcWRNUUJ5SEs0WHBLRnVGeVJKbw?oc=5",
+       "source": "Insurance Business",
+       "via": "Google News"
       }
      ]
     },
     {
-     "text": "For insurance, ZestyAI says its water-risk model has gained approval in 22 states, a notable expansion for a tool relevant to risk assessment.",
+     "text": "U.S. Treasury Secretary Scott Bessent says the U.S. and China should expect both cooperation and competition on AI.",
      "sources": [
       {
-       "key": "3bbcb368028913b1",
-       "title": "ZestyAI’s water risk model Z-WATER™ now approved in 22 states - Reinsurance News",
-       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWnBPQVl1cXpuLS0zT3Z4eXpQc1F3RWUzX0U4dWlOZFJhR0dMSTJxTkNKM2o4b3phb3lOSXpnNC1lTFdvaGdCU2FLOUxieFJpaXd6TEIyM3MxZkYtT0MydzI2ZnpvdDdvNks1RFdYSDRaZ2R0di1SdTNKX3llN0RGQ1RjLWhuNkk4aGtZd0tlWW9iZGM?oc=5",
-       "source": "Reinsurance News",
+       "key": "def633d0336e47ea",
+       "title": "U.S., China should ‘harbor no illusions’ as they cooperate, compete on AI, Bessent says - CNBC",
+       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBORGNIaVNVRlc0ZlQ3VGZhTTE4YjJ0dFgyektfQjByZEUwVExVNUpkaGplOFFfRlo0YXNuQ3BQb0xyZ3NGYVZJSTdfZC1QRW5zWE1nZGN2WGZKVk0wcEdTWkZCMUFoM25MeTlhZktFWVc?oc=5",
+       "source": "CNBC",
        "via": "Google News"
       }
      ]
@@ -844,148 +862,144 @@
    ],
    "items": [
     {
-     "url": "https://www.bbc.co.uk/news/articles/cqpvgvrpjvv8o?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-11-10T17:29:36+00:00",
-     "new": true,
-     "key": "6c22ff3622d0e17f",
-     "title": "First day of Ukraine peace talks constructive, Zelensky says",
-     "summary": "Delegations from Ukraine, the United States and Russia held their first trilateral talks since February in the UAE."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNi1BQm93NlpxZHNuaGE4a0dxNWRmN0VSaDd5YTFFQTlxSEY3bFJWNUpGcFQ0cVZfRjRuMl9sV1NNclBfejJQb0RkUHlQcG45VzZNTW1CWktsTExSMmhWMHJCdU1uTUhLLTU2ZUJOTlRPLVgtWkJqWnRKN3JheXM2OThWRjRYVUJFR2l2b2VOY3puS18wdjBTVXh2WlJZZ1VValZGdTRPWWJLQjlkaENN?oc=5",
-     "source": "Reuters",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZVk4bHVpQVlRRW03REhENXNRd3Bvd3dzZ24zMWhVYjJmUk5iM3pBWDVJeXdHcFdabE1XaXlQYjdFbXA0ZC1sMDg4OG1UdHctUkVYakpoakFYSEJNeHk5cHdQMHluVEt2WVc1VkxoUURHeFQzcnVQUzZPb016aGZsemZPZzZkcElwRDlGUmFhekRJMDhHZkJRV3k0dl9rNVgwYkdRVmt1V1ZpZGtVQnZGSFllRC1IWEE?oc=5",
+     "source": "Irish Independent",
      "feed_name": "Topic: European Central Bank",
      "via": "Google News",
-     "published": "2026-11-10T17:53:43+00:00",
+     "published": "2026-11-11T05:30:00+00:00",
      "new": true,
-     "key": "19f3452dab4930ad",
-     "title": "ECB’s rate path hinges on inflation spillovers, Lane says",
-     "summary": "ECB policymaker Philip Lane said the rate path depends on how far inflation spreads through wages and prices."
+     "key": "fd9fcbc60387dcda",
+     "title": "Nagel says a December ECB rate hike is ‘rather obvious’",
+     "summary": "ECB policymaker Joachim Nagel described a December rate hike as “rather obvious.”"
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaUtnS210c1pKNVpEZXJ1V1JpdUdyZ0h5OGh2SzVCXzJaVGRwaDZnb0NQZUxFS0ZFWmxwbU53ZlJtdlBkOWplZHdaNkloU0xwV3hvdlpjNnh0R1FISXdMOExfc09JckJqTWxjSWlZSjZpN0RWR1kyRUF6YUlXN0dqSm5XQU5TUmFmbWpFbGlzT3FZRllaMGU4cld0cDlsaFVYY0IzV2ZNYmwxYW0yd1FDaw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-10T17:37:55+00:00",
+     "url": "https://www.lemonde.fr/international/article/2026/11/11/guerre-en-ukraine-a-abu-dhabi-les-pourparlers-russo-ukrainiens-condamnes-a-l-impasse_6808927_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-11T04:30:08+00:00",
      "new": true,
-     "key": "deaa6d3af7268b22",
-     "title": "Anthropic eyes $1.4 trillion IPO valuation in test of Wall Street’s AI fervor",
-     "summary": "Anthropic is reportedly considering an IPO valuation of $1.4 trillion."
+     "key": "d3e2b8e7e856ce57",
+     "title": "Russia-Ukraine talks in Abu Dhabi appear deadlocked",
+     "summary": "Ukraine described discussions as constructive, while Russia remained resistant to key issues after talks in Abu Dhabi."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNUWZQSk5PbzdVdVhLaVFuakFlTy16TkhEdzcyaDJ6dmQyeDh1UFpBWFk3VjNrT24yZDgtNVU3cUZZODZyTFNxS3JScWdYWmxzcGFLOHNvVEJWSlBVckZHelJDcENpb0t1QkVyRkNON2hXX2hjcWRHN3piNFJxVWRDSEN3VHRWNVJZdHVRUHlhbFVUQ242emtCUXl5cmV4RVlnSWNjeEU1UklHZ3pBWGNCNUo5clRaWkVjRjNJUnVMbmlhUQ?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-10T17:14:39+00:00",
-     "new": true,
-     "key": "ef13b9cf6f75b59f",
-     "title": "Nvidia faces potential $470 billion two-day market-value loss",
-     "summary": "Reuters reports Nvidia is heading for a $470 billion two-day wipeout amid fallout involving its CEO."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOV3BSQ3IxS3dJZnV4dTJnLXMxTUFjcFRxV2NpNUJROUpxakdYUmtsR0toMGY2Q1hOcHFTSGg2bld0SklXbTJ1X29SaFRpNkNwZ2tnSDlwU1ZxVEpXTkU2andNSW9NanFudGVqYi1sYTc5aUxwU2oyVUVWZ19PT0s5OHJadkcyY3ROc2tIXy1yVVRwQjZmUjR4cWptUEJ2TG5FeVh3NDdmaXJVM0s3LTQ1NWt3?oc=5",
-     "source": "USNI News",
+     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOYVpEVGNiSkU4MzQzVkxMbVd0NC14djV5ZWRiQTI3TVJURHh5eHA0U3NYZEV4azN6VF9KeDVuYXViMzcwWGlWdmJKcVpMVFJybXNweC0zSDZvVl9aRkxXSnIxVVplLUoxQmZXMm1lekNPM2lVaGxWekhZMmQ0M19HWExZdzlNOUcyZkJsTEQ0OElaMTM3WkVVLUpFYzBna0lsa0ZZdnp6THpoejl0aUxxU1hwOW13TXBRNWxyRHlDMFkwdXlURWVZOHR5aUw1dTRteTl3SmhhMUlobjNqOVY0?oc=5",
+     "source": "U.S. News & World Report",
      "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-10T17:31:00+00:00",
+     "published": "2026-11-11T04:46:00+00:00",
      "new": true,
-     "key": "99692c680a80d013",
-     "title": "UK and Nordic partners plan drone network to detect Russian submarines",
-     "summary": "The UK plans a North Atlantic network of drones and AI systems to find Russian submarines."
+     "key": "90606bb28a14d496",
+     "title": "Asian shares rise on AI-chip demand as Wall Street retreats",
+     "summary": "Most Asian markets rose on AI-chip demand after Wall Street fell following inflation data."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWnBPQVl1cXpuLS0zT3Z4eXpQc1F3RWUzX0U4dWlOZFJhR0dMSTJxTkNKM2o4b3phb3lOSXpnNC1lTFdvaGdCU2FLOUxieFJpaXd6TEIyM3MxZkYtT0MydzI2ZnpvdDdvNks1RFdYSDRaZ2R0di1SdTNKX3llN0RGQ1RjLWhuNkk4aGtZd0tlWW9iZGM?oc=5",
-     "source": "Reinsurance News",
-     "feed_name": "Topic: reinsurance",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYTVzTFROcllqNUFRRFVkcTExUFZLRGdKd3Fma0tqb3FwYm9zQkptYU5oS2lWRWdpX0RXZ2pOUTBUYjVYd0RESXJuUkVtalB3MFlTTVNRdWI4d0JrcWpfSVdrQVdmYlRQN1FHSTllOHZCcVBTczBZZGVNeGotYjBxeW51eUQ1eDJXZTNhOG91bFh2dVhlY2cyU2FyQ1k0VC1vYTBOdjBOWk1fTFhFTmZz?oc=5",
+     "source": "CNBC",
+     "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-10T17:26:15+00:00",
+     "published": "2026-11-11T04:50:43+00:00",
      "new": true,
-     "key": "3bbcb368028913b1",
-     "title": "ZestyAI water-risk model approved in 22 states",
-     "summary": "ZestyAI says its Z-WATER model has received approval in 22 states."
+     "key": "e47593e7e5246ea1",
+     "title": "Strategist warns AI trade could unwind if hyperscaler spending slows",
+     "summary": "A strategist warned that AI-related markets could weaken if hyperscalers slow their spending."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQlRiM2szdHVTc1RVbjBpRHExeW1mcWlYU09XcXc1MWlnNEdnXzJhNVJPZE14YW9tSmJva3VhN0JnQVIzWXdYOUV3ZTFzYVFibGZvRmJneTRfSGlOYzNVeEJOVEFQekF2SElEZWdFVDByb2wxODhRQndwdk1XUk1qZFFhWXZnN1JQN05SMA?oc=5",
-     "source": "Yahoo Finance Singapore",
-     "feed_name": "Topic: European Central Bank",
+     "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOYy1DWXp0YUI0X1JIeE1Db3cxdkNTc0tiU0dycWkzNjhRb21lUWtocW5TVTZrXzRoVktCcjNoMTlSWjU3MTlUYndrZ0lRbWlGUFRqTS1JTmxnaWVKLThaZ3phWkQtQWVaQXNnNHY4UDFIdkpDeXozaEI5eDNlSmtPNTdTWkd6WElvVExhQWxIS0lsQl95TnBTQmtHR2swcHVCVjV5c0RkWVg0NTc3N0FPYUZES3NNTUtHanNaaHBpQXRmUS1vZFhmQkFVbWh2WlUwYmlqM25kS2VrNmdJckd0eDVoamRWV2N2Y2Q2dkRKRQ?oc=5",
+     "source": "Insurance Business",
+     "feed_name": "Topic: insurance industry",
      "via": "Google News",
-     "published": "2026-11-10T17:23:48+00:00",
+     "published": "2026-11-11T04:31:42+00:00",
      "new": true,
-     "key": "3d27698c0bae6cfe",
-     "title": "ECB December rate-hike expectations rise amid inflation concerns",
-     "summary": "A report says expectations of an ECB December rate hike rose after the Bundesbank chief flagged inflation risks."
+     "key": "1a41beeb74e81bab",
+     "title": "Aon flags dependency risk as soft market offers buying window",
+     "summary": "Aon says dependency risk merits attention as softer insurance conditions create an opportunity for buyers."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORVNTWS1oaGNlQVAwRlVxbnd4bm8tX2dnYjE2blk4ZWR0Z2YwWDdrU0VWMk9sYmxMeHZHNE5TdDRLWncwVHA0UDgxMFdiMlRoejVNeUcxbXh5YS1TcWJBTW9xaDlGSGZ0Y01hZGVGNGZOekpkV2t1eV9UYUpNU1Z5bFJwbEZueDdvcVREMWZjbjVES1ZtUkpyYUlQRVJqSHBITjMwaVVTT1U?oc=5",
-     "source": "Il Sole 24 ORE",
-     "feed_name": "Topic: Milano",
+     "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUUhxc1FhOXpUM281djdzb1FST1k1eEdPY2QzM1QxNXo4X3MwaXRkMjA5ZnoyTGU0UG5LVURRN3Vkd3NYOVBjaUdFUEJISnc0SGdWNUcyVlV4Nkd5UnhWcDdEejZNcHBScHhicWZTMHlVZy1FT3RCalpFSmxWdFFZQVpiMzFLLUQ1bEt6MVJiOS10OEZrWkt1eHMxTWlZME9QRWEtVktkcnZZWXJmVGlYWmdRNlZMbklOc055Y0Z2eDNJejJTNUVRd1Y3ZVIyS0p3a3c0UEVtSGwxYnFUcWRNUUJ5SEs0WHBLRnVGeVJKbw?oc=5",
+     "source": "Insurance Business",
+     "feed_name": "Topic: insurance industry",
      "via": "Google News",
-     "published": "2026-11-10T17:23:07+00:00",
+     "published": "2026-11-11T04:52:22+00:00",
      "new": true,
-     "key": "9cbaaf70c678aabd",
-     "title": "US inflation weighs on market optimism as Milan shares rise",
-     "summary": "Il Sole 24 Ore reports that US inflation dampened market enthusiasm while Milan shares gained 0.7%."
+     "key": "2655748b3a552ddc",
+     "title": "Lithium-battery fires prompt insurer pricing and underwriting questions",
+     "summary": "A report says lithium-battery fires are prompting insurers to reconsider underwriting and pricing."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBORGNIaVNVRlc0ZlQ3VGZhTTE4YjJ0dFgyektfQjByZEUwVExVNUpkaGplOFFfRlo0YXNuQ3BQb0xyZ3NGYVZJSTdfZC1QRW5zWE1nZGN2WGZKVk0wcEdTWkZCMUFoM25MeTlhZktFWVc?oc=5",
+     "source": "CNBC",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-11T05:11:33+00:00",
+     "new": true,
+     "key": "def633d0336e47ea",
+     "title": "Bessent says U.S. and China must expect competition and cooperation on AI",
+     "summary": "U.S. Treasury Secretary Scott Bessent said the countries should expect both cooperation and competition on AI."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-10T18:01:25.287707+00:00",
-   "input_fingerprint": "sha256:e1ffc701086eb46e9c56909b76c7e62b6fe556bc8fb918c1ee0e39b36468e95c",
-   "last_success_at": "2026-11-10T18:01:25.287707+00:00",
-   "candidate_count": 573,
-   "new_count": 8
+   "source_checked_at": "2026-11-11T06:01:23.063356+00:00",
+   "input_fingerprint": "sha256:0d74450eb21dffd4f68b0161b7d7a6ddf6b4bea92480dbbf0fa31da739b29b47",
+   "last_success_at": "2026-11-11T06:01:23.063356+00:00",
+   "candidate_count": 534,
+   "new_count": 7
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG have 15 players called up for the November international break; CulturePSG has published their match schedule.",
+     "text": "PSG’s women lost 2–1 at home to Bayern in the Champions League, their first defeat in the competition this season.",
      "sources": [
       {
-       "key": "ec48fa7b50ec9891",
-       "title": "Quand vont jouer les 15 internationaux du PSG ?",
-       "url": "https://www.culturepsg.com/news/selections/quand-vont-jouer-les-15-internationaux-du-psg/61507",
+       "key": "496949b62878fcc8",
+       "title": "PSG/Bayern Munich (1-2 UWCL), le PSG battu par un Bayern bien plus rodé",
+       "url": "https://www.culturepsg.com/news/feminines/psg-bayern-munich-1-2-uwcl-le-psg-battu-par-un-bayern-bien-plus-rode/61509",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "PSG’s Alessandro Longoni has withdrawn from Italy U19 duty and will miss all three matches.",
+     "text": "France face South Africa with concern over Antoine Dupont ahead of the match.",
      "sources": [
       {
-       "key": "d0715293ccd901d9",
-       "title": "Un premier international du PSG forfait pour la trêve",
-       "url": "https://www.culturepsg.com/news/selections/un-premier-international-du-psg-forfait-pour-la-treve/61506",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Marcus Thuram has withdrawn from France’s squad, with Éli Junior Kroupi called up for the first time.",
-     "sources": [
-      {
-       "key": "18798f1ef5bb44af",
-       "title": "Équipe de France : Marcus Thuram forfait, Éli Junior Kroupi convoqué pour la première fois - TF1 Info",
-       "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOUE95TWFpTi02aUJzdDlKMGpjd2prdTdtdEFETW0yR3h5bGVrUVE4Y0pacVB1RGpwSE5nbTFhYXc2UFJnWThkTnNYbVVyVEdsbHpXQXkzby1VcFBHdWtDaTRGcEpUVVNkN1ZiN3hEX2I1SFlPbnkwdkRrOVBiZzM0TlBpalFZUHNvSUJHa1luNkE0SGZ6am1VLXN0d0w0ZndhX080LVBBMUVBbXZBT043dkpWT1hFakIwRzk0QllpNkpfcE9PaThnVmRmZnpuM0hzSVlvWmZ1dDlyTURMNzl5bnMwNDZlbzFoNWVITFRwVURxMHZLdk5xS3Rn?oc=5",
-       "source": "TF1 Info",
+       "key": "12384d3a0c731136",
+       "title": "Antoine Dupont, grosse inquiétude avant France-Afrique du Sud - Sports.fr",
+       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbndoR3AwY0s5UDV0TzUzcVNaTUQ4NkdjWEcyaEZwN3NtY3NjSXpoc1hwYWV0Rk9EblBBb0JIbFBVUVdoVFFfRWM3S0x5TmRPQ2psX1ZoTUUtLURvWjBGQldXbnQ3UXRxemRtcG5PWDRCUkRhQWpxN0JzOHpiUWFzazBBcDhxdFlSWmhRVTkwajVCT2hJdUt2TmVhQVZZOHdPTnFr?oc=5",
+       "source": "Sports.fr",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s staff are framing the Springboks clash as a demanding test ahead of the 2027 World Cup.",
+     "text": "Zinédine Zidane’s France side have struggled to turn possession into danger in their first matches under him.",
      "sources": [
       {
-       "key": "8780da38921284d8",
-       "title": "XV de France. William Servat voit le choc face aux Springboks comme un « test à balles réelles » avant le Mondial 2027 - Ouest-France",
-       "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNS241SEtPbDYzRUNaLTBVY2NZT2ppbW1RSXZISkdSZENMQmJNMmcxMk9DZW8xNjFtaWlvUjdIZ2lNaHNaYnFndnJBbklkS2VUUDZuSWFTZHNpOTBReHNYMk5CYlBCZnF4SWNMR0F0WWRCSmpETnlUZmF6TGpMdE5ud08tdUVhOHZKZE11al9jRE54Q0gtRmVjLTdVb2FqY3Foc3Fyb1N3VEhvXzNtWUkzRHhHeUlPNnhlS1JhZEJWcmNCTFVteDZ5U3czd0tFTWZISXUzWU1vM0tiNVA4OHQ0OHdHckVSWmR6amRuRzlpQnNKRXVhMXNnUGtEZ2laWGx1bUVvUVM4RG0yYy1seFVGUE91NHdZSUp4MnU4bHkwZG9aemotNWhJTlJKd0JBd2Jf?oc=5",
-       "source": "Ouest-France",
+       "key": "c50cad819bff9db6",
+       "title": "Pourquoi les Bleus ont peiné à transformer la possession en danger lors des premiers matches de l'ère Zinédine Zidane",
+       "url": "https://www.lequipe.fr/Football/Article/Pourquoi-les-bleus-ont-peine-a-transformer-la-possession-en-danger-lors-des-premiers-matches-de-l-ere-zinedine-zidane/1742896#at_medium=RSS_feeds",
+       "source": "L'Équipe",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "France’s scrum is a key challenge against the Springboks; François Cros has called for greater precision.",
+     "sources": [
+      {
+       "key": "33af6308c5221be2",
+       "title": "France - Afrique du Sud. « Si on subit dans ce secteur, on subira partout » : les Bleus face à l’équation de la mêlée des Springboks - Sud Ouest",
+       "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOQUYzQ3RVN2hwYU5sU3pnMVpNT1hFWWJlMzkwalBTaENrdDMtNzZ3R1d6TUR3NjFVZlczdWNTWGV2ak1jQXVLU1Y5S3poYnAtTWk2NGprWHpRdFU3Ym8xOWlUdExZUlp0LWJPY0ZCSTJBNkxMUnVwcnpJMGtyYmtUSU9WSEdZalpvQ0FkTUpQcUZEMFNadkdPN2VscklvUUxRWC1MSm5fcTM3Q2Z1eU52ckJKMmVrRWxfN1NfV1dDUkt3d2VzV1lMMExhVzN1VnJIbWZLYTF0N1RWSmlKSkxWalJyV0VfWjdQbDBzUkxfVjFLZS01VlExcGQ0Z2lmWHlZWXJIWTBMNFp0bG5FamR3ZXdB?oc=5",
+       "source": "Sud Ouest",
+       "via": "Google News"
+      },
+      {
+       "key": "db31b7a62af8a3f7",
+       "title": "XV de France : « Ça ne passera pas », François Cros réclame plus de précision face aux Springboks - Rugby Scope",
+       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcEJQVkpIOFp1b0htaGwtZDBIM2xELXpjRGV1a3lNa085VW5HVmtJcjlkWlhwN2tMWFdPQnNpM3NIbHVPYV9hNldDbV8xbXl4ZEhLT3E1WE9xUWxYSGlraTdVVmxLOUpzeGNSQlB6VmtVaTlYUEtoYnpQWXFiNXRSaGRjZkhSU3UwNW9wSjZpZDdOaVFyQzF2cTV2d1RJbnhuZlV4MzBoTHg2UlVyM3BnV281R2dHV2Y3?oc=5",
+       "source": "Rugby Scope",
        "via": "Google News"
       }
      ]
@@ -993,190 +1007,212 @@
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/selections/quand-vont-jouer-les-15-internationaux-du-psg/61507",
+     "url": "https://www.culturepsg.com/news/feminines/psg-bayern-munich-1-2-uwcl-le-psg-battu-par-un-bayern-bien-plus-rode/61509",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-10T15:14:15+00:00",
+     "published": "2026-11-10T22:02:00+00:00",
      "new": true,
-     "key": "ec48fa7b50ec9891",
-     "title": "When will PSG’s 15 internationals play?",
-     "summary": "CulturePSG lists the November international-break fixtures for the 15 PSG players called up."
+     "key": "496949b62878fcc8",
+     "title": "PSG beaten 2–1 by Bayern in the Women’s Champions League",
+     "summary": "Bayern beat PSG 2–1 in the fourth round of the Women’s Champions League league phase."
     },
     {
-     "url": "https://www.culturepsg.com/news/selections/un-premier-international-du-psg-forfait-pour-la-treve/61506",
+     "url": "https://www.culturepsg.com/news/anciens/un-ancien-du-psg-pressenti-a-manchester-united/61508",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-10T14:55:34+00:00",
+     "published": "2026-11-10T15:58:00+00:00",
      "new": true,
-     "key": "d0715293ccd901d9",
-     "title": "A first PSG international withdraws from duty",
-     "summary": "Alessandro Longoni withdrew from Italy U19 duty and will miss the team’s three matches."
+     "key": "ea3655b8d306c2b3",
+     "title": "Un ancien du PSG pressenti à Manchester United",
+     "summary": "Inquiétant 18e de Premier League après 10 journées, Manchester United envisage sérieusement de se séparer de Michael Carrick et pense à un ancien entraîneur du PSG pour le remplacer."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOUE95TWFpTi02aUJzdDlKMGpjd2prdTdtdEFETW0yR3h5bGVrUVE4Y0pacVB1RGpwSE5nbTFhYXc2UFJnWThkTnNYbVVyVEdsbHpXQXkzby1VcFBHdWtDaTRGcEpUVVNkN1ZiN3hEX2I1SFlPbnkwdkRrOVBiZzM0TlBpalFZUHNvSUJHa1luNkE0SGZ6am1VLXN0d0w0ZndhX080LVBBMUVBbXZBT043dkpWT1hFakIwRzk0QllpNkpfcE9PaThnVmRmZnpuM0hzSVlvWmZ1dDlyTURMNzl5bnMwNDZlbzFoNWVITFRwVURxMHZLdk5xS3Rn?oc=5",
-     "source": "TF1 Info",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-11-10T17:40:25+00:00",
-     "new": true,
-     "key": "18798f1ef5bb44af",
-     "title": "Thuram withdraws from France squad; Kroupi called up",
-     "summary": "Marcus Thuram withdrew from France’s squad, and Éli Junior Kroupi received his first call-up."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNS241SEtPbDYzRUNaLTBVY2NZT2ppbW1RSXZISkdSZENMQmJNMmcxMk9DZW8xNjFtaWlvUjdIZ2lNaHNaYnFndnJBbklkS2VUUDZuSWFTZHNpOTBReHNYMk5CYlBCZnF4SWNMR0F0WWRCSmpETnlUZmF6TGpMdE5ud08tdUVhOHZKZE11al9jRE54Q0gtRmVjLTdVb2FqY3Foc3Fyb1N3VEhvXzNtWUkzRHhHeUlPNnhlS1JhZEJWcmNCTFVteDZ5U3czd0tFTWZISXUzWU1vM0tiNVA4OHQ0OHdHckVSWmR6amRuRzlpQnNKRXVhMXNnUGtEZ2laWGx1bUVvUVM4RG0yYy1seFVGUE91NHdZSUp4MnU4bHkwZG9aemotNWhJTlJKd0JBd2Jf?oc=5",
-     "source": "Ouest-France",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbndoR3AwY0s5UDV0TzUzcVNaTUQ4NkdjWEcyaEZwN3NtY3NjSXpoc1hwYWV0Rk9EblBBb0JIbFBVUVdoVFFfRWM3S0x5TmRPQ2psX1ZoTUUtLURvWjBGQldXbnQ3UXRxemRtcG5PWDRCUkRhQWpxN0JzOHpiUWFzazBBcDhxdFlSWmhRVTkwajVCT2hJdUt2TmVhQVZZOHdPTnFr?oc=5",
+     "source": "Sports.fr",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-10T17:50:29+00:00",
+     "published": "2026-11-11T05:48:26+00:00",
      "new": true,
-     "key": "8780da38921284d8",
-     "title": "France view Springboks clash as a World Cup test",
-     "summary": "William Servat described the match against South Africa as a major test before the 2027 World Cup."
+     "key": "12384d3a0c731136",
+     "title": "Dupont concern ahead of France–South Africa",
+     "summary": "A report raises concern over Antoine Dupont ahead of France’s match against South Africa."
+    },
+    {
+     "url": "https://www.lequipe.fr/Football/Article/Pourquoi-les-bleus-ont-peine-a-transformer-la-possession-en-danger-lors-des-premiers-matches-de-l-ere-zinedine-zidane/1742896#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
+     "via": null,
+     "published": "2026-11-11T04:40:00+00:00",
+     "new": true,
+     "key": "c50cad819bff9db6",
+     "title": "France struggle to turn possession into danger under Zidane",
+     "summary": "France have struggled to create chances from possession in the first matches of Zinédine Zidane’s tenure."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOQUYzQ3RVN2hwYU5sU3pnMVpNT1hFWWJlMzkwalBTaENrdDMtNzZ3R1d6TUR3NjFVZlczdWNTWGV2ak1jQXVLU1Y5S3poYnAtTWk2NGprWHpRdFU3Ym8xOWlUdExZUlp0LWJPY0ZCSTJBNkxMUnVwcnpJMGtyYmtUSU9WSEdZalpvQ0FkTUpQcUZEMFNadkdPN2VscklvUUxRWC1MSm5fcTM3Q2Z1eU52ckJKMmVrRWxfN1NfV1dDUkt3d2VzV1lMMExhVzN1VnJIbWZLYTF0N1RWSmlKSkxWalJyV0VfWjdQbDBzUkxfVjFLZS01VlExcGQ0Z2lmWHlZWXJIWTBMNFp0bG5FamR3ZXdB?oc=5",
+     "source": "Sud Ouest",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-11T04:44:00+00:00",
+     "new": true,
+     "key": "33af6308c5221be2",
+     "title": "France’s scrum faces a major test against South Africa",
+     "summary": "France will need to handle the Springboks’ scrum to avoid being put under pressure across the match."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-10T18:01:25.287707+00:00",
-   "input_fingerprint": "sha256:c9377a872252ee6cc707b5f666f2609c3294bcc4f2659894e91bca063e91e89b",
-   "last_success_at": "2026-11-10T18:01:25.287707+00:00",
-   "candidate_count": 395,
-   "new_count": 4
+   "source_checked_at": "2026-11-11T06:01:23.063356+00:00",
+   "input_fingerprint": "sha256:81dda1465c3f0aedad671c200fb2592d36ec405d32973179135e98cfe56c3d28",
+   "last_success_at": "2026-11-11T06:01:23.063356+00:00",
+   "candidate_count": 360,
+   "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "Hot October inflation has pushed Treasury yields higher and strengthened expectations of another Fed increase before year-end, with officials also leaving a half-point move on the table.",
+     "text": "The main market signal is a shift toward higher rates: investors are pricing in more Fed hikes, putting pressure on Asian shares and bonds, while a separate report says rising borrowing costs are squeezing corporate America.",
      "sources": [
       {
-       "key": "2f867b096a3ea139",
-       "title": "Higher-than-expected October inflation sparks Treasury sell-off",
-       "url": "https://www.ft.com/content/8b564134-dea6-4272-8ede-e0b12ef5aebd?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
+       "key": "647d6f6c0b4684eb",
+       "title": "Asian Stocks, Bonds to Drop as Fed Hike Bets Mount: Markets Wrap - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNFpBLVFiSmhuZGxNdjZ4WUE1eEZZVzlpcElqQ3FpX2hfRVVkaVdncm5Ic3J4TFdMVTVPODFqV1dYWTJORmx5c3lTMHg1ZUtiZml2ZUVOZm1WQnlCa2lKcUt3M0tjQUsyVVNxQlVySk5TbHRqZHczYVFDTnU0OGZjMjBBWUFqZ2JpNFNhb05nX01EU3dX?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
       },
       {
-       "key": "75a7fd3f4b8fb4a7",
-       "title": "Fed officials open door to a half-point hike after inflation beats expectations - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTXo5UzFWVEh5WllQOHNxS1Q2cERxOEM0X1QyN1dPX0R4XzdfT1BpajYxdi0xOEltNWh6cE15Z2ZvZ2dXV0Vwb3NkbWZ1VGQ2M2tvVVVSaWd6clhPcS1XUEU2QXE3c0tlLUhPX0c2emRnWVpwOGtoajlnSS1VRXRNZXFaNEpyVlVwcFVIOUdkT18yQ2t6a1psZGVlOFpiZl90QnVhcmxqQzNxNnlNSEdXcWpjcUdzYUNJSi1hcnl6ZEpUSUU?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
+       "key": "9a5f12d44f1c4324",
+       "title": "The end of cheap money is coming for corporate America",
+       "url": "https://www.ft.com/content/50c43ffc-2a91-43ee-8eb7-a19531278b97?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
       }
      ]
     },
     {
-     "text": "Anthropic’s reported IPO plans include a potential $1.75 billion cash-out for its founders, putting a major AI listing on investors’ radar.",
+     "text": "Eurozone sovereign risk is becoming more differentiated, with France and Belgium singled out as vulnerable amid a global sell-off linked to the Iran war.",
      "sources": [
       {
-       "key": "26561f33f2a5595a",
-       "title": "Anthropic Founders to Cash Out $1.75 Billion in Blockbuster IPO - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQjZtOWRNYjBhbHJRa3R4RGUwUlpWYWpSaXhyQmhEMzAxcHM4YjlzT0hOT21SSWk5SndOMnBLUlNvWV9EeHBmbDVRR3pOLUR2TTdxWnhjUWxYLV8tdVY0cGtVR2k3UlZUa1loLXlFeWxEMWhEMlg3dy0zZWluanFUcmF1MWlELWVzUkZWa1dsdmZReldEdERQZlF3bWhpWWJRak56ZEd2bVJISElIWEVSYjJUMA?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
+       "key": "548673eb3d7e7962",
+       "title": "France and Belgium fall foul of Eurozone bond market’s new divide",
+       "url": "https://www.ft.com/content/5263808c-e8ac-44b8-baa3-af7e8c788684?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
       }
      ]
     },
     {
-     "text": "JPMorgan is weighing a steep discount to attract lenders to software debt, a sign of pressure in financing for the sector.",
+     "text": "Anthropic’s prospective IPO valuation is reportedly being raised to at least $1.5tn on strong investor demand, underscoring the scale of AI-market expectations.",
      "sources": [
       {
-       "key": "c877d585d9cce7de",
-       "title": "JPMorgan Weighs Big Discount to Lure Lenders for Software Debt - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbEJOSDJpeXA0VHJ6NFNPejAtdDRfU3FEM2ItYk9fUmhGcU1vOEtTclVHaFZ6R1BtTmM3eEN4Y1BKYXBIbnYyS2gyNWZUeF9oOFZLRm5ZZ3BubVlUWkxxLXQ2TFpIelIzRFFtb0FjcDVMaWoza1ZKS0pCMkZSb2doNGNLYk5vNjFKdndib1VSaER2NVo1MTVJX0FPWEpnRVo1U0d5azh1aUNCQy1nNnNTLXRXTQ?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
+       "key": "ed638bceb0a44fa9",
+       "title": "Anthropic bankers prepare to increase IPO valuation to $1.5tn or more",
+       "url": "https://www.ft.com/content/68bcba57-0575-44ee-80f4-2e5ea23a431e?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
       }
      ]
     },
     {
-     "text": "Dangote Cement has shelved its planned London listing, blaming market conditions—another setback for the LSE’s efforts to attract large listings.",
+     "text": "Alibaba plans to list its chipmaking subsidiary T-Head in Hong Kong, adding a major potential listing to the contest around Nvidia’s market.",
      "sources": [
       {
-       "key": "fed8158e1a8efa76",
-       "title": "Dangote Cement shelves London listing, blames market conditions in blow to LSE - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVUk4TVJGaGdfSG8zcWRESzVmRWpmbTI3X1RaSl8xZXlndVJ4X3BmS0xTeVhpZGtmSzAyeG82M0ZlSUdVMGVOTmgzdV85TFIzV1pzd0xrQWRFNXp0am1TTG9TWlRhOHBXVDc0UlFxVGRON1ZMY09sZlA5Um9aenFNc0tVLTJYQkszSDZQWjI1bkFfQzgyVVU4UEpfVVZrTUFxX1RyMl9vbmlGM2xUQjYxQWFSZlE2LVktbG4yUnI2WUo?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
+       "key": "627f3bd372c1261a",
+       "title": "Alibaba announces plans to list T-Head, its Nvidia chip rival",
+       "url": "https://www.cnbc.com/2026/11/11/alibaba-pr.html",
+       "source": "CNBC Markets",
+       "via": null
       }
      ]
     },
     {
-     "text": "Botswana is prepared to double its De Beers stake and become the diamond company’s largest shareholder.",
+     "text": "For crypto exposure, Bitcoin and Ethereum sentiment has turned bearish again; the report says the previous such shift preceded a brief rally that quickly faded.",
      "sources": [
       {
-       "key": "aed82db46e403391",
-       "title": "Diamants : le Botswana prêt à doubler sa participation dans De Beers pour en devenir le premier actionnaire - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNamFJMERXa25Ea283ekpLZE9hb1pnVzhYNnhkbUliTWtxY2tDUk9aUE1GS0U5QjYza1ItSWJFZmlTWC1SeUczVmczQmNIejFUakdaT3hSOFprRnBuT2hZS0E1Tl8tbnBMVnk0bjBDN3NJVlFSamtoRVlURVBtQnV5bThfc19PSkNTYlVkaDlvYy16dWhxUUNJNmhmWFNnOU91RWp3YVlxczRuYWMyemNiRHVNUjUzdXhDUjFjOWh2b3R6QnBTa2lRNG5MblgxTWRtR2VkVnBTNXhCS3Y5cERmcDRrVlU0X2prdi00dWJmYS04NFBmWlFTOC1VSTNkdEtoVFE?oc=5",
-       "source": "Les Echos",
-       "via": "Google News"
+       "key": "76c7170e319821ea",
+       "title": "Bitcoin Chatter Flips Back to Bearish. Here’s What Price Did Last Time",
+       "url": "https://beincrypto.com/bitcoin-sentiment-turns-bearish-again/?.tsrc=rss",
+       "source": "Bitcoin",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/8b564134-dea6-4272-8ede-e0b12ef5aebd?syn-25a6b1a6=1",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNFpBLVFiSmhuZGxNdjZ4WUE1eEZZVzlpcElqQ3FpX2hfRVVkaVdncm5Ic3J4TFdMVTVPODFqV1dYWTJORmx5c3lTMHg1ZUtiZml2ZUVOZm1WQnlCa2lKcUt3M0tjQUsyVVNxQlVySk5TbHRqZHczYVFDTnU0OGZjMjBBWUFqZ2JpNFNhb05nX01EU3dX?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-11T05:03:00+00:00",
+     "new": true,
+     "key": "647d6f6c0b4684eb",
+     "title": "Asian stocks and bonds face pressure as Fed hike bets mount",
+     "summary": "Markets were set for declines as investors increased bets on Federal Reserve rate hikes."
+    },
+    {
+     "url": "https://www.ft.com/content/5263808c-e8ac-44b8-baa3-af7e8c788684?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-10T17:19:05+00:00",
+     "published": "2026-11-11T05:00:12+00:00",
      "new": true,
-     "key": "2f867b096a3ea139",
-     "title": "Hot inflation data sparks Treasury sell-off",
-     "summary": "October inflation rose 0.4%, prompting traders to increase bets on a Federal Reserve rate increase before year-end."
+     "key": "548673eb3d7e7962",
+     "title": "France and Belgium face new Eurozone bond-market divide",
+     "summary": "A global sell-off linked to the Iran war has sharpened investor focus on Eurozone countries facing debt challenges."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQjZtOWRNYjBhbHJRa3R4RGUwUlpWYWpSaXhyQmhEMzAxcHM4YjlzT0hOT21SSWk5SndOMnBLUlNvWV9EeHBmbDVRR3pOLUR2TTdxWnhjUWxYLV8tdVY0cGtVR2k3UlZUa1loLXlFeWxEMWhEMlg3dy0zZWluanFUcmF1MWlELWVzUkZWa1dsdmZReldEdERQZlF3bWhpWWJRak56ZEd2bVJISElIWEVSYjJUMA?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-10T16:18:56+00:00",
+     "url": "https://www.ft.com/content/68bcba57-0575-44ee-80f4-2e5ea23a431e?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-11T00:27:38+00:00",
      "new": true,
-     "key": "26561f33f2a5595a",
-     "title": "Anthropic founders plan $1.75 billion cash-out in IPO",
-     "summary": "Anthropic’s founders are set to cash out $1.75 billion in a reported blockbuster initial public offering."
+     "key": "ed638bceb0a44fa9",
+     "title": "Anthropic bankers prepare to raise IPO valuation to $1.5tn or more",
+     "summary": "Anthropic’s expected listing valuation is rising amid strong investor demand."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbEJOSDJpeXA0VHJ6NFNPejAtdDRfU3FEM2ItYk9fUmhGcU1vOEtTclVHaFZ6R1BtTmM3eEN4Y1BKYXBIbnYyS2gyNWZUeF9oOFZLRm5ZZ3BubVlUWkxxLXQ2TFpIelIzRFFtb0FjcDVMaWoza1ZKS0pCMkZSb2doNGNLYk5vNjFKdndib1VSaER2NVo1MTVJX0FPWEpnRVo1U0d5azh1aUNCQy1nNnNTLXRXTQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-10T16:36:47+00:00",
+     "url": "https://www.cnbc.com/2026/11/11/alibaba-pr.html",
+     "source": "CNBC Markets",
+     "feed_name": "CNBC Markets",
+     "via": null,
+     "published": "2026-11-11T03:08:17+00:00",
      "new": true,
-     "key": "c877d585d9cce7de",
-     "title": "JPMorgan weighs discount to attract lenders for software debt",
-     "summary": "JPMorgan is considering a large discount to entice lenders to finance software debt."
+     "key": "627f3bd372c1261a",
+     "title": "Alibaba plans Hong Kong listing for chipmaker T-Head",
+     "summary": "Alibaba said it had confidentially filed on September 11 to list its Nvidia rival on the Hong Kong Stock Exchange."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVUk4TVJGaGdfSG8zcWRESzVmRWpmbTI3X1RaSl8xZXlndVJ4X3BmS0xTeVhpZGtmSzAyeG82M0ZlSUdVMGVOTmgzdV85TFIzV1pzd0xrQWRFNXp0am1TTG9TWlRhOHBXVDc0UlFxVGRON1ZMY09sZlA5Um9aenFNc0tVLTJYQkszSDZQWjI1bkFfQzgyVVU4UEpfVVZrTUFxX1RyMl9vbmlGM2xUQjYxQWFSZlE2LVktbG4yUnI2WUo?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-10T16:29:47+00:00",
+     "url": "https://www.ft.com/content/50c43ffc-2a91-43ee-8eb7-a19531278b97?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-11-11T05:00:12+00:00",
      "new": true,
-     "key": "fed8158e1a8efa76",
-     "title": "Dangote Cement shelves London listing",
-     "summary": "Dangote Cement abandoned plans for a London listing, citing market conditions."
+     "key": "9a5f12d44f1c4324",
+     "title": "Rising borrowing costs threaten corporate America",
+     "summary": "Higher borrowing costs are hurting some companies more than others."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNamFJMERXa25Ea283ekpLZE9hb1pnVzhYNnhkbUliTWtxY2tDUk9aUE1GS0U5QjYza1ItSWJFZmlTWC1SeUczVmczQmNIejFUakdaT3hSOFprRnBuT2hZS0E1Tl8tbnBMVnk0bjBDN3NJVlFSamtoRVlURVBtQnV5bThfc19PSkNTYlVkaDlvYy16dWhxUUNJNmhmWFNnOU91RWp3YVlxczRuYWMyemNiRHVNUjUzdXhDUjFjOWh2b3R6QnBTa2lRNG5MblgxTWRtR2VkVnBTNXhCS3Y5cERmcDRrVlU0X2prdi00dWJmYS04NFBmWlFTOC1VSTNkdEtoVFE?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
-     "via": "Google News",
-     "published": "2026-11-10T16:34:54+00:00",
+     "url": "https://beincrypto.com/bitcoin-sentiment-turns-bearish-again/?.tsrc=rss",
+     "source": "Bitcoin",
+     "feed_name": "Bitcoin",
+     "via": null,
+     "published": "2026-11-11T05:23:16+00:00",
      "new": true,
-     "key": "aed82db46e403391",
-     "title": "Botswana seeks to double its De Beers stake",
-     "summary": "Botswana is prepared to double its participation in De Beers and become its largest shareholder."
+     "key": "76c7170e319821ea",
+     "title": "Bitcoin sentiment turns bearish again",
+     "summary": "Bitcoin, Ethereum and XRP sentiment turned bearish, following a previous shift that preceded a short-lived Bitcoin rally."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-10T18:01:25.287707+00:00",
-   "input_fingerprint": "sha256:8b09dd8180bbf6063ac1881973b232c5f9733b334e23ede1c958003fdbd956fd",
-   "last_success_at": "2026-11-10T18:01:25.287707+00:00",
+   "source_checked_at": "2026-11-11T06:01:23.063356+00:00",
+   "input_fingerprint": "sha256:2c9c1e44516622ed13da8daa7c5aa9dfb84144090f0046a7c8cb6e85fffe7f13",
+   "last_success_at": "2026-11-11T06:01:23.063356+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1192,10 +1228,10 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 726.06,
-     "change_pct": 0.21,
+     "price": 724.52,
+     "change_pct": 0.75,
      "currency": "EUR",
-     "as_of": "2026-11-09T23:00:00+00:00",
+     "as_of": "2026-11-08T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1203,10 +1239,10 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 110.08,
-     "change_pct": 0.18,
+     "price": 109.88,
+     "change_pct": 1.12,
      "currency": "EUR",
-     "as_of": "2026-11-09T23:00:00+00:00",
+     "as_of": "2026-11-08T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1214,10 +1250,10 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 285.55,
-     "change_pct": 0.18,
+     "price": 285.05,
+     "change_pct": 0.92,
      "currency": "EUR",
-     "as_of": "2026-11-09T23:00:00+00:00",
+     "as_of": "2026-11-08T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1225,10 +1261,10 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 325.3,
-     "change_pct": 0.29,
+     "price": 324.35,
+     "change_pct": 1.33,
      "currency": "EUR",
-     "as_of": "2026-11-09T23:00:00+00:00",
+     "as_of": "2026-11-08T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1236,10 +1272,10 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 8.62,
-     "change_pct": 0.07,
+     "price": 8.61,
+     "change_pct": 1.52,
      "currency": "EUR",
-     "as_of": "2026-11-09T23:00:00+00:00",
+     "as_of": "2026-11-08T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1247,10 +1283,10 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 49.44,
-     "change_pct": -0.02,
+     "price": 49.45,
+     "change_pct": 2.47,
      "currency": "EUR",
-     "as_of": "2026-11-09T23:00:00+00:00",
+     "as_of": "2026-11-08T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1258,10 +1294,10 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 69.96,
-     "change_pct": -1.8,
+     "price": 71.24,
+     "change_pct": 0.86,
      "currency": "EUR",
-     "as_of": "2026-11-09T23:00:00+00:00",
+     "as_of": "2026-11-08T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1269,10 +1305,10 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 73211.16,
-     "change_pct": -2.67,
+     "price": 73834.2,
+     "change_pct": -1.85,
      "currency": "USD",
-     "as_of": "2026-11-10T00:00:00+00:00",
+     "as_of": "2026-11-11T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1280,17 +1316,17 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 2025.76,
-     "change_pct": -4.96,
+     "price": 2068.71,
+     "change_pct": -2.95,
      "currency": "USD",
-     "as_of": "2026-11-10T00:00:00+00:00",
+     "as_of": "2026-11-11T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 336,
-   "new_count": 5
+   "candidate_count": 289,
+   "new_count": 6
   },
   "media": {
    "briefing": "",
@@ -1304,44 +1340,14 @@
      "duration_s": 7872,
      "new": false,
      "key": "445654c4f9c601fe"
-    },
-    {
-     "title": "Even Russian Reporters Admit These Staggering Losses",
-     "url": "https://www.youtube.com/watch?v=tDCNYQ-C4Ps",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-09T21:00:37+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "0cb2c1b74e1996f6"
-    },
-    {
-     "title": "The Moment Of Truth",
-     "url": "https://www.youtube.com/watch?v=WD5DaLYL8WY",
-     "source": "Crypto Currently",
-     "kind": "video",
-     "published": "2026-11-08T17:58:58+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "3521897d6c7c4e0a"
-    },
-    {
-     "title": "An American Journalist Just Spent 1 Year on Ukraine's Frontline",
-     "url": "https://www.youtube.com/watch?v=tcDgj62zCkw",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-07T19:00:02+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "58485dd7d95f6f91"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-10T18:01:25.287707+00:00",
-   "candidate_count": 4,
+   "source_checked_at": "2026-11-11T06:01:23.063356+00:00",
+   "candidate_count": 1,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-10T18:00:00.000Z"
+ "scheduled_slot": "2026-11-11T06:00:00.000Z"
 }
