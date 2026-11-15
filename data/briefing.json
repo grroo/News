@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261114T180123682419Z",
- "generated_at": "2026-11-14T18:01:23.682419+00:00",
- "generated_local": "Sat 14 Nov 2026, 19:01",
- "source_checked_at": "2026-11-14T18:01:23.682419+00:00",
+ "edition_id": "ed-20261115T060125122017Z",
+ "generated_at": "2026-11-15T06:01:25.122017+00:00",
+ "generated_local": "Sun 15 Nov 2026, 07:01",
+ "source_checked_at": "2026-11-15T06:01:25.122017+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-14T18:01:23.682419+00:00"
+  "run-2026-11-15T06:01:25.122017+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-14T18:01:23.682419+00:00"
+  "completed_at": "2026-11-15T06:01:25.122017+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 26,
+   "item_count": 23,
    "reason": null,
    "failure": null,
-   "parsed_count": 26,
+   "parsed_count": 23,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -141,10 +141,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 89,
+   "item_count": 88,
    "reason": null,
    "failure": null,
-   "parsed_count": 89,
+   "parsed_count": 88,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -153,10 +153,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 70,
+   "item_count": 43,
    "reason": null,
    "failure": null,
-   "parsed_count": 70,
+   "parsed_count": 43,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -177,10 +177,10 @@
    "name": "Topic: European Central Bank",
    "section": "news",
    "status": "ok",
-   "item_count": 95,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 95,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 108,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 108,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -213,10 +213,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -225,10 +225,10 @@
    "name": "Team: XV de France rugby",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 105,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 105,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -249,10 +249,10 @@
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 60,
+   "item_count": 62,
    "reason": null,
    "failure": null,
-   "parsed_count": 60,
+   "parsed_count": 62,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -524,74 +524,104 @@
   {
    "name": "Wiloo",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "VisualPolitik EN",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Preston Stewart",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Marques Brownlee",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "The Christo Files",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Making Sense with Sam Harris",
@@ -684,9 +714,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002131,
-  "est_month_usd": 0.19,
-  "forecast_month_usd": 0.19,
+  "est_cost_usd": 0.002239,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,60 +724,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 5863,
+    "latency_ms": 10536,
     "unknown": false,
     "provider_request_ids": [
-     "resp_070f62761588824b016af8a1fa00dc87d1b121c228e1b309c5"
+     "resp_007e8bba72327586016af94abe9f1087d19a19a304c6ed3abb"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3501,
-    "output_tokens": 392,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3464,
+    "output_tokens": 647,
+    "reasoning_tokens": 181
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7393,
+    "latency_ms": 6427,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0f8f3076ec7d203d016af8a1ff35d487d1a9e911f1f607e252"
+     "resp_0247afc52a547a8a016af94ac8794487d18faffcab4c526657"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3837,
-    "output_tokens": 776,
-    "reasoning_tokens": 316
+    "cache_write_tokens": 3709,
+    "output_tokens": 477,
+    "reasoning_tokens": 175
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 5232,
+    "latency_ms": 9388,
     "unknown": false,
     "provider_request_ids": [
-     "resp_018bb680f1bc5920016af8a206974887d1a9a6cd71b2719bea"
+     "resp_0d9b026748852753016af94acef00487d1939e92b243be460d"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3422,
-    "output_tokens": 401,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3331,
+    "output_tokens": 726,
+    "reasoning_tokens": 211
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10760,
-  "output_tokens": 1569,
-  "reasoning_tokens": 316,
+  "cache_write_tokens": 10504,
+  "output_tokens": 1850,
+  "reasoning_tokens": 567,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 42,
-   "attempts": 126,
-   "known_cost_usd": 0.094826,
+   "recorded_runs": 43,
+   "attempts": 129,
+   "known_cost_usd": 0.097065,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,359 +786,208 @@
   "news": {
    "briefing": [
     {
-     "text": "Italy has fined Meta €805 million over its alleged access to users’ photos without informing 20 million people, a significant data-protection enforcement action.",
+     "text": "Saudi Arabia faces mounting security pressure as regional conflict risks collide with its economic ambitions; a Saudi-led coalition reported intercepting missiles near Riyadh and drones in the Eastern Province.",
      "sources": [
       {
-       "key": "359fb450257d6b54",
-       "title": "Italy fines Meta €805m over accessing users' photos",
-       "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
+       "key": "20dc7ba1186c959f",
+       "title": "L’Arabie saoudite, un royaume pris en étau entre deux guerres, débordé par l’escalade des rivalités régionales",
+       "url": "https://www.lemonde.fr/international/article/2026/11/15/l-arabie-saoudite-un-royaume-pris-en-etau-entre-deux-guerres-deborde-par-l-escalade-des-rivalites-regionales_6810988_3210.html",
+       "source": "Le Monde",
        "via": null
-      }
-     ]
-    },
-    {
-     "text": "A US air-traffic system shutdown caused widespread cancellations and delays; officials are investigating whether faulty equipment or incompetence was responsible.",
-     "sources": [
-      {
-       "key": "36d6404694e0877e",
-       "title": "Thousands of US flights canceled, delayed as air travel system recovers from shutdown - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOVXZEZWRocXp0dXdaSC1HaHpfRDdJdlU2WG9IbndjZnN0M0JBd05qbDlrdmtkOFpnalRoejZsWktJSlRkZERUZ29WbVBCWkw1WjlzbVpqODV3anFPLXNJNlJJNWlraGdLWmIyMWpsM2NrVTdqNWFmaFFDNkQ5M1BRWkJNN2xYSTRwMmVkZ1J6NjE5dVcwd0N2QjFGVEFrTWZzLUJQVWQ4TWFQcVI1d01FZk5ndW9qVjVsbGNrMHE2UlVIUUh2RklVeV9jMEw5WkFsSGc?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
       },
       {
-       "key": "a34f168e066d36e1",
-       "title": "Copper wire upgrade caused nationwide flight suspension, US transport secretary says",
-       "url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
+       "key": "b3d754cd1d24feb6",
+       "title": "Saudi-led coalition intercepts missiles towards Riyadh, drones in Eastern Province - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOemlqVE1TdmREQ0t3TjczWnBWVGZ3TkxTc0ZPVC1fZFlrUDJCZC1KV0liZGdUTHBXZEZpWG9SNkJJSlBYSjVPbE1aUnNtWHl2eE1FbzlURGRwckdIT3R2NG9rVm1oX1V0VEZoWmYxM1dSbmhNc1BidnFLX19YRVU3Q2tzR1F5Vk1QX3dDNXVCeXZ6bmVES0lZNTBlR3E0Z1hJcXFyYXpMam80TGRWbURod1NsUXBwZldjdHFVejFwaWtmVmo3ZWYzYW5QMzk?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
       }
      ]
     },
     {
-     "text": "Democrats have won Alaska’s governor’s race for the first time in nearly 30 years, bringing their total to 30 governorships.",
+     "text": "France is forecast to grow more slowly than much of Europe this year, deepening its relative economic decline.",
      "sources": [
       {
-       "key": "5be441503d9fe860",
-       "title": "Democrat wins Alaska governor’s seat for first time in nearly 30 years",
-       "url": "https://www.theguardian.com/us-news/2026/nov/14/alaska-governor-democrat-jonathan-kreiss-tomkins-wins",
-       "source": "The Guardian World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Protest marches took place across France, with sharply differing attendance estimates from the interior ministry and youth unions.",
-     "sources": [
-      {
-       "key": "8e8606390ce82dbc",
-       "title": "Manifestations du 14 novembre : 106 000 personnes ont défilé samedi dans toute la France, selon le ministère de l’intérieur ; 200 000, selon l’intersyndicale de la jeunesse",
-       "url": "https://www.lemonde.fr/politique/article/2026/11/14/manifestations-du-14-novembre-106-000-personnes-ont-defile-samedi-dans-toute-la-france-selon-le-ministere-de-l-interieur-contre-la-vie-chere-pour-la-protection-des-enfants-ou-davantage-de-moyens-pour-l-education_6809818_823449.html",
+       "key": "f9a756ec99e2b37e",
+       "title": "Le lent déclin économique de la France face au reste de l’Europe",
+       "url": "https://www.lemonde.fr/economie/article/2026/11/15/le-lent-declin-economique-de-la-france-face-au-reste-de-l-europe_6810984_3234.html",
        "source": "Le Monde",
        "via": null
       }
      ]
     },
     {
-     "text": "Netanyahu said only a government coalition led by him could guarantee Israel’s security, calling for unity to confront Iran.",
+     "text": "AI-linked infrastructure shares have suffered a sharp reversal, with data-centre construction stocks losing $4.2tn as the boom trade unwound.",
      "sources": [
       {
-       "key": "5b8483328fe58bd7",
-       "title": "Netanyahu insiste, 'governo di unità nazionale per chiudere i conti con l'Iran'",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/14/netanyahu-insiste-governo-di-unita-nazionale-per-chiudere-i-conti-con-liran_c8608ef7-07b3-4696-a067-57f6719bef73.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-11-14T16:29:48+00:00",
-     "new": true,
-     "key": "359fb450257d6b54",
-     "title": "Italy fines Meta €805 million over access to users’ photos",
-     "summary": "Italy fined Meta €805 million over alleged access to photos belonging to 20 million users without informing them."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOVXZEZWRocXp0dXdaSC1HaHpfRDdJdlU2WG9IbndjZnN0M0JBd05qbDlrdmtkOFpnalRoejZsWktJSlRkZERUZ29WbVBCWkw1WjlzbVpqODV3anFPLXNJNlJJNWlraGdLWmIyMWpsM2NrVTdqNWFmaFFDNkQ5M1BRWkJNN2xYSTRwMmVkZ1J6NjE5dVcwd0N2QjFGVEFrTWZzLUJQVWQ4TWFQcVI1d01FZk5ndW9qVjVsbGNrMHE2UlVIUUh2RklVeV9jMEw5WkFsSGc?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-14T17:09:54+00:00",
-     "new": true,
-     "key": "36d6404694e0877e",
-     "title": "US air-traffic shutdown causes thousands of flight cancellations and delays",
-     "summary": "Thousands of flights were canceled or delayed as US air travel recovered from a nationwide system shutdown."
-    },
-    {
-     "url": "https://www.theguardian.com/us-news/2026/nov/14/alaska-governor-democrat-jonathan-kreiss-tomkins-wins",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-14T16:58:33+00:00",
-     "new": true,
-     "key": "5be441503d9fe860",
-     "title": "Democrat wins Alaska governor’s seat for first time in nearly 30 years",
-     "summary": "Jonathan Kreiss-Tomkins’ victory gives Democrats control of 30 US governorships."
-    },
-    {
-     "url": "https://www.lemonde.fr/politique/article/2026/11/14/manifestations-du-14-novembre-106-000-personnes-ont-defile-samedi-dans-toute-la-france-selon-le-ministere-de-l-interieur-contre-la-vie-chere-pour-la-protection-des-enfants-ou-davantage-de-moyens-pour-l-education_6809818_823449.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-14T16:29:53+00:00",
-     "new": true,
-     "key": "8e8606390ce82dbc",
-     "title": "France marches draw conflicting attendance estimates",
-     "summary": "The interior ministry counted 106,000 demonstrators nationwide, while youth unions put attendance at 200,000."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/14/netanyahu-insiste-governo-di-unita-nazionale-per-chiudere-i-conti-con-liran_c8608ef7-07b3-4696-a067-57f6719bef73.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-11-14T17:48:11+00:00",
-     "new": true,
-     "key": "5b8483328fe58bd7",
-     "title": "Netanyahu calls for unity government to confront Iran",
-     "summary": "Israel’s prime minister said only a coalition led by him could guarantee the country’s security."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-14T18:01:23.682419+00:00",
-   "input_fingerprint": "sha256:7521029ee659d653c2d31675c0fd142bce5060124cf3046bd5d58909dcefd283",
-   "last_success_at": "2026-11-14T18:01:23.682419+00:00",
-   "candidate_count": 453,
-   "new_count": 5
-  },
-  "sport": {
-   "briefing": [
-    {
-     "text": "France face Turkey seeking Nations League qualification, with Kylian Mbappé among the headline names for the match.",
-     "sources": [
-      {
-       "key": "b479af05b9dbfada",
-       "title": "Ligue des nations : face à la Turquie, Mbappé et les Bleus en mission pour la qualification - France 24",
-       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWHlhUEVFemlpSkoxcFBnVWoxV0RmdVFKVE9QZDJWdFNvUXBidVN6SWpJdFF0REVjTmpVc1V3UE01T0NBU2xhSENKNGNMN3Q3clU3ZF9LRnZEc29YdXkzR0tRVUxrV1FmYjVRX09pR1QzekUtRXNwMGwzbGNKMGhkai02bFl1Zw?oc=5",
-       "source": "France 24",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Wales’s surprise win over New Zealand could reshape the implications of France’s autumn rugby campaign.",
-     "sources": [
-      {
-       "key": "52a3d3d38bc86d0f",
-       "title": "Pourquoi la victoire surprise des Gallois contre les Blacks change beaucoup de choses pour la France - Rugbyrama",
-       "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOa3g2Q3BicG1tZFBPMmJvSXR6RDlLTWg1dmlyZHN1MGRvN1p2blMzcDllWGJDMUlhcEx5QWgzNW95V2tONkM2NEJFR1NsRk4xZGRPNWlyWGdXb3NrVE9LbmZBYmlOY1ppSGJzWkd5eS1pUEZoT0RLbFExclF5Mk84ZUhZS0dUZ2M0ZW85ZmNtWXRaa0JHd2lwYVdlczBrYm9kUjNxX214QUt5ZVVPWmtZVm5tVUtpeEMyUHE0WVp5WC1qREM2SUlmaHhGVkRybGs3YUk3WmFlVHZFUDFOYTQ1djhOa3N5c3A1eGV2ZUZJRmE0X21xQlFxUEYwdm1EcTJacVBQa2tjams2Qno5WnQ5OUhvdk11bnN1MC03bkt5TQ?oc=5",
-       "source": "Rugbyrama",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Antoine Dupont’s performance against South Africa drew praise after France’s recent test.",
-     "sources": [
-      {
-       "key": "255afc52b2ac5a6b",
-       "title": "France-Afrique du Sud: \"C'est un régal de jouer avec lui\", pourquoi Dupont a impressionné le monde du rugby face aux Springboks - RMC Sport",
-       "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxOYTZGTUp1aXZuTXpPZjYtU2FjaTNBWnBteU9NeXJaLUFpS0doNnJhTzNSZng4VG0yWjVBeHJIOHBSMVZ2ZXJZU201U21LQlZuOVFXc0hfcG1fUGk1d3Q3T21zQXdKa25DTHRhMzd6UXoyTVA2OXlSOHhUVkhlSURyRmswN3NNM2tQSXNzVnZHTjgtc0FIcHp0bDNWX1NkQVVaX2YxNE1SUDNSd3AyVlRieXU4OFZlMUpoblBtckhwMllhdkRqRDgtdnB4aURGa0lybWlobjRyVlFwS3JMVHhLUmdLS05NMEhRVzdPckk1UFhuWmxiTWtBanAwMTgybE44SmZmLWVrTWl1X3ZrTWFoYjd1ZWUxdkM4UGc?oc=5",
-       "source": "RMC Sport",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A recent PSG opponent was impressed by Warren Zaïre-Emery’s display in the narrow win over Troyes.",
-     "sources": [
-      {
-       "key": "e35d5b3760adfcbb",
-       "title": "Un récent adversaire du PSG impressionné par Zaïre-Emery",
-       "url": "https://www.culturepsg.com/news/club/un-recent-adversaire-du-psg-impressionne-par-zaire-emery/61546",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "France and Spain are reported to be the main contenders to host the Nations League Finals.",
-     "sources": [
-      {
-       "key": "b1779b05eca0b663",
-       "title": "Geoffroy-Guichard et le Groupama Stadium ou le Bernabeu ? Vers un match France-Espagne pour l'organisation du Final 4 de la Ligue des nations",
-       "url": "https://www.lequipe.fr/Football/Actualites/Geoffroy-guichard-et-le-groupama-stadium-ou-le-bernabeu-vers-un-match-france-espagne-pour-l-organisation-du-final-4-de-la-ligue-des-nations/1743673#at_medium=RSS_feeds",
-       "source": "L'Équipe",
-       "via": null
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://www.culturepsg.com/news/club/un-recent-adversaire-du-psg-impressionne-par-zaire-emery/61546",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-14T14:59:00+00:00",
-     "new": true,
-     "key": "e35d5b3760adfcbb",
-     "title": "Zaïre-Emery impresses a recent PSG opponent",
-     "summary": "A recent PSG opponent praised Warren Zaïre-Emery after the midfielder started in the win over Troyes."
-    },
-    {
-     "url": "https://www.culturepsg.com/news/selections/maroc-niger-chaine-tv-et-compo-probable-avec-hakimi/61538",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-13T15:00:46+00:00",
-     "new": true,
-     "key": "6a71222e32bbbb40",
-     "title": "Hakimi expected to start for Morocco against Niger",
-     "summary": "Achraf Hakimi is expected to start as Morocco face Niger in a 2027 Africa Cup of Nations qualifier."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWHlhUEVFemlpSkoxcFBnVWoxV0RmdVFKVE9QZDJWdFNvUXBidVN6SWpJdFF0REVjTmpVc1V3UE01T0NBU2xhSENKNGNMN3Q3clU3ZF9LRnZEc29YdXkzR0tRVUxrV1FmYjVRX09pR1QzekUtRXNwMGwzbGNKMGhkai02bFl1Zw?oc=5",
-     "source": "France 24",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-11-14T17:40:46+00:00",
-     "new": true,
-     "key": "b479af05b9dbfada",
-     "title": "France seek Nations League qualification against Turkey",
-     "summary": "France face Turkey as they look to secure Nations League qualification."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOa3g2Q3BicG1tZFBPMmJvSXR6RDlLTWg1dmlyZHN1MGRvN1p2blMzcDllWGJDMUlhcEx5QWgzNW95V2tONkM2NEJFR1NsRk4xZGRPNWlyWGdXb3NrVE9LbmZBYmlOY1ppSGJzWkd5eS1pUEZoT0RLbFExclF5Mk84ZUhZS0dUZ2M0ZW85ZmNtWXRaa0JHd2lwYVdlczBrYm9kUjNxX214QUt5ZVVPWmtZVm5tVUtpeEMyUHE0WVp5WC1qREM2SUlmaHhGVkRybGs3YUk3WmFlVHZFUDFOYTQ1djhOa3N5c3A1eGV2ZUZJRmE0X21xQlFxUEYwdm1EcTJacVBQa2tjams2Qno5WnQ5OUhvdk11bnN1MC03bkt5TQ?oc=5",
-     "source": "Rugbyrama",
-     "feed_name": "Team: XV de France rugby",
-     "via": "Google News",
-     "published": "2026-11-14T17:42:00+00:00",
-     "new": true,
-     "key": "52a3d3d38bc86d0f",
-     "title": "Wales’s win over New Zealand could affect France",
-     "summary": "Wales’s surprise victory over New Zealand changes the context for France’s rugby campaign."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxOYTZGTUp1aXZuTXpPZjYtU2FjaTNBWnBteU9NeXJaLUFpS0doNnJhTzNSZng4VG0yWjVBeHJIOHBSMVZ2ZXJZU201U21LQlZuOVFXc0hfcG1fUGk1d3Q3T21zQXdKa25DTHRhMzd6UXoyTVA2OXlSOHhUVkhlSURyRmswN3NNM2tQSXNzVnZHTjgtc0FIcHp0bDNWX1NkQVVaX2YxNE1SUDNSd3AyVlRieXU4OFZlMUpoblBtckhwMllhdkRqRDgtdnB4aURGa0lybWlobjRyVlFwS3JMVHhLUmdLS05NMEhRVzdPckk1UFhuWmxiTWtBanAwMTgybE44SmZmLWVrTWl1X3ZrTWFoYjd1ZWUxdkM4UGc?oc=5",
-     "source": "RMC Sport",
-     "feed_name": "Team: XV de France rugby",
-     "via": "Google News",
-     "published": "2026-11-14T17:40:00+00:00",
-     "new": true,
-     "key": "255afc52b2ac5a6b",
-     "title": "Dupont impresses against South Africa",
-     "summary": "Antoine Dupont’s display against South Africa drew praise from rugby observers."
-    },
-    {
-     "url": "https://www.lequipe.fr/Football/Actualites/Geoffroy-guichard-et-le-groupama-stadium-ou-le-bernabeu-vers-un-match-france-espagne-pour-l-organisation-du-final-4-de-la-ligue-des-nations/1743673#at_medium=RSS_feeds",
-     "source": "L'Équipe",
-     "feed_name": "L'Équipe",
-     "via": null,
-     "published": "2026-11-14T17:26:32+00:00",
-     "new": true,
-     "key": "b1779b05eca0b663",
-     "title": "France and Spain vie to host Nations League Finals",
-     "summary": "France and Spain are reportedly the leading contenders to host the Nations League Finals."
-    },
-    {
-     "url": "https://www.culturepsg.com/news/selections/tchequie-espagne-0-2-le-resume-video-et-les-notes-de-ruiz-et-torres/61531",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-13T08:45:06+00:00",
-     "new": true,
-     "key": "fb8914b3daa0f888",
-     "title": "Spain beat Czechia with Ruiz and Torres starting",
-     "summary": "Spain beat Czechia 2-0 with Fabian Ruiz and Ferran Torres in the starting lineup."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxOTzdMNXNYYkJtMXpzWjMyUHhUNk9NdGR5MGpHODd4RURMYXNTY1NMckdyVkRUTUt0bHZ2QnNxWnlGZ2xadlQ3LXRKSWFKaXdjY0lweGZRLWZ3WU8wYTdhNmRvTVh2QWtLOE1SU3Q1YTlxOE5hSWhnTUMyZjhvLWQ5a3Q1VkVnRzQzbkNkVGxIaXk0ay0yMGpnX0lFUFFld0M1STl4RVVLM3BGd0U5YzJ5d1FpdlJBNHNuTlZCT1ZXWEpTTW1UaTB6dkhCWG1FYzZvMm4wUng5am41NGxuM1NQR0lOMmhPYlZ2Q0FFZ2lTbk1nMWJlWHFoUzZjLVN5Z3RHSUZhbmJ4N2s3X2dDQzV5MUlYYmZjYVNUTDVPbkM0cV9SZw?oc=5",
-     "source": "L'Équipe",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-11-14T17:08:00+00:00",
-     "new": true,
-     "key": "ad27e2c9b0480560",
-     "title": "Hugo Lloris reaches 1,000 professional matches",
-     "summary": "Hugo Lloris became the first French player to pass 1,000 professional appearances."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-14T18:01:23.682419+00:00",
-   "input_fingerprint": "sha256:d2e90bd5317883e3a2be0b31a9350fe0cce58ad9c86b1c52705ffabd83a4df5b",
-   "last_success_at": "2026-11-14T18:01:23.682419+00:00",
-   "candidate_count": 403,
-   "new_count": 8
-  },
-  "finance": {
-   "briefing": [
-    {
-     "text": "US equities are under pressure, with the S&P 500 down 1.15% in your portfolio snapshot; an FT market note describes a rotation toward defensive sectors, while Nvidia’s drop is drawing attention as a potential driver of the sell-off.",
-     "sources": [
-      {
-       "key": "bf5430d50bca3580",
-       "title": "Chart of the Week: The great market rotation",
-       "url": "https://www.ft.com/content/936376d1-4a69-4a3c-8975-3c55e9cb9d42?syn-25a6b1a6=1",
-       "source": "FT Markets",
-       "via": null
-      },
-      {
-       "key": "f09e7443aea495eb",
-       "title": "Nvidia’s Stock Drop Made a Tempting Case to ‘Buy the Dip’ - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWFVUNmtCX1hPb0tkTHFhc2k0RXE1eW5qV0Zoc2k4X0RueXpHdHBzaEVqUGt2LWI3UWF5bGFUQlBpSWwyMFA2MlhiblJldmVvUXExYWloUFVQZmVXQTg2ak0zel9fbGxxU2lwNkxhWVBxUDBPWFZhVVdZN3BaRldZcWJ1Q3l1OVJOR3VHMUtkQ1Q3MHhUTWNDQXk2akJlX0wySTFpOUJxX1NhTWc3Qnc?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Fed Governor Collins favors gradual rate hikes to manage economic risks, reinforcing the prospect of a measured rather than abrupt policy path.",
-     "sources": [
-      {
-       "key": "4ed9a72568054685",
-       "title": "Fed's Collins says gradual rate hikes best to manage economic risks - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbHZfX3JqempNenlnSUpVcTd4dXY4djdJU1c2VkZ2Um5fYXkyVTMtYUxBZlBrcXVqQXJkQ0RjejZRQTdBLWxPYzcyRDBfTGxmdUVTekN0TFFWdHNfZFh6ckt0c1RCTVBwZzZjZ3NacWJWSDhvMVRGVDNpR0o2YTBwdmJILTE4eWs2SlQ5YnVHN0ctMFM3bWJsQkhtblRUMjI0amRHcFZLaXNaWWJz?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Italy says it supports Germany joining the next-generation fighter programme, although Germany’s bid has also faced a setback—an industrial and European security issue to watch.",
-     "sources": [
-      {
-       "key": "214ec650c4e5da21",
-       "title": "Italy says it backs Germany joining next-generation fighter jet project - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNU3ZiUHpIWUNRT0ItYnQtY0JYUDVteklyeEE3ZXdhQzJqWXRieWpOMm40a3pUcW9uX3dVS1V3RlhlZUZEcDlTVlJ3TzQ1NEdXNmk1YmR5R0xrcG02TGZzSV9oUW9mN3ZaTEp5Zkp6S0h3NUNoX2EzY21IVjNuRG5mMnRpeVNhU0lKSjhCdVBWS0NmaEI0dmZqQlB4eV9fV1NNZy1kOFdzZWlEcGxHWWlURGZFR2RjX3lDWnBJb2FqSFVQME5QMi1HekFXNHlWNDA?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      },
-      {
-       "key": "9012957f2c3d4bae",
-       "title": "Germany suffers setback in joining fighter jet project - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPM2hlaXpZTHVud2k0YzRZWndDX2t6M1ZWNTExRzBPU2FJVVpOZy1CXzgtbGZxelNpUTRJTExfUUxPek9rMUd0RWh4TkNPRVJpbE5JRXQtZTdCNVk5QmRvSVRBQzItRVhuRDUyd3NYcExwQ0FYamF6QmZrMS1WWnpkUUhud0o?oc=5",
+       "key": "741bff5595d03748",
+       "title": "Data centre construction stocks lose $4.2tn as boom in AI trade unravels - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOczFJMEhqM3AwdHNCUF9ZU3QyNkUtbWtuLVF5dUxHSkpuR0Y2VWx6WXNxQUJ1Vm5iTDN6V0c0YUR4QUpXZl9ubklZVHlDbGlDREVoM3N1a1pMNWlZdmpfTDNWZG5RSXVuU2o3M3Z5Yld2VEtpSDE0NjZ6Y1NZekd1NUxLUGw?oc=5",
        "source": "Financial Times",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Bitcoin has fallen to a three-month low near $65,000 as selling intensifies; this is a notable risk-off signal alongside the declines in your crypto holdings.",
+     "text": "Leaders are gathering for back-to-back Asian diplomatic summits, with trade, technology and regional security on the agenda.",
      "sources": [
       {
-       "key": "6639c3891073cda7",
-       "title": "Bitcoin slides to 3-month low of $65,000 as analyst flags fourth capitulation wave",
-       "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
-       "source": "CoinDesk",
+       "key": "e6ff120e40a3dd9f",
+       "title": "World leaders head to Asia for back-to-back diplomatic summits",
+       "url": "https://www.theguardian.com/world/2026/nov/15/asia-diplomatic-summits-trump-xi-putin-apec-asean",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Samsung is seeking to expand from AI chips into data-centre construction, a notable move in the infrastructure race around AI.",
+     "sources": [
+      {
+       "key": "d60225717e31e7e9",
+       "title": "Samsung conquered AI chips. Now it wants to build data centres - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNcGlFcXVUUzVSNTBhc2s3R1RFQWpYZGxGc2JCTll4WE1hQ0dRWlBlbzhiRW80ZHVmdktJMlBmZF82dmRyZkpIUW93RDRPbnVPLVloRTlDcmlJOUxGWFJrNnhYWENUZFVZNXBwN19kRjljVkVnaE5lYTUwODdvai1CU0xyTC0?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOemlqVE1TdmREQ0t3TjczWnBWVGZ3TkxTc0ZPVC1fZFlrUDJCZC1KV0liZGdUTHBXZEZpWG9SNkJJSlBYSjVPbE1aUnNtWHl2eE1FbzlURGRwckdIT3R2NG9rVm1oX1V0VEZoWmYxM1dSbmhNc1BidnFLX19YRVU3Q2tzR1F5Vk1QX3dDNXVCeXZ6bmVES0lZNTBlR3E0Z1hJcXFyYXpMam80TGRWbURod1NsUXBwZldjdHFVejFwaWtmVmo3ZWYzYW5QMzk?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-15T02:58:00+00:00",
+     "new": true,
+     "key": "b3d754cd1d24feb6",
+     "title": "Saudi-led coalition intercepts missiles and drones",
+     "summary": "A Saudi-led coalition said it intercepted missiles heading toward Riyadh and drones in the Eastern Province."
+    },
+    {
+     "url": "https://www.lemonde.fr/economie/article/2026/11/15/le-lent-declin-economique-de-la-france-face-au-reste-de-l-europe_6810984_3234.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-15T05:15:07+00:00",
+     "new": true,
+     "key": "f9a756ec99e2b37e",
+     "title": "France’s slow economic decline relative to Europe",
+     "summary": "France is expected to record one of Europe’s weakest growth rates this year, worsening its position in economic rankings."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOczFJMEhqM3AwdHNCUF9ZU3QyNkUtbWtuLVF5dUxHSkpuR0Y2VWx6WXNxQUJ1Vm5iTDN6V0c0YUR4QUpXZl9ubklZVHlDbGlDREVoM3N1a1pMNWlZdmpfTDNWZG5RSXVuU2o3M3Z5Yld2VEtpSDE0NjZ6Y1NZekd1NUxLUGw?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-15T05:01:13+00:00",
+     "new": true,
+     "key": "741bff5595d03748",
+     "title": "AI data-centre stocks lose $4.2tn as boom trade unravels",
+     "summary": "Shares in data-centre construction companies have lost $4.2tn as the AI boom trade has unwound."
+    },
+    {
+     "url": "https://www.theguardian.com/world/2026/nov/15/asia-diplomatic-summits-trump-xi-putin-apec-asean",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-15T04:00:02+00:00",
+     "new": true,
+     "key": "e6ff120e40a3dd9f",
+     "title": "World leaders head to Asian diplomatic summits",
+     "summary": "Trade, technology and regional security are set to feature at back-to-back meetings in China, the Philippines and Cambodia."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNcGlFcXVUUzVSNTBhc2s3R1RFQWpYZGxGc2JCTll4WE1hQ0dRWlBlbzhiRW80ZHVmdktJMlBmZF82dmRyZkpIUW93RDRPbnVPLVloRTlDcmlJOUxGWFJrNnhYWENUZFVZNXBwN19kRjljVkVnaE5lYTUwODdvai1CU0xyTC0?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-15T05:00:04+00:00",
+     "new": true,
+     "key": "d60225717e31e7e9",
+     "title": "Samsung looks to build data centres",
+     "summary": "Samsung is looking to build data centres after establishing a position in AI chips."
+    },
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/11/15/un-commandant-de-la-branche-militaire-du-hamas-tue-dans-une-frappe-dans-le-sud-de-la-bande-de-gaza_6810874_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-15T03:57:46+00:00",
+     "new": true,
+     "key": "498540ccd508139d",
+     "title": "Hamas military commander killed in Gaza strike",
+     "summary": "Israel said it struck an unnamed official in Hamas’s Ezzedine al-Qassam Brigades in southern Gaza."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOa21ialdVbzZGZ0xfbm5OcUhFQVRJNFI3WTd4clNCdERlbjJVeEQxMmRxR2VqbWk3TXBWbVQxc01VdWV3d0FKamJxZGZLN09tZm1PbUw1cG9ISEx2ZWd4UmgxLXktWkNaY0lzUHJBYVdEdm9PU2JnbXZOWF90WEVWYUszT0syc3FrY2FYdG1FaUptWFZPUnp2SFdydw?oc=5",
+     "source": "The Financial Express",
+     "feed_name": "Topic: insurance industry",
+     "via": "Google News",
+     "published": "2026-11-15T05:34:40+00:00",
+     "new": true,
+     "key": "007f1c25dc3c6e8d",
+     "title": "Push for sweeping insurance industry reforms",
+     "summary": "The Financial Express reports calls for sweeping reforms to revive the insurance industry."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-11-15T06:01:25.122017+00:00",
+   "input_fingerprint": "sha256:53f8ab73a05b5ceb5746fc818638551269e617e75503512c7928b04c9eb00c7e",
+   "last_success_at": "2026-11-15T06:01:25.122017+00:00",
+   "candidate_count": 335,
+   "new_count": 7
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "France face Turkey in Bordeaux in their final Nations League group match, with qualification and a response after the recent defeat among the stakes; Mbappé’s return is also a focus.",
+     "sources": [
+      {
+       "key": "e666be3a2afa3291",
+       "title": "France - Turquie. La qualification, une réaction et le retour de Mbappé : comment la der’ de l’année a gagné en intérêts - Ouest-France",
+       "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxOYl9qX1c0cy1wZTJkQXZvaG5QUGlBOVd5TFVIeDNmMHNhY1J5QU1vbUxiVXZYM0RBR2Job0czQjlXWVIwWkZNM0llem13MU5WSm9rZmhWVmp3Nm00X05VNGdUVUFac1BpaFpaSFlNRkt4aF9mckhPUU9DdzZNUmFMc1F4UGJKVXZiWkNxc1h2aE4yS202enNscWVzVTVhVlFnWkVyOTg2cUlTUEFocDVFdFRZRXRONFJTbE5TbXF5eWFSQktHZ3I3ZWh1eDRTUGdURFNkc2R3UlhDMm1mNURzODZscjFnM25za2N3ekZpeDlZQW9ROWFhbGIzdE9yc0VyZHl3MXozWVdha3hTVW1OQl9GbGNlbE9xRXUxSXRwSXdyX0VNeXZTbFUyRnh3ZjU3UFpF?oc=5",
+       "source": "Ouest-France",
+       "via": "Google News"
+      },
+      {
+       "key": "5f160cf1dadc55fe",
+       "title": "France - Turquie : les Bleus en quête de rachat et surtout de qualification pour les quarts de finale de la Ligue des nations - La Montagne",
+       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPOWhQVmZ2SlRKYTE1SFc4SWhNX2R4bWE5YkxEWXFwSXF4ZFE2QzhiNFBvd2FabUNrbmNPdXR5QW5RanRaUVpnbmFkRW9RbGo3YkM2NTY0bndqaFJRcG9TVDFNemMtanlZd3lrakYteEk0LWNwdWxIeExNWS1GVWVxWEgwRlFqcl96eGhydmFVQnIydl9ZVUFmdk11MTJXWUJnRE1oclVEaXd6OXBkcHhwVGp6ajFaYzRJMTlKbVJLdHF4MjAxT2ttX2tGOWZhNmxVazNkTWlUS1NZZ0dMVXpEZlpZZnM0ajZYbHF3UjJHUVI3OENUamxhTEZrRE5DcE9ETzhUTHM5bw?oc=5",
+       "source": "La Montagne",
+       "via": "Google News"
+      },
+      {
+       "key": "2164d3cc6b4cff82",
+       "title": "France-Turquie : avec Zidane et Mbappé, suivez les guides - Le Parisien",
+       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOWm9RaFBFQVV3Q2cyREhKVm5WNTRjSzFPRkRINzh3SVFLaXUtbzhBa1ZmQnlJRkM0RDVqdFozOEstNFY0UkVKOVdGUlViMmlIZFJpaDU5aHQxQ2hMNmNzRjZxRXpwSXBqRDB6Wi1rWUdxeU0yZjV1ekVUT1BaVjk3bWZnNDhZOEdZVUwtcE1vS2RvNUlPV3Bla1I2U3BEdERHTUJmSElqZm5OVXlLdGJXTTBoODB2QVJfYzZfZWgwbmJ5Qld2d1JEXzRZdFdTVkhwZlI2bVRXNTZ3bTRfQUd1ZEt0TGNwemt4Y1J3?oc=5",
+       "source": "Le Parisien",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Zidane’s midfield changes have helped France set a record for passes into the final third, but the new setup has left them exposed when possession is lost.",
+     "sources": [
+      {
+       "key": "5fdc47470ba6eecd",
+       "title": "Record de passes vers le dernier tiers mais espaces béants à la perte du ballon : forces et faiblesses de la révolution par le milieu lancée par Zinédine Zidane",
+       "url": "https://www.lequipe.fr/Football/Article/Record-de-passes-vers-la-surface-mais-espaces-beants-forces-et-faiblesses-de-la-revolution-par-le-milieu-lancee-par-zinedine-zidane/1743726#at_medium=RSS_feeds",
+       "source": "L'Équipe",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Portugal suffered a heavy 1–4 defeat by Denmark in its first match since Cristiano Ronaldo’s international retirement was announced; Vitinha started and João Neves came on.",
+     "sources": [
+      {
+       "key": "79d08c331c153681",
+       "title": "Portugal/Danemark, le résumé video de la déroute",
+       "url": "https://www.culturepsg.com/news/selections/portugal-danemark-le-resume-video-de-la-deroute/61548",
+       "source": "CulturePSG",
        "via": null
       }
      ]
@@ -1116,77 +995,235 @@
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/936376d1-4a69-4a3c-8975-3c55e9cb9d42?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
+     "url": "https://www.culturepsg.com/news/selections/portugal-danemark-le-resume-video-de-la-deroute/61548",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-14T10:30:08+00:00",
+     "published": "2026-11-14T22:32:27+00:00",
      "new": true,
-     "key": "bf5430d50bca3580",
-     "title": "The great market rotation",
-     "summary": "Defensive sectors have become the market’s new winners, according to FT Markets."
+     "key": "79d08c331c153681",
+     "title": "Portugal suffer historic defeat to Denmark",
+     "summary": "Portugal lost 1–4 to Denmark, with Vitinha starting and João Neves coming on."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWFVUNmtCX1hPb0tkTHFhc2k0RXE1eW5qV0Zoc2k4X0RueXpHdHBzaEVqUGt2LWI3UWF5bGFUQlBpSWwyMFA2MlhiblJldmVvUXExYWloUFVQZmVXQTg2ak0zel9fbGxxU2lwNkxhWVBxUDBPWFZhVVdZN3BaRldZcWJ1Q3l1OVJOR3VHMUtkQ1Q3MHhUTWNDQXk2akJlX0wySTFpOUJxX1NhTWc3Qnc?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-14T13:01:01+00:00",
-     "new": true,
-     "key": "f09e7443aea495eb",
-     "title": "Nvidia’s stock drop makes a tempting case to buy the dip",
-     "summary": "Bloomberg examines whether Nvidia’s sharp share-price decline presents a buying opportunity."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbHZfX3JqempNenlnSUpVcTd4dXY4djdJU1c2VkZ2Um5fYXkyVTMtYUxBZlBrcXVqQXJkQ0RjejZRQTdBLWxPYzcyRDBfTGxmdUVTekN0TFFWdHNfZFh6ckt0c1RCTVBwZzZjZ3NacWJWSDhvMVRGVDNpR0o2YTBwdmJILTE4eWs2SlQ5YnVHN0ctMFM3bWJsQkhtblRUMjI0amRHcFZLaXNaWWJz?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-14T15:47:44+00:00",
-     "new": true,
-     "key": "4ed9a72568054685",
-     "title": "Fed’s Collins says gradual rate hikes best to manage economic risks",
-     "summary": "Fed’s Collins says gradual rate hikes are the best way to manage economic risks."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNU3ZiUHpIWUNRT0ItYnQtY0JYUDVteklyeEE3ZXdhQzJqWXRieWpOMm40a3pUcW9uX3dVS1V3RlhlZUZEcDlTVlJ3TzQ1NEdXNmk1YmR5R0xrcG02TGZzSV9oUW9mN3ZaTEp5Zkp6S0h3NUNoX2EzY21IVjNuRG5mMnRpeVNhU0lKSjhCdVBWS0NmaEI0dmZqQlB4eV9fV1NNZy1kOFdzZWlEcGxHWWlURGZFR2RjX3lDWnBJb2FqSFVQME5QMi1HekFXNHlWNDA?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-14T12:50:09+00:00",
-     "new": true,
-     "key": "214ec650c4e5da21",
-     "title": "Italy backs Germany joining next-generation fighter project",
-     "summary": "Italy says it supports Germany joining the next-generation fighter jet project."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPM2hlaXpZTHVud2k0YzRZWndDX2t6M1ZWNTExRzBPU2FJVVpOZy1CXzgtbGZxelNpUTRJTExfUUxPek9rMUd0RWh4TkNPRVJpbE5JRXQtZTdCNVk5QmRvSVRBQzItRVhuRDUyd3NYcExwQ0FYamF6QmZrMS1WWnpkUUhud0o?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-14T10:54:04+00:00",
-     "new": true,
-     "key": "9012957f2c3d4bae",
-     "title": "Germany suffers setback in joining fighter jet project",
-     "summary": "Germany’s effort to join the next-generation fighter project has encountered a setback."
-    },
-    {
-     "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
-     "source": "CoinDesk",
-     "feed_name": "CoinDesk",
+     "url": "https://www.culturepsg.com/news/selections/premieres-tendances-pour-les-compositions-de-france-turquie/61547",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-14T16:33:29+00:00",
+     "published": "2026-11-14T22:18:00+00:00",
      "new": true,
-     "key": "6639c3891073cda7",
-     "title": "Bitcoin slides to three-month low of $65,000",
-     "summary": "Bitcoin fell to a three-month low as an analyst described a fourth capitulation wave."
+     "key": "71b8918e25e550eb",
+     "title": "France–Turkey: probable line-ups",
+     "summary": "France play Turkey in Bordeaux in their final Nations League group-stage match."
+    },
+    {
+     "url": "https://www.lequipe.fr/Football/Article/Record-de-passes-vers-la-surface-mais-espaces-beants-forces-et-faiblesses-de-la-revolution-par-le-milieu-lancee-par-zinedine-zidane/1743726#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
+     "via": null,
+     "published": "2026-11-15T05:35:00+00:00",
+     "new": true,
+     "key": "5fdc47470ba6eecd",
+     "title": "Zidane’s midfield revolution: strengths and weaknesses",
+     "summary": "France recorded a high for passes into the final third but left large spaces when losing possession."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxOYl9qX1c0cy1wZTJkQXZvaG5QUGlBOVd5TFVIeDNmMHNhY1J5QU1vbUxiVXZYM0RBR2Job0czQjlXWVIwWkZNM0llem13MU5WSm9rZmhWVmp3Nm00X05VNGdUVUFac1BpaFpaSFlNRkt4aF9mckhPUU9DdzZNUmFMc1F4UGJKVXZiWkNxc1h2aE4yS202enNscWVzVTVhVlFnWkVyOTg2cUlTUEFocDVFdFRZRXRONFJTbE5TbXF5eWFSQktHZ3I3ZWh1eDRTUGdURFNkc2R3UlhDMm1mNURzODZscjFnM25za2N3ekZpeDlZQW9ROWFhbGIzdE9yc0VyZHl3MXozWVdha3hTVW1OQl9GbGNlbE9xRXUxSXRwSXdyX0VNeXZTbFUyRnh3ZjU3UFpF?oc=5",
+     "source": "Ouest-France",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-11-15T05:44:02+00:00",
+     "new": true,
+     "key": "e666be3a2afa3291",
+     "title": "France–Turkey: qualification, a response and Mbappé’s return",
+     "summary": "France’s final match of the year against Turkey has added stakes, including qualification and Mbappé’s return."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-14T18:01:23.682419+00:00",
-   "input_fingerprint": "sha256:13239269136cfb3b6860027e2f867f6c90628412f7186a88ee811063a165a18d",
-   "last_success_at": "2026-11-14T18:01:23.682419+00:00",
+   "source_checked_at": "2026-11-15T06:01:25.122017+00:00",
+   "input_fingerprint": "sha256:7258f5fb4fe5d7f4440b34f0e79fe5efde42561bb9e6b6d355a191e606c24f3c",
+   "last_success_at": "2026-11-15T06:01:25.122017+00:00",
+   "candidate_count": 363,
+   "new_count": 4
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "The AI trade is under pressure: a tech sell-off has hit data-centre infrastructure shares, while investors weigh Nvidia’s leadership turmoil and upcoming results.",
+     "sources": [
+      {
+       "key": "e82cc9c0a41a4108",
+       "title": "Data centre construction stocks lose $4.2tn as boom in AI trade unravels",
+       "url": "https://www.ft.com/content/d5adde7e-68cc-455b-ba78-b39cc3676b7a?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      },
+      {
+       "key": "90e0a44e38f725c3",
+       "title": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
+       "url": "https://www.cnbc.com/2026/11/14/nvidia-ai-trade-data-centers-congress.html",
+       "source": "CNBC Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Bitcoin’s sell-off has deepened, with Bloomberg reporting a three-month low as liquidations accelerated; this adds to the weakness in crypto markets.",
+     "sources": [
+      {
+       "key": "f75cad487acbb9c8",
+       "title": "Bitcoin Tumbles to Three-Month Low as Liquidations Accelerate - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZFN4Yk1qMGk3ejFQc2RuVXlMMWoxUmd6T3NHOGM1WEFCd2E2ZFplM0NXMGRhb3VFS0VtWEtVajlzUS1UV0N6aVpZSlB5Wm5rbWNTUG9nNTNoNUI1LXB1OF9vUWxRNHVSaXBkbmJlbXFYZ1BWWllpY2FoUm5KWXdycXM4VTZXNldjVDJTUHYzRG1IWUt5Ujc3NjFvYWVab1IyUWxQaVVkb2E0NWlLY1hyRHZ3?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Fed official Susan Collins said “steady, gradual” rate hikes are appropriate, a hawkish signal for the US rates outlook.",
+     "sources": [
+      {
+       "key": "075694f4f3384b9f",
+       "title": "Fed’s Collins Says ‘Steady, Gradual’ Rate Hikes Appropriate - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSmxPcmNNS1JISWxpNy11VFVWNUZsdi13QmZIZDNmT0Npcno0S1JMYzJtRnlqckY4bGU5U3JlczcyeVJTYzZhRlpWeDBkeTR0TGw3Q2VHRzNCYUM3eUZQVHdPUmUxOXd6NnJMSnZSS01EUjFSdTJIeFhXNlc5cThsNXdMZnRzODZMLWNiR0N5QVR5RWFhMzFwUUxPYlYxOWxDTi0yOEg5ZjdLVlk?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Credit investors are finding 6% yields more appealing after the Nvidia-driven market turbulence, according to Bloomberg’s credit-market roundup.",
+     "sources": [
+      {
+       "key": "85426164a7bd68f2",
+       "title": "Juicy 6% Yields Gain Appeal After Nvidia Drama: Credit Weekly - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTzVYbEh2b3Y2SkVCTlRkZXpFWGhVTVNRdUFhWk9XMW1QbEl6X0NyMkdIVFJFQjNlUXd5QjNqeE14eUh0MW41bzYwUmpDemZSZ1BnOHJHRk8taUFtaE5hR0ROc2otbjBaTDJwUE5EbXNrQjlxcjZfSWdrZnNPOV96TWJMQlRNNXdUZUVvcFBVbzl1MlNtUHBCLS1kRWZKSERYOENCbGFCUFhnUUtNMUNF?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The European Banking Authority chair is exploring alternatives to a single deposit-insurance scheme to encourage more cross-border lending.",
+     "sources": [
+      {
+       "key": "650705a34f81e7d8",
+       "title": "EU banking watchdog veers away from single deposit insurance scheme",
+       "url": "https://www.ft.com/content/016ce22d-1e09-4f1d-a7e6-9acf183e757f?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Economists warn that subdued hiring and job-switching in the US and UK could damage productivity over the longer term.",
+     "sources": [
+      {
+       "key": "aa5ea434c744169f",
+       "title": "‘Low fire, low hire’ job market hurts US and UK productivity",
+       "url": "https://www.ft.com/content/44c1fdc6-bc51-46e5-8a7c-c10096a25496?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.ft.com/content/d5adde7e-68cc-455b-ba78-b39cc3676b7a?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-15T05:00:04+00:00",
+     "new": true,
+     "key": "e82cc9c0a41a4108",
+     "title": "Data-centre construction stocks lose $4.2tn as AI trade unravels",
+     "summary": "Shares in companies supplying AI infrastructure have been hit by a tech sell-off."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZFN4Yk1qMGk3ejFQc2RuVXlMMWoxUmd6T3NHOGM1WEFCd2E2ZFplM0NXMGRhb3VFS0VtWEtVajlzUS1UV0N6aVpZSlB5Wm5rbWNTUG9nNTNoNUI1LXB1OF9vUWxRNHVSaXBkbmJlbXFYZ1BWWllpY2FoUm5KWXdycXM4VTZXNldjVDJTUHYzRG1IWUt5Ujc3NjFvYWVab1IyUWxQaVVkb2E0NWlLY1hyRHZ3?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-15T04:01:00+00:00",
+     "new": true,
+     "key": "f75cad487acbb9c8",
+     "title": "Bitcoin falls to a three-month low as liquidations accelerate",
+     "summary": "Bitcoin’s sell-off deepened as liquidations accelerated."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSmxPcmNNS1JISWxpNy11VFVWNUZsdi13QmZIZDNmT0Npcno0S1JMYzJtRnlqckY4bGU5U3JlczcyeVJTYzZhRlpWeDBkeTR0TGw3Q2VHRzNCYUM3eUZQVHdPUmUxOXd6NnJMSnZSS01EUjFSdTJIeFhXNlc5cThsNXdMZnRzODZMLWNiR0N5QVR5RWFhMzFwUUxPYlYxOWxDTi0yOEg5ZjdLVlk?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-14T15:08:45+00:00",
+     "new": true,
+     "key": "075694f4f3384b9f",
+     "title": "Fed’s Collins says steady, gradual rate hikes are appropriate",
+     "summary": "Fed official Susan Collins said steady, gradual rate hikes are appropriate."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTzVYbEh2b3Y2SkVCTlRkZXpFWGhVTVNRdUFhWk9XMW1QbEl6X0NyMkdIVFJFQjNlUXd5QjNqeE14eUh0MW41bzYwUmpDemZSZ1BnOHJHRk8taUFtaE5hR0ROc2otbjBaTDJwUE5EbXNrQjlxcjZfSWdrZnNPOV96TWJMQlRNNXdUZUVvcFBVbzl1MlNtUHBCLS1kRWZKSERYOENCbGFCUFhnUUtNMUNF?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-14T20:00:00+00:00",
+     "new": true,
+     "key": "85426164a7bd68f2",
+     "title": "Credit investors warm to 6% yields after Nvidia turmoil",
+     "summary": "Bloomberg reports that 6% yields are gaining appeal among credit investors."
+    },
+    {
+     "url": "https://www.ft.com/content/016ce22d-1e09-4f1d-a7e6-9acf183e757f?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-15T05:00:13+00:00",
+     "new": true,
+     "key": "650705a34f81e7d8",
+     "title": "EU banking watchdog explores alternatives to deposit-insurance union",
+     "summary": "The European Banking Authority chair is working on alternatives to a single deposit-insurance scheme to free up cross-border lending."
+    },
+    {
+     "url": "https://www.ft.com/content/44c1fdc6-bc51-46e5-8a7c-c10096a25496?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-15T05:00:13+00:00",
+     "new": true,
+     "key": "aa5ea434c744169f",
+     "title": "Low-hire job market risks US and UK productivity",
+     "summary": "Economists warn that sluggish hiring and job-switching may cause long-term productivity damage."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPekZiMTBjakhPUXcyZm9yZ1N6SkhLQmNrSFZ0M0RPNTNhOFh1YkExSUZEc0pJbzJoU0VkdEZKTHhVb2RYUXJjRFdtY1o2R3lzSml1RVZJS3I0MEFLRW5mMlFMV183RW9xa1d4bDhpcEtWNGFSeDEzc2xMdHBkcTBfZW5DU0Fobl9CV04zVVZuZzB0YXkwN1NwZzVTVDFtTFVaM2lSSk16YUpwMnRocGpGdThMWERWazZ5eE1Z?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-15T00:00:00+00:00",
+     "new": true,
+     "key": "b594e4edb9a5862c",
+     "title": "AI retreat fuels India stock comeback",
+     "summary": "Bloomberg reports that an AI-market pullback is helping drive a rotation towards Indian stocks."
+    },
+    {
+     "url": "https://www.ft.com/content/fb667289-ae81-42c7-8eb8-ebda09dceff7?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-15T03:00:02+00:00",
+     "new": true,
+     "key": "d376bc874133832d",
+     "title": "The world according to China",
+     "summary": "The Apec summit in Shenzhen will showcase China’s ambition to reshape the global order."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-11-15T06:01:25.122017+00:00",
+   "input_fingerprint": "sha256:be725134bb1e328fb3de2a80d5c70742ce1fea366e9f09129a625dd103dc0da4",
+   "last_success_at": "2026-11-15T06:01:25.122017+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1279,10 +1316,10 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 66005.01,
-     "change_pct": -3.29,
+     "price": 64320.89,
+     "change_pct": -5.76,
      "currency": "USD",
-     "as_of": "2026-11-14T00:00:00+00:00",
+     "as_of": "2026-11-15T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1290,31 +1327,21 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1846.68,
-     "change_pct": -4.2,
+     "price": 1794.78,
+     "change_pct": -6.89,
      "currency": "USD",
-     "as_of": "2026-11-14T00:00:00+00:00",
+     "as_of": "2026-11-15T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 223,
-   "new_count": 6
+   "candidate_count": 152,
+   "new_count": 8
   },
   "media": {
    "briefing": "",
    "items": [
-    {
-     "title": "Recognize anyone in this photo?",
-     "url": "https://www.youtube.com/shorts/3YAkor0ykpM",
-     "source": "The Christo Files",
-     "kind": "video",
-     "published": "2026-11-13T19:23:57+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "df41ac19042ef7cb"
-    },
     {
      "title": "The avalanche that hit math is coming for AI development",
      "url": "https://www.dwarkesh.com/p/rsi",
@@ -1324,64 +1351,14 @@
      "duration_s": 2666,
      "new": false,
      "key": "80a7173f8db2c112"
-    },
-    {
-     "title": "Ukrainian Drones Forced a Major Russian Accident",
-     "url": "https://www.youtube.com/watch?v=UyBPx1RlmiA",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-12T23:00:34+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "be8d1cc2c6b21440"
-    },
-    {
-     "title": "Ground Drones Are Changing the War Across the Front",
-     "url": "https://www.youtube.com/watch?v=XJTsnOHf2qQ",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-12T16:00:28+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "dc40ab59cbb19a57"
-    },
-    {
-     "title": "It's Not Over Yet",
-     "url": "https://www.youtube.com/watch?v=MeUpsi3mzs4",
-     "source": "Crypto Currently",
-     "kind": "video",
-     "published": "2026-11-11T21:03:53+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "af3159a981ba05af"
-    },
-    {
-     "title": "Bitcoin Breaks the 50-Week Moving Average. Is the Early Bull Over?",
-     "url": "https://share.transistor.fm/s/1a5b237a",
-     "source": "The DeFi Report",
-     "kind": "podcast",
-     "published": "2026-11-11T18:45:03+00:00",
-     "duration_s": 2527,
-     "new": false,
-     "key": "0724ceb2e94763f2"
-    },
-    {
-     "title": "Macbook PROLED Review: It's Not About That",
-     "url": "https://www.youtube.com/watch?v=hdMszZ2ah5Q",
-     "source": "Marques Brownlee",
-     "kind": "video",
-     "published": "2026-11-11T18:43:56+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "7ab48d3626b91b1b"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-14T18:01:23.682419+00:00",
-   "candidate_count": 7,
+   "source_checked_at": "2026-11-15T06:01:25.122017+00:00",
+   "candidate_count": 1,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-14T18:00:00.000Z"
+ "scheduled_slot": "2026-11-15T06:00:00.000Z"
 }
