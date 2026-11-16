@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261115T180126124366Z",
- "generated_at": "2026-11-15T18:01:26.124366+00:00",
- "generated_local": "Sun 15 Nov 2026, 19:01",
- "source_checked_at": "2026-11-15T18:01:26.124366+00:00",
+ "edition_id": "ed-20261116T060126596093Z",
+ "generated_at": "2026-11-16T06:01:26.596093+00:00",
+ "generated_local": "Mon 16 Nov 2026, 07:01",
+ "source_checked_at": "2026-11-16T06:01:26.596093+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-15T18:01:26.124366+00:00"
+  "run-2026-11-16T06:01:26.596093+00:00"
  ],
  "quality": {
   "overall": "healthy"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-15T18:01:26.124366+00:00"
+  "completed_at": "2026-11-16T06:01:26.596093+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 26,
+   "item_count": 21,
    "reason": null,
    "failure": null,
-   "parsed_count": 26,
+   "parsed_count": 21,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -141,10 +141,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 84,
+   "item_count": 87,
    "reason": null,
    "failure": null,
-   "parsed_count": 84,
+   "parsed_count": 87,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -153,10 +153,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 55,
+   "item_count": 62,
    "reason": null,
    "failure": null,
-   "parsed_count": 55,
+   "parsed_count": 62,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 108,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 108,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -225,10 +225,10 @@
    "name": "Team: XV de France rugby",
    "section": "sport",
    "status": "ok",
-   "item_count": 103,
+   "item_count": 101,
    "reason": null,
    "failure": null,
-   "parsed_count": 103,
+   "parsed_count": 101,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -237,10 +237,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -417,10 +417,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 11,
+   "item_count": 12,
    "reason": null,
    "failure": null,
-   "parsed_count": 11,
+   "parsed_count": 12,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -524,74 +524,104 @@
   {
    "name": "Wiloo",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "VisualPolitik EN",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Preston Stewart",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Marques Brownlee",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "The Christo Files",
    "section": "media",
-   "status": "ok",
-   "item_count": 15,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 15,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 404",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <html lang=en>   <meta charset=utf-8>   <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">   <title>Error 404 ("
+   }
   },
   {
    "name": "Making Sense with Sam Harris",
@@ -684,9 +714,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002254,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.002162,
+  "est_month_usd": 0.19,
+  "forecast_month_usd": 0.19,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,60 +724,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 9029,
+    "latency_ms": 6281,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0c266343b9e819cc016af9f37fd85c87d19df3c815b688d2ca"
+     "resp_0056156253e44c49016afa9c3d95ac87d1870b89a8ea47219c"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3243,
-    "output_tokens": 708,
-    "reasoning_tokens": 266
+    "cache_write_tokens": 3282,
+    "output_tokens": 404,
+    "reasoning_tokens": 0
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8091,
+    "latency_ms": 10772,
     "unknown": false,
     "provider_request_ids": [
-     "resp_044de634b8e5b6aa016af9f3883b6487d18867aecd94ba1202"
+     "resp_02bd4b17bc446f36016afa9c43233887d18d37f7d8944f80d0"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3556,
-    "output_tokens": 756,
-    "reasoning_tokens": 360
+    "cache_write_tokens": 3654,
+    "output_tokens": 916,
+    "reasoning_tokens": 513
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6452,
+    "latency_ms": 6421,
     "unknown": false,
     "provider_request_ids": [
-     "resp_039d1badc2e2eb15016af9f39053e087d18b7020f93767c865"
+     "resp_0f9902f828fbd623016afa9c4ddc6887d1b8bdfe7c9e410182"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3256,
-    "output_tokens": 527,
+    "cache_write_tokens": 3191,
+    "output_tokens": 469,
     "reasoning_tokens": 0
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10055,
-  "output_tokens": 1991,
-  "reasoning_tokens": 626,
+  "cache_write_tokens": 10127,
+  "output_tokens": 1789,
+  "reasoning_tokens": 513,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 45,
-   "attempts": 135,
-   "known_cost_usd": 0.101519,
+   "recorded_runs": 46,
+   "attempts": 138,
+   "known_cost_usd": 0.103681,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,225 +786,228 @@
   "news": {
    "briefing": [
     {
-     "text": "Iran’s drone attacks on a US military base in Bahrain raise further doubts about peace talks and increase the risk of escalation.",
+     "text": "AI-related selling has returned ahead of Nvidia’s results, while Asian equities face pressure and investors await a heavy slate of economic data.",
      "sources": [
       {
-       "key": "2b743f026fc35e84",
-       "title": "Iran launches drone attacks against US military base in Bahrain",
-       "url": "https://www.theguardian.com/world/2026/nov/15/iran-launches-drone-attacks-against-us-military-base-in-bahrain",
-       "source": "The Guardian World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Estonia plans to close Russian border crossings after an attempted arson attack, adding to tensions on the EU’s eastern frontier.",
-     "sources": [
-      {
-       "key": "a8db8ce71a91eb0e",
-       "title": "Estonia to close Russian border crossings after attempted arson attack - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOVkhQYlBYSGp1OG16aUlIS0JBcWpXQnpYbDlDaVFqb0V4cG04dm9wbnptbW1WRnI1bmh2ck0tTmM2Vl9pYVN2dG5NVmpTM2liUG9JWDNkVTZPVUxQc0swQ3FuN3UyZ2tyanRHVENpeUQtbTl0Z3RYSlIzVFB3QnFtdzVvWURCWDlCVjhlclpUTlpWaVhxektwaEFtY2Z2ZGRUYmJ1Z0ozUW9jY0lSOURycDkxSktlRnc?oc=5",
+       "key": "bc4e7b6caa27a267",
+       "title": "Morning Bid: AI selloff resumes as Nvidia earnings loom - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcFRFLTFjUUlGa0plMjBTUHVpcVFwMXkzbWR2MWs3TnBjSE9tLUJWb2Z1Szg3MV9ON010RmN1VXJMMTRaMG51Ynp3ZEJBRTdnRXB6MzF6b2RzXzhDQlZIMXFZZ3BOTWIyN1ZyRi1xQ2dCbVVMNWliS1lubWVkb2plalJGWQ?oc=5",
        "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "US air travel disruptions are continuing into a third day, according to Reuters.",
-     "sources": [
-      {
-       "key": "c9abbb9b8e2a68fa",
-       "title": "US air travel disruptions continue into third day - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSC1Vbm9ZWDVxQWFoSHk3aWN6WXpKVG1vNkRBWEktdnIzUGU0V0lfQWVySGZCNEROMDhHelRDVkhscDV2cm9qVXU4Ty1kYklOWi1hTXJ6b2JVc1ZSMk0tY3FBMGxzQ2M1aGpNbmZ5RC1JVVFqNXZtbFBtTFAxV0xQRkpBbXJmN2pQYjZpdkFIREpNMjF4NmVOVDRn?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "AI-related business developments include Apple’s plans to make Siri apps central to its smart-glasses offering and a report on a Chinese energy company’s AI power technology.",
-     "sources": [
-      {
-       "key": "bf03e4345deac32b",
-       "title": "Apple Bets on Siri AI Apps as the Main Draw for Its Smart Glasses - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxONFBHRGhFVUVMRGtZTjJ0dXRaZE9JLWY0cEVhMUhMdDRmNzczeVpEaTFKVjVJMjR6RjlidUc1SGJNcWYtNjF2c0M3SE1HY1ZSc1NzeWR5VDRpdUJ4dHBYb2xWSEZKdXdUakdudjRGWC1TYWFTWlE0UW1NQ3JqY1FjOGNvMmlCZlFISGx0Vmg0cWhWYjIwTF9VMFdNSWF0cWV1UWswZS1HWERVVFFoUE5qYVBYNUpIazN5TGtQeG5zbWVMMktUcUZyWXNR?oc=5",
-       "source": "Bloomberg.com",
        "via": "Google News"
       },
       {
-       "key": "41d988376d902084",
-       "title": "How a Chinese Energy Company Is Outpacing the U.S. on AI Power Technology - The Information",
-       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdTlsNk9obzRYRlc2RGU5M2NfU0QycHljVTYySnd4eHJTUzRwa3N2Y2QzQmNWVm5RYnNlei1ybVJIZ3FTMG9RbV9PNkw0RERIcDRQSVMzNFYwX2ppWHVfdlg1WGc2amI4V3BLTVBvcktUeGtQREo1UVNqVjl5NUlVeDdvSHU4REtvSFZoVjVwclprVHppcVdzeDhXcVZfb0pRTWx4SGx5eERFZjhRM3lweWVYV0piX3JZ?oc=5",
-       "source": "The Information",
+       "key": "727f5668e8dc5fd7",
+       "title": "Asian Stocks Brace for AI Pressure, Data Dump: Markets Wrap - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOU3BQd2lUam5YX1RGekdqV203U1BmRzNUQnlhem10ajRycVpfTUYzRWtOM2h1ZDd5M2tvUnNXeG1VOHRGTEl4VkJsSUhuQk41UlcyNU1EZDJaSTNTd2NvM3lDUDV5NU95SUtxSHZaZEpjSnMxRGgtamUtb0lYWUtHMTFZZDBLblVaeXhVTEhSa2ZPeF9y?oc=5",
+       "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France has opened a cybercrime investigation into an attack on Maileva, a La Poste subsidiary.",
+     "text": "A Swiss journalist has been charged under banking law after reporting that exposed a major banking scandal, raising concerns over press freedom.",
      "sources": [
       {
-       "key": "257a50825cc52e85",
-       "title": "Cyberattaque contre Maileva, filiale du groupe La Poste : une enquête ouverte et confiée à la Brigade de lutte contre la cybercriminalité",
-       "url": "https://www.lemonde.fr/pixels/article/2026/11/15/cyberattaque-contre-maileva-filiale-du-groupe-la-poste-une-enquete-ouverte-et-confiee-a-la-brigade-de-lutte-contre-la-cybercriminalite_6811036_4408996.html",
+       "key": "9ed57f1f2de74b9d",
+       "title": "En Suisse, l’inculpation inédite d’un journaliste via la loi sur les banques nourrit des inquiétudes",
+       "url": "https://www.lemonde.fr/les-decodeurs/article/2026/11/16/en-suisse-l-inculpation-inedite-d-un-journaliste-via-la-loi-sur-les-banques-nourrit-des-inquietudes_6811403_4355770.html",
        "source": "Le Monde",
        "via": null
       }
      ]
+    },
+    {
+     "text": "An investigation questions whether ECB President Christine Lagarde promoted her memoir despite an ethics warning.",
+     "sources": [
+      {
+       "key": "cfa623018f9bcff2",
+       "title": "‘Buy the book’: How Lagarde plugged her memoir despite ECB ethics warning - Follow the Money - Platform for investigative journalism",
+       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNN1ZXblNFU3JxV0cxN1ROVzMtVmE4ejVqMmxWT1NfTDZwck9FUmxfbUVIdTZPQXpWa0VlQmFUVzdoazJvQWVTVnZMQVJKWENVOGZaOTN2NzM2cEJhbkxKOGJ0aVdneGNJSHBuYW55M3d2T3NEY0JNU2dXdG14VUJXWXpzd2lDMW1qVWhPblNHRTJuMTJ2WEx2OUp3TndHWGZSMGhv?oc=5",
+       "source": "Follow the Money - Platform for investigative journalism",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "New Zealand’s non-life insurers retain a stable outlook, supported by regulatory reforms, benign catastrophe experience and favourable reinsurance pricing.",
+     "sources": [
+      {
+       "key": "eae9b997191c38c2",
+       "title": "Regulatory reforms, benign nat cat, favourable reinsurance pricing anchor stable outlook for New Zealand non-life insurers: AM Best - InsuranceAsia News",
+       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZ25sV0dBY1FuV3N6V20zOXNhdlpsejZiVVJPN3kxMy0xYW01WnNrTXptTXVNQmJsMzhJdTBMd20talRnb1cxUkQyU245SGNPV1lWRDVhbzZPbk9uemxZYXpZYmFUN0p2MGpKQnFpWnhyTExlTGt4ejM1S1BuSWZOWUZkTjJiWWlzWFh4ZWNZOGJjcjhpZ1ZzT3NHN3U3RVlTODEyVGplc1llSE9yeDlJY0NONFFzV2xKaXQtbXNRVXpHNEdQaTJtcjRUTDhWWmk4T1llcDhUUl9vRWFSTlQ1R2E1allMcVVuM3ZyQzJzNF8?oc=5",
+       "source": "InsuranceAsia News",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Italian robotics startup Mosaico raised €7.5 million to address AI data challenges, according to Sifted.",
+     "sources": [
+      {
+       "key": "0b56607ffd0ac56d",
+       "title": "Exclusive: Italian robotics startup Mosaico raises €7.5m to tackle AI’s data problem - Sifted",
+       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9xWDdmeC1RV2tQN3VDU0cxSXJQRG93aXAtQnJjNm9VUDFFbkNrUlhpNmlzR0YyS0xYdmJlc1JfenAwaTJfM2VZZnptZ3lOX2g2c1A4WXp5OXRMVkxFOVNqSkM0bXI2RmxoVjdYOFZITDhuZXZBV3dJZA?oc=5",
+       "source": "Sifted",
+       "via": "Google News"
+      }
+     ]
     }
    ],
    "items": [
     {
-     "url": "https://www.theguardian.com/world/2026/nov/15/iran-launches-drone-attacks-against-us-military-base-in-bahrain",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-15T17:36:09+00:00",
-     "new": true,
-     "key": "2b743f026fc35e84",
-     "title": "Iran launches drone attacks against US military base in Bahrain",
-     "summary": "Iranian strikes have cast further doubt on peace talks with Washington and raised the risk of escalation."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOVkhQYlBYSGp1OG16aUlIS0JBcWpXQnpYbDlDaVFqb0V4cG04dm9wbnptbW1WRnI1bmh2ck0tTmM2Vl9pYVN2dG5NVmpTM2liUG9JWDNkVTZPVUxQc0swQ3FuN3UyZ2tyanRHVENpeUQtbTl0Z3RYSlIzVFB3QnFtdzVvWURCWDlCVjhlclpUTlpWaVhxektwaEFtY2Z2ZGRUYmJ1Z0ozUW9jY0lSOURycDkxSktlRnc?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcFRFLTFjUUlGa0plMjBTUHVpcVFwMXkzbWR2MWs3TnBjSE9tLUJWb2Z1Szg3MV9ON010RmN1VXJMMTRaMG51Ynp3ZEJBRTdnRXB6MzF6b2RzXzhDQlZIMXFZZ3BOTWIyN1ZyRi1xQ2dCbVVMNWliS1lubWVkb2plalJGWQ?oc=5",
      "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
+     "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-15T16:10:10+00:00",
+     "published": "2026-11-16T05:32:00+00:00",
      "new": true,
-     "key": "a8db8ce71a91eb0e",
-     "title": "Estonia to close Russian border crossings after attempted arson attack",
-     "summary": "Estonia announced plans to close its border crossings with Russia after an attempted arson attack."
+     "key": "bc4e7b6caa27a267",
+     "title": "AI selloff resumes as Nvidia earnings loom",
+     "summary": "Reuters says AI-related selling has resumed ahead of Nvidia’s earnings."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSC1Vbm9ZWDVxQWFoSHk3aWN6WXpKVG1vNkRBWEktdnIzUGU0V0lfQWVySGZCNEROMDhHelRDVkhscDV2cm9qVXU4Ty1kYklOWi1hTXJ6b2JVc1ZSMk0tY3FBMGxzQ2M1aGpNbmZ5RC1JVVFqNXZtbFBtTFAxV0xQRkpBbXJmN2pQYjZpdkFIREpNMjF4NmVOVDRn?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-15T16:55:37+00:00",
-     "new": true,
-     "key": "c9abbb9b8e2a68fa",
-     "title": "US air travel disruptions continue into third day",
-     "summary": "US air travel disruptions have continued for a third day."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxONFBHRGhFVUVMRGtZTjJ0dXRaZE9JLWY0cEVhMUhMdDRmNzczeVpEaTFKVjVJMjR6RjlidUc1SGJNcWYtNjF2c0M3SE1HY1ZSc1NzeWR5VDRpdUJ4dHBYb2xWSEZKdXdUakdudjRGWC1TYWFTWlE0UW1NQ3JqY1FjOGNvMmlCZlFISGx0Vmg0cWhWYjIwTF9VMFdNSWF0cWV1UWswZS1HWERVVFFoUE5qYVBYNUpIazN5TGtQeG5zbWVMMktUcUZyWXNR?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOU3BQd2lUam5YX1RGekdqV203U1BmRzNUQnlhem10ajRycVpfTUYzRWtOM2h1ZDd5M2tvUnNXeG1VOHRGTEl4VkJsSUhuQk41UlcyNU1EZDJaSTNTd2NvM3lDUDV5NU95SUtxSHZaZEpjSnMxRGgtamUtb0lYWUtHMTFZZDBLblVaeXhVTEhSa2ZPeF9y?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-15T16:31:01+00:00",
+     "published": "2026-11-16T05:13:00+00:00",
      "new": true,
-     "key": "bf03e4345deac32b",
-     "title": "Apple bets on Siri AI apps for its smart glasses",
-     "summary": "Apple is positioning Siri apps as the main draw for its planned smart glasses."
+     "key": "727f5668e8dc5fd7",
+     "title": "Asian stocks brace for AI pressure and data",
+     "summary": "Asian markets face pressure from AI concerns as investors prepare for a batch of economic data."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdTlsNk9obzRYRlc2RGU5M2NfU0QycHljVTYySnd4eHJTUzRwa3N2Y2QzQmNWVm5RYnNlei1ybVJIZ3FTMG9RbV9PNkw0RERIcDRQSVMzNFYwX2ppWHVfdlg1WGc2amI4V3BLTVBvcktUeGtQREo1UVNqVjl5NUlVeDdvSHU4REtvSFZoVjVwclprVHppcVdzeDhXcVZfb0pRTWx4SGx5eERFZjhRM3lweWVYV0piX3JZ?oc=5",
-     "source": "The Information",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-15T16:30:00+00:00",
-     "new": true,
-     "key": "41d988376d902084",
-     "title": "Chinese energy company advances AI power technology",
-     "summary": "The Information reports that a Chinese energy company is outpacing the US in AI power technology."
-    },
-    {
-     "url": "https://www.lemonde.fr/pixels/article/2026/11/15/cyberattaque-contre-maileva-filiale-du-groupe-la-poste-une-enquete-ouverte-et-confiee-a-la-brigade-de-lutte-contre-la-cybercriminalite_6811036_4408996.html",
+     "url": "https://www.lemonde.fr/les-decodeurs/article/2026/11/16/en-suisse-l-inculpation-inedite-d-un-journaliste-via-la-loi-sur-les-banques-nourrit-des-inquietudes_6811403_4355770.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-11-15T16:40:29+00:00",
+     "published": "2026-11-16T05:00:08+00:00",
      "new": true,
-     "key": "257a50825cc52e85",
-     "title": "Cyberattack on La Poste subsidiary Maileva prompts investigation",
-     "summary": "French authorities have opened a cybercrime investigation into an attack on Maileva, a La Poste subsidiary."
+     "key": "9ed57f1f2de74b9d",
+     "title": "Swiss journalist charged under banking law, raising concerns",
+     "summary": "Swiss journalist Lukas Hässig was charged under banking law after reporting that exposed a major banking scandal."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVGladEJOQmtqRldzTHdlQ25Fb3pCREJuYmthQTgzclB5Snl6WWFmaXdtWU1KU1NqVGhTZzIyakttSVpxR0p3MVlGU1pBcjhjRjVkVl9wNGU5OS1kOUJkeXRobzlOSjlMUkVPTWkxbmdib3Bna3ZoRVRoM1RybkQ2NE92ZWZTMjBuNF80a1lhVENxQUhTU2hkY0QzaTU0NGc?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNN1ZXblNFU3JxV0cxN1ROVzMtVmE4ejVqMmxWT1NfTDZwck9FUmxfbUVIdTZPQXpWa0VlQmFUVzdoazJvQWVTVnZMQVJKWENVOGZaOTN2NzM2cEJhbkxKOGJ0aVdneGNJSHBuYW55M3d2T3NEY0JNU2dXdG14VUJXWXpzd2lDMW1qVWhPblNHRTJuMTJ2WEx2OUp3TndHWGZSMGhv?oc=5",
+     "source": "Follow the Money - Platform for investigative journalism",
+     "feed_name": "Topic: European Central Bank",
      "via": "Google News",
-     "published": "2026-11-15T16:25:13+00:00",
+     "published": "2026-11-16T05:00:00+00:00",
      "new": true,
-     "key": "2b1bd691cabd5295",
-     "title": "Bessent says Nvidia must look outside company for new CEO",
-     "summary": "US Treasury Secretary Scott Bessent said Nvidia must look outside the company to find a new CEO."
+     "key": "cfa623018f9bcff2",
+     "title": "Lagarde promoted memoir despite ECB ethics warning, investigation says",
+     "summary": "Follow the Money investigates whether Christine Lagarde promoted her memoir despite an ECB ethics warning."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZ25sV0dBY1FuV3N6V20zOXNhdlpsejZiVVJPN3kxMy0xYW01WnNrTXptTXVNQmJsMzhJdTBMd20talRnb1cxUkQyU245SGNPV1lWRDVhbzZPbk9uemxZYXpZYmFUN0p2MGpKQnFpWnhyTExlTGt4ejM1S1BuSWZOWUZkTjJiWWlzWFh4ZWNZOGJjcjhpZ1ZzT3NHN3U3RVlTODEyVGplc1llSE9yeDlJY0NONFFzV2xKaXQtbXNRVXpHNEdQaTJtcjRUTDhWWmk4T1llcDhUUl9vRWFSTlQ1R2E1allMcVVuM3ZyQzJzNF8?oc=5",
+     "source": "InsuranceAsia News",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-11-16T05:11:38+00:00",
+     "new": true,
+     "key": "eae9b997191c38c2",
+     "title": "New Zealand non-life insurers retain stable outlook",
+     "summary": "AM Best cites regulatory reforms, benign catastrophe experience and favourable reinsurance pricing as supports for the sector’s stable outlook."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9xWDdmeC1RV2tQN3VDU0cxSXJQRG93aXAtQnJjNm9VUDFFbkNrUlhpNmlzR0YyS0xYdmJlc1JfenAwaTJfM2VZZnptZ3lOX2g2c1A4WXp5OXRMVkxFOVNqSkM0bXI2RmxoVjdYOFZITDhuZXZBV3dJZA?oc=5",
+     "source": "Sifted",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-16T05:03:02+00:00",
+     "new": true,
+     "key": "0b56607ffd0ac56d",
+     "title": "Italian robotics startup Mosaico raises €7.5 million",
+     "summary": "Mosaico raised €7.5 million to tackle AI’s data problem, Sifted reports."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-15T18:01:26.124366+00:00",
-   "input_fingerprint": "sha256:49cb7adc2f7dacab71e9c6844252af81271f334a40759df659e7280760d02caf",
-   "last_success_at": "2026-11-15T18:01:26.124366+00:00",
-   "candidate_count": 357,
-   "new_count": 7
+   "source_checked_at": "2026-11-16T06:01:26.596093+00:00",
+   "input_fingerprint": "sha256:b9e4116205c09fc8bfe05a7820a4059d77da44af3d83d9a9344b414802d6cb33",
+   "last_success_at": "2026-11-16T06:01:26.596093+00:00",
+   "candidate_count": 370,
+   "new_count": 6
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG winger Khvicha Kvaratskhelia says a ruptured ACL in his right knee will keep him out for several months.",
+     "text": "France beat Turkey to qualify for the Nations League quarter-finals and finish top of their group, though the performance still raised questions about defensive control.",
      "sources": [
       {
-       "key": "e968b14c7c98bdf0",
-       "title": "Kvaratskhelia dévoile lui-même sa longue durée d'indisponibilité",
-       "url": "https://www.culturepsg.com/news/infirmerie/kvaratskhelia-devoile-lui-meme-sa-longue-duree-d-indisponibilite/61552",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Senny Mayulu has made his France debut, coming on in Thursday’s 3–1 win in Italy; he reflected on the milestone.",
-     "sources": [
-      {
-       "key": "e918ca4f8ae5b5e4",
-       "title": "Mayulu remercie deux personnes après sa première en Bleu",
-       "url": "https://www.culturepsg.com/news/selections/mayulu-remercie-deux-personnes-apres-sa-premiere-en-bleu/61554",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "France face Turkey in their final Nations League group match, with a Parisian included in press predictions for the France lineup.",
-     "sources": [
-      {
-       "key": "8caaa4a77f05ba7d",
-       "title": "Les compositions de France/Turquie selon la presse avec un Parisien",
-       "url": "https://www.culturepsg.com/news/selections/les-compositions-de-france-turquie-selon-la-presse-avec-un-parisien/61549",
-       "source": "CulturePSG",
-       "via": null
+       "key": "8d074289f7d0ddec",
+       "title": "Ligues des nations : l'équipe de France bat la Turquie et se qualifie en quarts malgré la blessure de Maignan - RTL",
+       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQbVdqbGYta1NyODVZeE83N3NyNUs3Z01TMmNCNUpoRFkzQUZkSnlhVkJPTUFBREFLUmFDZ0ZabGtyd3FpeU5EclVFVHYtZEhVNjIzV3I4MkJ1M3ZnTGdJcUNwRE5WTlV5cTc1d0x3S253aW5FUXdJQno5THdMblJmWWxqU1hkeDI4LWE1NGU1RWd6MzV3MzRTdlZLSkVWOXo1UUVQdHFrOEFFOFA2d3MzZG1mSnk3TFpja1NVZjluTVF4UWhmbjRpZkE4TEM1bVVadzhFZ1lhbFRwUUN5Y1puMU91dGE?oc=5",
+       "source": "RTL",
+       "via": "Google News"
       },
       {
-       "key": "787d26857ad6a0d5",
-       "title": "France - Turquie, Ligue des nations A, match en direct le 15/11/2026 - L'Équipe",
-       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZUZaS2ZFZURJdDgzT0o3dTRiLUdiaG1NNk5rUVktckpNV3plVU9ON3dXa2tLNl9samNzWUF2dWNYeGJXX1pkLXZJZVFpSmNJMFZZNE5lNDVLX2o2V0l5OTJyZEZjRy1YLUd6YkE4aUFlU0NwSnF6alcxSGlETVpLNHZuNVdEODNrci14V0I5QV9McmZTcmc4MmZiSEg?oc=5",
+       "key": "876b1fc35a746d7d",
+       "title": "Après France-Turquie, Zinédine Zidane et le staff des Bleus n'ont pas plus de certitudes en défense",
+       "url": "https://www.lequipe.fr/Football/Article/Apres-france-turquie-zinedine-zidane-et-le-staff-des-bleus-n-ont-pas-plus-de-certitudes-en-defense/1743927#at_medium=RSS_feeds",
        "source": "L'Équipe",
-       "via": "Google News"
+       "via": null
       }
      ]
     },
     {
-     "text": "France and New Zealand are joint leaders after the fifth round of the rugby Nations Championship.",
+     "text": "France’s rugby side produced an upset against South Africa, with Antoine Dupont also earning praise for his return to form.",
      "sources": [
       {
-       "key": "3af557f5b5f80155",
-       "title": "Rugby, Championnat des nations : les Bleus et les All Blacks en tête… Découvrez le classement à l’issue de la 5e journée - Le Figaro",
-       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNX1M4ZUxZdG1HRm9xSWFaeHVZbUFHTjltSTB6WTNOSlZ0OWppX0ZJTTVxUzZmNnJHcFZPSlRvT0N2TWhjWG5Yc3U1NGV4OE5aNkNPa01yRnh6UjBPTGlHMThIYVJYcU5jQ0JhWllqX1hzTDRqd3RCU2lJNzAzbXg1dS1mUXQtaDVLUVBfVFg5VVkwbzZDZG05YU92Uk9DVDlvVlFoeFQyOEVveFF5MW1hWkpOaG5NLUxSbUFQYi02V3pMOFpfRmNzU256UTlscm5NZDlwcmxCUjF6Smt0eF96dHhfYWVjb0RXT2gtRVNVOTlCSXZo?oc=5",
+       "key": "13ad82b00ebf23dc",
+       "title": "France-Afrique du Sud : les leçons de l’exploit des Bleus face aux Springboks - Le Figaro",
+       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNWg5R3pjVlc2bkNWNWdFbl8tanRpTC15TG83c1ZNQ0JwRmFkd2IzOVlVdmJiWVNtVDF2d3ZiVG9HUjY2dEpPaXE5LVdRN2p6MW41bVJXdVJWaDU4M1Nab3FQbjZhNzRhQW96UFdtcGpGTEtWUnJZSEFweWdNaThKY0tiWExCem9iNmtKSDdQaTNycVpDSWVqZnZoOEJSTFJPNWhPRXpNd1F1Wkk3ZEdnVTZDT0ZNVGUzSnlkV1c1YW5kdjRZck9mRlRqSVZIeEU?oc=5",
        "source": "Le Figaro",
        "via": "Google News"
+      },
+      {
+       "key": "7215529e0dc40acf",
+       "title": "« Pour moi, c’est le GOAT » : Antoine Dupont, de retour au sommet du jeu avec le XV de France - Sud Ouest",
+       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOWnA2X2xQTlEtS0xoVHFnMzdMSDRVTG1oNHN0eVVqVXpZeTJNdmJaX1NockF0VjAzemk1SzhrWWpPNGFFd1NmcHhGSkhDXzl4NTFYXy1hYWhpR2VjbHhleGxjRlJNN1RKMXRaYXBVa0IxSWtxNVQ1QlZNbXE3c1YzZUpRLUZubEd0V0lHQUNaTDkyYk5oWWZOWktHZVUzVFBlc1NLcGMxLUVGNVJrRDFrek9QdU9PaXgxZGVqemJHbU1CMlRTMXVkVXJxQThLYkF5ZWZKaXdYQ3lOTWdoWloteg?oc=5",
+       "source": "Sud Ouest",
+       "via": "Google News"
       }
      ]
     },
     {
-     "text": "HLTV has announced its 2026 Hall of Fame class, including Ksharp, solo, NEO and dupreeh.",
+     "text": "PSG’s Désiré Doué missed France’s match against Turkey after a dental injury sustained in Italy; the report says the issue was not the tooth itself.",
      "sources": [
       {
-       "key": "3f73106baf7120d7",
-       "title": "Ksharp, solo, NEO and dupreeh to enter Hall of Fame",
-       "url": "https://www.hltv.org/news/45987/ksharp-solo-neo-and-dupreeh-to-enter-hall-of-fame",
-       "source": "HLTV",
+       "key": "d98ff5304eab2a34",
+       "title": "Doué forfait pour France/Turquie, mais pas pour sa dent",
+       "url": "https://www.culturepsg.com/news/selections/doue-forfait-pour-france-turquie-mais-pas-pour-sa-dent/61556",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "England beat Spain 3–2 in the Nations League, in a match involving PSG’s Fabián Ruiz and Ferran Torres for Spain.",
+     "sources": [
+      {
+       "key": "b348848a28c4f747",
+       "title": "Nations League highlights: Spain 2-3 England - UEFA.com",
+       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUHpTVUUySkFicEdMajZLbGt1c1NKVHZBUVdfX3F5alVyWkUzMkpoaTVUNjJrU3VoTDZzS1hjSHJQMmhpbXZFSGlZdTVMc1lhSnNfRjlyWUk1S1g3cF8zYXZTZWo5bzl4dXp2ZTdyZGNlZ1JaQ1FBS3h5UlZvVHduSlJrN0hYUGc4Zy1fUklCOHBXNmlYbXBWYXN5SmxPOXgzaV9oZUh3MTRkZWppQ3ZrcUJhY1Y4dHBnWnhyQ2NhVHhlam9nTll0QmRYTEI0T0IwczFV?oc=5",
+       "source": "UEFA.com",
+       "via": "Google News"
+      },
+      {
+       "key": "45d1078be677f5df",
+       "title": "Espagne/Angleterre, le résumé video du gros match du soir",
+       "url": "https://www.culturepsg.com/news/selections/espagne-angleterre-le-resume-video-du-gros-match-du-soir/61557",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Como midfielder Lucas Da Cunha played both France matches in full during the international break, operating as the holding midfielder.",
+     "sources": [
+      {
+       "key": "4553b321196fdbcd",
+       "title": "Lucas Da Cunha, qui a joué 180 minutes en trois jours avec les Bleus, s'est installé au poste de sentinelle",
+       "url": "https://www.lequipe.fr/Football/Article/Lucas-da-cunha-qui-a-dispute-les-deux-matches-des-bleus-dans-leur-integralite-lors-de-ce-rassemblement-s-est-installe-au-poste-de-sentinelle/1743931#at_medium=RSS_feeds",
+       "source": "L'Équipe",
        "via": null
       }
      ]
@@ -982,260 +1015,234 @@
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/selections/mayulu-remercie-deux-personnes-apres-sa-premiere-en-bleu/61554",
+     "url": "https://www.culturepsg.com/news/selections/doue-forfait-pour-france-turquie-mais-pas-pour-sa-dent/61556",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-15T14:20:00+00:00",
+     "published": "2026-11-15T18:39:00+00:00",
      "new": true,
-     "key": "e918ca4f8ae5b5e4",
-     "title": "Mayulu reflects on France debut",
-     "summary": "Senny Mayulu made his France debut in Thursday’s 3–1 win in Italy and spoke about the milestone."
+     "key": "d98ff5304eab2a34",
+     "title": "Doué misses France-Turkey after dental injury",
+     "summary": "Désiré Doué was left out of France’s matchday squad for Turkey after a dental injury sustained in Italy."
     },
     {
-     "url": "https://www.culturepsg.com/news/selections/les-compositions-de-france-turquie-selon-la-presse-avec-un-parisien/61549",
+     "url": "https://www.culturepsg.com/news/selections/espagne-angleterre-le-resume-video-du-gros-match-du-soir/61557",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-15T08:49:00+00:00",
+     "published": "2026-11-15T22:16:00+00:00",
      "new": true,
-     "key": "8caaa4a77f05ba7d",
-     "title": "Predicted lineups for France–Turkey include a PSG player",
-     "summary": "French media broadly agree on a predicted France lineup for the Nations League match against Turkey, including a Parisian."
+     "key": "45d1078be677f5df",
+     "title": "Espagne/Angleterre, le résumé video du gros match du soir",
+     "summary": "En Ligue des Nations, l'Espagne de Fabian Ruiz et Ferran Torres, l'un titulaire et l'autre non-utilisé, a vécu une soirée compliquée à domicile contre l'Angleterre avec la fin d'une série historique. Les deux Parisiens n'ont rien changé à la soirée, retrouvez ci-dessous le résumé video de cet…"
     },
     {
-     "url": "https://www.culturepsg.com/news/infirmerie/kvaratskhelia-devoile-lui-meme-sa-longue-duree-d-indisponibilite/61552",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-15T09:55:00+00:00",
-     "new": false,
-     "key": "e968b14c7c98bdf0",
-     "title": "Kvaratskhelia expects to miss several months",
-     "summary": "The PSG winger says a ruptured anterior cruciate ligament in his right knee will keep him out for several months."
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQbVdqbGYta1NyODVZeE83N3NyNUs3Z01TMmNCNUpoRFkzQUZkSnlhVkJPTUFBREFLUmFDZ0ZabGtyd3FpeU5EclVFVHYtZEhVNjIzV3I4MkJ1M3ZnTGdJcUNwRE5WTlV5cTc1d0x3S253aW5FUXdJQno5THdMblJmWWxqU1hkeDI4LWE1NGU1RWd6MzV3MzRTdlZLSkVWOXo1UUVQdHFrOEFFOFA2d3MzZG1mSnk3TFpja1NVZjluTVF4UWhmbjRpZkE4TEM1bVVadzhFZ1lhbFRwUUN5Y1puMU91dGE?oc=5",
+     "source": "RTL",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-11-16T05:32:17+00:00",
+     "new": true,
+     "key": "8d074289f7d0ddec",
+     "title": "France beat Turkey to qualify for Nations League quarter-finals",
+     "summary": "France beat Turkey, secured a quarter-final place and finished top of their Nations League group, despite Mike Maignan’s injury."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNX1M4ZUxZdG1HRm9xSWFaeHVZbUFHTjltSTB6WTNOSlZ0OWppX0ZJTTVxUzZmNnJHcFZPSlRvT0N2TWhjWG5Yc3U1NGV4OE5aNkNPa01yRnh6UjBPTGlHMThIYVJYcU5jQ0JhWllqX1hzTDRqd3RCU2lJNzAzbXg1dS1mUXQtaDVLUVBfVFg5VVkwbzZDZG05YU92Uk9DVDlvVlFoeFQyOEVveFF5MW1hWkpOaG5NLUxSbUFQYi02V3pMOFpfRmNzU256UTlscm5NZDlwcmxCUjF6Smt0eF96dHhfYWVjb0RXT2gtRVNVOTlCSXZo?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNWg5R3pjVlc2bkNWNWdFbl8tanRpTC15TG83c1ZNQ0JwRmFkd2IzOVlVdmJiWVNtVDF2d3ZiVG9HUjY2dEpPaXE5LVdRN2p6MW41bVJXdVJWaDU4M1Nab3FQbjZhNzRhQW96UFdtcGpGTEtWUnJZSEFweWdNaThKY0tiWExCem9iNmtKSDdQaTNycVpDSWVqZnZoOEJSTFJPNWhPRXpNd1F1Wkk3ZEdnVTZDT0ZNVGUzSnlkV1c1YW5kdjRZck9mRlRqSVZIeEU?oc=5",
      "source": "Le Figaro",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-15T17:17:36+00:00",
+     "published": "2026-11-16T05:30:00+00:00",
      "new": true,
-     "key": "3af557f5b5f80155",
-     "title": "France and New Zealand lead rugby Nations Championship",
-     "summary": "France and New Zealand are joint leaders after the competition’s fifth round."
+     "key": "13ad82b00ebf23dc",
+     "title": "France’s lessons from the win over South Africa",
+     "summary": "France’s rugby side defeated South Africa, prompting analysis of the lessons from the result."
     },
     {
-     "url": "https://www.hltv.org/news/45987/ksharp-solo-neo-and-dupreeh-to-enter-hall-of-fame",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-11-15T18:00:00+00:00",
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUHpTVUUySkFicEdMajZLbGt1c1NKVHZBUVdfX3F5alVyWkUzMkpoaTVUNjJrU3VoTDZzS1hjSHJQMmhpbXZFSGlZdTVMc1lhSnNfRjlyWUk1S1g3cF8zYXZTZWo5bzl4dXp2ZTdyZGNlZ1JaQ1FBS3h5UlZvVHduSlJrN0hYUGc4Zy1fUklCOHBXNmlYbXBWYXN5SmxPOXgzaV9oZUh3MTRkZWppQ3ZrcUJhY1Y4dHBnWnhyQ2NhVHhlam9nTll0QmRYTEI0T0IwczFV?oc=5",
+     "source": "UEFA.com",
+     "feed_name": "Team: Champions League",
+     "via": "Google News",
+     "published": "2026-11-16T04:24:03+00:00",
      "new": true,
-     "key": "3f73106baf7120d7",
-     "title": "HLTV announces 2026 Hall of Fame class",
-     "summary": "Ksharp, solo, NEO and dupreeh are among the inductees in HLTV’s 2026 Hall of Fame class."
+     "key": "b348848a28c4f747",
+     "title": "England beat Spain 3–2 in Nations League",
+     "summary": "England defeated Spain 3–2 in the Nations League."
+    },
+    {
+     "url": "https://www.lequipe.fr/Football/Article/Lucas-da-cunha-qui-a-dispute-les-deux-matches-des-bleus-dans-leur-integralite-lors-de-ce-rassemblement-s-est-installe-au-poste-de-sentinelle/1743931#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
+     "via": null,
+     "published": "2026-11-16T05:25:00+00:00",
+     "new": true,
+     "key": "4553b321196fdbcd",
+     "title": "Da Cunha plays both France matches in holding midfield",
+     "summary": "Como midfielder Lucas Da Cunha played every minute of France’s two matches in the holding-midfield role."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-15T18:01:26.124366+00:00",
-   "input_fingerprint": "sha256:8b5874efc60979bf21b7d1ba80d68dc9170e90ea8648e8737188dc73010cbd65",
-   "last_success_at": "2026-11-15T18:01:26.124366+00:00",
-   "candidate_count": 380,
-   "new_count": 4
+   "source_checked_at": "2026-11-16T06:01:26.596093+00:00",
+   "input_fingerprint": "sha256:bb18579532af75a8d14981e389c3f7e60873d6e928d7636ccc3647f3376d0369",
+   "last_success_at": "2026-11-16T06:01:26.596093+00:00",
+   "candidate_count": 350,
+   "new_count": 6
   },
   "finance": {
    "briefing": [
     {
-     "text": "A fresh escalation in the Gulf and drone strikes on Black Sea shipping raise geopolitical risk, though the candidates provide no market reaction to quantify.",
+     "text": "European banks’ expanding use of significant risk transfers is drawing a warning about forced deleveraging, a relevant risk for the structured-finance market.",
      "sources": [
       {
-       "key": "470e893f6855fae2",
-       "title": "Iran attacks Bahrain in escalation of Gulf hostilities - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPV1NnZUh3czlKU042ZUlRajRsMzFZdUN4WkwycmtaYVRTa3kycVB5ai04SGFWV2JvOURhSVNmSUE0VDdMUGk5VERpM0NjaUI0UmY5eUpTRmlEZFk4NWEyaFp1eDRoclkxVnBfcFh0YW13ejBybkRGdnE1VDhubnJjZk9zUko?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
-      },
-      {
-       "key": "f03f38d8ce32531b",
-       "title": "Three ships struck by drones in Black Sea near Romanian shipping canal, PM says - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOWEpyZzYwM3Y0YzMtU0h3LXZXb1RBQ00yS3lLZklVczJEOUVtcFU0MWYzRlNIMWxKN1RlMkZrSXZ3eFJkdjV4cTJuQVJBbVZob3JfYjdEbFotQ21iQzFQSHJYUE5VNUJDRDA0aV9OYy1qQTRVQ0EtOXJlSWQzWDV2VnpCRXdkQUpWSEhzUHVFWGstd2t4anhiMnZ4RHdVOHl4UjkxYjdWVmI0LTF3b2x1UTZJdGotUGU5bXkwVUF6N2IwY3g4S2lxbVNvM0kyZVBoTmR5YQ?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "European equity optimism is being questioned by State Street and Pictet, a relevant counterpoint to the flat Stoxx 600 close in your portfolio snapshot.",
-     "sources": [
-      {
-       "key": "b6d46fe091be49a0",
-       "title": "State Street, Pictet Call Time on Europe’s Stock Market Rally - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMV9OTzctbzluVS1TekxzVnM1UlRVYmFzV0l6aWt5NW1xcDRoQzRvNW4xTGxzTWZLeF9rVDkzbWJITUJNU2Q2SHJ4ZHZHdG1UNEw0X25GN0c0VEhQVllvVDk3bXZvSENDVnYyeUhXSWZlSlE2YXJ3d0dKeG5CajY3RHRDcE02bnM5RVBRTXJ4dXZfWnNjR1N0azdsT2ZtV1RnV3Q2UWZMTVBDVEVyVy1ZZA?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Emerging-market bond issuance has slumped, supporting prices for outstanding debt; the report points to a supply-driven market dynamic rather than stronger fundamentals.",
-     "sources": [
-      {
-       "key": "f7a77b7dd2706572",
-       "title": "Bond Drought in Emerging Markets Lifts Prices as Sales Slump 41% - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbm16MVNnOTJvY2hpMU1mbmlVMDhfLWNoSjI1Q0hPLUdvU2hkSF9QVzBmMkZ2UmNYcTdHS3p5dDE3NWxzVlpsd0tCVlhOTUlQaEFzaC1JWTg0N0R0cFNFVWxPYVBMOUZjWUc1N243WlY5RWlJTVNxWWV2VVhBV2dUczVucXpQbm5BZVl2alptOEVwTVNmRzJqLUQwb01HVlJuXzdEclQ1MkR6QXRYNGZ5enljd0U?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The crypto sell-off is accompanied by seven consecutive days of Bitcoin ETF outflows, totalling about $2.1bn in November so far.",
-     "sources": [
-      {
-       "key": "6b9bc01db1f692ab",
-       "title": "Bitcoin ETFs Lose $2.1 Billion in November as Outflow Streak Hits Seven Days",
-       "url": "https://decrypt.co/383282/bitcoin-etfs-lose-2-1-billion-november-outflow-streak-seven-days?.tsrc=rss",
-       "source": "Bitcoin",
-       "via": null
-      },
-      {
-       "key": "d4e5952ed9924475",
-       "title": "Crypto’s Slow-Motion Selloff Leaves Traders Weary and Hopeless",
-       "url": "https://finance.yahoo.com/markets/crypto/articles/crypto-slow-motion-selloff-leaves-051027792.html?.tsrc=rss",
-       "source": "Bitcoin",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "UK businesses face a projected rise in electricity bills by decade-end, a cost pressure worth watching for energy-intensive commercial clients.",
-     "sources": [
-      {
-       "key": "bd47e970c1cedc7f",
-       "title": "UK businesses facing big rise in electricity bills by end of decade - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcVQ1MEd5YndUeUpaWkRGbGdzZVBtWDB0RWcwRmlVelMyMzdYQzhLX2Qwc29VNE10aVBPSHVJVlFPUFJjZ2dHNVdCRVpiT1dKSzNTeEMzWi1JcHRmVXJ2VUxnT2l0WmxxNFJlZURNbkxrYTRuUVJGcFVWYjlSa0J3X3Vlc2Q?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The UK housebuilding crunch and Hong Kong developer New World’s heavily discounted $3.2bn rights issue highlight property-sector stress in two distinct markets.",
-     "sources": [
-      {
-       "key": "c5a1022420f64c3e",
-       "title": "Britain’s self-inflicted housebuilding crunch - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOd21Ma3ZudHl5NkZmbjROVVlnMmlPOC11TDVYdmxTaVdXdURZUHBfNUd3QmZIckFpQ3A3X1ZSQlo3blhlOXZkUG5oQ25GRjV1NTBiUUhaWldSSnJKN05BVHFTSi1UX1YyQ1Mwb2hQYTBlamdKT1hqV1NPMlVPdE1ib1ZVUjI?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
-      },
-      {
-       "key": "0dfd7c5effc384a6",
-       "title": "Hong Kong developer New World unveils $3.2bn rights issue",
-       "url": "https://www.ft.com/content/9daa3a26-c49c-4c94-91af-0d4c2116d2e4?syn-25a6b1a6=1",
+       "key": "d07cc3925dcfcea2",
+       "title": "European banks’ risk transfer boom raises exposure to ‘forced deleveraging’",
+       "url": "https://www.ft.com/content/3b6cccb1-cac2-4e64-a2c2-3b3801f9a5fb?syn-25a6b1a6=1",
        "source": "FT Markets",
        "via": null
+      }
+     ]
+    },
+    {
+     "text": "China’s October activity weakened more than expected, while Japan’s economy contracted; the data add to pressure on regional growth and monetary-policy decisions.",
+     "sources": [
+      {
+       "key": "1b559288bc225098",
+       "title": "China’s economic activity slows more than expected in October",
+       "url": "https://www.ft.com/content/7a6f84cf-ebea-4225-a31a-571fb877286a?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      },
+      {
+       "key": "a623f5871763c23d",
+       "title": "Japan’s economy contracts for the first time in a year",
+       "url": "https://www.ft.com/content/4eb7ff18-1ba3-4944-ad48-bdc9e5ddc84e?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Markets are entering the week wary of AI-related pressure, with Asian stocks bracing for a data-heavy slate; US equities and broad global holdings were down in your snapshot.",
+     "sources": [
+      {
+       "key": "727f5668e8dc5fd7",
+       "title": "Asian Stocks Brace for AI Pressure, Data Dump: Markets Wrap - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOU3BQd2lUam5YX1RGekdqV203U1BmRzNUQnlhem10ajRycVpfTUYzRWtOM2h1ZDd5M2tvUnNXeG1VOHRGTEl4VkJsSUhuQk41UlcyNU1EZDJaSTNTd2NvM3lDUDV5NU95SUtxSHZaZEpjSnMxRGgtamUtb0lYWUtHMTFZZDBLblVaeXhVTEhSa2ZPeF9y?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The EU is preparing a proposed €45bn loan for Ukraine, backed by borrowing against the EU budget, to help cover next year’s funding gap.",
+     "sources": [
+      {
+       "key": "0e618c87dc4699b4",
+       "title": "Brussels to propose €45bn Ukraine loan borrowed against EU budget",
+       "url": "https://www.ft.com/content/2c9de06b-aa86-4275-b9f3-1276f8c20994?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Copper fell to a four-month low amid the technology-sector rout and China growth concerns, pointing to softer sentiment across industrial commodities.",
+     "sources": [
+      {
+       "key": "b054ea1ece2a7add",
+       "title": "Copper Sinks to Four-Month Low on Tech Rout, China Growth Woes - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWjdpOC1tNy1RZ2I5cnVybXA2SmJtbUdZVmhrVUoyLXIyQVZPVXU5dnMzLWhna0VkT2xIYVhLRTc2SE52cDdRd1BFeU5lNHc4WjZMZUxoSFRIeXM2WDJRclRiMUl5Y2p2Z3N1RjhEcGpXY3IxLU1JamZoYTBaekVYcDAxSFpoTzNvdHVCSWVjd2RYcnYzZWU1X0JaWGswRUw3ckxtbnhISFJ6Z2F2blY3Q3Bn?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPV1NnZUh3czlKU042ZUlRajRsMzFZdUN4WkwycmtaYVRTa3kycVB5ai04SGFWV2JvOURhSVNmSUE0VDdMUGk5VERpM0NjaUI0UmY5eUpTRmlEZFk4NWEyaFp1eDRoclkxVnBfcFh0YW13ejBybkRGdnE1VDhubnJjZk9zUko?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-15T10:50:05+00:00",
-     "new": true,
-     "key": "470e893f6855fae2",
-     "title": "Iran attacks Bahrain as Gulf hostilities escalate",
-     "summary": "Iran’s attacks on Bahrain mark an escalation in Gulf hostilities."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOWEpyZzYwM3Y0YzMtU0h3LXZXb1RBQ00yS3lLZklVczJEOUVtcFU0MWYzRlNIMWxKN1RlMkZrSXZ3eFJkdjV4cTJuQVJBbVZob3JfYjdEbFotQ21iQzFQSHJYUE5VNUJDRDA0aV9OYy1qQTRVQ0EtOXJlSWQzWDV2VnpCRXdkQUpWSEhzUHVFWGstd2t4anhiMnZ4RHdVOHl4UjkxYjdWVmI0LTF3b2x1UTZJdGotUGU5bXkwVUF6N2IwY3g4S2lxbVNvM0kyZVBoTmR5YQ?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-15T12:49:16+00:00",
-     "new": true,
-     "key": "f03f38d8ce32531b",
-     "title": "Drone strikes hit three ships in the Black Sea",
-     "summary": "Romania’s prime minister said three ships were struck by drones near a shipping canal."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMV9OTzctbzluVS1TekxzVnM1UlRVYmFzV0l6aWt5NW1xcDRoQzRvNW4xTGxzTWZLeF9rVDkzbWJITUJNU2Q2SHJ4ZHZHdG1UNEw0X25GN0c0VEhQVllvVDk3bXZvSENDVnYyeUhXSWZlSlE2YXJ3d0dKeG5CajY3RHRDcE02bnM5RVBRTXJ4dXZfWnNjR1N0azdsT2ZtV1RnV3Q2UWZMTVBDVEVyVy1ZZA?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-15T08:00:00+00:00",
-     "new": true,
-     "key": "b6d46fe091be49a0",
-     "title": "State Street and Pictet question Europe’s stock rally",
-     "summary": "State Street and Pictet have called time on Europe’s stock-market rally."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbm16MVNnOTJvY2hpMU1mbmlVMDhfLWNoSjI1Q0hPLUdvU2hkSF9QVzBmMkZ2UmNYcTdHS3p5dDE3NWxzVlpsd0tCVlhOTUlQaEFzaC1JWTg0N0R0cFNFVWxPYVBMOUZjWUc1N243WlY5RWlJTVNxWWV2VVhBV2dUczVucXpQbm5BZVl2alptOEVwTVNmRzJqLUQwb01HVlJuXzdEclQ1MkR6QXRYNGZ5enljd0U?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-15T12:30:00+00:00",
-     "new": true,
-     "key": "f7a77b7dd2706572",
-     "title": "Emerging-market bond issuance slump lifts prices",
-     "summary": "Emerging-market bond sales fell 41%, helping lift prices as issuance dried up."
-    },
-    {
-     "url": "https://decrypt.co/383282/bitcoin-etfs-lose-2-1-billion-november-outflow-streak-seven-days?.tsrc=rss",
-     "source": "Bitcoin",
-     "feed_name": "Bitcoin",
-     "via": null,
-     "published": "2026-11-15T14:01:02+00:00",
-     "new": true,
-     "key": "6b9bc01db1f692ab",
-     "title": "Bitcoin ETFs see $2.1bn November outflows",
-     "summary": "Spot Bitcoin ETFs recorded seven straight days of outflows, bringing November withdrawals to about $2.1bn."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcVQ1MEd5YndUeUpaWkRGbGdzZVBtWDB0RWcwRmlVelMyMzdYQzhLX2Qwc29VNE10aVBPSHVJVlFPUFJjZ2dHNVdCRVpiT1dKSzNTeEMzWi1JcHRmVXJ2VUxnT2l0WmxxNFJlZURNbkxrYTRuUVJGcFVWYjlSa0J3X3Vlc2Q?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-15T14:29:01+00:00",
-     "new": true,
-     "key": "bd47e970c1cedc7f",
-     "title": "UK businesses face higher electricity bills",
-     "summary": "UK businesses are facing a major increase in electricity bills by the end of the decade."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOd21Ma3ZudHl5NkZmbjROVVlnMmlPOC11TDVYdmxTaVdXdURZUHBfNUd3QmZIckFpQ3A3X1ZSQlo3blhlOXZkUG5oQ25GRjV1NTBiUUhaWldSSnJKN05BVHFTSi1UX1YyQ1Mwb2hQYTBlamdKT1hqV1NPMlVPdE1ib1ZVUjI?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-15T12:00:05+00:00",
-     "new": true,
-     "key": "c5a1022420f64c3e",
-     "title": "Britain’s housebuilding crunch",
-     "summary": "The Financial Times examines Britain’s housebuilding crunch."
-    },
-    {
-     "url": "https://www.ft.com/content/9daa3a26-c49c-4c94-91af-0d4c2116d2e4?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/3b6cccb1-cac2-4e64-a2c2-3b3801f9a5fb?syn-25a6b1a6=1",
      "source": "FT Markets",
      "feed_name": "FT Markets",
      "via": null,
-     "published": "2026-11-15T15:24:52+00:00",
+     "published": "2026-11-16T05:00:22+00:00",
      "new": true,
-     "key": "0dfd7c5effc384a6",
-     "title": "Hong Kong developer New World launches $3.2bn rights issue",
-     "summary": "New World priced its rights issue at an 82% discount as it seeks to reduce debt."
+     "key": "d07cc3925dcfcea2",
+     "title": "European banks’ risk-transfer boom raises forced-deleveraging concerns",
+     "summary": "S&P warns that banks’ growing reliance on significant risk transfers to support returns and lending could increase exposure to forced deleveraging."
+    },
+    {
+     "url": "https://www.ft.com/content/7a6f84cf-ebea-4225-a31a-571fb877286a?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-16T04:38:02+00:00",
+     "new": true,
+     "key": "1b559288bc225098",
+     "title": "China’s economic activity slows more than expected",
+     "summary": "October activity weakened more than expected, prompting Beijing to accelerate budget spending to support growth."
+    },
+    {
+     "url": "https://www.ft.com/content/4eb7ff18-1ba3-4944-ad48-bdc9e5ddc84e?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-16T04:59:28+00:00",
+     "new": true,
+     "key": "a623f5871763c23d",
+     "title": "Japan’s economy contracts for the first time in a year",
+     "summary": "Weak consumer spending and heavy rainfall contributed to contraction and complicated interest-rate plans."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOU3BQd2lUam5YX1RGekdqV203U1BmRzNUQnlhem10ajRycVpfTUYzRWtOM2h1ZDd5M2tvUnNXeG1VOHRGTEl4VkJsSUhuQk41UlcyNU1EZDJaSTNTd2NvM3lDUDV5NU95SUtxSHZaZEpjSnMxRGgtamUtb0lYWUtHMTFZZDBLblVaeXhVTEhSa2ZPeF9y?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-16T05:13:00+00:00",
+     "new": true,
+     "key": "727f5668e8dc5fd7",
+     "title": "Asian stocks brace for AI pressure and data releases",
+     "summary": "Markets entered the week wary of AI-related pressure and a busy schedule of data releases."
+    },
+    {
+     "url": "https://www.ft.com/content/2c9de06b-aa86-4275-b9f3-1276f8c20994?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-16T05:00:22+00:00",
+     "new": true,
+     "key": "0e618c87dc4699b4",
+     "title": "EU plans €45bn Ukraine loan backed by its budget",
+     "summary": "Brussels plans to propose borrowing against the EU budget to help bridge Kyiv’s funding gap next year."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWjdpOC1tNy1RZ2I5cnVybXA2SmJtbUdZVmhrVUoyLXIyQVZPVXU5dnMzLWhna0VkT2xIYVhLRTc2SE52cDdRd1BFeU5lNHc4WjZMZUxoSFRIeXM2WDJRclRiMUl5Y2p2Z3N1RjhEcGpXY3IxLU1JamZoYTBaekVYcDAxSFpoTzNvdHVCSWVjd2RYcnYzZWU1X0JaWGswRUw3ckxtbnhISFJ6Z2F2blY3Q3Bn?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-16T03:55:00+00:00",
+     "new": true,
+     "key": "b054ea1ece2a7add",
+     "title": "Copper sinks to a four-month low",
+     "summary": "Copper fell amid a technology-sector rout and concerns about China’s growth."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSTlsTGpib2E2Sm9JYXBzRlBxWTZNbGFEWHhjaHk3MG5ab1VybmtNNlAyaWtWYnFranRoZFRWNmY1clprM3lzeXJETGtTRW5oeldDa0NqdFJrWF9SZWkwUUZnSnNoVXJBcTk3ZmVNODB6Z21ZMVJLejZPSjI5S0pybXByY1hJNGEtWm5mNmVqZlJzVGxrblBCdVBiQVFNQQ?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-16T03:51:00+00:00",
+     "new": true,
+     "key": "df3d67086af964aa",
+     "title": "Oil steadies as markets watch Iran-related tensions",
+     "summary": "Oil prices steadied with an alleged Iranian attack on a Bahrain base in focus."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-15T18:01:26.124366+00:00",
-   "input_fingerprint": "sha256:69ca6961c2afaadce718415486ee50f8c457bd121fe3b31afc68b47bea5bea73",
-   "last_success_at": "2026-11-15T18:01:26.124366+00:00",
+   "source_checked_at": "2026-11-16T06:01:26.596093+00:00",
+   "input_fingerprint": "sha256:2bb44a7194cde16f6b894875649d521933734b9e2139e3bd33542a9ff1fef5bf",
+   "last_success_at": "2026-11-16T06:01:26.596093+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1328,10 +1335,10 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 64530.37,
-     "change_pct": 0.63,
+     "price": 64374.08,
+     "change_pct": 0.38,
      "currency": "USD",
-     "as_of": "2026-11-15T00:00:00+00:00",
+     "as_of": "2026-11-16T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1339,41 +1346,21 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1812.87,
-     "change_pct": 2.47,
+     "price": 1810.42,
+     "change_pct": 2.33,
      "currency": "USD",
-     "as_of": "2026-11-15T00:00:00+00:00",
+     "as_of": "2026-11-16T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 107,
-   "new_count": 8
+   "candidate_count": 134,
+   "new_count": 7
   },
   "media": {
    "briefing": "",
    "items": [
-    {
-     "title": "Russia Just Tried An Armored Assault (Didn't Work)",
-     "url": "https://www.youtube.com/watch?v=-9p2rRg1moc",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-14T19:00:12+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "0c369ba4ec2d85c4"
-    },
-    {
-     "title": "Recognize anyone in this photo?",
-     "url": "https://www.youtube.com/shorts/3YAkor0ykpM",
-     "source": "The Christo Files",
-     "kind": "video",
-     "published": "2026-11-13T19:23:57+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "df41ac19042ef7cb"
-    },
     {
      "title": "The avalanche that hit math is coming for AI development",
      "url": "https://www.dwarkesh.com/p/rsi",
@@ -1383,24 +1370,14 @@
      "duration_s": 2666,
      "new": false,
      "key": "80a7173f8db2c112"
-    },
-    {
-     "title": "Ukrainian Drones Forced a Major Russian Accident",
-     "url": "https://www.youtube.com/watch?v=UyBPx1RlmiA",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-12T23:00:34+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "be8d1cc2c6b21440"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-15T18:01:26.124366+00:00",
-   "candidate_count": 4,
+   "source_checked_at": "2026-11-16T06:01:26.596093+00:00",
+   "candidate_count": 1,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-15T18:00:00.000Z"
+ "scheduled_slot": "2026-11-16T06:00:00.000Z"
 }
