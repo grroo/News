@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261117T060130386179Z",
- "generated_at": "2026-11-17T06:01:30.386179+00:00",
- "generated_local": "Tue 17 Nov 2026, 07:01",
- "source_checked_at": "2026-11-17T06:01:30.386179+00:00",
+ "edition_id": "ed-20261117T120127511180Z",
+ "generated_at": "2026-11-17T12:01:27.511180+00:00",
+ "generated_local": "Tue 17 Nov 2026, 13:01",
+ "source_checked_at": "2026-11-17T12:01:27.511180+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-17T06:01:30.386179+00:00"
+  "run-2026-11-17T12:01:27.511180+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-17T06:01:30.386179+00:00"
+  "completed_at": "2026-11-17T12:01:27.511180+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -128,6 +128,18 @@
   {
    "name": "Topic: AI",
    "section": "news",
+   "status": "ok",
+   "item_count": 103,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 103,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: insurance industry",
+   "section": "news",
    "status": "unavailable",
    "item_count": 0,
    "reason": "HTTP 429",
@@ -143,28 +155,21 @@
    }
   },
   {
-   "name": "Topic: insurance industry",
-   "section": "news",
-   "status": "ok",
-   "item_count": 85,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 85,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
    "name": "Topic: Zurich Insurance",
    "section": "news",
-   "status": "ok",
-   "item_count": 57,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 57,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Topic: reinsurance",
@@ -181,28 +186,23 @@
   {
    "name": "Topic: European Central Bank",
    "section": "news",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 112,
+   "item_count": 108,
    "reason": null,
    "failure": null,
-   "parsed_count": 112,
+   "parsed_count": 108,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -211,10 +211,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -223,10 +223,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -259,10 +259,10 @@
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 62,
+   "item_count": 61,
    "reason": null,
    "failure": null,
-   "parsed_count": 62,
+   "parsed_count": 61,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -307,10 +307,10 @@
    "name": "Zurich Insurance",
    "section": "finance",
    "status": "ok",
-   "item_count": 17,
+   "item_count": 18,
    "reason": null,
    "failure": null,
-   "parsed_count": 17,
+   "parsed_count": 18,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -403,10 +403,10 @@
    "name": "Bitcoin",
    "section": "finance",
    "status": "ok",
-   "item_count": 20,
+   "item_count": 18,
    "reason": null,
    "failure": null,
-   "parsed_count": 20,
+   "parsed_count": 18,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -415,10 +415,10 @@
    "name": "Ethereum",
    "section": "finance",
    "status": "ok",
-   "item_count": 20,
+   "item_count": 19,
    "reason": null,
    "failure": null,
-   "parsed_count": 20,
+   "parsed_count": 19,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -427,10 +427,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 10,
+   "item_count": 13,
    "reason": null,
    "failure": null,
-   "parsed_count": 10,
+   "parsed_count": 13,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -450,19 +450,14 @@
   {
    "name": "FT (via Google News)",
    "section": "finance",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Reuters Business (via Google News)",
@@ -699,9 +694,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002166,
-  "est_month_usd": 0.19,
-  "forecast_month_usd": 0.19,
+  "est_cost_usd": 0.002529,
+  "est_month_usd": 0.23,
+  "forecast_month_usd": 0.23,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -709,60 +704,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8016,
+    "latency_ms": 11669,
     "unknown": false,
     "provider_request_ids": [
-     "resp_076024e16345ef51016afbedc51ad887d0b9ab2fdbd621d6bf"
+     "resp_076843d2ea938512016afc421e0edc87d29d20b10db170c912"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3557,
-    "output_tokens": 565,
-    "reasoning_tokens": 178
+    "cache_write_tokens": 3247,
+    "output_tokens": 939,
+    "reasoning_tokens": 319
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 5896,
+    "latency_ms": 8373,
     "unknown": false,
     "provider_request_ids": [
-     "resp_021dd59832f8bf62016afbedcd13a887d0bb8351855ee17c16"
+     "resp_0a7d370ac4dc9f61016afc42290b0c87d2b844bd50a63b1b62"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3628,
-    "output_tokens": 394,
-    "reasoning_tokens": 161
+    "cache_write_tokens": 3763,
+    "output_tokens": 722,
+    "reasoning_tokens": 282
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7400,
+    "latency_ms": 9799,
     "unknown": false,
     "provider_request_ids": [
-     "resp_08bec138f3335a62016afbedd260d487d0a676de9d973b66c8"
+     "resp_0a390196e0fb7223016afc4231527487d2bd61b640c4b0b7a9"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3315,
-    "output_tokens": 747,
-    "reasoning_tokens": 257
+    "cache_write_tokens": 3325,
+    "output_tokens": 811,
+    "reasoning_tokens": 270
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10500,
-  "output_tokens": 1706,
-  "reasoning_tokens": 596,
+  "cache_write_tokens": 10335,
+  "output_tokens": 2472,
+  "reasoning_tokens": 871,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 49,
-   "attempts": 147,
-   "known_cost_usd": 0.11032,
+   "recorded_runs": 50,
+   "attempts": 150,
+   "known_cost_usd": 0.112849,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -771,172 +766,270 @@
   "news": {
    "briefing": [
     {
-     "text": "Russian strikes reportedly hit two major Kyiv bridges, a day after Ukraine’s largest recorded drone attack on Russia since the war began.",
+     "text": "Germany has nominated economist Markus Brunnermeier to become the ECB’s chief economist, clearing a path for Spain’s Pablo Hernández de Cos to lead the institution.",
      "sources": [
       {
-       "key": "4b88ce23b69e7b57",
-       "title": "Two major Kyiv bridges hit in Russian attack, mayor says",
-       "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
+       "key": "74d1fe756c741c6c",
+       "title": "German economist Brunnermeier is set to become the ECB's chief economist - blue News",
+       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQmlfNzNOeXM4ZWlUUUxsTl8tTWtpNjkzdjNSMjV2ZmNYY0VxV0o2ZDg1X2k0TlNfYmFReWdWN1VIaWxTZ2lQYm42Z2hETnNlSGlEd1BwMkNwT1BrTDg3U0FKRDhad3B1ODgtUWpTM0JicUdKbV9kX3dlY3hKRWIwaGJkNU5BX0VLd1NFV3E0T0VRdW81VUVacS1OWTZaNTYtdXB6SmhwazhoYmtfWWtCNWNBVkkxaUdYQTZHdjhld25aUF9hcUxr?oc=5",
+       "source": "blue News",
+       "via": "Google News"
+      },
+      {
+       "key": "95cd592386aa570c",
+       "title": "Germany proposes a candidate for chief economist of the ECB, and paves the way for De Cos to preside over the entity - Diari ARA",
+       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxONmFZZ3M3bVRMRGxzaWpNX3pLaE12TVVkM3h1TnVac3lIVlFoNFFQVEJQVWhPMkQydWNOYlpjSmo2ZGRhcHV4UDVaQnJyWlFDYzhBX1Rnb013X1pkYzJOZ2hHRVZUdWRmd3p6al8zbktWY0R0d0o3LS1KYlZWdG1lZXI3aFQ0cVVaa2wyRzVETEJXVkR6N3R0aktWRHZudlo3aC1IR0JmOUVxMmVxcGxoZ25IVU9fU2hnbmZRUkFpTEtlTkFsOXNRRkppU2JsSkxuZmktVWxmelZ1YWxUU3VkWUI0d1JRV2c?oc=5",
+       "source": "Diari ARA",
+       "via": "Google News"
       }
      ]
     },
     {
-     "text": "Taiwan and Japan reported Russian aircraft incursions as Putin prepared to travel to China, adding to regional security tensions.",
+     "text": "Ukraine says it damaged the Crimean bridge in a major strike, while Russia has also struck bridges in Kyiv.",
      "sources": [
       {
-       "key": "da671f20542ca60c",
-       "title": "Taiwan, Japan flag incursions by Russian aircraft as Putin set to arrive in China - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNZGFJMTUwWmFyejl3MmtfWlhQM2Fud3FVQWFpYXFuU1lLUC0zREVYZDZ0SHgtU3drVzhYdkRXdGtKU0dQUFBCa3A4RWpIVjl5bnVDd0tRY2sxUHRZZlVvQzZtTDBtaHdUa3ZYSVREOE1wZEZUNVAtWWFKcVQyTjdvbnRreGpsbjZtQ2JMc25ZcUNTVkZVMTVjb21XbmZySkhIczRzRU8xRDRGMFpTbDVTQ1QzeWtRYlo4UkNoVHZQMHhiWlVCOERxU0t2cXI?oc=5",
+       "key": "2df6e49f0264360c",
+       "title": "Ukraine damages Crimean bridge in major strike as Russia pounds Kyiv bridges - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPaEg3anV0Q2ZiXzRhYjVfZkhyTlM2Q3RnX3ZFUExIQ0xQWjZqbkRmXy1mSVY5N1E2dXI0Q2s5WE5oQmNnLXZia24zNU5nUF9FNnZQMENHcFhYMUlhVklwT1RBczRnWFRiXzl3MHRoTWpPRlZJQUNlSjBHeGl5akprVmlNNnFYNmRiNEFqZUlzbUxnRU9FWGRxRGdUTU93QTQ3S3prbktDSUxQbHM2MjFsWWtpLXNOWWFC?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s presidential hopefuls debated proposals on taxes, housing and the minimum wage, with a national day of action due Tuesday.",
+     "text": "US scrutiny of AI-chip exports is intensifying: Singapore-based Megaspeed is under investigation over suspected shipments to China, and Nvidia has created a board committee to oversee export controls and national security.",
      "sources": [
       {
-       "key": "0fd3c4e184ba5310",
-       "title": "Impôts, logement, smic… Ce qu’il faut retenir du débat entre candidats à la présidentielle",
-       "url": "https://www.lemonde.fr/politique/article/2026/11/17/impots-logement-smic-ce-qu-il-faut-retenir-du-debat-entre-candidats-a-la-presidentielle_6812895_823448.html",
-       "source": "Le Monde",
+       "key": "bfcaf275b27da53f",
+       "title": "Nvidia partner Megaspeed being investigated by US government over chip exports",
+       "url": "https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
        "via": null
       },
       {
-       "key": "bb00fd4df0c74328",
-       "title": "A Lyon, Toulouse, Lille ou Rennes, les ressorts d’une révolte sociale qui s’est ancrée au fil des semaines",
-       "url": "https://www.lemonde.fr/politique/article/2026/11/17/a-lyon-toulouse-lille-ou-rennes-les-ressorts-d-une-revolte-sociale-qui-s-est-ancree-au-fil-des-semaines_6812893_823448.html",
+       "key": "a5a2f7b8dbdb2b46",
+       "title": "Nvidia forms board committee to oversee national security, export controls - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTTFHVE42V3FIZzBXbWhKLVR3bWRrZ3dRWGpCRm45dlktYkpveDBveW1IRFc1aDltUERHLURBUFdSUW5KMVVaZ2w2NGRuQVhmZmtyb2ZpUGZuZncyVXR3cFYxX2FUcmFyQVRBSHVnbWFsVFFTQ1lPS0lTdmZUMDktbTBUbndQdzhxc2JnWVctSF96QXdVb2JUeUpqYURha25FMEZhU3VqbWFTZDA0Q3lqanRUaGdMQ2M?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Reuters says Nvidia-related turmoil is challenging the easy-money phase of the AI trade, a warning for investors exposed to AI-linked equities.",
+     "sources": [
+      {
+       "key": "db138cc1e4ad2aba",
+       "title": "Nvidia turmoil marks the end of easy money for the AI trade - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNd2s1OTd5YWwta0FpTHlwdW5YbUc5Zmc0S3RfczZVTTM5MXBaWlpuZHV4ajRNaGZqNXVuaUx5XzJlZkdqT203WTJHdmJpNllpX3plcFFqMkFqRmRkWHRycDlEWUNoNUtOQ3cwUnRaREJ0NVZhT0NyaWZMODgwcXRCZHJXZ3VfWkw2R3dham9Wc3RRaEk?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The EU has preliminarily accused Temu of shortcomings in its controls against illegal products, potentially exposing the marketplace to a fine.",
+     "sources": [
+      {
+       "key": "0a1b7a3e277b43ed",
+       "title": "Ue, 'Temu non contrasta la vendita di prodotti illegali, rischia multa'",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/ue-temu-non-contrasta-la-vendita-di-prodotti-illegali-rischia-multa_55f5da77-9175-4472-afcf-8e8e9d4bc3f8.html",
+       "source": "ANSA Top News",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Marine Le Pen has outlined a proposed pension reform combining gradual retirement eligibility with a funded component ahead of France’s 2027 presidential election.",
+     "sources": [
+      {
+       "key": "1f8a69164811d6aa",
+       "title": "Présidentielle 2027 : Marine Le Pen présente sa réforme des retraites, un système basé sur la progressivité et une part de capitalisation",
+       "url": "https://www.lemonde.fr/politique/article/2026/11/17/presidentielle-2027-marine-le-pen-presente-sa-reforme-des-retraites-et-promet-que-des-centaines-de-milliers-de-travailleurs-partiront-plus-tot-qu-avec-la-reforme-borne_6812963_823448.html",
        "source": "Le Monde",
        "via": null
-      }
-     ]
-    },
-    {
-     "text": "Australia’s central-bank minutes revealed dissenters warned that holding rates could risk a materially sharper downturn.",
-     "sources": [
-      {
-       "key": "9da34efeed4436bf",
-       "title": "RBA board members who voted against rate hike warned of ‘materially sharper downturn’",
-       "url": "https://www.theguardian.com/australia-news/2026/nov/17/myefo-mid-year-budget-update-australia-treasurer-jim-chalmers",
-       "source": "The Guardian World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Australian households are facing insurance premiums that have risen far faster than inflation, with some facing an $8,000 bill or going uninsured.",
-     "sources": [
-      {
-       "key": "09c4cf4c07c7d09c",
-       "title": "Pay $8,000 or go uninsured: premiums far outpace inflation, putting many Australians in an impossible position - The Guardian",
-       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQeVp3MmZYWkNKYWJnbkxRTzhwLS1TRS0zcWstRXpHcHMyUUZCOGJmRGVLYXZDSXN3c0dSWU5LTHphN0swQ0FzWlctY1pDbEVWbEZEMHRpa0U3LTQ4Ykt3MkV1WE10X0dFTEllYV90eWdYUVFPT1Q3TGJmZzBEUnBXLWJsMDZ2VW5XUkJpNHhHY2RmV2JQQ0Q3elBlWndlRUFWa0F4X0RlY0lUZEh0N19QWXM3Q29feXBMWVJDU05VeGRQT01fOUM5Sg?oc=5",
-       "source": "The Guardian",
-       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-11-17T05:57:38+00:00",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQmlfNzNOeXM4ZWlUUUxsTl8tTWtpNjkzdjNSMjV2ZmNYY0VxV0o2ZDg1X2k0TlNfYmFReWdWN1VIaWxTZ2lQYm42Z2hETnNlSGlEd1BwMkNwT1BrTDg3U0FKRDhad3B1ODgtUWpTM0JicUdKbV9kX3dlY3hKRWIwaGJkNU5BX0VLd1NFV3E0T0VRdW81VUVacS1OWTZaNTYtdXB6SmhwazhoYmtfWWtCNWNBVkkxaUdYQTZHdjhld25aUF9hcUxr?oc=5",
+     "source": "blue News",
+     "feed_name": "Topic: European Central Bank",
+     "via": "Google News",
+     "published": "2026-11-17T11:52:31+00:00",
      "new": true,
-     "key": "4b88ce23b69e7b57",
-     "title": "Two major Kyiv bridges hit in Russian attack",
-     "summary": "Kyiv’s mayor said Russian strikes hit two major bridges a day after Ukraine launched its largest recorded drone attack on Russia."
+     "key": "74d1fe756c741c6c",
+     "title": "Brunnermeier set to become the ECB’s chief economist",
+     "summary": "Germany has proposed economist Markus Brunnermeier for the ECB chief economist role, paving the way for Pablo Hernández de Cos to lead the institution."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNZGFJMTUwWmFyejl3MmtfWlhQM2Fud3FVQWFpYXFuU1lLUC0zREVYZDZ0SHgtU3drVzhYdkRXdGtKU0dQUFBCa3A4RWpIVjl5bnVDd0tRY2sxUHRZZlVvQzZtTDBtaHdUa3ZYSVREOE1wZEZUNVAtWWFKcVQyTjdvbnRreGpsbjZtQ2JMc25ZcUNTVkZVMTVjb21XbmZySkhIczRzRU8xRDRGMFpTbDVTQ1QzeWtRYlo4UkNoVHZQMHhiWlVCOERxU0t2cXI?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPaEg3anV0Q2ZiXzRhYjVfZkhyTlM2Q3RnX3ZFUExIQ0xQWjZqbkRmXy1mSVY5N1E2dXI0Q2s5WE5oQmNnLXZia24zNU5nUF9FNnZQMENHcFhYMUlhVklwT1RBczRnWFRiXzl3MHRoTWpPRlZJQUNlSjBHeGl5akprVmlNNnFYNmRiNEFqZUlzbUxnRU9FWGRxRGdUTU93QTQ3S3prbktDSUxQbHM2MjFsWWtpLXNOWWFC?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-11-17T04:33:00+00:00",
+     "published": "2026-11-17T11:33:12+00:00",
      "new": true,
-     "key": "da671f20542ca60c",
-     "title": "Taiwan and Japan report Russian aircraft incursions",
-     "summary": "Taiwan and Japan flagged Russian aircraft activity as Vladimir Putin prepared to arrive in China."
+     "key": "2df6e49f0264360c",
+     "title": "Ukraine says strike damaged Crimean bridge",
+     "summary": "Ukraine says it damaged the Crimean bridge in a major strike as Russia struck bridges in Kyiv."
     },
     {
-     "url": "https://www.lemonde.fr/politique/article/2026/11/17/impots-logement-smic-ce-qu-il-faut-retenir-du-debat-entre-candidats-a-la-presidentielle_6812895_823448.html",
+     "url": "https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
+     "via": null,
+     "published": "2026-11-17T11:17:32+00:00",
+     "new": true,
+     "key": "bfcaf275b27da53f",
+     "title": "US investigates Nvidia partner over suspected chip exports to China",
+     "summary": "The US government suspects Singapore-based Megaspeed helped ship Nvidia AI chips to China in violation of export rules."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTTFHVE42V3FIZzBXbWhKLVR3bWRrZ3dRWGpCRm45dlktYkpveDBveW1IRFc1aDltUERHLURBUFdSUW5KMVVaZ2w2NGRuQVhmZmtyb2ZpUGZuZncyVXR3cFYxX2FUcmFyQVRBSHVnbWFsVFFTQ1lPS0lTdmZUMDktbTBUbndQdzhxc2JnWVctSF96QXdVb2JUeUpqYURha25FMEZhU3VqbWFTZDA0Q3lqanRUaGdMQ2M?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-17T11:38:47+00:00",
+     "new": true,
+     "key": "a5a2f7b8dbdb2b46",
+     "title": "Nvidia creates board committee on export controls",
+     "summary": "Nvidia formed a board committee to oversee national security and export-control matters."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNd2s1OTd5YWwta0FpTHlwdW5YbUc5Zmc0S3RfczZVTTM5MXBaWlpuZHV4ajRNaGZqNXVuaUx5XzJlZkdqT203WTJHdmJpNllpX3plcFFqMkFqRmRkWHRycDlEWUNoNUtOQ3cwUnRaREJ0NVZhT0NyaWZMODgwcXRCZHJXZ3VfWkw2R3dham9Wc3RRaEk?oc=5",
+     "source": "Reuters",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-17T11:34:32+00:00",
+     "new": true,
+     "key": "db138cc1e4ad2aba",
+     "title": "Nvidia turmoil challenges the easy-money AI trade",
+     "summary": "Reuters reports that Nvidia-related turmoil marks a shift for the AI investment trade."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/ue-temu-non-contrasta-la-vendita-di-prodotti-illegali-rischia-multa_55f5da77-9175-4472-afcf-8e8e9d4bc3f8.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-11-17T11:41:19+00:00",
+     "new": true,
+     "key": "0a1b7a3e277b43ed",
+     "title": "EU says Temu may face a fine over illegal products",
+     "summary": "The EU preliminarily alleges shortcomings in Temu’s controls, moderation and sanctions concerning illegal products."
+    },
+    {
+     "url": "https://www.lemonde.fr/politique/article/2026/11/17/presidentielle-2027-marine-le-pen-presente-sa-reforme-des-retraites-et-promet-que-des-centaines-de-milliers-de-travailleurs-partiront-plus-tot-qu-avec-la-reforme-borne_6812963_823448.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-11-17T04:33:10+00:00",
+     "published": "2026-11-17T11:32:16+00:00",
      "new": true,
-     "key": "0fd3c4e184ba5310",
-     "title": "French presidential hopefuls debate taxes, housing and minimum wage",
-     "summary": "Gabriel Attal, Raphaël Glucksmann, Marine Le Pen, Jean-Luc Mélenchon and Bruno Retailleau debated policy proposals."
+     "key": "1f8a69164811d6aa",
+     "title": "Marine Le Pen proposes a new pension system",
+     "summary": "Le Pen’s proposal combines gradual retirement eligibility with a funded component and pledges earlier retirement for many workers."
     },
     {
-     "url": "https://www.theguardian.com/australia-news/2026/nov/17/myefo-mid-year-budget-update-australia-treasurer-jim-chalmers",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-17T04:05:04+00:00",
-     "new": true,
-     "key": "9da34efeed4436bf",
-     "title": "RBA dissenters warn of sharper downturn risk",
-     "summary": "Minutes show board members who opposed the latest rate hike warned of a materially sharper economic downturn."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQeVp3MmZYWkNKYWJnbkxRTzhwLS1TRS0zcWstRXpHcHMyUUZCOGJmRGVLYXZDSXN3c0dSWU5LTHphN0swQ0FzWlctY1pDbEVWbEZEMHRpa0U3LTQ4Ykt3MkV1WE10X0dFTEllYV90eWdYUVFPT1Q3TGJmZzBEUnBXLWJsMDZ2VW5XUkJpNHhHY2RmV2JQQ0Q3elBlWndlRUFWa0F4X0RlY0lUZEh0N19QWXM3Q29feXBMWVJDU05VeGRQT01fOUM5Sg?oc=5",
-     "source": "The Guardian",
-     "feed_name": "Topic: insurance industry",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMWUySjF0MnAtMkdoRnAyX1VYZzVyNEhrVXVXMHdkN1FLazJYaTVWUDBKYjJJYk81SzNSdEdHYjEtSjNRMmxGMnZWT0ticTZzRlpNM004alRKaEJ3c2x1bkRLZnNaQUlqeXNUVHFMOENSaXF4RHlPSlVrbkdkZmFPa2xteEUtV3QxZFVVUWVsdkgyYlZ4SExRM2FYYjVMVzAwNGVDU0dIRQ?oc=5",
+     "source": "Reinsurance News",
+     "feed_name": "Topic: reinsurance",
      "via": "Google News",
-     "published": "2026-11-17T02:28:25+00:00",
+     "published": "2026-11-17T11:37:05+00:00",
      "new": true,
-     "key": "09c4cf4c07c7d09c",
-     "title": "Australian insurance premiums outpace inflation",
-     "summary": "Rising premiums are leaving some Australian households facing an $8,000 bill or the prospect of going uninsured."
+     "key": "e3b35c46db5b96f4",
+     "title": "Supercede expands reinsurance technology partnerships",
+     "summary": "Supercede announced expanded technology partnerships with reinsurers Inigo and Ascot."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNaUZHT29DQnM0VXltc3lkejBNQXBiNXlmY01LZDZHWWg3OEVybXZNbEwxbzF0LUhQdFdvTC16aUVMMUxXQnc5WTM2Z0hWaVFCZEZUTmo4WXVLSGRfVlVVVHZEd3N4aUdyeWdRTmJqb0dWRTgyRzgyRC0tSHc0dzdVSzRvQU1rUHdmakZJdWk1VE9QWnJfa3lFcnNDbldadDZBZ21Kb21hbF95ZmR2THJSa0tYaU0?oc=5",
+     "source": "Global Reinsurance",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-11-17T11:50:12+00:00",
+     "new": true,
+     "key": "8a60d336db506edd",
+     "title": "PPL targets underwriting appetite data in trading push",
+     "summary": "PPL is seeking to address gaps in underwriting appetite data as part of its trading push."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNT0o4bkVJeGhJVGhDRzBPcl9aSEVyd09yT0FxbWN6OFNZM0dtM0puZS1tbzE5MUhLemZfRHc1aFAtcWEwb3hKamd1ekJEMHV6ZzZWOG5STjRIM3lpV1VuQ3NDdUM4elhpeDFHOVluLTRiSXBmOXNoR20zSzV6NU44VWNwMHQtUHdROTNHbDVrZEZ6ajhPa2g1Vkt2Unhxd1JL?oc=5",
+     "source": "Global Reinsurance",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-11-17T11:50:54+00:00",
+     "new": true,
+     "key": "dae7d301150ec10d",
+     "title": "TFP appoints Chi to lead high-growth markets",
+     "summary": "TFP appointed Chi to head its high-growth markets business."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-11-17T06:01:30.386179+00:00",
-   "input_fingerprint": "sha256:0b91d0930c24ae8ffdea3501fa9a8c15fdfd2eb799457a065b090e870d3fbea6",
-   "last_success_at": "2026-11-17T06:01:30.386179+00:00",
-   "error": "Source check failed: Topic: AI, Topic: European Central Bank",
-   "candidate_count": 377,
-   "new_count": 5
+   "source_checked_at": "2026-11-17T12:01:27.511180+00:00",
+   "input_fingerprint": "sha256:5a6aaf34f004f2b08cc3ee333ac045eadd0341992ef28088d5654ae0f9579d74",
+   "last_success_at": "2026-11-17T12:01:27.511180+00:00",
+   "error": "Source check failed: Topic: insurance industry, Topic: Zurich Insurance",
+   "candidate_count": 514,
+   "new_count": 10
   },
   "sport": {
    "briefing": [
     {
-     "text": "The November international break is winding down for PSG: seven players have finished their duties, while eight remain involved in one final match.",
+     "text": "Vitinha and João Neves could make their first starts together for Portugal against Wales, with Portugal already through to the Nations League quarter-finals.",
      "sources": [
       {
-       "key": "10c720a56ddcf3a2",
-       "title": "Fin de trêve pour 7 Parisiens, encore 8 sur le pont",
-       "url": "https://www.culturepsg.com/news/selections/fin-de-treve-pour-7-parisiens-encore-8-sur-le-pont/61560",
+       "key": "85f7de5589ac3198",
+       "title": "Pays de Galles/Portugal : grande première pour Vitinha et Neves ?",
+       "url": "https://www.culturepsg.com/news/selections/pays-de-galles-portugal-grande-premiere-pour-vitinha-et-neves/61571",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "Inter are reportedly drawing inspiration from Luis Enrique’s PSG, following their defeat to the Paris side in the Champions League final.",
+     "text": "France’s early team-selection indications point to Matthieu Jalibert starting at fly-half against Argentina; the XV de France is also set to give a first cap to Arfeuil.",
      "sources": [
       {
-       "key": "bd683accd8dff079",
-       "title": "Quand l'Inter Milan « copie » le PSG de Luis Enrique",
-       "url": "https://www.culturepsg.com/news/club/quand-l-inter-milan-copie-le-psg-de-luis-enrique/61563",
-       "source": "CulturePSG",
+       "key": "9b64329dffb2499a",
+       "title": "XV de France : Jalibert à l’ouverture, première pour Arfeuil, les premières tendances pour le match contre l’Argentine - Le Parisien",
+       "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOVUx2b0FOdmlOdzNGUWtPLWM2M0RpR0Yzc3BMcWRxeW9sSWpfcGI4YUFIb2ZmODhVbG94aUNUVV80a2V6c1Vaa0tDcGxqRVJKWHhRdFNtYUxVb3N4Mi1BbDl5ZFFLNW5pdlZOM2hhdVB5eG9yT3c1TFhmQ2VXNXpyRmlCYm1PdWVaaGFwZy0wUzdPRF9TTE15MzMzTW9lcWxwSFBGQ2RpeDNJRy14dGM0aGdUblhhN0FYMU5zTW9PQWhkeXdfbXBNOTFkeDcwUjNMSGFRWENkZzVHY2ZFY1VtVFlCTWRwSHRwYjZTRXBxSUo0UnNVVHRYOWlQUktRNXQ3T0pnOVNwQWNJMzlWRE1JTUFFQWJLdzd5aE5hcldzTnBkTkFyLUVBYVRsX29neFk?oc=5",
+       "source": "Le Parisien",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A supporter was sentenced to 11 months in prison, suspended, for racist abuse of Kylian Mbappé during a match between Oviedo and Real Madrid.",
+     "sources": [
+      {
+       "key": "0a23ce07fa13dd6f",
+       "title": "Un supporter d'Oviedo condamné à onze mois de prison pour crime haineux après des insultes racistes proférées envers Kylian Mbappé",
+       "url": "https://www.lequipe.fr/Football/Actualites/Un-supporter-d-oviedo-condamne-a-onze-mois-de-prison-pour-crime-haineux-apres-des-insultes-racistes-proferees-envers-kylian-mbappe/1744195#at_medium=RSS_feeds",
+       "source": "L'Équipe",
        "via": null
       }
      ]
     },
     {
-     "text": "A Spanish player beaten by PSG recently has weighed in on Europe’s best team, in a fresh post-match reaction.",
+     "text": "The FFF executive committee has approved Philippe Diallo’s candidacy for the FIFA presidency, setting up a challenge to Gianni Infantino.",
      "sources": [
       {
-       "key": "88b04bdf5b4063c1",
-       "title": "Un autre Espagnol se voit plus beau que le PSG",
-       "url": "https://www.culturepsg.com/news/club/un-autre-espagnol-se-voit-plus-beau-que-le-psg/61562",
+       "key": "27f92c7a113f17da",
+       "title": "Élection Fifa : le Comex de la FFF valide la candidature de Philippe Diallo, le Français défiera bien Gianni Infantino - Le Figaro",
+       "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxONGpWUjRZYUp0cGh6ZWpIQ1NlckhNd3JadDF0VElmT2xsYm51MVB1Um9scmpza2lpZmZNMnRVN294c01ES013dk9jRXZmT2gyZW1Ra0lwR0tGYVJrbG0tRGV2dE9WTEk1U0hyQUdUZFJnLUowMDRNQXp5Q2VENS1CVG1mZEd6VXpHSWthNkc5OXQxdFNBMjVicy1QOVBzWWdxcVAtTWxPZzZjSzNfclRVMGFPbmx6enNsQjhIaFppYU9oWjJ4dF84LWE5SWloRnNzd21UMGJST3FraFBjbnpiUTdraXZiLTBTaGNGLWJwaFBvMmR4MDJhZFB4c3VBZGFBTjM2d00za1kzTlBWN0E?oc=5",
+       "source": "Le Figaro",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Désiré Doué publicly praised a France teammate after the national team’s 2–1 win, drawing attention to the player’s rising profile with the squad.",
+     "sources": [
+      {
+       "key": "619dfb941342d0d8",
+       "title": "« Quel joueur, j'aime trop ! », Doué valide le choix fort de Zidane",
+       "url": "https://www.culturepsg.com/news/reseaux-sociaux/quel-joueur-j-aime-trop-doue-valide-le-choix-fort-de-zidane/61568",
        "source": "CulturePSG",
        "via": null
       }
@@ -945,118 +1038,145 @@
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/selections/fin-de-treve-pour-7-parisiens-encore-8-sur-le-pont/61560",
+     "url": "https://www.culturepsg.com/news/selections/pays-de-galles-portugal-grande-premiere-pour-vitinha-et-neves/61571",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-16T09:31:24+00:00",
+     "published": "2026-11-17T10:21:00+00:00",
      "new": true,
-     "key": "10c720a56ddcf3a2",
-     "title": "Seven PSG players finish international duty; eight remain on the schedule",
-     "summary": "Seven PSG players have completed their November international commitments, while eight are still due to play."
+     "key": "85f7de5589ac3198",
+     "title": "Vitinha and João Neves could start together against Wales",
+     "summary": "Portugal, already qualified for the Nations League quarter-finals, may start Vitinha and João Neves together against Wales."
     },
     {
-     "url": "https://www.culturepsg.com/news/club/quand-l-inter-milan-copie-le-psg-de-luis-enrique/61563",
+     "url": "https://www.culturepsg.com/news/reseaux-sociaux/quel-joueur-j-aime-trop-doue-valide-le-choix-fort-de-zidane/61568",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-16T14:18:35+00:00",
+     "published": "2026-11-17T08:04:04+00:00",
      "new": true,
-     "key": "bd683accd8dff079",
-     "title": "Inter take inspiration from Luis Enrique’s PSG",
-     "summary": "Inter are reportedly looking to aspects of Luis Enrique’s PSG after losing to them in the Champions League final."
+     "key": "619dfb941342d0d8",
+     "title": "Doué praises France teammate after victory",
+     "summary": "Désiré Doué praised a France teammate on social media after the national team’s 2–1 win."
     },
     {
-     "url": "https://www.culturepsg.com/news/club/un-autre-espagnol-se-voit-plus-beau-que-le-psg/61562",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-16T11:39:07+00:00",
+     "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOVUx2b0FOdmlOdzNGUWtPLWM2M0RpR0Yzc3BMcWRxeW9sSWpfcGI4YUFIb2ZmODhVbG94aUNUVV80a2V6c1Vaa0tDcGxqRVJKWHhRdFNtYUxVb3N4Mi1BbDl5ZFFLNW5pdlZOM2hhdVB5eG9yT3c1TFhmQ2VXNXpyRmlCYm1PdWVaaGFwZy0wUzdPRF9TTE15MzMzTW9lcWxwSFBGQ2RpeDNJRy14dGM0aGdUblhhN0FYMU5zTW9PQWhkeXdfbXBNOTFkeDcwUjNMSGFRWENkZzVHY2ZFY1VtVFlCTWRwSHRwYjZTRXBxSUo0UnNVVHRYOWlQUktRNXQ3T0pnOVNwQWNJMzlWRE1JTUFFQWJLdzd5aE5hcldzTnBkTkFyLUVBYVRsX29neFk?oc=5",
+     "source": "Le Parisien",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-17T11:53:57+00:00",
      "new": true,
-     "key": "88b04bdf5b4063c1",
-     "title": "Another Spanish player weighs in on PSG",
-     "summary": "A Spanish player recently beaten by PSG has shared his view on which team is Europe’s best."
+     "key": "9b64329dffb2499a",
+     "title": "Jalibert tipped to start against Argentina",
+     "summary": "Early indications suggest Matthieu Jalibert will start at fly-half and Arfeuil could make his France debut against Argentina."
+    },
+    {
+     "url": "https://www.lequipe.fr/Football/Actualites/Un-supporter-d-oviedo-condamne-a-onze-mois-de-prison-pour-crime-haineux-apres-des-insultes-racistes-proferees-envers-kylian-mbappe/1744195#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
+     "via": null,
+     "published": "2026-11-17T11:25:18+00:00",
+     "new": true,
+     "key": "0a23ce07fa13dd6f",
+     "title": "Supporter given suspended sentence for racist abuse of Mbappé",
+     "summary": "An Oviedo supporter was sentenced to 11 months in prison, suspended, for racist abuse of Kylian Mbappé."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxONGpWUjRZYUp0cGh6ZWpIQ1NlckhNd3JadDF0VElmT2xsYm51MVB1Um9scmpza2lpZmZNMnRVN294c01ES013dk9jRXZmT2gyZW1Ra0lwR0tGYVJrbG0tRGV2dE9WTEk1U0hyQUdUZFJnLUowMDRNQXp5Q2VENS1CVG1mZEd6VXpHSWthNkc5OXQxdFNBMjVicy1QOVBzWWdxcVAtTWxPZzZjSzNfclRVMGFPbmx6enNsQjhIaFppYU9oWjJ4dF84LWE5SWloRnNzd21UMGJST3FraFBjbnpiUTdraXZiLTBTaGNGLWJwaFBvMmR4MDJhZFB4c3VBZGFBTjM2d00za1kzTlBWN0E?oc=5",
+     "source": "Le Figaro",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-11-17T11:49:30+00:00",
+     "new": true,
+     "key": "27f92c7a113f17da",
+     "title": "FFF approves Diallo’s FIFA presidency candidacy",
+     "summary": "The FFF executive committee approved Philippe Diallo’s candidacy to challenge Gianni Infantino for the FIFA presidency."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-17T06:01:30.386179+00:00",
-   "input_fingerprint": "sha256:4602bd72b4e4c658c4f59e21722d37adc1613a74ed34071efd171819d0616c57",
-   "last_success_at": "2026-11-17T06:01:30.386179+00:00",
-   "candidate_count": 344,
-   "new_count": 3
+   "source_checked_at": "2026-11-17T12:01:27.511180+00:00",
+   "input_fingerprint": "sha256:b0bf37d33be87ef12cce64c32a2881d49a614cee13a90ce7a6d021f5855e222c",
+   "last_success_at": "2026-11-17T12:01:27.511180+00:00",
+   "candidate_count": 353,
+   "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "Technology shares are under pressure ahead of Nvidia’s results, with investors also weighing tighter US chip-export controls and doubts about AI data-centre spending.",
+     "text": "Technology shares extended their selloff ahead of Nvidia’s results, keeping pressure on broader markets; investors are also weighing the chipmaker’s China business and export-control scrutiny.",
      "sources": [
       {
-       "key": "f170a17209ad03de",
-       "title": "Tech sell-off deepens as Nvidia results loom",
-       "url": "https://www.ft.com/content/4a3b9892-67c6-4177-8503-80c0a5eb3b60?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      },
-      {
-       "key": "3a1710f0cea2fd52",
-       "title": "Chip Stocks Slide as US Sets New Curbs on China’s Compute Access - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSVVjUlBfX1ZxOFRWZ243YkxEbTVJSm1BSkNJLUpCTzdrZlAtU3ktZzdmekJCZVhVc1lubi0tbklQX2wwTEh6WU8wUkI2M05Ecy1OTWJUNk5UVTV6bjltOWZkaXF3UHpJazUwaVlmTGljMFZBUGd3bFliN21xRWItdWhHeHVvSncxLXQ4SHZael9ySVF4QmlQOTNIQTZWTWl2NGdwaTA4eFhDUm5LVzZQc2JhZmFJQQ?oc=5",
+       "key": "16b0c37abb5ff17e",
+       "title": "Tech Stocks Extend Selloff as Nvidia Results Near: Markets Wrap - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSHFoREFNUWJRYTJxR0pTRnpHM2Q1NlhjQ1pjN0w3U1FWM09sclNuMlVNLWx4YXF0TURpOEdtSk9sc3BXTEpBakhLd21neWhod2pvZ1hRNVAtZWxNTlZmUXl4TXNJQ0MyTTFqa0tpRGVmOVpQZlRidlZzYkFLYnlNSXduLUtPSXo3QUJ0aVhlM0xWVFNh?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Banks are reportedly reducing exposure to debt tied to data centres and chips as opposition to large projects grows, adding a financing risk to the AI investment story.",
-     "sources": [
+      },
       {
-       "key": "4d6edea879f644a2",
-       "title": "Banks seek to curb AI debt exposure as backlash mounts",
-       "url": "https://www.ft.com/content/2351d9db-e938-4102-a449-318b1037765a?syn-25a6b1a6=1",
+       "key": "6c7ede5aa0a30c78",
+       "title": "Nvidia creates committee to oversee compliance with US chip export controls",
+       "url": "https://www.ft.com/content/aeacbf89-5511-4d1c-81c2-b4c227bdfceb?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "Oil prices are slipping as recovering Middle East exports and signs of revived supply outweigh Gulf tensions.",
+     "text": "The European Commission raised eurozone growth forecasts, citing AI-led exports, but cut its outlook for France, underscoring uneven prospects across the bloc.",
      "sources": [
       {
-       "key": "34e1f7739c8ebce3",
-       "title": "Oil slips as recovering Mideast exports blunt Gulf tensions - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQm40d1ZiR2k1S1RxaFdvQzJVYmRJUE1rcnNLZkEyRkZzbk5KZjlqWl9sZW9MUFB2OHpwdGZzT3duNzVnMnNaMEJMYkFKWndKTWE1OWNtd0hLcWRtSmVVYU5JaTBlNXZuT2t0V1AzVHdXVEhPMWt5QnhXakxpWkxiQk50ZEt0UGtXT3RpeXdiNEY0UXBqeXk2RGVHYURMNzJzNm13Zldtbm8tQQ?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      },
+       "key": "2476fc59eafa7a5b",
+       "title": "Brussels raises Eurozone growth forecasts as AI boom drives exports",
+       "url": "https://www.ft.com/content/ce0f66b9-703d-4e04-b046-bf04a3d9209a?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Barclays turned negative on European insurers, arguing share-price gains have outpaced earnings growth—a sector signal worth monitoring alongside Zurich’s modest decline today.",
+     "sources": [
       {
-       "key": "46a123532ba06659",
-       "title": "Oil Extends Fall on Signs of Revived Supplies and Vance Outlook - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOVWticDVnRnhZcGNMcDNaRTJYNlZMUmd3NHZkbE9jRVV5TDV6bG5EX09rMndHQ0RUZXY3RHh0X0lzcXQ3UWE1OHY2djdGNmVnUWhwcU1fLURMNk9xVmZndmQzVHdNd04xTFpMbTZldURsQmRaanRsLXhocHcwSEhySnNNeEx5VjhTbk5NUWlySHQtWUhuOVJmekM2aVhQdw?oc=5",
-       "source": "Bloomberg.com",
+       "key": "01e5a3bcc6e74c89",
+       "title": "Barclays turns bearish on European insurers as rally outpaces earnings growth",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/barclays-turns-bearish-european-insurers-103137287.html?.tsrc=rss",
+       "source": "Zurich Insurance",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "A proposed €2bn bid for Italian rocket maker Avio by satellite group Iceye would be a major cross-border aerospace deal if completed.",
+     "sources": [
+      {
+       "key": "fb063ff0564f4449",
+       "title": "Satellite group Iceye launches €2bn bid for Italian rocket maker Avio - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQM2FnUGp6TGNMWEI4blFDU19ZLWwybU9oNWNHMjVDYkNFQWF6NXBvN28zVmJUdlJpVFh4R21rQ2xvS3M3akZ0M1VyVHU5NGpMTDI4TXNMalIwNFFtcFg4VllZa21wREpFUE5iOFdnRGtWX2R2OWgtNTRSQ2pXUHV1eEMxeVc?oc=5",
+       "source": "Financial Times",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Private-credit exposure to real-estate finance is drawing fresh concern in New Zealand, according to the central bank.",
+     "text": "Berlin’s choice of ECB board nominee advances a reported arrangement that would put Spain’s Pablo Hernández de Cos at the central bank’s helm.",
      "sources": [
       {
-       "key": "b66e15050e7b4aed",
-       "title": "RBNZ Flags Growing Private Credit Risks in Real Estate Finance - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMEo1LTlCdGhVaWJOcVNWczd3V2Q4Vnpxc2NfUDBjX055VG1uMTVzbHpKVC0tYm0wN3pvNlJDazFkODQ1MXFQcmp5OFgzWERJS1BwSVYwbUdxV2c0THRJYjJDc0ZBQlVOUWVON2hhWE1lMDhmVUI5b1VRaTQ0Z2VKZkxHaTlvTXdERlBITXpLSnhXWmpGekJGUDk4QnRwWXktRVBFT3NBdS1BSDk3a0ZWSnVjRQ?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
+       "key": "f05f400505611c01",
+       "title": "Berlin picks ECB board nominee, paving way for Spanish presidency",
+       "url": "https://www.ft.com/content/10fd3d24-04b1-40a2-93d3-8b64023cc869?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
       }
      ]
     },
     {
-     "text": "China and Canada have cut tariffs as Ottawa seeks to hedge against US pressure, though analysts warn of greater reliance on Beijing.",
+     "text": "Ukraine said it destroyed part of the Crimea bridge amid intensified strikes on infrastructure, adding to geopolitical risk around the region.",
      "sources": [
       {
-       "key": "0c03eb14772a96c5",
-       "title": "Xi and Canada’s Carney slash tariffs as China courts middle powers",
-       "url": "https://www.ft.com/content/3a8dbdda-1645-4b62-b64b-7da5de611d53?syn-25a6b1a6=1",
+       "key": "5976d711a327666b",
+       "title": "Ukraine destroys section of Crimea bridge in fierce exchange",
+       "url": "https://www.ft.com/content/eb8031c0-a96a-4408-b762-b92ff0402f82?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
       }
@@ -1065,108 +1185,107 @@
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/4a3b9892-67c6-4177-8503-80c0a5eb3b60?syn-25a6b1a6=1",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSHFoREFNUWJRYTJxR0pTRnpHM2Q1NlhjQ1pjN0w3U1FWM09sclNuMlVNLWx4YXF0TURpOEdtSk9sc3BXTEpBakhLd21neWhod2pvZ1hRNVAtZWxNTlZmUXl4TXNJQ0MyTTFqa0tpRGVmOVpQZlRidlZzYkFLYnlNSXduLUtPSXo3QUJ0aVhlM0xWVFNh?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-17T11:16:53+00:00",
+     "new": true,
+     "key": "16b0c37abb5ff17e",
+     "title": "Tech stocks extend selloff ahead of Nvidia results",
+     "summary": "Technology shares fell further as investors awaited Nvidia’s results."
+    },
+    {
+     "url": "https://www.ft.com/content/ce0f66b9-703d-4e04-b046-bf04a3d9209a?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-17T05:06:24+00:00",
+     "published": "2026-11-17T10:06:29+00:00",
      "new": true,
-     "key": "f170a17209ad03de",
-     "title": "Tech sell-off deepens as Nvidia results loom",
-     "summary": "Investors are concerned about tighter US chip export controls and a possible slowdown in AI data-centre investment."
+     "key": "2476fc59eafa7a5b",
+     "title": "Brussels raises eurozone growth forecasts as AI boom drives exports",
+     "summary": "The Commission raised eurozone growth projections on stronger AI-linked exports but sharply lowered its forecast for France."
     },
     {
-     "url": "https://www.ft.com/content/2351d9db-e938-4102-a449-318b1037765a?syn-25a6b1a6=1",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/barclays-turns-bearish-european-insurers-103137287.html?.tsrc=rss",
+     "source": "Zurich Insurance",
+     "feed_name": "Zurich Insurance",
+     "via": null,
+     "published": "2026-11-17T10:31:37+00:00",
+     "new": true,
+     "key": "01e5a3bcc6e74c89",
+     "title": "Barclays turns bearish on European insurers",
+     "summary": "Barclays downgraded the European insurance sector, saying its share-price rally has outpaced earnings growth."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQM2FnUGp6TGNMWEI4blFDU19ZLWwybU9oNWNHMjVDYkNFQWF6NXBvN28zVmJUdlJpVFh4R21rQ2xvS3M3akZ0M1VyVHU5NGpMTDI4TXNMalIwNFFtcFg4VllZa21wREpFUE5iOFdnRGtWX2R2OWgtNTRSQ2pXUHV1eEMxeVc?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-17T09:27:11+00:00",
+     "new": true,
+     "key": "fb063ff0564f4449",
+     "title": "Iceye launches €2bn bid for Italian rocket maker Avio",
+     "summary": "Satellite group Iceye has launched a €2bn bid for Italian rocket maker Avio."
+    },
+    {
+     "url": "https://www.ft.com/content/10fd3d24-04b1-40a2-93d3-8b64023cc869?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-17T05:00:14+00:00",
+     "published": "2026-11-17T10:48:11+00:00",
      "new": true,
-     "key": "4d6edea879f644a2",
-     "title": "Banks seek to curb AI debt exposure as backlash mounts",
-     "summary": "Lenders are offloading debt linked to data centres and chips amid opposition to large projects."
+     "key": "f05f400505611c01",
+     "title": "Berlin picks ECB board nominee, paving way for Spanish presidency",
+     "summary": "Germany’s nominee advances a reported arrangement for Spain’s Pablo Hernández de Cos to lead the ECB."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQm40d1ZiR2k1S1RxaFdvQzJVYmRJUE1rcnNLZkEyRkZzbk5KZjlqWl9sZW9MUFB2OHpwdGZzT3duNzVnMnNaMEJMYkFKWndKTWE1OWNtd0hLcWRtSmVVYU5JaTBlNXZuT2t0V1AzVHdXVEhPMWt5QnhXakxpWkxiQk50ZEt0UGtXT3RpeXdiNEY0UXBqeXk2RGVHYURMNzJzNm13Zldtbm8tQQ?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-17T01:37:00+00:00",
-     "new": true,
-     "key": "34e1f7739c8ebce3",
-     "title": "Oil slips as recovering Mideast exports blunt Gulf tensions",
-     "summary": "Recovering Middle East exports are weighing on oil prices despite Gulf tensions."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMEo1LTlCdGhVaWJOcVNWczd3V2Q4Vnpxc2NfUDBjX055VG1uMTVzbHpKVC0tYm0wN3pvNlJDazFkODQ1MXFQcmp5OFgzWERJS1BwSVYwbUdxV2c0THRJYjJDc0ZBQlVOUWVON2hhWE1lMDhmVUI5b1VRaTQ0Z2VKZkxHaTlvTXdERlBITXpLSnhXWmpGekJGUDk4QnRwWXktRVBFT3NBdS1BSDk3a0ZWSnVjRQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-17T01:16:00+00:00",
-     "new": true,
-     "key": "b66e15050e7b4aed",
-     "title": "RBNZ flags growing private-credit risks in real-estate finance",
-     "summary": "New Zealand’s central bank has flagged risks from private credit in real-estate finance."
-    },
-    {
-     "url": "https://www.ft.com/content/3a8dbdda-1645-4b62-b64b-7da5de611d53?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/eb8031c0-a96a-4408-b762-b92ff0402f82?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-17T05:44:36+00:00",
+     "published": "2026-11-17T09:01:17+00:00",
      "new": true,
-     "key": "0c03eb14772a96c5",
-     "title": "Xi and Canada’s Carney slash tariffs as China courts middle powers",
-     "summary": "Canada and China have cut tariffs as Ottawa seeks to hedge against US pressure."
+     "key": "5976d711a327666b",
+     "title": "Ukraine says it destroyed part of Crimea bridge amid fierce exchange",
+     "summary": "Ukraine said part of the Crimea road bridge collapsed and the parallel rail bridge was damaged during exchanges with Russia."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVENPQjJZOVRpNkFzbHFNbDQ4T3A4VlhMS0dpcVJiYmNFeHg0Sng4eXVjcXhsUWFkYVcwdnpNWk1zaE5NdUVTOER1NkxVVlZsVDducDRmMHVhWWhlT2FTbEozSnBmVEpkN1dQZXRmcS1Qa0ZLUjVfSVlWZHB2OHVfMTJWU3Z4Z0ZTbEJMRmFNYXZoSnR2NUo5X3A4UkdqUExnWklJTDUzWC1UV0gxTkRoYmtzZHpoZw?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSUdKb0hSS1lGektXY0c0bnpxUFNhbk1JcTE2SnF3bGt3Q1hvMGFKTURZNVpRYWo5TXVfOWFrSlZqMl9HUFdoOUlxYVRhWms2NjBRcTJoeVBkckxwTldnUkd2ZEFXczZkVGRWc2NjekVSQjR3aERjWkduclgtZTFRc25NZWdmeG5JQ28zMTdDMnpDLUxTN0pQMHRKX1VCZ2ZxOWRQNnlnNzU2bTRKQlE?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-17T03:17:00+00:00",
+     "published": "2026-11-17T09:54:15+00:00",
      "new": true,
-     "key": "144315c230c03537",
-     "title": "Barclays says forced retail liquidation behind Taiwan stock rout",
-     "summary": "Barclays attributed Taiwan’s stock-market rout to forced liquidations by retail investors."
+     "key": "5afc11de0654af1e",
+     "title": "Shanghai Exchange intervenes after historic copper crunch",
+     "summary": "The Shanghai Exchange intervened after a historic squeeze in copper."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWHl6SmZGN1RhMnQtdjhXSUUxYXNoSVB5TjdXSVFEdGl6Vm9JWkRMMzF3NFlqaEh6S1JsTVFmTTZHRHZkTzVDckdicHFTNWl3OWJHV2Z5SHBQbndnWjNnd3pDbWM0bTJVVFN3QTNwTlBnTERBUUZjNkZZNDZBdE5pMHR6RHV3QkxxUmJsVVlxQlRuVmJyYlB4eUlTbFA0UDVpeExGOVhiOFJBYmp2WnAtU0g3UHo?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNGxfdXMtalZmZDVCTXZBSW1ycFF4c2ozM2IwN1NrdU9KbVFTQ2xQdG5NTDBiNURxcTRmUktrYk5nckpCbF8xN0pmRHpjeU9FcFgtbnhQOXV2dnBtVDliWFJPRmZqWnhncF9XRU5zeXdpQzVOaTgxdmdWUXE3NUFSbXUta0JPeGFNRzNuX0xFSnQ2R1FFMjA0MTNoTU9QenA1d3hPcWVHZXN4a2tDakJrRmJGdFA?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-17T04:15:00+00:00",
+     "published": "2026-11-17T11:34:01+00:00",
      "new": true,
-     "key": "c83f024dbc3dbdee",
-     "title": "AustralianSuper CIO says Anthropic frenzy echoes dot-com bubble",
-     "summary": "AustralianSuper’s CIO compared the investor frenzy around Anthropic with the dot-com bubble."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMDI4MEt3a3M4XzFhaC01R3pmSzdkOXZ2ZWhUWjhPb1lOZWZPbjdXTWFydWVFcmZNS21rZGZLUmZ6S21OcXFDUUkyN0NLc3BiZnlCWUJ1QmMxbHh0aWtZUjEzZFBuQng0bkRiVFZxN0pOUUJBQXRqQ0NGTUFZcEtLRUx6NkVWZklRTjhxOTNJMzdVUldYX21ieEFQcDlnTks2NFAxMDBrY1ktNmtlVzZYR2FxRQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-17T00:00:00+00:00",
-     "new": true,
-     "key": "eb3eff5a663d4149",
-     "title": "Gold steadies near 14-month low as inflation pressure persists",
-     "summary": "Gold held near a 14-month low amid persistent inflation pressure."
+     "key": "69fea3255cc1ab53",
+     "title": "Europe gas edges higher on Middle East tensions and weather outlook",
+     "summary": "European gas prices rose amid Middle East tensions and the weather outlook."
     }
    ],
    "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-17T06:01:30.386179+00:00",
-   "input_fingerprint": "sha256:9d23fc2e9222b049b58dac10df0dfaaa2d037d028986cd3876560b2d19418b22",
-   "last_success_at": "2026-11-17T06:01:30.386179+00:00",
-   "error": "Source check failed: FT (via Google News)",
+   "state": "healthy",
+   "source_checked_at": "2026-11-17T12:01:27.511180+00:00",
+   "input_fingerprint": "sha256:2f43ff23ee19aa49b7ebe2418a7b0311d2062b22b2e82b8976ddefd4d32bdeed",
+   "last_success_at": "2026-11-17T12:01:27.511180+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 658.6,
-     "change_pct": 0.49,
+     "price": 657.2,
+     "change_pct": -0.21,
      "currency": "CHF",
-     "as_of": "2026-11-15T23:00:00+00:00",
+     "as_of": "2026-11-16T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1174,10 +1293,10 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 736.84,
-     "change_pct": -1.15,
+     "price": 729.4,
+     "change_pct": -0.69,
      "currency": "EUR",
-     "as_of": "2026-11-12T23:00:00+00:00",
+     "as_of": "2026-11-16T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1185,10 +1304,10 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 111.7,
-     "change_pct": -0.53,
+     "price": 111.18,
+     "change_pct": -0.45,
      "currency": "EUR",
-     "as_of": "2026-11-12T23:00:00+00:00",
+     "as_of": "2026-11-16T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1196,10 +1315,10 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 289.35,
-     "change_pct": -0.91,
+     "price": 285.9,
+     "change_pct": -0.73,
      "currency": "EUR",
-     "as_of": "2026-11-12T23:00:00+00:00",
+     "as_of": "2026-11-16T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1207,10 +1326,10 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 328.3,
-     "change_pct": 0.0,
+     "price": 325.2,
+     "change_pct": -0.64,
      "currency": "EUR",
-     "as_of": "2026-11-12T23:00:00+00:00",
+     "as_of": "2026-11-16T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1218,10 +1337,10 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 8.72,
-     "change_pct": -1.13,
+     "price": 8.48,
+     "change_pct": -1.11,
      "currency": "EUR",
-     "as_of": "2026-11-12T23:00:00+00:00",
+     "as_of": "2026-11-16T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1229,10 +1348,10 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 50.25,
-     "change_pct": -1.57,
+     "price": 49.4,
+     "change_pct": -0.46,
      "currency": "EUR",
-     "as_of": "2026-11-12T23:00:00+00:00",
+     "as_of": "2026-11-16T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1240,10 +1359,10 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 68.28,
-     "change_pct": 0.66,
+     "price": 68.21,
+     "change_pct": 0.37,
      "currency": "EUR",
-     "as_of": "2026-11-12T23:00:00+00:00",
+     "as_of": "2026-11-16T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1251,8 +1370,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 64741.98,
-     "change_pct": -0.86,
+     "price": 64921.33,
+     "change_pct": 0.1,
      "currency": "USD",
      "as_of": "2026-11-17T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1262,8 +1381,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1832.56,
-     "change_pct": -0.16,
+     "price": 1818.8,
+     "change_pct": -0.03,
      "currency": "USD",
      "as_of": "2026-11-17T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1271,7 +1390,7 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 278,
+   "candidate_count": 358,
    "new_count": 8
   },
   "media": {
@@ -1284,7 +1403,7 @@
      "kind": "video",
      "published": "2026-11-16T21:00:27+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "909819cf4e9255cd"
     },
     {
@@ -1294,7 +1413,7 @@
      "kind": "video",
      "published": "2026-11-16T20:14:25+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "e0fc67d20badee09"
     },
     {
@@ -1330,10 +1449,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-17T06:01:30.386179+00:00",
+   "source_checked_at": "2026-11-17T12:01:27.511180+00:00",
    "candidate_count": 5,
-   "new_count": 2
+   "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-17T06:00:00.000Z"
+ "scheduled_slot": "2026-11-17T12:00:00.000Z"
 }
