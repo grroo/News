@@ -1,0 +1,1421 @@
+{
+ "schema_version": 2,
+ "edition_id": "ed-20261118T060133728674Z",
+ "generated_at": "2026-11-18T06:01:33.728674+00:00",
+ "generated_local": "Wed 18 Nov 2026, 07:01",
+ "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
+ "timezone": "Europe/Rome",
+ "schedule": {
+  "timezone": "Europe/Rome",
+  "hours": [
+   7,
+   13,
+   19
+  ],
+  "minute": 0,
+  "grace_minutes": 45
+ },
+ "trigger": "scheduled",
+ "request_ids": [
+  "run-2026-11-18T06:01:33.728674+00:00"
+ ],
+ "quality": {
+  "overall": "degraded"
+ },
+ "refresh": {
+  "outcome": "generated",
+  "completed_at": "2026-11-18T06:01:33.728674+00:00"
+ },
+ "mode": "llm",
+ "model": "gpt-6-luna",
+ "feed_health": [
+  {
+   "name": "BBC World",
+   "section": "news",
+   "status": "ok",
+   "item_count": 28,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 28,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Reuters (via Google News)",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Guardian World",
+   "section": "news",
+   "status": "ok",
+   "item_count": 45,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 45,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Le Monde",
+   "section": "news",
+   "status": "ok",
+   "item_count": 16,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 16,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "ANSA Top News",
+   "section": "news",
+   "status": "ok",
+   "item_count": 10,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 10,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere della Sera",
+   "section": "news",
+   "status": "ok",
+   "item_count": 69,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 69,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere Esteri",
+   "section": "news",
+   "status": "ok",
+   "item_count": 49,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 49,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere Economia",
+   "section": "news",
+   "status": "ok",
+   "item_count": 23,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 23,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: AI",
+   "section": "news",
+   "status": "ok",
+   "item_count": 106,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 106,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: insurance industry",
+   "section": "news",
+   "status": "ok",
+   "item_count": 92,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 92,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: Zurich Insurance",
+   "section": "news",
+   "status": "ok",
+   "item_count": 59,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 59,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: reinsurance",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: European Central Bank",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: Milano",
+   "section": "news",
+   "status": "ok",
+   "item_count": 109,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 109,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: PSG",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 106,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 106,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: équipe de France football",
+   "section": "sport",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
+  },
+  {
+   "name": "Team: XV de France rugby",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: Champions League",
+   "section": "sport",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
+  },
+  {
+   "name": "Team: Team Vitality Counter-Strike",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 58,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 58,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CulturePSG",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 50,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 50,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "L'Équipe",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 50,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 50,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "HLTV",
+   "section": "sport",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 403",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+   }
+  },
+  {
+   "name": "Zurich Insurance",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 18,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 18,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "S&P 500 (iShares Core)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "S&P 500 Equal Weight (Xtrackers)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "MSCI ACWI (SPDR)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Stoxx Europe 600 (Amundi)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "MSCI EM IMI (iShares)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Smart Grid (First Trust)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 1,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 1,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "PPFB",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Bitcoin",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 20,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 20,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Ethereum",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 19,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 19,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 10,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 10,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT Markets",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 25,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 25,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Reuters Business (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Bloomberg (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CNBC Markets",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 30,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 30,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Il Sole 24 Ore Finanza",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 9,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 9,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Les Echos Finance",
+   "section": "finance",
+   "status": "fallback",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CoinDesk",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 25,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 25,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Wiloo",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Crypto Currently",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "VisualPolitik EN",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Preston Stewart",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Marques Brownlee",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Christo Files",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Making Sense with Sam Harris",
+   "section": "media",
+   "status": "ok",
+   "item_count": 519,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 519,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The DeFi Report",
+   "section": "media",
+   "status": "ok",
+   "item_count": 46,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 46,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Lex Fridman Podcast",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null
+  },
+  {
+   "name": "Bankless",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null
+  },
+  {
+   "name": "Podcast de CulturePSG",
+   "section": "media",
+   "status": "ok",
+   "item_count": 545,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 545,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Dwarkesh Podcast",
+   "section": "media",
+   "status": "ok",
+   "item_count": 147,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 147,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Daily Gwei",
+   "section": "media",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  }
+ ],
+ "usage": {
+  "price_table_version": "2026-09-23",
+  "calls": 3,
+  "attempts": 3,
+  "unknown": false,
+  "unreported_cost": false,
+  "est_cost_usd": 0.002412,
+  "est_month_usd": 0.22,
+  "forecast_month_usd": 0.22,
+  "forecast_basis": "3 editions/day x 30, labelled forecast",
+  "sections": [
+   {
+    "section": "news",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 11934,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_0ed0d766876aae6e016afd3f446f6487d0b2c3ad00130f7454"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3391,
+    "output_tokens": 1018,
+    "reasoning_tokens": 465
+   },
+   {
+    "section": "sport",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 8384,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_0db83ade1501ade6016afd3f4fe09087d084ceeaf2657a5453"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3617,
+    "output_tokens": 648,
+    "reasoning_tokens": 292
+   },
+   {
+    "section": "finance",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 6982,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_0d03b543762e842c016afd3f57ded887d0aba78f4092a540da"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3218,
+    "output_tokens": 600,
+    "reasoning_tokens": 229
+   }
+  ],
+  "input_tokens": 9,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 10226,
+  "output_tokens": 2266,
+  "reasoning_tokens": 986,
+  "recorded_month_to_date": {
+   "month_utc": "2026-11",
+   "recorded_runs": 54,
+   "attempts": 162,
+   "known_cost_usd": 0.122173,
+   "unknown_cost_runs": 0,
+   "coverage": "committed runs only; token-priced lower bound, not an invoice"
+  }
+ },
+ "sections": {
+  "news": {
+   "briefing": [
+    {
+     "text": "The APEC summit is bringing Xi and Putin into talks, with a highly anticipated Xi–Trump–Putin meeting expected; Putin says he sees significant potential benefit from it.",
+     "sources": [
+      {
+       "key": "e54ccd81a1434eb7",
+       "title": "Apec summit live: Xi and Putin start talks; Rubio says Trump serious about meeting Kim Jong-un",
+       "url": "https://www.theguardian.com/world/live/2026/nov/18/apec-summit-live-updates-xi-putin-trump-world-leaders-gather-in-china",
+       "source": "The Guardian World",
+       "via": null
+      },
+      {
+       "key": "3f2d8d105ba1de08",
+       "title": "Russia's Putin says he expects big potential benefit from meeting with Trump and Xi - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOa1FfUS1OenA3M3Y5X29pUkxZUU1MbXdnaDlwNmtGd2RJaktuV2J6LTdVUTBwLW5OR0VEMUNKUlNRQjBDdkxMM2duWTlrQmNVdjFJalhHQUM4UVlUWGNnc2Y4dUJPa1FzSFN4QkxJREZqLVExdWFCOUNzWnllMVRTb3gzdE5XSUZBMlpjTzNiTzVvYUhyaUlENWlBdmlZUFNFWEI0dkM3Ql9ZWmVUR1FuRUtqYjFjdEREVVhqX2czWHdlNVk?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "An AI-related selloff is spreading beyond technology shares, while Nvidia says it is no longer sending AI chips to China.",
+     "sources": [
+      {
+       "key": "c01f70f96de4820d",
+       "title": "The AI Trade Selloff Is Taking More Than Tech Stocks Down With It - Business Insider",
+       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaV9vTFpER3VpSVROYWJfNlF5SEFSZ3FVTmFTNU8zemN2ZUJNVWxYc25JTHhpR1hkSEZuLTFRUTk4ZmhQQjdWR2RNMnFZZjlKOGlYM0pWS3NudmI3dGthZXVYTGU5eDJwQmlfNVpxWlBwYWJRVWhGY0JLdEo1dTJ3RFJMdGk1b09CZ284OFBvbU9CQllYTmgwWlJad1hCaWpaLWt5ZXc4c3FiLTA?oc=5",
+       "source": "Business Insider",
+       "via": "Google News"
+      },
+      {
+       "key": "72e93cda2ff77f62",
+       "title": "Interim Nvidia CEO Says It’s No Longer Sending AI Chips to China - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVk5ZV2dpR3EyVEtJcVdSZTBCVGl6UE1qZ1gzNWdiaHJ3WGR1S3NUd2VRcWVzUWhjanFicXVzNi1zRWZNel9EdlVOaC1uMUFCckRXMkRGWkRZeHdZUnE4VTdtUkZ2N0dITkRYa040X29HanoxODdGVXV3NzEyOGhnR1VOb2VwcFNIcHFJQlFrNXM3T1hqQlN5WnB0MHJTU0R2cTZOUnBNbV9Ubm81clFKM0x5cHRxdw?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Leaked documents have prompted accusations that the European Commission softened its assessment of Egypt’s welfare targets to release €2.5 billion in loans.",
+     "sources": [
+      {
+       "key": "253d55efc9877a4b",
+       "title": "European Commission accused of sugarcoating figures to release funds to Egypt",
+       "url": "https://www.theguardian.com/world/2026/nov/18/european-commission-accused-sugarcoating-figures-egypt-loans",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Private fund managers are vying for a share of the EU’s €10 trillion asset market; separately, a KPMG pilot found AI asked better questions in an audit.",
+     "sources": [
+      {
+       "key": "d6d86c88978a3bb8",
+       "title": "Private Fund Giants Battle Inertia in €10 Trillion EU Asset Hunt - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdmZ1dTVMaWpOX09EZkwweVhXTHFyOUVUOUlWWUYzTHR1Y0pGbkVLYVYxdlpYdHU5NHk4b0VXakZuMWNWTFdxYVNPX0poNHdBZ045azF6OXB3bzdEcW9jclJaY3dJLThEZWJaeV9XdGRXTV81SU9GRlFacjFoelBVUUI2andEZlcycVZEV2ROWS1MQ01TSGZsSFNhckg1Z09Sa1lFbDBkZW9sSmdkaDAyN0Npby1VX3kycE1udzhjWG1vUQ?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      },
+      {
+       "key": "e91077b59d5a7bf3",
+       "title": "AI asked ‘better questions’ than KPMG accountants in pilot audit - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZVBUWGFwaW5qOHRfZ0d1MjRVbU9ibFlpY2ZtN2EzUks0TUhueEFBUF9PS3RLNWdKZTdFQ1p2Z3U2RndPNGpwQ1JtWmdPeU9yT0IxZGk3eDdXZURsRW9CTUFkS20wYnB0VG9nRjZ3V3NRN0ZjRVlrUHhDZlp6Vi1CcVlQZnQ?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "France’s RN has proposed a pension reform for its 2027 presidential campaign, with financing measures affecting other areas including housing policy.",
+     "sources": [
+      {
+       "key": "dcb9df524c69ecff",
+       "title": "Présidentielle 2027 : le RN propose une avantageuse réforme des retraites mais sacrifie les précaires et la politique du logement pour la financer",
+       "url": "https://www.lemonde.fr/politique/article/2026/11/18/le-rn-compte-financer-son-avantageuse-reforme-des-retraites-et-un-debut-de-capitalisation-au-detriment-des-precaires-et-de-la-politique-du-logement_6813066_823448.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Democrat Mary Peltola’s Alaska victory completes a shift in control of the US Senate, according to Le Monde.",
+     "sources": [
+      {
+       "key": "33483ed87f63277c",
+       "title": "Midterms 2026 : malgré la polémique, les démocrates s’imposent en Alaska et parachèvent le basculement du Sénat américain",
+       "url": "https://www.lemonde.fr/international/article/2026/11/18/midterms-2026-malgre-la-polemique-les-democrates-s-imposent-en-alaska-et-parachevent-le-basculement-du-senat-americain_6813069_3210.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.theguardian.com/world/live/2026/nov/18/apec-summit-live-updates-xi-putin-trump-world-leaders-gather-in-china",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-18T05:41:54+00:00",
+     "new": true,
+     "key": "e54ccd81a1434eb7",
+     "title": "Xi and Putin meet as Trump–Putin talks loom at APEC",
+     "summary": "Xi and Putin have started talks at the APEC summit, where a meeting involving Trump is anticipated."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaV9vTFpER3VpSVROYWJfNlF5SEFSZ3FVTmFTNU8zemN2ZUJNVWxYc25JTHhpR1hkSEZuLTFRUTk4ZmhQQjdWR2RNMnFZZjlKOGlYM0pWS3NudmI3dGthZXVYTGU5eDJwQmlfNVpxWlBwYWJRVWhGY0JLdEo1dTJ3RFJMdGk1b09CZ284OFBvbU9CQllYTmgwWlJad1hCaWpaLWt5ZXc4c3FiLTA?oc=5",
+     "source": "Business Insider",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-18T05:25:00+00:00",
+     "new": true,
+     "key": "c01f70f96de4820d",
+     "title": "AI trade selloff spreads beyond tech stocks",
+     "summary": "The AI-related market selloff is dragging down stocks beyond the technology sector."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVk5ZV2dpR3EyVEtJcVdSZTBCVGl6UE1qZ1gzNWdiaHJ3WGR1S3NUd2VRcWVzUWhjanFicXVzNi1zRWZNel9EdlVOaC1uMUFCckRXMkRGWkRZeHdZUnE4VTdtUkZ2N0dITkRYa040X29HanoxODdGVXV3NzEyOGhnR1VOb2VwcFNIcHFJQlFrNXM3T1hqQlN5WnB0MHJTU0R2cTZOUnBNbV9Ubm81clFKM0x5cHRxdw?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-18T04:10:00+00:00",
+     "new": true,
+     "key": "72e93cda2ff77f62",
+     "title": "Nvidia says it is no longer sending AI chips to China",
+     "summary": "Nvidia’s interim CEO says the company is no longer sending AI chips to China."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdmZ1dTVMaWpOX09EZkwweVhXTHFyOUVUOUlWWUYzTHR1Y0pGbkVLYVYxdlpYdHU5NHk4b0VXakZuMWNWTFdxYVNPX0poNHdBZ045azF6OXB3bzdEcW9jclJaY3dJLThEZWJaeV9XdGRXTV81SU9GRlFacjFoelBVUUI2andEZlcycVZEV2ROWS1MQ01TSGZsSFNhckg1Z09Sa1lFbDBkZW9sSmdkaDAyN0Npby1VX3kycE1udzhjWG1vUQ?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Topic: European Central Bank",
+     "via": "Google News",
+     "published": "2026-11-18T05:15:00+00:00",
+     "new": true,
+     "key": "d6d86c88978a3bb8",
+     "title": "Private fund groups compete for EU assets",
+     "summary": "Private fund managers are competing for access to a €10 trillion European asset market."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZVBUWGFwaW5qOHRfZ0d1MjRVbU9ibFlpY2ZtN2EzUks0TUhueEFBUF9PS3RLNWdKZTdFQ1p2Z3U2RndPNGpwQ1JtWmdPeU9yT0IxZGk3eDdXZURsRW9CTUFkS20wYnB0VG9nRjZ3V3NRN0ZjRVlrUHhDZlp6Vi1CcVlQZnQ?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-18T05:00:33+00:00",
+     "new": true,
+     "key": "e91077b59d5a7bf3",
+     "title": "AI asked better questions than KPMG accountants in audit pilot",
+     "summary": "In a pilot audit, AI asked better questions than KPMG accountants."
+    },
+    {
+     "url": "https://www.theguardian.com/world/2026/nov/18/european-commission-accused-sugarcoating-figures-egypt-loans",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-18T05:00:32+00:00",
+     "new": true,
+     "key": "253d55efc9877a4b",
+     "title": "EU accused of softening assessment to release funds to Egypt",
+     "summary": "Leaked documents raise questions over whether Egypt met welfare targets for €2.5 billion in EU loans."
+    },
+    {
+     "url": "https://www.lemonde.fr/politique/article/2026/11/18/le-rn-compte-financer-son-avantageuse-reforme-des-retraites-et-un-debut-de-capitalisation-au-detriment-des-precaires-et-de-la-politique-du-logement_6813066_823448.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-18T04:41:47+00:00",
+     "new": true,
+     "key": "dcb9df524c69ecff",
+     "title": "France’s RN proposes pension reform for 2027 campaign",
+     "summary": "The RN’s proposed pension changes would be financed through cuts affecting other areas, including housing policy."
+    },
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/11/18/midterms-2026-malgre-la-polemique-les-democrates-s-imposent-en-alaska-et-parachevent-le-basculement-du-senat-americain_6813069_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-18T04:56:30+00:00",
+     "new": true,
+     "key": "33483ed87f63277c",
+     "title": "Democrats complete Senate shift with Alaska victory",
+     "summary": "Mary Peltola’s victory in Alaska completes the shift in control of the US Senate, according to Le Monde."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
+   "input_fingerprint": "sha256:dd7a058fec08036a61cf88435d7a0a7634f9be37c03d5861128961c4d9731cbc",
+   "last_success_at": "2026-11-18T06:01:33.728674+00:00",
+   "candidate_count": 544,
+   "new_count": 8
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "PSG’s handball team returned from the international break with a win away to Aix; the club’s women also face Chelsea in the Champions League.",
+     "sources": [
+      {
+       "key": "afba2e1ad666ad4e",
+       "title": "Victoires, tifo, Bercy, tout va bien pour le PSG Hand",
+       "url": "https://www.culturepsg.com/news/handball/victoires-tifo-bercy-tout-va-bien-pour-le-psg-hand/61575",
+       "source": "CulturePSG",
+       "via": null
+      },
+      {
+       "key": "f086e41fa87fbc8e",
+       "title": "Chelsea - PSG. À quelle heure et sur quelle chaîne TV suivre le match de Ligue des champions féminine de football ? - Ouest-France",
+       "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOcVlvY2VWWXFoLUVRSEJ6V2FrZ3VuOUcyYnBkeFZuS2lXR3cxNW14OG8wYURzX21Va3V1eVc0eWpuVnh5TDcya09sOC11eEgzbXZBSXA0eXh1eVdSaUg5eXBnMmp3X3RpX2ZCakNLeU1TUUFscklVX3pUTU1rNFpCdUZRUFMwbU5EdXZFdElUZ292WUdlVzhpQURhRkx4VzFrM2g2QkV5RFhhX2tNaDYxSUZ5cDZaRUlURlc1SUx1TUxJcmJRTDVLNmtFdlQzLWlJa0FOLVNOWFppTGNwWHFQZ1A5LW9UVDh2ZkhCRW5fZkZsU2UtRUZ4ZG1ydU12UlZwc1F4VVViVlFMNWQtQVFNTm5wTUU2UTV6MlNnTjZMYnZDUjNjWGtMdklhU3FmQXJLdkphZE0zNVZNY1BGTUp4ZQ?oc=5",
+       "source": "Ouest-France",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Antoine Dupont’s form is back in focus after his serious injury: L’Équipe examines his return to top level ahead of France’s match against South Africa.",
+     "sources": [
+      {
+       "key": "6f45d2f4af89e5a6",
+       "title": "Des doutes après sa grave blessure en mars 2025 au récital contre les Springboks : comment Antoine Dupont est redevenu Antoine Dupont - L'Équipe",
+       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOYTRzNkZoa3pWTmtRd0lRNjR6MVpyRnVSbU9PUVhxaE02a19DZjNaZ3JmQUctNVNxNmpxbjZLVzBEY1RoUkxxMlpTZ1NqWkYxMHFFaWVMbEhqZkhTVnlZcktZVC1nRlRBZG1wdE9uUk1jVndvWGpxbkxqTkxHamx1RENtY1Z1VDB5QUNYQ1RqUzdMMGlxSkJWdjhscWlxR2U1SGlCWElHcXk5cWtwT1VuNnF1cUVzSm1MaTY5aG5UeWM4enlWcjlFV1ZmZ2lmUlhiT2pmZXVkV2h3R3RXNkRkMm1XcUpYbTk2SkVWbFZ2ZFNmUjVfVTVFLXB3QjNYcDIteWJ4OHY1Zw?oc=5",
+       "source": "L'Équipe",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "France rugby prop Uini Atonio has revealed that an infarction has stopped him from playing, according to a new interview.",
+     "sources": [
+      {
+       "key": "3f3505f6cae25697",
+       "title": "Uini Atonio, le géant du XV de France stoppé par un infarctus : « Un médecin m’a dit que je serais mort à la première mêlée - Le Parisien",
+       "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQcUFkZ1RNT3RELTRWZkFOclc0NHJhZUlYMlBtRDdnNU9BbmU5alJzWE13Yk56T3NSY2wzTmthbFVOT0lRaG5SWXFibHlvaG1UY2c4S3k3SW1seVpLaUtLR3dPTzFXNVRSVFloanFfTVhNTS0xOWczZ1MybXhkOWpfVFVsSGUzS0I5X0g5VWZYanhDdW9uMVNpM3V6Tl9MVk45bWdXdzgxdWZBNElmWU1GWFE4NkpGYzFlVUhvQ011bGh1M1pyZU1tTTlCT0FFRFI5UGRFcGM0Uy1jZkstYTZLd3BNN3FhTC14QUh1SjdqUlptZlBmMlcwRXZSNHlJVzBOQ01xS1VSZ2VlYjRxNjJ5RjZvVVJrQXRYbHJmYURzOTlMWlNJU0I5WkR3ZHRkUGRRRmtyNnFR?oc=5",
+       "source": "Le Parisien",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Counter-Strike 2 and Team Vitality were among the honorees at the 2026 Esports Awards.",
+     "sources": [
+      {
+       "key": "ce5b8056ec2329ad",
+       "title": "The 2026 Esports Awards Presented by Thunderpick Celebrates the Industry’s Best, with iShowSpeed, Counter-Strike 2 and Team Vitality Taking Home Honours - Mynewsdesk",
+       "url": "https://news.google.com/rss/articles/CBMimwNBVV95cUxNMWFLcW8wcXd0RDl6UWFFX2xMTEF0RWlZVk9EZllSdFpaREpGbkZRUVo4ZU1MOGRQM3FmNjlNX2hnMzNrTVJpLWxHa0ZJSGtsdnhwX3RzNDV3bkFVTHdKTl9JTEVVZ0ZQYklLQ3Z1WFFtZUZwTEE2ZWI3TWpfdzFoX0JmSnRMY3hQU212ZFhzMVVORW5LWEgxMy1wY3F4bzF4MjJyVmJHdzhFNzh5V1lIUWQ1dGxJNW5BY0ZNaENjRFpvLU55R0R4bFlTTU9CNS1OZkZheVZzeUxBbHpBa19KTFFWbXhJbVhwVnJnVEhzOHlnbFBhMzNjd0J1NE9rSjhGdi1JMUlzSlE0aV9fOFhfQTZKWktGMzF5R1dteDVERW52NVFxbU52YnNzRkxwOTlIM3hhTVFHTnUtbWkwc1VNdktHdTc4akRES2VLRDFwdDQ4NnlQZXpWTXl0di10c2g3a1AyVTZFUS1idzBwQ0JDbmRfQXVsbElULUpzOWRNcm9lM0xNeUgzVzJLWHBUdXNaWUVEbmgxQ19jSkE?oc=5",
+       "source": "Mynewsdesk",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.culturepsg.com/news/handball/victoires-tifo-bercy-tout-va-bien-pour-le-psg-hand/61575",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-17T18:58:00+00:00",
+     "new": true,
+     "key": "afba2e1ad666ad4e",
+     "title": "PSG Handball return with a win at Aix",
+     "summary": "PSG handball beat Aix in its first match after the international break."
+    },
+    {
+     "url": "https://www.culturepsg.com/news/reseaux-sociaux/quand-doue-defie-une-star-du-mma/61569",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-17T09:07:00+00:00",
+     "new": true,
+     "key": "ce40b651c0e7bd81",
+     "title": "Quand Doué défie une star du MMA",
+     "summary": "Passé officiellement chez Nike au printemps dernier, Désiré Doué est à l'affiche de la dernière publicité de l'équipementier à la virgule en compagnie de Salahdine Parnasse, star du MMA français."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOcVlvY2VWWXFoLUVRSEJ6V2FrZ3VuOUcyYnBkeFZuS2lXR3cxNW14OG8wYURzX21Va3V1eVc0eWpuVnh5TDcya09sOC11eEgzbXZBSXA0eXh1eVdSaUg5eXBnMmp3X3RpX2ZCakNLeU1TUUFscklVX3pUTU1rNFpCdUZRUFMwbU5EdXZFdElUZ292WUdlVzhpQURhRkx4VzFrM2g2QkV5RFhhX2tNaDYxSUZ5cDZaRUlURlc1SUx1TUxJcmJRTDVLNmtFdlQzLWlJa0FOLVNOWFppTGNwWHFQZ1A5LW9UVDh2ZkhCRW5fZkZsU2UtRUZ4ZG1ydU12UlZwc1F4VVViVlFMNWQtQVFNTm5wTUU2UTV6MlNnTjZMYnZDUjNjWGtMdklhU3FmQXJLdkphZE0zNVZNY1BGTUp4ZQ?oc=5",
+     "source": "Ouest-France",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-11-18T05:16:02+00:00",
+     "new": true,
+     "key": "f086e41fa87fbc8e",
+     "title": "Chelsea–PSG: Women’s Champions League match guide",
+     "summary": "PSG’s women are set to face Chelsea in the Women’s Champions League."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOYTRzNkZoa3pWTmtRd0lRNjR6MVpyRnVSbU9PUVhxaE02a19DZjNaZ3JmQUctNVNxNmpxbjZLVzBEY1RoUkxxMlpTZ1NqWkYxMHFFaWVMbEhqZkhTVnlZcktZVC1nRlRBZG1wdE9uUk1jVndvWGpxbkxqTkxHamx1RENtY1Z1VDB5QUNYQ1RqUzdMMGlxSkJWdjhscWlxR2U1SGlCWElHcXk5cWtwT1VuNnF1cUVzSm1MaTY5aG5UeWM4enlWcjlFV1ZmZ2lmUlhiT2pmZXVkV2h3R3RXNkRkMm1XcUpYbTk2SkVWbFZ2ZFNmUjVfVTVFLXB3QjNYcDIteWJ4OHY1Zw?oc=5",
+     "source": "L'Équipe",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-18T04:35:00+00:00",
+     "new": true,
+     "key": "6f45d2f4af89e5a6",
+     "title": "How Antoine Dupont returned to top form",
+     "summary": "L’Équipe looks at Dupont’s recovery from his serious injury and his performance against South Africa."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQcUFkZ1RNT3RELTRWZkFOclc0NHJhZUlYMlBtRDdnNU9BbmU5alJzWE13Yk56T3NSY2wzTmthbFVOT0lRaG5SWXFibHlvaG1UY2c4S3k3SW1seVpLaUtLR3dPTzFXNVRSVFloanFfTVhNTS0xOWczZ1MybXhkOWpfVFVsSGUzS0I5X0g5VWZYanhDdW9uMVNpM3V6Tl9MVk45bWdXdzgxdWZBNElmWU1GWFE4NkpGYzFlVUhvQ011bGh1M1pyZU1tTTlCT0FFRFI5UGRFcGM0Uy1jZkstYTZLd3BNN3FhTC14QUh1SjdqUlptZlBmMlcwRXZSNHlJVzBOQ01xS1VSZ2VlYjRxNjJ5RjZvVVJrQXRYbHJmYURzOTlMWlNJU0I5WkR3ZHRkUGRRRmtyNnFR?oc=5",
+     "source": "Le Parisien",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-18T04:28:00+00:00",
+     "new": true,
+     "key": "3f3505f6cae25697",
+     "title": "Uini Atonio stopped by an infarction",
+     "summary": "The France prop says an infarction has ended his playing career."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMimwNBVV95cUxNMWFLcW8wcXd0RDl6UWFFX2xMTEF0RWlZVk9EZllSdFpaREpGbkZRUVo4ZU1MOGRQM3FmNjlNX2hnMzNrTVJpLWxHa0ZJSGtsdnhwX3RzNDV3bkFVTHdKTl9JTEVVZ0ZQYklLQ3Z1WFFtZUZwTEE2ZWI3TWpfdzFoX0JmSnRMY3hQU212ZFhzMVVORW5LWEgxMy1wY3F4bzF4MjJyVmJHdzhFNzh5V1lIUWQ1dGxJNW5BY0ZNaENjRFpvLU55R0R4bFlTTU9CNS1OZkZheVZzeUxBbHpBa19KTFFWbXhJbVhwVnJnVEhzOHlnbFBhMzNjd0J1NE9rSjhGdi1JMUlzSlE0aV9fOFhfQTZKWktGMzF5R1dteDVERW52NVFxbU52YnNzRkxwOTlIM3hhTVFHTnUtbWkwc1VNdktHdTc4akRES2VLRDFwdDQ4NnlQZXpWTXl0di10c2g3a1AyVTZFUS1idzBwQ0JDbmRfQXVsbElULUpzOWRNcm9lM0xNeUgzVzJLWHBUdXNaWUVEbmgxQ19jSkE?oc=5",
+     "source": "Mynewsdesk",
+     "feed_name": "Team: Team Vitality Counter-Strike",
+     "via": "Google News",
+     "published": "2026-11-18T04:42:18+00:00",
+     "new": true,
+     "key": "ce5b8056ec2329ad",
+     "title": "Counter-Strike 2 and Team Vitality honoured at the Esports Awards",
+     "summary": "Counter-Strike 2 and Team Vitality received honours at the 2026 Esports Awards."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "degraded",
+   "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
+   "input_fingerprint": "sha256:dd13624737730ffe3fd8d59a5ce8bde420f0c10ba82d2cac16c695645f335eb9",
+   "last_success_at": "2026-11-18T06:01:33.728674+00:00",
+   "error": "Source check failed: Team: équipe de France football, Team: Champions League, HLTV",
+   "candidate_count": 193,
+   "new_count": 6
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "Asian equities looked set to fall despite Nvidia beating sales expectations, leaving markets to weigh strong AI demand against broader risk appetite.",
+     "sources": [
+      {
+       "key": "c7f819da47e2bf1f",
+       "title": "Asian Stocks to Fall, Nvidia Sales Outlook Beats: Markets Wrap - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUHhZZG5FcFhON3BCMkRyY201M2FVdVRTaUF2a29ScWc3ZTd4TkI1Zm44SXNOcmZoOE9tN29nalFxMllaQV9ZQVp5SFNKbFlmVWtxVmtjdGl4WVVRRnpFeVZaVjVCVGozeFVWYzF6NnM1dERENnQ5SWpLTlNsejBDS21mS2k2aUhQeHZHNU80V2dvbG9h?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Analysts expect global corporate profit growth to slow sharply next year, partly as AI-capex growth moderates—a potential headwind for equity expectations.",
+     "sources": [
+      {
+       "key": "3ac0042f552beebf",
+       "title": "Wall Street expects corporate earnings growth to halve next year",
+       "url": "https://www.ft.com/content/74fdac03-bd9b-4e68-9e6e-dc023eb47be9?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The yen is back on intervention watch as heavy buying of Japanese stocks creates more demand for currency hedging.",
+     "sources": [
+      {
+       "key": "cc024c9e1127d2a4",
+       "title": "AI might be a reason why the yen is back on intervention watch",
+       "url": "https://www.ft.com/content/f5e91cd6-ee54-49ad-83d4-4dec29cb13a7?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Oil steadied as renewed Middle East fighting tested expectations of a supply recovery, keeping geopolitical risk in focus for energy markets.",
+     "sources": [
+      {
+       "key": "991fd2b52457e487",
+       "title": "Oil Steadies as Renewed Mideast Fighting Tests Supply Recovery - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX0Y1MlJBNWwyU2pkSkpneldlNzR5NzdWMjhHY28tMFItb3l1QzlURWZyYmp4SWFmMlJncUFJcURYU0w0U3lLaVIwVVljQWRmRWF6TnFMOGs2NmQ1cmRhUTR1RGh2Q2FYZ1JLY08xVjFNS3RKQTJXY1lWWnF2bmcta1dKMl9TMXhLY3RjcWtLemxKRTVGdlM0NkJIU25wUQ?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUHhZZG5FcFhON3BCMkRyY201M2FVdVRTaUF2a29ScWc3ZTd4TkI1Zm44SXNOcmZoOE9tN29nalFxMllaQV9ZQVp5SFNKbFlmVWtxVmtjdGl4WVVRRnpFeVZaVjVCVGozeFVWYzF6NnM1dERENnQ5SWpLTlNsejBDS21mS2k2aUhQeHZHNU80V2dvbG9h?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-18T04:58:00+00:00",
+     "new": true,
+     "key": "c7f819da47e2bf1f",
+     "title": "Asian stocks set to fall as Nvidia beats sales outlook",
+     "summary": "Asian stocks were set to fall despite Nvidia’s sales outlook beating expectations."
+    },
+    {
+     "url": "https://www.ft.com/content/74fdac03-bd9b-4e68-9e6e-dc023eb47be9?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-18T05:00:16+00:00",
+     "new": true,
+     "key": "3ac0042f552beebf",
+     "title": "Corporate earnings growth expected to slow next year",
+     "summary": "Analysts forecast global profit growth will fall to 16% from 33.5%, partly as AI-capex growth slows."
+    },
+    {
+     "url": "https://www.ft.com/content/f5e91cd6-ee54-49ad-83d4-4dec29cb13a7?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-11-18T00:01:04+00:00",
+     "new": true,
+     "key": "cc024c9e1127d2a4",
+     "title": "AI-related flows put yen back on intervention watch",
+     "summary": "Japanese stock buying is generating currency-hedging demand, putting the yen back on intervention watch."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX0Y1MlJBNWwyU2pkSkpneldlNzR5NzdWMjhHY28tMFItb3l1QzlURWZyYmp4SWFmMlJncUFJcURYU0w0U3lLaVIwVVljQWRmRWF6TnFMOGs2NmQ1cmRhUTR1RGh2Q2FYZ1JLY08xVjFNS3RKQTJXY1lWWnF2bmcta1dKMl9TMXhLY3RjcWtLemxKRTVGdlM0NkJIU25wUQ?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-18T05:15:00+00:00",
+     "new": true,
+     "key": "991fd2b52457e487",
+     "title": "Oil steadies as renewed fighting tests supply recovery",
+     "summary": "Renewed fighting in the Middle East tested expectations of an oil supply recovery."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQN2xvczVrRTNBTlRVMnBhTDl1TkJGYkZhYXJNNlFMbWxQQkdMcm9Cc0FIOEhKcVNnQXhXZHNrR2thMFlMTkhVaURsd0VsLWZidmsyaHphTGQyQkN4b0lKR2Z6Sl9aTk41MXV6OXZZQjdibzlfSzdha2xNZHVkdEtUMTR5SDhLcENCQ0ptZXhBdERXalFETzVCeW5pX0VsWG1RLUJlTjVPY0ttNk9vSklIcmk4LVlxX2QxNzRva251M2k?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-18T04:06:00+00:00",
+     "new": true,
+     "key": "6d7b6bade6f3f122",
+     "title": "Global money flows back into Indian stocks at record pace",
+     "summary": "Global investors are returning to Indian stocks at a record pace."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMmlWeXc5bFpQUDI1bkQyQVVEMmpSRC1ZUWpkZDczNDU5RUxoNFBzOXpreXZnOTctS0s1NGRBcW5Bb2ZUVGxMSWRiZU5ydWpKYkpaM1EteFZsdHF2Q1JVN1hWOW9aQm13ZlFmVWVuWVI5S0xJVFdUaERVT0hab2tCOUpBSzhvM2ZvczNFd0hNYndoREJ2d3llcVRRdVZ2VUFqZ1VBSGVYY0d5MVREZEp1MA?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-18T02:16:00+00:00",
+     "new": true,
+     "key": "4b744e130b97e600",
+     "title": "Gold steadies near 14-month low amid rate-hike pressure",
+     "summary": "Gold held near a 14-month low as rate-hike pressure mounted."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
+   "input_fingerprint": "sha256:4129d355c996238f400f4f9c123b69ce0fef1234e237ccb562e7195a507efc35",
+   "last_success_at": "2026-11-18T06:01:33.728674+00:00",
+   "tickers": [
+    {
+     "symbol": "ZURN.SW",
+     "label": "Zurich Insurance",
+     "price": 652.0,
+     "change_pct": -1.0,
+     "currency": "CHF",
+     "as_of": "2026-11-16T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "SXR8.DE",
+     "label": "S&P 500 (iShares Core)",
+     "price": 734.48,
+     "change_pct": -0.32,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "XDEW.DE",
+     "label": "S&P 500 Equal Weight (Xtrackers)",
+     "price": 111.68,
+     "change_pct": -0.02,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "SPYY.DE",
+     "label": "MSCI ACWI (SPDR)",
+     "price": 288.0,
+     "change_pct": -0.47,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "MEUD.PA",
+     "label": "Stoxx Europe 600 (Amundi)",
+     "price": 327.3,
+     "change_pct": -0.3,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "AYEM.DE",
+     "label": "MSCI EM IMI (iShares)",
+     "price": 8.58,
+     "change_pct": -1.65,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "GRID.DE",
+     "label": "Smart Grid (First Trust)",
+     "price": 49.63,
+     "change_pct": -1.22,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "PPFB.DE",
+     "label": "PPFB",
+     "price": 67.96,
+     "change_pct": -0.47,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "BTC-USD",
+     "label": "Bitcoin",
+     "price": 64557.03,
+     "change_pct": -0.46,
+     "currency": "USD",
+     "as_of": "2026-11-18T00:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "ETH-USD",
+     "label": "Ethereum",
+     "price": 1807.77,
+     "change_pct": -0.63,
+     "currency": "USD",
+     "as_of": "2026-11-18T00:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    }
+   ],
+   "candidate_count": 327,
+   "new_count": 6
+  },
+  "media": {
+   "briefing": "",
+   "items": [
+    {
+     "title": "Ukraine Just Dropped the Crimean Bridge",
+     "url": "https://www.youtube.com/watch?v=7tQBmcEDZKU",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-11-17T20:30:28+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "99371383e506c8e5"
+    },
+    {
+     "title": "Can You Trust MKBHD?",
+     "url": "https://www.youtube.com/watch?v=KTDJiVpSDTI",
+     "source": "Marques Brownlee",
+     "kind": "video",
+     "published": "2026-11-17T18:39:57+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "4aa2cd30eafdcaaf"
+    },
+    {
+     "title": "The Iran War Is Breaking The Pact That Keeps MBS In Power In Saudi Arabia | VisualPolitik EN",
+     "url": "https://www.youtube.com/watch?v=XQoJBrZGzgQ",
+     "source": "VisualPolitik EN",
+     "kind": "video",
+     "published": "2026-11-17T13:00:19+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "bfea4ab1606398d4"
+    },
+    {
+     "title": "Putin Doubled Down. Now NATO Is on the Table",
+     "url": "https://www.youtube.com/watch?v=U0YVTKwDMRc",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-11-16T21:00:27+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "909819cf4e9255cd"
+    },
+    {
+     "title": "What Russia Is Giving North Korea Is Worse Than We Thought | VisualPolitik EN",
+     "url": "https://www.youtube.com/watch?v=Kq-wvU4INbQ",
+     "source": "VisualPolitik EN",
+     "kind": "video",
+     "published": "2026-11-16T20:14:25+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "e0fc67d20badee09"
+    },
+    {
+     "title": "Paul Christiano – We could be 12 months away from AIs that can overthrow the government",
+     "url": "https://www.dwarkesh.com/p/paul-christiano-2",
+     "source": "Dwarkesh Podcast",
+     "kind": "podcast",
+     "published": "2026-11-16T17:46:28+00:00",
+     "duration_s": 5925,
+     "new": false,
+     "key": "cc9d9dbd1b4e109a"
+    },
+    {
+     "title": "I Can't Believe It",
+     "url": "https://www.youtube.com/watch?v=0ecQKfnEOw8",
+     "source": "Crypto Currently",
+     "kind": "video",
+     "published": "2026-11-15T21:10:22+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "09d15fa07636353a"
+    }
+   ],
+   "reviewed_count": 0,
+   "state": "skipped",
+   "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
+   "candidate_count": 7,
+   "new_count": 0
+  }
+ },
+ "scheduled_slot": "2026-11-18T06:00:00.000Z"
+}
