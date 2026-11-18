@@ -1,0 +1,1312 @@
+{
+ "schema_version": 2,
+ "edition_id": "ed-20261118T004129807500Z",
+ "generated_at": "2026-11-18T00:41:29.807500+00:00",
+ "generated_local": "Wed 18 Nov 2026, 01:41",
+ "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
+ "timezone": "Europe/Rome",
+ "schedule": {
+  "timezone": "Europe/Rome",
+  "hours": [
+   7,
+   13,
+   19
+  ],
+  "minute": 0,
+  "grace_minutes": 45
+ },
+ "trigger": "scheduled",
+ "request_ids": [
+  "run-2026-11-18T00:41:29.807500+00:00"
+ ],
+ "quality": {
+  "overall": "degraded"
+ },
+ "refresh": {
+  "outcome": "generated",
+  "completed_at": "2026-11-18T00:41:29.807500+00:00"
+ },
+ "mode": "llm",
+ "model": "gpt-6-luna",
+ "feed_health": [
+  {
+   "name": "BBC World",
+   "section": "news",
+   "status": "ok",
+   "item_count": 28,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 28,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Reuters (via Google News)",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Guardian World",
+   "section": "news",
+   "status": "ok",
+   "item_count": 45,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 45,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Le Monde",
+   "section": "news",
+   "status": "ok",
+   "item_count": 16,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 16,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "ANSA Top News",
+   "section": "news",
+   "status": "ok",
+   "item_count": 10,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 10,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere della Sera",
+   "section": "news",
+   "status": "ok",
+   "item_count": 69,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 69,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere Esteri",
+   "section": "news",
+   "status": "ok",
+   "item_count": 49,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 49,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Corriere Economia",
+   "section": "news",
+   "status": "ok",
+   "item_count": 23,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 23,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: AI",
+   "section": "news",
+   "status": "ok",
+   "item_count": 106,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 106,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: insurance industry",
+   "section": "news",
+   "status": "ok",
+   "item_count": 83,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 83,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: Zurich Insurance",
+   "section": "news",
+   "status": "ok",
+   "item_count": 68,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 68,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: reinsurance",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: European Central Bank",
+   "section": "news",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Topic: Milano",
+   "section": "news",
+   "status": "ok",
+   "item_count": 109,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 109,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: PSG",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 104,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 104,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: équipe de France football",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 101,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 101,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: XV de France rugby",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: Champions League",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: Team Vitality Counter-Strike",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 57,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 57,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CulturePSG",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 50,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 50,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "L'Équipe",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 50,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 50,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "HLTV",
+   "section": "sport",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 403",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+   }
+  },
+  {
+   "name": "Zurich Insurance",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 18,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 18,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "S&P 500 (iShares Core)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "S&P 500 Equal Weight (Xtrackers)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "MSCI ACWI (SPDR)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Stoxx Europe 600 (Amundi)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "MSCI EM IMI (iShares)",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Smart Grid (First Trust)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 1,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 1,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "PPFB",
+   "section": "finance",
+   "status": "empty",
+   "item_count": 0,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Bitcoin",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 20,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 20,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Ethereum",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 19,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 19,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 10,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 10,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT Markets",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 25,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 25,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "FT (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Reuters Business (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Bloomberg (via Google News)",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CNBC Markets",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 30,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 30,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Il Sole 24 Ore Finanza",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 9,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 9,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Les Echos Finance",
+   "section": "finance",
+   "status": "fallback",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "CoinDesk",
+   "section": "finance",
+   "status": "ok",
+   "item_count": 25,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 25,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Wiloo",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Crypto Currently",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "VisualPolitik EN",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Preston Stewart",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Marques Brownlee",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Christo Files",
+   "section": "media",
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Making Sense with Sam Harris",
+   "section": "media",
+   "status": "ok",
+   "item_count": 519,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 519,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The DeFi Report",
+   "section": "media",
+   "status": "ok",
+   "item_count": 46,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 46,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Lex Fridman Podcast",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null
+  },
+  {
+   "name": "Bankless",
+   "section": "media",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "response exceeds 2000000 bytes",
+   "failure": "oversize",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null
+  },
+  {
+   "name": "Podcast de CulturePSG",
+   "section": "media",
+   "status": "ok",
+   "item_count": 545,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 545,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Dwarkesh Podcast",
+   "section": "media",
+   "status": "ok",
+   "item_count": 147,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 147,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "The Daily Gwei",
+   "section": "media",
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  }
+ ],
+ "usage": {
+  "price_table_version": "2026-09-23",
+  "calls": 3,
+  "attempts": 3,
+  "unknown": false,
+  "unreported_cost": false,
+  "est_cost_usd": 0.002263,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
+  "forecast_basis": "3 editions/day x 30, labelled forecast",
+  "sections": [
+   {
+    "section": "news",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 7679,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_007fe99ac6951c0d016afcf43fb6bc87d0891b28a89d8e328e"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3334,
+    "output_tokens": 664,
+    "reasoning_tokens": 215
+   },
+   {
+    "section": "sport",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 6350,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_0833616d16e1f89b016afcf44765a087d088038a98924ac570"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3518,
+    "output_tokens": 522,
+    "reasoning_tokens": 280
+   },
+   {
+    "section": "finance",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "attempts": 1,
+    "latency_ms": 8214,
+    "unknown": false,
+    "provider_request_ids": [
+     "resp_0984cb55eae2c0a9016afcf44d2a5487d0af0925ca297a726c"
+    ],
+    "input_tokens": 3,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 3221,
+    "output_tokens": 820,
+    "reasoning_tokens": 438
+   }
+  ],
+  "input_tokens": 9,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 10073,
+  "output_tokens": 2006,
+  "reasoning_tokens": 933,
+  "recorded_month_to_date": {
+   "month_utc": "2026-11",
+   "recorded_runs": 53,
+   "attempts": 159,
+   "known_cost_usd": 0.119761,
+   "unknown_cost_runs": 0,
+   "coverage": "committed runs only; token-priced lower bound, not an invoice"
+  }
+ },
+ "sections": {
+  "news": {
+   "briefing": [
+    {
+     "text": "Nvidia reported a sharp revenue increase, but its board says it will not reinstate Jensen Huang as CEO; the results are also supporting Asian chip stocks.",
+     "sources": [
+      {
+       "key": "daa9959cb12cf974",
+       "title": "Nvidia doubles revenue as board says it does not intend to reinstate Jensen Huang",
+       "url": "https://www.theguardian.com/technology/2026/nov/17/nvidia-third-quarter-revenue-jensen-huang",
+       "source": "The Guardian World",
+       "via": null
+      },
+      {
+       "key": "01194afd4253e065",
+       "title": "Borsa: Tokyo, apertura in lieve rialzo (+0,25%)",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/borsa-tokyo-apertura-in-lieve-rialzo-025_d8cf74ed-5459-46fc-b06d-63f454681383.html",
+       "source": "ANSA Top News",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The catastrophe-bond market has passed $66 billion, with 2026 issuance already above $20 billion—a notable development for insurance-linked risk transfer.",
+     "sources": [
+      {
+       "key": "5de52144f928d141",
+       "title": "Catastrophe bond market tops $66 billion for the first time as 2026 issuance passes $20 billion at a record pace - MLQ.ai",
+       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaFpDOVRJWFNVTGxZdy13WUpKN2R6dVBKUmxHaE9jc2xmdlR3cWZFV2xnYmJMOWFqMTRRUk85UWVFNjZGUXI5X0JuOG5ScjdKUmFPSGRtMmNrTnJhaTZVLVdTem1xMGVHUG5NS3RCbWpRV2VYdnZodEtXRVdPek9ZTDl1V2VsUEl4VFZpM0pXSlR0ZTE0Rzk5dkt5RmJ1ZlRQUlc5cUtfMFpEV1B5LW9CeGpDT2RVVjFJaGZ0OXFXNFQxaG5KYmRjaVhmVQ?oc=5",
+       "source": "MLQ.ai",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "China’s bank shares are rallying as the global AI trade weakens, a notable shift in the market’s technology-led momentum.",
+     "sources": [
+      {
+       "key": "e16c198a7541d4af",
+       "title": "China Bank Rally Gains Momentum as Global AI Trade Unravels - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRlRCelpwZ01PR0pwZ05ZaU5tOUY5OXlLaGpReTRnZFRtQ01ZUFVzU2h5ZlVaUldUQ0NsbE9VZkhtQlRHOF94VXFaazVQTDBIQ3hDbkh5eFVOZGZlM0cyN0VzTjB4WHM2c2o4YjlHbkdzRThfSXZaZFd3akhleDdfOVdhNlp1UVVFOWlFZm1qYWQ1eFJSRjU3ZHA2V0twLVc4MHVQY2ZTbGh2X3hmbDU0?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The US has rescinded its AI Diffusion Rule and restricted remote access to advanced AI chips, according to a legal analysis of the changes.",
+     "sources": [
+      {
+       "key": "18cb895feb7e6846",
+       "title": "US Government Restricts Remote Access to Advanced AI Chips and Formally Rescinds the AI Diffusion Rule - WilmerHale",
+       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTENidkgzNlk2VWxOSE5OUlVJdVJISkZNU2lTLVhjUFE0b3FaYThNUVlnSnA0Uk8yQy0xTXVxOEgyZ1NOVFd0M01oQWlHX2hNbzJMOG1JcW5HNUR0X09GN1ZCY2NyeGVGdDRobVB2d2IyUzljalp0MVFOYUROWHFuTk0waThtVkpJYXdjTTNBeERGczluVXpvbFlfRjRxVVBIZmdWMHU1bkJCY1NfOEFXSDI3OVVDQjdEUWRha3dYM3JXMk4wTWFKdFE3aU5MNHlQZWF6MEkxTVFvaE43ZDhRVUNYWUdPaU1UZzJlR1lyUmdqMEJhakRr?oc=5",
+       "source": "WilmerHale",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "JPMorgan is developing AI-agent transactions that would not involve humans, a potential step toward greater automation in financial services.",
+     "sources": [
+      {
+       "key": "6b71dba5112287c0",
+       "title": "JPMorgan is working on AI agent transactions that don’t involve humans - CNBC",
+       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONVh4eHlLNlRjTEtRMFZKMF8wUHk1WFFNdHJhVXJVaGhIVFAweG9CUkttNG1Yakl4TExFektkSFNtcGxkazZjMGQ2ZUw1dm5meW9TME90YUlWamE4eEl3MjVianBhaVZpRFh2R1Y0Rko4bi1IWDZWRkRaeXQwazF4S1Zic9IBiAFBVV95cUxQMFZmbVZHeVo3X21XallydUV2Z1FoVGJMYWFfYVk4bXYwUFFwMEdnSG00RlNySHFqcUg1SzUwUFp4QWZPeHNzczItNHFpdUtYU2JKTXU5RWZ3TTNtaVI3dlFXVTViNHJsSGFyRWJCNGQzTmJCUU1JVnpyUUtkdkFsMTdUWTB6UzNj?oc=5",
+       "source": "CNBC",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.theguardian.com/technology/2026/nov/17/nvidia-third-quarter-revenue-jensen-huang",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-17T23:32:16+00:00",
+     "new": true,
+     "key": "daa9959cb12cf974",
+     "title": "Nvidia reports doubled revenue as board rules out rehiring Huang",
+     "summary": "Nvidia reported doubled revenue, while its board said it does not intend to reinstate Jensen Huang as CEO."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaFpDOVRJWFNVTGxZdy13WUpKN2R6dVBKUmxHaE9jc2xmdlR3cWZFV2xnYmJMOWFqMTRRUk85UWVFNjZGUXI5X0JuOG5ScjdKUmFPSGRtMmNrTnJhaTZVLVdTem1xMGVHUG5NS3RCbWpRV2VYdnZodEtXRVdPek9ZTDl1V2VsUEl4VFZpM0pXSlR0ZTE0Rzk5dkt5RmJ1ZlRQUlc5cUtfMFpEV1B5LW9CeGpDT2RVVjFJaGZ0OXFXNFQxaG5KYmRjaVhmVQ?oc=5",
+     "source": "MLQ.ai",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-11-18T00:22:30+00:00",
+     "new": true,
+     "key": "5de52144f928d141",
+     "title": "Catastrophe-bond market surpasses $66 billion",
+     "summary": "The catastrophe-bond market exceeded $66 billion as 2026 issuance passed $20 billion at a record pace."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRlRCelpwZ01PR0pwZ05ZaU5tOUY5OXlLaGpReTRnZFRtQ01ZUFVzU2h5ZlVaUldUQ0NsbE9VZkhtQlRHOF94VXFaazVQTDBIQ3hDbkh5eFVOZGZlM0cyN0VzTjB4WHM2c2o4YjlHbkdzRThfSXZaZFd3akhleDdfOVdhNlp1UVVFOWlFZm1qYWQ1eFJSRjU3ZHA2V0twLVc4MHVQY2ZTbGh2X3hmbDU0?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-17T23:57:14+00:00",
+     "new": true,
+     "key": "e16c198a7541d4af",
+     "title": "China bank rally gains momentum as AI trade weakens",
+     "summary": "China’s bank shares are gaining momentum as the global AI trade weakens."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTENidkgzNlk2VWxOSE5OUlVJdVJISkZNU2lTLVhjUFE0b3FaYThNUVlnSnA0Uk8yQy0xTXVxOEgyZ1NOVFd0M01oQWlHX2hNbzJMOG1JcW5HNUR0X09GN1ZCY2NyeGVGdDRobVB2d2IyUzljalp0MVFOYUROWHFuTk0waThtVkpJYXdjTTNBeERGczluVXpvbFlfRjRxVVBIZmdWMHU1bkJCY1NfOEFXSDI3OVVDQjdEUWRha3dYM3JXMk4wTWFKdFE3aU5MNHlQZWF6MEkxTVFvaE43ZDhRVUNYWUdPaU1UZzJlR1lyUmdqMEJhakRr?oc=5",
+     "source": "WilmerHale",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-18T00:22:23+00:00",
+     "new": true,
+     "key": "18cb895feb7e6846",
+     "title": "US rescinds AI Diffusion Rule and restricts remote access to advanced chips",
+     "summary": "The US has restricted remote access to advanced AI chips and formally rescinded its AI Diffusion Rule."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONVh4eHlLNlRjTEtRMFZKMF8wUHk1WFFNdHJhVXJVaGhIVFAweG9CUkttNG1Yakl4TExFektkSFNtcGxkazZjMGQ2ZUw1dm5meW9TME90YUlWamE4eEl3MjVianBhaVZpRFh2R1Y0Rko4bi1IWDZWRkRaeXQwazF4S1Zic9IBiAFBVV95cUxQMFZmbVZHeVo3X21XallydUV2Z1FoVGJMYWFfYVk4bXYwUFFwMEdnSG00RlNySHFqcUg1SzUwUFp4QWZPeHNzczItNHFpdUtYU2JKTXU5RWZ3TTNtaVI3dlFXVTViNHJsSGFyRWJCNGQzTmJCUU1JVnpyUUtkdkFsMTdUWTB6UzNj?oc=5",
+     "source": "CNBC",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-17T23:30:13+00:00",
+     "new": true,
+     "key": "6b71dba5112287c0",
+     "title": "JPMorgan works on AI-agent transactions without human involvement",
+     "summary": "JPMorgan is working on AI-agent transactions that do not involve humans."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZ0FvY0VGYXV2RkxSOFMxOENQVF85Mkt5SjZUUXFQS0VuZGpBZjBRbmxnNkVMNWVuRXFOa3lpY09XaE9HNk00UjYtVXJURmtTZGpyaEhEajVoUjh6bGZYbFRzd2NTQUVNd2ExdGFBbkdyXzhnOFZoWjNuRGtuTWpLMmU0U0FrdE40aEtTRnZtZTY5WWRJbFV2UUZXMzI3ZTZSVzFKNDZhYkpYc2hmd3Y2Yg?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-17T23:41:29+00:00",
+     "new": true,
+     "key": "3ad504b363294b5f",
+     "title": "Eisenkot-led bloc replaces Netanyahu ally as Knesset speaker",
+     "summary": "An Eisenkot-led bloc has replaced an ally of Netanyahu as speaker of Israel’s Knesset."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
+   "input_fingerprint": "sha256:4b801791899f1271c1721b0df15f65799960a40b6483d18daf36476e34d48c62",
+   "last_success_at": "2026-11-18T00:41:29.807500+00:00",
+   "candidate_count": 562,
+   "new_count": 6
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "Portugal beat Wales 3-2 in a Nations League match featuring PSG midfielders Vitinha and João Neves, both starters.",
+     "sources": [
+      {
+       "key": "a7851109d00fac76",
+       "title": "Pays de Galles/Portugal, le résumé video d'un match à rebondissements",
+       "url": "https://www.culturepsg.com/news/selections/pays-de-galles-portugal-le-resume-video-d-un-match-a-rebondissements/61577",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "France are among the eight teams through to the Nations League quarter-finals; the draw will determine their opponent.",
+     "sources": [
+      {
+       "key": "57f431df32bed791",
+       "title": "France, Espagne... qui sont les huit qualifiés pour les quarts de finale de la Ligue des nations 2026/27 - DAZN",
+       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQTU1FZVVsYmNIbV9yMThRSTdUZUwxT20yOER4T1JjMUxFYkNVdU81WGt2S1RhbzlBR2VrM2ZJNWNJYlNQMlBJY01iN3ZCOEViRVRJWFYtMDduRTdkQUVYelJwN215bTRFSC0zX2FiMjNwQnl3RUs4cC1ndE1YeVlLRmZSaTNwbVg2bVdQNDVISE9xcW1TOWNHS21wSzVzQVVST3pDR1NVQm9OcFJOMDUzbzN6WEhoVU1TNV96VC0ybnpSMzNxUlJJSVkwcTRuaGZWbHZZWVRXWG1CaHkta3VMQWRXektON2lZOE9Eb3VxZFZRMUFXUkVhQQ?oc=5",
+       "source": "DAZN",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "PSG’s U17s won 3-1 away to Brétigny despite playing with ten men for about an hour.",
+     "sources": [
+      {
+       "key": "08fefc4c377b4840",
+       "title": "Les U17 du PSG toujours inarrêtables",
+       "url": "https://www.culturepsg.com/news/formation/les-u17-du-psg-toujours-inarretables/61576",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.culturepsg.com/news/selections/pays-de-galles-portugal-le-resume-video-d-un-match-a-rebondissements/61577",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-17T21:53:48+00:00",
+     "new": true,
+     "key": "a7851109d00fac76",
+     "title": "Wales 2-3 Portugal: match highlights",
+     "summary": "Portugal, with Vitinha and João Neves starting, came from behind to beat Wales 3-2 in the Nations League."
+    },
+    {
+     "url": "https://www.culturepsg.com/news/formation/les-u17-du-psg-toujours-inarretables/61576",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-17T19:04:38+00:00",
+     "new": true,
+     "key": "08fefc4c377b4840",
+     "title": "PSG U17s keep winning",
+     "summary": "PSG’s U17s beat Brétigny 3-1 away despite being reduced to ten players for an hour."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQTU1FZVVsYmNIbV9yMThRSTdUZUwxT20yOER4T1JjMUxFYkNVdU81WGt2S1RhbzlBR2VrM2ZJNWNJYlNQMlBJY01iN3ZCOEViRVRJWFYtMDduRTdkQUVYelJwN215bTRFSC0zX2FiMjNwQnl3RUs4cC1ndE1YeVlLRmZSaTNwbVg2bVdQNDVISE9xcW1TOWNHS21wSzVzQVVST3pDR1NVQm9OcFJOMDUzbzN6WEhoVU1TNV96VC0ybnpSMzNxUlJJSVkwcTRuaGZWbHZZWVRXWG1CaHkta3VMQWRXektON2lZOE9Eb3VxZFZRMUFXUkVhQQ?oc=5",
+     "source": "DAZN",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-11-17T23:19:58+00:00",
+     "new": true,
+     "key": "57f431df32bed791",
+     "title": "The eight Nations League quarter-finalists",
+     "summary": "France and seven other teams have qualified for the 2026/27 Nations League quarter-finals."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "degraded",
+   "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
+   "input_fingerprint": "sha256:a950a14e309c1725515478be4e6bab3f9345b10117090ff3beaba1aa2e4cc2b4",
+   "last_success_at": "2026-11-18T00:41:29.807500+00:00",
+   "error": "Source check failed: HLTV",
+   "candidate_count": 362,
+   "new_count": 3
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "Nvidia reported strong sales, doubled revenue last quarter and raised its forecast for next year, but investors remain focused on whether AI demand can sustain technology-sector valuations.",
+     "sources": [
+      {
+       "key": "3bf7d7b9e064ad1d",
+       "title": "Nvidia insists Huang will not return as CEO as it reports strong sales",
+       "url": "https://www.ft.com/content/3a8881b8-068c-4950-9238-4f8eb1efc870?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Emerging-market stocks fell as Nvidia-related jitters weighed on Asian technology shares, a risk-off signal relevant to diversified equity portfolios.",
+     "sources": [
+      {
+       "key": "6a7d8558b6c197bc",
+       "title": "Emerging Stocks Drop As Nvidia Jitters Weigh on Asian Tech - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOOUhUTFdrYUdBNWdCakZmSzJoQTVza3FxVjFGTTdMcDlzeThLQ2xmak5UU1doZjlacUFZb3JpVlNvQjhfR3VEaTZYMzVHQ25EWjFUUVk3SGVaTW9zcDdiR2NsRU9DQUtPdUg2SWN2TTVNcHVIS1hKdFhNREpraGVKWVZWOGRpQ09hdWE5QmZFcDJiY2dScHNoWGthSktSRFhQbEk0eUtWVHlwZ3I0OHc?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Marine Le Pen has proposed lowering France’s retirement age to as low as 60; critics questioned the affordability and feasibility of her pension plans.",
+     "sources": [
+      {
+       "key": "0921832584b0beb5",
+       "title": "Marine Le Pen floats lowering France’s retirement age to as low as 60",
+       "url": "https://www.ft.com/content/c7ef0eb8-c9c5-46ef-b65d-c0ceaf111717?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "AppLovin is among companies discussing a possible acquisition of Criteo, according to sources cited by Reuters.",
+     "sources": [
+      {
+       "key": "0a47806027d9f189",
+       "title": "AppLovin among firms in talks to acquire Criteo, sources say - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTmxHN0VieTNVM0NsYTduejJkMGJXZFVVZmk3Q0VXZHhHMHZmSkdoRzFfYld4dk1xaFhwbmUzVjJKcVJBNml1b2dLVjhGbmhXZjQ0UnNEWjc2TnhlMWxmal9EbTdPTWlEdFZ2T2w5WENOcy13RjhOTzJiOFRtV0hPU01uN0Y0bTZteGU3anNNZVVJTzNQd0hBQkpGQldQb050OUdwTUNsNHVDVlZ0SEE?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "JPMorgan and Hyundai Card are exploring broader use of AI agents in financial transactions, a developing application with potential implications for financial services.",
+     "sources": [
+      {
+       "key": "88c202caa782d636",
+       "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
+       "url": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
+       "source": "CNBC Markets",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.ft.com/content/3a8881b8-068c-4950-9238-4f8eb1efc870?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-17T22:33:03+00:00",
+     "new": true,
+     "key": "3bf7d7b9e064ad1d",
+     "title": "Nvidia reports strong sales and raises its outlook",
+     "summary": "Nvidia doubled revenue last quarter and raised its financial forecast for next year."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOOUhUTFdrYUdBNWdCakZmSzJoQTVza3FxVjFGTTdMcDlzeThLQ2xmak5UU1doZjlacUFZb3JpVlNvQjhfR3VEaTZYMzVHQ25EWjFUUVk3SGVaTW9zcDdiR2NsRU9DQUtPdUg2SWN2TTVNcHVIS1hKdFhNREpraGVKWVZWOGRpQ09hdWE5QmZFcDJiY2dScHNoWGthSktSRFhQbEk0eUtWVHlwZ3I0OHc?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-17T21:54:05+00:00",
+     "new": true,
+     "key": "6a7d8558b6c197bc",
+     "title": "Emerging stocks fall as Nvidia jitters weigh on Asian tech",
+     "summary": "Emerging-market stocks dropped as concerns around Nvidia weighed on Asian technology shares."
+    },
+    {
+     "url": "https://www.ft.com/content/c7ef0eb8-c9c5-46ef-b65d-c0ceaf111717?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-17T21:03:56+00:00",
+     "new": true,
+     "key": "0921832584b0beb5",
+     "title": "Le Pen proposes lowering France’s retirement age",
+     "summary": "Marine Le Pen proposed lowering France’s retirement age to as low as 60, drawing criticism over cost and feasibility."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTmxHN0VieTNVM0NsYTduejJkMGJXZFVVZmk3Q0VXZHhHMHZmSkdoRzFfYld4dk1xaFhwbmUzVjJKcVJBNml1b2dLVjhGbmhXZjQ0UnNEWjc2TnhlMWxmal9EbTdPTWlEdFZ2T2w5WENOcy13RjhOTzJiOFRtV0hPU01uN0Y0bTZteGU3anNNZVVJTzNQd0hBQkpGQldQb050OUdwTUNsNHVDVlZ0SEE?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-17T20:31:15+00:00",
+     "new": true,
+     "key": "0a47806027d9f189",
+     "title": "AppLovin among firms discussing Criteo acquisition",
+     "summary": "AppLovin is among companies in talks to acquire Criteo, sources told Reuters."
+    },
+    {
+     "url": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
+     "source": "CNBC Markets",
+     "feed_name": "CNBC Markets",
+     "via": null,
+     "published": "2026-11-17T23:30:13+00:00",
+     "new": true,
+     "key": "88c202caa782d636",
+     "title": "JPMorgan explores AI-agent transactions",
+     "summary": "JPMorgan and Hyundai Card are looking to expand the use of AI agents in financial transactions."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
+   "input_fingerprint": "sha256:5968a5bc16351fd13144b47f0012ffdb55ec02e255392958a2c94c1c26b00c48",
+   "last_success_at": "2026-11-18T00:41:29.807500+00:00",
+   "tickers": [
+    {
+     "symbol": "ZURN.SW",
+     "label": "Zurich Insurance",
+     "price": 658.6,
+     "change_pct": 0.49,
+     "currency": "CHF",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "SXR8.DE",
+     "label": "S&P 500 (iShares Core)",
+     "price": 734.48,
+     "change_pct": -0.32,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "XDEW.DE",
+     "label": "S&P 500 Equal Weight (Xtrackers)",
+     "price": 111.68,
+     "change_pct": -0.02,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "SPYY.DE",
+     "label": "MSCI ACWI (SPDR)",
+     "price": 288.0,
+     "change_pct": -0.47,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "MEUD.PA",
+     "label": "Stoxx Europe 600 (Amundi)",
+     "price": 327.3,
+     "change_pct": -0.3,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "AYEM.DE",
+     "label": "MSCI EM IMI (iShares)",
+     "price": 8.58,
+     "change_pct": -1.65,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "GRID.DE",
+     "label": "Smart Grid (First Trust)",
+     "price": 49.63,
+     "change_pct": -1.22,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "PPFB.DE",
+     "label": "PPFB",
+     "price": 67.96,
+     "change_pct": -0.47,
+     "currency": "EUR",
+     "as_of": "2026-11-15T23:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "BTC-USD",
+     "label": "Bitcoin",
+     "price": 64713.44,
+     "change_pct": -0.22,
+     "currency": "USD",
+     "as_of": "2026-11-18T00:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    },
+    {
+     "symbol": "ETH-USD",
+     "label": "Ethereum",
+     "price": 1817.37,
+     "change_pct": -0.1,
+     "currency": "USD",
+     "as_of": "2026-11-18T00:00:00+00:00",
+     "comparison_basis": "prior_daily_close",
+     "session": "regular",
+     "quote_source": "yfinance"
+    }
+   ],
+   "candidate_count": 343,
+   "new_count": 5
+  },
+  "media": {
+   "briefing": "",
+   "items": [
+    {
+     "title": "Ukraine Just Dropped the Crimean Bridge",
+     "url": "https://www.youtube.com/watch?v=7tQBmcEDZKU",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-11-17T20:30:28+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "99371383e506c8e5"
+    },
+    {
+     "title": "Can You Trust MKBHD?",
+     "url": "https://www.youtube.com/watch?v=KTDJiVpSDTI",
+     "source": "Marques Brownlee",
+     "kind": "video",
+     "published": "2026-11-17T18:39:57+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "4aa2cd30eafdcaaf"
+    },
+    {
+     "title": "The Iran War Is Breaking The Pact That Keeps MBS In Power In Saudi Arabia | VisualPolitik EN",
+     "url": "https://www.youtube.com/watch?v=XQoJBrZGzgQ",
+     "source": "VisualPolitik EN",
+     "kind": "video",
+     "published": "2026-11-17T13:00:19+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "bfea4ab1606398d4"
+    },
+    {
+     "title": "Putin Doubled Down. Now NATO Is on the Table",
+     "url": "https://www.youtube.com/watch?v=U0YVTKwDMRc",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-11-16T21:00:27+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "909819cf4e9255cd"
+    },
+    {
+     "title": "What Russia Is Giving North Korea Is Worse Than We Thought | VisualPolitik EN",
+     "url": "https://www.youtube.com/watch?v=Kq-wvU4INbQ",
+     "source": "VisualPolitik EN",
+     "kind": "video",
+     "published": "2026-11-16T20:14:25+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "e0fc67d20badee09"
+    },
+    {
+     "title": "Paul Christiano – We could be 12 months away from AIs that can overthrow the government",
+     "url": "https://www.dwarkesh.com/p/paul-christiano-2",
+     "source": "Dwarkesh Podcast",
+     "kind": "podcast",
+     "published": "2026-11-16T17:46:28+00:00",
+     "duration_s": 5925,
+     "new": false,
+     "key": "cc9d9dbd1b4e109a"
+    },
+    {
+     "title": "I Can't Believe It",
+     "url": "https://www.youtube.com/watch?v=0ecQKfnEOw8",
+     "source": "Crypto Currently",
+     "kind": "video",
+     "published": "2026-11-15T21:10:22+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "09d15fa07636353a"
+    }
+   ],
+   "reviewed_count": 0,
+   "state": "skipped",
+   "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
+   "candidate_count": 7,
+   "new_count": 2
+  }
+ },
+ "scheduled_slot": "2026-11-17T18:00:00Z"
+}

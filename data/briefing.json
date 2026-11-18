@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261118T004129807500Z",
- "generated_at": "2026-11-18T00:41:29.807500+00:00",
- "generated_local": "Wed 18 Nov 2026, 01:41",
- "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
+ "edition_id": "ed-20261118T060133728674Z",
+ "generated_at": "2026-11-18T06:01:33.728674+00:00",
+ "generated_local": "Wed 18 Nov 2026, 07:01",
+ "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-18T00:41:29.807500+00:00"
+  "run-2026-11-18T06:01:33.728674+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-18T00:41:29.807500+00:00"
+  "completed_at": "2026-11-18T06:01:33.728674+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -141,10 +141,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 83,
+   "item_count": 92,
    "reason": null,
    "failure": null,
-   "parsed_count": 83,
+   "parsed_count": 92,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -153,10 +153,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 68,
+   "item_count": 59,
    "reason": null,
    "failure": null,
-   "parsed_count": 68,
+   "parsed_count": 59,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 106,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 106,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -212,14 +212,19 @@
   {
    "name": "Team: équipe de France football",
    "section": "sport",
-   "status": "ok",
-   "item_count": 101,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 101,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: XV de France rugby",
@@ -236,23 +241,28 @@
   {
    "name": "Team: Champions League",
    "section": "sport",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 57,
+   "item_count": 58,
    "reason": null,
    "failure": null,
-   "parsed_count": 57,
+   "parsed_count": 58,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -689,9 +699,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002263,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.002412,
+  "est_month_usd": 0.22,
+  "forecast_month_usd": 0.22,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -699,60 +709,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7679,
+    "latency_ms": 11934,
     "unknown": false,
     "provider_request_ids": [
-     "resp_007fe99ac6951c0d016afcf43fb6bc87d0891b28a89d8e328e"
+     "resp_0ed0d766876aae6e016afd3f446f6487d0b2c3ad00130f7454"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3334,
-    "output_tokens": 664,
-    "reasoning_tokens": 215
+    "cache_write_tokens": 3391,
+    "output_tokens": 1018,
+    "reasoning_tokens": 465
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6350,
+    "latency_ms": 8384,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0833616d16e1f89b016afcf44765a087d088038a98924ac570"
+     "resp_0db83ade1501ade6016afd3f4fe09087d084ceeaf2657a5453"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3518,
-    "output_tokens": 522,
-    "reasoning_tokens": 280
+    "cache_write_tokens": 3617,
+    "output_tokens": 648,
+    "reasoning_tokens": 292
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8214,
+    "latency_ms": 6982,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0984cb55eae2c0a9016afcf44d2a5487d0af0925ca297a726c"
+     "resp_0d03b543762e842c016afd3f57ded887d0aba78f4092a540da"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3221,
-    "output_tokens": 820,
-    "reasoning_tokens": 438
+    "cache_write_tokens": 3218,
+    "output_tokens": 600,
+    "reasoning_tokens": 229
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10073,
-  "output_tokens": 2006,
-  "reasoning_tokens": 933,
+  "cache_write_tokens": 10226,
+  "output_tokens": 2266,
+  "reasoning_tokens": 986,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 53,
-   "attempts": 159,
-   "known_cost_usd": 0.119761,
+   "recorded_runs": 54,
+   "attempts": 162,
+   "known_cost_usd": 0.122173,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -761,290 +771,94 @@
   "news": {
    "briefing": [
     {
-     "text": "Nvidia reported a sharp revenue increase, but its board says it will not reinstate Jensen Huang as CEO; the results are also supporting Asian chip stocks.",
+     "text": "The APEC summit is bringing Xi and Putin into talks, with a highly anticipated Xi–Trump–Putin meeting expected; Putin says he sees significant potential benefit from it.",
      "sources": [
       {
-       "key": "daa9959cb12cf974",
-       "title": "Nvidia doubles revenue as board says it does not intend to reinstate Jensen Huang",
-       "url": "https://www.theguardian.com/technology/2026/nov/17/nvidia-third-quarter-revenue-jensen-huang",
+       "key": "e54ccd81a1434eb7",
+       "title": "Apec summit live: Xi and Putin start talks; Rubio says Trump serious about meeting Kim Jong-un",
+       "url": "https://www.theguardian.com/world/live/2026/nov/18/apec-summit-live-updates-xi-putin-trump-world-leaders-gather-in-china",
        "source": "The Guardian World",
        "via": null
       },
       {
-       "key": "01194afd4253e065",
-       "title": "Borsa: Tokyo, apertura in lieve rialzo (+0,25%)",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/borsa-tokyo-apertura-in-lieve-rialzo-025_d8cf74ed-5459-46fc-b06d-63f454681383.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "The catastrophe-bond market has passed $66 billion, with 2026 issuance already above $20 billion—a notable development for insurance-linked risk transfer.",
-     "sources": [
-      {
-       "key": "5de52144f928d141",
-       "title": "Catastrophe bond market tops $66 billion for the first time as 2026 issuance passes $20 billion at a record pace - MLQ.ai",
-       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaFpDOVRJWFNVTGxZdy13WUpKN2R6dVBKUmxHaE9jc2xmdlR3cWZFV2xnYmJMOWFqMTRRUk85UWVFNjZGUXI5X0JuOG5ScjdKUmFPSGRtMmNrTnJhaTZVLVdTem1xMGVHUG5NS3RCbWpRV2VYdnZodEtXRVdPek9ZTDl1V2VsUEl4VFZpM0pXSlR0ZTE0Rzk5dkt5RmJ1ZlRQUlc5cUtfMFpEV1B5LW9CeGpDT2RVVjFJaGZ0OXFXNFQxaG5KYmRjaVhmVQ?oc=5",
-       "source": "MLQ.ai",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "China’s bank shares are rallying as the global AI trade weakens, a notable shift in the market’s technology-led momentum.",
-     "sources": [
-      {
-       "key": "e16c198a7541d4af",
-       "title": "China Bank Rally Gains Momentum as Global AI Trade Unravels - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRlRCelpwZ01PR0pwZ05ZaU5tOUY5OXlLaGpReTRnZFRtQ01ZUFVzU2h5ZlVaUldUQ0NsbE9VZkhtQlRHOF94VXFaazVQTDBIQ3hDbkh5eFVOZGZlM0cyN0VzTjB4WHM2c2o4YjlHbkdzRThfSXZaZFd3akhleDdfOVdhNlp1UVVFOWlFZm1qYWQ1eFJSRjU3ZHA2V0twLVc4MHVQY2ZTbGh2X3hmbDU0?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The US has rescinded its AI Diffusion Rule and restricted remote access to advanced AI chips, according to a legal analysis of the changes.",
-     "sources": [
-      {
-       "key": "18cb895feb7e6846",
-       "title": "US Government Restricts Remote Access to Advanced AI Chips and Formally Rescinds the AI Diffusion Rule - WilmerHale",
-       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTENidkgzNlk2VWxOSE5OUlVJdVJISkZNU2lTLVhjUFE0b3FaYThNUVlnSnA0Uk8yQy0xTXVxOEgyZ1NOVFd0M01oQWlHX2hNbzJMOG1JcW5HNUR0X09GN1ZCY2NyeGVGdDRobVB2d2IyUzljalp0MVFOYUROWHFuTk0waThtVkpJYXdjTTNBeERGczluVXpvbFlfRjRxVVBIZmdWMHU1bkJCY1NfOEFXSDI3OVVDQjdEUWRha3dYM3JXMk4wTWFKdFE3aU5MNHlQZWF6MEkxTVFvaE43ZDhRVUNYWUdPaU1UZzJlR1lyUmdqMEJhakRr?oc=5",
-       "source": "WilmerHale",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "JPMorgan is developing AI-agent transactions that would not involve humans, a potential step toward greater automation in financial services.",
-     "sources": [
-      {
-       "key": "6b71dba5112287c0",
-       "title": "JPMorgan is working on AI agent transactions that don’t involve humans - CNBC",
-       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONVh4eHlLNlRjTEtRMFZKMF8wUHk1WFFNdHJhVXJVaGhIVFAweG9CUkttNG1Yakl4TExFektkSFNtcGxkazZjMGQ2ZUw1dm5meW9TME90YUlWamE4eEl3MjVianBhaVZpRFh2R1Y0Rko4bi1IWDZWRkRaeXQwazF4S1Zic9IBiAFBVV95cUxQMFZmbVZHeVo3X21XallydUV2Z1FoVGJMYWFfYVk4bXYwUFFwMEdnSG00RlNySHFqcUg1SzUwUFp4QWZPeHNzczItNHFpdUtYU2JKTXU5RWZ3TTNtaVI3dlFXVTViNHJsSGFyRWJCNGQzTmJCUU1JVnpyUUtkdkFsMTdUWTB6UzNj?oc=5",
-       "source": "CNBC",
-       "via": "Google News"
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://www.theguardian.com/technology/2026/nov/17/nvidia-third-quarter-revenue-jensen-huang",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-17T23:32:16+00:00",
-     "new": true,
-     "key": "daa9959cb12cf974",
-     "title": "Nvidia reports doubled revenue as board rules out rehiring Huang",
-     "summary": "Nvidia reported doubled revenue, while its board said it does not intend to reinstate Jensen Huang as CEO."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaFpDOVRJWFNVTGxZdy13WUpKN2R6dVBKUmxHaE9jc2xmdlR3cWZFV2xnYmJMOWFqMTRRUk85UWVFNjZGUXI5X0JuOG5ScjdKUmFPSGRtMmNrTnJhaTZVLVdTem1xMGVHUG5NS3RCbWpRV2VYdnZodEtXRVdPek9ZTDl1V2VsUEl4VFZpM0pXSlR0ZTE0Rzk5dkt5RmJ1ZlRQUlc5cUtfMFpEV1B5LW9CeGpDT2RVVjFJaGZ0OXFXNFQxaG5KYmRjaVhmVQ?oc=5",
-     "source": "MLQ.ai",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-11-18T00:22:30+00:00",
-     "new": true,
-     "key": "5de52144f928d141",
-     "title": "Catastrophe-bond market surpasses $66 billion",
-     "summary": "The catastrophe-bond market exceeded $66 billion as 2026 issuance passed $20 billion at a record pace."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRlRCelpwZ01PR0pwZ05ZaU5tOUY5OXlLaGpReTRnZFRtQ01ZUFVzU2h5ZlVaUldUQ0NsbE9VZkhtQlRHOF94VXFaazVQTDBIQ3hDbkh5eFVOZGZlM0cyN0VzTjB4WHM2c2o4YjlHbkdzRThfSXZaZFd3akhleDdfOVdhNlp1UVVFOWlFZm1qYWQ1eFJSRjU3ZHA2V0twLVc4MHVQY2ZTbGh2X3hmbDU0?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-17T23:57:14+00:00",
-     "new": true,
-     "key": "e16c198a7541d4af",
-     "title": "China bank rally gains momentum as AI trade weakens",
-     "summary": "China’s bank shares are gaining momentum as the global AI trade weakens."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTENidkgzNlk2VWxOSE5OUlVJdVJISkZNU2lTLVhjUFE0b3FaYThNUVlnSnA0Uk8yQy0xTXVxOEgyZ1NOVFd0M01oQWlHX2hNbzJMOG1JcW5HNUR0X09GN1ZCY2NyeGVGdDRobVB2d2IyUzljalp0MVFOYUROWHFuTk0waThtVkpJYXdjTTNBeERGczluVXpvbFlfRjRxVVBIZmdWMHU1bkJCY1NfOEFXSDI3OVVDQjdEUWRha3dYM3JXMk4wTWFKdFE3aU5MNHlQZWF6MEkxTVFvaE43ZDhRVUNYWUdPaU1UZzJlR1lyUmdqMEJhakRr?oc=5",
-     "source": "WilmerHale",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-18T00:22:23+00:00",
-     "new": true,
-     "key": "18cb895feb7e6846",
-     "title": "US rescinds AI Diffusion Rule and restricts remote access to advanced chips",
-     "summary": "The US has restricted remote access to advanced AI chips and formally rescinded its AI Diffusion Rule."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONVh4eHlLNlRjTEtRMFZKMF8wUHk1WFFNdHJhVXJVaGhIVFAweG9CUkttNG1Yakl4TExFektkSFNtcGxkazZjMGQ2ZUw1dm5meW9TME90YUlWamE4eEl3MjVianBhaVZpRFh2R1Y0Rko4bi1IWDZWRkRaeXQwazF4S1Zic9IBiAFBVV95cUxQMFZmbVZHeVo3X21XallydUV2Z1FoVGJMYWFfYVk4bXYwUFFwMEdnSG00RlNySHFqcUg1SzUwUFp4QWZPeHNzczItNHFpdUtYU2JKTXU5RWZ3TTNtaVI3dlFXVTViNHJsSGFyRWJCNGQzTmJCUU1JVnpyUUtkdkFsMTdUWTB6UzNj?oc=5",
-     "source": "CNBC",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-17T23:30:13+00:00",
-     "new": true,
-     "key": "6b71dba5112287c0",
-     "title": "JPMorgan works on AI-agent transactions without human involvement",
-     "summary": "JPMorgan is working on AI-agent transactions that do not involve humans."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZ0FvY0VGYXV2RkxSOFMxOENQVF85Mkt5SjZUUXFQS0VuZGpBZjBRbmxnNkVMNWVuRXFOa3lpY09XaE9HNk00UjYtVXJURmtTZGpyaEhEajVoUjh6bGZYbFRzd2NTQUVNd2ExdGFBbkdyXzhnOFZoWjNuRGtuTWpLMmU0U0FrdE40aEtTRnZtZTY5WWRJbFV2UUZXMzI3ZTZSVzFKNDZhYkpYc2hmd3Y2Yg?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-17T23:41:29+00:00",
-     "new": true,
-     "key": "3ad504b363294b5f",
-     "title": "Eisenkot-led bloc replaces Netanyahu ally as Knesset speaker",
-     "summary": "An Eisenkot-led bloc has replaced an ally of Netanyahu as speaker of Israel’s Knesset."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
-   "input_fingerprint": "sha256:4b801791899f1271c1721b0df15f65799960a40b6483d18daf36476e34d48c62",
-   "last_success_at": "2026-11-18T00:41:29.807500+00:00",
-   "candidate_count": 562,
-   "new_count": 6
-  },
-  "sport": {
-   "briefing": [
-    {
-     "text": "Portugal beat Wales 3-2 in a Nations League match featuring PSG midfielders Vitinha and João Neves, both starters.",
-     "sources": [
-      {
-       "key": "a7851109d00fac76",
-       "title": "Pays de Galles/Portugal, le résumé video d'un match à rebondissements",
-       "url": "https://www.culturepsg.com/news/selections/pays-de-galles-portugal-le-resume-video-d-un-match-a-rebondissements/61577",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "France are among the eight teams through to the Nations League quarter-finals; the draw will determine their opponent.",
-     "sources": [
-      {
-       "key": "57f431df32bed791",
-       "title": "France, Espagne... qui sont les huit qualifiés pour les quarts de finale de la Ligue des nations 2026/27 - DAZN",
-       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQTU1FZVVsYmNIbV9yMThRSTdUZUwxT20yOER4T1JjMUxFYkNVdU81WGt2S1RhbzlBR2VrM2ZJNWNJYlNQMlBJY01iN3ZCOEViRVRJWFYtMDduRTdkQUVYelJwN215bTRFSC0zX2FiMjNwQnl3RUs4cC1ndE1YeVlLRmZSaTNwbVg2bVdQNDVISE9xcW1TOWNHS21wSzVzQVVST3pDR1NVQm9OcFJOMDUzbzN6WEhoVU1TNV96VC0ybnpSMzNxUlJJSVkwcTRuaGZWbHZZWVRXWG1CaHkta3VMQWRXektON2lZOE9Eb3VxZFZRMUFXUkVhQQ?oc=5",
-       "source": "DAZN",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "PSG’s U17s won 3-1 away to Brétigny despite playing with ten men for about an hour.",
-     "sources": [
-      {
-       "key": "08fefc4c377b4840",
-       "title": "Les U17 du PSG toujours inarrêtables",
-       "url": "https://www.culturepsg.com/news/formation/les-u17-du-psg-toujours-inarretables/61576",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://www.culturepsg.com/news/selections/pays-de-galles-portugal-le-resume-video-d-un-match-a-rebondissements/61577",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-17T21:53:48+00:00",
-     "new": true,
-     "key": "a7851109d00fac76",
-     "title": "Wales 2-3 Portugal: match highlights",
-     "summary": "Portugal, with Vitinha and João Neves starting, came from behind to beat Wales 3-2 in the Nations League."
-    },
-    {
-     "url": "https://www.culturepsg.com/news/formation/les-u17-du-psg-toujours-inarretables/61576",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-17T19:04:38+00:00",
-     "new": true,
-     "key": "08fefc4c377b4840",
-     "title": "PSG U17s keep winning",
-     "summary": "PSG’s U17s beat Brétigny 3-1 away despite being reduced to ten players for an hour."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQTU1FZVVsYmNIbV9yMThRSTdUZUwxT20yOER4T1JjMUxFYkNVdU81WGt2S1RhbzlBR2VrM2ZJNWNJYlNQMlBJY01iN3ZCOEViRVRJWFYtMDduRTdkQUVYelJwN215bTRFSC0zX2FiMjNwQnl3RUs4cC1ndE1YeVlLRmZSaTNwbVg2bVdQNDVISE9xcW1TOWNHS21wSzVzQVVST3pDR1NVQm9OcFJOMDUzbzN6WEhoVU1TNV96VC0ybnpSMzNxUlJJSVkwcTRuaGZWbHZZWVRXWG1CaHkta3VMQWRXektON2lZOE9Eb3VxZFZRMUFXUkVhQQ?oc=5",
-     "source": "DAZN",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-11-17T23:19:58+00:00",
-     "new": true,
-     "key": "57f431df32bed791",
-     "title": "The eight Nations League quarter-finalists",
-     "summary": "France and seven other teams have qualified for the 2026/27 Nations League quarter-finals."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
-   "input_fingerprint": "sha256:a950a14e309c1725515478be4e6bab3f9345b10117090ff3beaba1aa2e4cc2b4",
-   "last_success_at": "2026-11-18T00:41:29.807500+00:00",
-   "error": "Source check failed: HLTV",
-   "candidate_count": 362,
-   "new_count": 3
-  },
-  "finance": {
-   "briefing": [
-    {
-     "text": "Nvidia reported strong sales, doubled revenue last quarter and raised its forecast for next year, but investors remain focused on whether AI demand can sustain technology-sector valuations.",
-     "sources": [
-      {
-       "key": "3bf7d7b9e064ad1d",
-       "title": "Nvidia insists Huang will not return as CEO as it reports strong sales",
-       "url": "https://www.ft.com/content/3a8881b8-068c-4950-9238-4f8eb1efc870?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Emerging-market stocks fell as Nvidia-related jitters weighed on Asian technology shares, a risk-off signal relevant to diversified equity portfolios.",
-     "sources": [
-      {
-       "key": "6a7d8558b6c197bc",
-       "title": "Emerging Stocks Drop As Nvidia Jitters Weigh on Asian Tech - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOOUhUTFdrYUdBNWdCakZmSzJoQTVza3FxVjFGTTdMcDlzeThLQ2xmak5UU1doZjlacUFZb3JpVlNvQjhfR3VEaTZYMzVHQ25EWjFUUVk3SGVaTW9zcDdiR2NsRU9DQUtPdUg2SWN2TTVNcHVIS1hKdFhNREpraGVKWVZWOGRpQ09hdWE5QmZFcDJiY2dScHNoWGthSktSRFhQbEk0eUtWVHlwZ3I0OHc?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Marine Le Pen has proposed lowering France’s retirement age to as low as 60; critics questioned the affordability and feasibility of her pension plans.",
-     "sources": [
-      {
-       "key": "0921832584b0beb5",
-       "title": "Marine Le Pen floats lowering France’s retirement age to as low as 60",
-       "url": "https://www.ft.com/content/c7ef0eb8-c9c5-46ef-b65d-c0ceaf111717?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "AppLovin is among companies discussing a possible acquisition of Criteo, according to sources cited by Reuters.",
-     "sources": [
-      {
-       "key": "0a47806027d9f189",
-       "title": "AppLovin among firms in talks to acquire Criteo, sources say - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTmxHN0VieTNVM0NsYTduejJkMGJXZFVVZmk3Q0VXZHhHMHZmSkdoRzFfYld4dk1xaFhwbmUzVjJKcVJBNml1b2dLVjhGbmhXZjQ0UnNEWjc2TnhlMWxmal9EbTdPTWlEdFZ2T2w5WENOcy13RjhOTzJiOFRtV0hPU01uN0Y0bTZteGU3anNNZVVJTzNQd0hBQkpGQldQb050OUdwTUNsNHVDVlZ0SEE?oc=5",
+       "key": "3f2d8d105ba1de08",
+       "title": "Russia's Putin says he expects big potential benefit from meeting with Trump and Xi - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOa1FfUS1OenA3M3Y5X29pUkxZUU1MbXdnaDlwNmtGd2RJaktuV2J6LTdVUTBwLW5OR0VEMUNKUlNRQjBDdkxMM2duWTlrQmNVdjFJalhHQUM4UVlUWGNnc2Y4dUJPa1FzSFN4QkxJREZqLVExdWFCOUNzWnllMVRTb3gzdE5XSUZBMlpjTzNiTzVvYUhyaUlENWlBdmlZUFNFWEI0dkM3Ql9ZWmVUR1FuRUtqYjFjdEREVVhqX2czWHdlNVk?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "JPMorgan and Hyundai Card are exploring broader use of AI agents in financial transactions, a developing application with potential implications for financial services.",
+     "text": "An AI-related selloff is spreading beyond technology shares, while Nvidia says it is no longer sending AI chips to China.",
      "sources": [
       {
-       "key": "88c202caa782d636",
-       "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
-       "url": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
-       "source": "CNBC Markets",
+       "key": "c01f70f96de4820d",
+       "title": "The AI Trade Selloff Is Taking More Than Tech Stocks Down With It - Business Insider",
+       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaV9vTFpER3VpSVROYWJfNlF5SEFSZ3FVTmFTNU8zemN2ZUJNVWxYc25JTHhpR1hkSEZuLTFRUTk4ZmhQQjdWR2RNMnFZZjlKOGlYM0pWS3NudmI3dGthZXVYTGU5eDJwQmlfNVpxWlBwYWJRVWhGY0JLdEo1dTJ3RFJMdGk1b09CZ284OFBvbU9CQllYTmgwWlJad1hCaWpaLWt5ZXc4c3FiLTA?oc=5",
+       "source": "Business Insider",
+       "via": "Google News"
+      },
+      {
+       "key": "72e93cda2ff77f62",
+       "title": "Interim Nvidia CEO Says It’s No Longer Sending AI Chips to China - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVk5ZV2dpR3EyVEtJcVdSZTBCVGl6UE1qZ1gzNWdiaHJ3WGR1S3NUd2VRcWVzUWhjanFicXVzNi1zRWZNel9EdlVOaC1uMUFCckRXMkRGWkRZeHdZUnE4VTdtUkZ2N0dITkRYa040X29HanoxODdGVXV3NzEyOGhnR1VOb2VwcFNIcHFJQlFrNXM3T1hqQlN5WnB0MHJTU0R2cTZOUnBNbV9Ubm81clFKM0x5cHRxdw?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Leaked documents have prompted accusations that the European Commission softened its assessment of Egypt’s welfare targets to release €2.5 billion in loans.",
+     "sources": [
+      {
+       "key": "253d55efc9877a4b",
+       "title": "European Commission accused of sugarcoating figures to release funds to Egypt",
+       "url": "https://www.theguardian.com/world/2026/nov/18/european-commission-accused-sugarcoating-figures-egypt-loans",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Private fund managers are vying for a share of the EU’s €10 trillion asset market; separately, a KPMG pilot found AI asked better questions in an audit.",
+     "sources": [
+      {
+       "key": "d6d86c88978a3bb8",
+       "title": "Private Fund Giants Battle Inertia in €10 Trillion EU Asset Hunt - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdmZ1dTVMaWpOX09EZkwweVhXTHFyOUVUOUlWWUYzTHR1Y0pGbkVLYVYxdlpYdHU5NHk4b0VXakZuMWNWTFdxYVNPX0poNHdBZ045azF6OXB3bzdEcW9jclJaY3dJLThEZWJaeV9XdGRXTV81SU9GRlFacjFoelBVUUI2andEZlcycVZEV2ROWS1MQ01TSGZsSFNhckg1Z09Sa1lFbDBkZW9sSmdkaDAyN0Npby1VX3kycE1udzhjWG1vUQ?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      },
+      {
+       "key": "e91077b59d5a7bf3",
+       "title": "AI asked ‘better questions’ than KPMG accountants in pilot audit - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZVBUWGFwaW5qOHRfZ0d1MjRVbU9ibFlpY2ZtN2EzUks0TUhueEFBUF9PS3RLNWdKZTdFQ1p2Z3U2RndPNGpwQ1JtWmdPeU9yT0IxZGk3eDdXZURsRW9CTUFkS20wYnB0VG9nRjZ3V3NRN0ZjRVlrUHhDZlp6Vi1CcVlQZnQ?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "France’s RN has proposed a pension reform for its 2027 presidential campaign, with financing measures affecting other areas including housing policy.",
+     "sources": [
+      {
+       "key": "dcb9df524c69ecff",
+       "title": "Présidentielle 2027 : le RN propose une avantageuse réforme des retraites mais sacrifie les précaires et la politique du logement pour la financer",
+       "url": "https://www.lemonde.fr/politique/article/2026/11/18/le-rn-compte-financer-son-avantageuse-reforme-des-retraites-et-un-debut-de-capitalisation-au-detriment-des-precaires-et-de-la-politique-du-logement_6813066_823448.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Democrat Mary Peltola’s Alaska victory completes a shift in control of the US Senate, according to Le Monde.",
+     "sources": [
+      {
+       "key": "33483ed87f63277c",
+       "title": "Midterms 2026 : malgré la polémique, les démocrates s’imposent en Alaska et parachèvent le basculement du Sénat américain",
+       "url": "https://www.lemonde.fr/international/article/2026/11/18/midterms-2026-malgre-la-polemique-les-democrates-s-imposent-en-alaska-et-parachevent-le-basculement-du-senat-americain_6813069_3210.html",
+       "source": "Le Monde",
        "via": null
       }
      ]
@@ -1052,74 +866,369 @@
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/3a8881b8-068c-4950-9238-4f8eb1efc870?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
+     "url": "https://www.theguardian.com/world/live/2026/nov/18/apec-summit-live-updates-xi-putin-trump-world-leaders-gather-in-china",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
      "via": null,
-     "published": "2026-11-17T22:33:03+00:00",
+     "published": "2026-11-18T05:41:54+00:00",
      "new": true,
-     "key": "3bf7d7b9e064ad1d",
-     "title": "Nvidia reports strong sales and raises its outlook",
-     "summary": "Nvidia doubled revenue last quarter and raised its financial forecast for next year."
+     "key": "e54ccd81a1434eb7",
+     "title": "Xi and Putin meet as Trump–Putin talks loom at APEC",
+     "summary": "Xi and Putin have started talks at the APEC summit, where a meeting involving Trump is anticipated."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOOUhUTFdrYUdBNWdCakZmSzJoQTVza3FxVjFGTTdMcDlzeThLQ2xmak5UU1doZjlacUFZb3JpVlNvQjhfR3VEaTZYMzVHQ25EWjFUUVk3SGVaTW9zcDdiR2NsRU9DQUtPdUg2SWN2TTVNcHVIS1hKdFhNREpraGVKWVZWOGRpQ09hdWE5QmZFcDJiY2dScHNoWGthSktSRFhQbEk0eUtWVHlwZ3I0OHc?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaV9vTFpER3VpSVROYWJfNlF5SEFSZ3FVTmFTNU8zemN2ZUJNVWxYc25JTHhpR1hkSEZuLTFRUTk4ZmhQQjdWR2RNMnFZZjlKOGlYM0pWS3NudmI3dGthZXVYTGU5eDJwQmlfNVpxWlBwYWJRVWhGY0JLdEo1dTJ3RFJMdGk1b09CZ284OFBvbU9CQllYTmgwWlJad1hCaWpaLWt5ZXc4c3FiLTA?oc=5",
+     "source": "Business Insider",
+     "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-17T21:54:05+00:00",
+     "published": "2026-11-18T05:25:00+00:00",
      "new": true,
-     "key": "6a7d8558b6c197bc",
-     "title": "Emerging stocks fall as Nvidia jitters weigh on Asian tech",
-     "summary": "Emerging-market stocks dropped as concerns around Nvidia weighed on Asian technology shares."
+     "key": "c01f70f96de4820d",
+     "title": "AI trade selloff spreads beyond tech stocks",
+     "summary": "The AI-related market selloff is dragging down stocks beyond the technology sector."
     },
     {
-     "url": "https://www.ft.com/content/c7ef0eb8-c9c5-46ef-b65d-c0ceaf111717?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-11-17T21:03:56+00:00",
-     "new": true,
-     "key": "0921832584b0beb5",
-     "title": "Le Pen proposes lowering France’s retirement age",
-     "summary": "Marine Le Pen proposed lowering France’s retirement age to as low as 60, drawing criticism over cost and feasibility."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTmxHN0VieTNVM0NsYTduejJkMGJXZFVVZmk3Q0VXZHhHMHZmSkdoRzFfYld4dk1xaFhwbmUzVjJKcVJBNml1b2dLVjhGbmhXZjQ0UnNEWjc2TnhlMWxmal9EbTdPTWlEdFZ2T2w5WENOcy13RjhOTzJiOFRtV0hPU01uN0Y0bTZteGU3anNNZVVJTzNQd0hBQkpGQldQb050OUdwTUNsNHVDVlZ0SEE?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVk5ZV2dpR3EyVEtJcVdSZTBCVGl6UE1qZ1gzNWdiaHJ3WGR1S3NUd2VRcWVzUWhjanFicXVzNi1zRWZNel9EdlVOaC1uMUFCckRXMkRGWkRZeHdZUnE4VTdtUkZ2N0dITkRYa040X29HanoxODdGVXV3NzEyOGhnR1VOb2VwcFNIcHFJQlFrNXM3T1hqQlN5WnB0MHJTU0R2cTZOUnBNbV9Ubm81clFKM0x5cHRxdw?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-17T20:31:15+00:00",
+     "published": "2026-11-18T04:10:00+00:00",
      "new": true,
-     "key": "0a47806027d9f189",
-     "title": "AppLovin among firms discussing Criteo acquisition",
-     "summary": "AppLovin is among companies in talks to acquire Criteo, sources told Reuters."
+     "key": "72e93cda2ff77f62",
+     "title": "Nvidia says it is no longer sending AI chips to China",
+     "summary": "Nvidia’s interim CEO says the company is no longer sending AI chips to China."
     },
     {
-     "url": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
-     "source": "CNBC Markets",
-     "feed_name": "CNBC Markets",
-     "via": null,
-     "published": "2026-11-17T23:30:13+00:00",
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdmZ1dTVMaWpOX09EZkwweVhXTHFyOUVUOUlWWUYzTHR1Y0pGbkVLYVYxdlpYdHU5NHk4b0VXakZuMWNWTFdxYVNPX0poNHdBZ045azF6OXB3bzdEcW9jclJaY3dJLThEZWJaeV9XdGRXTV81SU9GRlFacjFoelBVUUI2andEZlcycVZEV2ROWS1MQ01TSGZsSFNhckg1Z09Sa1lFbDBkZW9sSmdkaDAyN0Npby1VX3kycE1udzhjWG1vUQ?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Topic: European Central Bank",
+     "via": "Google News",
+     "published": "2026-11-18T05:15:00+00:00",
      "new": true,
-     "key": "88c202caa782d636",
-     "title": "JPMorgan explores AI-agent transactions",
-     "summary": "JPMorgan and Hyundai Card are looking to expand the use of AI agents in financial transactions."
+     "key": "d6d86c88978a3bb8",
+     "title": "Private fund groups compete for EU assets",
+     "summary": "Private fund managers are competing for access to a €10 trillion European asset market."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZVBUWGFwaW5qOHRfZ0d1MjRVbU9ibFlpY2ZtN2EzUks0TUhueEFBUF9PS3RLNWdKZTdFQ1p2Z3U2RndPNGpwQ1JtWmdPeU9yT0IxZGk3eDdXZURsRW9CTUFkS20wYnB0VG9nRjZ3V3NRN0ZjRVlrUHhDZlp6Vi1CcVlQZnQ?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-18T05:00:33+00:00",
+     "new": true,
+     "key": "e91077b59d5a7bf3",
+     "title": "AI asked better questions than KPMG accountants in audit pilot",
+     "summary": "In a pilot audit, AI asked better questions than KPMG accountants."
+    },
+    {
+     "url": "https://www.theguardian.com/world/2026/nov/18/european-commission-accused-sugarcoating-figures-egypt-loans",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-18T05:00:32+00:00",
+     "new": true,
+     "key": "253d55efc9877a4b",
+     "title": "EU accused of softening assessment to release funds to Egypt",
+     "summary": "Leaked documents raise questions over whether Egypt met welfare targets for €2.5 billion in EU loans."
+    },
+    {
+     "url": "https://www.lemonde.fr/politique/article/2026/11/18/le-rn-compte-financer-son-avantageuse-reforme-des-retraites-et-un-debut-de-capitalisation-au-detriment-des-precaires-et-de-la-politique-du-logement_6813066_823448.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-18T04:41:47+00:00",
+     "new": true,
+     "key": "dcb9df524c69ecff",
+     "title": "France’s RN proposes pension reform for 2027 campaign",
+     "summary": "The RN’s proposed pension changes would be financed through cuts affecting other areas, including housing policy."
+    },
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/11/18/midterms-2026-malgre-la-polemique-les-democrates-s-imposent-en-alaska-et-parachevent-le-basculement-du-senat-americain_6813069_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-18T04:56:30+00:00",
+     "new": true,
+     "key": "33483ed87f63277c",
+     "title": "Democrats complete Senate shift with Alaska victory",
+     "summary": "Mary Peltola’s victory in Alaska completes the shift in control of the US Senate, according to Le Monde."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
-   "input_fingerprint": "sha256:5968a5bc16351fd13144b47f0012ffdb55ec02e255392958a2c94c1c26b00c48",
-   "last_success_at": "2026-11-18T00:41:29.807500+00:00",
+   "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
+   "input_fingerprint": "sha256:dd7a058fec08036a61cf88435d7a0a7634f9be37c03d5861128961c4d9731cbc",
+   "last_success_at": "2026-11-18T06:01:33.728674+00:00",
+   "candidate_count": 544,
+   "new_count": 8
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "PSG’s handball team returned from the international break with a win away to Aix; the club’s women also face Chelsea in the Champions League.",
+     "sources": [
+      {
+       "key": "afba2e1ad666ad4e",
+       "title": "Victoires, tifo, Bercy, tout va bien pour le PSG Hand",
+       "url": "https://www.culturepsg.com/news/handball/victoires-tifo-bercy-tout-va-bien-pour-le-psg-hand/61575",
+       "source": "CulturePSG",
+       "via": null
+      },
+      {
+       "key": "f086e41fa87fbc8e",
+       "title": "Chelsea - PSG. À quelle heure et sur quelle chaîne TV suivre le match de Ligue des champions féminine de football ? - Ouest-France",
+       "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOcVlvY2VWWXFoLUVRSEJ6V2FrZ3VuOUcyYnBkeFZuS2lXR3cxNW14OG8wYURzX21Va3V1eVc0eWpuVnh5TDcya09sOC11eEgzbXZBSXA0eXh1eVdSaUg5eXBnMmp3X3RpX2ZCakNLeU1TUUFscklVX3pUTU1rNFpCdUZRUFMwbU5EdXZFdElUZ292WUdlVzhpQURhRkx4VzFrM2g2QkV5RFhhX2tNaDYxSUZ5cDZaRUlURlc1SUx1TUxJcmJRTDVLNmtFdlQzLWlJa0FOLVNOWFppTGNwWHFQZ1A5LW9UVDh2ZkhCRW5fZkZsU2UtRUZ4ZG1ydU12UlZwc1F4VVViVlFMNWQtQVFNTm5wTUU2UTV6MlNnTjZMYnZDUjNjWGtMdklhU3FmQXJLdkphZE0zNVZNY1BGTUp4ZQ?oc=5",
+       "source": "Ouest-France",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Antoine Dupont’s form is back in focus after his serious injury: L’Équipe examines his return to top level ahead of France’s match against South Africa.",
+     "sources": [
+      {
+       "key": "6f45d2f4af89e5a6",
+       "title": "Des doutes après sa grave blessure en mars 2025 au récital contre les Springboks : comment Antoine Dupont est redevenu Antoine Dupont - L'Équipe",
+       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOYTRzNkZoa3pWTmtRd0lRNjR6MVpyRnVSbU9PUVhxaE02a19DZjNaZ3JmQUctNVNxNmpxbjZLVzBEY1RoUkxxMlpTZ1NqWkYxMHFFaWVMbEhqZkhTVnlZcktZVC1nRlRBZG1wdE9uUk1jVndvWGpxbkxqTkxHamx1RENtY1Z1VDB5QUNYQ1RqUzdMMGlxSkJWdjhscWlxR2U1SGlCWElHcXk5cWtwT1VuNnF1cUVzSm1MaTY5aG5UeWM4enlWcjlFV1ZmZ2lmUlhiT2pmZXVkV2h3R3RXNkRkMm1XcUpYbTk2SkVWbFZ2ZFNmUjVfVTVFLXB3QjNYcDIteWJ4OHY1Zw?oc=5",
+       "source": "L'Équipe",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "France rugby prop Uini Atonio has revealed that an infarction has stopped him from playing, according to a new interview.",
+     "sources": [
+      {
+       "key": "3f3505f6cae25697",
+       "title": "Uini Atonio, le géant du XV de France stoppé par un infarctus : « Un médecin m’a dit que je serais mort à la première mêlée - Le Parisien",
+       "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQcUFkZ1RNT3RELTRWZkFOclc0NHJhZUlYMlBtRDdnNU9BbmU5alJzWE13Yk56T3NSY2wzTmthbFVOT0lRaG5SWXFibHlvaG1UY2c4S3k3SW1seVpLaUtLR3dPTzFXNVRSVFloanFfTVhNTS0xOWczZ1MybXhkOWpfVFVsSGUzS0I5X0g5VWZYanhDdW9uMVNpM3V6Tl9MVk45bWdXdzgxdWZBNElmWU1GWFE4NkpGYzFlVUhvQ011bGh1M1pyZU1tTTlCT0FFRFI5UGRFcGM0Uy1jZkstYTZLd3BNN3FhTC14QUh1SjdqUlptZlBmMlcwRXZSNHlJVzBOQ01xS1VSZ2VlYjRxNjJ5RjZvVVJrQXRYbHJmYURzOTlMWlNJU0I5WkR3ZHRkUGRRRmtyNnFR?oc=5",
+       "source": "Le Parisien",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Counter-Strike 2 and Team Vitality were among the honorees at the 2026 Esports Awards.",
+     "sources": [
+      {
+       "key": "ce5b8056ec2329ad",
+       "title": "The 2026 Esports Awards Presented by Thunderpick Celebrates the Industry’s Best, with iShowSpeed, Counter-Strike 2 and Team Vitality Taking Home Honours - Mynewsdesk",
+       "url": "https://news.google.com/rss/articles/CBMimwNBVV95cUxNMWFLcW8wcXd0RDl6UWFFX2xMTEF0RWlZVk9EZllSdFpaREpGbkZRUVo4ZU1MOGRQM3FmNjlNX2hnMzNrTVJpLWxHa0ZJSGtsdnhwX3RzNDV3bkFVTHdKTl9JTEVVZ0ZQYklLQ3Z1WFFtZUZwTEE2ZWI3TWpfdzFoX0JmSnRMY3hQU212ZFhzMVVORW5LWEgxMy1wY3F4bzF4MjJyVmJHdzhFNzh5V1lIUWQ1dGxJNW5BY0ZNaENjRFpvLU55R0R4bFlTTU9CNS1OZkZheVZzeUxBbHpBa19KTFFWbXhJbVhwVnJnVEhzOHlnbFBhMzNjd0J1NE9rSjhGdi1JMUlzSlE0aV9fOFhfQTZKWktGMzF5R1dteDVERW52NVFxbU52YnNzRkxwOTlIM3hhTVFHTnUtbWkwc1VNdktHdTc4akRES2VLRDFwdDQ4NnlQZXpWTXl0di10c2g3a1AyVTZFUS1idzBwQ0JDbmRfQXVsbElULUpzOWRNcm9lM0xNeUgzVzJLWHBUdXNaWUVEbmgxQ19jSkE?oc=5",
+       "source": "Mynewsdesk",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.culturepsg.com/news/handball/victoires-tifo-bercy-tout-va-bien-pour-le-psg-hand/61575",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-17T18:58:00+00:00",
+     "new": true,
+     "key": "afba2e1ad666ad4e",
+     "title": "PSG Handball return with a win at Aix",
+     "summary": "PSG handball beat Aix in its first match after the international break."
+    },
+    {
+     "url": "https://www.culturepsg.com/news/reseaux-sociaux/quand-doue-defie-une-star-du-mma/61569",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-17T09:07:00+00:00",
+     "new": true,
+     "key": "ce40b651c0e7bd81",
+     "title": "Quand Doué défie une star du MMA",
+     "summary": "Passé officiellement chez Nike au printemps dernier, Désiré Doué est à l'affiche de la dernière publicité de l'équipementier à la virgule en compagnie de Salahdine Parnasse, star du MMA français."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOcVlvY2VWWXFoLUVRSEJ6V2FrZ3VuOUcyYnBkeFZuS2lXR3cxNW14OG8wYURzX21Va3V1eVc0eWpuVnh5TDcya09sOC11eEgzbXZBSXA0eXh1eVdSaUg5eXBnMmp3X3RpX2ZCakNLeU1TUUFscklVX3pUTU1rNFpCdUZRUFMwbU5EdXZFdElUZ292WUdlVzhpQURhRkx4VzFrM2g2QkV5RFhhX2tNaDYxSUZ5cDZaRUlURlc1SUx1TUxJcmJRTDVLNmtFdlQzLWlJa0FOLVNOWFppTGNwWHFQZ1A5LW9UVDh2ZkhCRW5fZkZsU2UtRUZ4ZG1ydU12UlZwc1F4VVViVlFMNWQtQVFNTm5wTUU2UTV6MlNnTjZMYnZDUjNjWGtMdklhU3FmQXJLdkphZE0zNVZNY1BGTUp4ZQ?oc=5",
+     "source": "Ouest-France",
+     "feed_name": "Team: PSG",
+     "via": "Google News",
+     "published": "2026-11-18T05:16:02+00:00",
+     "new": true,
+     "key": "f086e41fa87fbc8e",
+     "title": "Chelsea–PSG: Women’s Champions League match guide",
+     "summary": "PSG’s women are set to face Chelsea in the Women’s Champions League."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOYTRzNkZoa3pWTmtRd0lRNjR6MVpyRnVSbU9PUVhxaE02a19DZjNaZ3JmQUctNVNxNmpxbjZLVzBEY1RoUkxxMlpTZ1NqWkYxMHFFaWVMbEhqZkhTVnlZcktZVC1nRlRBZG1wdE9uUk1jVndvWGpxbkxqTkxHamx1RENtY1Z1VDB5QUNYQ1RqUzdMMGlxSkJWdjhscWlxR2U1SGlCWElHcXk5cWtwT1VuNnF1cUVzSm1MaTY5aG5UeWM4enlWcjlFV1ZmZ2lmUlhiT2pmZXVkV2h3R3RXNkRkMm1XcUpYbTk2SkVWbFZ2ZFNmUjVfVTVFLXB3QjNYcDIteWJ4OHY1Zw?oc=5",
+     "source": "L'Équipe",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-18T04:35:00+00:00",
+     "new": true,
+     "key": "6f45d2f4af89e5a6",
+     "title": "How Antoine Dupont returned to top form",
+     "summary": "L’Équipe looks at Dupont’s recovery from his serious injury and his performance against South Africa."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQcUFkZ1RNT3RELTRWZkFOclc0NHJhZUlYMlBtRDdnNU9BbmU5alJzWE13Yk56T3NSY2wzTmthbFVOT0lRaG5SWXFibHlvaG1UY2c4S3k3SW1seVpLaUtLR3dPTzFXNVRSVFloanFfTVhNTS0xOWczZ1MybXhkOWpfVFVsSGUzS0I5X0g5VWZYanhDdW9uMVNpM3V6Tl9MVk45bWdXdzgxdWZBNElmWU1GWFE4NkpGYzFlVUhvQ011bGh1M1pyZU1tTTlCT0FFRFI5UGRFcGM0Uy1jZkstYTZLd3BNN3FhTC14QUh1SjdqUlptZlBmMlcwRXZSNHlJVzBOQ01xS1VSZ2VlYjRxNjJ5RjZvVVJrQXRYbHJmYURzOTlMWlNJU0I5WkR3ZHRkUGRRRmtyNnFR?oc=5",
+     "source": "Le Parisien",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-18T04:28:00+00:00",
+     "new": true,
+     "key": "3f3505f6cae25697",
+     "title": "Uini Atonio stopped by an infarction",
+     "summary": "The France prop says an infarction has ended his playing career."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMimwNBVV95cUxNMWFLcW8wcXd0RDl6UWFFX2xMTEF0RWlZVk9EZllSdFpaREpGbkZRUVo4ZU1MOGRQM3FmNjlNX2hnMzNrTVJpLWxHa0ZJSGtsdnhwX3RzNDV3bkFVTHdKTl9JTEVVZ0ZQYklLQ3Z1WFFtZUZwTEE2ZWI3TWpfdzFoX0JmSnRMY3hQU212ZFhzMVVORW5LWEgxMy1wY3F4bzF4MjJyVmJHdzhFNzh5V1lIUWQ1dGxJNW5BY0ZNaENjRFpvLU55R0R4bFlTTU9CNS1OZkZheVZzeUxBbHpBa19KTFFWbXhJbVhwVnJnVEhzOHlnbFBhMzNjd0J1NE9rSjhGdi1JMUlzSlE0aV9fOFhfQTZKWktGMzF5R1dteDVERW52NVFxbU52YnNzRkxwOTlIM3hhTVFHTnUtbWkwc1VNdktHdTc4akRES2VLRDFwdDQ4NnlQZXpWTXl0di10c2g3a1AyVTZFUS1idzBwQ0JDbmRfQXVsbElULUpzOWRNcm9lM0xNeUgzVzJLWHBUdXNaWUVEbmgxQ19jSkE?oc=5",
+     "source": "Mynewsdesk",
+     "feed_name": "Team: Team Vitality Counter-Strike",
+     "via": "Google News",
+     "published": "2026-11-18T04:42:18+00:00",
+     "new": true,
+     "key": "ce5b8056ec2329ad",
+     "title": "Counter-Strike 2 and Team Vitality honoured at the Esports Awards",
+     "summary": "Counter-Strike 2 and Team Vitality received honours at the 2026 Esports Awards."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "degraded",
+   "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
+   "input_fingerprint": "sha256:dd13624737730ffe3fd8d59a5ce8bde420f0c10ba82d2cac16c695645f335eb9",
+   "last_success_at": "2026-11-18T06:01:33.728674+00:00",
+   "error": "Source check failed: Team: équipe de France football, Team: Champions League, HLTV",
+   "candidate_count": 193,
+   "new_count": 6
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "Asian equities looked set to fall despite Nvidia beating sales expectations, leaving markets to weigh strong AI demand against broader risk appetite.",
+     "sources": [
+      {
+       "key": "c7f819da47e2bf1f",
+       "title": "Asian Stocks to Fall, Nvidia Sales Outlook Beats: Markets Wrap - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUHhZZG5FcFhON3BCMkRyY201M2FVdVRTaUF2a29ScWc3ZTd4TkI1Zm44SXNOcmZoOE9tN29nalFxMllaQV9ZQVp5SFNKbFlmVWtxVmtjdGl4WVVRRnpFeVZaVjVCVGozeFVWYzF6NnM1dERENnQ5SWpLTlNsejBDS21mS2k2aUhQeHZHNU80V2dvbG9h?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Analysts expect global corporate profit growth to slow sharply next year, partly as AI-capex growth moderates—a potential headwind for equity expectations.",
+     "sources": [
+      {
+       "key": "3ac0042f552beebf",
+       "title": "Wall Street expects corporate earnings growth to halve next year",
+       "url": "https://www.ft.com/content/74fdac03-bd9b-4e68-9e6e-dc023eb47be9?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The yen is back on intervention watch as heavy buying of Japanese stocks creates more demand for currency hedging.",
+     "sources": [
+      {
+       "key": "cc024c9e1127d2a4",
+       "title": "AI might be a reason why the yen is back on intervention watch",
+       "url": "https://www.ft.com/content/f5e91cd6-ee54-49ad-83d4-4dec29cb13a7?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Oil steadied as renewed Middle East fighting tested expectations of a supply recovery, keeping geopolitical risk in focus for energy markets.",
+     "sources": [
+      {
+       "key": "991fd2b52457e487",
+       "title": "Oil Steadies as Renewed Mideast Fighting Tests Supply Recovery - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX0Y1MlJBNWwyU2pkSkpneldlNzR5NzdWMjhHY28tMFItb3l1QzlURWZyYmp4SWFmMlJncUFJcURYU0w0U3lLaVIwVVljQWRmRWF6TnFMOGs2NmQ1cmRhUTR1RGh2Q2FYZ1JLY08xVjFNS3RKQTJXY1lWWnF2bmcta1dKMl9TMXhLY3RjcWtLemxKRTVGdlM0NkJIU25wUQ?oc=5",
+       "source": "Bloomberg",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUHhZZG5FcFhON3BCMkRyY201M2FVdVRTaUF2a29ScWc3ZTd4TkI1Zm44SXNOcmZoOE9tN29nalFxMllaQV9ZQVp5SFNKbFlmVWtxVmtjdGl4WVVRRnpFeVZaVjVCVGozeFVWYzF6NnM1dERENnQ5SWpLTlNsejBDS21mS2k2aUhQeHZHNU80V2dvbG9h?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-18T04:58:00+00:00",
+     "new": true,
+     "key": "c7f819da47e2bf1f",
+     "title": "Asian stocks set to fall as Nvidia beats sales outlook",
+     "summary": "Asian stocks were set to fall despite Nvidia’s sales outlook beating expectations."
+    },
+    {
+     "url": "https://www.ft.com/content/74fdac03-bd9b-4e68-9e6e-dc023eb47be9?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-18T05:00:16+00:00",
+     "new": true,
+     "key": "3ac0042f552beebf",
+     "title": "Corporate earnings growth expected to slow next year",
+     "summary": "Analysts forecast global profit growth will fall to 16% from 33.5%, partly as AI-capex growth slows."
+    },
+    {
+     "url": "https://www.ft.com/content/f5e91cd6-ee54-49ad-83d4-4dec29cb13a7?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-11-18T00:01:04+00:00",
+     "new": true,
+     "key": "cc024c9e1127d2a4",
+     "title": "AI-related flows put yen back on intervention watch",
+     "summary": "Japanese stock buying is generating currency-hedging demand, putting the yen back on intervention watch."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX0Y1MlJBNWwyU2pkSkpneldlNzR5NzdWMjhHY28tMFItb3l1QzlURWZyYmp4SWFmMlJncUFJcURYU0w0U3lLaVIwVVljQWRmRWF6TnFMOGs2NmQ1cmRhUTR1RGh2Q2FYZ1JLY08xVjFNS3RKQTJXY1lWWnF2bmcta1dKMl9TMXhLY3RjcWtLemxKRTVGdlM0NkJIU25wUQ?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-18T05:15:00+00:00",
+     "new": true,
+     "key": "991fd2b52457e487",
+     "title": "Oil steadies as renewed fighting tests supply recovery",
+     "summary": "Renewed fighting in the Middle East tested expectations of an oil supply recovery."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQN2xvczVrRTNBTlRVMnBhTDl1TkJGYkZhYXJNNlFMbWxQQkdMcm9Cc0FIOEhKcVNnQXhXZHNrR2thMFlMTkhVaURsd0VsLWZidmsyaHphTGQyQkN4b0lKR2Z6Sl9aTk41MXV6OXZZQjdibzlfSzdha2xNZHVkdEtUMTR5SDhLcENCQ0ptZXhBdERXalFETzVCeW5pX0VsWG1RLUJlTjVPY0ttNk9vSklIcmk4LVlxX2QxNzRva251M2k?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-18T04:06:00+00:00",
+     "new": true,
+     "key": "6d7b6bade6f3f122",
+     "title": "Global money flows back into Indian stocks at record pace",
+     "summary": "Global investors are returning to Indian stocks at a record pace."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMmlWeXc5bFpQUDI1bkQyQVVEMmpSRC1ZUWpkZDczNDU5RUxoNFBzOXpreXZnOTctS0s1NGRBcW5Bb2ZUVGxMSWRiZU5ydWpKYkpaM1EteFZsdHF2Q1JVN1hWOW9aQm13ZlFmVWVuWVI5S0xJVFdUaERVT0hab2tCOUpBSzhvM2ZvczNFd0hNYndoREJ2d3llcVRRdVZ2VUFqZ1VBSGVYY0d5MVREZEp1MA?oc=5",
+     "source": "Bloomberg",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-18T02:16:00+00:00",
+     "new": true,
+     "key": "4b744e130b97e600",
+     "title": "Gold steadies near 14-month low amid rate-hike pressure",
+     "summary": "Gold held near a 14-month low as rate-hike pressure mounted."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
+   "input_fingerprint": "sha256:4129d355c996238f400f4f9c123b69ce0fef1234e237ccb562e7195a507efc35",
+   "last_success_at": "2026-11-18T06:01:33.728674+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 658.6,
-     "change_pct": 0.49,
+     "price": 652.0,
+     "change_pct": -1.0,
      "currency": "CHF",
-     "as_of": "2026-11-15T23:00:00+00:00",
+     "as_of": "2026-11-16T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1204,8 +1313,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 64713.44,
-     "change_pct": -0.22,
+     "price": 64557.03,
+     "change_pct": -0.46,
      "currency": "USD",
      "as_of": "2026-11-18T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1215,8 +1324,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1817.37,
-     "change_pct": -0.1,
+     "price": 1807.77,
+     "change_pct": -0.63,
      "currency": "USD",
      "as_of": "2026-11-18T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1224,8 +1333,8 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 343,
-   "new_count": 5
+   "candidate_count": 327,
+   "new_count": 6
   },
   "media": {
    "briefing": "",
@@ -1237,7 +1346,7 @@
      "kind": "video",
      "published": "2026-11-17T20:30:28+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "99371383e506c8e5"
     },
     {
@@ -1247,7 +1356,7 @@
      "kind": "video",
      "published": "2026-11-17T18:39:57+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "4aa2cd30eafdcaaf"
     },
     {
@@ -1303,10 +1412,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-18T00:41:29.807500+00:00",
+   "source_checked_at": "2026-11-18T06:01:33.728674+00:00",
    "candidate_count": 7,
-   "new_count": 2
+   "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-17T18:00:00Z"
+ "scheduled_slot": "2026-11-18T06:00:00.000Z"
 }
