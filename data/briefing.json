@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261119T060125017591Z",
- "generated_at": "2026-11-19T06:01:25.017591+00:00",
- "generated_local": "Thu 19 Nov 2026, 07:01",
- "source_checked_at": "2026-11-19T06:01:25.017591+00:00",
+ "edition_id": "ed-20261119T120125487499Z",
+ "generated_at": "2026-11-19T12:01:25.487499+00:00",
+ "generated_local": "Thu 19 Nov 2026, 13:01",
+ "source_checked_at": "2026-11-19T12:01:25.487499+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-19T06:01:25.017591+00:00"
+  "run-2026-11-19T12:01:25.487499+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-19T06:01:25.017591+00:00"
+  "completed_at": "2026-11-19T12:01:25.487499+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 33,
+   "item_count": 34,
    "reason": null,
    "failure": null,
-   "parsed_count": 33,
+   "parsed_count": 34,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -151,10 +151,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 94,
+   "item_count": 98,
    "reason": null,
    "failure": null,
-   "parsed_count": 94,
+   "parsed_count": 98,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -163,10 +163,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 71,
+   "item_count": 77,
    "reason": null,
    "failure": null,
-   "parsed_count": 71,
+   "parsed_count": 77,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -174,14 +174,19 @@
   {
    "name": "Topic: reinsurance",
    "section": "news",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Topic: European Central Bank",
@@ -198,53 +203,34 @@
   {
    "name": "Topic: Milano",
    "section": "news",
-   "status": "ok",
-   "item_count": 109,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 109,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 107,
+   "item_count": 108,
    "reason": null,
    "failure": null,
-   "parsed_count": 107,
+   "parsed_count": 108,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
   },
   {
    "name": "Team: équipe de France football",
-   "section": "sport",
-   "status": "ok",
-   "item_count": 101,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 101,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
-   "name": "Team: XV de France rugby",
-   "section": "sport",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
-   "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
    "item_count": 102,
@@ -254,6 +240,40 @@
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
+  },
+  {
+   "name": "Team: XV de France rugby",
+   "section": "sport",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
+  },
+  {
+   "name": "Team: Champions League",
+   "section": "sport",
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: Team Vitality Counter-Strike",
@@ -462,19 +482,14 @@
   {
    "name": "Reuters Business (via Google News)",
    "section": "finance",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Bloomberg (via Google News)",
@@ -699,9 +714,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002448,
-  "est_month_usd": 0.22,
-  "forecast_month_usd": 0.22,
+  "est_cost_usd": 0.002227,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -709,60 +724,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 11864,
+    "latency_ms": 11847,
     "unknown": false,
     "provider_request_ids": [
-     "resp_041b0fab1763a24b016afe90bb642087d28f7b930be762e48d"
+     "resp_082230d107e796fb016afee51d852c87d088eab6dd9f671d5c"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3551,
-    "output_tokens": 828,
-    "reasoning_tokens": 332
+    "cache_write_tokens": 3391,
+    "output_tokens": 916,
+    "reasoning_tokens": 348
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 10622,
+    "latency_ms": 4111,
     "unknown": false,
     "provider_request_ids": [
-     "resp_088add3cf6b7d5f2016afe90c696fc87d2bfb1ea750b3e13f5"
+     "resp_0a57564cc0e4fb79016afee528868887d0bd064173711c8b21"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3560,
-    "output_tokens": 601,
-    "reasoning_tokens": 256
+    "cache_write_tokens": 3691,
+    "output_tokens": 315,
+    "reasoning_tokens": 0
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 9039,
+    "latency_ms": 7345,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0dbd9f231d7ab87c016afe90d1383487d2a9a68c5a3dce8bdc"
+     "resp_0bac77c8e5fbe3e8016afee52cb0c087d0952e0cce257a0229"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3313,
-    "output_tokens": 860,
-    "reasoning_tokens": 285
+    "cache_write_tokens": 3367,
+    "output_tokens": 609,
+    "reasoning_tokens": 0
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10424,
-  "output_tokens": 2289,
-  "reasoning_tokens": 873,
+  "cache_write_tokens": 10449,
+  "output_tokens": 1840,
+  "reasoning_tokens": 348,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 59,
-   "attempts": 177,
-   "known_cost_usd": 0.133559,
+   "recorded_runs": 60,
+   "attempts": 180,
+   "known_cost_usd": 0.135786,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -771,228 +786,241 @@
   "news": {
    "briefing": [
     {
-     "text": "Trump and Putin held a roughly 40-minute meeting in Shenzhen amid a high-profile diplomatic gathering with Xi; the encounter’s significance and limits remain a focus.",
+     "text": "The International Court of Justice ruled that Myanmar committed genocide against the Rohingya, a major judgment after a seven-year legal battle.",
      "sources": [
       {
-       "key": "6dcc18f1bfa6d567",
-       "title": "Concluso l'incontro Trump-Putin, è durato circa 40 minuti",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/concluso-lincontro-trump-putin-e-durato-circa-40-minuti_956a2e15-d903-4f7b-a6d6-97ba5584dbac.html",
-       "source": "ANSA Top News",
-       "via": null
-      },
-      {
-       "key": "5f8bc95c6410cfbf",
-       "title": "This is a remarkable diplomatic moment for China's Xi - but it comes with pitfalls",
-       "url": "https://www.bbc.co.uk/news/articles/cr9d75we51j1o?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Russia’s Crimea leader says traffic was suspended after another attack on the Crimean Bridge, while France’s government has acknowledged deploying troops in Ukraine for training and maintenance missions.",
-     "sources": [
-      {
-       "key": "8944b9bf2f7dff44",
-       "title": "Crimean Bridge attacked again, Russian official says",
-       "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
-      },
-      {
-       "key": "352d6aae2fbf89e0",
-       "title": "Guerre en Ukraine : la présence de soldats français en Ukraine fait-elle de Paris un « cobelligérant » contre qui la Russie pourrait riposter ?",
-       "url": "https://www.lemonde.fr/international/article/2026/11/19/guerre-en-ukraine-la-presence-de-soldats-francais-en-ukraine-fait-elle-de-paris-un-cobelligerant-contre-qui-la-russie-pourrait-riposter_6813225_3210.html",
-       "source": "Le Monde",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "A broad US technology sell-off has challenged the AI rally, with Nvidia’s decline highlighting investors’ growing scrutiny of winners and losers in the sector.",
-     "sources": [
-      {
-       "key": "3a42e91356652ac1",
-       "title": "Aux Etats-Unis, Wall Street met fin à l’euphorie généralisée sur l’IA et cherche à trier les gagnants et les perdants de cette révolution",
-       "url": "https://www.lemonde.fr/economie/article/2026/11/19/aux-etats-unis-wall-street-met-fin-a-l-euphorie-generalisee-sur-l-ia-et-cherche-a-trier-les-gagnants-et-les-perdants-de-cette-revolution_6813232_3234.html",
-       "source": "Le Monde",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "An ECB warning likens the AI investment boom to the subprime mortgage bubble, while the IEA expects data-centre emissions to rise sharply by 2030 as AI-driven power demand grows.",
-     "sources": [
-      {
-       "key": "77057251e85050a3",
-       "title": "ECB: \"AI Investment Boom Resembles Subprime Mortgage Bubble\" - 아시아경제",
-       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1sbGNmWHgwdXB3a1hlQ28wWEJWZjIxRXpsd3paT0daMGdZa0RXYnNvYXhiaWdncW1LSEJDeTllWldfc2sxbEVTSDB6NF9RZWJDWFZJUlZ2eEhwdGZEVjRsUFU4SXB3Y0N2U3J4ZmR4ZkZqTTQ4WHRfd1ZXSGY?oc=5",
-       "source": "아시아경제",
-       "via": "Google News"
-      },
-      {
-       "key": "aae72e4c06797373",
-       "title": "Datacentres to create 70% more carbon emissions by 2030, IEA report warns",
-       "url": "https://www.theguardian.com/world/2026/nov/19/datacentres-to-create-70-more-carbon-emissions-by-2030-iea-report-warns",
+       "key": "d6d5a75fc790921b",
+       "title": "Myanmar committed acts of genocide against Rohingya minority, world’s top court rules",
+       "url": "https://www.theguardian.com/world/2026/nov/19/genocide-rohingya-international-court-of-justice-ruling-myanmar",
        "source": "The Guardian World",
        "via": null
       }
      ]
     },
     {
-     "text": "Zurich is expanding its India presence with a planned Hyderabad hub focused on AI and cyber-insurance capabilities.",
+     "text": "Trump, Xi and Putin issued a declaration on strategic stability and nuclear non-proliferation after their meeting; Ukraine’s allies were also meeting in Berlin.",
      "sources": [
       {
-       "key": "c8b752d62a6887d7",
-       "title": "Zurich Insurance taps India to bolster AI, cyber insurance capabilities - The Economic Times",
-       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNZWpLQVFsTllzRG5kWm9MbWVBY05zZVRnSDVuMTVwOVRGalFRMU02MXBKM1E1UU5mV0M0c1JVWHI2ZHNBbWZ0WEtYekh5S0tuSmFJeTdPVTMzVk9PU0pFQTI1U3BIOUVENEwwTkc0NDJIeEU1aVNxc19oWlhZLWZ3UlAwcnh3TWp5S1dpOVF5V3V5dVNaR0JqRHZiQ2FrbUtzVFZzQXBhc3E3RTBENFl1dkg5SzFZU3FtdUtfcTgxTTJFaVpaQU0xWXBVWjJzemZZaUcwTDFCQkU3dXlLN1lBYVBpaWtRNFFqcXdRRtIB8gFBVV95cUxPVm5Ua1dDM0FCb29mR2NJa050TkRBb1JJWGpWX3pnUHFMd2N5Q2lUWXpkemxsdHVTVnpnOUNPU1k1cTNOam40Y3J2dHdPbUw2X1d1XzJ0UER6YVY5WHBWWTdzS2NNb2lSSFVwaGxvVUhDOHloRmhDTFJlSlVSU0VkN0FIU0lzSWhxVF9qbE9EcVdLVWF3cmV0YnJ6eTVyeW1BdmZlenhHTFRJZGRORE5SaTNDVUdVeVJVYVJQOXNBeTJGcWotVWczcjN0Rzc1LUp5Um9rM3V3YndnLUo4b3BEU01LMzBRdUxmTjlFZjVqS0hJZw?oc=5",
-       "source": "The Economic Times",
+       "key": "4bd4a7dc8b931432",
+       "title": "Cina, Usa e Russia adottano una dichiarazione di pace",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/cina-usa-e-russia-adottano-una-dichiarazione-di-pace_7cdc6124-1825-4ca9-be4d-521c0a5497ad.html",
+       "source": "ANSA Top News",
+       "via": null
+      },
+      {
+       "key": "5ac6485bd7372da0",
+       "title": "Tusk appears to mock Trump’s Putin comment as Ukraine’s allies meet in Berlin – Europe live",
+       "url": "https://www.theguardian.com/world/live/2026/nov/19/russia-ukraine-war-coalition-of-the-willing-europe-latest-news-updates",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Eurozone inflation reached 4% in October, with energy costs cited as a driver, increasing pressure on the European Central Bank outlook.",
+     "sources": [
+      {
+       "key": "4237ded0f23e6cf6",
+       "title": "Eurozone inflation hits 3-year high at 4% in October amid mounting energy costs - Anadolu Ajansı",
+       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPS3lrZ19RaUZfTkpQTURJalNfMEZZa3FLQ084M0dLTEpHanBJdlNueU1BUzJYLU1DRTltZmRySFh3RjZJYlN2ejNoYjVaU0JyMUduT3d1VE0wS2pjYi0yYzRDcTE3R0ZONG1qYXRLMVFESXA4anRxZHNiem03VXdwcTBHX2pYZDV0WU5nSnBlNjFIZDJPRzVRVlhrWlVfamI4czdBMkRmS3BXVjY2QUpWWGJSOHVJejQ?oc=5",
+       "source": "Anadolu Ajansı",
        "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Data-centre growth is raising insurance-capacity concerns: one report says the scale of US projects is pressing against available insurance limits.",
+     "sources": [
+      {
+       "key": "f956af0b7d8e39ad",
+       "title": "Data center scale is maxing out US insurance limits - Insurance Business",
+       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNOWVXWUhhN1VlVXFHekVPQk5zSXhOX2lZNDYtZS1pUWg2dGdMclpraGNNOXRxTEVxQ0owcDlkYVFGalRORzdBOXZzMFdObUhHdHh3Z3pSV09PeWNHQTU0U3NtOG1adXIxaVNHRUYwYlZyNG00cENXWVRlN0J5NWNIVGo0SERZc1dFd2hKRWNTZkh4d2VaLXVCTERfSmJTTHdtazl2Q0x3Z0xvUzBDZm42MWdCWnBiTUN3NXo0?oc=5",
+       "source": "Insurance Business",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Zurich plans to expand its Hyderabad capability centre to 1,000 staff by mid-2028, a notable operational investment by the insurer.",
+     "sources": [
+      {
+       "key": "29cc0e50bc7aae77",
+       "title": "Zurich Insurance targets 1,000 staff at Hyderabad capability centre by mid-2028 - BusinessLine",
+       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOZzRoRktCWEZjUHN4b0w4a2VPNllGQWFTOWdfWEdtYkRkYTFHS1lLdlBnN0FtYVdaZE5QUG5NMUJSdEN0SUd4QlQtQnZzbHBkdExoUDlaM01tZ1BuNEhzZXhzNzAzMlJsSjgtOXN0dUtveElQd3hLZlBHckFoZFd1YzYtcEtXNkJnM2pVWlF2Q2NCcUN6YmxuSTkxSkZZUk4wU2F6WUljU0JIOW44QjJSbXktcEhVRjVLMHhPTl9jU0I1cjlsRDFWUlVHQXExaFIyZHRaWDNHaldvc2J6WFhxN0NDQ2dkT1pp0gHvAUFVX3lxTE9tMmdhenVtUFFlRjR5akh3VTR1Zlp1X1F6OFhTLWZTLS0xSEJXc1FDSk54Z19tNWJISVdKOFNnMkdsOVlnTXo4QTZWZjJpVlJpMVdQSkROS2pmbVByVmJORW5sNlRubHFmRWFNX2wycGEzUHlWVGlkczg1ZlBUTjA2WEhubnlhZHJmX0luVWxaUmdfZnlKdDU0cE9pNlIyejFrRFdoZTRySElUeHllbXEzTndLYUR2ak1hOFZITURoc2haM1RWNnZRQUUxbmJIaW1JMXl0WWdIbVU5RVRzb0xIMU1aTFNHbUF2SW9PZ0NV?oc=5",
+       "source": "BusinessLine",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Anthropic’s reported $81bn stock-market debut puts the AI company among the world’s most valuable firms.",
+     "sources": [
+      {
+       "key": "c6d87bb33ae78f6a",
+       "title": "Anthropic raises $81bn in record-breaking stock market debut",
+       "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/concluso-lincontro-trump-putin-e-durato-circa-40-minuti_956a2e15-d903-4f7b-a6d6-97ba5584dbac.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-11-19T05:40:02+00:00",
-     "new": true,
-     "key": "6dcc18f1bfa6d567",
-     "title": "Trump–Putin meeting in Shenzhen lasts about 40 minutes",
-     "summary": "The meeting between Donald Trump and Vladimir Putin lasted roughly 40 minutes."
-    },
-    {
-     "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-11-19T04:37:17+00:00",
-     "new": true,
-     "key": "8944b9bf2f7dff44",
-     "title": "Crimean Bridge attacked again, Russian official says",
-     "summary": "The head of Crimea said traffic was suspended after another attack on the bridge linking Russia and occupied Crimea."
-    },
-    {
-     "url": "https://www.lemonde.fr/international/article/2026/11/19/guerre-en-ukraine-la-presence-de-soldats-francais-en-ukraine-fait-elle-de-paris-un-cobelligerant-contre-qui-la-russie-pourrait-riposter_6813225_3210.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-19T04:30:19+00:00",
-     "new": true,
-     "key": "352d6aae2fbf89e0",
-     "title": "France acknowledges troops in Ukraine for training and maintenance",
-     "summary": "The French government acknowledged deploying military personnel in Ukraine for training and maintenance missions."
-    },
-    {
-     "url": "https://www.lemonde.fr/economie/article/2026/11/19/aux-etats-unis-wall-street-met-fin-a-l-euphorie-generalisee-sur-l-ia-et-cherche-a-trier-les-gagnants-et-les-perdants-de-cette-revolution_6813232_3234.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-19T05:00:22+00:00",
-     "new": true,
-     "key": "3a42e91356652ac1",
-     "title": "Wall Street sours on AI trade as investors reassess winners and losers",
-     "summary": "Nvidia’s sharp decline accompanied broader retreats in AI-related stocks after months of strong gains."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1sbGNmWHgwdXB3a1hlQ28wWEJWZjIxRXpsd3paT0daMGdZa0RXYnNvYXhiaWdncW1LSEJDeTllWldfc2sxbEVTSDB6NF9RZWJDWFZJUlZ2eEhwdGZEVjRsUFU4SXB3Y0N2U3J4ZmR4ZkZqTTQ4WHRfd1ZXSGY?oc=5",
-     "source": "아시아경제",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-11-19T02:50:00+00:00",
-     "new": true,
-     "key": "77057251e85050a3",
-     "title": "ECB compares AI investment boom to subprime bubble",
-     "summary": "The ECB warning characterises the AI investment boom as resembling the subprime mortgage bubble."
-    },
-    {
-     "url": "https://www.theguardian.com/world/2026/nov/19/datacentres-to-create-70-more-carbon-emissions-by-2030-iea-report-warns",
+     "url": "https://www.theguardian.com/world/2026/nov/19/genocide-rohingya-international-court-of-justice-ruling-myanmar",
      "source": "The Guardian World",
      "feed_name": "The Guardian World",
      "via": null,
-     "published": "2026-11-19T05:00:18+00:00",
+     "published": "2026-11-19T11:08:44+00:00",
      "new": true,
-     "key": "aae72e4c06797373",
-     "title": "Data-centre emissions forecast to rise 70% by 2030",
-     "summary": "The IEA forecasts data-centre carbon emissions will rise 70% by 2030 as demand for AI computing grows."
+     "key": "d6d5a75fc790921b",
+     "title": "ICJ rules Myanmar committed genocide against the Rohingya",
+     "summary": "The court’s judgment concludes a seven-year legal battle over Myanmar’s treatment of the Rohingya minority."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNZWpLQVFsTllzRG5kWm9MbWVBY05zZVRnSDVuMTVwOVRGalFRMU02MXBKM1E1UU5mV0M0c1JVWHI2ZHNBbWZ0WEtYekh5S0tuSmFJeTdPVTMzVk9PU0pFQTI1U3BIOUVENEwwTkc0NDJIeEU1aVNxc19oWlhZLWZ3UlAwcnh3TWp5S1dpOVF5V3V5dVNaR0JqRHZiQ2FrbUtzVFZzQXBhc3E3RTBENFl1dkg5SzFZU3FtdUtfcTgxTTJFaVpaQU0xWXBVWjJzemZZaUcwTDFCQkU3dXlLN1lBYVBpaWtRNFFqcXdRRtIB8gFBVV95cUxPVm5Ua1dDM0FCb29mR2NJa050TkRBb1JJWGpWX3pnUHFMd2N5Q2lUWXpkemxsdHVTVnpnOUNPU1k1cTNOam40Y3J2dHdPbUw2X1d1XzJ0UER6YVY5WHBWWTdzS2NNb2lSSFVwaGxvVUhDOHloRmhDTFJlSlVSU0VkN0FIU0lzSWhxVF9qbE9EcVdLVWF3cmV0YnJ6eTVyeW1BdmZlenhHTFRJZGRORE5SaTNDVUdVeVJVYVJQOXNBeTJGcWotVWczcjN0Rzc1LUp5Um9rM3V3YndnLUo4b3BEU01LMzBRdUxmTjlFZjVqS0hJZw?oc=5",
-     "source": "The Economic Times",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/cina-usa-e-russia-adottano-una-dichiarazione-di-pace_7cdc6124-1825-4ca9-be4d-521c0a5497ad.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-11-19T11:04:05+00:00",
+     "new": true,
+     "key": "4bd4a7dc8b931432",
+     "title": "China, US and Russia issue declaration on strategic stability",
+     "summary": "The three countries said they would safeguard strategic stability and international security."
+    },
+    {
+     "url": "https://www.theguardian.com/world/live/2026/nov/19/russia-ukraine-war-coalition-of-the-willing-europe-latest-news-updates",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-19T11:43:09+00:00",
+     "new": true,
+     "key": "5ac6485bd7372da0",
+     "title": "Ukraine’s allies meet in Berlin amid Trump-Putin tensions",
+     "summary": "Polish Prime Minister Donald Tusk appeared to mock Trump’s description of Putin as a friend."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPS3lrZ19RaUZfTkpQTURJalNfMEZZa3FLQ084M0dLTEpHanBJdlNueU1BUzJYLU1DRTltZmRySFh3RjZJYlN2ejNoYjVaU0JyMUduT3d1VE0wS2pjYi0yYzRDcTE3R0ZONG1qYXRLMVFESXA4anRxZHNiem03VXdwcTBHX2pYZDV0WU5nSnBlNjFIZDJPRzVRVlhrWlVfamI4czdBMkRmS3BXVjY2QUpWWGJSOHVJejQ?oc=5",
+     "source": "Anadolu Ajansı",
+     "feed_name": "Topic: European Central Bank",
+     "via": "Google News",
+     "published": "2026-11-19T11:27:03+00:00",
+     "new": true,
+     "key": "4237ded0f23e6cf6",
+     "title": "Eurozone inflation reaches 4% in October",
+     "summary": "Energy costs contributed to the eurozone’s highest inflation rate in three years."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNOWVXWUhhN1VlVXFHekVPQk5zSXhOX2lZNDYtZS1pUWg2dGdMclpraGNNOXRxTEVxQ0owcDlkYVFGalRORzdBOXZzMFdObUhHdHh3Z3pSV09PeWNHQTU0U3NtOG1adXIxaVNHRUYwYlZyNG00cENXWVRlN0J5NWNIVGo0SERZc1dFd2hKRWNTZkh4d2VaLXVCTERfSmJTTHdtazl2Q0x3Z0xvUzBDZm42MWdCWnBiTUN3NXo0?oc=5",
+     "source": "Insurance Business",
      "feed_name": "Topic: insurance industry",
      "via": "Google News",
-     "published": "2026-11-19T03:40:26+00:00",
+     "published": "2026-11-19T11:29:02+00:00",
      "new": true,
-     "key": "c8b752d62a6887d7",
-     "title": "Zurich taps India to expand AI and cyber-insurance capabilities",
-     "summary": "Zurich Insurance is expanding its Indian operations to strengthen its AI and cyber-insurance capabilities."
+     "key": "f956af0b7d8e39ad",
+     "title": "Data-centre projects strain US insurance limits",
+     "summary": "The scale of US data-centre projects is pressing against available insurance limits."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOZzRoRktCWEZjUHN4b0w4a2VPNllGQWFTOWdfWEdtYkRkYTFHS1lLdlBnN0FtYVdaZE5QUG5NMUJSdEN0SUd4QlQtQnZzbHBkdExoUDlaM01tZ1BuNEhzZXhzNzAzMlJsSjgtOXN0dUtveElQd3hLZlBHckFoZFd1YzYtcEtXNkJnM2pVWlF2Q2NCcUN6YmxuSTkxSkZZUk4wU2F6WUljU0JIOW44QjJSbXktcEhVRjVLMHhPTl9jU0I1cjlsRDFWUlVHQXExaFIyZHRaWDNHaldvc2J6WFhxN0NDQ2dkT1pp0gHvAUFVX3lxTE9tMmdhenVtUFFlRjR5akh3VTR1Zlp1X1F6OFhTLWZTLS0xSEJXc1FDSk54Z19tNWJISVdKOFNnMkdsOVlnTXo4QTZWZjJpVlJpMVdQSkROS2pmbVByVmJORW5sNlRubHFmRWFNX2wycGEzUHlWVGlkczg1ZlBUTjA2WEhubnlhZHJmX0luVWxaUmdfZnlKdDU0cE9pNlIyejFrRFdoZTRySElUeHllbXEzTndLYUR2ak1hOFZITURoc2haM1RWNnZRQUUxbmJIaW1JMXl0WWdIbVU5RVRzb0xIMU1aTFNHbUF2SW9PZ0NV?oc=5",
+     "source": "BusinessLine",
+     "feed_name": "Topic: Zurich Insurance",
+     "via": "Google News",
+     "published": "2026-11-19T11:01:46+00:00",
+     "new": true,
+     "key": "29cc0e50bc7aae77",
+     "title": "Zurich targets 1,000 staff at Hyderabad centre by 2028",
+     "summary": "Zurich plans to grow its Hyderabad capability centre to 1,000 employees by mid-2028."
+    },
+    {
+     "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
+     "via": null,
+     "published": "2026-11-19T10:48:04+00:00",
+     "new": true,
+     "key": "c6d87bb33ae78f6a",
+     "title": "Anthropic makes reported $81bn market debut",
+     "summary": "The company behind Claude is set to become one of the world’s most valuable firms."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOb2FQT0J5cGh2TTVmbk5GbTZmQ09kUEZPMElrNVY4NW5fMEl2RzJ0aC0tOXNDV0dhcGJkS3VPanRsSXY4RkVmd0ZNb2VLbWpUWUVUeUlSSFlmQnZ2dWhuNlNfejFuNU9VNzVwbHpVLWR4VVFHLXlRTkdINmEtYk56d3FKT2ViWmk0ZkNMRDBkTUwyMy0yRXJRcjlGaHM4UTc4ZTVEVTBn?oc=5",
+     "source": "Euronext Markets: Real-time Stock Market Data | live",
+     "feed_name": "Topic: European Central Bank",
+     "via": "Google News",
+     "published": "2026-11-19T11:33:39+00:00",
+     "new": true,
+     "key": "d58dee5ed2c2cd06",
+     "title": "ECB says banks’ data-centre exposure is small but growing",
+     "summary": "The ECB said eurozone banks’ exposure to data centres remains limited but is increasing."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/borsa-leuropa-positiva-future-wall-street-in-rialzo-guarda-ad-anthropic_f46009eb-0421-40e6-b4b4-8cb2259a4551.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-11-19T11:00:32+00:00",
+     "new": true,
+     "key": "4274cf2f70e85f6e",
+     "title": "European stocks rise as markets watch Anthropic",
+     "summary": "European equities and Wall Street futures moved higher while gas and oil prices rose."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-11-19T06:01:25.017591+00:00",
-   "input_fingerprint": "sha256:73c863b901ae22e269ce21d694ca451ccf5aa3187c2ba350266dbd53134a2a7c",
-   "last_success_at": "2026-11-19T06:01:25.017591+00:00",
-   "error": "Source check failed: Reuters (via Google News), Topic: AI",
-   "candidate_count": 352,
-   "new_count": 7
+   "source_checked_at": "2026-11-19T12:01:25.487499+00:00",
+   "input_fingerprint": "sha256:55ff72314ed6ae81d468210d8a08c05483d52342e602d2e5c1fe7eda1438f74c",
+   "last_success_at": "2026-11-19T12:01:25.487499+00:00",
+   "error": "Source check failed: Reuters (via Google News), Topic: AI, Topic: reinsurance, Topic: Milano",
+   "candidate_count": 217,
+   "new_count": 9
   },
   "sport": {
    "briefing": [
     {
-     "text": "Paris is in strong form and will be France’s only club in the Champions League main round, underlining the gap between PSG and the rest of French football.",
+     "text": "PSG face Nice on Saturday with four players already ruled out and several others uncertain, making the team’s availability a key pre-match question.",
      "sources": [
       {
-       "key": "430be440ddce4427",
-       "title": "La France à deux vitesses : Paris en grande forme mais seul club français en lice au tour principal de la Ligue des champions - L'Équipe",
-       "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQU19ST29lc045OXNxU3B3UndjNUswblhjNXJmQVQ1TksycDZGS05FUWFpaW9Pc0FDV1AwWFVWUGh0M3I4MVEyQlB6VWNFX0VVWWZHQmozb1E1SU0zcFZDQWh6aWFxRkloUVJTZ3FIdldnS0NYLWdRZWxTb003TGpaTXZadHF4d2lkaTJaODljRUtxSE96VlpfUVBrbWp5SHNjTm1tb1EzVEw1MzJXNmxIbHFhbWZwVXdoWGxCZjFVNmNIeHJZQTlwTjhuOWp4cUpNRUVoSF81ZTlmOTFSdU1NOWFJcExRSzJLdkFCa25ZN3RfcUxUaDlQeEY2QXNnVEpv?oc=5",
-       "source": "L'Équipe",
+       "key": "53a2f866bd90f2ed",
+       "title": "Déjà 4 absents pour Nice/PSG, mais beaucoup d'incertains",
+       "url": "https://www.culturepsg.com/news/match/deja-4-absents-pour-nice-psg-mais-beaucoup-d-incertains/61591",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Parisian supporters have been banned from travelling to Nice, with authorities citing major risks linked to planned social demonstrations.",
+     "sources": [
+      {
+       "key": "7965d4a0243006f8",
+       "title": "Les supporters du PSG interdits de déplacement pour le choc face à l’OGC Nice, le préfet évoque « des risques majeurs » avec les manifestations sociales - Nice-Matin",
+       "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQMV9jSW5xWDdCRy11NDktNDdOY2YxdU40VTZYVV9BS0VXXzItY2V0Ty1KeHNpa09VX1p6VG0xcmlEVjJ0SWY5TWFBdGJXN2FMSk4yUmM0dVpZT0FfQ2VZcWhmeDZPZUN6VFVZZEVLTG1QeVFzS25fSzNxd2l5ZVB1SFF2LXE4UGlkSzJhcU1oYnlIRFJHVmcyUmVaOVQ3NkNXR3VxLVdQMEdtZkJUd2RLVlVzX01kSkpGSEUwUzAwLWJFNkt0aGxBNzh3d0RoU1F4OFY4bzd0U3dhTUZIQkZqRGU2Q2NqZkVPODRHU2JhdUI4YnltNDhQQUgwdDNySlZacF9mSFZfdEhuYVdKZ2xkZlJiTy1kMXJSQjNqYTdQb2ZfV2J2?oc=5",
+       "source": "Nice-Matin",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Rennes are preparing to face PSG without Abdelmonem, whose absence is the focus of local coverage ahead of the fixture.",
+     "text": "The LFP disciplinary commission has sanctioned the Virage Auteuil after its anniversary celebration; the stand will be closed for PSG’s match against Lorient.",
      "sources": [
       {
-       "key": "69caf03d7b70f0fa",
-       "title": "La minute Rouge et Noir : Abdelmonem, une absence très présente face au PSG - ici.fr",
-       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPQjcxeURVUVFUVmh2ckk1YnI5RWZVV2xtaFpnTmNHVmpLSmVEV2FMNnFqVERvNXFPSXZVZGJwaVRSTnJ0SF9WcHZzdVBXaW12WWlRM3VrSHRhemdJYzJzdDVNNWtaTFIza1RNRXFPNTZiUGRia0plODRVTEc2YmtoYk5adFFWZ3AtR1h6VEplSjV6TEE4ZTB2SjY3LWRtWjVRUGhOMzFESC1yTkhhTWdoY3FhMHVKbG0ydzN6dkltakpTaGhMbll0RlUtbldpUQ?oc=5",
-       "source": "ici.fr",
+       "key": "680f31c783558eef",
+       "title": "PSG : les Ultras sanctionnés, la tribune Auteuil fermée contre Lorient - Le Figaro",
+       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQNDJ5WTRHWDNUclNsLVJRU3kzeHNXdmltai00dGMzd0o0cGVIVXhTUTVNTmpUMzZzSkVDeWJHN1NqbThRSWxxY1pMUjNaaGtIS1Y4cmpQSDVLV21LbTlFQ3c2NHJGaU9QeHFCelJmamZxc3VTOXlsYWFGYmw4SkRwcGJKQnFlYXcyX0MxM1RSblVxTm5tWkN1UWxqckhVQ0ZraTFOeVhTZUVTSF9PNUR6OFRzdjJYdjZYbkpCUnAtdzFzUQ?oc=5",
+       "source": "Le Figaro",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s rugby XV are set to face Argentina in the Nations Championship; coverage also flags growing controversy around France’s match with South Africa.",
+     "text": "Fabien Galthié says France still has clear room to improve, despite backing his players’ capacity to meet challenges.",
      "sources": [
       {
-       "key": "4d58bf6f47b59182",
-       "title": "France-Argentine, Championnat des nations : à quelle heure et sur quelle chaine ? - CNews",
-       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPY1pOSkFhQWFHeXNfNUxETlM2cnkwcmYzS05tRURYYm5CWTRiOVA5U2ZjRUtaUVJOWXdtQzhOZi1jZWM0UkFtT3RxX0dLRVlvc2NjazB4SzBGMDlBNUh4TnRTRWlKc1cxZTRqWUlsQzZjRlQ4ZU1PNF8wVktaNmE3TDZISWhjRFQ0MmVqYlBtTVluQUZYWFk4YTJRdko0QVg1U1hla0V3cHJlemRCby0zOGQ2RlNMYnBMel9UX9IBwgFBVV95cUxNVlM2S3FtdjhYeXdZTVFSZ0pac1lfcG9aZVo1UEM5VFZhVG5sdnBoZ2lhdEYzS0o4MVR5M3E2c0E2eWhIckt4OUdMSWoxY3dtVjktUW9fNnpYSVJKaTRnOHBZbHM3MTc5OExvMFYxemdMZDMxLWxJNnJXTk1KV3UwRHVWYzdkczh0aDhXd3B6cnNQYUwzamlLNGswWG9BaXNzczh0eml0V0hZZ3FfZjVnQkNEMnVvM09VQlFIVS02S2tpdw?oc=5",
-       "source": "CNews",
-       "via": "Google News"
-      },
-      {
-       "key": "eda9456436fff8d2",
-       "title": "France-Afrique du Sud, le scandale prend de l’ampleur ! - Sports.fr",
-       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdHBSdW96TW02ZDVsTXF2M1BLTWY2ZTlPLTI1VUxrVWFCRENmTjRlMXM5NFVaLVFHdVhaWDhZSHhNWjZ2WVRBTHBOWmNsZDBiMWpYVEk2My1hTkZNZXQtc2FXTERHZTJpNmo1b3lYU25jeElxTDktTDZuaTlTZ1dCMw?oc=5",
-       "source": "Sports.fr",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A new L’Équipe analysis questions Zidane’s continued backing of Cherki, a France-team selection debate.",
-     "sources": [
-      {
-       "key": "326e314ea7b41333",
-       "title": "Zidane s’obstine avec Cherki : A-t-il tort ? - L'Équipe",
-       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNaHUyV1pYY3dGWFQ3X3M2VElraFFvRlU5bFZCaDNnT1NMLTBESUs2N3BMT0ViS0NLTWN0VTJaQklWMXFNOFRyT0lqcWpDUVpGbkdIYzhYZWZTOXVNRXk1QU40akJiN2IxendueEd5M1NHeVFmR0tqTkZvVnhFWU1ibFJtNWRwdGZLNHNZMWNsZnFlY0V6blFsc2JLXzBFU3A5c1N4dWg4eE9vem9EQmljbUhB?oc=5",
-       "source": "L'Équipe",
+       "key": "d66a02bc0426ec42",
+       "title": "XV de France: \"Encore des marges évidentes de progression\" assure Fabien Galthié - Eurosport",
+       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNRzRUcUw5cEJ0R1p1R0RXLTJnNXdGbWZkblZzX192MlU1a2FVTjZZYTNiVVFBWUtUNUl1cVVmUGthaVVjdmd4WWFKYWFEWmdsVGtIa29jQ1RRbnY4ZFdFaVJjOWRaMURPZ01QQU5QRVk0dWU1aEQxQnJiYnNralBDc3RsUGgtd3lHSnFqbERlVjFqQ2JkQkZQcXpHUElCQXVRZ202SU5MYTEtVi03ZVl6OE1DWEdPdVA5dURBSnRhSk5fMXdobVpYWlo2eHozby1ZbXhRZUdXRDdWU3lNZ3M3UDFTbkhoV3dQNHRBeENqTQ?oc=5",
+       "source": "Eurosport",
        "via": "Google News"
       }
      ]
@@ -1000,262 +1028,269 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQU19ST29lc045OXNxU3B3UndjNUswblhjNXJmQVQ1TksycDZGS05FUWFpaW9Pc0FDV1AwWFVWUGh0M3I4MVEyQlB6VWNFX0VVWWZHQmozb1E1SU0zcFZDQWh6aWFxRkloUVJTZ3FIdldnS0NYLWdRZWxTb003TGpaTXZadHF4d2lkaTJaODljRUtxSE96VlpfUVBrbWp5SHNjTm1tb1EzVEw1MzJXNmxIbHFhbWZwVXdoWGxCZjFVNmNIeHJZQTlwTjhuOWp4cUpNRUVoSF81ZTlmOTFSdU1NOWFJcExRSzJLdkFCa25ZN3RfcUxUaDlQeEY2QXNnVEpv?oc=5",
-     "source": "L'Équipe",
+     "url": "https://www.culturepsg.com/news/match/deja-4-absents-pour-nice-psg-mais-beaucoup-d-incertains/61591",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-19T11:35:00+00:00",
+     "new": true,
+     "key": "53a2f866bd90f2ed",
+     "title": "Four PSG absences ahead of Nice clash, with further doubts",
+     "summary": "PSG already have four players unavailable for Saturday’s match at Nice, with several more uncertain."
+    },
+    {
+     "url": "https://www.culturepsg.com/news/match/ligue-1$002b-fait-son-black-friday-avant-nice-psg/61590",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-19T10:23:26+00:00",
+     "new": true,
+     "key": "9af8cb3071f707bb",
+     "title": "Ligue 1+ fait son Black Friday avant Nice/PSG",
+     "summary": "Alors que se profile le match Nice/PSG de samedi (17h15,) le diffuseur Ligue 1+ vient de sortir une nouvelle promotion intéressante à l'approche du Black Friday."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQMV9jSW5xWDdCRy11NDktNDdOY2YxdU40VTZYVV9BS0VXXzItY2V0Ty1KeHNpa09VX1p6VG0xcmlEVjJ0SWY5TWFBdGJXN2FMSk4yUmM0dVpZT0FfQ2VZcWhmeDZPZUN6VFVZZEVLTG1QeVFzS25fSzNxd2l5ZVB1SFF2LXE4UGlkSzJhcU1oYnlIRFJHVmcyUmVaOVQ3NkNXR3VxLVdQMEdtZkJUd2RLVlVzX01kSkpGSEUwUzAwLWJFNkt0aGxBNzh3d0RoU1F4OFY4bzd0U3dhTUZIQkZqRGU2Q2NqZkVPODRHU2JhdUI4YnltNDhQQUgwdDNySlZacF9mSFZfdEhuYVdKZ2xkZlJiTy1kMXJSQjNqYTdQb2ZfV2J2?oc=5",
+     "source": "Nice-Matin",
      "feed_name": "Team: PSG",
      "via": "Google News",
-     "published": "2026-11-19T05:55:00+00:00",
+     "published": "2026-11-19T11:41:00+00:00",
      "new": true,
-     "key": "430be440ddce4427",
-     "title": "PSG stands alone among French clubs in the Champions League main round",
-     "summary": "Paris is in strong form and is France’s only club in the Champions League main round."
+     "key": "7965d4a0243006f8",
+     "title": "PSG supporters banned from travelling to Nice",
+     "summary": "Authorities barred PSG supporters from the match, citing major risks associated with social demonstrations."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPQjcxeURVUVFUVmh2ckk1YnI5RWZVV2xtaFpnTmNHVmpLSmVEV2FMNnFqVERvNXFPSXZVZGJwaVRSTnJ0SF9WcHZzdVBXaW12WWlRM3VrSHRhemdJYzJzdDVNNWtaTFIza1RNRXFPNTZiUGRia0plODRVTEc2YmtoYk5adFFWZ3AtR1h6VEplSjV6TEE4ZTB2SjY3LWRtWjVRUGhOMzFESC1yTkhhTWdoY3FhMHVKbG0ydzN6dkltakpTaGhMbll0RlUtbldpUQ?oc=5",
-     "source": "ici.fr",
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQNDJ5WTRHWDNUclNsLVJRU3kzeHNXdmltai00dGMzd0o0cGVIVXhTUTVNTmpUMzZzSkVDeWJHN1NqbThRSWxxY1pMUjNaaGtIS1Y4cmpQSDVLV21LbTlFQ3c2NHJGaU9QeHFCelJmamZxc3VTOXlsYWFGYmw4SkRwcGJKQnFlYXcyX0MxM1RSblVxTm5tWkN1UWxqckhVQ0ZraTFOeVhTZUVTSF9PNUR6OFRzdjJYdjZYbkpCUnAtdzFzUQ?oc=5",
+     "source": "Le Figaro",
      "feed_name": "Team: PSG",
      "via": "Google News",
-     "published": "2026-11-19T05:40:00+00:00",
+     "published": "2026-11-19T11:16:44+00:00",
      "new": true,
-     "key": "69caf03d7b70f0fa",
-     "title": "Rennes focus on Abdelmonem’s absence ahead of PSG",
-     "summary": "Local coverage highlights Abdelmonem’s absence ahead of Rennes’ match against PSG."
+     "key": "680f31c783558eef",
+     "title": "Auteuil stand to be closed for PSG-Lorient after sanction",
+     "summary": "The LFP disciplined the Virage Auteuil over its anniversary celebration, closing the stand for the Lorient match."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPY1pOSkFhQWFHeXNfNUxETlM2cnkwcmYzS05tRURYYm5CWTRiOVA5U2ZjRUtaUVJOWXdtQzhOZi1jZWM0UkFtT3RxX0dLRVlvc2NjazB4SzBGMDlBNUh4TnRTRWlKc1cxZTRqWUlsQzZjRlQ4ZU1PNF8wVktaNmE3TDZISWhjRFQ0MmVqYlBtTVluQUZYWFk4YTJRdko0QVg1U1hla0V3cHJlemRCby0zOGQ2RlNMYnBMel9UX9IBwgFBVV95cUxNVlM2S3FtdjhYeXdZTVFSZ0pac1lfcG9aZVo1UEM5VFZhVG5sdnBoZ2lhdEYzS0o4MVR5M3E2c0E2eWhIckt4OUdMSWoxY3dtVjktUW9fNnpYSVJKaTRnOHBZbHM3MTc5OExvMFYxemdMZDMxLWxJNnJXTk1KV3UwRHVWYzdkczh0aDhXd3B6cnNQYUwzamlLNGswWG9BaXNzczh0eml0V0hZZ3FfZjVnQkNEMnVvM09VQlFIVS02S2tpdw?oc=5",
-     "source": "CNews",
-     "feed_name": "Team: XV de France rugby",
-     "via": "Google News",
-     "published": "2026-11-19T05:42:39+00:00",
-     "new": true,
-     "key": "4d58bf6f47b59182",
-     "title": "France-Argentina: Nations Championship match details",
-     "summary": "CNews reports on the time and broadcast channel for France’s Nations Championship match against Argentina."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdHBSdW96TW02ZDVsTXF2M1BLTWY2ZTlPLTI1VUxrVWFCRENmTjRlMXM5NFVaLVFHdVhaWDhZSHhNWjZ2WVRBTHBOWmNsZDBiMWpYVEk2My1hTkZNZXQtc2FXTERHZTJpNmo1b3lYU25jeElxTDktTDZuaTlTZ1dCMw?oc=5",
-     "source": "Sports.fr",
-     "feed_name": "Team: XV de France rugby",
-     "via": "Google News",
-     "published": "2026-11-19T05:30:13+00:00",
-     "new": true,
-     "key": "eda9456436fff8d2",
-     "title": "Controversy grows over France-South Africa",
-     "summary": "Sports.fr reports that controversy around France’s match against South Africa is growing."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNaHUyV1pYY3dGWFQ3X3M2VElraFFvRlU5bFZCaDNnT1NMLTBESUs2N3BMT0ViS0NLTWN0VTJaQklWMXFNOFRyT0lqcWpDUVpGbkdIYzhYZWZTOXVNRXk1QU40akJiN2IxendueEd5M1NHeVFmR0tqTkZvVnhFWU1ibFJtNWRwdGZLNHNZMWNsZnFlY0V6blFsc2JLXzBFU3A5c1N4dWg4eE9vem9EQmljbUhB?oc=5",
-     "source": "L'Équipe",
+     "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNRzRUcUw5cEJ0R1p1R0RXLTJnNXdGbWZkblZzX192MlU1a2FVTjZZYTNiVVFBWUtUNUl1cVVmUGthaVVjdmd4WWFKYWFEWmdsVGtIa29jQ1RRbnY4ZFdFaVJjOWRaMURPZ01QQU5QRVk0dWU1aEQxQnJiYnNralBDc3RsUGgtd3lHSnFqbERlVjFqQ2JkQkZQcXpHUElCQXVRZ202SU5MYTEtVi03ZVl6OE1DWEdPdVA5dURBSnRhSk5fMXdobVpYWlo2eHozby1ZbXhRZUdXRDdWU3lNZ3M3UDFTbkhoV3dQNHRBeENqTQ?oc=5",
+     "source": "Eurosport",
      "feed_name": "Team: équipe de France football",
      "via": "Google News",
-     "published": "2026-11-18T23:58:36+00:00",
+     "published": "2026-11-19T11:58:00+00:00",
      "new": true,
-     "key": "326e314ea7b41333",
-     "title": "Zidane’s continued backing of Cherki questioned",
-     "summary": "L’Équipe examines whether Zidane is right to persist with Cherki."
+     "key": "d66a02bc0426ec42",
+     "title": "Galthié sees room for France rugby to improve",
+     "summary": "France coach Fabien Galthié said the team still has clear margins for improvement."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-19T06:01:25.017591+00:00",
-   "input_fingerprint": "sha256:6d736ca9c3a86beca14990fc00b505bfd82468f27a7d382c91fff7dd4f6bf545",
-   "last_success_at": "2026-11-19T06:01:25.017591+00:00",
-   "candidate_count": 352,
+   "state": "degraded",
+   "source_checked_at": "2026-11-19T12:01:25.487499+00:00",
+   "input_fingerprint": "sha256:a1bfc31b59ec39905e089e287aaebe29bb3a87cf89f0be7fa33610b524ac4702",
+   "last_success_at": "2026-11-19T12:01:25.487499+00:00",
+   "error": "Source check failed: Team: XV de France rugby, Team: Champions League",
+   "candidate_count": 219,
    "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "Risk appetite is weak: your equity holdings are broadly lower, while Bloomberg’s market wrap points to further Asian losses as investors focus on Anthropic’s debut.",
+     "text": "Anthropic’s IPO is the dominant market event: the company raised a record $107bn, with shares indicated more than 20% above the $83 offer price before trading. The debut has lifted tech sentiment and helped brighten expectations for a year-end stock rally.",
      "sources": [
       {
-       "key": "edab2b46d2f82f68",
-       "title": "Asian Stocks Set to Fall Ahead of Anthropic Debut: Markets Wrap - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMHJMMGxuVjE0QlBiMjdlLVg4Snd2RjdIVmxmMlFGX3E1cEpBS3BHaEQ0YnpUb19jc2lXMG9RQk9nSk8xSVFmN2d4VFRoSC1nQkJUdk5DTF9MWlVqRklPelgyUGpNREtJQUpEd3BTZ3A0VmVZdGRZZ21mT0x5bEdhUkd1OVVKZHNLUkRqdWY3M3VxOHBu?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Anthropic is reportedly set to price at $83 a share, above its range; the blockbuster listing is testing demand for AI exposure amid fresh safety concerns.",
-     "sources": [
+       "key": "884e4442a40a2084",
+       "title": "Anthropic to list on Wall Street in biggest IPO ever",
+       "url": "https://www.ft.com/content/7a6b211d-c73b-4953-97ee-ed92dab8ee07?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      },
       {
-       "key": "588da3c277ad7f7a",
-       "title": "Anthropic Is Said to Price IPO Above Range at $83 Per Share - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQa3BkQzh0ZFBoUzZmTzU4akxveFYzZ2pZWEM0aklQWU50RlBfaW4yaDNTMWxKbzFmZ1d3QW96ZkVjOC0zOHh6eUhGWHhZbkVqRHdGc09WSnk3ek56UTJzYjZtZXI5cVo5UmlRd1JJUE9Qa29HRXZEN0JZZlFNR01yX2xpYkVGWDNSTVNxeGFCTzNBZ3VDc29BQlV6dzdBdw?oc=5",
+       "key": "8026034f3451e381",
+       "title": "Anthropic Shares Indicated More Than 20% Higher on Gray Markets - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNDFGNWFPNzlyZllvRnktWk54QndaMUgtTlFmUV9kZHVwWXpJM2Ztc0N5TUJabkFHMjlVTzVmSHpQcndMT2FWQXVlMVBGdExGRlhBYW0xZU1QSlNldjB1ekR3X1NOQVlvVDl5UlVibmdEdnBCUHFTbnFiSXAybUNFRmlJUmo5UUNKZ2I2cnl3ZXMwQkE1SHozcldvYW85cmN1WWFQaDdmRVJtWmZZODRFZG9kbw?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
       },
       {
-       "key": "ca0841e944a11a2f",
-       "title": "Anthropic’s AI advances trigger new safety fears on eve of IPO",
-       "url": "https://www.ft.com/content/d8be4655-211c-49a8-bfe4-18a00b8e8619?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Deutsche Bank’s Italian unit allegedly concealed up to €800mn in mortgage losses, a significant disclosure and controls issue for European banking.",
-     "sources": [
-      {
-       "key": "da2632e6bdc1f0db",
-       "title": "Deutsche Bank’s Italian unit hid up to €800mn of mortgage lending losses",
-       "url": "https://www.ft.com/content/06be5c7d-b1f2-44e9-9cad-a2dcb5a2f452?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "The IEA says oil markets could rebalance without restored Hormuz flows, but would need investment; supply and US inventory factors are also weighing on prices.",
-     "sources": [
-      {
-       "key": "41c7f907561cd5f7",
-       "title": "Energy markets can ‘manage without’ the Strait of Hormuz, says IEA",
-       "url": "https://www.ft.com/content/1e00aad2-0007-4328-8492-0fea09aa69ad?syn-25a6b1a6=1",
-       "source": "FT Markets",
-       "via": null
-      },
-      {
-       "key": "d498148cc8823c14",
-       "title": "Oil Steadies as Supply, US Inventories Offset Mideast Tensions - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMXlwQndZSEVFRGU0OXNRTjk5d19faVN6T1pTcVFidDVfblppSDU4UU0xU0o1QnNGbHhDRW1CbG5VSU9OVWpDWEpEd1Jpa3NOQ1RxZkZiUS1LRXc0d2lZV2oxekdHZEhXVjcyemhwSEVnbHNDUGZKRXl5OFNXczJxNU11b25EQy0tM3U3cEVqUWY3aDBHbnBCOWQxTFZCUQ?oc=5",
-       "source": "Bloomberg.com",
+       "key": "3cc9583632d1660f",
+       "title": "The Path to a Year-End Stock Rally Looks Clearer After Anthropic - Bloomberg",
+       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNY2V2eWlNYVV2MFdxZDhPdEF3c1U3U3ZXejRvVUNJY0lwOFotYjdXcHZ0NmREcVk5N1lGWGotX1NINjVpZC1zQ1RCWkVNU3YyaUNjcWhUNzR1bEE5NEVDN0xXSC1QdUs4TmVPZlByenRTYmdma2dBS2xNeG9GRmhZN2ZoeWtZMks2REdfUjdFd0VNUXh3dmdXRnNNbHBqcElmQ2JvbUwzSW01QQ?oc=5",
+       "source": "Bloomberg",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Gold has failed to cushion investors during the recent technology sell-off, challenging its role as a portfolio diversifier.",
+     "text": "The Fed’s October minutes were hawkish, with policymakers signalling further rate hikes; gold has weakened and crypto has been volatile as investors reassess the rate outlook.",
      "sources": [
       {
-       "key": "aa7070b97712d5cf",
-       "title": "Gold loses its lustre for investors",
-       "url": "https://www.ft.com/content/86aaff9a-0d0f-49dd-81fc-4c96bcbf2f32?syn-25a6b1a6=1",
-       "source": "FT",
+       "key": "49a4db71d0859100",
+       "title": "Gold Steadies Near 14-Month Low as Fed Signals More Rate Hikes - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQXdmV3hhblFoX2xZNXU1UVFXemNQdDJXUlpqV3o3bmxiNUVxNTFWRkVRektBa1o0d1N2LWhFcWJYZ0VYWWUydHhnVjFrQ3VYOUI1Z25abXdHV0JucmhFcTFBZTNKSjR6WXB1MnFVanVTekJxY2cyNG9HdzB4NlkyTUtaM3N5bFQwSVd5UGQwaHJNNlRNUU5KU2tCOU5uaEVoRXY5cUhEMHBtZEtxY1B2VkRtRQ?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      },
+      {
+       "key": "f22e87d2e28bb5d8",
+       "title": "Bitcoin, Ether Bounce from Lows After Hawkish Fed Minutes",
+       "url": "https://finance.yahoo.com/m/a9afa1d8-135c-3cd8-a917-2a8ff5c2b6a8/bitcoin%2C-ether-bounce-from.html?.tsrc=rss",
+       "source": "Bitcoin",
        "via": null
       }
      ]
     },
     {
-     "text": "Private-equity secondaries are expanding as a liquidity outlet, but the FT flags concerns that some buyers are not equipped to assess acquired assets closely.",
+     "text": "UniCredit and Germany’s government have reached an understanding over Commerzbank, with commitments reportedly covering the bank’s operating base, employee rights and continued dialogue—a significant development for European banking consolidation.",
      "sources": [
       {
-       "key": "89b10df278c085ea",
-       "title": "Private equity’s liquidity cure needs a better formula",
-       "url": "https://www.ft.com/content/2af3765e-d689-4418-bdd2-5b34042df396",
+       "key": "2c4668712ff6f86a",
+       "title": "UniCredit, accordo fatto con il governo tedesco su Commerzbank",
+       "url": "https://www.ilsole24ore.com/art/unicredit-accordo-fatto-il-governo-tedesco-commerzbank-AJO6cdLC",
+       "source": "Il Sole 24 Ore Finanza",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The EU has agreed to delay methane rules for fossil-fuel imports by two years after lobbying from the US, Qatar and energy companies, easing near-term compliance pressure on suppliers.",
+     "sources": [
+      {
+       "key": "7cb2533264d88484",
+       "title": "EU delays methane emission rules on fossil fuel imports",
+       "url": "https://www.ft.com/content/e871493f-920c-4ece-94d4-9d14317047fe?syn-25a6b1a6=1",
        "source": "FT Markets",
        "via": null
+      }
+     ]
+    },
+    {
+     "text": "TSMC and Samsung have suspended some chip shipments to Chinese customers, a fresh sign of technology-trade constraints affecting the semiconductor supply chain.",
+     "sources": [
+      {
+       "key": "2e05106e83dc2a63",
+       "title": "TSMC and Samsung suspend some chip shipments to Chinese customers - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVmdYLWxyejBmNWE2ZmVSbk93M0w2ajJMbzZvWE54bG5QU2JqYzNqYUhobnJVX1h6bkcyT0JZX1VLMHNYZG4tM0Q4Vmd3dGJIRG9yS2dYcjIyLVpvV3RwUHFpRXU2cU51dXdWTTBRcy1wNHBJZEYtYURQcVhOTXlZRU5nLW8?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Japan Tobacco faces an $8.6bn loss after Russia ordered the seizure of its Russian business, underscoring the risk of further corporate losses from the war and sanctions environment.",
+     "sources": [
+      {
+       "key": "30596faab104cc05",
+       "title": "Japan Tobacco takes $8.6bn loss after Vladimir Putin orders seizure of Russian business - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTEViRFhYVTRfazA5OWJ1RmgzeldyaXFhZU9adTl0eTNsai1FQVpHY04xV0hjeVRYVGlpanFjRHZzUEMzWkE2VVlkM3RpWHMzaXpsNE9xdGEtWHMwSVdIdjRnWThJVHEwREdyNkNRNldMSXBKd2lYNzNCdGV4WldpWk96NF8?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMHJMMGxuVjE0QlBiMjdlLVg4Snd2RjdIVmxmMlFGX3E1cEpBS3BHaEQ0YnpUb19jc2lXMG9RQk9nSk8xSVFmN2d4VFRoSC1nQkJUdk5DTF9MWlVqRklPelgyUGpNREtJQUpEd3BTZ3A0VmVZdGRZZ21mT0x5bEdhUkd1OVVKZHNLUkRqdWY3M3VxOHBu?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-19T05:09:00+00:00",
-     "new": true,
-     "key": "edab2b46d2f82f68",
-     "title": "Asian stocks set to fall as Anthropic debut looms",
-     "summary": "Bloomberg’s market wrap said Asian stocks were set to fall as investors looked ahead to Anthropic’s market debut."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQa3BkQzh0ZFBoUzZmTzU4akxveFYzZ2pZWEM0aklQWU50RlBfaW4yaDNTMWxKbzFmZ1d3QW96ZkVjOC0zOHh6eUhGWHhZbkVqRHdGc09WSnk3ek56UTJzYjZtZXI5cVo5UmlRd1JJUE9Qa29HRXZEN0JZZlFNR01yX2xpYkVGWDNSTVNxeGFCTzNBZ3VDc29BQlV6dzdBdw?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-19T02:53:00+00:00",
-     "new": true,
-     "key": "588da3c277ad7f7a",
-     "title": "Anthropic said to price IPO above range at $83 a share",
-     "summary": "Anthropic is reportedly set to price its IPO at $83 per share, above the indicated range."
-    },
-    {
-     "url": "https://www.ft.com/content/d8be4655-211c-49a8-bfe4-18a00b8e8619?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/7a6b211d-c73b-4953-97ee-ed92dab8ee07?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-19T05:00:17+00:00",
+     "published": "2026-11-19T10:58:44+00:00",
      "new": true,
-     "key": "ca0841e944a11a2f",
-     "title": "Anthropic AI advances trigger fresh safety concerns",
-     "summary": "Anthropic said it had activated part of its responsible scaling policy amid concerns about the pace of AI development."
+     "key": "884e4442a40a2084",
+     "title": "Anthropic to list on Wall Street in biggest IPO ever",
+     "summary": "The Claude maker raised $107bn ahead of its Nasdaq debut, the largest IPO on record."
     },
     {
-     "url": "https://www.ft.com/content/06be5c7d-b1f2-44e9-9cad-a2dcb5a2f452?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNDFGNWFPNzlyZllvRnktWk54QndaMUgtTlFmUV9kZHVwWXpJM2Ztc0N5TUJabkFHMjlVTzVmSHpQcndMT2FWQXVlMVBGdExGRlhBYW0xZU1QSlNldjB1ekR3X1NOQVlvVDl5UlVibmdEdnBCUHFTbnFiSXAybUNFRmlJUmo5UUNKZ2I2cnl3ZXMwQkE1SHozcldvYW85cmN1WWFQaDdmRVJtWmZZODRFZG9kbw?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-19T11:00:07+00:00",
+     "new": true,
+     "key": "8026034f3451e381",
+     "title": "Anthropic shares indicated more than 20% higher on gray markets",
+     "summary": "Shares were indicated more than 20% above their $83 offer price before trading."
+    },
+    {
+     "url": "https://finance.yahoo.com/m/a9afa1d8-135c-3cd8-a917-2a8ff5c2b6a8/bitcoin%2C-ether-bounce-from.html?.tsrc=rss",
+     "source": "Bitcoin",
+     "feed_name": "Bitcoin",
      "via": null,
-     "published": "2026-11-19T05:00:11+00:00",
+     "published": "2026-11-19T11:21:13+00:00",
      "new": true,
-     "key": "da2632e6bdc1f0db",
-     "title": "Deutsche Bank’s Italian unit hid up to €800mn in mortgage losses",
-     "summary": "The Italian unit did not publicly disclose the alleged losses or findings of an internal investigation."
+     "key": "f22e87d2e28bb5d8",
+     "title": "Bitcoin and ether rebound after hawkish Fed minutes",
+     "summary": "Bitcoin and ether recovered modestly after hawkish October Fed minutes prompted a sell-off."
     },
     {
-     "url": "https://www.ft.com/content/1e00aad2-0007-4328-8492-0fea09aa69ad?syn-25a6b1a6=1",
+     "url": "https://www.ilsole24ore.com/art/unicredit-accordo-fatto-il-governo-tedesco-commerzbank-AJO6cdLC",
+     "source": "Il Sole 24 Ore Finanza",
+     "feed_name": "Il Sole 24 Ore Finanza",
+     "via": null,
+     "published": "2026-11-19T08:04:00+00:00",
+     "new": true,
+     "key": "2c4668712ff6f86a",
+     "title": "UniCredit reaches understanding with German government over Commerzbank",
+     "summary": "The preliminary understanding includes commitments on Commerzbank’s operating base, employee rights and continued dialogue."
+    },
+    {
+     "url": "https://www.ft.com/content/e871493f-920c-4ece-94d4-9d14317047fe?syn-25a6b1a6=1",
      "source": "FT Markets",
      "feed_name": "FT Markets",
      "via": null,
-     "published": "2026-11-19T05:00:28+00:00",
+     "published": "2026-11-19T09:26:07+00:00",
      "new": true,
-     "key": "41c7f907561cd5f7",
-     "title": "IEA says oil markets can manage without Hormuz flows",
-     "summary": "The IEA said oil markets could rebalance without restored Strait of Hormuz flows, but would require investment."
+     "key": "7cb2533264d88484",
+     "title": "EU delays methane rules for fossil-fuel imports",
+     "summary": "The EU agreed to postpone implementation of methane rules for fossil-fuel imports by two years."
     },
     {
-     "url": "https://www.ft.com/content/86aaff9a-0d0f-49dd-81fc-4c96bcbf2f32?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-11-19T05:00:17+00:00",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVmdYLWxyejBmNWE2ZmVSbk93M0w2ajJMbzZvWE54bG5QU2JqYzNqYUhobnJVX1h6bkcyT0JZX1VLMHNYZG4tM0Q4Vmd3dGJIRG9yS2dYcjIyLVpvV3RwUHFpRXU2cU51dXdWTTBRcy1wNHBJZEYtYURQcVhOTXlZRU5nLW8?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-19T10:21:27+00:00",
      "new": true,
-     "key": "aa7070b97712d5cf",
-     "title": "Gold fails to protect investors during tech sell-off",
-     "summary": "The precious metal has not provided a portfolio hedge during the recent technology stock fall."
+     "key": "2e05106e83dc2a63",
+     "title": "TSMC and Samsung suspend some chip shipments to Chinese customers",
+     "summary": "The chipmakers have halted some shipments to customers in China."
     },
     {
-     "url": "https://www.ft.com/content/2af3765e-d689-4418-bdd2-5b34042df396",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-11-19T05:00:17+00:00",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTEViRFhYVTRfazA5OWJ1RmgzeldyaXFhZU9adTl0eTNsai1FQVpHY04xV0hjeVRYVGlpanFjRHZzUEMzWkE2VVlkM3RpWHMzaXpsNE9xdGEtWHMwSVdIdjRnWThJVHEwREdyNkNRNldMSXBKd2lYNzNCdGV4WldpWk96NF8?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-19T08:08:52+00:00",
      "new": true,
-     "key": "89b10df278c085ea",
-     "title": "Private-equity secondaries face scrutiny over asset assessment",
-     "summary": "The fast-growing secondary market includes firms the FT says are not designed to scrutinise acquired assets closely."
+     "key": "30596faab104cc05",
+     "title": "Japan Tobacco takes $8.6bn loss after Russia seizes its business",
+     "summary": "Japan Tobacco booked an $8.6bn loss after Vladimir Putin ordered the seizure of its Russian business."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVUVaaktqamVpSXJCWjhzSEJrUkRaVUpKNUpEamI3VWpUMW43WlVraDRuY25BV19GUHNId04wNnZnTTVNc1EwNGtSMzcxdVliVXlHOHl1bzd0Wm41T19fa1c5MEI3c2lxMU1FRWlaWXllZmtqUGN3ZW1aQ0s3YjU4OE1vVkJnWlBVTHlhaURjQ0hfeW9KSW51SW9EWEZIX0ppUmtwVXZFM2NNLUJBMERhOU1R?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQXdmV3hhblFoX2xZNXU1UVFXemNQdDJXUlpqV3o3bmxiNUVxNTFWRkVRektBa1o0d1N2LWhFcWJYZ0VYWWUydHhnVjFrQ3VYOUI1Z25abXdHV0JucmhFcTFBZTNKSjR6WXB1MnFVanVTekJxY2cyNG9HdzB4NlkyTUtaM3N5bFQwSVd5UGQwaHJNNlRNUU5KU2tCOU5uaEVoRXY5cUhEMHBtZEtxY1B2VkRtRQ?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-19T00:54:00+00:00",
+     "published": "2026-11-19T09:37:24+00:00",
      "new": true,
-     "key": "538064d1390a8ca4",
-     "title": "Blue Owl plans $513mn CMBS for Amazon-leased data centre",
-     "summary": "Blue Owl plans a $513 million commercial mortgage-backed securities deal tied to a data centre leased by Amazon."
+     "key": "49a4db71d0859100",
+     "title": "Gold steadies near 14-month low as Fed signals more rate hikes",
+     "summary": "Gold traded near a 14-month low as expectations of further Fed rate hikes weighed on prices."
     }
    ],
    "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-19T06:01:25.017591+00:00",
-   "input_fingerprint": "sha256:639c3f13ffaa23947876b5e948212cefde043552fab71ac7b61023ce3525e527",
-   "last_success_at": "2026-11-19T06:01:25.017591+00:00",
-   "error": "Source check failed: Reuters Business (via Google News)",
+   "state": "healthy",
+   "source_checked_at": "2026-11-19T12:01:25.487499+00:00",
+   "input_fingerprint": "sha256:d90839ea6e9ddb89436b8b928f4726c3452cba349545f086acae5631058fa0b5",
+   "last_success_at": "2026-11-19T12:01:25.487499+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 642.4,
-     "change_pct": -1.47,
+     "price": 640.2,
+     "change_pct": -0.34,
      "currency": "CHF",
-     "as_of": "2026-11-17T23:00:00+00:00",
+     "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1263,10 +1298,10 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 717.54,
-     "change_pct": -2.31,
+     "price": 728.72,
+     "change_pct": 1.23,
      "currency": "EUR",
-     "as_of": "2026-11-16T23:00:00+00:00",
+     "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1274,10 +1309,10 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 109.82,
-     "change_pct": -1.67,
+     "price": 110.1,
+     "change_pct": 0.38,
      "currency": "EUR",
-     "as_of": "2026-11-16T23:00:00+00:00",
+     "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1285,10 +1320,10 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 281.45,
-     "change_pct": -2.27,
+     "price": 284.0,
+     "change_pct": 0.91,
      "currency": "EUR",
-     "as_of": "2026-11-16T23:00:00+00:00",
+     "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1296,10 +1331,10 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 321.45,
-     "change_pct": -1.79,
+     "price": 318.75,
+     "change_pct": 0.08,
      "currency": "EUR",
-     "as_of": "2026-11-16T23:00:00+00:00",
+     "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1307,10 +1342,10 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 8.37,
-     "change_pct": -2.46,
+     "price": 8.43,
+     "change_pct": 0.75,
      "currency": "EUR",
-     "as_of": "2026-11-16T23:00:00+00:00",
+     "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1318,10 +1353,10 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 48.69,
-     "change_pct": -1.91,
+     "price": 49.97,
+     "change_pct": 1.85,
      "currency": "EUR",
-     "as_of": "2026-11-16T23:00:00+00:00",
+     "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1329,10 +1364,10 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 68.12,
-     "change_pct": 0.24,
+     "price": 65.7,
+     "change_pct": -0.59,
      "currency": "EUR",
-     "as_of": "2026-11-16T23:00:00+00:00",
+     "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1340,8 +1375,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 63370.76,
-     "change_pct": -2.35,
+     "price": 63710.9,
+     "change_pct": 1.15,
      "currency": "USD",
      "as_of": "2026-11-19T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1351,8 +1386,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1800.86,
-     "change_pct": -1.21,
+     "price": 1800.91,
+     "change_pct": 1.47,
      "currency": "USD",
      "as_of": "2026-11-19T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1360,7 +1395,7 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 234,
+   "candidate_count": 312,
    "new_count": 8
   },
   "media": {
@@ -1449,10 +1484,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-19T06:01:25.017591+00:00",
+   "source_checked_at": "2026-11-19T12:01:25.487499+00:00",
    "candidate_count": 8,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-19T06:00:00.000Z"
+ "scheduled_slot": "2026-11-19T12:00:00.000Z"
 }
