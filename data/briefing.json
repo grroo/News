@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261119T152431256483Z",
- "generated_at": "2026-11-19T15:24:31.256483+00:00",
- "generated_local": "Thu 19 Nov 2026, 16:24",
- "source_checked_at": "2026-11-19T15:24:31.256483+00:00",
+ "edition_id": "ed-20261119T180126043526Z",
+ "generated_at": "2026-11-19T18:01:26.043526+00:00",
+ "generated_local": "Thu 19 Nov 2026, 19:01",
+ "source_checked_at": "2026-11-19T18:01:26.043526+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-19T15:24:31.256483+00:00"
+  "run-2026-11-19T18:01:26.043526+00:00"
  ],
  "quality": {
-  "overall": "healthy"
+  "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-19T15:24:31.256483+00:00"
+  "completed_at": "2026-11-19T18:01:26.043526+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 34,
+   "item_count": 35,
    "reason": null,
    "failure": null,
-   "parsed_count": 34,
+   "parsed_count": 35,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -44,14 +44,19 @@
   {
    "name": "Reuters (via Google News)",
    "section": "news",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "The Guardian World",
@@ -141,10 +146,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 93,
+   "item_count": 94,
    "reason": null,
    "failure": null,
-   "parsed_count": 93,
+   "parsed_count": 94,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -188,35 +193,45 @@
   {
    "name": "Topic: Milano",
    "section": "news",
-   "status": "ok",
-   "item_count": 109,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 109,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: PSG",
    "section": "sport",
-   "status": "ok",
-   "item_count": 102,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 102,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 103,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 103,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -224,23 +239,28 @@
   {
    "name": "Team: XV de France rugby",
    "section": "sport",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 105,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 105,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -249,10 +269,10 @@
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 60,
+   "item_count": 61,
    "reason": null,
    "failure": null,
-   "parsed_count": 60,
+   "parsed_count": 61,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -417,10 +437,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 11,
+   "item_count": 12,
    "reason": null,
    "failure": null,
-   "parsed_count": 11,
+   "parsed_count": 12,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -452,14 +472,19 @@
   {
    "name": "Reuters Business (via Google News)",
    "section": "finance",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Bloomberg (via Google News)",
@@ -684,9 +709,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002134,
-  "est_month_usd": 0.19,
-  "forecast_month_usd": 0.19,
+  "est_cost_usd": 0.002274,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,31 +719,31 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 10079,
+    "latency_ms": 9833,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0e8f15a667570ca9016aff14b7707887d1926b518a6ba3e0ec"
+     "resp_0415e78092b5e2e3016aff397c858887d1908fa7cdb71038ca"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3349,
-    "output_tokens": 698,
-    "reasoning_tokens": 267
+    "cache_write_tokens": 3309,
+    "output_tokens": 805,
+    "reasoning_tokens": 390
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 5191,
+    "latency_ms": 4558,
     "unknown": false,
     "provider_request_ids": [
-     "resp_00dc609b6577a07c016aff14c0c85c87d199dacdd636ba58f7"
+     "resp_00d9383b12f3eaa0016aff3985ace487d18498dc7a286a30e4"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3596,
-    "output_tokens": 306,
+    "cache_write_tokens": 3634,
+    "output_tokens": 356,
     "reasoning_tokens": 0
    },
    {
@@ -726,28 +751,28 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 9491,
+    "latency_ms": 8238,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0fc8aa62abd70e21016aff14c5f97c87d1a467c4652ecc4781"
+     "resp_06d774499036d25e016aff398a35f887d1b4433d24e6dc4ded"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3258,
-    "output_tokens": 711,
-    "reasoning_tokens": 224
+    "cache_write_tokens": 3309,
+    "output_tokens": 823,
+    "reasoning_tokens": 319
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10203,
-  "output_tokens": 1715,
-  "reasoning_tokens": 491,
+  "cache_write_tokens": 10252,
+  "output_tokens": 1984,
+  "reasoning_tokens": 709,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 61,
-   "attempts": 183,
-   "known_cost_usd": 0.13792,
+   "recorded_runs": 62,
+   "attempts": 186,
+   "known_cost_usd": 0.140194,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,183 +781,189 @@
   "news": {
    "briefing": [
     {
-     "text": "Anthropic’s public listing is being presented as the world’s largest IPO, putting the scale of AI financing and investor appetite in focus.",
+     "text": "Trump, Putin and Xi issued a joint “peace declaration” after their first trilateral meeting, a significant diplomatic development with potential implications for Europe and Ukraine.",
      "sources": [
       {
-       "key": "dcdb2007659431a7",
-       "title": "Anthropic's rise from AI upstart to world's largest IPO - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYWNjcDRJVTN5eWFvblRPYjBMYnoya3diRGpCWkoxbXJKVEt6dWdNN3I2VThZTllPTGRTaWxvUkxmUjZlVzZMVUI3OTVHeWN4MGpRUGY2M0gtdDJNWnpOclktZkhzcWpkUW5pVmR4aDhwRFhPYVNEWV9FVzd4bUxSTTFJLVRZNG1UQ1dKSnltd2ZELTV1LXdqdzF2aw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
+       "key": "116411d1d3c7352a",
+       "title": "Trump, Putin and Xi release 'peace declaration' after historic meeting",
+       "url": "https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
+       "via": null
       }
      ]
     },
     {
-     "text": "The West is pressing Iran to restore inspections at nuclear sites that were bombed, keeping nuclear oversight tensions in focus.",
+     "text": "Meloni called for a clear mandate for the E5 group of European powers, saying Italy supports NATO-style security guarantees for Ukraine.",
      "sources": [
       {
-       "key": "d0b54fb0889ff0e7",
-       "title": "West presses Iran at IAEA to let inspections resume at bombed nuclear sites - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNX1BENXJsTm9KVlRxVjk0SENfVmszM1ZXVFpjQzJZcVRneVFiR210MTNseE0yUlJqWmRObE9ndjlKQkZUVFJqd0Joc3hFLWNhcW5KQ0ZKZWdBWDZ5Q1BCNWFQcDdBN1N5MDllSGNNYjdOUG1IaG5BNjB2S3hPMHRTSGpDM2phXzkzSUF6TkJtMktQRWpodkdiRVVSM0FJZ0lDOVRLZk5Dby1SdXV1elBEaW5GM0k?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
+       "key": "a6e252768aa3763e",
+       "title": "Meloni al summit dei Volenterosi, il formato E5 deve avere un mandato chiaro",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/meloni-al-summit-dei-volenterosi-il-formato-e5-deve-avere-un-mandato-chiaro_0812d7f0-b72c-46f9-b442-80666ca7b3a6.html",
+       "source": "ANSA Top News",
+       "via": null
       }
      ]
     },
     {
-     "text": "Alibaba beat revenue estimates as AI cloud growth lifted sales; investment gains also supported profit.",
+     "text": "The EU has delayed implementation of its pioneering methane rules after sustained pressure from Washington and the oil and gas sector.",
      "sources": [
       {
-       "key": "edb86ff6bee90f4c",
-       "title": "Alibaba tops revenue estimates on AI cloud growth; profit up on investment gains - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNFBCQUxKTlhNeXBLMWVCbUU2enl4bG1PTVFoLVpRVjRySlVEMjJhZ0I0c3Mzd3VJb1hQOHFnYW9wOUlQZnp3ZXgyYWZjRTVueVdIMlozaklSWXZUdFBsS25EdUdZRHVZQVRuVUNSYk1wc3lvbGROSzgtM0tacUVWY1JRRUVsWFR4a0Z0NlIxNDV0UnZMenZJd2xGSVY4cHNNQVQwWVlVWGpLM3NaMlE?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The European Commission has confirmed it was targeted in an AI-assisted cyberattack, a notable test of institutional cybersecurity.",
-     "sources": [
-      {
-       "key": "db4df44d3fc286af",
-       "title": "European Commission targeted in an AI-assisted cyberattack, spokesperson confirms - DW.com",
-       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
-       "source": "DW.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "MS Re grew premiums but reported a hit to its bottom line from investment returns, a reminder that portfolio performance remains material for reinsurers.",
-     "sources": [
-      {
-       "key": "366d2ce03d745721",
-       "title": "MS Re grows premium, takes bottom line hit on investment returns - Intelligent Insurer",
-       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWDUxbWN1NndOUmxOanhTdFUweVZ6VDZvN0xVZm16MzBFUUVjMGM2ang0RlZYemo3c1JqN3dpcVlNSVQ1X3NXdkZWU2E0MkdOQnNTRHJxMnAxMkw2cWZCdHBXX2RCY0hTZkZXbk1sYlEwUmptdzdiV2JfaVRXVTl1TGEySnNSQjdKamtpejZ3T1pVQTNndzcxR2ozSmZRY28?oc=5",
-       "source": "Intelligent Insurer",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Disagreement over whether the IPCC should publish its next assessment reports before COP33 is exposing tensions over the climate-science process.",
-     "sources": [
-      {
-       "key": "2a9c0e116783c103",
-       "title": "COP31 : l’avenir du GIEC, qui traverse l’une des plus graves crises de son histoire, suscite de fortes tensions",
-       "url": "https://www.lemonde.fr/planete/article/2026/11/19/cop31-l-avenir-du-giec-qui-traverse-l-une-des-plus-graves-crises-de-son-histoire-suscite-de-fortes-tensions_6813332_3244.html",
+       "key": "b09e06c07aa763f7",
+       "title": "Méthane : l’UE reporte l’entrée en vigueur de son règlement pionnier au nom de la sécurité énergétique",
+       "url": "https://www.lemonde.fr/economie/article/2026/11/19/l-union-europeenne-reporte-l-entree-en-vigueur-de-son-reglement-pionnier-sur-le-methane-au-nom-de-la-securite-energetique_6813359_3234.html",
        "source": "Le Monde",
        "via": null
+      }
+     ]
+    },
+    {
+     "text": "European gas prices rose 4% to €84 per megawatt-hour on the Amsterdam benchmark market.",
+     "sources": [
+      {
+       "key": "9d542ad92a1b7d9b",
+       "title": "Il gas in aumento (+4%) a 84 euro al Megawattora",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/il-gas-in-aumento-4-a-84-euro-al-megawattora_cf84a7ab-355b-4d69-aac0-f95c1a239c2a.html",
+       "source": "ANSA Top News",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Anthropic shares jumped more than 30% as trading began, in a high-profile test of investor appetite for AI companies.",
+     "sources": [
+      {
+       "key": "0bc1d9b42b1b7cb7",
+       "title": "Anthropic IPO live updates: Stock jumps by more than 30% as trading begins - NBC News",
+       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd2kweElPdVVGZ3JXWXVqR0tiZ1o0QWpqZThnc2FiYVdVSGIzOUw3SVlRcy1VNUZqaHZCLVlncjNwWUdBLVllb3JnUjNJUnc2bEpkUmUzNjl6aHVfYXA1TTZHOFoxNnFCdDlxek83bzVTekhVSDFkLXhsMUJId3BUa0VseEFRTHQ1SXZqTGpwV2lXUQ?oc=5",
+       "source": "NBC News",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYWNjcDRJVTN5eWFvblRPYjBMYnoya3diRGpCWkoxbXJKVEt6dWdNN3I2VThZTllPTGRTaWxvUkxmUjZlVzZMVUI3OTVHeWN4MGpRUGY2M0gtdDJNWnpOclktZkhzcWpkUW5pVmR4aDhwRFhPYVNEWV9FVzd4bUxSTTFJLVRZNG1UQ1dKSnltd2ZELTV1LXdqdzF2aw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-19T15:04:44+00:00",
+     "url": "https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
+     "via": null,
+     "published": "2026-11-19T17:38:22+00:00",
      "new": true,
-     "key": "dcdb2007659431a7",
-     "title": "Anthropic’s rise from AI upstart to world’s largest IPO",
-     "summary": "Reuters reports on Anthropic’s rise as it prepares what it describes as the world’s largest IPO."
+     "key": "116411d1d3c7352a",
+     "title": "Trump, Putin and Xi issue peace declaration after historic meeting",
+     "summary": "The three presidents issued a joint peace declaration after their first trilateral discussion."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNX1BENXJsTm9KVlRxVjk0SENfVmszM1ZXVFpjQzJZcVRneVFiR210MTNseE0yUlJqWmRObE9ndjlKQkZUVFJqd0Joc3hFLWNhcW5KQ0ZKZWdBWDZ5Q1BCNWFQcDdBN1N5MDllSGNNYjdOUG1IaG5BNjB2S3hPMHRTSGpDM2phXzkzSUF6TkJtMktQRWpodkdiRVVSM0FJZ0lDOVRLZk5Dby1SdXV1elBEaW5GM0k?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-19T14:43:53+00:00",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/meloni-al-summit-dei-volenterosi-il-formato-e5-deve-avere-un-mandato-chiaro_0812d7f0-b72c-46f9-b442-80666ca7b3a6.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-11-19T17:43:08+00:00",
      "new": true,
-     "key": "d0b54fb0889ff0e7",
-     "title": "West presses Iran to resume inspections at bombed nuclear sites",
-     "summary": "Western countries are pressing Iran to allow inspections to resume at nuclear sites that were bombed."
+     "key": "a6e252768aa3763e",
+     "title": "Meloni calls for a clear mandate for the E5 group",
+     "summary": "Meloni said Italy supports NATO-style security guarantees for Ukraine and called for a clear mandate for the E5."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNFBCQUxKTlhNeXBLMWVCbUU2enl4bG1PTVFoLVpRVjRySlVEMjJhZ0I0c3Mzd3VJb1hQOHFnYW9wOUlQZnp3ZXgyYWZjRTVueVdIMlozaklSWXZUdFBsS25EdUdZRHVZQVRuVUNSYk1wc3lvbGROSzgtM0tacUVWY1JRRUVsWFR4a0Z0NlIxNDV0UnZMenZJd2xGSVY4cHNNQVQwWVlVWGpLM3NaMlE?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-19T14:47:04+00:00",
-     "new": true,
-     "key": "edb86ff6bee90f4c",
-     "title": "Alibaba tops revenue estimates on AI cloud growth",
-     "summary": "Alibaba beat revenue estimates as AI cloud growth lifted revenue, while investment gains boosted profit."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
-     "source": "DW.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-19T15:03:28+00:00",
-     "new": true,
-     "key": "db4df44d3fc286af",
-     "title": "European Commission targeted in AI-assisted cyberattack",
-     "summary": "A spokesperson confirmed that the European Commission was targeted in an AI-assisted cyberattack."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWDUxbWN1NndOUmxOanhTdFUweVZ6VDZvN0xVZm16MzBFUUVjMGM2ang0RlZYemo3c1JqN3dpcVlNSVQ1X3NXdkZWU2E0MkdOQnNTRHJxMnAxMkw2cWZCdHBXX2RCY0hTZkZXbk1sYlEwUmptdzdiV2JfaVRXVTl1TGEySnNSQjdKamtpejZ3T1pVQTNndzcxR2ozSmZRY28?oc=5",
-     "source": "Intelligent Insurer",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-11-19T14:44:15+00:00",
-     "new": true,
-     "key": "366d2ce03d745721",
-     "title": "MS Re grows premiums but investment returns weigh on profit",
-     "summary": "MS Re increased premiums but took a bottom-line hit from investment returns."
-    },
-    {
-     "url": "https://www.lemonde.fr/planete/article/2026/11/19/cop31-l-avenir-du-giec-qui-traverse-l-une-des-plus-graves-crises-de-son-histoire-suscite-de-fortes-tensions_6813332_3244.html",
+     "url": "https://www.lemonde.fr/economie/article/2026/11/19/l-union-europeenne-reporte-l-entree-en-vigueur-de-son-reglement-pionnier-sur-le-methane-au-nom-de-la-securite-energetique_6813359_3234.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-11-19T15:15:10+00:00",
+     "published": "2026-11-19T17:32:25+00:00",
      "new": true,
-     "key": "2a9c0e116783c103",
-     "title": "IPCC’s future sparks tensions ahead of COP31",
-     "summary": "Some countries oppose publishing the IPCC’s next assessment reports before COP33."
+     "key": "b09e06c07aa763f7",
+     "title": "EU delays implementation of pioneering methane rules",
+     "summary": "The EU postponed its methane regulation amid pressure from Washington and the oil and gas sector."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/il-gas-in-aumento-4-a-84-euro-al-megawattora_cf84a7ab-355b-4d69-aac0-f95c1a239c2a.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-11-19T17:19:44+00:00",
+     "new": true,
+     "key": "9d542ad92a1b7d9b",
+     "title": "European gas prices rise 4% to €84 per megawatt-hour",
+     "summary": "Gas rose 4% on Amsterdam’s benchmark market for Europe."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd2kweElPdVVGZ3JXWXVqR0tiZ1o0QWpqZThnc2FiYVdVSGIzOUw3SVlRcy1VNUZqaHZCLVlncjNwWUdBLVllb3JnUjNJUnc2bEpkUmUzNjl6aHVfYXA1TTZHOFoxNnFCdDlxek83bzVTekhVSDFkLXhsMUJId3BUa0VseEFRTHQ1SXZqTGpwV2lXUQ?oc=5",
+     "source": "NBC News",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-19T17:22:50+00:00",
+     "new": true,
+     "key": "0bc1d9b42b1b7cb7",
+     "title": "Anthropic shares jump more than 30% as trading begins",
+     "summary": "The AI company’s stock climbed more than 30% at the start of trading."
+    },
+    {
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/in-serata-vertice-sulla-manovra-con-meloni_fb1c6322-220b-4581-b62b-f2225391923e.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-11-19T17:17:50+00:00",
+     "new": true,
+     "key": "96dd98494123614e",
+     "title": "Meloni convenes coalition summit on Italy’s budget",
+     "summary": "Meloni returned from Berlin and scheduled a videoconference with coalition partners on the budget."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-19T15:24:31.256483+00:00",
-   "input_fingerprint": "sha256:c7e0034c8103f191a0ac2cc34bf470b58383163361eacefee69a69f85aaad5bb",
-   "last_success_at": "2026-11-19T15:24:31.256483+00:00",
-   "candidate_count": 566,
+   "state": "degraded",
+   "source_checked_at": "2026-11-19T18:01:26.043526+00:00",
+   "input_fingerprint": "sha256:858d5f657af27d2e1ed6213b23f68532f88e70502b2f7ecdd8aec72d2339af89",
+   "last_success_at": "2026-11-19T18:01:26.043526+00:00",
+   "error": "Source check failed: Reuters (via Google News), Topic: Milano",
+   "candidate_count": 384,
    "new_count": 6
   },
   "sport": {
    "briefing": [
     {
-     "text": "Ahead of Saturday’s Nice–PSG match, two Nice players have likened Luis Enrique’s side to Guardiola teams, offering a preview of how the visitors are viewed by their opposition.",
+     "text": "PSG face Nice on Saturday, but the available squad picture remains unsettled: five players are already ruled out, with several more doubtful.",
      "sources": [
       {
-       "key": "6f914cc49825b2be",
-       "title": "Nice voit deux Guardiola dans le PSG de Luis Enrique",
-       "url": "https://www.culturepsg.com/news/match/nice-voit-deux-guardiola-dans-le-psg-de-luis-enrique/61592",
+       "key": "53a2f866bd90f2ed",
+       "title": "Déjà 5 absents pour Nice/PSG, mais beaucoup d'incertains",
+       "url": "https://www.culturepsg.com/news/match/deja-4-absents-pour-nice-psg-mais-beaucoup-d-incertains/61591",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "Fabien Galthié has voiced confidence before France’s match against Argentina; the Pumas’ squad includes several players from French professional divisions.",
+     "text": "PSG and Marquinhos are discussing a contract extension through 2028; reports say the club has also discussed adjusting his salary.",
      "sources": [
       {
-       "key": "265a6ea09cc3d782",
-       "title": "VIDÉO XV de France. « Pourquoi ça s’arrêterait maintenant ? » : Galthié confiant avant France - Argentine - Ouest-France",
-       "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOLUxpSHRYLVhyWGRDcndZTUMyU1QxUE9EWkNQbWNEVm1QanZseHc3RjZVLS14bmFhN2JuZDQtMVNqS1ZnMzIwYjJpc3ZlVVdtcHY3aWVOUE9ycktYa1IySzZPRXBoUkFzOUtFcnhVeE13MDF4QnVtejJKSVVMOVpra2xTdnk4NWZaaGdwc21EejYxd0oyWXN0MklNU19iQXB4V0ItMmdFcTVWTjFtbVJqSjNhXzAyMkV1ajF1X3FOQ0U1dGhjRG9Sc0p2OGMxYlpNSG9iYjRpNU5BWkRtQjMzVlVEVFUyeDlkcVBTaXZlVTNMS3ktcnRjLUFoZHJNTUVTOGY5WXVOVXRkQ29XU3ZMYWd4Yi1jdw?oc=5",
-       "source": "Ouest-France",
-       "via": "Google News"
-      },
+       "key": "91793bd04914e44a",
+       "title": "Salaire réajusté pour Marquinhos au PSG ?",
+       "url": "https://www.culturepsg.com/news/club/salaire-reajuste-pour-marquinhos-au-psg/61587",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Chelsea edged PSG late to move top of the Women’s Champions League table.",
+     "sources": [
       {
-       "key": "5c99777e0b9dc0df",
-       "title": "XV de France - Argentine : Chocobares, Montoya, Facundo Isa… Les Pumas avec dix joueurs évoluant en Top 14 et Pro D2 contre les Bleus - Sud Ouest",
-       "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNeEhBTDFkVm5HOEZPXzdITTVyYThfODM1ellXb01kX2NiZTV6dy11XzVsbUg0TjNQckVaaWlpWTNVWFVvLWhjLWhVa0lPVDZLdDdBZzdFU3N3YzdQVG5WYTJlMHJBZnRKclFuLTdxVDNtc2lnSFZhMXRia0RBRklOUGoxcmRYRkFxal9xelVCRmNNWUk5cm95bjk3QzNldzNNX3JMbkJNajlXdEJRaGZ3WjNRY0VxMldHQXY1QVN2ZklzdUtSUWZxTm14S3BiNTh4UkZWTnZ5b3ZLN3lYaUlyUVB1TUNmWUtPejRPb2dyZ2EtWUpFa1F5a29heWxVbWcybDNEVmh3?oc=5",
-       "source": "Sud Ouest",
+       "key": "0c419fbc700ecbf2",
+       "title": "Chelsea Pulls Off Late PSG Win to Top Women’s Champions League Table - Just Women's Sports",
+       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdTgzN2NnZElHWTJfQ1ZVQUJRWU9MOGMtaHlpZ2NwR0pFRkNUY1dOZjY0ODNQLW9TNlJYS1VKemo2Z21VWVFxLVBXbFMwMDRhN2F5M1ExZ0lZdXVONXZiSzNiZnNxbEZzVGpBdTc5YWI5SFJwdjBYdDV0R25DYlpybXNoc2lUWjFRT3RhNUdUVjRub2lGaU9SUGx3?oc=5",
+       "source": "Just Women's Sports",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "France’s U17s opened their World Cup campaign with a win, with coach José Alcocer pleased by the team’s performance.",
+     "sources": [
+      {
+       "key": "f25d2c19d548e93c",
+       "title": "« On avait des ingrédients intéressants » : la satisfaction de José Alcocer après le succès de la France au Mondial U17 - Foot National",
+       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQLXNHdWE1ZVhQREhIR2RvVGZIV2ZLMmhkdVJFeWR3RzJUZmFpTHZBSkN4bHBEYllBclJOVHZrS2doVFdPcUN2ZVV6MHoyQndWc0Roekt1R1d3dkdsOUEwcllzcXRqcHNqaHRRaFMyUnNBVTAzODJQQ3JBUlNIcy11QzVfaEpWalM4RzVyaFF4VzV5MFhVVGFVQWpwTHdvZWdhRWtDTkpqa3NaOW9fY1VEek9MWTYxdGRJYXRRR1RJeTBfVDl3cnlCQjZSeFV1cG5xdV9kenc1Z2s2RTdhQ19iZUhEUUhmcGRUbnhBNUdCQUpDNjNqVkxBbw?oc=5",
+       "source": "Foot National",
        "via": "Google News"
       }
      ]
@@ -940,15 +971,37 @@
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/match/nice-voit-deux-guardiola-dans-le-psg-de-luis-enrique/61592",
+     "url": "https://www.culturepsg.com/news/club/le-livre-qui-a-change-la-vie-d-entraineur-de-luis-enrique/61593",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-19T14:12:49+00:00",
+     "published": "2026-11-19T16:22:21+00:00",
      "new": true,
-     "key": "6f914cc49825b2be",
-     "title": "Nice sees Guardiola qualities in Luis Enrique’s PSG",
-     "summary": "Two Nice regulars compared Luis Enrique’s PSG with Guardiola sides ahead of Saturday’s Ligue 1 match."
+     "key": "c88c03122c8a550a",
+     "title": "Le livre qui a changé la vie d'entraîneur de Luis Enrique",
+     "summary": "Dans le passionnant documentaire de Betevé consacré à ses débuts d'entraîneur sur le banc du Barça B, Luis Enrique a raconté comment un livre avait profondément changé sa vision du métier. Et sans doute fait basculer son destin."
+    },
+    {
+     "url": "https://www.culturepsg.com/news/club/les-trois-maillots-2027-2028-du-psg-se-precisent/61588",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-19T09:32:00+00:00",
+     "new": true,
+     "key": "f3aeb15f473b5c64",
+     "title": "Les trois maillots 2027/2028 du PSG se précisent",
+     "summary": "Alors que la saison 2026/2027 bat son plein, les maillots du PSG pour la saison 2027/2028 ont déjà commencé à fuiter sur la toile, en partie. Le point complet sur les premières infos et premières images des futurs maillots du PSG."
+    },
+    {
+     "url": "https://www.culturepsg.com/news/match/deja-4-absents-pour-nice-psg-mais-beaucoup-d-incertains/61591",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-19T11:35:00+00:00",
+     "new": false,
+     "key": "53a2f866bd90f2ed",
+     "title": "Five absentees already for Nice–PSG, with more doubts",
+     "summary": "Five players are already set to miss Saturday’s Nice–PSG match, while several others remain uncertain."
     },
     {
      "url": "https://www.culturepsg.com/news/club/salaire-reajuste-pour-marquinhos-au-psg/61587",
@@ -956,224 +1009,220 @@
      "feed_name": "CulturePSG",
      "via": null,
      "published": "2026-11-19T08:29:58+00:00",
-     "new": true,
+     "new": false,
      "key": "91793bd04914e44a",
-     "title": "PSG discuss contract extension with Marquinhos",
-     "summary": "PSG are discussing an extension with Marquinhos, whose current contract runs until 2028."
+     "title": "PSG discuss extension and salary adjustment with Marquinhos",
+     "summary": "PSG are discussing extending Marquinhos’s contract, which currently runs to 2028, and reportedly adjusting his salary."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOLUxpSHRYLVhyWGRDcndZTUMyU1QxUE9EWkNQbWNEVm1QanZseHc3RjZVLS14bmFhN2JuZDQtMVNqS1ZnMzIwYjJpc3ZlVVdtcHY3aWVOUE9ycktYa1IySzZPRXBoUkFzOUtFcnhVeE13MDF4QnVtejJKSVVMOVpra2xTdnk4NWZaaGdwc21EejYxd0oyWXN0MklNU19iQXB4V0ItMmdFcTVWTjFtbVJqSjNhXzAyMkV1ajF1X3FOQ0U1dGhjRG9Sc0p2OGMxYlpNSG9iYjRpNU5BWkRtQjMzVlVEVFUyeDlkcVBTaXZlVTNMS3ktcnRjLUFoZHJNTUVTOGY5WXVOVXRkQ29XU3ZMYWd4Yi1jdw?oc=5",
-     "source": "Ouest-France",
-     "feed_name": "Team: XV de France rugby",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdTgzN2NnZElHWTJfQ1ZVQUJRWU9MOGMtaHlpZ2NwR0pFRkNUY1dOZjY0ODNQLW9TNlJYS1VKemo2Z21VWVFxLVBXbFMwMDRhN2F5M1ExZ0lZdXVONXZiSzNiZnNxbEZzVGpBdTc5YWI5SFJwdjBYdDV0R25DYlpybXNoc2lUWjFRT3RhNUdUVjRub2lGaU9SUGx3?oc=5",
+     "source": "Just Women's Sports",
+     "feed_name": "Team: Champions League",
      "via": "Google News",
-     "published": "2026-11-19T15:01:05+00:00",
+     "published": "2026-11-19T17:19:48+00:00",
      "new": true,
-     "key": "265a6ea09cc3d782",
-     "title": "Galthié confident ahead of France–Argentina",
-     "summary": "France coach Fabien Galthié expressed confidence before the XV de France’s match against Argentina."
+     "key": "0c419fbc700ecbf2",
+     "title": "Chelsea snatch late win over PSG in Women’s Champions League",
+     "summary": "Chelsea beat PSG late to take the lead in the Women’s Champions League table."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNeEhBTDFkVm5HOEZPXzdITTVyYThfODM1ellXb01kX2NiZTV6dy11XzVsbUg0TjNQckVaaWlpWTNVWFVvLWhjLWhVa0lPVDZLdDdBZzdFU3N3YzdQVG5WYTJlMHJBZnRKclFuLTdxVDNtc2lnSFZhMXRia0RBRklOUGoxcmRYRkFxal9xelVCRmNNWUk5cm95bjk3QzNldzNNX3JMbkJNajlXdEJRaGZ3WjNRY0VxMldHQXY1QVN2ZklzdUtSUWZxTm14S3BiNTh4UkZWTnZ5b3ZLN3lYaUlyUVB1TUNmWUtPejRPb2dyZ2EtWUpFa1F5a29heWxVbWcybDNEVmh3?oc=5",
-     "source": "Sud Ouest",
-     "feed_name": "Team: XV de France rugby",
+     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQLXNHdWE1ZVhQREhIR2RvVGZIV2ZLMmhkdVJFeWR3RzJUZmFpTHZBSkN4bHBEYllBclJOVHZrS2doVFdPcUN2ZVV6MHoyQndWc0Roekt1R1d3dkdsOUEwcllzcXRqcHNqaHRRaFMyUnNBVTAzODJQQ3JBUlNIcy11QzVfaEpWalM4RzVyaFF4VzV5MFhVVGFVQWpwTHdvZWdhRWtDTkpqa3NaOW9fY1VEek9MWTYxdGRJYXRRR1RJeTBfVDl3cnlCQjZSeFV1cG5xdV9kenc1Z2s2RTdhQ19iZUhEUUhmcGRUbnhBNUdCQUpDNjNqVkxBbw?oc=5",
+     "source": "Foot National",
+     "feed_name": "Team: équipe de France football",
      "via": "Google News",
-     "published": "2026-11-19T14:55:46+00:00",
+     "published": "2026-11-19T16:59:00+00:00",
      "new": true,
-     "key": "5c99777e0b9dc0df",
-     "title": "Argentina name Top 14 and Pro D2 players for France test",
-     "summary": "Argentina’s squad for the match against France includes ten players from the Top 14 and Pro D2."
+     "key": "f25d2c19d548e93c",
+     "title": "France U17 coach welcomes World Cup opening win",
+     "summary": "France U17 coach José Alcocer praised his side after their victory at the World Cup."
     },
     {
-     "url": "https://www.culturepsg.com/news/supporters/le-virage-auteuil-sanctionne-apres-son-anniversaire/61589",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
+     "url": "https://www.lequipe.fr/Football/Actualites/Transfere-a-l-atletico-de-madrid-l-ete-dernier-l-ancien-parisien-lee-kang-in-est-elu-joueur-international-de-l-annee-en-asie-par-l-afc-pour-la-deuxieme-fois-de-suite/1744688#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
      "via": null,
-     "published": "2026-11-19T09:50:28+00:00",
+     "published": "2026-11-19T16:58:45+00:00",
      "new": true,
-     "key": "62bbcd92d06c0076",
-     "title": "Virage Auteuil sanctioned after anniversary celebration",
-     "summary": "The LFP disciplinary commission sanctioned Virage Auteuil over its 35th-anniversary celebration on 7 November."
+     "key": "b0b6dd6e1c0356ea",
+     "title": "Lee Kang-in named Asia’s international player of the year again",
+     "summary": "Former PSG midfielder Lee Kang-in won the AFC international player of the year award for a second consecutive time."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-19T15:24:31.256483+00:00",
-   "input_fingerprint": "sha256:94e568c740638592c960e5dbf073309ae7a26030d984e2a67332b955528d465f",
-   "last_success_at": "2026-11-19T15:24:31.256483+00:00",
-   "candidate_count": 399,
+   "state": "degraded",
+   "source_checked_at": "2026-11-19T18:01:26.043526+00:00",
+   "input_fingerprint": "sha256:501cb77a34ecedb41a3cb43afcd6895b14dc2224e30fad747f0fc98304073490",
+   "last_success_at": "2026-11-19T18:01:26.043526+00:00",
+   "error": "Source check failed: Team: PSG, Team: XV de France rugby",
+   "candidate_count": 237,
    "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "Iran–US tit-for-tat escalation is raising concern about a return to full-scale conflict, a geopolitical risk with potential market implications.",
+     "text": "Anthropic’s record IPO is a major test of public-market appetite for AI: its shares opened sharply above the offering price, lifting expectations for the AI trade.",
      "sources": [
       {
-       "key": "c788972782192434",
-       "title": "Gulf flare-up stokes fears of return to Iran war",
-       "url": "https://www.ft.com/content/090da02e-2ed1-491a-a2cf-3c8a6b10522e?syn-25a6b1a6=1",
+       "key": "c1912459c51b6dff",
+       "title": "Anthropic opens for trade at $111.50, up 34% from IPO price",
+       "url": "https://www.coindesk.com/markets/2026/11/19/anthropic-opens-for-trade-at-usd11-50-up-34-from-ipo-price",
+       "source": "CoinDesk",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "A Houthi air strike hit the headquarters of Saudi Arabia’s Public Investment Fund, escalating attacks on the kingdom and raising geopolitical risk.",
+     "sources": [
+      {
+       "key": "cfb89713dcfbe316",
+       "title": "Houthi air strike hits Saudi sovereign wealth fund headquarters",
+       "url": "https://www.ft.com/content/05ed47a5-7cc1-402f-ad0d-826ba09a05c8?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "Anthropic’s IPO puts investor appetite for AI’s commercial promise under a high-profile public-market test.",
+     "text": "Putin has invited European leaders to Moscow while signalling Russia is not softening its demands to end the Ukraine war.",
      "sources": [
       {
-       "key": "92376b4ef31c68ef",
-       "title": "Anthropic's historic debut to put AI's promise and peril on Wall St trial - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVmU0cXVPRUhwcDZpRkRudEI3bjNfMllQVEN3M09VWFNmQUJTck1UUE9mVERRbmFicElZMWxKVnd3UWpTNGY3R1JiZ0NnRnNBRHhLMkxkVC1vUWVOVzQ3NzcwMkoycTR0MC1LUnBfdUIyWl9OZE5xYnlVVmQ5bzdVZmdnVHFjUjh6dHZrbVVQdEFPaDNCUC1KSkZEMUlhcU9OeWFiWi10SGwxNTBpNE16aTd1MA?oc=5",
-       "source": "Reuters",
+       "key": "3847b7e0e31d1250",
+       "title": "Putin invites European leaders to Moscow",
+       "url": "https://www.ft.com/content/dddd1db4-d9f2-452b-9be8-651b49a8b1c2?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Sanofi is weighing a takeover of US drugmaker Insmed, a potential major pharmaceutical deal, though no agreement is reported.",
+     "sources": [
+      {
+       "key": "c509dc6743b3cebe",
+       "title": "Sanofi Weighs Takeover of US Drugmaker Insmed - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTWxvWmd2QUhzd2gyeS1WNmdFNmVhMlhodXNjUjU4b2VwQllva2d5dFpBMC1aZHVrOUdJX2c1SUpWRkpBSnZrbXA4emlMT3lXYXl3dDFwSV93OFhXdGQxLU53TUNidy0yeTZYZVNtcnZ2Rkk1ckVkY2d6ajZpZjZTY1ptb0ZEMTFreHNxb1VRVnduRHh1Wno2a1ZTMWQ?oc=5",
+       "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Nvidia-backed Nscale says supplier ties that could trigger US blacklisting threaten its planned $35bn IPO, highlighting geopolitical risk in AI infrastructure.",
+     "text": "The Trump administration plans further cuts to the US audit regulator, including reduced inspections and enforcement against accounting firms.",
      "sources": [
       {
-       "key": "1f4f7904707e085c",
-       "title": "Nscale warns of its exposure to suppliers facing US blacklist",
-       "url": "https://www.ft.com/content/97912585-2412-496c-a224-78e69328bcdb?syn-25a6b1a6=1",
+       "key": "df33ebc7e5977774",
+       "title": "Trump administration plans further cuts at US audit regulator",
+       "url": "https://www.ft.com/content/9c07ad42-0778-4a1c-b30b-f561f672f92e?syn-25a6b1a6=1",
        "source": "FT Markets",
        "via": null
       }
      ]
     },
     {
-     "text": "The ECB has flagged banks’ dependence on IT providers as a cyber vulnerability, a material operational-resilience concern for financial firms.",
+     "text": "Strategy is set to be removed from major MSCI indexes, a potential constraint on the largest corporate Bitcoin holder’s ability to keep buying.",
      "sources": [
       {
-       "key": "d5fb4210a93355b8",
-       "title": "Cyberattaque : la BCE pointe la dépendance des banques aux prestataires informatiques - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOaGZMT2tYYkdEVVJwejNneWVnZHJfb3djN09wQ3RLdnBfVUJXNW5qLUZrT2dvNzVmMmlaLWgyWXNwaGtjLXl4S0JjUlpSUVY2anJCcElsSEhOcE1WZlhMQnR4QkVmaHZraFg5bS01YkFkM005MnpKc1U1Nk1SY1F4V0wxekE2U05jaXdDbDRrQmY0Q3RBTWNJR1lGejBZNFVvcWQ3S3ZENHY1V1BoNHM3VWxLTnk0UDJKa0tRWnVQSFRwc2RreE9tNDNEU21lck1mYlZPTUxlX3NNZjNqMnF6azB5bw?oc=5",
-       "source": "Les Echos",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "European tech executives are urging Brussels to mobilise household savings for investment; separately, copper rebounded after a rout as physical tightness persisted.",
-     "sources": [
-      {
-       "key": "4b9c43099068bf84",
-       "title": "European tech bosses urge Brussels to unlock €12tn in household savings - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWWVsQnNBX05nTkdvSy1mZ0tuM1pSeGg0U2xmTU9PVVJVYmZtZGl5M3poWGRFeTA1dXhfVU1QNnd6ZjlvclZ4VUpKc1Uxc190X05xUnMtZEplcFN4d2p1SEh1aENMRGxhNGFwcTUtOExfZjlNTlowODRweFZkdktXaGx5U0c?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
-      },
-      {
-       "key": "ac6f0d36726c7a3c",
-       "title": "Copper Rebounds After Rout as Physical Tightness Persists - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRHk5NjZzSHMyd1ZveTY5Y3JrRVhvcW5NcTBldUVWODBJTklDZHVtYmdES3lJWlR3dHg3WHdCelQyakFPOHRBRDdYSVN1WVBvNEJjWnVGWnJfVnBlU2ZiYkU5YUF1cGc0MEYtX0k4STEyVER3UVlwMUxMVWtEQXlPTzZjUkt4OXVMUVQ4ZzlQcTVDZ0p0cGE2TGQ2eDRvUl9DckMxQXN1QjljQjl0?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
+       "key": "2e05f21166997f03",
+       "title": "Strategy Just Got Dropped From MSCI’s Indexes. Can It Keep Buying Bitcoin?",
+       "url": "https://www.fool.com/investing/2026/11/19/strategy-just-got-dropped-from-msci-s-indexes-can-it-keep-buying-bitcoin/?.tsrc=rss",
+       "source": "Bitcoin",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/090da02e-2ed1-491a-a2cf-3c8a6b10522e?syn-25a6b1a6=1",
+     "url": "https://www.coindesk.com/markets/2026/11/19/anthropic-opens-for-trade-at-usd11-50-up-34-from-ipo-price",
+     "source": "CoinDesk",
+     "feed_name": "CoinDesk",
+     "via": null,
+     "published": "2026-11-19T17:01:47+00:00",
+     "new": true,
+     "key": "c1912459c51b6dff",
+     "title": "Anthropic opens for trade above its IPO price",
+     "summary": "Anthropic shares opened at $111.50, 34% above the IPO price, implying a valuation above $2 trillion."
+    },
+    {
+     "url": "https://www.ft.com/content/05ed47a5-7cc1-402f-ad0d-826ba09a05c8?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-19T14:53:28+00:00",
+     "published": "2026-11-19T16:38:08+00:00",
      "new": true,
-     "key": "c788972782192434",
-     "title": "Gulf tensions raise fears of renewed Iran war",
-     "summary": "A week of Iran–US escalation has brought the countries closer to another full-scale confrontation, analysts say."
+     "key": "cfb89713dcfbe316",
+     "title": "Houthi air strike hits Saudi sovereign wealth fund headquarters",
+     "summary": "A Houthi air strike hit the headquarters of Saudi Arabia’s Public Investment Fund amid near-daily attacks on the kingdom."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVmU0cXVPRUhwcDZpRkRudEI3bjNfMllQVEN3M09VWFNmQUJTck1UUE9mVERRbmFicElZMWxKVnd3UWpTNGY3R1JiZ0NnRnNBRHhLMkxkVC1vUWVOVzQ3NzcwMkoycTR0MC1LUnBfdUIyWl9OZE5xYnlVVmQ5bzdVZmdnVHFjUjh6dHZrbVVQdEFPaDNCUC1KSkZEMUlhcU9OeWFiWi10SGwxNTBpNE16aTd1MA?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-19T14:38:38+00:00",
-     "new": true,
-     "key": "92376b4ef31c68ef",
-     "title": "Anthropic’s IPO tests investor appetite for AI",
-     "summary": "Anthropic’s high-profile debut will put investor expectations for AI’s promise and risks to a public-market test."
-    },
-    {
-     "url": "https://www.ft.com/content/97912585-2412-496c-a224-78e69328bcdb?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
+     "url": "https://www.ft.com/content/dddd1db4-d9f2-452b-9be8-651b49a8b1c2?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
      "via": null,
-     "published": "2026-11-19T14:39:18+00:00",
+     "published": "2026-11-19T15:24:55+00:00",
      "new": true,
-     "key": "1f4f7904707e085c",
-     "title": "Nscale warns supplier ties could threaten planned IPO",
-     "summary": "The Nvidia-backed start-up says supplier links at risk of US blacklisting threaten its planned $35bn IPO."
+     "key": "3847b7e0e31d1250",
+     "title": "Putin invites European leaders to Moscow",
+     "summary": "Putin invited European leaders to Moscow and signalled Russia remains unwilling to relax its demands for ending the Ukraine conflict."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOaGZMT2tYYkdEVVJwejNneWVnZHJfb3djN09wQ3RLdnBfVUJXNW5qLUZrT2dvNzVmMmlaLWgyWXNwaGtjLXl4S0JjUlpSUVY2anJCcElsSEhOcE1WZlhMQnR4QkVmaHZraFg5bS01YkFkM005MnpKc1U1Nk1SY1F4V0wxekE2U05jaXdDbDRrQmY0Q3RBTWNJR1lGejBZNFVvcWQ3S3ZENHY1V1BoNHM3VWxLTnk0UDJKa0tRWnVQSFRwc2RreE9tNDNEU21lck1mYlZPTUxlX3NNZjNqMnF6azB5bw?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
-     "via": "Google News",
-     "published": "2026-11-19T14:54:28+00:00",
-     "new": true,
-     "key": "d5fb4210a93355b8",
-     "title": "ECB flags banks’ dependence on IT providers",
-     "summary": "The ECB has highlighted banks’ reliance on IT providers as a source of cyber vulnerability."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWWVsQnNBX05nTkdvSy1mZ0tuM1pSeGg0U2xmTU9PVVJVYmZtZGl5M3poWGRFeTA1dXhfVU1QNnd6ZjlvclZ4VUpKc1Uxc190X05xUnMtZEplcFN4d2p1SEh1aENMRGxhNGFwcTUtOExfZjlNTlowODRweFZkdktXaGx5U0c?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-19T12:37:07+00:00",
-     "new": true,
-     "key": "4b9c43099068bf84",
-     "title": "European tech executives urge Brussels to unlock household savings",
-     "summary": "Tech executives are calling on Brussels to mobilise €12tn in household savings."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRHk5NjZzSHMyd1ZveTY5Y3JrRVhvcW5NcTBldUVWODBJTklDZHVtYmdES3lJWlR3dHg3WHdCelQyakFPOHRBRDdYSVN1WVBvNEJjWnVGWnJfVnBlU2ZiYkU5YUF1cGc0MEYtX0k4STEyVER3UVlwMUxMVWtEQXlPTzZjUkt4OXVMUVQ4ZzlQcTVDZ0p0cGE2TGQ2eDRvUl9DckMxQXN1QjljQjl0?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTWxvWmd2QUhzd2gyeS1WNmdFNmVhMlhodXNjUjU4b2VwQllva2d5dFpBMC1aZHVrOUdJX2c1SUpWRkpBSnZrbXA4emlMT3lXYXl3dDFwSV93OFhXdGQxLU53TUNidy0yeTZYZVNtcnZ2Rkk1ckVkY2d6ajZpZjZTY1ptb0ZEMTFreHNxb1VRVnduRHh1Wno2a1ZTMWQ?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-19T12:31:22+00:00",
+     "published": "2026-11-19T16:13:28+00:00",
      "new": true,
-     "key": "ac6f0d36726c7a3c",
-     "title": "Copper rebounds as physical tightness persists",
-     "summary": "Copper recovered after a sharp sell-off, while physical-market tightness persisted."
+     "key": "c509dc6743b3cebe",
+     "title": "Sanofi weighs takeover of US drugmaker Insmed",
+     "summary": "Sanofi is considering a takeover of US drugmaker Insmed."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcnV6Z1NtSzlGTWp0ZnVxTjBKbUF3U011RmtiMDRFcmNNbFU2LTltRmViZHUtbjFjSWJVdGw0ckpmWUZ3WVNfbWFEUi13NkVoVC1TaXNFVkdDRnNPZGh3S0NsaEt2WU95RnRrOXZvbFRtTTk2Y2JtVFVpbHFMOVhheE9fWVZrSWZuUV9FUkYyNm5WR3pCWm9VdEZn?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-19T12:58:58+00:00",
+     "url": "https://www.ft.com/content/9c07ad42-0778-4a1c-b30b-f561f672f92e?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-11-19T16:54:41+00:00",
      "new": true,
-     "key": "bef6ae87b002a044",
-     "title": "OVHcloud launches AI cloud products hosted in Europe",
-     "summary": "The French cloud company has launched AI cloud products hosted in Europe."
+     "key": "df33ebc7e5977774",
+     "title": "Trump administration plans further cuts at US audit regulator",
+     "summary": "The regulator plans to scale back inspections and enforcement against accounting firms while investing in AI tools."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVXRYUnlyTUhjLUlLeGZkUnFHdFZCNElKV3k0QndxblNhaHgwZVNnbE9qeDhlb001THNzcFl0UFVqLU52VnlRc2JuQ0pXUExyUkM3bWUzSW1ZV3lsUjVyRzZoQm9qVUZxcWlBOG50dFloYk55T1o5T0swU1B5RjZ6dHBfR1dvWW1EOXRrLTNEcWhTdzlzMUlELTNCU2FMNXlOcDM2MC1PeVNFSG80ekxBQmIxNmctalpfb1NlZ3hFTlQ?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-19T12:59:49+00:00",
+     "url": "https://www.fool.com/investing/2026/11/19/strategy-just-got-dropped-from-msci-s-indexes-can-it-keep-buying-bitcoin/?.tsrc=rss",
+     "source": "Bitcoin",
+     "feed_name": "Bitcoin",
+     "via": null,
+     "published": "2026-11-19T17:32:02+00:00",
      "new": true,
-     "key": "84a6d6c006a987f9",
-     "title": "German auto and steel workers prepare to strike",
-     "summary": "Workers in Germany’s auto and steel sectors are set to strike as IG Metall presses its pay demands."
+     "key": "2e05f21166997f03",
+     "title": "Strategy faces removal from MSCI indexes",
+     "summary": "The largest corporate Bitcoin holder will be removed from major stock indexes, potentially affecting its ability to keep buying Bitcoin."
+    },
+    {
+     "url": "https://unchainedcrypto.com/global-securities-regulators-tell-financial-firms-to-plan-for-a-surprise-quantum-zero-day/?.tsrc=rss",
+     "source": "Bitcoin",
+     "feed_name": "Bitcoin",
+     "via": null,
+     "published": "2026-11-19T15:45:56+00:00",
+     "new": true,
+     "key": "1dc30ca6f88994e1",
+     "title": "Financial firms urged to prepare for quantum security risks",
+     "summary": "Global securities regulators urged financial firms to prepare for quantum computing threats to encryption, warning migration could take years."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-19T15:24:31.256483+00:00",
-   "input_fingerprint": "sha256:dc570f210e5ed86874762a231e3b204094ac7847f50aecf535d7287244ffbe75",
-   "last_success_at": "2026-11-19T15:24:31.256483+00:00",
+   "state": "degraded",
+   "source_checked_at": "2026-11-19T18:01:26.043526+00:00",
+   "input_fingerprint": "sha256:2b169a260146cc16da48f1f199dc81e41bcbafd383499b2a52ee4d220d158b78",
+   "last_success_at": "2026-11-19T18:01:26.043526+00:00",
+   "error": "Source check failed: Reuters Business (via Google News)",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 639.0,
-     "change_pct": -0.53,
+     "price": 635.2,
+     "change_pct": -1.12,
      "currency": "CHF",
      "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1183,8 +1232,8 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 725.96,
-     "change_pct": 0.85,
+     "price": 719.28,
+     "change_pct": -0.08,
      "currency": "EUR",
      "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1194,8 +1243,8 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 109.22,
-     "change_pct": -0.42,
+     "price": 108.7,
+     "change_pct": -0.89,
      "currency": "EUR",
      "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1205,8 +1254,8 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 283.4,
-     "change_pct": 0.69,
+     "price": 280.8,
+     "change_pct": -0.23,
      "currency": "EUR",
      "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1216,8 +1265,8 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 317.9,
-     "change_pct": -0.19,
+     "price": 315.5,
+     "change_pct": -0.94,
      "currency": "EUR",
      "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1227,8 +1276,8 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 8.43,
-     "change_pct": 0.8,
+     "price": 8.34,
+     "change_pct": -0.27,
      "currency": "EUR",
      "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1238,8 +1287,8 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 49.5,
-     "change_pct": 0.9,
+     "price": 49.15,
+     "change_pct": 0.18,
      "currency": "EUR",
      "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1249,8 +1298,8 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 65.42,
-     "change_pct": -1.01,
+     "price": 65.08,
+     "change_pct": -1.52,
      "currency": "EUR",
      "as_of": "2026-11-18T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1260,8 +1309,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 63341.07,
-     "change_pct": 0.56,
+     "price": 62697.78,
+     "change_pct": -0.46,
      "currency": "USD",
      "as_of": "2026-11-19T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1271,8 +1320,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1788.21,
-     "change_pct": 0.76,
+     "price": 1769.47,
+     "change_pct": -0.3,
      "currency": "USD",
      "as_of": "2026-11-19T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1280,20 +1329,30 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 326,
-   "new_count": 8
+   "candidate_count": 256,
+   "new_count": 7
   },
   "media": {
    "briefing": "",
    "items": [
     {
-     "title": "The End Of The U.S. Order In The Middle East: Egypt Enters The War | VisualPolitik EN",
+     "title": "The Wounded Volunteer Who Went Right Back to the Front",
+     "url": "https://www.youtube.com/watch?v=yzUL1mciJJ8",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-11-19T17:00:24+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "af6ccb93c657f993"
+    },
+    {
+     "title": "Egypt Suddenly Enters The Saudi War: A New Middle East Without The U.S. | VisualPolitik EN",
      "url": "https://www.youtube.com/watch?v=io-EkH4pe9c",
      "source": "VisualPolitik EN",
      "kind": "video",
      "published": "2026-11-19T14:23:34+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "5e484b3631d65619"
     },
     {
@@ -1365,24 +1424,14 @@
      "duration_s": null,
      "new": false,
      "key": "e0fc67d20badee09"
-    },
-    {
-     "title": "Paul Christiano – We could be 12 months away from AIs that can overthrow the government",
-     "url": "https://www.dwarkesh.com/p/paul-christiano-2",
-     "source": "Dwarkesh Podcast",
-     "kind": "podcast",
-     "published": "2026-11-16T17:46:28+00:00",
-     "duration_s": 5925,
-     "new": false,
-     "key": "cc9d9dbd1b4e109a"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-19T15:24:31.256483+00:00",
+   "source_checked_at": "2026-11-19T18:01:26.043526+00:00",
    "candidate_count": 9,
    "new_count": 1
   }
  },
- "scheduled_slot": "2026-11-19T12:00:00Z"
+ "scheduled_slot": "2026-11-19T18:00:00.000Z"
 }
