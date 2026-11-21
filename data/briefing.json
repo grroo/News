@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261121T180122028261Z",
- "generated_at": "2026-11-21T18:01:22.028261+00:00",
- "generated_local": "Sat 21 Nov 2026, 19:01",
- "source_checked_at": "2026-11-21T18:01:22.028261+00:00",
+ "edition_id": "ed-20261121T181621435350Z",
+ "generated_at": "2026-11-21T18:16:21.435350+00:00",
+ "generated_local": "Sat 21 Nov 2026, 19:16",
+ "source_checked_at": "2026-11-21T18:16:21.435350+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-21T18:01:22.028261+00:00"
+  "run-2026-11-21T18:16:21.435350+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-21T18:01:22.028261+00:00"
+  "completed_at": "2026-11-21T18:16:21.435350+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 107,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 107,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -141,10 +141,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 92,
+   "item_count": 93,
    "reason": null,
    "failure": null,
-   "parsed_count": 92,
+   "parsed_count": 93,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -164,19 +164,14 @@
   {
    "name": "Topic: reinsurance",
    "section": "news",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Topic: European Central Bank",
@@ -206,10 +201,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -229,14 +224,19 @@
   {
    "name": "Team: XV de France rugby",
    "section": "sport",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: Champions League",
@@ -689,9 +689,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.001981,
-  "est_month_usd": 0.18,
-  "forecast_month_usd": 0.18,
+  "est_cost_usd": 0.002231,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -699,60 +699,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7550,
+    "latency_ms": 7643,
     "unknown": false,
     "provider_request_ids": [
-     "resp_063a89629259edbe016b01dc7a0b3c87d1b7f8d70004d28fed"
+     "resp_02a1b5d628be3997016b01dffdf0dc87d1ac537a57069d5b55"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3433,
-    "output_tokens": 720,
-    "reasoning_tokens": 159
+    "cache_write_tokens": 3413,
+    "output_tokens": 754,
+    "reasoning_tokens": 202
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 2654,
+    "latency_ms": 5537,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0fca4872cadf2726016b01dc80f56887d1be6e61f0fe8398a9"
+     "resp_022f454b7f48db66016b01e00520fc87d1a66daff13c2ec368"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3756,
-    "output_tokens": 192,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3724,
+    "output_tokens": 464,
+    "reasoning_tokens": 277
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 4486,
+    "latency_ms": 6847,
     "unknown": false,
     "provider_request_ids": [
-     "resp_070f70e05121b501016b01dc839ce087d18d3508b44c01f82b"
+     "resp_0cf58797fd2c2c02016b01e00aa84487d1949c176cdd802938"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3327,
-    "output_tokens": 419,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3328,
+    "output_tokens": 625,
+    "reasoning_tokens": 261
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10516,
-  "output_tokens": 1331,
-  "reasoning_tokens": 159,
+  "cache_write_tokens": 10465,
+  "output_tokens": 1843,
+  "reasoning_tokens": 740,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 73,
-   "attempts": 219,
-   "known_cost_usd": 0.16463,
+   "recorded_runs": 74,
+   "attempts": 222,
+   "known_cost_usd": 0.166861,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -761,392 +761,371 @@
   "news": {
    "briefing": [
     {
-     "text": "A French left-wing presidential hopeful, François Ruffin, has withdrawn from the 2027 race, citing the risk of a far-right victory; he has not endorsed another candidate.",
+     "text": "Russia said it struck a cargo ship in the Black Sea that it alleged was being used for military purposes by Ukraine, and also targeted energy infrastructure.",
      "sources": [
       {
-       "key": "52cdc6f9e50a5d49",
-       "title": "Présidentielle 2027 : François Ruffin renonce à sa candidature « face au risque » de l’arrivée de l’extrême droite au pouvoir",
-       "url": "https://www.lemonde.fr/politique/article/2026/11/21/presidentielle-2027-francois-ruffin-renonce-a-sa-candidature-face-au-risque-de-l-arrivee-de-l-extreme-droite-au-pouvoir_6814051_823448.html",
-       "source": "Le Monde",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Hundreds protested against data-center development in Milan, bringing local concerns about the region’s infrastructure and environmental impact into focus.",
-     "sources": [
-      {
-       "key": "b0767c92e30d6e10",
-       "title": "Milano, corteo contro i data center: centinaia di manifestanti in piazza - Il Sole 24 ORE",
-       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWGZXVHAxTWoxZXJHT1pELTczTzI3d1Q3Q0x0YnRaUnhvdFpkMjVRLXd5QWpwZzB5MFE1M3c4aUxQTksxM1h4V2JvYXZ6SjBPZUVKaXZ0QjJPTmVhaHZzd3MweVJhLWhGeWlHT2J1NmVnVWVTaDBDTlhzdmdDUDVGUTJLUzJEbzZUZzRCNXZDbExCWXptY0ExSUpYdzRHQldxYngwczJ1ZFk3WGUzV01fU0M3cC1KVnBP?oc=5",
-       "source": "Il Sole 24 ORE",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The ECB may consider whether further monetary tightening is needed at its December meeting, according to Bulgaria’s central-bank governor.",
-     "sources": [
-      {
-       "key": "e988fbf753bb0df3",
-       "title": "European Central Bank to Assess Need for Further Monetary Tightening in December, Bulgarian National Bank Governor Says - БТА",
-       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVkpoTFZtblVIY1JLNEk4WGtXZGVfQXZuYzVpU042ZEdTcUJ0eTFubkMtTnh5NDRXTTJBQmtrVkdJVEhXOXlkZ1VEUnozc3ctcTVvVHQ5dkZPaE9LNUNjb0MxbkFWU2Q2UmVPSG5YUmxaNjZGbWJWR3FtRFFycmRjVlc4NzllSTdlbFBjeU9Gd3BrZzFuNU1makxlNVpXcjExR05hZmZES1VUb0ZoXzZ2ck5SUkVETWpJNmFNaUpqc2c?oc=5",
-       "source": "БТА",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "UN talks on autonomous weapons failed to establish a negotiating mandate, with Russia accused of obstructing progress on rules for AI warfare.",
-     "sources": [
-      {
-       "key": "158994b8ae4ecd45",
-       "title": "International UN talks on controlling use of autonomous weapons collapse",
-       "url": "https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse",
-       "source": "The Guardian World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "A mathematician at Anthropic says he used Claude in an attempted proof of the Riemann hypothesis; the extraordinary claim remains unverified in the candidate report.",
-     "sources": [
-      {
-       "key": "3500af305ed03afd",
-       "title": "Anthropic mathematician claims he used Claude to prove 19th-century Riemann hypothesis",
-       "url": "https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai",
-       "source": "The Guardian World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Italy’s governing party has proposed tax changes including a 1% flat tax for young people and a 50% tax exemption for new hires, as part of budget amendments.",
-     "sources": [
-      {
-       "key": "0a67bbf7f96d7254",
-       "title": "FdI riscrive la flat tax 1% per giovani, arriva la detassazione al 50% per neoassunti",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/fdi-riscrive-la-flat-tax-1-per-giovani-arriva-la-detassazione-al-50-per-neoassunti_c01a19b3-6a72-4489-8ad8-604a62b4c23d.html",
+       "key": "62ea87ab55993761",
+       "title": "Mosca, 'colpita nel Mar Nero nave cargo usata da Kiev per scopi militari'",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/mosca-colpita-nel-mar-nero-nave-cargo-usata-da-kiev-per_6a176c2c-a468-4b63-9dad-6b03d4ae2408.html",
        "source": "ANSA Top News",
        "via": null
       }
      ]
+    },
+    {
+     "text": "Trump has ordered contractors to route congressional inquiries through the White House, a move the Guardian describes as an attempt to constrain oversight.",
+     "sources": [
+      {
+       "key": "7ac6d14389feef65",
+       "title": "Trump orders contractors to check with White House over any congressional inquiries",
+       "url": "https://www.theguardian.com/us-news/2026/nov/21/trump-contractors-congress-executive-order",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Countries agreed to extend UN discussions on autonomous weapons, but made no firm commitment to restrict them.",
+     "sources": [
+      {
+       "key": "a3e4de6cea0b20da",
+       "title": "Nations agree to extend U.N. talks on AI killer robots, but no firm commitment to rein them in - Los Angeles Times",
+       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPNTgzSXI1LThReTVkUUZOc2JBQjZHSl9yT05QSUlfRnZLWEJqNlFZczg4ZWlZMVV5NTFRZ19zOHVzdHMzOThvVTJXNjlJb1JWSVlTcVlQalcxb2xiQlNfcUE5YTRoUm5GZXJBVjlwYUhCZjFIRmlmUm9idnhDWXJMR25RSnltV2pWZkZyUkxWLXg3WDhTakRuajd3SGxaa0xhem04eWxLVWFSVzdDeXh3UHItY0JBQlc3bHdtSzZ3?oc=5",
+       "source": "Los Angeles Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Amazon is nearing a reported $7.5bn acquisition of AI start-up Decart, a major prospective deal in the AI sector.",
+     "sources": [
+      {
+       "key": "e18be6c6643b51e1",
+       "title": "Amazon closes in on $7.5bn deal to buy AI start-up Decart - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTEFvVDlwcmNmNEl1WGpwZ3A3TzF3ZkNLSDFrUHA3XzY3REJxa3Jyc3pjUnVLdXdydFp3eTBYR1E1elQzVllDV1JQVzJENFNhV3RjVWl1eFB3dWFZS1BQWlRpTC1WZWZ1OV9CZmdhQnNtdmUxb25DWS16SEVodXVlRnBFUFQ?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A protest against data-centre development drew hundreds of people in Milan, bringing local concerns about the region’s digital infrastructure into focus.",
+     "sources": [
+      {
+       "key": "b8866949e4946fe8",
+       "title": "Data center in Lombardia, centinaia in corteo a Milano: \"Stop alla colonizzazione digitale\" - MilanoToday",
+       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBIbGgxendUaHZjWTlFZjNjcEJCRndwdzlUNDlGME5BdmFwN21saW5pVHZFZ1hjZXFzcWtCeGMyWWprX0dsWUJNeXNGaE5GQm9DV3pEa1ltZjZYU3Q2WUJ0SklMS0h0aHlMcEdZajlYanlZODVDU1E?oc=5",
+       "source": "MilanoToday",
+       "via": "Google News"
+      }
+     ]
     }
    ],
    "items": [
     {
-     "url": "https://www.lemonde.fr/politique/article/2026/11/21/presidentielle-2027-francois-ruffin-renonce-a-sa-candidature-face-au-risque-de-l-arrivee-de-l-extreme-droite-au-pouvoir_6814051_823448.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-21T17:13:30+00:00",
-     "new": true,
-     "key": "52cdc6f9e50a5d49",
-     "title": "François Ruffin withdraws from France’s 2027 presidential race",
-     "summary": "The French MP withdrew without endorsing another candidate, citing the risk of the far right coming to power."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWGZXVHAxTWoxZXJHT1pELTczTzI3d1Q3Q0x0YnRaUnhvdFpkMjVRLXd5QWpwZzB5MFE1M3c4aUxQTksxM1h4V2JvYXZ6SjBPZUVKaXZ0QjJPTmVhaHZzd3MweVJhLWhGeWlHT2J1NmVnVWVTaDBDTlhzdmdDUDVGUTJLUzJEbzZUZzRCNXZDbExCWXptY0ExSUpYdzRHQldxYngwczJ1ZFk3WGUzV01fU0M3cC1KVnBP?oc=5",
-     "source": "Il Sole 24 ORE",
-     "feed_name": "Topic: Milano",
-     "via": "Google News",
-     "published": "2026-11-21T16:54:44+00:00",
-     "new": true,
-     "key": "b0767c92e30d6e10",
-     "title": "Hundreds protest against data centers in Milan",
-     "summary": "Hundreds of demonstrators gathered in Milan to oppose data-center development."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVkpoTFZtblVIY1JLNEk4WGtXZGVfQXZuYzVpU042ZEdTcUJ0eTFubkMtTnh5NDRXTTJBQmtrVkdJVEhXOXlkZ1VEUnozc3ctcTVvVHQ5dkZPaE9LNUNjb0MxbkFWU2Q2UmVPSG5YUmxaNjZGbWJWR3FtRFFycmRjVlc4NzllSTdlbFBjeU9Gd3BrZzFuNU1makxlNVpXcjExR05hZmZES1VUb0ZoXzZ2ck5SUkVETWpJNmFNaUpqc2c?oc=5",
-     "source": "БТА",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-11-21T16:22:00+00:00",
-     "new": true,
-     "key": "e988fbf753bb0df3",
-     "title": "ECB may assess need for further tightening in December",
-     "summary": "Bulgaria’s central-bank governor said the ECB will assess whether further monetary tightening is needed in December."
-    },
-    {
-     "url": "https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-21T16:36:11+00:00",
-     "new": true,
-     "key": "158994b8ae4ecd45",
-     "title": "UN talks on autonomous weapons fail to agree negotiating mandate",
-     "summary": "A week of talks ended without a mandate for negotiations on controlling autonomous weapons."
-    },
-    {
-     "url": "https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai",
-     "source": "The Guardian World",
-     "feed_name": "The Guardian World",
-     "via": null,
-     "published": "2026-11-21T16:39:49+00:00",
-     "new": true,
-     "key": "3500af305ed03afd",
-     "title": "Anthropic mathematician says Claude helped with Riemann hypothesis proof",
-     "summary": "Levent Alpöge says he used Claude over six weeks in an attempt to solve the Riemann hypothesis."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/fdi-riscrive-la-flat-tax-1-per-giovani-arriva-la-detassazione-al-50-per-neoassunti_c01a19b3-6a72-4489-8ad8-604a62b4c23d.html",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/mosca-colpita-nel-mar-nero-nave-cargo-usata-da-kiev-per_6a176c2c-a468-4b63-9dad-6b03d4ae2408.html",
      "source": "ANSA Top News",
      "feed_name": "ANSA Top News",
      "via": null,
-     "published": "2026-11-21T16:27:19+00:00",
+     "published": "2026-11-21T16:46:13+00:00",
      "new": true,
-     "key": "0a67bbf7f96d7254",
-     "title": "Italy’s governing party proposes tax breaks in budget amendments",
-     "summary": "A proposed amendment includes a 1% flat tax for young people and a 50% tax exemption for new hires."
+     "key": "62ea87ab55993761",
+     "title": "Russia says it struck Ukraine-linked cargo ship and energy infrastructure",
+     "summary": "Russia said it targeted a Black Sea cargo ship allegedly used by Ukraine for military purposes and energy infrastructure."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOMEdyaGtabnZRdHhGLWIzeGx0MkhleGZEYlVpTmFySVFYdlUtd3JfamE1YjlXQmwzWW1xTE83UzJRZ2lra1pEWmFsTXZMbDRlUm9CNTllRHdXR0VWRExIaTlQanhkTDFaU2RjU2dCYkI3WDd2WElmSlFfY1pwVkdxVEw0cDBYNGEwTGFLUGFqUTZPMFIxU0Y4Z25pREJEai16RGNfX3JlWXZOZ05hT3liNUJnU2stVlQ5RV9NZmVBUmhlQQ?oc=5",
+     "url": "https://www.theguardian.com/us-news/2026/nov/21/trump-contractors-congress-executive-order",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-21T18:08:30+00:00",
+     "new": true,
+     "key": "7ac6d14389feef65",
+     "title": "Trump directs contractors to route congressional inquiries through White House",
+     "summary": "Trump issued an executive order requiring contractors to consult the White House over congressional inquiries."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPNTgzSXI1LThReTVkUUZOc2JBQjZHSl9yT05QSUlfRnZLWEJqNlFZczg4ZWlZMVV5NTFRZ19zOHVzdHMzOThvVTJXNjlJb1JWSVlTcVlQalcxb2xiQlNfcUE5YTRoUm5GZXJBVjlwYUhCZjFIRmlmUm9idnhDWXJMR25RSnltV2pWZkZyUkxWLXg3WDhTakRuajd3SGxaa0xhem04eWxLVWFSVzdDeXh3UHItY0JBQlc3bHdtSzZ3?oc=5",
+     "source": "Los Angeles Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-21T17:27:43+00:00",
+     "new": true,
+     "key": "a3e4de6cea0b20da",
+     "title": "UN talks on autonomous weapons extended without firm limits",
+     "summary": "Countries agreed to extend UN talks on AI-enabled killer robots but made no firm commitment to rein them in."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTEFvVDlwcmNmNEl1WGpwZ3A3TzF3ZkNLSDFrUHA3XzY3REJxa3Jyc3pjUnVLdXdydFp3eTBYR1E1elQzVllDV1JQVzJENFNhV3RjVWl1eFB3dWFZS1BQWlRpTC1WZWZ1OV9CZmdhQnNtdmUxb25DWS16SEVodXVlRnBFUFQ?oc=5",
+     "source": "Financial Times",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-21T17:21:36+00:00",
+     "new": true,
+     "key": "e18be6c6643b51e1",
+     "title": "Amazon nears $7.5bn deal for AI start-up Decart",
+     "summary": "Amazon is reportedly close to a $7.5bn acquisition of AI start-up Decart."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBIbGgxendUaHZjWTlFZjNjcEJCRndwdzlUNDlGME5BdmFwN21saW5pVHZFZ1hjZXFzcWtCeGMyWWprX0dsWUJNeXNGaE5GQm9DV3pEa1ltZjZYU3Q2WUJ0SklMS0h0aHlMcEdZajlYanlZODVDU1E?oc=5",
+     "source": "MilanoToday",
+     "feed_name": "Topic: Milano",
+     "via": "Google News",
+     "published": "2026-11-21T17:49:32+00:00",
+     "new": true,
+     "key": "b8866949e4946fe8",
+     "title": "Milan protest opposes data-centre expansion in Lombardy",
+     "summary": "Hundreds of people marched in Milan against data-centre development in Lombardy."
+    },
+    {
+     "url": "https://www.lemonde.fr/societe/article/2026/11/21/manifestations-du-21-novembre-le-nombre-de-personnes-mobilisees-en-baisse-dans-l-apres-midi-le-cortege-parisien-est-arrive-place-de-la-nation_6813913_3225.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-21T16:04:58+00:00",
+     "new": true,
+     "key": "4e73940bc6db867d",
+     "title": "France demonstrations draw 80,000 to 150,000 participants",
+     "summary": "A new day of protests in France was less attended than earlier demonstrations and mostly peaceful in Paris."
+    },
+    {
+     "url": "https://www.theguardian.com/us-news/2026/nov/21/vance-trump-iran-nuclear-weapon",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-21T17:24:51+00:00",
+     "new": true,
+     "key": "5cbcf31514b33551",
+     "title": "Vance declines to endorse Trump’s claim on Iran’s nuclear programme",
+     "summary": "US Vice-President JD Vance stopped short of endorsing Trump’s claim that Iran was close to obtaining a nuclear weapon."
+    },
+    {
+     "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
+     "via": null,
+     "published": "2026-11-21T16:35:15+00:00",
+     "new": true,
+     "key": "45201d2fd35b9d67",
+     "title": "FBI reportedly probes apparent hack of criminal database",
+     "summary": "The FBI is reportedly investigating an apparent hack of the National Crime Information Center database."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQa1lhc2ZRS3hPcnFWc3VBdDBIbElGZF9PSlZVSEV4NFNxSXZ1YlZWeWtYUVdrbjZXVXFJM3V6VkgzLTZGSWdWUFZiVGctOFRreU1lUWpWdXp5VmJxYTFBVU9wTk9YcTZNSmt6MDhsNnB6azlRSnVnaUdZNF83dl9Gay1OVm9qQ2NreElTT1EzVFF2STVySzRkQmt3M19lRjlzQjJvVWVQckYzR21YUVRyY1R0MGJNYzJwaVhR?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-11-21T16:23:46+00:00",
+     "published": "2026-11-21T16:43:35+00:00",
      "new": true,
-     "key": "f62c86799234f6e8",
-     "title": "US denies Iranian account of missile damage to F-16",
-     "summary": "The United States denied Iran’s account that a missile damaged an F-16 over the Gulf."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbXF6TUlfazBwTXdicE5fMkV0RnhLWmZGVlZDOUlULW1zcGgzSjZnQlFWZThqU3J6TU9ycFc0SGJBd01lcHlqaHltTmpscXpsejhEY0JBTldjVkhOcm9MT1dkRzZ2OThpTjljT0RYS0dvaXpJT1BYOWxNdTZNb2dha2xEa1R5YkFzdUQ1U3lhaUk1Zw?oc=5",
-     "source": "The Decoder",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-21T16:23:45+00:00",
-     "new": true,
-     "key": "24bcdd488677a4aa",
-     "title": "Nvidia researchers question very large AI context windows",
-     "summary": "Nvidia researchers argue that very large AI context windows may be a dead end."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-21T18:01:22.028261+00:00",
-   "input_fingerprint": "sha256:c2e50e6501fd6b89d79a1236e42a72d136f4c2556cdb6ea27d2f2c63a4600b4e",
-   "last_success_at": "2026-11-21T18:01:22.028261+00:00",
-   "error": "Source check failed: Topic: reinsurance",
-   "candidate_count": 440,
-   "new_count": 8
-  },
-  "sport": {
-   "briefing": [
-    {
-     "text": "PSG beat Nice 2-1, but Désiré Doué left on a stretcher in tears after injuring his knee; the severity is not yet confirmed.",
-     "sources": [
-      {
-       "key": "afe6c987ee2db9ff",
-       "title": "Grosse inquiétude pour Doué, sorti blessé lors de Nice/PSG",
-       "url": "https://www.culturepsg.com/news/match/grosse-inquietude-pour-doue-sorti-blesse-lors-de-nice-psg/61615",
-       "source": "CulturePSG",
-       "via": null
-      },
-      {
-       "key": "478019a39c05bdee",
-       "title": "Nice/PSG, le live (1-2, MT2)",
-       "url": "https://www.culturepsg.com/news/match/nice-psg-live-resume-buts-video-ligue-1-2026-2027-11e-journee/61612",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "France’s route to the Nations Championship final is more complicated after England’s emphatic win: a victory over Argentina alone may not be enough.",
-     "sources": [
-      {
-       "key": "7dda6072ff04bcf5",
-       "title": "Pourquoi une victoire ne suffit plus aux Bleus pour disputer la finale du Championnat des Nations ? - Rugbyrama",
-       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPTUd0bWVyd01ncWNrZ3Vuak8zZUp2OFpWUlhZazlnclBwQURzZFdOdWg5M0haX2tQdkdZaE05aDVJTHVuVkxiMzU5UXh2N1YzRGJwUmZVZ09xX1hyNEZrQ1NjTnd1OGNCckZ3LXVwN1JnN0RNVzB6SDdjX24zNUlCd2tMaFlPcFhockZJaldhdlczLVZqTHZwckNKRGYwT2MxOFF1UDA4WEZRRmYtT2p3bFlhTkQxZ3hKZGlnaVd6NUNxWHRPY29MU1RQUkM1cjdlN3hsSGwycHNLbjVZdVczaHBHdFNlQkYyeG9iaTZDQkgxNnBl?oc=5",
-       "source": "Rugbyrama",
-       "via": "Google News"
-      },
-      {
-       "key": "627d237b65b12db5",
-       "title": "Championnat des nations. Après le succès écrasant de l’Angleterre, la France qualifiée pour la finale si… - Ouest-France",
-       "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNdXZiYkZmbWFqUlBoV0NYSFBlSkpvQkpqZHd4V0Y2UG9VWkRJVlFmdldOWGU2TXc3UXFEQk5XNFNXcXZXdXV0M05LMHdvWGwxZ1VERHcyemV2OG5RM3A5VEZkR1gzQkprRUIzVlRuQ1dBSGdkQ2FNT2N1QzJpUTE1VWY4Q0NSdzFrVDZVUEdDdFB5cTJwX0t3STJyT0dtSmpseWdkMk5VMlk1WXJiRjRHSml6cmxBTU4xOHNBRWVmbE1kNWQxeUJVakRkdGJFbndoTW9XSUg3S2ZCMDQ2QzZqT0pKNUU1N0NLVWJsbUljejdsNlg1Y0dUSG5FTVQ1UG5Vb1hsaTRpdlFwWDlHRzZhMWhsQmg3VkpyRHp6eG1tdGo?oc=5",
-       "source": "Ouest-France",
-       "via": "Google News"
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://www.culturepsg.com/news/match/grosse-inquietude-pour-doue-sorti-blesse-lors-de-nice-psg/61615",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-21T17:05:17+00:00",
-     "new": true,
-     "key": "afe6c987ee2db9ff",
-     "title": "Major concern for Doué after injury against Nice",
-     "summary": "Doué left the pitch injured during PSG’s 2-1 win at Nice, with the extent of his knee injury unclear."
-    },
-    {
-     "url": "https://www.culturepsg.com/news/match/nice-psg-1-2-le-but-de-doue-en-video/61614",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-21T16:54:47+00:00",
-     "new": true,
-     "key": "0c1b699196bd926f",
-     "title": "Nice/PSG (1-2), le but de Doué en video",
-     "summary": "Dans le cadre de la 11e journée, le PSG vient de marquer un second but à Nice par l'intermédiaire de Désiré Doué, superbement servi par Achraf Hakimi. Voici ce but de Désiré Doué à Nice en video :"
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPTUd0bWVyd01ncWNrZ3Vuak8zZUp2OFpWUlhZazlnclBwQURzZFdOdWg5M0haX2tQdkdZaE05aDVJTHVuVkxiMzU5UXh2N1YzRGJwUmZVZ09xX1hyNEZrQ1NjTnd1OGNCckZ3LXVwN1JnN0RNVzB6SDdjX24zNUlCd2tMaFlPcFhockZJaldhdlczLVZqTHZwckNKRGYwT2MxOFF1UDA4WEZRRmYtT2p3bFlhTkQxZ3hKZGlnaVd6NUNxWHRPY29MU1RQUkM1cjdlN3hsSGwycHNLbjVZdVczaHBHdFNlQkYyeG9iaTZDQkgxNnBl?oc=5",
-     "source": "Rugbyrama",
-     "feed_name": "Team: XV de France rugby",
-     "via": "Google News",
-     "published": "2026-11-21T17:35:00+00:00",
-     "new": true,
-     "key": "7dda6072ff04bcf5",
-     "title": "Why a France win may not be enough to reach the Nations Championship final",
-     "summary": "France may need more than a victory over Argentina to qualify for the final after England’s emphatic result."
+     "key": "6b74be10da801852",
+     "title": "Mexico captures alleged drug-cartel leader El Chapo Isidro",
+     "summary": "Mexican forces captured Fausto Isidro Meza Flores, a cartel figure wanted by the FBI."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-21T18:01:22.028261+00:00",
-   "input_fingerprint": "sha256:e41b73798440059748938a9da530b77c4d9083888d7d9ad53b1ca7c3976261ce",
-   "last_success_at": "2026-11-21T18:01:22.028261+00:00",
-   "candidate_count": 390,
+   "source_checked_at": "2026-11-21T18:16:21.435350+00:00",
+   "input_fingerprint": "sha256:708011070f8329da5d67141755966253be899bff5bee31fc77e572e432683b22",
+   "last_success_at": "2026-11-21T18:16:21.435350+00:00",
+   "candidate_count": 465,
+   "new_count": 9
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "PSG scored a third goal at Nice in their Ligue 1 match, with Ferran Torres finishing the move; the available report gives the score as 1–3.",
+     "sources": [
+      {
+       "key": "3b227fc2b003f187",
+       "title": "Nice/PSG (1-3), le but de Ferran Torres en video",
+       "url": "https://www.culturepsg.com/news/match/nice-psg-1-3-le-but-de-ferran-torres-en-video/61616",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Désiré Doué suffered a right-knee injury and was carried off in tears; the severity has not been confirmed in the available reports.",
+     "sources": [
+      {
+       "key": "ee53bd180338739c",
+       "title": "Grosse inquiétude pour Désiré Doué, blessé au genou droit avec le PSG et sorti sur civière face à Nice en Ligue 1 - franceinfo",
+       "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNVVVtSkRXR3kyMEg4TGZ0SjRYcHAydEpYQXA1S253RG5hZTNicl9MT3BkQkhPMTFBSUY4cEJIYVlFUXZISmpiRTl3eXZmWU5WanhlckVScTdDZHNGcWhycnkxYlhaLUZESjZ6b1VCdy12REJSSnd3cXBPcVJpaFRxbDQxMVhtU1JyN1hpTXFjRGt5djQwUHpEclNUQ05JTjA1TnZRQ0FuQy1GVk8tZUhWZ3lBaUJLNTJqaTlhOF82cTVWZmNBMU1CUGNTZzZRdk55NmloVlVRdk5QNXRUSTdYRzdEdkxZY0FOaUp6S3lrWkZIMVZvN0tGLTh2MG9lbmZK?oc=5",
+       "source": "franceinfo",
+       "via": "Google News"
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.culturepsg.com/news/match/nice-psg-1-3-le-but-de-ferran-torres-en-video/61616",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-21T18:10:49+00:00",
+     "new": true,
+     "key": "3b227fc2b003f187",
+     "title": "Ferran Torres scores PSG’s third against Nice",
+     "summary": "Ferran Torres scored PSG’s third goal in their Ligue 1 match at Nice, taking the score to 1–3."
+    },
+    {
+     "url": "https://www.culturepsg.com/news/match/nice-psg-1-1-le-but-de-mayulu-en-video/61613",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-21T16:51:00+00:00",
+     "new": true,
+     "key": "759b85b64f060303",
+     "title": "Nice/PSG (1-1), le but de Mayulu en video",
+     "summary": "Dans le cadre de la 11e journée, le PSG vient de marquer un premier but à Nice par l'intermédiaire de Senny Mayulu, parfait sur penalty. Voici ce but de Senny Mayulu à Nice en video :"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNVVVtSkRXR3kyMEg4TGZ0SjRYcHAydEpYQXA1S253RG5hZTNicl9MT3BkQkhPMTFBSUY4cEJIYVlFUXZISmpiRTl3eXZmWU5WanhlckVScTdDZHNGcWhycnkxYlhaLUZESjZ6b1VCdy12REJSSnd3cXBPcVJpaFRxbDQxMVhtU1JyN1hpTXFjRGt5djQwUHpEclNUQ05JTjA1TnZRQ0FuQy1GVk8tZUhWZ3lBaUJLNTJqaTlhOF82cTVWZmNBMU1CUGNTZzZRdk55NmloVlVRdk5QNXRUSTdYRzdEdkxZY0FOaUp6S3lrWkZIMVZvN0tGLTh2MG9lbmZK?oc=5",
+     "source": "franceinfo",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-11-21T17:42:55+00:00",
+     "new": true,
+     "key": "ee53bd180338739c",
+     "title": "Doué carried off with a right-knee injury",
+     "summary": "PSG forward Désiré Doué was carried off after injuring his right knee against Nice."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "degraded",
+   "source_checked_at": "2026-11-21T18:16:21.435350+00:00",
+   "input_fingerprint": "sha256:67b1debbf8f1816e777372120942bbfa5d144444ef2c38acad24f8356a296d07",
+   "last_success_at": "2026-11-21T18:16:21.435350+00:00",
+   "error": "Source check failed: Team: XV de France rugby",
+   "candidate_count": 314,
    "new_count": 3
   },
   "finance": {
    "briefing": [
     {
-     "text": "The sharp risk-off move in equities was accompanied by a crypto sell-off and heavy leveraged liquidations; Bitcoin later rebounded, but the intraday swings underline elevated volatility.",
+     "text": "A Bloomberg report says Australian energy officials warned about data-centre risks, a reminder that power constraints could complicate the AI infrastructure build-out.",
      "sources": [
       {
-       "key": "50a435182dc39976",
-       "title": "Bitcoin bounces 9% from two-year low to retake $60,000 as traders eye Monday’s stock open",
-       "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
-       "source": "CoinDesk",
-       "via": null
-      },
-      {
-       "key": "fe7ed012a3c97caa",
-       "title": "Bitcoin Crashes Below $56,000 as $2.7 Billion Crypto Liquidation Wipes Out Traders",
-       "url": "https://247wallst.com/investing/2026/11/21/bitcoin-crashes-below-56000-as-2-7-billion-crypto-liquidation-wipes-out-traders/?.tsrc=rss",
-       "source": "Bitcoin",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Amazon is reportedly nearing a $7.5bn acquisition of AI start-up Decart, a potential move to strengthen AWS’s position in the race for computing capacity.",
-     "sources": [
-      {
-       "key": "ec64a1e8c3ad9150",
-       "title": "Amazon closes in on $7.5bn deal to buy AI start-up Decart",
-       "url": "https://www.ft.com/content/dc7749dc-0f40-44a6-80bc-7f747d383616?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "A Bloomberg profile casts former ECB policymaker Luis de Guindos as a potential European response to bond-market pressure, though the brief summary offers few details on his prospects.",
-     "sources": [
-      {
-       "key": "9d289127f1b0a5b6",
-       "title": "De Cos Awaits Europe’s Call as a Nemesis to the Bond Vigilantes - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVkU3YUo5TkVLdGZLU3o5VEhzSFMySEx4ZnFyaFNvc2E4TVltUlNkT0QxMVNuSU92ZFFIN2M1N2lEcC1JU0dPOU02cHZsV0ZXWG9CWGNHNnM0T192MHFBUndROVFVR1RNeUo4RGZhWHlTbmMtcWdWenE0VmtrRnRXdmxibjJCVEZpMmxMeW1JMmdzMm53TnBVdUJ1X2tvQ2xKM0Q3N1RPUDFlOTJvOTZBUy1fOEc?oc=5",
+       "key": "610ac58a867e7d49",
+       "title": "Australian Energy Officials Warned of Data Center Risk, Age Says - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONmNLRGI1ZnMzdE00Y0RyRzlxeHZNUzZwNUtkQUsyWUdqTDhvdzhCN0ZDLTd3TXc1VjBoMHRjOHN4UlNUQkNMNlBJLTk1aTU2NTR6cTUzWmRHUmxGeTRzWGNvMExCa0lZdmNaQlFzcnh3MmVxb2tzRS1mQmpXQjh5VXNJbDgwVW9TQm5mR2Q0cDFyOVNDNHFlalo4TWxQQUtLMWdEYU5IWlFxQk1kb1djRkFxSlo?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "US retail sales are pointing to a strong holiday season, a positive signal for consumer demand as markets assess the growth outlook.",
+     "text": "The SEC is moving toward a more principles-based executive-pay disclosure regime, raising questions about the information investors will receive.",
      "sources": [
       {
-       "key": "b70ef4c337c4be1f",
-       "title": "Strong sales point to happy holiday season for US retailers - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNV1JMZVdlMENtbUxMWnVoLTJKcmpmWmM2TkRRVHZtSDlsX2pnQmN6Yzl1T1dSckhrT2NrZXVzY2QyWExfV0NYSTdQNjZfbF93d0RuQm1nNDFlbzVpaG9zd2YtODNmeHo4YUUyMThWcGxhMW1iWDdxa245eHNzc1pjRzR4NHg?oc=5",
-       "source": "Financial Times",
+       "key": "3625e16f7bd375e7",
+       "title": "US watchdogs pick a bad time to cut disclosure on executive pay",
+       "url": "https://www.ft.com/content/a8a45cf2-f096-4f33-8df5-46a689bde104?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "A French explainer examines who holds the country’s public debt, a useful angle on sovereign financing and investor exposure.",
+     "sources": [
+      {
+       "key": "39ff5075886e2de2",
+       "title": "VIDEO - Banques, « hedge funds » et fonds étrangers : qui détient la dette française ? - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPdmZjQXhpTDZTUE43X2xFbllJRGJJY2xPZHZQaktTaENwSnROZ2ZUd04tZG4ySXltSXA5VG80X2RIeGpjWkNrYlEwcXhuVzE2QXRMWnpDNllhbnhwb2U4MHBwV1JiZXAzT203N3J3ZEVSR2doa1Jya2JVYkRsVEhhT2JsMVJSRDRQWGpiSjNGWVR2Ri1qTDFHcmQ1WE9qdkt2eVo4anBGVWNZMmpIZXBOMlBwaWYyTngteENEMDVRZjd0MmFsQ0JNNWlIcV9vTGRhMFZDcjFNbU5fdw?oc=5",
+       "source": "Les Echos",
        "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "BTCS says falling ether prices are keeping pressure on collateral backing its Aave borrowing, highlighting leverage risk in crypto treasury strategies.",
+     "sources": [
+      {
+       "key": "6082857bd2918a2c",
+       "title": "Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated",
+       "url": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
+       "source": "CoinDesk",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "The FT’s market analysis points to large IPOs with small public floats, a trend relevant to how much newly listed companies’ shares are available to trade.",
+     "sources": [
+      {
+       "key": "58327519df87994b",
+       "title": "Going public, but only a little",
+       "url": "https://www.ft.com/content/c5bcb64e-35b8-40b8-842e-e4b5c9b3150d?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/dc7749dc-0f40-44a6-80bc-7f747d383616?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-11-21T17:21:36+00:00",
-     "new": true,
-     "key": "ec64a1e8c3ad9150",
-     "title": "Amazon closes in on $7.5bn deal for AI start-up Decart",
-     "summary": "Amazon is reportedly nearing a deal to acquire Decart, which could help AWS compete with Nvidia for computing power."
-    },
-    {
-     "url": "https://247wallst.com/investing/2026/11/21/bitcoin-crashes-below-56000-as-2-7-billion-crypto-liquidation-wipes-out-traders/?.tsrc=rss",
-     "source": "Bitcoin",
-     "feed_name": "Bitcoin",
-     "via": null,
-     "published": "2026-11-21T15:01:53+00:00",
-     "new": true,
-     "key": "fe7ed012a3c97caa",
-     "title": "Bitcoin falls below $56,000 amid crypto liquidations",
-     "summary": "A rapid Bitcoin plunge triggered $2.7bn in crypto liquidations before prices rebounded."
-    },
-    {
-     "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
-     "source": "CoinDesk",
-     "feed_name": "CoinDesk",
-     "via": null,
-     "published": "2026-11-21T17:50:00+00:00",
-     "new": true,
-     "key": "50a435182dc39976",
-     "title": "Bitcoin rebounds as traders watch US stocks",
-     "summary": "Bitcoin recovered 9% from a two-year low, while the earlier sell-off liquidated $1.8bn in leveraged positions."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVkU3YUo5TkVLdGZLU3o5VEhzSFMySEx4ZnFyaFNvc2E4TVltUlNkT0QxMVNuSU92ZFFIN2M1N2lEcC1JU0dPOU02cHZsV0ZXWG9CWGNHNnM0T192MHFBUndROVFVR1RNeUo4RGZhWHlTbmMtcWdWenE0VmtrRnRXdmxibjJCVEZpMmxMeW1JMmdzMm53TnBVdUJ1X2tvQ2xKM0Q3N1RPUDFlOTJvOTZBUy1fOEc?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONmNLRGI1ZnMzdE00Y0RyRzlxeHZNUzZwNUtkQUsyWUdqTDhvdzhCN0ZDLTd3TXc1VjBoMHRjOHN4UlNUQkNMNlBJLTk1aTU2NTR6cTUzWmRHUmxGeTRzWGNvMExCa0lZdmNaQlFzcnh3MmVxb2tzRS1mQmpXQjh5VXNJbDgwVW9TQm5mR2Q0cDFyOVNDNHFlalo4TWxQQUtLMWdEYU5IWlFxQk1kb1djRkFxSlo?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-21T08:00:00+00:00",
+     "published": "2026-11-21T05:18:00+00:00",
      "new": true,
-     "key": "9d289127f1b0a5b6",
-     "title": "De Cos awaits Europe’s call as bond vigilantes loom",
-     "summary": "Bloomberg examines Luis de Guindos’s possible role in Europe as bond-market pressure grows."
+     "key": "610ac58a867e7d49",
+     "title": "Australian energy officials warned of data-centre risks",
+     "summary": "Australian energy officials warned about risks posed by data centres, according to a report by The Age."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNV1JMZVdlMENtbUxMWnVoLTJKcmpmWmM2TkRRVHZtSDlsX2pnQmN6Yzl1T1dSckhrT2NrZXVzY2QyWExfV0NYSTdQNjZfbF93d0RuQm1nNDFlbzVpaG9zd2YtODNmeHo4YUUyMThWcGxhMW1iWDdxa245eHNzc1pjRzR4NHg?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-21T12:00:08+00:00",
-     "new": true,
-     "key": "b70ef4c337c4be1f",
-     "title": "Strong sales point to upbeat US holiday season",
-     "summary": "Recent sales data suggest US retailers are heading into a strong holiday season."
-    },
-    {
-     "url": "https://www.ft.com/content/bfa66957-73d4-44f1-bea5-6b141c197920",
-     "source": "FT",
-     "feed_name": "FT",
+     "url": "https://www.ft.com/content/a8a45cf2-f096-4f33-8df5-46a689bde104?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
      "via": null,
-     "published": "2026-11-21T06:32:26+00:00",
+     "published": "2026-11-21T05:00:35+00:00",
      "new": true,
-     "key": "658056f8a9850b73",
-     "title": "The dead hand of history weighs on Deutsche Bank",
-     "summary": "The FT argues that Deutsche Bank’s decisions carry lasting consequences shaped by the institution’s history."
+     "key": "3625e16f7bd375e7",
+     "title": "SEC shifts executive-pay disclosure approach",
+     "summary": "The SEC has decided a more principles-based regime is needed for executive-pay disclosures."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPdmZjQXhpTDZTUE43X2xFbllJRGJJY2xPZHZQaktTaENwSnROZ2ZUd04tZG4ySXltSXA5VG80X2RIeGpjWkNrYlEwcXhuVzE2QXRMWnpDNllhbnhwb2U4MHBwV1JiZXAzT203N3J3ZEVSR2doa1Jya2JVYkRsVEhhT2JsMVJSRDRQWGpiSjNGWVR2Ri1qTDFHcmQ1WE9qdkt2eVo4anBGVWNZMmpIZXBOMlBwaWYyTngteENEMDVRZjd0MmFsQ0JNNWlIcV9vTGRhMFZDcjFNbU5fdw?oc=5",
+     "source": "Les Echos",
+     "feed_name": "Les Echos Finance",
+     "via": "Google News",
+     "published": "2026-11-21T12:00:09+00:00",
+     "new": true,
+     "key": "39ff5075886e2de2",
+     "title": "Who holds France’s public debt?",
+     "summary": "Les Echos examines the banks, hedge funds and foreign investors holding French public debt."
+    },
+    {
+     "url": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
+     "source": "CoinDesk",
+     "feed_name": "CoinDesk",
+     "via": null,
+     "published": "2026-11-21T12:30:00+00:00",
+     "new": true,
+     "key": "6082857bd2918a2c",
+     "title": "BTCS warns its Aave loan could be liquidated",
+     "summary": "BTCS says falling ether prices are keeping pressure on collateral for its Aave loan."
+    },
+    {
+     "url": "https://www.ft.com/content/c5bcb64e-35b8-40b8-842e-e4b5c9b3150d?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
+     "via": null,
+     "published": "2026-11-21T10:30:07+00:00",
+     "new": true,
+     "key": "58327519df87994b",
+     "title": "Big IPOs, small floats",
+     "summary": "The FT examines the trend of large IPOs offering relatively small public floats."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-21T18:01:22.028261+00:00",
-   "input_fingerprint": "sha256:7ea2ad6e0ee55b7a8929b3729c74e0c3db284d049f1e6f53085085ee6c1c9379",
-   "last_success_at": "2026-11-21T18:01:22.028261+00:00",
+   "source_checked_at": "2026-11-21T18:16:21.435350+00:00",
+   "input_fingerprint": "sha256:13e13b4bfc99863f3f606879643d97d123aff5d1517ce0ccefa11d200365f458",
+   "last_success_at": "2026-11-21T18:16:21.435350+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1239,8 +1218,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 59974.39,
-     "change_pct": 2.0,
+     "price": 60035.96,
+     "change_pct": 2.1,
      "currency": "USD",
      "as_of": "2026-11-21T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1250,8 +1229,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1679.76,
-     "change_pct": 3.73,
+     "price": 1678.79,
+     "change_pct": 3.67,
      "currency": "USD",
      "as_of": "2026-11-21T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1259,8 +1238,8 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 249,
-   "new_count": 6
+   "candidate_count": 233,
+   "new_count": 5
   },
   "media": {
    "briefing": "",
@@ -1358,7 +1337,7 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-21T18:01:22.028261+00:00",
+   "source_checked_at": "2026-11-21T18:16:21.435350+00:00",
    "candidate_count": 9,
    "new_count": 0
   }
