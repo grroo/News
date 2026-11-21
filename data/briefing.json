@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261121T120125456518Z",
- "generated_at": "2026-11-21T12:01:25.456518+00:00",
- "generated_local": "Sat 21 Nov 2026, 13:01",
- "source_checked_at": "2026-11-21T12:01:25.456518+00:00",
+ "edition_id": "ed-20261121T142242854717Z",
+ "generated_at": "2026-11-21T14:22:42.854717+00:00",
+ "generated_local": "Sat 21 Nov 2026, 15:22",
+ "source_checked_at": "2026-11-21T14:22:42.854717+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-21T12:01:25.456518+00:00"
+  "run-2026-11-21T14:22:42.854717+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-21T12:01:25.456518+00:00"
+  "completed_at": "2026-11-21T14:22:42.854717+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -44,19 +44,14 @@
   {
    "name": "Reuters (via Google News)",
    "section": "news",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "The Guardian World",
@@ -134,28 +129,16 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
   },
   {
    "name": "Topic: insurance industry",
-   "section": "news",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": "refreshed"
-  },
-  {
-   "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "unavailable",
    "item_count": 0,
@@ -170,6 +153,18 @@
     "content_type": "text/html; charset=UTF-8",
     "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
    }
+  },
+  {
+   "name": "Topic: Zurich Insurance",
+   "section": "news",
+   "status": "ok",
+   "item_count": 73,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 73,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
   },
   {
    "name": "Topic: reinsurance",
@@ -186,19 +181,14 @@
   {
    "name": "Topic: European Central Bank",
    "section": "news",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Topic: Milano",
@@ -216,10 +206,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 103,
+   "item_count": 108,
    "reason": null,
    "failure": null,
-   "parsed_count": 103,
+   "parsed_count": 108,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -227,45 +217,35 @@
   {
    "name": "Team: équipe de France football",
    "section": "sport",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Team: XV de France rugby",
-   "section": "sport",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
-   "dropped_future": 0,
-   "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
-  },
-  {
-   "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
    "item_count": 100,
    "reason": null,
    "failure": null,
    "parsed_count": 100,
+   "dropped_future": 0,
+   "dropped_freshness": 0,
+   "cache": "refreshed"
+  },
+  {
+   "name": "Team: Champions League",
+   "section": "sport",
+   "status": "ok",
+   "item_count": 102,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -477,19 +457,14 @@
   {
    "name": "Reuters Business (via Google News)",
    "section": "finance",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Bloomberg (via Google News)",
@@ -714,9 +689,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002276,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.002306,
+  "est_month_usd": 0.21,
+  "forecast_month_usd": 0.21,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -724,60 +699,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8866,
+    "latency_ms": 11468,
     "unknown": false,
     "provider_request_ids": [
-     "resp_09e875fa20ec93d5016b01881b6af887d0a38c78666c59359c"
+     "resp_0c50d966f6545b51016b01a93bf9e087d1a5f8aa7befc91672"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3394,
-    "output_tokens": 605,
-    "reasoning_tokens": 240
+    "cache_write_tokens": 3484,
+    "output_tokens": 805,
+    "reasoning_tokens": 343
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6929,
+    "latency_ms": 6953,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0a7652b17db2d24f016b01882418e487d0a42fb18aff70e2f0"
+     "resp_0e94f9187af3ec00016b01a946e98c87d1901e1627df87c90b"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3515,
-    "output_tokens": 576,
-    "reasoning_tokens": 250
+    "cache_write_tokens": 3599,
+    "output_tokens": 619,
+    "reasoning_tokens": 257
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8849,
+    "latency_ms": 6105,
     "unknown": false,
     "provider_request_ids": [
-     "resp_011e0d40d68ab113016b01882ab5bc87d08d6da258b22fe73e"
+     "resp_02f13bb022b0d382016b01a94dd13887d186048e0988ae202c"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3245,
-    "output_tokens": 831,
-    "reasoning_tokens": 265
+    "cache_write_tokens": 3241,
+    "output_tokens": 605,
+    "reasoning_tokens": 219
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10154,
-  "output_tokens": 2012,
-  "reasoning_tokens": 755,
+  "cache_write_tokens": 10324,
+  "output_tokens": 2029,
+  "reasoning_tokens": 819,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 71,
-   "attempts": 213,
-   "known_cost_usd": 0.160343,
+   "recorded_runs": 72,
+   "attempts": 216,
+   "known_cost_usd": 0.162649,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -786,61 +761,68 @@
   "news": {
    "briefing": [
     {
-     "text": "Russia launched 148 drones and three missiles at Ukraine overnight; Ukrainian forces said they intercepted 117 drones.",
+     "text": "A cargo ship bound for Russia’s Kaliningrad was hit by drones, prompting Finland to tighten security.",
      "sources": [
       {
-       "key": "bf42d15bee442d0e",
-       "title": "Kiev, 'nella notte 3 missili e 148 droni russi lanciati sull'Ucraina, 117 abbattuti'",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/kiev-nella-notte-3-missili-e-148-droni-russi-lanciati-sullucraina-117_029484c3-d479-4187-b8c6-8a8973b49139.html",
-       "source": "ANSA Top News",
+       "key": "104a6a2ef8dd63dd",
+       "title": "Cargo ship bound for Russia's Kaliningrad hit by drones, Finland tightens security - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPaUFLdlZmeWprX3A2YllLMmlQSXZrYTRIazVMOEExREZuTXFCYThyVUlnR3U0TDg3dGpUeHE5SHJyanJWQUZTRHdwUG5YYTFxVXMtUU5rY1pOVzZkRUxhQ29oUEVUS0NJTWFxcUJmLW9lRE52cGs3N2FLbXZzNmVFNFpXTmZNZnI4S1pWNDB5RWV0UFhUUGlCTVUwNjlWZDMxcXhxS0FvZUdNNWN4UU9jMEw4bWVaOVB0TlE?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Zelensky called strikes on the Crimean Bridge a fair response to 109 Russian attacks on bridges in Ukraine.",
+     "sources": [
+      {
+       "key": "88af422b08668902",
+       "title": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+       "url": "https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
        "via": null
       }
      ]
     },
     {
-     "text": "A second tanker was reportedly struck in the Strait of Hormuz, with no casualties reported, adding to shipping-security concerns.",
+     "text": "Wall Street is questioning what could revive the AI trade after an Anthropic-related wipeout, as the sector’s momentum comes under pressure.",
      "sources": [
       {
-       "key": "80de30cb9c0409a7",
-       "title": "Ukmto, 'seconda petroliera colpita a Hormuz, nessuna vittima'",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/ukmto-seconda-petroliera-colpita-a-hormuz-nessuna-vittima_5a9f6e81-bf72-44a4-af0c-cb5ad3385213.html",
-       "source": "ANSA Top News",
-       "via": null
+       "key": "c83d6456f8911d68",
+       "title": "Wall Street Asks What Can Save AI Trade After Anthropic Wipeout - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcGZTRVdJcGNQbEdjRlRQUnN1YjBzTXlaYzFDb0swSDlCNTVsLVo2SGtQTGxsUGxzVmE0SkFPbHB0dFBXbWhGQVZUdmFQZ21zeDBwcW5OSjJmOUtmQjB4U3lNVkptMzYybHpmR1hkTUZESVlQU1VtWFhsSzNGWUlmWHNUa3FCd0t6NjNFR0xkTzBxdjYySFFtSTRQbTFwTDd0TXlfVEY4dnZCNmxrVnZFWVlSR0U?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
       }
      ]
     },
     {
-     "text": "The EU Council president has proposed €204 billion in savings for the bloc’s budget; France has rejected the proposal.",
+     "text": "UniCredit CEO Andrea Orcel says the bank plans further growth while keeping its headquarters in Milan.",
      "sources": [
       {
-       "key": "7ccd8f5fc92d0280",
-       "title": "Budget de l’UE : Antonio Costa, le président du Conseil européen, propose 204 milliards d’euros d’économies et une taxe numérique",
-       "url": "https://www.lemonde.fr/economie/article/2026/11/21/budget-de-l-ue-antonio-costa-le-president-du-conseil-europeen-propose-204-milliards-d-euros-d-economies-et-une-taxe-numerique_6813983_3234.html",
-       "source": "Le Monde",
-       "via": null
+       "key": "f4c4d823dca70595",
+       "title": "Orcel: 'Unicredit crescerà ancora, ma la sede resterà a Milano' - ANSA",
+       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOeENGSUhkbi1qR3ZmQ2dIT2lIUTkxaUFxN3JoNDJmVG1sTkVvSFVNdEE3b2RiZ0hjc1lOeXFGeW9FQXdrbVZOTVFnSUtwVzNad3NJdWZQTm9HMkJXUkZjblp0MVBFSnhzSVlPaFJzT3ZCN2pkcWhmcldXY3FFdFdnd1RoS3JfT2xwclRPRVlrRXRiMTJiSlF4T21WZEoxdXpjWGVRTXk3dnpRLW5faERzdjZneWxqOTNUeC1XX21PbHNmQW1mSHpuZW95Qmt3a0NhazV1ZlRoTk1RUXZTX193Z3hmNVpvUG5jUkHSAe8BQVVfeXFMTjU5QnZrMjloVHBHQWd6NWozU2s2VTE3cVZWUDVtR0REM19odjF2QWUwNWNvQnJDbHJXendLUjlZajhidUNpbEQ3NzBOcmt5LUJaSWdyWlhiME1TZEhGZlVpekFnVFJBZDVBUzJseWdKNkFlVlFGZi1fcHVmb0ZfeUxTX0NMZnJFVzZMRnRaNjRUaHlMTFZrY19xRlJlQUdzTTJ1TWRRenJvSWlZc0s1Nk1yeGxUYzI1WGEtNFpvZHU5VnNYV1c3eVdaX1hJR1ZqRWVEai1wS0FxcXhhRi1Nd3ZGVW9jeXpGU01ybGMwTkk?oc=5",
+       "source": "ANSA",
+       "via": "Google News"
       }
      ]
     },
     {
-     "text": "The UK says future EU re-entry remains an option as it pursues new agreements on trade and youth mobility.",
+     "text": "Hackers breached systems at the USDA and FBI amid wider technology outages; another report warns AI-driven security fixes may contribute to outages.",
      "sources": [
       {
-       "key": "d0d19939b320e45a",
-       "title": "Rejoining EU ‘on the table’ as UK makes deals on trade and young people",
-       "url": "https://www.theguardian.com/politics/2026/nov/21/rejoining-eu-uk-trade-youth-deals-ed-miliband",
+       "key": "5daf6c0c23eb5cf1",
+       "title": "USDA, FBI breached by hackers amid spate of tech outages – reports",
+       "url": "https://www.theguardian.com/us-news/2026/nov/21/usda-fbi-outages-cyber-attack",
        "source": "The Guardian World",
        "via": null
-      }
-     ]
-    },
-    {
-     "text": "Three of the four largest US school districts are resisting Google’s push for schools to adopt its AI tools, according to Fortune.",
-     "sources": [
+      },
       {
-       "key": "923ca6241d7f0fb7",
-       "title": "Google told schools to accept AI or lose Search. Now 3 of America’s 4 largest districts are pushing back - Fortune",
-       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZWIxdkYwQlNrcVVDLUNlNFVwbzRRaHp0el9jS3JsRGN1MVRIOWU2QW5rUlluT1RwaXdhV3pnU2JtcDAwVEZqZGJMSWY2RV9Edk84Mjh3N3ltTHlBS2hHcVNGWE4xZUhlbnJDZTZZNlFVc2xiX09GMmMxTFhHcmVqeDNhVm9PSFpOaVM1djJ2YXBaa3doYUlMWWJKTV8?oc=5",
-       "source": "Fortune",
+       "key": "03da291226fa8293",
+       "title": "The AI race to fix security flaws could be making tech outages more common - NBC News",
+       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNEV1UkZkWUk1UlpPVENabkhza2YzcVJEMmFTNk50anhtdnd3S21EWlJxa1EzYUw4R2NrOUtxdGhHUXF0RHo1S3VSazQ5a2Uwb0JxemF4MV9IdVd2WmVnd2g0ZFBBck5yQ2lNeVFtV2tROHBsU1U5R3hoS3htekhtWmM1LTdlN0tPVVRrYzYtUFJOMHVKRGtWS29BNXIzVzhuWlBHRk1PZndneEVIX29xSzIxTkZHV0lOTmc?oc=5",
+       "source": "NBC News",
        "via": "Google News"
       }
      ]
@@ -848,349 +830,333 @@
    ],
    "items": [
     {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/kiev-nella-notte-3-missili-e-148-droni-russi-lanciati-sullucraina-117_029484c3-d479-4187-b8c6-8a8973b49139.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-11-21T11:48:24+00:00",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPaUFLdlZmeWprX3A2YllLMmlQSXZrYTRIazVMOEExREZuTXFCYThyVUlnR3U0TDg3dGpUeHE5SHJyanJWQUZTRHdwUG5YYTFxVXMtUU5rY1pOVzZkRUxhQ29oUEVUS0NJTWFxcUJmLW9lRE52cGs3N2FLbXZzNmVFNFpXTmZNZnI4S1pWNDB5RWV0UFhUUGlCTVUwNjlWZDMxcXhxS0FvZUdNNWN4UU9jMEw4bWVaOVB0TlE?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-21T13:02:50+00:00",
      "new": true,
-     "key": "bf42d15bee442d0e",
-     "title": "Russia launches missiles and drones at Ukraine overnight",
-     "summary": "Kyiv said Russia launched three missiles and 148 drones, of which 117 were intercepted."
+     "key": "104a6a2ef8dd63dd",
+     "title": "Cargo ship bound for Kaliningrad hit by drones as Finland tightens security",
+     "summary": "A cargo ship bound for Russia’s Kaliningrad was hit by drones, and Finland tightened security."
     },
     {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/ukmto-seconda-petroliera-colpita-a-hormuz-nessuna-vittima_5a9f6e81-bf72-44a4-af0c-cb5ad3385213.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
+     "url": "https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
      "via": null,
-     "published": "2026-11-21T11:49:58+00:00",
+     "published": "2026-11-21T13:17:38+00:00",
      "new": true,
-     "key": "80de30cb9c0409a7",
-     "title": "Second tanker reportedly struck in the Strait of Hormuz",
-     "summary": "A second tanker was reportedly hit in the Strait of Hormuz, with no casualties."
+     "key": "88af422b08668902",
+     "title": "Zelensky calls Crimean Bridge strikes a fair response",
+     "summary": "Zelensky said the strikes responded to 109 separate Russian aerial attacks on bridges in Ukraine."
     },
     {
-     "url": "https://www.lemonde.fr/economie/article/2026/11/21/budget-de-l-ue-antonio-costa-le-president-du-conseil-europeen-propose-204-milliards-d-euros-d-economies-et-une-taxe-numerique_6813983_3234.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-21T11:01:50+00:00",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcGZTRVdJcGNQbEdjRlRQUnN1YjBzTXlaYzFDb0swSDlCNTVsLVo2SGtQTGxsUGxzVmE0SkFPbHB0dFBXbWhGQVZUdmFQZ21zeDBwcW5OSjJmOUtmQjB4U3lNVkptMzYybHpmR1hkTUZESVlQU1VtWFhsSzNGWUlmWHNUa3FCd0t6NjNFR0xkTzBxdjYySFFtSTRQbTFwTDd0TXlfVEY4dnZCNmxrVnZFWVlSR0U?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-21T13:00:00+00:00",
      "new": true,
-     "key": "7ccd8f5fc92d0280",
-     "title": "EU Council president proposes €204 billion in budget savings",
-     "summary": "Antonio Costa proposed €204 billion in EU budget savings, a plan France has rejected."
+     "key": "c83d6456f8911d68",
+     "title": "Wall Street asks what can save the AI trade",
+     "summary": "Investors are questioning what could revive the AI trade after an Anthropic-related wipeout."
     },
     {
-     "url": "https://www.theguardian.com/politics/2026/nov/21/rejoining-eu-uk-trade-youth-deals-ed-miliband",
+     "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOeENGSUhkbi1qR3ZmQ2dIT2lIUTkxaUFxN3JoNDJmVG1sTkVvSFVNdEE3b2RiZ0hjc1lOeXFGeW9FQXdrbVZOTVFnSUtwVzNad3NJdWZQTm9HMkJXUkZjblp0MVBFSnhzSVlPaFJzT3ZCN2pkcWhmcldXY3FFdFdnd1RoS3JfT2xwclRPRVlrRXRiMTJiSlF4T21WZEoxdXpjWGVRTXk3dnpRLW5faERzdjZneWxqOTNUeC1XX21PbHNmQW1mSHpuZW95Qmt3a0NhazV1ZlRoTk1RUXZTX193Z3hmNVpvUG5jUkHSAe8BQVVfeXFMTjU5QnZrMjloVHBHQWd6NWozU2s2VTE3cVZWUDVtR0REM19odjF2QWUwNWNvQnJDbHJXendLUjlZajhidUNpbEQ3NzBOcmt5LUJaSWdyWlhiME1TZEhGZlVpekFnVFJBZDVBUzJseWdKNkFlVlFGZi1fcHVmb0ZfeUxTX0NMZnJFVzZMRnRaNjRUaHlMTFZrY19xRlJlQUdzTTJ1TWRRenJvSWlZc0s1Nk1yeGxUYzI1WGEtNFpvZHU5VnNYV1c3eVdaX1hJR1ZqRWVEai1wS0FxcXhhRi1Nd3ZGVW9jeXpGU01ybGMwTkk?oc=5",
+     "source": "ANSA",
+     "feed_name": "Topic: Milano",
+     "via": "Google News",
+     "published": "2026-11-21T14:07:22+00:00",
+     "new": true,
+     "key": "f4c4d823dca70595",
+     "title": "Orcel says UniCredit will grow further, with headquarters staying in Milan",
+     "summary": "UniCredit CEO Andrea Orcel said the bank will continue growing while its headquarters remain in Milan."
+    },
+    {
+     "url": "https://www.theguardian.com/us-news/2026/nov/21/usda-fbi-outages-cyber-attack",
      "source": "The Guardian World",
      "feed_name": "The Guardian World",
      "via": null,
-     "published": "2026-11-21T11:33:01+00:00",
+     "published": "2026-11-21T14:09:02+00:00",
      "new": true,
-     "key": "d0d19939b320e45a",
-     "title": "UK leaves future EU re-entry on the table",
-     "summary": "Ed Miliband said all options remain open as the UK pursues agreements on trade and youth mobility."
+     "key": "5daf6c0c23eb5cf1",
+     "title": "Hackers breach USDA and FBI systems amid technology outages",
+     "summary": "Hackers reportedly breached the USDA farmer-payment system and the FBI’s National Crime Information Center."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZWIxdkYwQlNrcVVDLUNlNFVwbzRRaHp0el9jS3JsRGN1MVRIOWU2QW5rUlluT1RwaXdhV3pnU2JtcDAwVEZqZGJMSWY2RV9Edk84Mjh3N3ltTHlBS2hHcVNGWE4xZUhlbnJDZTZZNlFVc2xiX09GMmMxTFhHcmVqeDNhVm9PSFpOaVM1djJ2YXBaa3doYUlMWWJKTV8?oc=5",
-     "source": "Fortune",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNEV1UkZkWUk1UlpPVENabkhza2YzcVJEMmFTNk50anhtdnd3S21EWlJxa1EzYUw4R2NrOUtxdGhHUXF0RHo1S3VSazQ5a2Uwb0JxemF4MV9IdVd2WmVnd2g0ZFBBck5yQ2lNeVFtV2tROHBsU1U5R3hoS3htekhtWmM1LTdlN0tPVVRrYzYtUFJOMHVKRGtWS29BNXIzVzhuWlBHRk1PZndneEVIX29xSzIxTkZHV0lOTmc?oc=5",
+     "source": "NBC News",
      "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-21T11:40:00+00:00",
+     "published": "2026-11-21T14:00:00+00:00",
      "new": true,
-     "key": "923ca6241d7f0fb7",
-     "title": "US school districts push back against Google’s AI demands",
-     "summary": "Three of the four largest US school districts are resisting Google’s push to adopt AI tools."
+     "key": "03da291226fa8293",
+     "title": "AI security race may be contributing to technology outages",
+     "summary": "A report says the race to use AI to fix security flaws could make technology outages more common."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbHFEdUcwUjdUdVRBbE1VbnloeE8xRTZTVl9IWFp3MmxKZDktUm5pbE1ZRTFwZHN2Tl9peEpqa2RpOHRSbVg0V21kZmVmbmpvWTE4QTNGN0drMEZwOEY3cGRPRFpSNHktTHlvSlhlelIwVVBZZDB1aEdodjMwNUV3MUtrRlMtNmFqYUxhYkxIVGREUkFmSFp2Q1ZZS2JNcnlSa0RJ?oc=5",
+     "source": "The Guardian",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-21T13:02:00+00:00",
+     "new": true,
+     "key": "24efe854c26532b1",
+     "title": "A debt-laden cloud company tests the limits of the AI boom",
+     "summary": "A heavily indebted cloud computing company offers a case study in the financial risks of the AI boom."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-11-21T12:01:25.456518+00:00",
-   "input_fingerprint": "sha256:06346cdb041f6dc8fce1899af79d280e9fc4631154810950a448d59001b0d6a8",
-   "last_success_at": "2026-11-21T12:01:25.456518+00:00",
-   "error": "Source check failed: Reuters (via Google News), Topic: Zurich Insurance, Topic: European Central Bank",
-   "candidate_count": 353,
-   "new_count": 5
+   "source_checked_at": "2026-11-21T14:22:42.854717+00:00",
+   "input_fingerprint": "sha256:770a45f7b7b72fb15ac687031a32823514e015fa2ed425674f977ffcd9f59154",
+   "last_success_at": "2026-11-21T14:22:42.854717+00:00",
+   "error": "Source check failed: Topic: insurance industry",
+   "candidate_count": 456,
+   "new_count": 7
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG head to Nice for their Ligue 1 match with Luis Enrique able to call on five returning players; Digne is not in the squad.",
+     "text": "PSG travel to Nice with a 21-man squad that includes several returning players, including Ousmane Dembélé, Marquinhos and Nuno Mendes; Lucas Digne is absent.",
      "sources": [
       {
-       "key": "5ff4457f8287bd14",
-       "title": "Le groupe pour Nice/PSG avec 5 retours mais sans Digne",
-       "url": "https://www.culturepsg.com/news/match/le-groupe-pour-nice-psg-avec-5-retours-mais-sans-digne/61609",
+       "key": "7cdeb08a66e97388",
+       "title": "Le PSG face à Nice avec Dembélé, Marquinhos, Mendes et Doué",
+       "url": "https://www.lequipe.fr/Football/Actualites/Le-psg-face-a-nice-avec-dembele-marquinhos-mendes-et-doue/1745096#at_medium=RSS_feeds",
+       "source": "L'Équipe",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Pre-match projections disagree on the Nice–PSG starting line-ups, leaving Luis Enrique’s selection uncertain.",
+     "sources": [
+      {
+       "key": "2346a07a6dac7c30",
+       "title": "Les compositions de Nice/PSG selon la presse",
+       "url": "https://www.culturepsg.com/news/match/les-compositions-de-nice-psg-selon-la-presse/61606",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "Luis Enrique has been using two distinct attacking trios, and CulturePSG examines whether he could field the alternate combination at Nice.",
+     "text": "Former PSG goalkeeper Lionel Letizi says Matvei Safonov has a modest image deficit ahead of a Nice–PSG meeting that links two clubs from his career.",
      "sources": [
       {
-       "key": "3fd255ab18cb2976",
-       "title": "Avec le trio d'attaque bis du PSG à Nice ?",
-       "url": "https://www.culturepsg.com/news/match/avec-le-trio-d-attaque-bis-du-psg-a-nice/61608",
+       "key": "917a92fcd0902b68",
+       "title": "« Safonov a un petit déficit d’image » selon un ancien gardien du PSG",
+       "url": "https://www.culturepsg.com/news/club/safonov-a-un-petit-deficit-dimage-selon-un-ancien-gardien-du-psg/61610",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "Senny Mayulu’s versatility remains central to his role under Luis Enrique, according to CulturePSG’s profile of the young France international.",
+     "text": "France’s XV are one match from reaching the Nations Championship final, with Argentina their next opponent.",
      "sources": [
       {
-       "key": "fe94b5211c0673c2",
-       "title": "Entre Mayulu et Luis Enrique, le contrat de polyvalence",
-       "url": "https://www.culturepsg.com/news/club/entre-mayulu-et-luis-enrique-le-contrat-de-polyvalence/61607",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "The PGL Major Singapore Stage 1 preview profiles the field, including teams such as PARIVISION, 100 Thieves and BCG.",
-     "sources": [
-      {
-       "key": "2579692bd935f737",
-       "title": "Visualized: Every team at PGL Major Singapore Stage 1",
-       "url": "https://www.hltv.org/news/46015/visualized-every-team-at-pgl-major-singapore-stage-1",
-       "source": "HLTV",
-       "via": null
+       "key": "51552697077df3ce",
+       "title": "Championnat des nations : le XV de France à un match de la finale - Europe 1",
+       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMnNDYXJxdVBWVFgtbmVEY1VYbjd5SXMzY3F6SmMwYTdyWlNZdEtTemZHNm9Lem1RUXZod2Vmak94WGF6LUY4cjdndlVtZzhpQzZJd0tfT0NZTzdlNWNmSDVpb3o3WFlKcEwwZHlidE9kdDZ6VWI2dS1qVU1HWTA5LVpNdzdhVkJnbTRoR3JEc2FPdm9mWV8xRjFRSDdURUlBVkHSAacBQVVfeXFMTXZhalp3ckxvSkVNdXI5LTRGTHJJbThhOXBpZVZscnBLeTctbGxvbFlfTUdUYWtFY0hTTGoxbGh2ZVBILTJaNFpnUUlhTmpfT3M5VGhLcVlHaGswTzZMYTJodTc4UGtwbXRieGlINFdTZFFQeUtGUUIwRm9NZWdDcDZMOE5rUGl0X0xLQjlsdHItakVJbUZ2TktlVHdhdXlOWHlJNVNUZDg?oc=5",
+       "source": "Europe 1",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/match/le-groupe-pour-nice-psg-avec-5-retours-mais-sans-digne/61609",
+     "url": "https://www.culturepsg.com/news/match/les-compositions-de-nice-psg-selon-la-presse/61606",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-21T10:21:00+00:00",
+     "published": "2026-11-21T07:00:00+00:00",
      "new": true,
-     "key": "5ff4457f8287bd14",
-     "title": "PSG squad for Nice: five returns, Digne absent",
-     "summary": "Luis Enrique named a 21-player squad for the Nice match, with five players returning and Digne left out."
+     "key": "2346a07a6dac7c30",
+     "title": "Press projections differ on Nice–PSG line-ups",
+     "summary": "French media disagree over the expected starting teams for the Ligue 1 fixture."
     },
     {
-     "url": "https://www.culturepsg.com/news/match/avec-le-trio-d-attaque-bis-du-psg-a-nice/61608",
+     "url": "https://www.culturepsg.com/news/club/safonov-a-un-petit-deficit-dimage-selon-un-ancien-gardien-du-psg/61610",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-21T09:30:00+00:00",
+     "published": "2026-11-21T11:36:59+00:00",
      "new": true,
-     "key": "3fd255ab18cb2976",
-     "title": "Could PSG use their alternate attacking trio at Nice?",
-     "summary": "CulturePSG looks at whether Luis Enrique will use PSG’s alternate attacking trio against Nice."
+     "key": "917a92fcd0902b68",
+     "title": "Letizi says Safonov has an image deficit",
+     "summary": "Former PSG goalkeeper Lionel Letizi assessed Safonov ahead of the goalkeeper’s meeting with Nice."
     },
     {
-     "url": "https://www.culturepsg.com/news/club/entre-mayulu-et-luis-enrique-le-contrat-de-polyvalence/61607",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
+     "url": "https://www.lequipe.fr/Football/Actualites/Le-psg-face-a-nice-avec-dembele-marquinhos-mendes-et-doue/1745096#at_medium=RSS_feeds",
+     "source": "L'Équipe",
+     "feed_name": "L'Équipe",
      "via": null,
-     "published": "2026-11-21T08:29:00+00:00",
+     "published": "2026-11-21T13:50:05+00:00",
      "new": true,
-     "key": "fe94b5211c0673c2",
-     "title": "Senny Mayulu and Luis Enrique’s versatility pact",
-     "summary": "CulturePSG examines how Mayulu’s versatility has shaped his development under Luis Enrique."
+     "key": "7cdeb08a66e97388",
+     "title": "PSG take several returnees to Nice, while Digne is left out",
+     "summary": "Luis Enrique named 21 players for the trip, including Dembélé, Marquinhos and Nuno Mendes, but not Lucas Digne."
     },
     {
-     "url": "https://www.hltv.org/news/46015/visualized-every-team-at-pgl-major-singapore-stage-1",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-11-21T11:30:00+00:00",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMnNDYXJxdVBWVFgtbmVEY1VYbjd5SXMzY3F6SmMwYTdyWlNZdEtTemZHNm9Lem1RUXZod2Vmak94WGF6LUY4cjdndlVtZzhpQzZJd0tfT0NZTzdlNWNmSDVpb3o3WFlKcEwwZHlidE9kdDZ6VWI2dS1qVU1HWTA5LVpNdzdhVkJnbTRoR3JEc2FPdm9mWV8xRjFRSDdURUlBVkHSAacBQVVfeXFMTXZhalp3ckxvSkVNdXI5LTRGTHJJbThhOXBpZVZscnBLeTctbGxvbFlfTUdUYWtFY0hTTGoxbGh2ZVBILTJaNFpnUUlhTmpfT3M5VGhLcVlHaGswTzZMYTJodTc4UGtwbXRieGlINFdTZFFQeUtGUUIwRm9NZWdDcDZMOE5rUGl0X0xLQjlsdHItakVJbUZ2TktlVHdhdXlOWHlJNVNUZDg?oc=5",
+     "source": "Europe 1",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-21T13:35:00+00:00",
      "new": true,
-     "key": "2579692bd935f737",
-     "title": "PGL Major Singapore Stage 1: teams previewed",
-     "summary": "HLTV profiles the teams set to compete in Stage 1 of the PGL Major Singapore."
+     "key": "51552697077df3ce",
+     "title": "France one match from Nations Championship final",
+     "summary": "The France rugby team are one win away from reaching the Nations Championship final."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPc2FkWHZYdjVzN2dzbGRySW9CVzR3VXNodnRlb3JGWjV5Y3dYWTNkdEttWXF3dDJVOW1EMlUwSmQ2R0Y5cnRIb3pTNUdKRFlvM2RlMmVubWZidjlhZnVxVmVrVUpHUk90TkxRSWRSVV80WFhrMXBZTW42UThFSWs4YUZCOU1na0xfdnlwV0Y2U3o0YUQtVUljMGNaVlJXWFowSnpyQnZzLXByVFZLQkdVYU1EZ1IwZElwMk9xRHc2ZXh2UWo2RkNEQjRBNHlqeUtlN1F6cW04WG1aM0ZHU0s2QUNpeW8?oc=5",
+     "source": "Rugbynistere",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-21T13:04:00+00:00",
+     "new": true,
+     "key": "ac263f889e9868a9",
+     "title": "Argentina plan to take the game to France",
+     "summary": "Argentina coach Felipe Contepomi says the Pumas will not adopt a defensive approach against France."
     }
    ],
    "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-21T12:01:25.456518+00:00",
-   "input_fingerprint": "sha256:144d105b9404c24804f95e9a033f6958976d6a13cefe9b69aa53bc63487f04ed",
-   "last_success_at": "2026-11-21T12:01:25.456518+00:00",
-   "error": "Source check failed: Team: équipe de France football, Team: XV de France rugby",
-   "candidate_count": 243,
-   "new_count": 4
+   "state": "healthy",
+   "source_checked_at": "2026-11-21T14:22:42.854717+00:00",
+   "input_fingerprint": "sha256:1acd2c45ee463e939bf2a4787a7ce91477c5b20dd5c36b9ec29c15b490159e7e",
+   "last_success_at": "2026-11-21T14:22:42.854717+00:00",
+   "candidate_count": 391,
+   "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "The EU’s proposed seven-year budget would still increase spending by about a quarter despite a scale-back; António Costa is reviving a digital tax proposal as part of efforts to secure agreement.",
+     "text": "António Costa has revived an EU digital-tax proposal as a possible route to agreement on the bloc’s budget, putting tax policy back into budget negotiations.",
      "sources": [
       {
-       "key": "b0ade293fb475ef3",
-       "title": "Costa revives EU digital tax proposal in bid to reach agreement on budget",
-       "url": "https://www.ft.com/content/2e9c54a8-e2c5-4334-8141-9791267ae3c3?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "The power market is flashing a warning about Europe’s economy, while the FT reports builders are targeting a €620bn defence-infrastructure opportunity amid weak residential demand.",
-     "sources": [
-      {
-       "key": "eb440bea48b8cf4b",
-       "title": "Europe’s Power Market Is Flashing a Warning to Its Economy - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOY2JUaUg3RElPRWI1WkdTa1FyT3lNSUJEYkMxb0lmZWwzNF9ka2pFYWJVaGhMZUZ6aFEwb1VqMmJVWTNqZ1J6NmRYTDFzbkQwcHhkQU1WT1NPQTN4QlFrc2ZXRGR2YzBDOEZQNE5pNXlZS0l6OXNRaTZ4dkc2b29JNi1NbUZOYWJST0lWS0RuMEtPY0RQOHdHeUJOeGh0WEZRMnE5Qy1icnRVaXc4dWc?oc=5",
-       "source": "Bloomberg.com",
+       "key": "c16e82883ae70c8a",
+       "title": "Costa revives EU digital tax proposal in bid to reach agreement on budget - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTEdycmJsUjBpdU9kX1dJOVZpcmstRDlMYkpHVHU3aG5PeDdvbEZsRmZraUFmb1N6VExvazlIbFdneWFJV2FGd25Eb1o3NFhiMnNDZ3RWcUpDelJtU0U2S20xcU1vM09oTnRaRTBvVDd1dDVIZDNBZ2QydWcwNFQyUFE2azg?oc=5",
+       "source": "Financial Times",
        "via": "Google News"
-      },
+      }
+     ]
+    },
+    {
+     "text": "Copper is moving from the US toward China as tariff concerns ease, while Chinese supply tightness and a local price premium support the arbitrage.",
+     "sources": [
       {
-       "key": "0d9a23002b1017b5",
-       "title": "Builders bet on €620bn defence infrastructure boom in Europe",
-       "url": "https://www.ft.com/content/b647fcba-e5e6-4ca2-8417-8c9146eac39e?syn-25a6b1a6=1",
+       "key": "29e1e1ebf7c53b8e",
+       "title": "Traders start to move US copper to China as Trump tariff fears ease",
+       "url": "https://www.ft.com/content/b84dbcb1-f216-422e-89c7-f203e0ab2757?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "Pablo Hernández de Cos is gaining ground in the race to lead the ECB, a development to watch for the future direction of euro-area monetary policy.",
+     "text": "European builders are positioning for a projected €620bn defence-infrastructure boom, a potential source of demand for construction and related industries.",
      "sources": [
       {
-       "key": "f6ee0cdf7fc2413b",
-       "title": "L'Espagnol Pablo Hernandez de Cos s'impose dans la course à la présidence de la BCE - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOSTFjdEJyZkpXQXNmV3d1Tmp2TWh5MjhOeVVMYTcyUnFTdGd3d1JpX0xUMzVmZUdjYkJuSzNmTUFiS3UwN2ZRQWpteHVXa2hYSlhfdXJ1SlBFcTgtSk5GTzgxRkU1UXdjalJaMC1pWF9HdVlPQTJNenRTRGQtb0tiemM1UjZXWDBwSVNYbHNvYUZaWnJ0Z0lUa1NNUzZ6eWpiZkpfQ3VaZnVrTVJhcTVlbEtzc01GNDM3R3RVeXZMUlFCYWVNWFMyQlZzZFRsUVpxd3NKT1B0QTI1RzdpVkZyTHp3?oc=5",
+       "key": "55d428b858de58bb",
+       "title": "Builders bet on €620bn defence infrastructure boom in Europe - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQODd1RElsS1o4eUtnOGppMDNxYTdZdkdhVHphZjZ6ZEZJa0FrVkxKVUp1RFZhUGhjb3MtUTE5OTRibmpzYVh6QTlKQnlBdjh3cmQ4WjVSRndTVjY5a2VxRzc2NXV5a3hlMXEtUFVsc0dDbV9PYzRfZXRNejBXNnFUazVEQ2k?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "An AI-assisted review identified a Bitcoin Core bug that could have stalled nodes through repeated IDs; fixes were shipped Friday.",
+     "sources": [
+      {
+       "key": "5c48c1a28f49d184",
+       "title": "Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug",
+       "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-nodes-could-be-stalled-by-repeating-one-id-50-000-times-ai-found-the-bug",
+       "source": "CoinDesk",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "North Korean-linked crypto thefts are reported to have reached $400m, a material reminder of security and operational risks in digital assets.",
+     "sources": [
+      {
+       "key": "df755a5c1c297083",
+       "title": "Les « voleurs de visage » de Corée du Nord détroussent 400 millions de dollars en cryptos - Les Echos",
+       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVHRaQXlxUFpqUDN5eTBPMy0tT25tZE1FbFRjcEQ4b003TGpyUEVCOFgtMnFXckcxLWp5WktNZklheWpCVW1RMUtkVVhUQ21oTF9Objl5TlBOd1ZKeHIwamJMem5JcE1HNGViWEwzNjBLc0l5cE9MdGd4c0x5RkRpRXJESU5nQ1dhd3RoU3Bmd2s4dS1KSFI2UHBkZHNsVTh0d3lzdkZYREtYQ1ZsZG1nTDFFY05waFRnalhKZEdEQk84M0VHTmVJRU1GcWVwN1h6TjMydFVsZU5JQTRJSXc3QzRyNmIyWkk?oc=5",
        "source": "Les Echos",
        "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Taiwan has banned short selling in a move to calm markets. Separately, a report says Bitcoin fell below $56,000 during a broader flight from risk assets.",
-     "sources": [
-      {
-       "key": "9e87d7347c720ed5",
-       "title": "Taiwan Bans Short Sales of Stocks in New Move to Calm Markets - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc0lVX2ZZa3c3NkJvd3dNbnNMN3Vzc1hNSVZaNEctQm1yV3l5Yi1qbnlqaGhuQl8tU0JScU9XSlV6dWVwNXBOYVhUejNZSjdGNmtuQ3Y5eXoxenUtZl9Xc3lNMC1aOWlEVHp3Vm9HUWJaSXRrOVU5T3VEV3dkNlBFYTdsWHdlZk80UzQycGxEdmJTazRqNUltVzVWdWUyMHhnVTAxWFBRa0MtcngzSlpiNWx3?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      },
-      {
-       "key": "101ed6e3d194cb78",
-       "title": "Bitcoin falls below $56,000 as liquidity squeeze deepens crypto selloff",
-       "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-crashes-below-56-000-061626263.html?.tsrc=rss",
-       "source": "Bitcoin",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "CVC alleges accounting manipulation in the €3bn Advent deal for Italian pastry-ingredient maker Irca; the US firm denies that financial performance was overstated.",
-     "sources": [
-      {
-       "key": "9db7b9b768e2abdf",
-       "title": "CVC claims accounting manipulation in €3bn Advent pastry ingredients deal",
-       "url": "https://www.ft.com/content/06999b01-07f1-44a1-8eab-a5d5e7ecd70f?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/2e9c54a8-e2c5-4334-8141-9791267ae3c3?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTEdycmJsUjBpdU9kX1dJOVZpcmstRDlMYkpHVHU3aG5PeDdvbEZsRmZraUFmb1N6VExvazlIbFdneWFJV2FGd25Eb1o3NFhiMnNDZ3RWcUpDelJtU0U2S20xcU1vM09oTnRaRTBvVDd1dDVIZDNBZ2QydWcwNFQyUFE2azg?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
      "published": "2026-11-21T11:38:04+00:00",
      "new": true,
-     "key": "b0ade293fb475ef3",
-     "title": "Costa revives EU digital tax proposal in bid to reach budget agreement",
-     "summary": "António Costa is reviving an EU digital tax proposal as negotiations continue over a seven-year budget that would still increase spending by about a quarter."
+     "key": "c16e82883ae70c8a",
+     "title": "Costa revives EU digital-tax proposal in budget push",
+     "summary": "António Costa has revived an EU digital-tax proposal in an effort to reach agreement on the bloc’s budget."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOY2JUaUg3RElPRWI1WkdTa1FyT3lNSUJEYkMxb0lmZWwzNF9ka2pFYWJVaGhMZUZ6aFEwb1VqMmJVWTNqZ1J6NmRYTDFzbkQwcHhkQU1WT1NPQTN4QlFrc2ZXRGR2YzBDOEZQNE5pNXlZS0l6OXNRaTZ4dkc2b29JNi1NbUZOYWJST0lWS0RuMEtPY0RQOHdHeUJOeGh0WEZRMnE5Qy1icnRVaXc4dWc?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-21T09:00:00+00:00",
-     "new": true,
-     "key": "eb440bea48b8cf4b",
-     "title": "Europe’s power market is flashing a warning to its economy",
-     "summary": "Bloomberg reports that developments in Europe’s power market are signalling risks for the region’s economy."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOSTFjdEJyZkpXQXNmV3d1Tmp2TWh5MjhOeVVMYTcyUnFTdGd3d1JpX0xUMzVmZUdjYkJuSzNmTUFiS3UwN2ZRQWpteHVXa2hYSlhfdXJ1SlBFcTgtSk5GTzgxRkU1UXdjalJaMC1pWF9HdVlPQTJNenRTRGQtb0tiemM1UjZXWDBwSVNYbHNvYUZaWnJ0Z0lUa1NNUzZ6eWpiZkpfQ3VaZnVrTVJhcTVlbEtzc01GNDM3R3RVeXZMUlFCYWVNWFMyQlZzZFRsUVpxd3NKT1B0QTI1RzdpVkZyTHp3?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
-     "via": "Google News",
-     "published": "2026-11-21T08:25:09+00:00",
-     "new": true,
-     "key": "f6ee0cdf7fc2413b",
-     "title": "Hernández de Cos gains ground in race to lead the ECB",
-     "summary": "Les Echos reports that Spain’s Pablo Hernández de Cos is gaining ground in the race to become ECB president."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc0lVX2ZZa3c3NkJvd3dNbnNMN3Vzc1hNSVZaNEctQm1yV3l5Yi1qbnlqaGhuQl8tU0JScU9XSlV6dWVwNXBOYVhUejNZSjdGNmtuQ3Y5eXoxenUtZl9Xc3lNMC1aOWlEVHp3Vm9HUWJaSXRrOVU5T3VEV3dkNlBFYTdsWHdlZk80UzQycGxEdmJTazRqNUltVzVWdWUyMHhnVTAxWFBRa0MtcngzSlpiNWx3?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-21T09:03:38+00:00",
-     "new": true,
-     "key": "9e87d7347c720ed5",
-     "title": "Taiwan bans short sales to calm markets",
-     "summary": "Taiwan has banned short selling as a new measure to calm markets."
-    },
-    {
-     "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-crashes-below-56-000-061626263.html?.tsrc=rss",
-     "source": "Bitcoin",
-     "feed_name": "Bitcoin",
-     "via": null,
-     "published": "2026-11-21T06:16:26+00:00",
-     "new": true,
-     "key": "101ed6e3d194cb78",
-     "title": "Bitcoin falls below $56,000 as crypto sell-off deepens",
-     "summary": "Bitcoin fell below $56,000 as liquidity pressure deepened a broader flight from risk assets."
-    },
-    {
-     "url": "https://www.ft.com/content/06999b01-07f1-44a1-8eab-a5d5e7ecd70f?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/b84dbcb1-f216-422e-89c7-f203e0ab2757?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-21T05:00:26+00:00",
+     "published": "2026-11-21T12:00:08+00:00",
      "new": true,
-     "key": "9db7b9b768e2abdf",
-     "title": "CVC alleges accounting manipulation in €3bn Advent deal",
-     "summary": "CVC alleges Irca’s financial performance was overstated before Advent agreed to sell the Italian ingredients business; Advent denies the allegations."
+     "key": "29e1e1ebf7c53b8e",
+     "title": "Copper shipments shift toward China as tariff fears ease",
+     "summary": "Traders are moving US copper to China amid easing tariff fears, Chinese shortages and a high local premium."
     },
     {
-     "url": "https://www.ft.com/content/b647fcba-e5e6-4ca2-8417-8c9146eac39e?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-11-21T05:00:07+00:00",
-     "new": true,
-     "key": "0d9a23002b1017b5",
-     "title": "Builders target €620bn European defence-infrastructure boom",
-     "summary": "Construction companies are targeting military infrastructure projects to offset weakness in the residential market."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPX2ZMb2kzUGh4S191aTUtUEFUWm9aTkdlQkk1Yi1mUndDempQeXh4UzdHa0FYNU4wcFZSN2l0TjgyM3JlSmRISHlRTWZ0c0ZPUFFIT2lCZDF5bnAtd29XSUxYX0RqTU5OWElLNExSSDhhRHd5TTZBLXNlMk1JWDBaTXFkaXI?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQODd1RElsS1o4eUtnOGppMDNxYTdZdkdhVHphZjZ6ZEZJa0FrVkxKVUp1RFZhUGhjb3MtUTE5OTRibmpzYVh6QTlKQnlBdjh3cmQ4WjVSRndTVjY5a2VxRzc2NXV5a3hlMXEtUFVsc0dDbV9PYzRfZXRNejBXNnFUazVEQ2k?oc=5",
      "source": "Financial Times",
      "feed_name": "FT (via Google News)",
      "via": "Google News",
      "published": "2026-11-21T05:01:04+00:00",
      "new": true,
-     "key": "3c51f7bbd975e872",
-     "title": "Russia-Ukraine drone war sends optical-fibre prices soaring",
-     "summary": "The Russia-Ukraine drone war is driving up optical-fibre prices, according to the Financial Times."
+     "key": "55d428b858de58bb",
+     "title": "Builders position for Europe’s €620bn defence-infrastructure boom",
+     "summary": "Builders are betting on a projected €620bn European defence-infrastructure boom."
+    },
+    {
+     "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-nodes-could-be-stalled-by-repeating-one-id-50-000-times-ai-found-the-bug",
+     "source": "CoinDesk",
+     "feed_name": "CoinDesk",
+     "via": null,
+     "published": "2026-11-21T06:16:42+00:00",
+     "new": true,
+     "key": "5c48c1a28f49d184",
+     "title": "AI scanner finds Bitcoin Core bug; fixes shipped",
+     "summary": "Bitcoin Core shipped fixes for a bug identified by an AI-assisted open-source scanner."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVHRaQXlxUFpqUDN5eTBPMy0tT25tZE1FbFRjcEQ4b003TGpyUEVCOFgtMnFXckcxLWp5WktNZklheWpCVW1RMUtkVVhUQ21oTF9Objl5TlBOd1ZKeHIwamJMem5JcE1HNGViWEwzNjBLc0l5cE9MdGd4c0x5RkRpRXJESU5nQ1dhd3RoU3Bmd2s4dS1KSFI2UHBkZHNsVTh0d3lzdkZYREtYQ1ZsZG1nTDFFY05waFRnalhKZEdEQk84M0VHTmVJRU1GcWVwN1h6TjMydFVsZU5JQTRJSXc3QzRyNmIyWkk?oc=5",
+     "source": "Les Echos",
+     "feed_name": "Les Echos Finance",
+     "via": "Google News",
+     "published": "2026-11-21T07:25:17+00:00",
+     "new": true,
+     "key": "df755a5c1c297083",
+     "title": "North Korean crypto thefts reported at $400m",
+     "summary": "A Les Echos report says North Korean hackers have stolen $400m in cryptocurrency."
     }
    ],
    "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-21T12:01:25.456518+00:00",
-   "input_fingerprint": "sha256:61601c73360bbed79c61b1b1a5b35b9ba718ff029e9dc04d529ce64ba9f5d391",
-   "last_success_at": "2026-11-21T12:01:25.456518+00:00",
-   "error": "Source check failed: Reuters Business (via Google News)",
+   "state": "healthy",
+   "source_checked_at": "2026-11-21T14:22:42.854717+00:00",
+   "input_fingerprint": "sha256:a28b75ca33883cc890628f324a08ab780a59dfd2ce266b5f6c8507e286610f9a",
+   "last_success_at": "2026-11-21T14:22:42.854717+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1283,8 +1249,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 58115.27,
-     "change_pct": -1.16,
+     "price": 60364.49,
+     "change_pct": 2.66,
      "currency": "USD",
      "as_of": "2026-11-21T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1294,8 +1260,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1650.37,
-     "change_pct": 1.91,
+     "price": 1694.02,
+     "change_pct": 4.61,
      "currency": "USD",
      "as_of": "2026-11-21T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1303,8 +1269,8 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 227,
-   "new_count": 8
+   "candidate_count": 266,
+   "new_count": 5
   },
   "media": {
    "briefing": "",
@@ -1402,10 +1368,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-21T12:01:25.456518+00:00",
+   "source_checked_at": "2026-11-21T14:22:42.854717+00:00",
    "candidate_count": 9,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-21T12:00:00.000Z"
+ "scheduled_slot": "2026-11-21T12:00:00Z"
 }
