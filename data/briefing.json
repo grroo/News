@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261122T141440259815Z",
- "generated_at": "2026-11-22T14:14:40.259815+00:00",
- "generated_local": "Sun 22 Nov 2026, 15:14",
- "source_checked_at": "2026-11-22T14:14:40.259815+00:00",
+ "edition_id": "ed-20261122T180127532830Z",
+ "generated_at": "2026-11-22T18:01:27.532830+00:00",
+ "generated_local": "Sun 22 Nov 2026, 19:01",
+ "source_checked_at": "2026-11-22T18:01:27.532830+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-22T14:14:40.259815+00:00"
+  "run-2026-11-22T18:01:27.532830+00:00"
  ],
  "quality": {
-  "overall": "healthy"
+  "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-22T14:14:40.259815+00:00"
+  "completed_at": "2026-11-22T18:01:27.532830+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 28,
+   "item_count": 29,
    "reason": null,
    "failure": null,
-   "parsed_count": 28,
+   "parsed_count": 29,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -129,10 +129,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -141,10 +141,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 84,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 84,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -152,23 +152,28 @@
   {
    "name": "Topic: Zurich Insurance",
    "section": "news",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Topic: reinsurance",
    "section": "news",
    "status": "ok",
-   "item_count": 87,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 87,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -201,10 +206,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 106,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 106,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -213,10 +218,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 101,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 101,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -225,10 +230,10 @@
    "name": "Team: XV de France rugby",
    "section": "sport",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -248,14 +253,19 @@
   {
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
-   "status": "ok",
-   "item_count": 55,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 55,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "CulturePSG",
@@ -417,10 +427,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 10,
+   "item_count": 8,
    "reason": null,
    "failure": null,
-   "parsed_count": 10,
+   "parsed_count": 8,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -464,14 +474,19 @@
   {
    "name": "Bloomberg (via Google News)",
    "section": "finance",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "CNBC Markets",
@@ -684,9 +699,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002186,
-  "est_month_usd": 0.2,
-  "forecast_month_usd": 0.2,
+  "est_cost_usd": 0.002004,
+  "est_month_usd": 0.18,
+  "forecast_month_usd": 0.18,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -694,60 +709,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6392,
+    "latency_ms": 5733,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0f9187871545f3d1016b02f8d5ddfc87d18d65266ef1d0b1cc"
+     "resp_0c1e09517b2fabf8016b032e0299c887d0a54590fbdd942b43"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3354,
-    "output_tokens": 580,
-    "reasoning_tokens": 204
+    "cache_write_tokens": 3439,
+    "output_tokens": 492,
+    "reasoning_tokens": 108
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6265,
+    "latency_ms": 6113,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0be23ae60abd7128016b02f8dbc24887d190493fbe73c0e248"
+     "resp_084803ff97b7d0dd016b032e07beec87d0824e2392309f2d73"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3683,
-    "output_tokens": 659,
-    "reasoning_tokens": 324
+    "cache_write_tokens": 3739,
+    "output_tokens": 605,
+    "reasoning_tokens": 243
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 5220,
+    "latency_ms": 4280,
     "unknown": false,
     "provider_request_ids": [
-     "resp_06df856bf9de9e80016b02f8e1faac87d18440e44fc136ffb2"
+     "resp_0fb397643b27fa72016b032e0e6eb487d08ba15527cde433c9"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3212,
-    "output_tokens": 569,
-    "reasoning_tokens": 235
+    "cache_write_tokens": 3146,
+    "output_tokens": 328,
+    "reasoning_tokens": 0
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10249,
-  "output_tokens": 1808,
-  "reasoning_tokens": 763,
+  "cache_write_tokens": 10324,
+  "output_tokens": 1425,
+  "reasoning_tokens": 351,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 79,
-   "attempts": 237,
-   "known_cost_usd": 0.177519,
+   "recorded_runs": 80,
+   "attempts": 240,
+   "known_cost_usd": 0.179523,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -756,147 +771,155 @@
   "news": {
    "briefing": [
     {
-     "text": "COP31 talks ended without consensus after the EU and other parties rejected the proposed deal, leaving climate negotiations unresolved.",
+     "text": "COP31 ended without an agreement after the proposed text omitted fossil fuels, drawing objections from the EU, UK and others.",
      "sources": [
       {
-       "key": "5b0aacfcc7ad9fda",
-       "title": "COP31 climate talks see no consensus as EU, others reject deal - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQc3loZzVPSEw4YTN0RXZEdEpveVFkV0JoU0dtRTktZXR6LS1XVGRNVElxWHpWVUQ3eEhOMllBam9jYlNIX29HeW9ncUwyWkNhenBPcmRZeTNBNmt6MF96SkU5TS1zWUVBSEFOS0FMV1gwVmJoS3c3bGw4TjgwLUU5NTFOUEtzOWx3dy04NkhLMW9CMmJxM1dLeVRBRWMyVl9SY1A3THFB?oc=5",
+       "key": "a13ce2be8e707384",
+       "title": "Cop31 climate talks break down as key deal rejected",
+       "url": "https://www.theguardian.com/environment/2026/nov/22/cop31-climate-talks-set-to-end-in-deep-division-as-key-deal-rejected",
+       "source": "The Guardian World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Libyan authorities suspect a drone attack caused an explosion aboard a Russian ship docked in Benghazi; no one has claimed responsibility.",
+     "sources": [
+      {
+       "key": "f8b66eb2548eb644",
+       "title": "Libya's eastern government suspects drone attack caused explosion on Russian ship - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNSHNFQ2hvQUxyR05zYXIyVjczNjE3eEVLWWhMdk1mS01BQV91dy03OU5SSzVzbzlvVk1ManQ2TFhqU2xkRkhZcGthVlZad0E1aVRKU1E5ZWxJTWRQVG5UYmFYYmcxZGJ1TFc1YzE0a2E4XzQ4SGJLNjNlc0otTGhGRnRWTHpmeW1mWnVBLTNhYmFLU3JOUTVfSTliN19fMG9rRWlmeFdKNHFSU1JVTTdnQUNhUlBUWmRSTDVXUUJuUW9fNEV2cjNWdTlPZw?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "US governors are pressing for federal AI rules that preserve a role for states, putting federal-state authority at the center of AI policy debates.",
+     "text": "A proposal for a constitutional French budget “golden rule” has drawn support from Marine Le Pen and Thierry Breton, but criticism from economist Gabriel Zucman.",
      "sources": [
       {
-       "key": "fd2d454a59f23a4c",
-       "title": "Governors Call for Federal AI Rules Without Sidelining States - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY3RyYzZEdUFiQTZ6Zk1fQ1FxRmp5alkydktDU3lnSmIxeWdCbWxHbTJ0VDduQlozVnoyaUg5a193N0tjU2F0NHhYeFhwQ3lTZnlxVjZXazVOT2VEd2d3RTc0aFVYdUt6ZGtlaHpUVi05ZmxZekFwZ1hSTmwzdHdmRVhfSTlkdEY4VzJFbDBJUFRwek1pNTV4N1Q2eEpMMEhiUFJEU284cHh5Tl9GdXhCdER3?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Marine Le Pen says she never received confidential information from a prefect under investigation over alleged leaks to the RN.",
-     "sources": [
-      {
-       "key": "49063b098b44fa28",
-       "title": "Fuites vers le RN : Marine Le Pen dit n’avoir « jamais reçu d’informations confidentielles » du préfet Hugues Moutouh",
-       "url": "https://www.lemonde.fr/societe/article/2026/11/22/fuites-vers-le-rn-marine-le-pen-dit-n-avoir-jamais-recu-d-informations-confidentielles-du-prefet-hugues-moutouh_6814216_3224.html",
+       "key": "d35cc8fac981ac90",
+       "title": "L’idée d’une « règle d’or » budgétaire dans la Constitution soutenue par Marine Le Pen et Thierry Breton, critiquée par Gabriel Zucman",
+       "url": "https://www.lemonde.fr/politique/article/2026/11/22/l-idee-d-une-regle-d-or-budgetaire-dans-la-constitution-soutenue-par-marine-le-pen-et-thierry-breton-critiquee-par-gabriel-zucman_6814238_823448.html",
        "source": "Le Monde",
        "via": null
       }
      ]
     },
     {
-     "text": "Australia’s cyclone reinsurance pool faces calls for urgent changes from Townsville leaders, while the Treasury maintains that it is working.",
+     "text": "The US intelligence chief said Vladimir Putin is not America’s friend in Ukraine, underscoring continuing tensions over the war.",
      "sources": [
       {
-       "key": "8910fa0313e66d39",
-       "title": "Treasury insists cyclone reinsurance pool is working as Townsville leaders demand urgent change - Townsville Bulletin",
-       "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPdi1IWHFleDFrc1B6Ql92UDFsSEc1QkxURjZwei1PODFRVS14RW5fMi04dnZJUlU5MlFZZXNZSWF1dm15SmVZb1g2YzY1WXRxRi00Y2R0WXZ2U2diY01GTDc3Q1FLTUVIb1lSVDd6SFV5X0xqOGQxYjJlR3NTX25CVDVDeGpvV001UWg3ejBMb2VyRlFhUkZxYmcxWm9KSHd6b016SUg5ZVJDeGJqcDlyWUNucWtlakxzb2psSWkwY2FRUXk2ZDE4UzZ4WEYwUE90TEJpSDRVaDVEQk5tWEdiNS1rNDB6cEJOU3RHSHRwNGc1bnNxaERXQkpQTWJlZTJJVHRRQWdKMEkwTUJNYk1qRWJEVGlUQQ?oc=5",
-       "source": "Townsville Bulletin",
+       "key": "152a72ae52b69ba7",
+       "title": "US intelligence chief says Putin is 'not America's friend in Ukraine' - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNlR0aUswLUVNUWNuMk05NmJBSElCMzV6RWxDV2V4TmFicUFZWUFJR2pzQnd2VmNvQzhQTWtHTXZsMkkzcGMweEUyRE1FUlU1aXk5QkZCTk0tRE5fX1k2aU9jMmtOTndlTlVkaU5rT011UGgyMU1XX0JBQ3ZCb05qcEZYV3U2c003c3F3ZkRZamtvb3lDak8zR2o0dnJueWl6UkJ5RzBhTV9yUkpoaFVDVg?oc=5",
+       "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "In Italy, a proposed budget amendment would give municipalities six months to process old applications before a proposed tacit-approval measure takes effect.",
+     "text": "Elon Musk warned that delays in data-center construction could leave AI companies short of cash, according to Business Insider.",
      "sources": [
       {
-       "key": "31cf40943e182e57",
-       "title": "Proposta Lega, 6 mesi ai Comuni per evadere le vecchie domande o scatta il condono",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/22/proposta-lega-6-mesi-ai-comuni-per-evadere-le-vecchie-domande-o-scatta-il-condono_675e4d3d-a494-4c2a-b32e-edc1f15f1dce.html",
-       "source": "ANSA Top News",
-       "via": null
+       "key": "e9dd86939d77111d",
+       "title": "Elon Musk warns data center delays could leave AI companies short on cash: 'Going to be nuts' - Business Insider",
+       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVHlWLTdIcTV3OGZTb1Bpb1phbGJwXzdGQmRtc2MxSnZPaEgyN3ZaZmt2OHIxQ3k4OUdCQU1DLUhQTnRmNGxkVWJSU0hWdWVvSWF6R21ZbTh4Q1owZC1USFhiTlFMLVBZN2Z6Y3g5WXdxRHZuYkViRlFsVENOZzZMdTNMVTdiSjdkUDI1QTFnNVJBR213Qml6OUMzME53YkRo?oc=5",
+       "source": "Business Insider",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQc3loZzVPSEw4YTN0RXZEdEpveVFkV0JoU0dtRTktZXR6LS1XVGRNVElxWHpWVUQ3eEhOMllBam9jYlNIX29HeW9ncUwyWkNhenBPcmRZeTNBNmt6MF96SkU5TS1zWUVBSEFOS0FMV1gwVmJoS3c3bGw4TjgwLUU5NTFOUEtzOWx3dy04NkhLMW9CMmJxM1dLeVRBRWMyVl9SY1A3THFB?oc=5",
+     "url": "https://www.theguardian.com/environment/2026/nov/22/cop31-climate-talks-set-to-end-in-deep-division-as-key-deal-rejected",
+     "source": "The Guardian World",
+     "feed_name": "The Guardian World",
+     "via": null,
+     "published": "2026-11-22T16:14:46+00:00",
+     "new": true,
+     "key": "a13ce2be8e707384",
+     "title": "COP31 climate talks break down over fossil-fuel text",
+     "summary": "The EU, UK and other countries rejected the proposed deal, which did not mention fossil fuels."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNSHNFQ2hvQUxyR05zYXIyVjczNjE3eEVLWWhMdk1mS01BQV91dy03OU5SSzVzbzlvVk1ManQ2TFhqU2xkRkhZcGthVlZad0E1aVRKU1E5ZWxJTWRQVG5UYmFYYmcxZGJ1TFc1YzE0a2E4XzQ4SGJLNjNlc0otTGhGRnRWTHpmeW1mWnVBLTNhYmFLU3JOUTVfSTliN19fMG9rRWlmeFdKNHFSU1JVTTdnQUNhUlBUWmRSTDVXUUJuUW9fNEV2cjNWdTlPZw?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-11-22T12:38:37+00:00",
+     "published": "2026-11-22T17:17:43+00:00",
      "new": true,
-     "key": "5b0aacfcc7ad9fda",
-     "title": "COP31 talks end without consensus as EU and others reject deal",
-     "summary": "The EU and other parties rejected the main text, leaving the climate talks without consensus."
+     "key": "f8b66eb2548eb644",
+     "title": "Libyan authorities suspect drone attack on Russian ship",
+     "summary": "Libya’s eastern government suspects a drone attack caused an explosion aboard a Russian ship in port."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY3RyYzZEdUFiQTZ6Zk1fQ1FxRmp5alkydktDU3lnSmIxeWdCbWxHbTJ0VDduQlozVnoyaUg5a193N0tjU2F0NHhYeFhwQ3lTZnlxVjZXazVOT2VEd2d3RTc0aFVYdUt6ZGtlaHpUVi05ZmxZekFwZ1hSTmwzdHdmRVhfSTlkdEY4VzJFbDBJUFRwek1pNTV4N1Q2eEpMMEhiUFJEU284cHh5Tl9GdXhCdER3?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-22T13:00:00+00:00",
-     "new": true,
-     "key": "fd2d454a59f23a4c",
-     "title": "Governors call for federal AI rules without sidelining states",
-     "summary": "US governors are seeking federal AI rules that do not exclude states from policymaking."
-    },
-    {
-     "url": "https://www.lemonde.fr/societe/article/2026/11/22/fuites-vers-le-rn-marine-le-pen-dit-n-avoir-jamais-recu-d-informations-confidentielles-du-prefet-hugues-moutouh_6814216_3224.html",
+     "url": "https://www.lemonde.fr/politique/article/2026/11/22/l-idee-d-une-regle-d-or-budgetaire-dans-la-constitution-soutenue-par-marine-le-pen-et-thierry-breton-critiquee-par-gabriel-zucman_6814238_823448.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-11-22T14:01:15+00:00",
+     "published": "2026-11-22T17:21:58+00:00",
      "new": true,
-     "key": "49063b098b44fa28",
-     "title": "Le Pen denies receiving confidential information from prefect",
-     "summary": "Marine Le Pen said she had never received confidential information from prefect Hugues Moutouh."
+     "key": "d35cc8fac981ac90",
+     "title": "French budget-rule proposal draws support and criticism",
+     "summary": "Marine Le Pen and Thierry Breton support a proposed constitutional budget rule, while Gabriel Zucman criticises it."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPdi1IWHFleDFrc1B6Ql92UDFsSEc1QkxURjZwei1PODFRVS14RW5fMi04dnZJUlU5MlFZZXNZSWF1dm15SmVZb1g2YzY1WXRxRi00Y2R0WXZ2U2diY01GTDc3Q1FLTUVIb1lSVDd6SFV5X0xqOGQxYjJlR3NTX25CVDVDeGpvV001UWg3ejBMb2VyRlFhUkZxYmcxWm9KSHd6b016SUg5ZVJDeGJqcDlyWUNucWtlakxzb2psSWkwY2FRUXk2ZDE4UzZ4WEYwUE90TEJpSDRVaDVEQk5tWEdiNS1rNDB6cEJOU3RHSHRwNGc1bnNxaERXQkpQTWJlZTJJVHRRQWdKMEkwTUJNYk1qRWJEVGlUQQ?oc=5",
-     "source": "Townsville Bulletin",
-     "feed_name": "Topic: reinsurance",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNlR0aUswLUVNUWNuMk05NmJBSElCMzV6RWxDV2V4TmFicUFZWUFJR2pzQnd2VmNvQzhQTWtHTXZsMkkzcGMweEUyRE1FUlU1aXk5QkZCTk0tRE5fX1k2aU9jMmtOTndlTlVkaU5rT011UGgyMU1XX0JBQ3ZCb05qcEZYV3U2c003c3F3ZkRZamtvb3lDak8zR2o0dnJueWl6UkJ5RzBhTV9yUkpoaFVDVg?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-11-22T14:04:01+00:00",
+     "published": "2026-11-22T17:16:03+00:00",
      "new": true,
-     "key": "8910fa0313e66d39",
-     "title": "Australian cyclone reinsurance pool faces calls for change",
-     "summary": "Townsville leaders are demanding urgent changes to the cyclone reinsurance pool, while the Treasury says it is working."
+     "key": "152a72ae52b69ba7",
+     "title": "US intelligence chief says Putin is not America’s friend in Ukraine",
+     "summary": "The US intelligence chief said Putin is not America’s friend in Ukraine."
     },
     {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/22/proposta-lega-6-mesi-ai-comuni-per-evadere-le-vecchie-domande-o-scatta-il-condono_675e4d3d-a494-4c2a-b32e-edc1f15f1dce.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-11-22T12:39:55+00:00",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVHlWLTdIcTV3OGZTb1Bpb1phbGJwXzdGQmRtc2MxSnZPaEgyN3ZaZmt2OHIxQ3k4OUdCQU1DLUhQTnRmNGxkVWJSU0hWdWVvSWF6R21ZbTh4Q1owZC1USFhiTlFMLVBZN2Z6Y3g5WXdxRHZuYkViRlFsVENOZzZMdTNMVTdiSjdkUDI1QTFnNVJBR213Qml6OUMzME53YkRo?oc=5",
+     "source": "Business Insider",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-22T17:49:00+00:00",
      "new": true,
-     "key": "31cf40943e182e57",
-     "title": "Lega proposes tacit approval for unresolved municipal applications",
-     "summary": "A Lega proposal would give municipalities six months to resolve old applications before tacit approval applies."
+     "key": "e9dd86939d77111d",
+     "title": "Musk warns data-center delays could leave AI firms short of cash",
+     "summary": "Elon Musk warned that data-center delays could leave AI companies short on cash."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-22T14:14:40.259815+00:00",
-   "input_fingerprint": "sha256:f89168ca0ca58fdcb98ae9e3e7d0c5ebca6d29a92046c172960829f87e48d733",
-   "last_success_at": "2026-11-22T14:14:40.259815+00:00",
-   "candidate_count": 329,
+   "state": "degraded",
+   "source_checked_at": "2026-11-22T18:01:27.532830+00:00",
+   "input_fingerprint": "sha256:06769c17232d647883124aabb504017b67422399aafa2b7c8281af6819ecb894",
+   "last_success_at": "2026-11-22T18:01:27.532830+00:00",
+   "error": "Source check failed: Topic: Zurich Insurance",
+   "candidate_count": 333,
    "new_count": 5
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG confirmed that Désiré Doué tore the ACL in his right knee, a major injury that will sideline the forward for an extended period.",
+     "text": "Désiré Doué has torn his anterior cruciate ligament, ending his season; the injury leaves PSG short in attack and prompts discussion of a possible transfer-market response.",
      "sources": [
       {
-       "key": "34afa522c2a6e8e6",
-       "title": "Football. Le verdict est tombé pour Désiré Doué : l’attaquant français du PSG souffre d’une rupture du ligament croisé antérieur du genou droit - Sud Ouest",
-       "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNaklMWUtJTzk3SFFUUlktUTByd0hnZ3o3aVB6OS1ndkE0YURNYldFTnBYN0JKM19NazRkbkFhakhTMzZSa3U2V0kzcEUzb0xRRU1vOHAwSGVKZTJkZU5CNDE2U3E1YUVTYTE3emQ0WVZMZk5jeEl2V1M5YjRhazY5c3lJbmtJN0ZvZDI5UzRBb3NRUnJqYU9ZbEk4Y29fRkZEaTZ5dzF0RVB6dGhfcVpPNjhLUEVZYVVaa1pyTFhoUUdGc2lTRWxXYjlobTZrSGRMeGg4NC1CYzVvN2RiaE5rdXNfZ2RkUWtsakFMbEpWRkg0VnZCOUxjWU41LUZOYlc3UkRNLXdZYUxULUE1OWxYdEM1ME5Wd0VQZTJJZlVsWjROWXAzTGc?oc=5",
-       "source": "Sud Ouest",
+       "key": "4194385ba960eb62",
+       "title": "Blessé, Doué pousse le PSG à refaire une Kvaratskhelia 2025",
+       "url": "https://www.culturepsg.com/news/mercato/blesse-doue-pousse-le-psg-a-refaire-une-kvaratskhelia-2025/61626",
+       "source": "CulturePSG",
+       "via": null
+      },
+      {
+       "key": "2cfb12906a3bfd74",
+       "title": "Mercato PSG : après la blessure de Désiré Doué, Paris va se mettre en quête de la perle rare - Le Parisien",
+       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNeWVFZ2c0cDhlRVdVSE9lZXU5UnZDVkRjQlJNZk9uVG9oa2QxWHNVZUZFbWNzaFVPVndfRUhGbkVMbVptVzlOLS1rUzFvVXdLb0JHQ2lYTUstUlRZTjNPVUxVQzBzSHEyMjYxbjhrdERfdVhtTmF1bDRKRXE0UDNWdkZpNjU3dV9COUNOQ2xKVkVtV25DS3d3aHlkOG1YRnhvcDBmVVFYM0ZXSE82bkY3eXFZYm0zMW9MY1BDSnVfSjBDc2oxNnlYYnJaV1ZjQXFMdlNXcnNmRHRMalBmMVBSeU9oU2NxOHlKMkt4ZXI1QWQtTUM3Y1lXRHJ4SGV5M2FkVHNwS1VOa2o?oc=5",
+       "source": "Le Parisien",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "PSG beat Nice 3-2; CulturePSG’s match analysis says the visitors largely controlled the game despite conceding twice.",
+     "text": "PSG beat Nice 3–2 despite conceding twice; CulturePSG’s match analysis says the win was deserved, though Doué’s injury overshadowed it.",
      "sources": [
       {
        "key": "5e42626f15e63d1b",
@@ -904,35 +927,42 @@
        "url": "https://www.culturepsg.com/news/match/nice-psg-2-3-les-performances-individuelles/61622",
        "source": "CulturePSG",
        "via": null
+      },
+      {
+       "key": "4194385ba960eb62",
+       "title": "Blessé, Doué pousse le PSG à refaire une Kvaratskhelia 2025",
+       "url": "https://www.culturepsg.com/news/mercato/blesse-doue-pousse-le-psg-a-refaire-une-kvaratskhelia-2025/61626",
+       "source": "CulturePSG",
+       "via": null
       }
      ]
     },
     {
-     "text": "France’s XV reached the Nations Championship final after beating Argentina.",
+     "text": "France have recalled Thomas Ramos for their final against South Africa, while Grandidier-Nkanang is out and the back three needs reshaping.",
      "sources": [
       {
-       "key": "6b88da0156c037e1",
-       "title": "Championnat des nations de rugby : le XV de France en finale - DHnet",
-       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTklKcXdualhTWmFFU1VMSHk2OE0tZjFOY3JXN3BRaVZ4WUNnaEg3VERSdzNRNWpzTHE5azdQb2FXekhpdnpjOUFSOHNua0IxOFFqRFBOdGZ6V2FTc0tfUmNvOUFZaTRpTU5jckZ5WnROTnlIM1BFS1A3T1JKY0o0a09VNG1COC1zTEVqbWFWVWlJNG9LSlRaQXVIcUhBNm4tT2pidnp6OFNCQQ?oc=5",
-       "source": "DHnet",
+       "key": "eb6778e636df5928",
+       "title": "Ramos de retour avec le XV de France pour la finale contre les Boks - 20 Minutes",
+       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQM2tBZzlienJEQ0NvdG9mUFNvMlRPWXU5X1VPZzMxc3R1TEdkMTVWeW5HOGZTMVVLSVppcjhac0pLT0ZsY2R5T1JnU21uOW1VQ3dER3Z1YWZ0TUtKZXQwM2JaSjJNSXZBN3B0VmZVdUZsWS1PY0lBWWZsRWs4aUFQV2lIbTk3YWllcnkzMkk1Tlk3bG1hMElKOXJDYXFrcXdmenVCOTZUS0FQVFpLdE9nMkVNVEdaY1hleHNxMGY4NGVIcWVNOGJGRVlHTWdabVpK?oc=5",
+       "source": "20 Minutes",
        "via": "Google News"
       },
       {
-       "key": "e863559dfb39f344",
-       "title": "\"Les joueurs ont réussi un exploit digne de ce nom\" : le XV de France savoure sa victoire contre l'Argentine - franceinfo",
-       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPbGl5V3NNZGhWWlhOd1YybGRyaXoyNlBCYlpCS3BhMFM5RDJVZGZBWjRWU2laUUlQZS1rYnN2WDR6WDQ3d2FPaUg4MWdfTHJXcmRLNjliNWFxbDB6UFYtdld6Z2N0UVR6TGxMU2h4NTFZb3I2X21heWR6QjE1Y200cktobjBpczVaZ3c1NF9mOXVnc2ZUMnc3QXJHUUVnYzh0UW9yaHlNRDM3V2s5V0oxOHJjcG9WcXVvY0puQ0hyMVhSN1NSMEFvYUMyT3dTeEQ2U1JLR29LMFZCU0stZFlaNTFEX0xVWVNmWkxlcmQxeTlXekk1WTl5SU5uM1E5V1gzZlE?oc=5",
-       "source": "franceinfo",
+       "key": "6c00c2f65b7a8c0b",
+       "title": "XV de France : Ramos de retour face à l’Afrique du Sud, Grandidier-Nkanang out et un fond de terrain à recomposer - Sud Ouest",
+       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPSWJaXzd3aS1mUmczRC1WOGVHQmNDbGxhdzlwNFlTU0VfeS16OGFCazV1engwcW1kNHY1d3RMMUQwQWlVU0U0RjhpWFJXcXY0NV8zNGRoM0g4TWhIUFdNYmJJVy16UTlzLWYyczVKSTdYcWdjZ2xBbEVmWEFJQzlaRk1xTFNQY0g2TGZmZkFVREZBNEdBWjF3NXJBNEpaYUkwM01OcTNud0UtZHVkTFFhQTEtUXV2YUZ0Z1Mwc0pUeWF0b0VYVUttMHZQSU9DNE01MGo0TXJjdFc0Qm5fWE1EdVAtY2ctNGdrTDlSaEFTZk4?oc=5",
+       "source": "Sud Ouest",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Roma arrive at the Parc des Princes for Wednesday’s Champions League match after a 5-1 win over Parma.",
+     "text": "PSG’s U19 side lost 3–2 away to Quevilly, their second league defeat of the season.",
      "sources": [
       {
-       "key": "7977d3978555e5a7",
-       "title": "Avant le PSG, la Roma et Malen en pleine forme",
-       "url": "https://www.culturepsg.com/news/europe/avant-le-psg-la-roma-et-malen-en-pleine-forme/61624",
+       "key": "e0a9ab5193f61203",
+       "title": "Les U19 du PSG piétinent en championnat",
+       "url": "https://www.culturepsg.com/news/formation/les-u19-du-psg-pietinent-en-championnat/61628",
        "source": "CulturePSG",
        "via": null
       }
@@ -941,37 +971,26 @@
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/club/kvaratskhelia-recoit-un-nouvel-hommage-d-un-proche-coequipier/61625",
+     "url": "https://www.culturepsg.com/news/mercato/blesse-doue-pousse-le-psg-a-refaire-une-kvaratskhelia-2025/61626",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-22T14:12:00+00:00",
+     "published": "2026-11-22T17:26:00+00:00",
      "new": true,
-     "key": "15ee551d2a7cba98",
-     "title": "Davitashvili pays tribute to Kvaratskhelia",
-     "summary": "Zuriko Davitashvili performed Khvicha Kvaratskhelia’s signature celebration as a tribute to the injured PSG player."
+     "key": "4194385ba960eb62",
+     "title": "Doué’s injury leaves PSG facing another transfer-market decision",
+     "summary": "After losing Khvicha Kvaratskhelia, PSG have now seen Désiré Doué suffer a serious knee injury at Nice."
     },
     {
-     "url": "https://www.culturepsg.com/news/match/comment-regarder-nice-psg-a-l-etranger/61604",
+     "url": "https://www.culturepsg.com/news/formation/les-u19-du-psg-pietinent-en-championnat/61628",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-21T09:01:00+00:00",
+     "published": "2026-11-22T14:15:14+00:00",
      "new": true,
-     "key": "46d29dd4c9914413",
-     "title": "Comment regarder Nice/PSG à l'étranger",
-     "summary": "Le match Nice/PSG de ce samedi (17h15 en France) comptant pour la 11e journée de Ligue 1 sera diffusé sur de nombreuses chaînes à l'étranger. Voici la liste complète."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNaklMWUtJTzk3SFFUUlktUTByd0hnZ3o3aVB6OS1ndkE0YURNYldFTnBYN0JKM19NazRkbkFhakhTMzZSa3U2V0kzcEUzb0xRRU1vOHAwSGVKZTJkZU5CNDE2U3E1YUVTYTE3emQ0WVZMZk5jeEl2V1M5YjRhazY5c3lJbmtJN0ZvZDI5UzRBb3NRUnJqYU9ZbEk4Y29fRkZEaTZ5dzF0RVB6dGhfcVpPNjhLUEVZYVVaa1pyTFhoUUdGc2lTRWxXYjlobTZrSGRMeGg4NC1CYzVvN2RiaE5rdXNfZ2RkUWtsakFMbEpWRkg0VnZCOUxjWU41LUZOYlc3UkRNLXdZYUxULUE1OWxYdEM1ME5Wd0VQZTJJZlVsWjROWXAzTGc?oc=5",
-     "source": "Sud Ouest",
-     "feed_name": "Team: équipe de France football",
-     "via": "Google News",
-     "published": "2026-11-22T13:29:13+00:00",
-     "new": true,
-     "key": "34afa522c2a6e8e6",
-     "title": "Désiré Doué suffers ACL rupture",
-     "summary": "The PSG forward suffered an anterior cruciate ligament rupture in his right knee."
+     "key": "e0a9ab5193f61203",
+     "title": "PSG U19s stumble in the league",
+     "summary": "PSG’s U19s lost 3–2 away to Quevilly, their second defeat of the season."
     },
     {
      "url": "https://www.culturepsg.com/news/match/nice-psg-2-3-les-performances-individuelles/61622",
@@ -981,160 +1000,133 @@
      "published": "2026-11-21T23:59:17+00:00",
      "new": false,
      "key": "5e42626f15e63d1b",
-     "title": "Nice 2-3 PSG: individual performances",
-     "summary": "PSG won at Nice, with CulturePSG describing the performance as controlled despite two goals conceded."
+     "title": "PSG’s individual performances in the 3–2 win at Nice",
+     "summary": "CulturePSG assesses the players after PSG’s deserved victory, despite conceding twice."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTklKcXdualhTWmFFU1VMSHk2OE0tZjFOY3JXN3BRaVZ4WUNnaEg3VERSdzNRNWpzTHE5azdQb2FXekhpdnpjOUFSOHNua0IxOFFqRFBOdGZ6V2FTc0tfUmNvOUFZaTRpTU5jckZ5WnROTnlIM1BFS1A3T1JKY0o0a09VNG1COC1zTEVqbWFWVWlJNG9LSlRaQXVIcUhBNm4tT2pidnp6OFNCQQ?oc=5",
-     "source": "DHnet",
+     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPSWJaXzd3aS1mUmczRC1WOGVHQmNDbGxhdzlwNFlTU0VfeS16OGFCazV1engwcW1kNHY1d3RMMUQwQWlVU0U0RjhpWFJXcXY0NV8zNGRoM0g4TWhIUFdNYmJJVy16UTlzLWYyczVKSTdYcWdjZ2xBbEVmWEFJQzlaRk1xTFNQY0g2TGZmZkFVREZBNEdBWjF3NXJBNEpaYUkwM01OcTNud0UtZHVkTFFhQTEtUXV2YUZ0Z1Mwc0pUeWF0b0VYVUttMHZQSU9DNE01MGo0TXJjdFc0Qm5fWE1EdVAtY2ctNGdrTDlSaEFTZk4?oc=5",
+     "source": "Sud Ouest",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-22T14:07:30+00:00",
+     "published": "2026-11-22T16:54:08+00:00",
      "new": true,
-     "key": "6b88da0156c037e1",
-     "title": "France reach Nations Championship final",
-     "summary": "The France rugby team advanced to the Nations Championship final."
-    },
-    {
-     "url": "https://www.culturepsg.com/news/europe/avant-le-psg-la-roma-et-malen-en-pleine-forme/61624",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-22T11:19:00+00:00",
-     "new": false,
-     "key": "7977d3978555e5a7",
-     "title": "Roma thrash Parma ahead of PSG visit",
-     "summary": "Roma beat Parma 5-1 four days before their Champions League trip to PSG."
+     "key": "6c00c2f65b7a8c0b",
+     "title": "Ramos returns as France reshape their back three for South Africa final",
+     "summary": "Thomas Ramos is back, Grandidier-Nkanang is out, and France must reorganise their back three."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-22T14:14:40.259815+00:00",
-   "input_fingerprint": "sha256:c8dc4344f927022d2924c98e43833269603fdef1de8a7e7ed6540280cefe7090",
-   "last_success_at": "2026-11-22T14:14:40.259815+00:00",
-   "candidate_count": 393,
-   "new_count": 4
+   "state": "degraded",
+   "source_checked_at": "2026-11-22T18:01:27.532830+00:00",
+   "input_fingerprint": "sha256:8ddb81b236a7d425982f129c25bf268a9a8b28fe9f2f6b2197ab3d7b8b938fce",
+   "last_success_at": "2026-11-22T18:01:27.532830+00:00",
+   "error": "Source check failed: Team: Team Vitality Counter-Strike",
+   "candidate_count": 400,
+   "new_count": 3
   },
   "finance": {
    "briefing": [
     {
-     "text": "China cut its stock-market margin requirement to 80% to boost liquidity, while South Korea rolled out phased measures to stabilize volatile markets.",
+     "text": "US equity selling is being tested for whether it signals a routine correction or a deeper repricing; the scale of the recent slide makes this the key risk for diversified equity exposure.",
      "sources": [
       {
-       "key": "95591eab87d1b1bc",
-       "title": "China Lowers Margin Requirement to 80% to Boost Stock Liquidity - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOQ0lsWGMtQzFaN3pHeFA3ZFVNLWdHN0lDcVZESDA4UFZUVlVpXzhTdllpOHhTZDBzX2pvT3dEdDNZS1laUnh0bzVWZS16WXZyYlVvTW5qU3VVOXVzSzFVTlRWbzB2eFhoS0VVVk14WGU0aGQxLUxaOG1Gb01lTURmMERJaDhEVkVoNXdxdFNLTVZLdXFGWjZ4WWJWajV4NmZaTEhuUmFLY1BzVHQxQTRoZ1l4WQ?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      },
-      {
-       "key": "f4a2406aaf80fc84",
-       "title": "S. Korea Rolls Out Phased Measures to Stabilize Volatile Markets - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYVRMcEsxcVVCNE9DVnI3U3hWT040d25KN0lPMUY5eEtTb2pWZmU4ZVFsYVoyWHNBc2t5UmhzbHNJXzVoMUpnTm5VOVRIbE1reEc2M0NWSmNwUmFaQURMOGEydnUzUzJaeS1HQVEwMjNmTkFVLTgtTnk1ekx1dFNaTVVWV1MzV3dRajhYcUpxdkoySkZHbkdyb3h3V29tYkNHcXFUUlFIclRTb0pUSnlPSWJ3aGQ?oc=5",
-       "source": "Bloomberg.com",
+       "key": "8369a04390e090e7",
+       "title": "Correction or deeper reckoning? Investors seek signs US stock selling will abate - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFRxak5ZYUFPNWxVbzlJdy1Mcm9xMTRVZ0ctY205NFVGVEFtcDdFNG1Iem05TjVBcnYzWUVUeXcyWndZNlpnR25GMW5GdkJ2blJjeUdXdlhvZ1VqNWpVSGdYX1RsQ1F3eUhkRUFaX0lxQTNnVFNySmphdG1KM2Y0NTZrdGRoTWxEaE0ybmVSUnBtdDB2VW9tWGtrYkZfUmZUaUdxWDUyUEZGZ2tSajBqSTJydzNhb2xwaTctX21xQmxmXzFyZ1BIWE80ZF8?oc=5",
+       "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "The FT’s week-ahead preview asks whether Anthropic’s prospective IPO can buck the tech sell-off, a key test of appetite for AI listings.",
+     "text": "Compass is preparing to shift its main listing to New York, a notable potential move by a large UK-listed company amid continuing pressure on London’s market.",
      "sources": [
       {
-       "key": "2480e7e6ec8947cf",
-       "title": "Will Anthropic’s IPO buck the tech sell-off?",
-       "url": "https://www.ft.com/content/1dc8290b-8100-434d-963c-79002c15f244?syn-25a6b1a6=1",
-       "source": "FT Markets",
+       "key": "5b3c99f90efa3811",
+       "title": "FTSE 100 catering giant Compass plans to move main listing to New York",
+       "url": "https://www.ft.com/content/7b48ea5e-6372-4bb7-ae5c-8b7ddd020883?syn-25a6b1a6=1",
+       "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "A new US housing report highlights the strain of surging mortgage rates on home ownership.",
+     "text": "Climate negotiations ended without agreement after a stand-off over fossil fuels, underscoring geopolitical divisions that could complicate policy and investment planning.",
      "sources": [
       {
-       "key": "20f0b26fb348a836",
-       "title": "The American dream of home ownership recedes as mortgage rates surge - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOakE3UkFGYmpBeUtjdUJRRkQwNzhTZDdvc3R5dmd5SUJMLTV6ODEyS1BNeUpqTXJldFFvY3lMMjlWRU00VGFFRGN3cno3dkNqYkJVZGs2YlJfNEtxdEF2T1dBaTBoemFRTzZsVHFtWkdZTnZweFMzTnZ1M3M3M2x3RHZIYzA?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
+       "key": "37ebe1ed4d6f3d39",
+       "title": "COP31 climate talks fail after stand-off over fossil fuels",
+       "url": "https://www.ft.com/content/1b6089f6-2201-43b4-8ed4-0c689a916afa?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
       }
      ]
     },
     {
-     "text": "Laurence Boone is set to take a strategic role overseeing markets at the ECB, according to Les Echos.",
+     "text": "Bitcoin’s decline has put mining economics and network security back in focus, though the coverage offers no clear near-term market catalyst.",
      "sources": [
       {
-       "key": "681d5cf64c45a54c",
-       "title": "Laurence Boone, une économiste éclectique au poste stratégique de responsable des marchés de la BCE - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPWDYtUm5ZcEFpWTFYdVRIRThzdUExVndMMGFlTFdZSWctRDg0UkdyU3IzTkNTYnJOU2pqcVFHbnJsX09mSVYwdE11ZDN0RFpwMEhFaVJMVGxvbEcxU0dmSW5pZS1XWnFndHdpVGJpRXQ2MHFfSWM1NjFUZ1hmVmZuc1F5aXZFQWdFZkJKak54SXN6bFRqWjl3UUJwRUNfWmZTNzhHQkVWRVZISTVDRml1UDVjeFlJQWVsY1hLTDFVMmZxX0llQ2F5MkV2TWI4UkVUQzQ2bU0yX0hQOFVPRVNYVmtPbWRoUmFWWm5LQV9HS0dpZ2VPdWRPeA?oc=5",
-       "source": "Les Echos",
-       "via": "Google News"
+       "key": "ffae009bc0b11ae7",
+       "title": "Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins",
+       "url": "https://www.coindesk.com/tech/2026/11/22/bitcoin-s-quantum-security-challenge-extends-to-bridges-custodians-and-millions-of-coins",
+       "source": "CoinDesk",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOQ0lsWGMtQzFaN3pHeFA3ZFVNLWdHN0lDcVZESDA4UFZUVlVpXzhTdllpOHhTZDBzX2pvT3dEdDNZS1laUnh0bzVWZS16WXZyYlVvTW5qU3VVOXVzSzFVTlRWbzB2eFhoS0VVVk14WGU0aGQxLUxaOG1Gb01lTURmMERJaDhEVkVoNXdxdFNLTVZLdXFGWjZ4WWJWajV4NmZaTEhuUmFLY1BzVHQxQTRoZ1l4WQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFRxak5ZYUFPNWxVbzlJdy1Mcm9xMTRVZ0ctY205NFVGVEFtcDdFNG1Iem05TjVBcnYzWUVUeXcyWndZNlpnR25GMW5GdkJ2blJjeUdXdlhvZ1VqNWpVSGdYX1RsQ1F3eUhkRUFaX0lxQTNnVFNySmphdG1KM2Y0NTZrdGRoTWxEaE0ybmVSUnBtdDB2VW9tWGtrYkZfUmZUaUdxWDUyUEZGZ2tSajBqSTJydzNhb2xwaTctX21xQmxmXzFyZ1BIWE80ZF8?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-11-22T12:25:17+00:00",
+     "published": "2026-11-22T12:22:12+00:00",
      "new": true,
-     "key": "95591eab87d1b1bc",
-     "title": "China lowers stock-market margin requirement to 80%",
-     "summary": "China lowered its margin requirement to 80% in an effort to boost stock-market liquidity."
+     "key": "8369a04390e090e7",
+     "title": "Investors look for signs US stock selling will abate",
+     "summary": "Investors are debating whether US stock selling is a correction or a deeper market reckoning."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYVRMcEsxcVVCNE9DVnI3U3hWT040d25KN0lPMUY5eEtTb2pWZmU4ZVFsYVoyWHNBc2t5UmhzbHNJXzVoMUpnTm5VOVRIbE1reEc2M0NWSmNwUmFaQURMOGEydnUzUzJaeS1HQVEwMjNmTkFVLTgtTnk1ekx1dFNaTVVWV1MzV3dRajhYcUpxdkoySkZHbkdyb3h3V29tYkNHcXFUUlFIclRTb0pUSnlPSWJ3aGQ?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-22T12:52:16+00:00",
-     "new": true,
-     "key": "f4a2406aaf80fc84",
-     "title": "South Korea rolls out phased measures to stabilize volatile markets",
-     "summary": "South Korea introduced phased measures aimed at stabilizing volatile markets."
-    },
-    {
-     "url": "https://www.ft.com/content/1dc8290b-8100-434d-963c-79002c15f244?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
+     "url": "https://www.ft.com/content/7b48ea5e-6372-4bb7-ae5c-8b7ddd020883?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
      "via": null,
-     "published": "2026-11-22T12:00:06+00:00",
+     "published": "2026-11-22T16:43:09+00:00",
      "new": true,
-     "key": "2480e7e6ec8947cf",
-     "title": "Will Anthropic’s IPO buck the tech sell-off?",
-     "summary": "The FT’s week-ahead preview considers whether Anthropic’s IPO can withstand the technology sell-off."
+     "key": "5b3c99f90efa3811",
+     "title": "Compass plans to move main listing to New York",
+     "summary": "The £43bn catering group is set to announce its intention to move its main listing to New York."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOakE3UkFGYmpBeUtjdUJRRkQwNzhTZDdvc3R5dmd5SUJMLTV6ODEyS1BNeUpqTXJldFFvY3lMMjlWRU00VGFFRGN3cno3dkNqYkJVZGs2YlJfNEtxdEF2T1dBaTBoemFRTzZsVHFtWkdZTnZweFMzTnZ1M3M3M2x3RHZIYzA?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-22T11:00:06+00:00",
+     "url": "https://www.ft.com/content/1b6089f6-2201-43b4-8ed4-0c689a916afa?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-22T13:50:41+00:00",
      "new": true,
-     "key": "20f0b26fb348a836",
-     "title": "US homeownership dream recedes as mortgage rates surge",
-     "summary": "Surging mortgage rates are making home ownership less attainable in the United States."
+     "key": "37ebe1ed4d6f3d39",
+     "title": "COP31 talks fail over fossil fuels",
+     "summary": "Climate negotiations collapsed after a stand-off over fossil fuels exposed divisions between Arab states and an EU-led coalition."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPWDYtUm5ZcEFpWTFYdVRIRThzdUExVndMMGFlTFdZSWctRDg0UkdyU3IzTkNTYnJOU2pqcVFHbnJsX09mSVYwdE11ZDN0RFpwMEhFaVJMVGxvbEcxU0dmSW5pZS1XWnFndHdpVGJpRXQ2MHFfSWM1NjFUZ1hmVmZuc1F5aXZFQWdFZkJKak54SXN6bFRqWjl3UUJwRUNfWmZTNzhHQkVWRVZISTVDRml1UDVjeFlJQWVsY1hLTDFVMmZxX0llQ2F5MkV2TWI4UkVUQzQ2bU0yX0hQOFVPRVNYVmtPbWRoUmFWWm5LQV9HS0dpZ2VPdWRPeA?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
-     "via": "Google News",
-     "published": "2026-11-22T13:00:09+00:00",
+     "url": "https://www.coindesk.com/tech/2026/11/22/bitcoin-s-quantum-security-challenge-extends-to-bridges-custodians-and-millions-of-coins",
+     "source": "CoinDesk",
+     "feed_name": "CoinDesk",
+     "via": null,
+     "published": "2026-11-22T14:00:00+00:00",
      "new": true,
-     "key": "681d5cf64c45a54c",
-     "title": "Laurence Boone takes strategic ECB markets role",
-     "summary": "Les Echos reports that economist Laurence Boone is taking a strategic role overseeing markets at the ECB."
+     "key": "ffae009bc0b11ae7",
+     "title": "Bitcoin’s quantum security challenge extends beyond the network",
+     "summary": "Bitcoin’s quantum risks extend to bridges, custodians and coins that could take time to move if the network needs upgrades."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-22T14:14:40.259815+00:00",
-   "input_fingerprint": "sha256:e28b289bc115b2ffbe82dff04f86b2923b77c6dde048e679f675e533443e720b",
-   "last_success_at": "2026-11-22T14:14:40.259815+00:00",
+   "state": "degraded",
+   "source_checked_at": "2026-11-22T18:01:27.532830+00:00",
+   "input_fingerprint": "sha256:a2262f2592dd467cdc776898131e1ea110c0d1fed1eb3d90cfa47d5fa28a52bb",
+   "last_success_at": "2026-11-22T18:01:27.532830+00:00",
+   "error": "Source check failed: Bloomberg (via Google News)",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1227,8 +1219,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 60651.43,
-     "change_pct": 0.93,
+     "price": 60732.66,
+     "change_pct": 1.06,
      "currency": "USD",
      "as_of": "2026-11-22T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1238,8 +1230,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1704.79,
-     "change_pct": 1.34,
+     "price": 1712.34,
+     "change_pct": 1.79,
      "currency": "USD",
      "as_of": "2026-11-22T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1247,12 +1239,22 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 123,
-   "new_count": 5
+   "candidate_count": 87,
+   "new_count": 4
   },
   "media": {
    "briefing": "",
    "items": [
+    {
+     "title": "Iran Just Struck Bahrain and Kuwait",
+     "url": "https://www.youtube.com/watch?v=f3xHbkV3ZkA",
+     "source": "Preston Stewart",
+     "kind": "video",
+     "published": "2026-11-22T17:00:37+00:00",
+     "duration_s": null,
+     "new": true,
+     "key": "080ff7f7b2822d75"
+    },
     {
      "title": "❌ Non...",
      "url": "https://www.youtube.com/watch?v=5yoAr5UKqWg",
@@ -1260,7 +1262,7 @@
      "kind": "video",
      "published": "2026-11-22T12:46:56+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "a0042a2c3bc43aa9"
     },
     {
@@ -1322,34 +1324,14 @@
      "duration_s": 1305,
      "new": false,
      "key": "1903054be13d10d4"
-    },
-    {
-     "title": "The Wounded Volunteer Who Went Right Back to the Front",
-     "url": "https://www.youtube.com/watch?v=yzUL1mciJJ8",
-     "source": "Preston Stewart",
-     "kind": "video",
-     "published": "2026-11-19T17:00:24+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "af6ccb93c657f993"
-    },
-    {
-     "title": "Egypt Suddenly Enters The Saudi War: A New Middle East Without The U.S. | VisualPolitik EN",
-     "url": "https://www.youtube.com/watch?v=io-EkH4pe9c",
-     "source": "VisualPolitik EN",
-     "kind": "video",
-     "published": "2026-11-19T14:23:34+00:00",
-     "duration_s": null,
-     "new": false,
-     "key": "5e484b3631d65619"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-22T14:14:40.259815+00:00",
-   "candidate_count": 9,
+   "source_checked_at": "2026-11-22T18:01:27.532830+00:00",
+   "candidate_count": 8,
    "new_count": 1
   }
  },
- "scheduled_slot": "2026-11-22T12:00:00Z"
+ "scheduled_slot": "2026-11-22T18:00:00.000Z"
 }
