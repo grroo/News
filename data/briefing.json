@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261124T180129989688Z",
- "generated_at": "2026-11-24T18:01:29.989688+00:00",
- "generated_local": "Tue 24 Nov 2026, 19:01",
- "source_checked_at": "2026-11-24T18:01:29.989688+00:00",
+ "edition_id": "ed-20261124T182124095754Z",
+ "generated_at": "2026-11-24T18:21:24.095754+00:00",
+ "generated_local": "Tue 24 Nov 2026, 19:21",
+ "source_checked_at": "2026-11-24T18:21:24.095754+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-24T18:01:29.989688+00:00"
+  "run-2026-11-24T18:21:24.095754+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-24T18:01:29.989688+00:00"
+  "completed_at": "2026-11-24T18:21:24.095754+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -44,19 +44,14 @@
   {
    "name": "Reuters (via Google News)",
    "section": "news",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "The Guardian World",
@@ -139,10 +134,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 106,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 106,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -151,10 +146,10 @@
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 86,
+   "item_count": 85,
    "reason": null,
    "failure": null,
-   "parsed_count": 86,
+   "parsed_count": 85,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -163,10 +158,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 52,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 52,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -174,19 +169,14 @@
   {
    "name": "Topic: reinsurance",
    "section": "news",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Topic: European Central Bank",
@@ -204,10 +194,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 109,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 109,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -216,10 +206,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 101,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 101,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -228,10 +218,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -252,10 +242,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 107,
+   "item_count": 108,
    "reason": null,
    "failure": null,
-   "parsed_count": 107,
+   "parsed_count": 108,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -264,10 +254,10 @@
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 56,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 56,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -420,10 +410,10 @@
    "name": "Ethereum",
    "section": "finance",
    "status": "ok",
-   "item_count": 18,
+   "item_count": 19,
    "reason": null,
    "failure": null,
-   "parsed_count": 18,
+   "parsed_count": 19,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -455,28 +445,23 @@
   {
    "name": "FT (via Google News)",
    "section": "finance",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Reuters Business (via Google News)",
    "section": "finance",
    "status": "ok",
-   "item_count": 99,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 99,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -704,9 +689,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.001992,
-  "est_month_usd": 0.18,
-  "forecast_month_usd": 0.18,
+  "est_cost_usd": 0.00221,
+  "est_month_usd": 0.2,
+  "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -714,60 +699,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 5896,
+    "latency_ms": 6477,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0df6a364bd3304e6016b05d102789487d1a64ef1ab3932a382"
+     "resp_0b3711031d978799016b05d5ab700087d2988f15d3ba125184"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3282,
-    "output_tokens": 581,
-    "reasoning_tokens": 156
+    "cache_write_tokens": 3281,
+    "output_tokens": 427,
+    "reasoning_tokens": 0
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 3175,
+    "latency_ms": 7953,
     "unknown": false,
     "provider_request_ids": [
-     "resp_028b7513ff7c55f6016b05d107a19087d1bbd38a57f131483e"
+     "resp_081a8f34c20f7445016b05d5b0e53087d295925c8adfb6e4c3"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3585,
-    "output_tokens": 182,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3575,
+    "output_tokens": 675,
+    "reasoning_tokens": 450
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 5963,
+    "latency_ms": 6562,
     "unknown": false,
     "provider_request_ids": [
-     "resp_09db080267e18a7f016b05d10ad02c87d1b1c51d2da33b98e2"
+     "resp_0687c6306af813f6016b05d5b8cb5487d29e951695184c4ef6"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3404,
-    "output_tokens": 652,
-    "reasoning_tokens": 271
+    "cache_write_tokens": 3322,
+    "output_tokens": 770,
+    "reasoning_tokens": 283
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10271,
-  "output_tokens": 1415,
-  "reasoning_tokens": 427,
+  "cache_write_tokens": 10178,
+  "output_tokens": 1872,
+  "reasoning_tokens": 733,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 92,
-   "attempts": 276,
-   "known_cost_usd": 0.206221,
+   "recorded_runs": 93,
+   "attempts": 279,
+   "known_cost_usd": 0.208431,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -776,276 +761,49 @@
   "news": {
    "briefing": [
     {
-     "text": "European equities fell as technology stocks came under renewed pressure, with Milan the weakest major market; the Nasdaq also resumed its selloff.",
+     "text": "UK officials warn that companies supplying Ukraine face a Russian sabotage threat, underscoring the widening security risks around support for Kyiv.",
      "sources": [
       {
-       "key": "dc477be3472a2bba",
-       "title": "Europa in calo con tech di nuovo sotto pressione, Milano maglia nera - Borsa Italiana",
-       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQUU5DeGpHWmp0ZzZuYlY2c01yWXRRdFVZcktCSXJ6YUJnTkFZUDllLWJzSGljdkhuVjN2Uzg1dFVnT0ZzTHpCY2ZDU2sxaDhoOW1kTjZnaS0tZWpma2M0N2pUS2VJRlpIanUzVl9YcVV5LXJkcndlaDd6VElGbjhpNzM1cmlQMDN3QTBlOFhXaVJfbzdFOVZ4bEJXZmFITFJ3SC1aakFRcHlPeFQ1bV9rYmFJcTJZUzhlVHd5TWk2MXl3Uk5hNlhpenNEMnFqVG1DOFNQeU9VdG5NUG9pM2RBNFdvb2ZtOWo5?oc=5",
-       "source": "Borsa Italiana",
-       "via": "Google News"
-      },
-      {
-       "key": "084dd9f7b086037a",
-       "title": "Nasdaq Resumes Selloff as Nvidia, Anthropic Shares Slump - WSJ",
-       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeEpzR3NLc2czaVQ0bUV4SzB6NTk3MjJtbWFoWXJVcjZxcDFNS1NYc1VSYkhDMTRXTUpHVktRQUQxb0c1VkVuTlBQOWF6TzA4N2pxZzdlSy1BczA3azhsX0N1dk9Td0R0d210ZVBfOGh3cXB1SkE1Yi1ZTnpKM0pFcnduQzlaV18wMGhlMUNfVW5OaVdPWGp6dDRLa2JMQQ?oc=5",
-       "source": "WSJ",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Italian government-bond risk widened: the BTP–Bund spread closed at 109 basis points, while Italy’s 10-year yield reached 4.35%.",
-     "sources": [
-      {
-       "key": "30f4c23f63ff801c",
-       "title": "Lo spread Btp-Bund chiude a 109 punti",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/lo-spread-btp-bund-chiude-a-109-punti_5168cfc5-e9c4-4dee-abc5-0d917d01948d.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "European gas futures rose to €92.3, adding a fresh energy-market pressure point.",
-     "sources": [
-      {
-       "key": "82aa477c85d73eb0",
-       "title": "I futures su gas salgono a 92,3 euro",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/i-futures-su-gas-salgono-a-923-euro_ef7eac08-3b7b-4341-97a4-6e5a53305bed.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "A Le Monde investigation drawing on hacked data and media reporting puts Russian military deaths in Ukraine at at least 500,000 since the invasion began.",
-     "sources": [
-      {
-       "key": "103331f34dd0dc9d",
-       "title": "Hackers et médias révèlent ce que le Kremlin voulait cacher : le bilan de 500 000 morts au moins sur le front ukrainien",
-       "url": "https://www.lemonde.fr/international/article/2026/11/24/hackers-et-medias-revelent-ce-que-le-kremlin-voulait-cacher-le-bilan-de-500-000-morts-au-moins-sur-le-front-ukrainien_6814823_3210.html",
-       "source": "Le Monde",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Italian parties are set to identify 700 priority amendments to the budget bill, with submissions due by Thursday, 26 November.",
-     "sources": [
-      {
-       "key": "f49b99c260ea9ccf",
-       "title": "Sono 700 gli emendamenti che saranno segnalati dai gruppi per la manovra",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/sono-700-gli-emendamenti-che-saranno-segnalati-dai-gruppi-per_25874a04-256f-41c9-ab8c-6419e5491d66.html",
-       "source": "ANSA Top News",
-       "via": null
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQUU5DeGpHWmp0ZzZuYlY2c01yWXRRdFVZcktCSXJ6YUJnTkFZUDllLWJzSGljdkhuVjN2Uzg1dFVnT0ZzTHpCY2ZDU2sxaDhoOW1kTjZnaS0tZWpma2M0N2pUS2VJRlpIanUzVl9YcVV5LXJkcndlaDd6VElGbjhpNzM1cmlQMDN3QTBlOFhXaVJfbzdFOVZ4bEJXZmFITFJ3SC1aakFRcHlPeFQ1bV9rYmFJcTJZUzhlVHd5TWk2MXl3Uk5hNlhpenNEMnFqVG1DOFNQeU9VdG5NUG9pM2RBNFdvb2ZtOWo5?oc=5",
-     "source": "Borsa Italiana",
-     "feed_name": "Topic: Milano",
-     "via": "Google News",
-     "published": "2026-11-24T17:04:00+00:00",
-     "new": true,
-     "key": "dc477be3472a2bba",
-     "title": "European stocks fall as technology shares come under pressure",
-     "summary": "European markets declined as technology shares weakened, with Milan the worst performer."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeEpzR3NLc2czaVQ0bUV4SzB6NTk3MjJtbWFoWXJVcjZxcDFNS1NYc1VSYkhDMTRXTUpHVktRQUQxb0c1VkVuTlBQOWF6TzA4N2pxZzdlSy1BczA3azhsX0N1dk9Td0R0d210ZVBfOGh3cXB1SkE1Yi1ZTnpKM0pFcnduQzlaV18wMGhlMUNfVW5OaVdPWGp6dDRLa2JMQQ?oc=5",
-     "source": "WSJ",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-24T17:34:00+00:00",
-     "new": true,
-     "key": "084dd9f7b086037a",
-     "title": "Nasdaq resumes selloff as Nvidia and Anthropic shares slump",
-     "summary": "The Nasdaq resumed its decline as Nvidia and Anthropic shares fell."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/lo-spread-btp-bund-chiude-a-109-punti_5168cfc5-e9c4-4dee-abc5-0d917d01948d.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-11-24T17:04:00+00:00",
-     "new": true,
-     "key": "30f4c23f63ff801c",
-     "title": "BTP–Bund spread closes at 109 basis points",
-     "summary": "Italy’s government-bond spread closed at 109 basis points, and its 10-year yield rose to 4.35%."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/i-futures-su-gas-salgono-a-923-euro_ef7eac08-3b7b-4341-97a4-6e5a53305bed.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-11-24T17:07:40+00:00",
-     "new": true,
-     "key": "82aa477c85d73eb0",
-     "title": "Gas futures rise to €92.3",
-     "summary": "Gas futures rose to €92.3."
-    },
-    {
-     "url": "https://www.lemonde.fr/international/article/2026/11/24/hackers-et-medias-revelent-ce-que-le-kremlin-voulait-cacher-le-bilan-de-500-000-morts-au-moins-sur-le-front-ukrainien_6814823_3210.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-24T17:00:11+00:00",
-     "new": true,
-     "key": "103331f34dd0dc9d",
-     "title": "Le Monde reports at least 500,000 Russian deaths in Ukraine",
-     "summary": "A Le Monde investigation based on hacked data and media reporting puts Russian military deaths at at least 500,000 since the invasion."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/sono-700-gli-emendamenti-che-saranno-segnalati-dai-gruppi-per_25874a04-256f-41c9-ab8c-6419e5491d66.html",
-     "source": "ANSA Top News",
-     "feed_name": "ANSA Top News",
-     "via": null,
-     "published": "2026-11-24T17:26:56+00:00",
-     "new": true,
-     "key": "f49b99c260ea9ccf",
-     "title": "Italian parties to flag 700 priority budget amendments",
-     "summary": "Parliamentary groups must identify 700 priority amendments to the budget bill by 26 November."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-24T18:01:29.989688+00:00",
-   "input_fingerprint": "sha256:f1a3e7736a357f1b49a8f1178721c4bb1590300a42af0fdd43e75357d1b4546e",
-   "last_success_at": "2026-11-24T18:01:29.989688+00:00",
-   "error": "Source check failed: Reuters (via Google News), The Guardian World, Topic: reinsurance",
-   "candidate_count": 347,
-   "new_count": 6
-  },
-  "sport": {
-   "briefing": [
-    {
-     "text": "PSG host Roma on Wednesday without Désiré Doué and Khvicha Kvaratskhelia; Hakimi says the squad can compensate for their absences.",
-     "sources": [
-      {
-       "key": "9cf9308632040908",
-       "title": "Doué, TAS, poste, avenir, etc, la conf' complète d'Hakimi avant PSG/Roma",
-       "url": "https://www.culturepsg.com/news/match/doue-tas-poste-avenir-etc-la-conf-complete-d-hakimi-avant-psg-roma/61653",
-       "source": "CulturePSG",
-       "via": null
-      },
-      {
-       "key": "2b0ea6003741617b",
-       "title": "Avant PSG/Roma, Hakimi avait un message à faire passer",
-       "url": "https://www.culturepsg.com/news/club/avant-psg-roma-hakimi-avait-un-message-a-faire-passer/61652",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "The Champions League’s fifth league-phase round starts Tuesday with nine matches, ahead of PSG’s Wednesday fixture.",
-     "sources": [
-      {
-       "key": "dd325ffa12a3bd90",
-       "title": "Les matches du soir à surveiller pour le PSG",
-       "url": "https://www.culturepsg.com/news/europe/les-matches-du-soir-a-surveiller-pour-le-psg/61655",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    }
-   ],
-   "items": [
-    {
-     "url": "https://www.culturepsg.com/news/match/doue-tas-poste-avenir-etc-la-conf-complete-d-hakimi-avant-psg-roma/61653",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-24T14:13:00+00:00",
-     "new": true,
-     "key": "9cf9308632040908",
-     "title": "Hakimi discusses injuries and PSG’s outlook before Roma",
-     "summary": "Achraf Hakimi addressed the absences of Doué and Kvaratskhelia at his pre-match press conference before PSG face Roma."
-    },
-    {
-     "url": "https://www.culturepsg.com/news/europe/les-matches-du-soir-a-surveiller-pour-le-psg/61655",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-24T15:33:02+00:00",
-     "new": true,
-     "key": "dd325ffa12a3bd90",
-     "title": "Champions League matches to watch Tuesday",
-     "summary": "The fifth round of Champions League league-phase matches begins Tuesday with nine games ahead of PSG’s Wednesday match against Roma."
-    }
-   ],
-   "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-24T18:01:29.989688+00:00",
-   "input_fingerprint": "sha256:099c472557dc0c0d4a22dd3ed95dcd0348535537a00c90ac046d8d3ff98151eb",
-   "last_success_at": "2026-11-24T18:01:29.989688+00:00",
-   "candidate_count": 371,
-   "new_count": 2
-  },
-  "finance": {
-   "briefing": [
-    {
-     "text": "US tech shares reversed course as Nvidia enthusiasm faded and fresh tariff threats weighed on sentiment, extending pressure on diversified equity holdings.",
-     "sources": [
-      {
-       "key": "71ec5e19c3a57720",
-       "title": "Nasdaq 100 Tumbles as Nvidia Euphoria Fades, New Tariffs Floated - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQcHhkVFpXSmc2SFJ3VEV3WHg5Vm4xYmRlM2l5R3Z2TEx6emJsdVRiQVBJTjJpaDJ3X2NsZFBURUR4anlRVDY4aTl0cHFvUzFTWUw5VUtXcE5pSEt1TzNPTWlXU0xHYV84QjVURk9LV1pFRGloYTQ1aU1iUmJ4TlN1NlVRYXN6QS1ub2Z6Mm1HMlNXS0hYV1YxNzF5SV9MSUNkNUtRTnRqb1phaUlESmRaMUxjcTM0dw?oc=5",
-       "source": "Bloomberg",
-       "via": "Google News"
-      },
-      {
-       "key": "326dd868cb173acb",
-       "title": "Nvidia slips as investors assess risks surrounding Huang's return as CEO - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOREIyb09ET2cwa3ZHekpYQnpBWFo5YlBseEduVVpKTUJsM3UzWXhCVHk2SFlNempwczc3NFpjWWtsLTBuQzkwX01DSWowcUFhaVVxOVZrNEh1YXJLcHJwenRhc3VyQWVkSW1zRll3NXRKTWhlTnhwZ1Y3RXhaNl9wakY0OGNid0x4RkdjNThHSGZMdVVVYTgxV2xZZDR5NVZzNXk3RXczTU1RUThya1JrRFV5Wnp3a3V3bzVDaWljbnlWN20t?oc=5",
+       "key": "934d46985ccf3050",
+       "title": "UK warns of Russian sabotage threat to companies that supply Ukraine - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObWthWEU2V2VxbjBhWTVtNE5wdC1LWFBYM24tVF92ekgyb25wMDRablR5eUJCQXFNUFVXU2NMYnkwWUlkWmpmNnhNaUhXZGdOSjUxeVItUzdING0xbDZZRENTTmFHdzJyWXZHM0NCbl91QU1DR3ZpMlpWNGYyVmVVV3dXM2RJSWMxUk1qckdVR18tSjJfbml3enVHUFpZcDBEaG5lSVlDQQ?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Anthropic shares fell below their IPO price less than a week after listing, adding a fresh warning sign for AI-related valuations.",
+     "text": "Chip shares including Nvidia, AMD and Broadcom fell as pressure on the AI trade resurfaced, a market move relevant to broad equity and technology exposure.",
      "sources": [
       {
-       "key": "cc24e403a8f2e08d",
-       "title": "Le cours d'Anthropic repasse sous son prix d'IPO moins d'une semaine après l'entrée en Bourse - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPSTZ4ellBMWJVUk1QUEJUMzF4ZW9rcDZRMndqQjZ2WGdubTlQTl9DSXBma0RXYU5ENGpNQUQ3WXhwRHdEUWNyTGZzclJwMjJzNlVfTHloel94VGtXRlNGSVFyVlE0X3F4NlQyV1lhSmZmZTNXRHVjMFFEWGpaNkpUQ2Q0dTNNLXluM3FLNjJIdTBhWVU4SjdWQzVaRVNjT3IwOWJOZWdLd3pXTXZVejhvdVo2UDdQX0xvcHA1MHgwMFEzaWVkTDZBeHhia0hQNlU1YXBZNDZkNVRpNW9uZXpQYW5YS2E1NWlCMHRYRA?oc=5",
-       "source": "Les Echos",
+       "key": "54f57a15c9875e8a",
+       "title": "Nvidia, AMD, Broadcom lead chip stocks lower as AI trade comes under pressure - Yahoo Finance",
+       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPZlFHMUxxYkptX1RuUVVSbmwzSTJzY1R3N0VHQnBxakF2TzQwY1lheWFLSVhlSkY5TnJlaVBlZlpMTFo3Sml1M1ZEQnZ5VHZYekVpRHV0YTk3UnNvbUZzVzA1S201NkdCSjRvc0c4NXNtSkFBSFZTYUg0U1dlXzJsMXFrbUFQYm1DN1dHYW00eUR0Mjl2YlBRb3ZTams1ekNlNlBVaFpoaEx6d19mNVlyMmRuanM1Z1JQbmFBdGo0Nm02N2VLZGVBSHA3N0E?oc=5",
+       "source": "Yahoo Finance",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "A cyberattack at Crédit Mutuel Arkéa reportedly reached the bank’s digital vault, underscoring operational and cyber risks for financial firms.",
+     "text": "Venezuela has released an economic framework as it moves toward a possible debt restructuring, a development to watch for sovereign-credit markets.",
      "sources": [
       {
-       "key": "93fc291f59422700",
-       "title": "Cyberattaque au Crédit Mutuel Arkéa : « Ils ont progressé méthodiquement jusqu'au coffre-fort numérique de la banque - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQSlVWYkpYRG13TDJkWXdUN25aWjlhalZ1TnJjYXphR1BZYThBWlZHcW84ajZCLTJIM0dYcmZfdjNKVV85TjdxUE5qTndjVllQMms1ZC1YMU5IWmZUNzNXb0gxaG5saklDTDFPcThIT2xIdlJxOF9KOXNzekNzdFRqbDdlS2FwMDU4Rl9pRjFTOUNXZVIxcWdCOWFyUUhRNVl2MHlKT3JZS29zUklFVG9GNU50Mk0xOXl4LXFFTkh6dnVtNHl0Yk10TndSeFRZQXo3Vi0xN3N2YkYwU0xuZGxDSFJlcTRHY2ptYnhfbWROeE9wYmQ3SERvdjczQWFUNTlOZ3JSN1FlUWw?oc=5",
-       "source": "Les Echos",
+       "key": "bd17115d17fde48c",
+       "title": "Venezuela moves toward possible debt restructuring with release of economic framework - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOakxRRS1xODNKVEMzdlowcjUzd2g4amNoV0JSSzdQc0JEUXg1WWxSbGxOaGhYWDZWSlQzeldBelpvUnpXb3g3bHdMUWd4NWhiZFJRZnEtSWU4TDBXS0Q1Q21CWE9QUkxkT2YxYVI5MzlJNkVJS3FRZ3NuMG90Y0JBMFNKRGEtOEhlOUktTVJwU2hoSHVVVW56NXI0ZlZIOHo3TGt0UTc3VnA4VlV5MGZoTmlfS05qQlpQcWpiUWNtSjI?oc=5",
+       "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Bitcoin’s attempted rebound has faltered amid broader crypto-market headwinds; the candidates offer little evidence of a durable recovery.",
+     "text": "Zurich’s rated subsidiaries received upgraded credit ratings from AM Best, which removed them from review with positive implications.",
      "sources": [
       {
-       "key": "e7deea3131ed4630",
-       "title": "Bitcoin Fails to Hold Nvidia Bump With Crypto Headwinds in Focus - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOEJWNUpxV1pydU9OT3Z4VnpWc2Q3dThJb1pwZXg5RjlBeGZBRE9SaDdqYmlMS3ZIWlBBNFdDckp0bTZRT1FDajNVV0dGZ1pRLTdFdi1mbjJxUG9PVGlWUXJxOEpqWWpaMkhadUJTVFVLRDBBOGFwWHJCQmYxaGtfSDJqUlpjWFRQN1dUakdjNEhaM2g3amVXZ05kVU9IbmMzNVJsNVNEb2M2Ul9Cd3ZybHRJbTdzZw?oc=5",
-       "source": "Bloomberg",
-       "via": "Google News"
-      },
-      {
-       "key": "e7034ac1150964a8",
-       "title": "Bitcoin : derrière la chute des cours, un marché crypto à bout de souffle - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWHRvaGcyZ1JRck1yNFRrOGJIN2ExUGszN09wLTdFMm9qU3VJbHdMVUhlM3EtcE5iMHNwMy1xRXlkdXowTTVLWXVKNXlwcEtURk94OEYwbDZQc1NPX3BzSVRzWkFHcXNGckxlZm5sazUzRGJIM01IbkhOMUVVeXRfNnVMLWtMM2RzUWVfdVlEUFdseGxDaVl6UncyMHhKM29Za01kQXUzdng5ZmNCVGN5dVBSdW1xLUg4SFNOZ2dtYXdMMk1zblVvS1RWMjJ2OEVBNTZz?oc=5",
-       "source": "Les Echos",
+       "key": "af9472844bcc3444",
+       "title": "AM Best Removes From Under Review With Positive Implications and Upgrades Credit Ratings of Zurich Beazley Holdings Limited’s Rated Subsidiaries - Business Wire",
+       "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxQNHBpN2Q1akNYNWlSTkduLW9hbXVtSjlKclRyckl3c1JUMXR1R2lBLWY1djI1UGtZSnNvV0NOc0k1Z0k1UmM0U0JGX29OWExRSGdJNExvdUV0ZzFHQnk2bnlNS2JIVXI5SnFHWDRSR3ROb1VxczZ1QXhTWGRhZjd3NFAyREthblF6dEh1ODlTODRDTTVkTW9UY2M1dk1LWXpmLWRSVERrWk8wTW1VVEY4WWNuM0JHeDdmM25IRmJTVVZlS3hVMkZRQWpRYnF4WlM3RS1CM2FTdEZIT2VMVHAzNjZsYm9DRC11aU1pZVJVZUp2TlR5ZU8xdjJ1c2FXZVJkZlp2MTJ1V3dGQkEtUENHNVktNVVOQXpOLVF6aWR4bERLTVl6Q1FB?oc=5",
+       "source": "Business Wire",
        "via": "Google News"
       }
      ]
@@ -1053,78 +811,351 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQcHhkVFpXSmc2SFJ3VEV3WHg5Vm4xYmRlM2l5R3Z2TEx6emJsdVRiQVBJTjJpaDJ3X2NsZFBURUR4anlRVDY4aTl0cHFvUzFTWUw5VUtXcE5pSEt1TzNPTWlXU0xHYV84QjVURk9LV1pFRGloYTQ1aU1iUmJ4TlN1NlVRYXN6QS1ub2Z6Mm1HMlNXS0hYV1YxNzF5SV9MSUNkNUtRTnRqb1phaUlESmRaMUxjcTM0dw?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-24T16:24:05+00:00",
-     "new": true,
-     "key": "71ec5e19c3a57720",
-     "title": "Nasdaq 100 tumbles as Nvidia euphoria fades and tariff threats emerge",
-     "summary": "The Nasdaq 100 fell as enthusiasm around Nvidia waned and new tariff threats surfaced."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOREIyb09ET2cwa3ZHekpYQnpBWFo5YlBseEduVVpKTUJsM3UzWXhCVHk2SFlNempwczc3NFpjWWtsLTBuQzkwX01DSWowcUFhaVVxOVZrNEh1YXJLcHJwenRhc3VyQWVkSW1zRll3NXRKTWhlTnhwZ1Y3RXhaNl9wakY0OGNid0x4RkdjNThHSGZMdVVVYTgxV2xZZDR5NVZzNXk3RXczTU1RUThya1JrRFV5Wnp3a3V3bzVDaWljbnlWN20t?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObWthWEU2V2VxbjBhWTVtNE5wdC1LWFBYM24tVF92ekgyb25wMDRablR5eUJCQXFNUFVXU2NMYnkwWUlkWmpmNnhNaUhXZGdOSjUxeVItUzdING0xbDZZRENTTmFHdzJyWXZHM0NCbl91QU1DR3ZpMlpWNGYyVmVVV3dXM2RJSWMxUk1qckdVR18tSjJfbml3enVHUFpZcDBEaG5lSVlDQQ?oc=5",
      "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
+     "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-11-24T16:57:48+00:00",
+     "published": "2026-11-24T17:25:01+00:00",
      "new": true,
-     "key": "326dd868cb173acb",
-     "title": "Nvidia slips as investors assess risks around Huang’s return as CEO",
-     "summary": "Nvidia shares slipped as investors weighed risks surrounding Jensen Huang’s return as CEO."
+     "key": "934d46985ccf3050",
+     "title": "UK warns of Russian sabotage threat to Ukraine suppliers",
+     "summary": "The UK warned that companies supplying Ukraine face a Russian sabotage threat."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPSTZ4ellBMWJVUk1QUEJUMzF4ZW9rcDZRMndqQjZ2WGdubTlQTl9DSXBma0RXYU5ENGpNQUQ3WXhwRHdEUWNyTGZzclJwMjJzNlVfTHloel94VGtXRlNGSVFyVlE0X3F4NlQyV1lhSmZmZTNXRHVjMFFEWGpaNkpUQ2Q0dTNNLXluM3FLNjJIdTBhWVU4SjdWQzVaRVNjT3IwOWJOZWdLd3pXTXZVejhvdVo2UDdQX0xvcHA1MHgwMFEzaWVkTDZBeHhia0hQNlU1YXBZNDZkNVRpNW9uZXpQYW5YS2E1NWlCMHRYRA?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPZlFHMUxxYkptX1RuUVVSbmwzSTJzY1R3N0VHQnBxakF2TzQwY1lheWFLSVhlSkY5TnJlaVBlZlpMTFo3Sml1M1ZEQnZ5VHZYekVpRHV0YTk3UnNvbUZzVzA1S201NkdCSjRvc0c4NXNtSkFBSFZTYUg0U1dlXzJsMXFrbUFQYm1DN1dHYW00eUR0Mjl2YlBRb3ZTams1ekNlNlBVaFpoaEx6d19mNVlyMmRuanM1Z1JQbmFBdGo0Nm02N2VLZGVBSHA3N0E?oc=5",
+     "source": "Yahoo Finance",
+     "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-24T15:42:21+00:00",
+     "published": "2026-11-24T17:19:37+00:00",
      "new": true,
-     "key": "cc24e403a8f2e08d",
-     "title": "Anthropic falls below its IPO price",
-     "summary": "Anthropic’s share price fell below its IPO price less than a week after listing."
+     "key": "54f57a15c9875e8a",
+     "title": "Chip stocks fall as AI trade comes under pressure",
+     "summary": "Nvidia, AMD and Broadcom led chip stocks lower as the AI trade came under pressure."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQSlVWYkpYRG13TDJkWXdUN25aWjlhalZ1TnJjYXphR1BZYThBWlZHcW84ajZCLTJIM0dYcmZfdjNKVV85TjdxUE5qTndjVllQMms1ZC1YMU5IWmZUNzNXb0gxaG5saklDTDFPcThIT2xIdlJxOF9KOXNzekNzdFRqbDdlS2FwMDU4Rl9pRjFTOUNXZVIxcWdCOWFyUUhRNVl2MHlKT3JZS29zUklFVG9GNU50Mk0xOXl4LXFFTkh6dnVtNHl0Yk10TndSeFRZQXo3Vi0xN3N2YkYwU0xuZGxDSFJlcTRHY2ptYnhfbWROeE9wYmQ3SERvdjczQWFUNTlOZ3JSN1FlUWw?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOakxRRS1xODNKVEMzdlowcjUzd2g4amNoV0JSSzdQc0JEUXg1WWxSbGxOaGhYWDZWSlQzeldBelpvUnpXb3g3bHdMUWd4NWhiZFJRZnEtSWU4TDBXS0Q1Q21CWE9QUkxkT2YxYVI5MzlJNkVJS3FRZ3NuMG90Y0JBMFNKRGEtOEhlOUktTVJwU2hoSHVVVW56NXI0ZlZIOHo3TGt0UTc3VnA4VlV5MGZoTmlfS05qQlpQcWpiUWNtSjI?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-11-24T16:01:01+00:00",
+     "published": "2026-11-24T17:13:25+00:00",
      "new": true,
-     "key": "93fc291f59422700",
-     "title": "Cyberattack reaches Crédit Mutuel Arkéa’s digital vault",
-     "summary": "A report describes attackers progressing methodically to the bank’s digital vault."
+     "key": "bd17115d17fde48c",
+     "title": "Venezuela moves toward possible debt restructuring",
+     "summary": "Venezuela released an economic framework as it moved toward possible debt restructuring."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOEJWNUpxV1pydU9OT3Z4VnpWc2Q3dThJb1pwZXg5RjlBeGZBRE9SaDdqYmlMS3ZIWlBBNFdDckp0bTZRT1FDajNVV0dGZ1pRLTdFdi1mbjJxUG9PVGlWUXJxOEpqWWpaMkhadUJTVFVLRDBBOGFwWHJCQmYxaGtfSDJqUlpjWFRQN1dUakdjNEhaM2g3amVXZ05kVU9IbmMzNVJsNVNEb2M2Ul9Cd3ZybHRJbTdzZw?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Bloomberg (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxQNHBpN2Q1akNYNWlSTkduLW9hbXVtSjlKclRyckl3c1JUMXR1R2lBLWY1djI1UGtZSnNvV0NOc0k1Z0k1UmM0U0JGX29OWExRSGdJNExvdUV0ZzFHQnk2bnlNS2JIVXI5SnFHWDRSR3ROb1VxczZ1QXhTWGRhZjd3NFAyREthblF6dEh1ODlTODRDTTVkTW9UY2M1dk1LWXpmLWRSVERrWk8wTW1VVEY4WWNuM0JHeDdmM25IRmJTVVZlS3hVMkZRQWpRYnF4WlM3RS1CM2FTdEZIT2VMVHAzNjZsYm9DRC11aU1pZVJVZUp2TlR5ZU8xdjJ1c2FXZVJkZlp2MTJ1V3dGQkEtUENHNVktNVVOQXpOLVF6aWR4bERLTVl6Q1FB?oc=5",
+     "source": "Business Wire",
+     "feed_name": "Topic: Zurich Insurance",
      "via": "Google News",
-     "published": "2026-11-24T15:54:41+00:00",
+     "published": "2026-11-24T18:09:36+00:00",
      "new": true,
-     "key": "e7deea3131ed4630",
-     "title": "Bitcoin fails to hold its Nvidia-fuelled bounce",
-     "summary": "Bitcoin failed to sustain a rally as crypto-market headwinds remained in focus."
+     "key": "af9472844bcc3444",
+     "title": "AM Best upgrades Zurich Beazley subsidiaries’ ratings",
+     "summary": "AM Best upgraded ratings for Zurich Beazley Holdings’ rated subsidiaries and removed them from review with positive implications."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOdG8wWmhBN1RENGd4bHhwZE5IeUYxQUlzMXAxek10TDBLa3lZSTBPX2taNlZQOE1YWjBuNWoybzdORWJva2E0TXAwTUhycHY2dnR4VkhCUlItTVZNTTVKZElYSm94UXNXX3VYaElfcWFRcjREaEZIeDB4OFh1U0lfclIzR3lXdUNlUU9rZ0JfenVjSGRaU1QwSUd3QklGcFdVbmFTbEI1UnJCWlRUdW1ZX3c2NTZZaEV4WkZoc0dtTHhUbWR0RUozTW93Z3o4MUZ6SEt5WGtqbDB2aFVaSEkwZms3R1RKZjdBYUIzU1U2REdERTlFcm92cktXQjlhZENfVllNbXZCVGtTelZaajFVXw?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
-     "via": "Google News",
-     "published": "2026-11-24T14:54:31+00:00",
+     "url": "https://www.lemonde.fr/economie/article/2026/11/24/chez-sfr-les-ventes-continuent-de-chuter-en-pleine-operation-de-rachat-par-bouygues-telecom-free-et-orange_6814833_3234.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-24T17:55:49+00:00",
      "new": true,
-     "key": "38867d93da69cb0f",
-     "title": "BC Partners renews its bet on Europe amid valuation gap",
-     "summary": "BC Partners says the valuation gap between Europe and the United States has widened."
+     "key": "2c2c28f5c26671df",
+     "title": "SFR sales continue to fall amid takeover process",
+     "summary": "SFR reported an almost 8% fall in third-quarter revenue as its takeover process continues."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQSW12eG56Mk5SZENfX040bTAydUtFMGVGRFp4Ykt3SmFCWmFrYWxOajRQXzdDLTI5TjFnWUZfOENxTUlPTGdQSUpwSnJ6Y3dHMi0yWU1KVXp3VTl2QmpPQnBaZnpWMEl1RVlCcERkeVZUNTR0ckZvZkZIZVZGNjZicXRRa3FvMjNZRW51Y0NNa0ZJclo2S0x2Uw?oc=5",
+     "source": "Forbes",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-24T17:40:12+00:00",
+     "new": true,
+     "key": "3004a7052d2352d4",
+     "title": "AI infrastructure boom faces limits",
+     "summary": "Forbes reports that the AI infrastructure boom is encountering limits."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcHN6QmE5UGVJeWFhUDVYVGcwdmlQZV9yMkpkcUc2MUNBcFBseEFXMG9aSW1Weml3VW5hR1NkaGd3WW5KTUs5ek0ycFBmMkxfYWwzblhPdXRjdGZJVlpfVUJTQkpmSC1KT0tuNjBKRkoyYkdQV1ozc3Bfd09POWVYWEVXR1E0NmZSUlhrWXRXZldjR3YxTC1VcG9mWTZQWXNtN2RGUm80elNsaFVfclFfVnh6X1NPcEk?oc=5",
+     "source": "Institutional Investor",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-24T17:37:30+00:00",
+     "new": true,
+     "key": "89aacd7ed696d2cf",
+     "title": "Investors say AI fundamentals remain intact despite fading mania",
+     "summary": "Allocators say AI fundamentals have not changed despite the trade losing some of its mania."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWkNJR0dsTmd6dEd5S0RHa01YZVpFV3EzcXA5d1V0MGJFOWJRSVpQeVZncWVTRmJ1VjBSTFRCeEgybFMzS3JZcHhVZUo3NFVxTUxfV2NvNnEwR1ZIQXI3dXc1eWs1Y0Z0VGpETE9OTkM4T2Z6b2pURGhYWF9ud1pTMGhtRjFaR0NjMXNoV01kOVlYazg3bVJ2N3V3aXdtbTZUbUtoLQ?oc=5",
+     "source": "The Economist",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-24T18:12:38+00:00",
+     "new": true,
+     "key": "838f5b3194b538c2",
+     "title": "Copper illustrates AI’s market impact",
+     "summary": "The Economist examines how AI is affecting copper markets."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-11-24T18:01:29.989688+00:00",
-   "input_fingerprint": "sha256:503e9567bb5ddc0bda33cedc699a3855bedf16a2239e36cc769ec1db1c01e551",
-   "last_success_at": "2026-11-24T18:01:29.989688+00:00",
-   "error": "Source check failed: FT (via Google News)",
+   "source_checked_at": "2026-11-24T18:21:24.095754+00:00",
+   "input_fingerprint": "sha256:ee452ff3b70166de28a965017208c1fe609897d89b4cf461fe01aa596eb4fc78",
+   "last_success_at": "2026-11-24T18:21:24.095754+00:00",
+   "error": "Source check failed: The Guardian World",
+   "candidate_count": 453,
+   "new_count": 8
+  },
+  "sport": {
+   "briefing": [
+    {
+     "text": "PSG host Roma in the Champions League on Wednesday at the Parc des Princes; CulturePSG has the viewing details.",
+     "sources": [
+      {
+       "key": "0f161875041824b7",
+       "title": "PSG/Roma, sur quelle chaîne et à quelle heure regarder le match ?",
+       "url": "https://www.culturepsg.com/news/match/psg-roma-sur-quelle-chaine-et-a-quelle-heure-regarder-le-match/61654",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "France face South Africa in the rugby final, with François Cros’s tackling technique under close scrutiny.",
+     "sources": [
+      {
+       "key": "fdc94727fabb03be",
+       "title": "Timing, travail mental et gestion des (mauvais) réflexes : François Cros et ses plaquages à genoux sous haute surveillance contre les Springboks - L'Équipe",
+       "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOX1RreHVIaW5NMjEzN2NEbWxkM0d0S1B0WGFFNVdEOWJPUnZxQ3FUcEswM2JXMGpPUjZOT0JNc1ltTTZPQWxhUXhNQmd1RkxRNlV3RlZjbnIyT2VrZ2NLNmQzMFZ5SWFhcGpPMUUwc3Y3dDNMS3ZKamk1TGJkRzdyaEVGTGh1QTFfZWZfTHYtYVlLNUYyWUV5czJqc1hCSzY0dnJZUTBBdmRRTDEydlFSR1ZuNVlQWXFZNkxBeF9KV0t3bkFhdGpSUWpFME1HMUdoeU9pd1gweWlGVTJpZTJPb2lUS3pRWTZQRlhHRG1pcjV5aDkycDdENUZaUVloQUYwZDZ1Q3U3eGlodUt5WmVUenB3?oc=5",
+       "source": "L'Équipe",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "PSG and Jordan have unveiled a new training range, alongside the club’s recently launched third kit and lifestyle collection.",
+     "sources": [
+      {
+       "key": "2da633fdf190f89e",
+       "title": "Le PSG et Jordan dévoilent une nouvelle gamme training",
+       "url": "https://www.culturepsg.com/news/club/le-psg-et-jordan-devoilent-une-nouvelle-gamme-training/61646",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://www.culturepsg.com/news/match/psg-roma-sur-quelle-chaine-et-a-quelle-heure-regarder-le-match/61654",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-24T14:50:35+00:00",
+     "new": true,
+     "key": "0f161875041824b7",
+     "title": "PSG–Roma: match viewing details",
+     "summary": "PSG host Roma on Wednesday at the Parc des Princes in the Champions League."
+    },
+    {
+     "url": "https://www.culturepsg.com/news/club/le-psg-et-jordan-devoilent-une-nouvelle-gamme-training/61646",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-24T08:50:00+00:00",
+     "new": true,
+     "key": "2da633fdf190f89e",
+     "title": "PSG and Jordan unveil new training range",
+     "summary": "PSG and Jordan have introduced a new training range, following the launch of a third kit and lifestyle collection."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOX1RreHVIaW5NMjEzN2NEbWxkM0d0S1B0WGFFNVdEOWJPUnZxQ3FUcEswM2JXMGpPUjZOT0JNc1ltTTZPQWxhUXhNQmd1RkxRNlV3RlZjbnIyT2VrZ2NLNmQzMFZ5SWFhcGpPMUUwc3Y3dDNMS3ZKamk1TGJkRzdyaEVGTGh1QTFfZWZfTHYtYVlLNUYyWUV5czJqc1hCSzY0dnJZUTBBdmRRTDEydlFSR1ZuNVlQWXFZNkxBeF9KV0t3bkFhdGpSUWpFME1HMUdoeU9pd1gweWlGVTJpZTJPb2lUS3pRWTZQRlhHRG1pcjV5aDkycDdENUZaUVloQUYwZDZ1Q3U3eGlodUt5WmVUenB3?oc=5",
+     "source": "L'Équipe",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-24T18:00:02+00:00",
+     "new": true,
+     "key": "fdc94727fabb03be",
+     "title": "François Cros’s tackling under scrutiny before South Africa clash",
+     "summary": "François Cros’s tackling technique is under close scrutiny ahead of France’s match against South Africa."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-11-24T18:21:24.095754+00:00",
+   "input_fingerprint": "sha256:90fce25bce01456b5121ee14341aa9d7853702e97611774c12201ae37454f39d",
+   "last_success_at": "2026-11-24T18:21:24.095754+00:00",
+   "candidate_count": 370,
+   "new_count": 3
+  },
+  "finance": {
+   "briefing": [
+    {
+     "text": "Trump is preparing new tariffs on major economies, a policy risk for global trade and corporate earnings; the report gives no further details on scope or timing.",
+     "sources": [
+      {
+       "key": "c36f113cc7f7f7aa",
+       "title": "Donald Trump readies raft of new tariffs on major economies - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHc3TDUxWVRLbmRUa1hzMWJseUNEMUQzOUtfajgxMVFlM2NoWDNyRlZYWUVfZEgwbWctWm5FakVubjdZT25mcUtzU3JfcjVQcVFDUXFtWEdISDJuSFdUZGQ3VG1wODYtZzFJT0NpZV8xLUxoMFlLbThuN3VZUGhrNTJXek0?oc=5",
+       "source": "Financial Times",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "US tech shares gave back gains as Anthropic fell below its IPO price, amid sharp market swings that are challenging short-term trading strategies.",
+     "sources": [
+      {
+       "key": "784c8d1351703c54",
+       "title": "Stocks give back gains as Anthropic dips below IPO price",
+       "url": "https://finance.yahoo.com/video/stocks-give-back-gains-as-anthropic-dips-below-ipo-price-154408548.html?.tsrc=rss",
+       "source": "Bitcoin",
+       "via": null
+      },
+      {
+       "key": "02305a7a34ecc062",
+       "title": "Market Timers Get Schooled as S&P 500 Swings Rip Up Playbooks - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcXk4SHVGQWJ1V242UzVPdTFtY2RTRE56Vnp1dkhOU3RucjdrYXJzWVBqWGEzR2Nid3U4anZIdGc0YjV0c09MV3hDTFZGT2VlNS1RdTBzY2lPbm5sX2VLUldueDlxTDFBU1ZGaVRXenVIdWxsQ2U4OTNpM3RHZF9CN0hCQUN5OHBWRm9lQnUzMW1KVTd0cXRRWUZ1cDVrZWM4Q2VDNm9NSHZzemJxMHZGbjJB?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Ukraine says it will need $125 billion in external support in 2027, underscoring the scale of future financing needs.",
+     "sources": [
+      {
+       "key": "f0f8addd00bf2078",
+       "title": "Ukraine needs $125 billion in external support in 2027, Zelenskiy says - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN2N6VTA5OUtLUjh3YWhnUDRneGRrT2lHNHpTeXZGTlZ1dFZvbXFkWkFPWktaLXZLMU1fRld3UTVZR3JySVpxSF9ydnZtRTdTc21LNjRBYUZOd2ZwbXcyaEVJcHhwZ2dNRmNWYVdiU0FoaTE0SEk2MVA2RW9ITVF3a09lVjlPV1dsaTYxTUg1QXRhcUtwX0NJTVVCTDJsS2EzNXhpbnBFOHI5eE5jRks1RVdiWjlkQQ?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "BYD is in talks to acquire a French car factory from Ineos Automotive, a potential expansion of Chinese auto manufacturing in Europe.",
+     "sources": [
+      {
+       "key": "ffc2092b04673cc7",
+       "title": "China's BYD in talks to buy French car factory from Ineos Automotive - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMTVFdHUtZkhnUVF2LW9BQW1HWXUtSnFvUmFaOFN0TkY1RWtqZUx3bTBjY2p2ck5wNGpLT003cnF5dW9zQWRhX0lmcjBMS2dUc2ctdU44YW8wazA3NzkyX1M4SUhkdy1LNlc0bnJRVm1ySTVtUlRnMFJqaEJvR0tqX0w5T0dmdEdadDNfNW91dW16REg2R1BTaHhxODZET2hoSEhVemJRWGdkd0U4OW40QXJxbzRYc1ByX0RHZHpjWQ?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Nvidia CEO Jensen Huang’s visit to China is set against growing political hurdles for the chipmaker, Reuters reports.",
+     "sources": [
+      {
+       "key": "ecf08a8cb69359aa",
+       "title": "Nvidia's Huang returns to cheers in China, but political hurdles mount - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd2I2bERDWFVzTGY0OFhwaE0xVHRxaFFWM0REVzVOVjBsRkIyQjdwTlVEdnBzSmtqc2FlRFlJOERuOTc1Q1ZDV2U4SWRFa01fQTNHMnZJTjRXOW5VOUVMcjA1WDI4eW5vZ0FFbmRiNEc4aGdsSDQ0Zm1TNFBiVE5Pb0tIVm1SSzRIa3BVTk5GQ2NPY0JhMG1HLVpHamtrVWswd09ONFJCN3JSZDlBd0pYdGxwTE9tNm5sQ0FB?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Shanghai’s Communist Party chief Chen Jining is under investigation, in a further escalation of Xi Jinping’s purge.",
+     "sources": [
+      {
+       "key": "4c5beba78ea7153a",
+       "title": "Shanghai’s powerful Communist Party boss toppled as Xi escalates purge",
+       "url": "https://www.ft.com/content/02240d42-ccd8-4b4d-b0e3-49a04c950eea?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      }
+     ]
+    }
+   ],
+   "items": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHc3TDUxWVRLbmRUa1hzMWJseUNEMUQzOUtfajgxMVFlM2NoWDNyRlZYWUVfZEgwbWctWm5FakVubjdZT25mcUtzU3JfcjVQcVFDUXFtWEdISDJuSFdUZGQ3VG1wODYtZzFJT0NpZV8xLUxoMFlLbThuN3VZUGhrNTJXek0?oc=5",
+     "source": "Financial Times",
+     "feed_name": "FT (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-24T16:30:35+00:00",
+     "new": true,
+     "key": "c36f113cc7f7f7aa",
+     "title": "Trump readies new tariffs on major economies",
+     "summary": "The Financial Times reports that Donald Trump is preparing a new round of tariffs targeting major economies."
+    },
+    {
+     "url": "https://finance.yahoo.com/video/stocks-give-back-gains-as-anthropic-dips-below-ipo-price-154408548.html?.tsrc=rss",
+     "source": "Bitcoin",
+     "feed_name": "Bitcoin",
+     "via": null,
+     "published": "2026-11-24T15:44:08+00:00",
+     "new": true,
+     "key": "784c8d1351703c54",
+     "title": "Stocks give back gains as Anthropic dips below IPO price",
+     "summary": "US stocks surrendered gains as Anthropic shares fell below their IPO price."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcXk4SHVGQWJ1V242UzVPdTFtY2RTRE56Vnp1dkhOU3RucjdrYXJzWVBqWGEzR2Nid3U4anZIdGc0YjV0c09MV3hDTFZGT2VlNS1RdTBzY2lPbm5sX2VLUldueDlxTDFBU1ZGaVRXenVIdWxsQ2U4OTNpM3RHZF9CN0hCQUN5OHBWRm9lQnUzMW1KVTd0cXRRWUZ1cDVrZWM4Q2VDNm9NSHZzemJxMHZGbjJB?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-24T15:21:25+00:00",
+     "new": true,
+     "key": "02305a7a34ecc062",
+     "title": "Market timers struggle with S&P 500 swings",
+     "summary": "Bloomberg reports that sharp S&P 500 swings are disrupting market-timing strategies."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN2N6VTA5OUtLUjh3YWhnUDRneGRrT2lHNHpTeXZGTlZ1dFZvbXFkWkFPWktaLXZLMU1fRld3UTVZR3JySVpxSF9ydnZtRTdTc21LNjRBYUZOd2ZwbXcyaEVJcHhwZ2dNRmNWYVdiU0FoaTE0SEk2MVA2RW9ITVF3a09lVjlPV1dsaTYxTUg1QXRhcUtwX0NJTVVCTDJsS2EzNXhpbnBFOHI5eE5jRks1RVdiWjlkQQ?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-24T15:09:43+00:00",
+     "new": true,
+     "key": "f0f8addd00bf2078",
+     "title": "Ukraine says it needs $125 billion in external support in 2027",
+     "summary": "President Volodymyr Zelenskiy said Ukraine will need $125 billion in external support in 2027."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMTVFdHUtZkhnUVF2LW9BQW1HWXUtSnFvUmFaOFN0TkY1RWtqZUx3bTBjY2p2ck5wNGpLT003cnF5dW9zQWRhX0lmcjBMS2dUc2ctdU44YW8wazA3NzkyX1M4SUhkdy1LNlc0bnJRVm1ySTVtUlRnMFJqaEJvR0tqX0w5T0dmdEdadDNfNW91dW16REg2R1BTaHhxODZET2hoSEhVemJRWGdkd0U4OW40QXJxbzRYc1ByX0RHZHpjWQ?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-24T16:05:57+00:00",
+     "new": true,
+     "key": "ffc2092b04673cc7",
+     "title": "BYD in talks to buy French car factory",
+     "summary": "BYD is discussing a purchase of an Ineos Automotive factory in France."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd2I2bERDWFVzTGY0OFhwaE0xVHRxaFFWM0REVzVOVjBsRkIyQjdwTlVEdnBzSmtqc2FlRFlJOERuOTc1Q1ZDV2U4SWRFa01fQTNHMnZJTjRXOW5VOUVMcjA1WDI4eW5vZ0FFbmRiNEc4aGdsSDQ0Zm1TNFBiVE5Pb0tIVm1SSzRIa3BVTk5GQ2NPY0JhMG1HLVpHamtrVWswd09ONFJCN3JSZDlBd0pYdGxwTE9tNm5sQ0FB?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-24T17:57:26+00:00",
+     "new": true,
+     "key": "ecf08a8cb69359aa",
+     "title": "Nvidia’s Huang returns to China amid political hurdles",
+     "summary": "Nvidia CEO Jensen Huang returned to China as political challenges for the company mount."
+    },
+    {
+     "url": "https://www.ft.com/content/02240d42-ccd8-4b4d-b0e3-49a04c950eea?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
+     "via": null,
+     "published": "2026-11-24T15:55:20+00:00",
+     "new": true,
+     "key": "4c5beba78ea7153a",
+     "title": "Shanghai party chief under investigation as Xi escalates purge",
+     "summary": "Shanghai Communist Party chief Chen Jining is under investigation over suspected violations of discipline and law."
+    }
+   ],
+   "reviewed_count": 35,
+   "state": "healthy",
+   "source_checked_at": "2026-11-24T18:21:24.095754+00:00",
+   "input_fingerprint": "sha256:573d40b2468e09774d6ff7dbc98b35653901e61ec06af4d7c318f82ce0a8bfb9",
+   "last_success_at": "2026-11-24T18:21:24.095754+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1217,8 +1248,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 60099.81,
-     "change_pct": -1.82,
+     "price": 59952.22,
+     "change_pct": -2.06,
      "currency": "USD",
      "as_of": "2026-11-24T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1228,8 +1259,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1685.76,
-     "change_pct": -1.35,
+     "price": 1680.56,
+     "change_pct": -1.66,
      "currency": "USD",
      "as_of": "2026-11-24T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1237,20 +1268,20 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 300,
-   "new_count": 6
+   "candidate_count": 360,
+   "new_count": 7
   },
   "media": {
    "briefing": "",
    "items": [
     {
-     "title": "Russia Is Coming for Ukraine's Bridges",
+     "title": "With the Crimean Bridge Down, Russia Aims for Revenge",
      "url": "https://www.youtube.com/watch?v=l5V7IiV3rQU",
      "source": "Preston Stewart",
      "kind": "video",
      "published": "2026-11-24T17:00:33+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "d672b059179691b9"
     },
     {
@@ -1346,9 +1377,9 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-24T18:01:29.989688+00:00",
+   "source_checked_at": "2026-11-24T18:21:24.095754+00:00",
    "candidate_count": 10,
-   "new_count": 1
+   "new_count": 0
   }
  },
  "scheduled_slot": "2026-11-24T18:00:00.000Z"
