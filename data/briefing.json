@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261124T060124518056Z",
- "generated_at": "2026-11-24T06:01:24.518056+00:00",
- "generated_local": "Tue 24 Nov 2026, 07:01",
- "source_checked_at": "2026-11-24T06:01:24.518056+00:00",
+ "edition_id": "ed-20261124T062126977605Z",
+ "generated_at": "2026-11-24T06:21:26.977605+00:00",
+ "generated_local": "Tue 24 Nov 2026, 07:21",
+ "source_checked_at": "2026-11-24T06:21:26.977605+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-24T06:01:24.518056+00:00"
+  "run-2026-11-24T06:21:26.977605+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-24T06:01:24.518056+00:00"
+  "completed_at": "2026-11-24T06:21:26.977605+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -145,36 +145,26 @@
   {
    "name": "Topic: insurance industry",
    "section": "news",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 70,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 70,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Topic: Zurich Insurance",
    "section": "news",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 58,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 58,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Topic: reinsurance",
@@ -204,10 +194,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 109,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 109,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -216,10 +206,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 101,
+   "item_count": 105,
    "reason": null,
    "failure": null,
-   "parsed_count": 101,
+   "parsed_count": 105,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -228,10 +218,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 104,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 104,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -252,10 +242,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 111,
+   "item_count": 108,
    "reason": null,
    "failure": null,
-   "parsed_count": 111,
+   "parsed_count": 108,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -264,10 +254,10 @@
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 53,
+   "item_count": 54,
    "reason": null,
    "failure": null,
-   "parsed_count": 53,
+   "parsed_count": 54,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -467,19 +457,14 @@
   {
    "name": "Reuters Business (via Google News)",
    "section": "finance",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Bloomberg (via Google News)",
@@ -704,9 +689,9 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.00237,
-  "est_month_usd": 0.21,
-  "forecast_month_usd": 0.21,
+  "est_cost_usd": 0.002149,
+  "est_month_usd": 0.19,
+  "forecast_month_usd": 0.19,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
   "sections": [
    {
@@ -714,60 +699,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8463,
+    "latency_ms": 3548,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0c0f8e26ced7bff6016b05283ba1b887d29124ad5e3d2ce630"
+     "resp_0e73a9837c41795a016b052cefa7a087d0a917bc14440e4b4b"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3402,
-    "output_tokens": 885,
-    "reasoning_tokens": 330
+    "cache_write_tokens": 3646,
+    "output_tokens": 211,
+    "reasoning_tokens": 0
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6034,
+    "latency_ms": 7855,
     "unknown": false,
     "provider_request_ids": [
-     "resp_03494e84aec7b75f016b052843604c87d2855f0906bc7d4a18"
+     "resp_0f027ae61c26bb03016b052cf32d1087d093b52e080ee00780"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3433,
-    "output_tokens": 598,
-    "reasoning_tokens": 213
+    "cache_write_tokens": 3500,
+    "output_tokens": 595,
+    "reasoning_tokens": 358
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8176,
+    "latency_ms": 9235,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0613594094a97376016b0528496ee487d2815171df3802bfac"
+     "resp_06aa3b1eaa043a58016b052cfa944887d0a62bbea909a3dd1e"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3271,
-    "output_tokens": 729,
-    "reasoning_tokens": 273
+    "cache_write_tokens": 3269,
+    "output_tokens": 887,
+    "reasoning_tokens": 385
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10106,
-  "output_tokens": 2212,
-  "reasoning_tokens": 816,
+  "cache_write_tokens": 10415,
+  "output_tokens": 1693,
+  "reasoning_tokens": 743,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 87,
-   "attempts": 261,
-   "known_cost_usd": 0.195319,
+   "recorded_runs": 88,
+   "attempts": 264,
+   "known_cost_usd": 0.197468,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -776,63 +761,32 @@
   "news": {
    "briefing": [
     {
-     "text": "Asian chip shares are set to rise as Jensen Huang’s return reignites the AI trade, underscoring how leadership news is moving the sector. [21]",
+     "text": "The reported return of Nvidia CEO Jensen Huang has driven a sharp rebound in Asian equities; the episode also raises questions about Trump’s role in the company’s leadership.",
      "sources": [
       {
-       "key": "eee80e41d57d9b68",
-       "title": "Asian Chip Stocks Set to Jump as Huang Comeback Refires AI Trade - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZlhLZ29WWnE2WjZaN3Y1NE1WMEJ4Uk14X2k3M0tybVR2TFBIMktTbUVNemlubWNhU3BiX040czFzSFJMb1ZxZ0hlR3hkNW1ub00taUF3SW84UzRrQkhNWEtsak5RQVdTOTI1eUJ1MWtGQ2JkYjNIbTJjQXZCTndIOGlLUkJhdzNRTWQzQmc3cUd1ajJzZ3gzaE5xV1RSZ054ZGtDVEFvVUVMM3VEU1ptUUN6ZE0wdw?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The ECB faces a testing leadership transition, while policymaker Yannis Stournaras has cautioned against waiting for the full effects of an energy shock before responding. [19, 26]",
-     "sources": [
-      {
-       "key": "1e4d10844bb8bb33",
-       "title": "France Makes Leading the ECB a Perilous Job to Fill - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRWQtTGFjVGxfcThKcFBOYTlkb0hRSnhUYXlUa2pHZmNtajQtM3FxaFV4U2RQMjAycHBGWDdxX2ZkM19YZTJDYjBGOThCSDZfRnRoS0tveWkyaUZ2UnhRZ1paNFdUQk9uSFA1djFkeDdsbjYtMzMxTkoza3d0S1JxaGJSdHpjRWgyVWtyalFoOUFCMFlyOWN4RDNlay1QMk03Nk9rUlZtSUFKMkpMQWNDYWNlaXhIWTlmWlE?oc=5",
-       "source": "Bloomberg.com",
+       "key": "d5ee0b907c149995",
+       "title": "Asian Equities Rebound as Huang Reinstatement Sparks AI-Stock Rally - WSJ",
+       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQV0pBT3BvcTJqUGdDbUlRYkdJRV9qNjZTdkVtQndVSWpSMmxSMVJqT3VQdy1BcWJDZTRkRGotMUJpdlRiT25NUXZhdC1KZXhjUFh4VUZaMGNZSE1xMlNOMDZYOVJqTmNjeUpqcjlSYW9JdE9uMkp1VlpnMVVGd1Y3S2tVSC1BZmhsY1dIVEp1TExsUWVXcWNTclh4QVkwV3EwU2o5WkhLQlpsUWdUT3FsOQ?oc=5",
+       "source": "WSJ",
        "via": "Google News"
       },
       {
-       "key": "2d3178f759da33c7",
-       "title": "ECB's Stournaras: Cannot Wait for Full Wage and Price Impact of Energy Shock Before Reacting - Forex Factory",
-       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVFFsREZkOXZZeGJhOTY0N2pSbHpkN3dQcXlPNkdCYWNDUTRnenNVQUZWZzFGVnZGUHdOUHZKTnZ4azhmeUM2amN4VlhnV0dwNzJVcDZucXFiaDg2MjBjT1RTMEVwTTJ6aWF1ZXU5NURkMFpVcHV6dzNfNEY2SzBzQXhNMlFiRjlrQjllMHNmOEjSAZYBQVVfeXFMTXVmeUxITmI0MmhiRG8ycWFoV21fZ01NdFltNHJvSXlHZVNUZzdsSkwtS256Zmt0WlVxTGNPZnUwWHNaQUZJdFk1MDJNQ05ZYVM5Q0sybjZpVTM5NGJzNWQ5SFplNlI0Z2Itam1TU2NnVEpNUE9VeGZSdVVVWllMUE5LZ1ljYV9QM1c0NDBhLUs2SGFoSURR?oc=5",
-       "source": "Forex Factory",
-       "via": "Google News"
+       "key": "8183f4f2970ccb3c",
+       "title": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
+       "url": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
+       "via": null
       }
      ]
     },
     {
-     "text": "MSCI says its review of Indonesia’s market status is ongoing, denying that it has softened its stance—a development to watch for emerging-market investors. [32]",
+     "text": "AI’s economic impact is showing up in Singapore, where an AI boost is expected to support the strongest performance in years.",
      "sources": [
       {
-       "key": "c3a949f19266d4ae",
-       "title": "MSCI denies softer stance on Indonesia's market status, review ongoing - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTTJUZ0F2WXl0N0pfQ1RMYlVSTURkS3UxeHVudGRQb25nZUF5dmdvU2ZvNWZOM3dGSnlCajRIM2tOT051UnF2ekZGT2JqQU1Ta0pwbS1vVF9tQ2V5REpkbm81RndwQmJJb3FWeGcyeEFqVmhYQVhJaE9TcjlnUUJQb0dXS2E4YWRaR2p2RlE0NEdzWkp6UVdLU29BM2ZiY0xOS3g5UFFzMDBpMVI4V2pHaFBqZC1OZVFv?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Geopolitical attention spans Taiwan’s elections and Beijing’s role, while Trump is due to meet NATO chief Mark Rutte on Wednesday. [29, 33]",
-     "sources": [
-      {
-       "key": "8c88e31160318f2f",
-       "title": "Taiwan's elections not about China, but Beijing has a lot to say - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdXc2SkZYZGtLT242LWZweUpSekkzc1RPc3dpTENTSEVRMmhOTVl6MzlJYUVNekNINlZHNDVSMVRpbm5WM3ZnZFdvUnJlN1k4cWRGUlZkYXZpT0dETVpieGRoSlAwb1JsTUZoWHY4SUY0ZEtmb3V2dExicXJaVGhKTWNUem8zY1dTWWhFd3FQdWZtYmZYVjB1ZHdLQ3NXaUVaZ05N?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      },
-      {
-       "key": "f742585ef3a50567",
-       "title": "Trump to meet NATO chief ​Mark Rutte on Wednesday, White House says - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcnFJU2tabWVwRnU2YnozaFFRTWZ4VWc4TmNseXdPRGZoa25Zc0RXZ251ODdJQ3ZxYl9fWVhlSkwtU0xhajZpeHNRSXQyclM0WUdKT1Y2cHh1OExteDRnVUlfcFVMaXc1X3NnNk15QTczVklYMHR5dVZldGJBcGtnRjhlaDczNFQ0RnZoMWFlRC1rZ1pfWGUwYlNGMmNuNVlXam9peE5xb0NKWTQ?oc=5",
-       "source": "Reuters",
+       "key": "48cf1e2bfdb986ad",
+       "title": "AI Boost Puts Singapore Economy on Track for Best Performance in Years - WSJ",
+       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZHlXM2VYeTJTbmV6LXBQUmMwZ2c2WnhsV21SN2tRdmVFbG03SXRvUWVtOC1HMU1HNVdLUWllMWVraFBFczJITFZUSmpsdGpsZ0pEYnN4ZnpnUE1WekFOZTA5Um5TY3FpaHBZdzEweGF5a1FsRDJlLWN3eHFDcGJqSkZFdlB4ZTBzSVUxM3VLR2FubDhzdXZUQURsQndNSnhqMHQ1QUJuWDVTV1lfbm13?oc=5",
+       "source": "WSJ",
        "via": "Google News"
       }
      ]
@@ -840,295 +794,243 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZlhLZ29WWnE2WjZaN3Y1NE1WMEJ4Uk14X2k3M0tybVR2TFBIMktTbUVNemlubWNhU3BiX040czFzSFJMb1ZxZ0hlR3hkNW1ub00taUF3SW84UzRrQkhNWEtsak5RQVdTOTI1eUJ1MWtGQ2JkYjNIbTJjQXZCTndIOGlLUkJhdzNRTWQzQmc3cUd1ajJzZ3gzaE5xV1RSZ054ZGtDVEFvVUVMM3VEU1ptUUN6ZE0wdw?oc=5",
-     "source": "Bloomberg.com",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQV0pBT3BvcTJqUGdDbUlRYkdJRV9qNjZTdkVtQndVSWpSMmxSMVJqT3VQdy1BcWJDZTRkRGotMUJpdlRiT25NUXZhdC1KZXhjUFh4VUZaMGNZSE1xMlNOMDZYOVJqTmNjeUpqcjlSYW9JdE9uMkp1VlpnMVVGd1Y3S2tVSC1BZmhsY1dIVEp1TExsUWVXcWNTclh4QVkwV3EwU2o5WkhLQlpsUWdUT3FsOQ?oc=5",
+     "source": "WSJ",
      "feed_name": "Topic: AI",
      "via": "Google News",
      "published": "2026-11-24T04:42:00+00:00",
      "new": true,
-     "key": "eee80e41d57d9b68",
-     "title": "Asian chip stocks set to jump as AI trade revives",
-     "summary": "Asian chip stocks are set to gain after Jensen Huang’s return reignited the AI trade."
+     "key": "d5ee0b907c149995",
+     "title": "Asian equities rebound as Nvidia leadership change sparks AI-stock rally",
+     "summary": "Asian equities rebounded after Nvidia CEO Jensen Huang’s reinstatement sparked a rally in AI-related stocks."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRWQtTGFjVGxfcThKcFBOYTlkb0hRSnhUYXlUa2pHZmNtajQtM3FxaFV4U2RQMjAycHBGWDdxX2ZkM19YZTJDYjBGOThCSDZfRnRoS0tveWkyaUZ2UnhRZ1paNFdUQk9uSFA1djFkeDdsbjYtMzMxTkoza3d0S1JxaGJSdHpjRWgyVWtyalFoOUFCMFlyOWN4RDNlay1QMk03Nk9rUlZtSUFKMkpMQWNDYWNlaXhIWTlmWlE?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-11-24T05:00:00+00:00",
-     "new": true,
-     "key": "1e4d10844bb8bb33",
-     "title": "France faces a perilous contest to lead the ECB",
-     "summary": "The race to lead the ECB is complicated by the challenges facing France."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVFFsREZkOXZZeGJhOTY0N2pSbHpkN3dQcXlPNkdCYWNDUTRnenNVQUZWZzFGVnZGUHdOUHZKTnZ4azhmeUM2amN4VlhnV0dwNzJVcDZucXFiaDg2MjBjT1RTMEVwTTJ6aWF1ZXU5NURkMFpVcHV6dzNfNEY2SzBzQXhNMlFiRjlrQjllMHNmOEjSAZYBQVVfeXFMTXVmeUxITmI0MmhiRG8ycWFoV21fZ01NdFltNHJvSXlHZVNUZzdsSkwtS256Zmt0WlVxTGNPZnUwWHNaQUZJdFk1MDJNQ05ZYVM5Q0sybjZpVTM5NGJzNWQ5SFplNlI0Z2Itam1TU2NnVEpNUE9VeGZSdVVVWllMUE5LZ1ljYV9QM1c0NDBhLUs2SGFoSURR?oc=5",
-     "source": "Forex Factory",
-     "feed_name": "Topic: European Central Bank",
-     "via": "Google News",
-     "published": "2026-11-24T04:01:00+00:00",
-     "new": true,
-     "key": "2d3178f759da33c7",
-     "title": "ECB’s Stournaras warns against waiting for full energy-shock impact",
-     "summary": "Yannis Stournaras said the ECB cannot wait for the full wage and price effects of an energy shock before reacting."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTTJUZ0F2WXl0N0pfQ1RMYlVSTURkS3UxeHVudGRQb25nZUF5dmdvU2ZvNWZOM3dGSnlCajRIM2tOT051UnF2ekZGT2JqQU1Ta0pwbS1vVF9tQ2V5REpkbm81RndwQmJJb3FWeGcyeEFqVmhYQVhJaE9TcjlnUUJQb0dXS2E4YWRaR2p2RlE0NEdzWkp6UVdLU29BM2ZiY0xOS3g5UFFzMDBpMVI4V2pHaFBqZC1OZVFv?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-24T03:51:00+00:00",
-     "new": true,
-     "key": "c3a949f19266d4ae",
-     "title": "MSCI says Indonesia market-status review remains ongoing",
-     "summary": "MSCI denied taking a softer stance on Indonesia’s market status and said its review is ongoing."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdXc2SkZYZGtLT242LWZweUpSekkzc1RPc3dpTENTSEVRMmhOTVl6MzlJYUVNekNINlZHNDVSMVRpbm5WM3ZnZFdvUnJlN1k4cWRGUlZkYXZpT0dETVpieGRoSlAwb1JsTUZoWHY4SUY0ZEtmb3V2dExicXJaVGhKTWNUem8zY1dTWWhFd3FQdWZtYmZYVjB1ZHdLQ3NXaUVaZ05N?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-24T03:57:00+00:00",
-     "new": true,
-     "key": "8c88e31160318f2f",
-     "title": "Taiwan election is not about China, but Beijing has a lot to say",
-     "summary": "Reuters examines Beijing’s influence and messaging around Taiwan’s elections."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcnFJU2tabWVwRnU2YnozaFFRTWZ4VWc4TmNseXdPRGZoa25Zc0RXZ251ODdJQ3ZxYl9fWVhlSkwtU0xhajZpeHNRSXQyclM0WUdKT1Y2cHh1OExteDRnVUlfcFVMaXc1X3NnNk15QTczVklYMHR5dVZldGJBcGtnRjhlaDczNFQ0RnZoMWFlRC1rZ1pfWGUwYlNGMmNuNVlXam9peE5xb0NKWTQ?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-24T03:48:00+00:00",
-     "new": true,
-     "key": "f742585ef3a50567",
-     "title": "Trump to meet NATO chief Mark Rutte on Wednesday",
-     "summary": "The White House said Donald Trump will meet NATO Secretary-General Mark Rutte on Wednesday."
-    },
-    {
-     "url": "https://www.lemonde.fr/economie/article/2026/11/24/inflation-pourquoi-la-hausse-des-cours-de-l-energie-tarde-a-se-repercuter-sur-l-ensemble-des-prix-en-france_6814604_3234.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
+     "url": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
      "via": null,
-     "published": "2026-11-24T04:00:12+00:00",
+     "published": "2026-11-24T04:36:31+00:00",
      "new": true,
-     "key": "11f4da5aaae2ff4e",
-     "title": "Energy-price surge is slow to pass through to French inflation",
-     "summary": "Weak French activity and rising unemployment are delaying the impact of higher oil and gas prices on broader inflation."
+     "key": "8183f4f2970ccb3c",
+     "title": "Trump faces backlash over claim he influenced Nvidia CEO’s return",
+     "summary": "Trump drew criticism after saying he had convinced Nvidia to reinstate CEO Jensen Huang."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOTEFxdmRFbVJRZ01MRWlCZjI2Z0dmcHJhS3cxSE01LWpJMktrYWhBNGRsd2czTFFRQW1MZ19zOFVFWE1ZNjFrTndFNHlCSHJ1M2ZDSjJoY0JLcGduSU9fWXRISmE1UENqVzBfSVVJZUhjZGdadXYwVVZ3VTFHS3FGUXM0Z2xFMmhzaWJObko3cndvdFFhMnVNNDVzdlpnU3FfOWEtVjI2S2dhVzdZd0tNTm5feTdQazg0UjJ6SkJ0cEZCcWxrUDdmcUNHWmZlNjcyV1ZqTFNDWGJsRW9RMHdhZzk2dXFrR1FC?oc=5",
-     "source": "The Asian Banker",
-     "feed_name": "Topic: European Central Bank",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZHlXM2VYeTJTbmV6LXBQUmMwZ2c2WnhsV21SN2tRdmVFbG03SXRvUWVtOC1HMU1HNVdLUWllMWVraFBFczJITFZUSmpsdGpsZ0pEYnN4ZnpnUE1WekFOZTA5Um5TY3FpaHBZdzEweGF5a1FsRDJlLWN3eHFDcGJqSkZFdlB4ZTBzSVUxM3VLR2FubDhzdXZUQURsQndNSnhqMHQ1QUJuWDVTV1lfbm13?oc=5",
+     "source": "WSJ",
+     "feed_name": "Topic: AI",
      "via": "Google News",
-     "published": "2026-11-24T05:51:00+00:00",
+     "published": "2026-11-24T06:11:00+00:00",
      "new": true,
-     "key": "1a813b9efbcaa443",
-     "title": "ECB Pillar 2 requirements shift for most supervised banks",
-     "summary": "The Asian Banker reports changes to Pillar 2 requirements for most ECB-supervised banks."
-    },
-    {
-     "url": "https://www.lemonde.fr/argent/article/2026/11/24/les-epargnants-ont-retire-pres-de-10-milliards-d-euros-de-leurs-livret-a-depuis-janvier-un-record-depuis-dix-ans_6814708_1657007.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-24T05:00:40+00:00",
-     "new": true,
-     "key": "d040f8999dcfa6e7",
-     "title": "French savers withdraw nearly €10 billion from Livret A since January",
-     "summary": "Withdrawals from Livret A have reached nearly €10 billion since January, the highest level in a decade."
+     "key": "48cf1e2bfdb986ad",
+     "title": "AI boost puts Singapore economy on track for strongest performance in years",
+     "summary": "AI-related growth is helping put Singapore’s economy on track for its strongest performance in years."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-11-24T06:01:24.518056+00:00",
-   "input_fingerprint": "sha256:00b447608a3cb1dee78e821f58aa44c37e351fd4699e039b54c0c0842ac31ee4",
-   "last_success_at": "2026-11-24T06:01:24.518056+00:00",
-   "error": "Source check failed: The Guardian World, Topic: insurance industry, Topic: Zurich Insurance",
-   "candidate_count": 403,
-   "new_count": 9
+   "source_checked_at": "2026-11-24T06:21:26.977605+00:00",
+   "input_fingerprint": "sha256:88aa9c07d601e09cd646a02cf8834f36cee2d1a971281624846ef79e109ebaad",
+   "last_success_at": "2026-11-24T06:21:26.977605+00:00",
+   "error": "Source check failed: The Guardian World",
+   "candidate_count": 416,
+   "new_count": 3
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG have named Swedish referee Glenn Nyberg for Wednesday’s Champions League meeting with Roma; CulturePSG notes his past record has not been especially favorable to the club.",
+     "text": "PSG face Roma with five absences reported ahead of the Champions League match; the available report does not identify them in its summary.",
      "sources": [
       {
-       "key": "cc27117dfa565d00",
-       "title": "Un arbitre guère favorable pour PSG/Roma",
-       "url": "https://www.culturepsg.com/news/discipline/un-arbitre-guere-favorable-pour-psg-roma/61635",
+       "key": "5be7f09ba03721b9",
+       "title": "Déjà 5 absents pour PSG/Roma et un incertain bien connu",
+       "url": "https://www.culturepsg.com/news/match/deja-5-absents-pour-psg-roma-et-incertain-bien-connu/61640",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "CulturePSG reports that Matvey Safonov, who has moved ahead of Lucas Chevalier on the pitch, is expected soon to earn more than the French goalkeeper.",
+     "text": "France’s rugby win over Argentina drew praise from former international Richard Dourthe, who described the team as having “superpowers.”",
      "sources": [
       {
-       "key": "3670cf6d5bbf2409",
-       "title": "Safonov devrait aussi dépasser Chevalier au niveau salarial",
-       "url": "https://www.culturepsg.com/news/club/safonov-va-aussi-depasser-chevalier-au-niveau-salarial/61636",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "France winger Louis Bielle-Biarrey is in contention for World Rugby’s player-of-the-year award.",
-     "sources": [
-      {
-       "key": "ca8715891f7b722e",
-       "title": "World rugby-XV de France: Louis Bielle-Biarrey en lice pour le titre de meilleur joueur du monde - www.rugby-transferts.com",
-       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeFJWclN6Ulk5TjgzUVR3eU5RdlYwTTVYcnp1Sk1jemNjVUhGUURrNmttZGJ1dnRSZE5YN1E0Y1pPTy1DeHRJbDQyYWFDdFQwZWRXTFBibkh0MEdaancwZGtxNkVTbEJhODBZbklJa1BrQ3dSNkZ0N2F5QVZYaGYwa2lGN1ctRUk5VWZGLW5keVV6R3lFT0lZM1hTYkExQUJXbm0zZlZwTk1OV0ozSzNJX01OS3VhQTVwb0xaQktwRnZtak12NkY0WjV0endBcjZjUWc?oc=5",
-       "source": "www.rugby-transferts.com",
+       "key": "81943f114d8adc43",
+       "title": "\"Cette équipe a des superpouvoirs\" : la chronique de Dourthe après France - Argentine - Rugbyrama",
+       "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOMVNKM2gtNTFmSDNwRE14SmlXZGpTSTF2S1dVZlc2QTMxZHBnWllaWVNEblFCVVl3QXE5aEQyUTY3U2NINjZxWkZMRXhrcFRzRDlUaDRkRUVzdzhzNFdHSG9vSmhBc25qVEZ0RG5kb1V5a21rM3NfODVvWmZLV0JNUmFXQU1LTUhGSEExR0w1SE9GS25GMWxrVUdqT3RYdHAyT3lkZGVwMXBLVmxGZUYtYkdLYVlhQUI4d1FUZlY5S3NCblJxUWRhRXJUZUpnUGoyZDNzZVFxS3JLMmxZSVQxUDhnZC1XWW9WZzFDcTdiRmllNUJwVHMyR3hJbW9SQW9ZQXNvSkVB?oc=5",
+       "source": "Rugbyrama",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Imperial opened the Singapore Major with an upset over HEROIC, who lost 12 consecutive rounds; Lynn Vision also beat 9z, leaving the South American side 0-8.",
+     "text": "A French commentary piece frames Didier Deschamps’s return as a success, though the candidate summary gives no match details.",
      "sources": [
       {
-       "key": "eb4aac73d5a8cd7a",
-       "title": "Imperial upset HEROIC in Singapore Major opener",
-       "url": "https://www.hltv.org/news/46034/imperial-upset-heroic-in-singapore-major-opener",
-       "source": "HLTV",
-       "via": null
-      },
-      {
-       "key": "17fc2e201e61c9c3",
-       "title": "Lynn Vision prevail as 9z losing streak continues",
-       "url": "https://www.hltv.org/news/46036/lynn-vision-prevail-as-9z-losing-streak-continues",
-       "source": "HLTV",
-       "via": null
+       "key": "537464e2dbc65733",
+       "title": "Billet. Deschamps, retour gagnant ! - Le Dauphiné Libéré",
+       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5zTjBhM0R4OWFOUTZUVGh0VVIyQXRkaXFWR3ZNTVc4VUJHTGhMLVdObVJmZnFHaFR4UnVqYVZTSXRZR2kxRERaWEVjUVBGRDRXWmc1Y08wNjRIVGtId1JwVlNGaEtaTVByb0N2c1pkaTJhM0Y5TTl6TXV3?oc=5",
+       "source": "Le Dauphiné Libéré",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/discipline/un-arbitre-guere-favorable-pour-psg-roma/61635",
+     "url": "https://www.culturepsg.com/news/club/nouveaux-flocages-disponibles-pour-le-maillot-psg-x-jordan/61638",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-23T09:58:00+00:00",
+     "published": "2026-11-23T12:11:11+00:00",
      "new": true,
-     "key": "cc27117dfa565d00",
-     "title": "Nyberg appointed for PSG–Roma",
-     "summary": "UEFA has appointed Swedish referee Glenn Nyberg for Wednesday’s PSG–Roma match."
+     "key": "41e2c20085e1bb93",
+     "title": "Nouveaux flocages disponibles pour le maillot PSG x Jordan",
+     "summary": "Le nouveau maillot third PSG x Jordan, sorti officiellement ce lundi, est disponible avec le flocage Ligue 1 et Champions League. Deux nouveaux flocages inédits."
     },
     {
-     "url": "https://www.culturepsg.com/news/club/safonov-va-aussi-depasser-chevalier-au-niveau-salarial/61636",
+     "url": "https://www.culturepsg.com/news/club/la-nouvelle-collection-lifestyle-psg-x-jordan-devoilee/61633",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-23T10:19:00+00:00",
+     "published": "2026-11-23T08:42:13+00:00",
      "new": true,
-     "key": "3670cf6d5bbf2409",
-     "title": "Safonov expected to surpass Chevalier’s salary",
-     "summary": "CulturePSG reports that Matvey Safonov is expected to earn more than Lucas Chevalier soon."
+     "key": "494592ca0e1b3964",
+     "title": "La nouvelle collection lifestyle PSG x Jordan dévoilée",
+     "summary": "En plus de son nouveau maillot third 2026/2027, le PSG a dévoilé ce lundi une nouvelle collection lifestyle en collaboration avec Jordan."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeFJWclN6Ulk5TjgzUVR3eU5RdlYwTTVYcnp1Sk1jemNjVUhGUURrNmttZGJ1dnRSZE5YN1E0Y1pPTy1DeHRJbDQyYWFDdFQwZWRXTFBibkh0MEdaancwZGtxNkVTbEJhODBZbklJa1BrQ3dSNkZ0N2F5QVZYaGYwa2lGN1ctRUk5VWZGLW5keVV6R3lFT0lZM1hTYkExQUJXbm0zZlZwTk1OV0ozSzNJX01OS3VhQTVwb0xaQktwRnZtak12NkY0WjV0endBcjZjUWc?oc=5",
-     "source": "www.rugby-transferts.com",
+     "url": "https://www.culturepsg.com/news/match/deja-5-absents-pour-psg-roma-et-incertain-bien-connu/61640",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
+     "via": null,
+     "published": "2026-11-23T15:30:00+00:00",
+     "new": false,
+     "key": "5be7f09ba03721b9",
+     "title": "Five PSG absences reported ahead of Roma match",
+     "summary": "Five absences were reported for PSG ahead of their Champions League match against Roma."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOMVNKM2gtNTFmSDNwRE14SmlXZGpTSTF2S1dVZlc2QTMxZHBnWllaWVNEblFCVVl3QXE5aEQyUTY3U2NINjZxWkZMRXhrcFRzRDlUaDRkRUVzdzhzNFdHSG9vSmhBc25qVEZ0RG5kb1V5a21rM3NfODVvWmZLV0JNUmFXQU1LTUhGSEExR0w1SE9GS25GMWxrVUdqT3RYdHAyT3lkZGVwMXBLVmxGZUYtYkdLYVlhQUI4d1FUZlY5S3NCblJxUWRhRXJUZUpnUGoyZDNzZVFxS3JLMmxZSVQxUDhnZC1XWW9WZzFDcTdiRmllNUJwVHMyR3hJbW9SQW9ZQXNvSkVB?oc=5",
+     "source": "Rugbyrama",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-24T05:16:04+00:00",
+     "published": "2026-11-24T06:01:00+00:00",
      "new": true,
-     "key": "ca8715891f7b722e",
-     "title": "Bielle-Biarrey in World Rugby award contention",
-     "summary": "France winger Louis Bielle-Biarrey is among the contenders for World Rugby’s player-of-the-year award."
+     "key": "81943f114d8adc43",
+     "title": "Dourthe praises France after Argentina win",
+     "summary": "Richard Dourthe praised France after its match against Argentina, describing the team as having “superpowers.”"
     },
     {
-     "url": "https://www.hltv.org/news/46034/imperial-upset-heroic-in-singapore-major-opener",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-11-24T05:01:00+00:00",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5zTjBhM0R4OWFOUTZUVGh0VVIyQXRkaXFWR3ZNTVc4VUJHTGhMLVdObVJmZnFHaFR4UnVqYVZTSXRZR2kxRERaWEVjUVBGRDRXWmc1Y08wNjRIVGtId1JwVlNGaEtaTVByb0N2c1pkaTJhM0Y5TTl6TXV3?oc=5",
+     "source": "Le Dauphiné Libéré",
+     "feed_name": "Team: équipe de France football",
+     "via": "Google News",
+     "published": "2026-11-24T05:05:42+00:00",
      "new": true,
-     "key": "eb4aac73d5a8cd7a",
-     "title": "Imperial upset HEROIC at the Singapore Major",
-     "summary": "Imperial beat HEROIC in their Singapore Major opener after HEROIC lost 12 rounds in a row."
-    },
-    {
-     "url": "https://www.hltv.org/news/46036/lynn-vision-prevail-as-9z-losing-streak-continues",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-11-24T05:22:00+00:00",
-     "new": true,
-     "key": "17fc2e201e61c9c3",
-     "title": "Lynn Vision beat 9z in Singapore Major opener",
-     "summary": "Lynn Vision defeated 9z, extending the South American side’s losing streak to 0-8."
+     "key": "537464e2dbc65733",
+     "title": "Deschamps’s return described as a success",
+     "summary": "A commentary piece in Le Dauphiné Libéré described Didier Deschamps’s return as a success."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-24T06:01:24.518056+00:00",
-   "input_fingerprint": "sha256:06959479539cd23417d2025280929e3c76a14b03ee8ad1ded64f1b18a8687c46",
-   "last_success_at": "2026-11-24T06:01:24.518056+00:00",
-   "candidate_count": 346,
-   "new_count": 5
+   "source_checked_at": "2026-11-24T06:21:26.977605+00:00",
+   "input_fingerprint": "sha256:bd5d7973c989ab69cd0a00191e7b4afa373a484d2128a1c022402cec0c39e48d",
+   "last_success_at": "2026-11-24T06:21:26.977605+00:00",
+   "candidate_count": 334,
+   "new_count": 4
   },
   "finance": {
    "briefing": [
     {
-     "text": "Nvidia’s Jensen Huang has returned to the company, and the group reportedly added nearly $1tn in value—an unusually large swing in the AI trade amid a volatile market backdrop.",
+     "text": "Cheaper oil is easing inflation concerns and helping Treasuries advance, a useful counterpoint to the sharp equity declines in your portfolio today.",
      "sources": [
       {
-       "key": "17311d7f3f10bdd1",
-       "title": "Does Jensen Huang’s return to Nvidia mean the chip group is too big to fail?",
-       "url": "https://www.ft.com/content/ecdc724e-5923-4e57-9d72-c6551c9634f9?syn-25a6b1a6=1",
+       "key": "857c0f0fe5beb1f3",
+       "title": "Treasuries Advance as Cheaper Oil Alleviates Inflation Concerns - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZHlvYnhRbW9lUElIUUR4bnJSWUVBaEJhcl8yZHVmWHYtNlBjcHlBQk5uTTNNenloU1YwMVFzSUZqaWl3anZnR2R2RlR6MlQ4YTNqb0Y0TUdsUGgtUjdvenRkYS1fTVJIcVZhRE04UkRYSWZhUnlEcDV4TnNHMFRHU1pSQXFqN0Vybk1nQVRqVDdYeTg1MEY1RGR4MGZSMHN5STRQVnduS1NlVlA5RV9Xekw2Yjc?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Markets remain sensitive to the AI trade: Nvidia-related optimism helped revive Japanese shares, while analysts assessed the market impact of Jensen Huang’s return.",
+     "sources": [
+      {
+       "key": "36849f98a6d4c85f",
+       "title": "Analysts comment on market impact of Huang's return as Nvidia CEO - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPc2ItQmQwVDh3N0RBcExzLXhjZTd2NkpzcXRYZS1pUVJLRzU4dXpNTW9mYkZReWpPTUxLR3VWZ1h5QjJSWUtaZlJjLXkteGxvQzdpTW1uNE5wbi1PekdNb3V3cFIxb3ViMDZxSlRTb05mcUZCV29PbWwtaWstR1BIZzBsX3hHYWhoc2VHSTd2Z3lJYnlueThLY3lFVmtVeEpfUEE?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      },
+      {
+       "key": "9ca5fc5e17cab6ca",
+       "title": "Japan Stocks Rebound as Huang’s Return Resuscitates AI Trade - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbWpRYlBYN3VtUGhlZEpFMWdsam1hT2lnS0tneDc4bHI4WHFBLUc1S3Y5LWZocVdEclNJZlFwWXBtVFpIaE5TbnZMOVVkRGVnNjhtdVZjREU1X3Vwajk0Y0dNdHBpUkJDaGJBV2tRUkY0ZksyZWtWX250Y01abDBnNXRPZ2lZSHV2ZE1oMTUtVWNpTDNHdzZlS01ncVplZ2ozc0JQLVQySTNKc1NGZjJhNw?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Copper resumed its decline as investors looked beyond Nvidia-related market drama, while separate reporting points to worsening pressure on smelters.",
+     "sources": [
+      {
+       "key": "d30cc4db3f5f145e",
+       "title": "Copper Resumes Decline as Investors Look Beyond Drama at Nvidia - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORmkwMElFUWtfQlhMcVNNY010SXlpbm12cW1IT3BEWExiOTkyMWU5Ulk2T0tva1lkMnd5R2d5LXFJbW9jNDFMOS0tOVZmdG9rYnFrWGhybmNfaHVOaGRIYzRuMEJ3S2lQa0R1YWl1R2JvRTI4b2k4YkdFWjV2QnF4bnl3VlUzSkdySHZJVmtMU2x0bk9vNmUxS2JPb3RPZjl5OHNEa1BkOHNaM3JDdklPVDU0MWI?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      },
+      {
+       "key": "6c5fedaad27b20a7",
+       "title": "Copper Smelters Face Worsening Squeeze As Negotiations Stall - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRW9WVTFNeVRWcjdUM0c2dWNfRTV3RjFjLWJNcEpNWTZtaURFTlZad1ZuS1hJWHZXZDRoWHF4dGt6TXBXcno2d1pLUDljRGRPT0dRNUhXalNFTldXOGMxSWthaG9Ea2ljUG9mZXd5UzVyRk9iWXowdlBQWTNEcUZYWjNtaW9DWDRVNGhmRUpHV21laWJUNk00UkZEbUJYQ0J0U3MwQ3hKMjc1RWlVZ3ktTQ?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A potential SpaceX–Tesla combination could create a vast Musk-led enterprise; the FT reports that five executives are negotiating the possible merger.",
+     "sources": [
+      {
+       "key": "525af206da2af254",
+       "title": "SpaceX-Tesla: the directors negotiating the biggest merger ever",
+       "url": "https://www.ft.com/content/2585e45e-9133-4215-a2d8-e1275e1033b9?syn-25a6b1a6=1",
        "source": "FT Markets",
        "via": null
       }
      ]
     },
     {
-     "text": "Brazil approved Lula’s fiscal plan in an effort to calm markets after the real fell sharply, keeping fiscal credibility in focus for emerging-market investors.",
+     "text": "Japan’s factory activity expanded in November, offering a positive signal on industrial momentum even as the country’s political position draws scrutiny.",
      "sources": [
       {
-       "key": "9bb3260254452a70",
-       "title": "Lula Fiscal Plan Approved in Bid to Calm Market After Real Tanks - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRGVSOExBSW5HbHBtdkdkc0pXMjdhSnJrRDFqaTlhLTNVWXNXVXBUT0JFTWM3VVJGY25FRmw5dW1kdnVFenRTbTRCTlZ3WVR2eFh1TFphNk5YdkpIZ2JKZnRJZ3FjVU5nbmVUOHpmUGlDNXo3N1J4ZkJuRTgzb3lsY3hTUWJQWWo1OHNXWEJ3Q2RnVFhSTDF3MkZHbUhRNmN6Vjd5U0tBSExLSDRfMGR4bS0tMi1ZZw?oc=5",
-       "source": "Bloomberg.com",
+       "key": "5fac8c0083ce35ab",
+       "title": "Japan's factory activity expands in November, PMI shows - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcEkxVkdVSHNaOWJkdmd2UjVQQUk3QjVHbkVSZTNUU25ieGJHUWIweUM3MTlRbnlpSzg5V2pPOE9LN29rWl9ONUFlWHBZMV92dzNHSWFEbkZQb3EwUVZiQjctZ2dzQkpSbkR1UklOZGx4MXVzRW9DeXB0N08ybmNMTWtWYXhTWjdQNE5iNGlBZ3ZQbU5LbEdkUF9Wdw?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      },
+      {
+       "key": "59df8f2dad04c100",
+       "title": "Japan’s Takaichi isolated on world stage - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNNU81ZWJ1bnNkV01tOE1aWmR4MnVUTDVuTWxXSXdKV2d2d0JsNF9tOWhyc0JKaUE5SWpleFdsUVN0NXlReml5ODBKbnExZE9JbTVPd1hvWHFFRTItYXhKdDFSUkl1aDh4Y3pUaEl1Z0dLZ2JsUWJVSENTdFQ5ckhsQ2s2OXE?oc=5",
+       "source": "Financial Times",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Congo’s export ban has lifted Chinese cobalt producers’ shares, putting supply constraints back in focus for the battery-materials market.",
+     "text": "Australia is considering an internet-safety bill that could expose major technology companies to billions of dollars in fines.",
      "sources": [
       {
-       "key": "86ba16b18b1f72c1",
-       "title": "Shares in Chinese Cobalt Producers Jump After Congo Bans Exports - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVmdoOTViOUg5Tnl1Zk4zSmY0S3poT3JobHA4UmNEZmotbEhZb2E0Vjh4c1d5NW5NTEJyMjRLNHNLYkR6SGJuTjI5TWJEVklPeUhtMDNJMjlxeExmSjBrMnRxdWRrWndJWFVvdmY5YnVaMDkxWFpEQ3dVQm9CQUZuSXNieTNDV0hHUW1McUdvcGltcDZTaDhyZHV1VVJjQzV0YnJzOUFJazdDTU1FYjdHWldzZVlWQQ?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Singapore’s prime minister says the city-state will enforce US chip-export controls, a reminder that AI hardware supply chains remain exposed to geopolitical rules.",
-     "sources": [
-      {
-       "key": "35640700167256a5",
-       "title": "Singapore is no backdoor for US chips, PM says",
-       "url": "https://www.ft.com/content/6ca21b39-ff62-42e0-9695-9220b438f7eb?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Keppel agreed to combine Singapore’s M1 and StarHub in an all-share deal, a notable telecom-sector consolidation.",
-     "sources": [
-      {
-       "key": "eb9486c30f1f3df8",
-       "title": "Keppel Agrees to Merge M1 and Starhub in All-Share Deal - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWDVqUVktX1B5SjRSUlBraVozZ29wOXI2S0dRWWFqWEhoX2RZLUNkSDJzUE41R1Q1cUgxeElsWExnZmFxaDVlNDZ5NzE1NlFkNUUtZkZaX1lURXlVRC1tWkpfRWJvSWJJaTZEa09hZXJvWl8tSXdEYlg1SGhXOXJfUkpFMXhhQlcta2NNVlozQnZxMml2TWR6ekNYZWh1YmI4RWg4NEpxOHRtUQ?oc=5",
-       "source": "Bloomberg.com",
+       "key": "61a6843624197b9c",
+       "title": "Big Tech could face billions of dollars in fines under Australian internet safety bill - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxORG5QdGdxRm1nOGVuczhoUXJVbnYwakY5NUxEVEVSbzhaRUtYdGx0X25LeGhQbVE0X05XeHI3OUNkZTJDWjA5aTRHN0FSSGRQZllJUjJ1Qm1wWkI4REhSbFhDUnZXRmc3UjBpWng0aExBX1JWSGJlNlNZNUwteFFEY0daYnA5LUJEa1JlakpkcUNBUDlyRTRuSnFpZ3dzU05lMV8xNHQ4YnpUODMxbHFBWXpRLW9jZk9v?oc=5",
+       "source": "Reuters",
        "via": "Google News"
       }
      ]
@@ -1136,89 +1038,99 @@
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/ecdc724e-5923-4e57-9d72-c6551c9634f9?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-11-24T05:00:00+00:00",
-     "new": true,
-     "key": "17311d7f3f10bdd1",
-     "title": "Nvidia gains nearly $1tn after Jensen Huang’s return",
-     "summary": "Nvidia gained nearly $1tn in value after Jensen Huang was reinstated."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRGVSOExBSW5HbHBtdkdkc0pXMjdhSnJrRDFqaTlhLTNVWXNXVXBUT0JFTWM3VVJGY25FRmw5dW1kdnVFenRTbTRCTlZ3WVR2eFh1TFphNk5YdkpIZ2JKZnRJZ3FjVU5nbmVUOHpmUGlDNXo3N1J4ZkJuRTgzb3lsY3hTUWJQWWo1OHNXWEJ3Q2RnVFhSTDF3MkZHbUhRNmN6Vjd5U0tBSExLSDRfMGR4bS0tMi1ZZw?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZHlvYnhRbW9lUElIUUR4bnJSWUVBaEJhcl8yZHVmWHYtNlBjcHlBQk5uTTNNenloU1YwMVFzSUZqaWl3anZnR2R2RlR6MlQ4YTNqb0Y0TUdsUGgtUjdvenRkYS1fTVJIcVZhRE04UkRYSWZhUnlEcDV4TnNHMFRHU1pSQXFqN0Vybk1nQVRqVDdYeTg1MEY1RGR4MGZSMHN5STRQVnduS1NlVlA5RV9Xekw2Yjc?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-24T03:50:00+00:00",
+     "published": "2026-11-24T04:42:00+00:00",
      "new": true,
-     "key": "9bb3260254452a70",
-     "title": "Brazil approves Lula’s fiscal plan as markets react to real’s fall",
-     "summary": "Brazil approved Lula’s fiscal plan in an effort to calm markets after the real fell."
+     "key": "857c0f0fe5beb1f3",
+     "title": "Treasuries advance as cheaper oil eases inflation concerns",
+     "summary": "Treasuries advanced as cheaper oil eased inflation concerns."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVmdoOTViOUg5Tnl1Zk4zSmY0S3poT3JobHA4UmNEZmotbEhZb2E0Vjh4c1d5NW5NTEJyMjRLNHNLYkR6SGJuTjI5TWJEVklPeUhtMDNJMjlxeExmSjBrMnRxdWRrWndJWFVvdmY5YnVaMDkxWFpEQ3dVQm9CQUZuSXNieTNDV0hHUW1McUdvcGltcDZTaDhyZHV1VVJjQzV0YnJzOUFJazdDTU1FYjdHWldzZVlWQQ?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPc2ItQmQwVDh3N0RBcExzLXhjZTd2NkpzcXRYZS1pUVJLRzU4dXpNTW9mYkZReWpPTUxLR3VWZ1h5QjJSWUtaZlJjLXkteGxvQzdpTW1uNE5wbi1PekdNb3V3cFIxb3ViMDZxSlRTb05mcUZCV29PbWwtaWstR1BIZzBsX3hHYWhoc2VHSTd2Z3lJYnlueThLY3lFVmtVeEpfUEE?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-24T02:33:00+00:00",
+     "new": true,
+     "key": "36849f98a6d4c85f",
+     "title": "Analysts assess market impact of Huang’s return as Nvidia CEO",
+     "summary": "Analysts commented on the market impact of Jensen Huang’s return as Nvidia CEO."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbWpRYlBYN3VtUGhlZEpFMWdsam1hT2lnS0tneDc4bHI4WHFBLUc1S3Y5LWZocVdEclNJZlFwWXBtVFpIaE5TbnZMOVVkRGVnNjhtdVZjREU1X3Vwajk0Y0dNdHBpUkJDaGJBV2tRUkY0ZksyZWtWX250Y01abDBnNXRPZ2lZSHV2ZE1oMTUtVWNpTDNHdzZlS01ncVplZ2ozc0JQLVQySTNKc1NGZjJhNw?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-24T03:17:00+00:00",
+     "published": "2026-11-24T02:10:00+00:00",
      "new": true,
-     "key": "86ba16b18b1f72c1",
-     "title": "Congo export ban lifts Chinese cobalt producers’ shares",
-     "summary": "Shares in Chinese cobalt producers jumped after Congo banned exports."
+     "key": "9ca5fc5e17cab6ca",
+     "title": "Japan stocks rebound as Huang’s return revives AI trade",
+     "summary": "Japanese stocks rebounded as Huang’s return revived the AI trade."
     },
     {
-     "url": "https://www.ft.com/content/6ca21b39-ff62-42e0-9695-9220b438f7eb?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-11-24T03:46:42+00:00",
-     "new": true,
-     "key": "35640700167256a5",
-     "title": "Singapore vows to enforce US chip-export controls",
-     "summary": "Prime Minister Lawrence Wong said Singapore would not let companies circumvent US export controls."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWDVqUVktX1B5SjRSUlBraVozZ29wOXI2S0dRWWFqWEhoX2RZLUNkSDJzUE41R1Q1cUgxeElsWExnZmFxaDVlNDZ5NzE1NlFkNUUtZkZaX1lURXlVRC1tWkpfRWJvSWJJaTZEa09hZXJvWl8tSXdEYlg1SGhXOXJfUkpFMXhhQlcta2NNVlozQnZxMml2TWR6ekNYZWh1YmI4RWg4NEpxOHRtUQ?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORmkwMElFUWtfQlhMcVNNY010SXlpbm12cW1IT3BEWExiOTkyMWU5Ulk2T0tva1lkMnd5R2d5LXFJbW9jNDFMOS0tOVZmdG9rYnFrWGhybmNfaHVOaGRIYzRuMEJ3S2lQa0R1YWl1R2JvRTI4b2k4YkdFWjV2QnF4bnl3VlUzSkdySHZJVmtMU2x0bk9vNmUxS2JPb3RPZjl5OHNEa1BkOHNaM3JDdklPVDU0MWI?oc=5",
      "source": "Bloomberg.com",
      "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-24T01:07:00+00:00",
+     "published": "2026-11-24T02:38:00+00:00",
      "new": true,
-     "key": "eb9486c30f1f3df8",
-     "title": "Keppel agrees to merge M1 and StarHub",
-     "summary": "Keppel agreed to combine M1 and StarHub in an all-share deal."
+     "key": "d30cc4db3f5f145e",
+     "title": "Copper resumes decline as investors look beyond Nvidia",
+     "summary": "Copper resumed its decline as investors looked beyond Nvidia-related market drama."
     },
     {
-     "url": "https://www.ft.com/content/26739054-0455-449b-9566-97fb4986088d?syn-25a6b1a6=1",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRW9WVTFNeVRWcjdUM0c2dWNfRTV3RjFjLWJNcEpNWTZtaURFTlZad1ZuS1hJWHZXZDRoWHF4dGt6TXBXcno2d1pLUDljRGRPT0dRNUhXalNFTldXOGMxSWthaG9Ea2ljUG9mZXd5UzVyRk9iWXowdlBQWTNEcUZYWjNtaW9DWDRVNGhmRUpHV21laWJUNk00UkZEbUJYQ0J0U3MwQ3hKMjc1RWlVZ3ktTQ?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-24T01:29:00+00:00",
+     "new": true,
+     "key": "6c5fedaad27b20a7",
+     "title": "Copper smelters face worsening squeeze as negotiations stall",
+     "summary": "Copper smelters faced a worsening squeeze as negotiations stalled."
+    },
+    {
+     "url": "https://www.ft.com/content/2585e45e-9133-4215-a2d8-e1275e1033b9?syn-25a6b1a6=1",
      "source": "FT Markets",
      "feed_name": "FT Markets",
      "via": null,
-     "published": "2026-11-24T05:00:15+00:00",
+     "published": "2026-11-24T05:00:16+00:00",
      "new": true,
-     "key": "52b40cc6c79fd27f",
-     "title": "Small rating agency bets on technology to scale private-credit ratings",
-     "summary": "Egan-Jones says technology allows it to produce thousands of private-credit ratings."
+     "key": "525af206da2af254",
+     "title": "SpaceX–Tesla: the directors negotiating a potential mega-merger",
+     "summary": "Five executives are negotiating a potential combination of Elon Musk’s companies."
     },
     {
-     "url": "https://www.ft.com/content/b7726a77-5f25-4c9c-8900-1609479b34b8?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-11-24T05:00:15+00:00",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcEkxVkdVSHNaOWJkdmd2UjVQQUk3QjVHbkVSZTNUU25ieGJHUWIweUM3MTlRbnlpSzg5V2pPOE9LN29rWl9ONUFlWHBZMV92dzNHSWFEbkZQb3EwUVZiQjctZ2dzQkpSbkR1UklOZGx4MXVzRW9DeXB0N08ybmNMTWtWYXhTWjdQNE5iNGlBZ3ZQbU5LbEdkUF9Wdw?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-24T00:35:00+00:00",
      "new": true,
-     "key": "c77e9e9b7b9848e4",
-     "title": "US audits regulator signals a change in approach",
-     "summary": "Signs are emerging of a new approach at the industry regulator under chair Jim Logothetis."
+     "key": "5fac8c0083ce35ab",
+     "title": "Japan factory activity expands in November, PMI shows",
+     "summary": "Japan’s factory activity expanded in November, according to a PMI survey."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxORG5QdGdxRm1nOGVuczhoUXJVbnYwakY5NUxEVEVSbzhaRUtYdGx0X25LeGhQbVE0X05XeHI3OUNkZTJDWjA5aTRHN0FSSGRQZllJUjJ1Qm1wWkI4REhSbFhDUnZXRmc3UjBpWng0aExBX1JWSGJlNlNZNUwteFFEY0daYnA5LUJEa1JlakpkcUNBUDlyRTRuSnFpZ3dzU05lMV8xNHQ4YnpUODMxbHFBWXpRLW9jZk9v?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-24T02:24:00+00:00",
+     "new": true,
+     "key": "61a6843624197b9c",
+     "title": "Australia bill could expose Big Tech to billions in fines",
+     "summary": "A proposed Australian internet-safety bill could expose major technology companies to billions of dollars in fines."
     }
    ],
    "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-24T06:01:24.518056+00:00",
-   "input_fingerprint": "sha256:da3621ab3c755863ef715d24fbd5e80ef32f16fd55488a4ec8e9a3d0d012edb2",
-   "last_success_at": "2026-11-24T06:01:24.518056+00:00",
-   "error": "Source check failed: Reuters Business (via Google News)",
+   "state": "healthy",
+   "source_checked_at": "2026-11-24T06:21:26.977605+00:00",
+   "input_fingerprint": "sha256:fe836f2a1ecdf3ee9a7e6d589f1bdbfbdf69623e1e06a59d9dce6ca4098d0ddc",
+   "last_success_at": "2026-11-24T06:21:26.977605+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1311,8 +1223,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 60493.9,
-     "change_pct": -1.09,
+     "price": 60481.12,
+     "change_pct": -1.11,
      "currency": "USD",
      "as_of": "2026-11-24T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1322,8 +1234,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1701.49,
-     "change_pct": -1.14,
+     "price": 1701.25,
+     "change_pct": -1.15,
      "currency": "USD",
      "as_of": "2026-11-24T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1331,8 +1243,8 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 239,
-   "new_count": 7
+   "candidate_count": 320,
+   "new_count": 8
   },
   "media": {
    "briefing": "",
@@ -1430,7 +1342,7 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-24T06:01:24.518056+00:00",
+   "source_checked_at": "2026-11-24T06:21:26.977605+00:00",
    "candidate_count": 9,
    "new_count": 0
   }
