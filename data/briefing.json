@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261126T163314166715Z",
- "generated_at": "2026-11-26T16:33:14.166715+00:00",
- "generated_local": "Thu 26 Nov 2026, 17:33",
- "source_checked_at": "2026-11-26T16:33:14.166715+00:00",
+ "edition_id": "ed-20261126T180124093329Z",
+ "generated_at": "2026-11-26T18:01:24.093329+00:00",
+ "generated_local": "Thu 26 Nov 2026, 19:01",
+ "source_checked_at": "2026-11-26T18:01:24.093329+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-26T16:33:14.166715+00:00"
+  "run-2026-11-26T18:01:24.093329+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-26T16:33:14.166715+00:00"
+  "completed_at": "2026-11-26T18:01:24.093329+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -134,10 +134,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -205,14 +205,19 @@
   {
    "name": "Team: PSG",
    "section": "sport",
-   "status": "ok",
-   "item_count": 104,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 104,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: équipe de France football",
@@ -241,14 +246,19 @@
   {
    "name": "Team: Champions League",
    "section": "sport",
-   "status": "ok",
-   "item_count": 109,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 109,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Team: Team Vitality Counter-Strike",
@@ -422,10 +432,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 11,
+   "item_count": 9,
    "reason": null,
    "failure": null,
-   "parsed_count": 11,
+   "parsed_count": 9,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -445,14 +455,19 @@
   {
    "name": "FT (via Google News)",
    "section": "finance",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Reuters Business (via Google News)",
@@ -469,14 +484,19 @@
   {
    "name": "Bloomberg (via Google News)",
    "section": "finance",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "CNBC Markets",
@@ -505,14 +525,19 @@
   {
    "name": "Les Echos Finance",
    "section": "finance",
-   "status": "fallback",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 403",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 403,
+    "content_type": "text/html",
+    "body_prefix": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1>   You don't have permission to access \"http&#58;&#47;&#47;services&#46;lesechos&#"
+   }
   },
   {
    "name": "CoinDesk",
@@ -689,7 +714,7 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002234,
+  "est_cost_usd": 0.002171,
   "est_month_usd": 0.2,
   "forecast_month_usd": 0.2,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
@@ -699,60 +724,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 6000,
+    "latency_ms": 5327,
     "unknown": false,
     "provider_request_ids": [
-     "resp_04ff2769ba45aec0016b085f51174487d2b35e01d992fc3919"
+     "resp_0666b1e50c6f8cd8016b0873fae80087d0a0dc0cf2f681a24f"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3321,
-    "output_tokens": 636,
-    "reasoning_tokens": 138
+    "cache_write_tokens": 3281,
+    "output_tokens": 600,
+    "reasoning_tokens": 154
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 4825,
+    "latency_ms": 4497,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0b3fd5d06aa9b0a8016b085f566e8887d2bc51a304058c0827"
+     "resp_0a607939243008c4016b0873ffa0d487d090438e4b96400894"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3502,
-    "output_tokens": 636,
-    "reasoning_tokens": 173
+    "cache_write_tokens": 3532,
+    "output_tokens": 600,
+    "reasoning_tokens": 275
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 8894,
+    "latency_ms": 5715,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0145b266e87e3637016b085f5b3f1887d288c6ea9ea70b0087"
+     "resp_08327745f24a9e53016b087404b3a487d09bd6b26856e7f93d"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3215,
-    "output_tokens": 685,
-    "reasoning_tokens": 208
+    "cache_write_tokens": 3282,
+    "output_tokens": 616,
+    "reasoning_tokens": 167
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10038,
-  "output_tokens": 1957,
-  "reasoning_tokens": 519,
+  "cache_write_tokens": 10095,
+  "output_tokens": 1816,
+  "reasoning_tokens": 596,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 104,
-   "attempts": 312,
-   "known_cost_usd": 0.233352,
+   "recorded_runs": 105,
+   "attempts": 315,
+   "known_cost_usd": 0.235523,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -761,80 +786,68 @@
   "news": {
    "briefing": [
     {
-     "text": "Pablo Hernández de Cos has been selected to succeed Christine Lagarde as ECB president, with Reuters describing him as a crisis veteran facing new strains.",
+     "text": "EU leaders have agreed to appoint Spain’s Pablo Hernández de Cos as the next ECB president, setting up a change in leadership at the central bank.",
      "sources": [
       {
-       "key": "b1ea7c99eb1c4f49",
-       "title": "ECB turns to crisis veteran De Cos as new strains loom - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPazQ1LXNCQnNXd2lVdDExZDdCQVFxV2NwTmluQ1FXU2wzUkN5REwxYWVzdFdOVS1LN1ZrcEllQ0lleGdic2VHai1VTldNOS1TTXAyQVpiWmhKbXhLaTI3eFNNQnRNMzlFZUpUamI4R0VqS2pBY2NwQkItUm1MeHhacldyQ3FiUm1tUmVzdEM4ZTJndHpteFY2LUthU18weTdMdTZN?oc=5",
-       "source": "Reuters",
+       "key": "66618972dad47473",
+       "title": "Spain’s Pablo Hernández de Cos wins race to be next ECB president - The Guardian",
+       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQ3FuRF9nbl9LcE55WGZSN2NNT1pJbnFXcUx5VHAyR0dsenQ2Y0hyYVo4X3VIZDgzTWNxWlpWS1hFWlRhSm9PVXJlazZCUWtzamFNTkRjSWF3S25iV1ZlZ2lzcDFidEZIX1dIMTJjU2ZfRlBuLVpnSnNmT3hzd1MyS1FGRWZWMHllUDBsUTdDMThKV2NjV2RlZUlUQ1c?oc=5",
+       "source": "The Guardian",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "European shares rallied, with Milan leading gains as technology, autos and banks advanced; coverage attributed the optimism in part to AI.",
+     "text": "European equities rallied, with Milan leading major markets; Italian shares rose 2.36% and the BTP–Bund spread narrowed to 107 basis points.",
      "sources": [
       {
-       "key": "a337bc4f629e9697",
-       "title": "Borse e petrolio in diretta oggi 26 novembre | L'Europa rimbalza, volata del comparto tech: Milano la piazza migliore - Corriere della Sera",
-       "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNeHNDaVdzdC1mT2NkNmZuUnNNRmRDSGhKTHFMQ1JvM0RSMDFYZHBCdng5WHc5OUJhVUFIaE1pMUVkclBQTnMzZDV6RGRCcTZwMTkzQ0lCNU1BUzZURFpybExmMklOMGJ1bmVhRzdmZXVwNzM2ZWpXRE9NSnB2NG9vMVRMRHhjbnFfbDhXOFNIRGlxOTI2WGxvaEJlREh5RWN0RG9Ga3VpWnhLa0Rmd3ZLTzNBaS1xU25pcWdBYUpPZDdMRWZCY1pzNl9xUDJ4UVd2dTNDMHZPOFY0SG9OV1FSVjZSMFJBTG9XMXZpeWNaNHNWb2E5ZGZzMHloclpzaXpoeGg4cnVZVjlHdGNudGpPbmZNeXVQd9IBmwJBVV95cUxNSjc1d0g3NnVLSEhzbF8wUjlDNlpzczZleHV1amhNbDJWV08tYnFFaDBqNGNlOGpHems4RVF1a0hQa0NGbUpNYVFXd0pLSmVnN0hSaC1FQXFfZU9pMVdXeFc3XzA1a29DQmJpeTdUdlJOamg0TkhhYkJUb281UDgyV3QxQWNTRHBtQ3NMMW1aZjVFaU1GSVNtNUJ1Qlp1UGJTYi1Ha0pDY0VyUGpJSnF2R0VCMXpqa0NuTVRkQW5YcXVGcUFtcTl6UW01T2pnLWkzX0JqSlU4b0lRa1NNSDJNQUJuMlFJWVVGeUVlamM2V0JYUzkzeFk3aXExdUJpdVpRWVZ4X1RFa09aQjNEdWhCUWZuUktVVDlEdnNB?oc=5",
-       "source": "Corriere della Sera",
-       "via": "Google News"
+       "key": "a33d1dd763f15281",
+       "title": "Borsa: Milano regina d'Europa (+2,36%), botto di Sellantis e Prysmian",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/26/borsa-milano-regina-deuropa-236-botto-di-sellantis-e-prysmian_4ec9495f-05c0-469b-9f99-ebdba0e8c92b.html",
+       "source": "ANSA Top News",
+       "via": null
       },
       {
-       "key": "fac65a47801477f6",
-       "title": "Borsa: l'Europa corre nel finale, New York chiusa, Milano +2,7%",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/26/borsa-leuropa-corre-nel-finale-new-york-chiusa-milano-27_0d3911ae-7234-4dfb-9843-f9e58b003edc.html",
+       "key": "cae3fa86861d71bf",
+       "title": "Lo spread tra Btp e Bund tedeschi chiude in ribasso a 107 punti",
+       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/26/lo-spread-tra-btp-e-bund-tedeschi-chiude-in-ribasso-a-107-punti_7f7dfd13-11ce-410e-91ef-8b229616a6cb.html",
        "source": "ANSA Top News",
        "via": null
       }
      ]
     },
     {
-     "text": "Two Italian technicians working for Germany’s Rheinmetall were killed in an Iranian strike in Kuwait, Italy’s foreign ministry says.",
+     "text": "Insurance brokers warn that geopolitical instability, AI risks and economic volatility could reshape the sector’s 2027 outlook.",
      "sources": [
       {
-       "key": "a5a563c2a3a6d766",
-       "title": "Two Italians killed after Iranian strike in Kuwait",
-       "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
-       "source": "BBC World",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "SAP is weighing at least 10,000 job cuts as part of an AI-related restructuring.",
-     "sources": [
-      {
-       "key": "ba6541bceac385a8",
-       "title": "SAP Weighs Cutting at Least 10,000 Positions in AI Restructuring - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdEkwcUVNZU5SbHN4QWpxRU81d3p0eWFzcDY5VVd2dnBCeU8wMDlxVTM1NzhEM0NZMnNTNGZRVnA1WU1OUWM1N21tV29IZlJ6WUZLQ0xuWmd5cS1wU2dtaHpuRGRjZFA4V2I0VXRPYjhlN1ZQamVzMFBKQk1yRExURUFCX3B0MVdDRFd4djY2cEpmaERpbENDalRtcjFwd0trT3JHU3haMWRQdlBsRFNYNFhSTUt1QQ?oc=5",
-       "source": "Bloomberg",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Moody’s turned positive on PICC Re, citing improving underwriting performance—a notable signal for the reinsurance sector.",
-     "sources": [
-      {
-       "key": "5e53143f3a1b2785",
-       "title": "Moody’s turns positive on PICC Re, citing improving underwriting performance - Reinsurance News",
-       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLWJNbzlLVGVacUlLRTZyNjZVdlU2S2otOUtSbUtnYlpjSGctS2h4S3Y4YWdiem5IUk56akxCX1IwcWdBcVZ4UTNFQUMtTEJKVlNvbktQbl9JTHFLSm1PMkRxbnRZWFRjZ3lBUmRBVDZrSGNBUkFjWTd1T0FWOE1ud3A5czc5TXQwZGRMM1VhR0FEZ0JOcXZKaVduS2laekVFWTI2eHNxWQ?oc=5",
+       "key": "055d41e307e41e06",
+       "title": "Geopolitical instability, AI risks and economic volatility could reshape ‘27 insurance outlook: LIIBA’s Croft - Reinsurance News",
+       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNUzE4ejVRSVVMUzdxZmRHMkpxSGdSeEx0ZzdjYkJaQ3hDYUZZRWRYZ0g4YnRxQnFaRVl1UWJuWWpLOWVEVzVDX3RNOFhKcS1aTXlRZzM4dHVxTXN1SGsxd2doN3pUMUNBSW9EdWliV0lDQnhxUGRreW5zQnNwTDFCcXMzWDdaWGwyQmYyUzZvdjZmWURGYmhvenBPanNadS1POHJuSmEwdzJ1NmFpX0treGN1VmJrOXYwMnFDTjFaTlNlY3pLUkVqMGV0NERUcEcy?oc=5",
        "source": "Reinsurance News",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "Italy is preparing to take a leading role in the military pillar of a new European mission in Lebanon, according to ANSA.",
+     "text": "SAP is considering at least 10,000 job cuts as part of an AI-focused restructuring, according to a Reuters report citing Bloomberg.",
      "sources": [
       {
-       "key": "69922637a2b08ba7",
-       "title": "Nuova missione europea in Libano, l'Italia verso la guida",
-       "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/26/nuova-missione-europea-in-libano-litalia-verso-la-guida_83c78e36-d0d7-45e2-a6a1-0c7ad4d5ebc8.html",
-       "source": "ANSA Top News",
+       "key": "8bf5fe14afd0f5c8",
+       "title": "SAP considers at least 10,000 job cuts in AI restructuring, Bloomberg reports - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUUhZaXItb2lOYVhHRHBoUkpGZFM2Y0ZpQ1dSN3QwUnEyQlBKdmlRVG9fdFM5WS1UNm41dGZnRVhyY1FIbjBvOUNFWEREN1F4S1l1amVSUGFheGl4N1NNbk1ieF9HU3N0azQ1djN1bjA2RWhIc1VhVWVWb0RVbG1HMVlPbFQyb0N5N1ZLTUVZeXlxMDk4d3d0UHh1ajdZeWd3ekx5TU52Z3BDaXdhOU9uN3dtd1lLMXM?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A Le Monde report describes NATO allies’ move toward AI-enabled military operations, including a large-scale territorial-defence simulation in Latvia.",
+     "sources": [
+      {
+       "key": "e191b6cf113498d7",
+       "title": "Le virage au forceps des alliés de l’OTAN vers des opérations militaires dopées à l’IA de Palantir",
+       "url": "https://www.lemonde.fr/international/article/2026/11/26/le-virage-au-forceps-des-allies-de-l-otan-vers-des-operations-militaires-dopees-a-l-ia-de-palantir_6815581_3210.html",
+       "source": "Le Monde",
        "via": null
       }
      ]
@@ -842,398 +855,329 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPazQ1LXNCQnNXd2lVdDExZDdCQVFxV2NwTmluQ1FXU2wzUkN5REwxYWVzdFdOVS1LN1ZrcEllQ0lleGdic2VHai1VTldNOS1TTXAyQVpiWmhKbXhLaTI3eFNNQnRNMzlFZUpUamI4R0VqS2pBY2NwQkItUm1MeHhacldyQ3FiUm1tUmVzdEM4ZTJndHpteFY2LUthU18weTdMdTZN?oc=5",
-     "source": "Reuters",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQ3FuRF9nbl9LcE55WGZSN2NNT1pJbnFXcUx5VHAyR0dsenQ2Y0hyYVo4X3VIZDgzTWNxWlpWS1hFWlRhSm9PVXJlazZCUWtzamFNTkRjSWF3S25iV1ZlZ2lzcDFidEZIX1dIMTJjU2ZfRlBuLVpnSnNmT3hzd1MyS1FGRWZWMHllUDBsUTdDMThKV2NjV2RlZUlUQ1c?oc=5",
+     "source": "The Guardian",
      "feed_name": "Topic: European Central Bank",
      "via": "Google News",
-     "published": "2026-11-26T16:24:04+00:00",
+     "published": "2026-11-26T17:57:00+00:00",
      "new": true,
-     "key": "b1ea7c99eb1c4f49",
-     "title": "ECB turns to crisis veteran De Cos as new strains loom",
-     "summary": "Reuters reports that Spain’s former central bank head Pablo Hernández de Cos is set to lead the ECB."
+     "key": "66618972dad47473",
+     "title": "De Cos wins race to become next ECB president",
+     "summary": "EU leaders agreed to appoint Spain’s Pablo Hernández de Cos as the next European Central Bank president."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNeHNDaVdzdC1mT2NkNmZuUnNNRmRDSGhKTHFMQ1JvM0RSMDFYZHBCdng5WHc5OUJhVUFIaE1pMUVkclBQTnMzZDV6RGRCcTZwMTkzQ0lCNU1BUzZURFpybExmMklOMGJ1bmVhRzdmZXVwNzM2ZWpXRE9NSnB2NG9vMVRMRHhjbnFfbDhXOFNIRGlxOTI2WGxvaEJlREh5RWN0RG9Ga3VpWnhLa0Rmd3ZLTzNBaS1xU25pcWdBYUpPZDdMRWZCY1pzNl9xUDJ4UVd2dTNDMHZPOFY0SG9OV1FSVjZSMFJBTG9XMXZpeWNaNHNWb2E5ZGZzMHloclpzaXpoeGg4cnVZVjlHdGNudGpPbmZNeXVQd9IBmwJBVV95cUxNSjc1d0g3NnVLSEhzbF8wUjlDNlpzczZleHV1amhNbDJWV08tYnFFaDBqNGNlOGpHems4RVF1a0hQa0NGbUpNYVFXd0pLSmVnN0hSaC1FQXFfZU9pMVdXeFc3XzA1a29DQmJpeTdUdlJOamg0TkhhYkJUb281UDgyV3QxQWNTRHBtQ3NMMW1aZjVFaU1GSVNtNUJ1Qlp1UGJTYi1Ha0pDY0VyUGpJSnF2R0VCMXpqa0NuTVRkQW5YcXVGcUFtcTl6UW01T2pnLWkzX0JqSlU4b0lRa1NNSDJNQUJuMlFJWVVGeUVlamM2V0JYUzkzeFk3aXExdUJpdVpRWVZ4X1RFa09aQjNEdWhCUWZuUktVVDlEdnNB?oc=5",
-     "source": "Corriere della Sera",
-     "feed_name": "Topic: Milano",
-     "via": "Google News",
-     "published": "2026-11-26T16:25:00+00:00",
-     "new": true,
-     "key": "a337bc4f629e9697",
-     "title": "European markets rebound, with Milan leading gains",
-     "summary": "European stocks rallied, and Milan was the strongest market as technology shares surged."
-    },
-    {
-     "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "feed_name": "BBC World",
-     "via": null,
-     "published": "2026-11-26T16:27:09+00:00",
-     "new": true,
-     "key": "a5a563c2a3a6d766",
-     "title": "Two Italians killed after Iranian strike in Kuwait",
-     "summary": "Italy’s foreign ministry said two Italian technicians working for German company Rheinmetall were killed in an Iranian strike in Kuwait."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdEkwcUVNZU5SbHN4QWpxRU81d3p0eWFzcDY5VVd2dnBCeU8wMDlxVTM1NzhEM0NZMnNTNGZRVnA1WU1OUWM1N21tV29IZlJ6WUZLQ0xuWmd5cS1wU2dtaHpuRGRjZFA4V2I0VXRPYjhlN1ZQamVzMFBKQk1yRExURUFCX3B0MVdDRFd4djY2cEpmaERpbENDalRtcjFwd0trT3JHU3haMWRQdlBsRFNYNFhSTUt1QQ?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-26T16:15:48+00:00",
-     "new": true,
-     "key": "ba6541bceac385a8",
-     "title": "SAP weighs at least 10,000 job cuts in AI restructuring",
-     "summary": "Bloomberg reports that SAP is considering at least 10,000 job cuts as part of an AI restructuring."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLWJNbzlLVGVacUlLRTZyNjZVdlU2S2otOUtSbUtnYlpjSGctS2h4S3Y4YWdiem5IUk56akxCX1IwcWdBcVZ4UTNFQUMtTEJKVlNvbktQbl9JTHFLSm1PMkRxbnRZWFRjZ3lBUmRBVDZrSGNBUkFjWTd1T0FWOE1ud3A5czc5TXQwZGRMM1VhR0FEZ0JOcXZKaVduS2laekVFWTI2eHNxWQ?oc=5",
-     "source": "Reinsurance News",
-     "feed_name": "Topic: reinsurance",
-     "via": "Google News",
-     "published": "2026-11-26T16:00:37+00:00",
-     "new": true,
-     "key": "5e53143f3a1b2785",
-     "title": "Moody’s turns positive on PICC Re",
-     "summary": "Moody’s cited improving underwriting performance in turning positive on PICC Re."
-    },
-    {
-     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/26/nuova-missione-europea-in-libano-litalia-verso-la-guida_83c78e36-d0d7-45e2-a6a1-0c7ad4d5ebc8.html",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/26/borsa-milano-regina-deuropa-236-botto-di-sellantis-e-prysmian_4ec9495f-05c0-469b-9f99-ebdba0e8c92b.html",
      "source": "ANSA Top News",
      "feed_name": "ANSA Top News",
      "via": null,
-     "published": "2026-11-26T15:56:01+00:00",
+     "published": "2026-11-26T16:59:11+00:00",
      "new": true,
-     "key": "69922637a2b08ba7",
-     "title": "Italy moves toward leading new European mission in Lebanon",
-     "summary": "Italy is ready to assume a leading role in the military pillar of a new European mission in Lebanon, ANSA reports."
+     "key": "a33d1dd763f15281",
+     "title": "Milan leads European markets higher",
+     "summary": "Milan’s benchmark rose 2.36%, with Stellantis and Prysmian among the standout shares."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNNzFiM29KUVhvZHZUYTV1SWtlLXNYbXg3ZzRodFVmanZkNzJsczZ4UldfRkNkSW1fVDhMaTFYOW9ETUxXaXFKcktCTThoYnBYS21mVjQxYkNWM19MR1h0WHNSdjlGenRTNkExU2RKU0ZKNUhCRWR0OVU2VmFqTUJHeE5QMVNybDE4Qk1WTmp5VGgyWDV0NjhaM3h4Ulp1bWZDUThnSlI0TFMwMnQzNk5KQnZXVTRCUUxvc2FLbmlDYVREeHpwOUpV?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-26T15:40:25+00:00",
+     "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/26/lo-spread-tra-btp-e-bund-tedeschi-chiude-in-ribasso-a-107-punti_7f7dfd13-11ce-410e-91ef-8b229616a6cb.html",
+     "source": "ANSA Top News",
+     "feed_name": "ANSA Top News",
+     "via": null,
+     "published": "2026-11-26T17:03:00+00:00",
      "new": true,
-     "key": "db848da96bdbdc8b",
-     "title": "Hamas weighs response after Israel kills 10 people in Gaza",
-     "summary": "Hamas is considering its response after an Israeli strike killed 10 people in Gaza, Reuters reports."
+     "key": "cae3fa86861d71bf",
+     "title": "Italy’s BTP–Bund spread closes lower",
+     "summary": "The spread between Italian and German government bonds closed at 107 basis points."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNUzE4ejVRSVVMUzdxZmRHMkpxSGdSeEx0ZzdjYkJaQ3hDYUZZRWRYZ0g4YnRxQnFaRVl1UWJuWWpLOWVEVzVDX3RNOFhKcS1aTXlRZzM4dHVxTXN1SGsxd2doN3pUMUNBSW9EdWliV0lDQnhxUGRreW5zQnNwTDFCcXMzWDdaWGwyQmYyUzZvdjZmWURGYmhvenBPanNadS1POHJuSmEwdzJ1NmFpX0treGN1VmJrOXYwMnFDTjFaTlNlY3pLUkVqMGV0NERUcEcy?oc=5",
+     "source": "Reinsurance News",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-11-26T17:04:38+00:00",
+     "new": true,
+     "key": "055d41e307e41e06",
+     "title": "Insurance outlook faces geopolitical, AI and economic risks",
+     "summary": "LIIBA’s David Croft said geopolitical instability, AI risks and economic volatility could reshape the insurance outlook for 2027."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUUhZaXItb2lOYVhHRHBoUkpGZFM2Y0ZpQ1dSN3QwUnEyQlBKdmlRVG9fdFM5WS1UNm41dGZnRVhyY1FIbjBvOUNFWEREN1F4S1l1amVSUGFheGl4N1NNbk1ieF9HU3N0azQ1djN1bjA2RWhIc1VhVWVWb0RVbG1HMVlPbFQyb0N5N1ZLTUVZeXlxMDk4d3d0UHh1ajdZeWd3ekx5TU52Z3BDaXdhOU9uN3dtd1lLMXM?oc=5",
+     "source": "Reuters",
+     "feed_name": "Topic: AI",
+     "via": "Google News",
+     "published": "2026-11-26T16:56:45+00:00",
+     "new": true,
+     "key": "8bf5fe14afd0f5c8",
+     "title": "SAP weighs at least 10,000 job cuts in AI restructuring",
+     "summary": "SAP is considering at least 10,000 job cuts as part of an AI-focused restructuring, Reuters reported, citing Bloomberg."
+    },
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/11/26/le-virage-au-forceps-des-allies-de-l-otan-vers-des-operations-militaires-dopees-a-l-ia-de-palantir_6815581_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-26T17:35:04+00:00",
+     "new": true,
+     "key": "e191b6cf113498d7",
+     "title": "NATO allies explore AI-enabled military operations",
+     "summary": "A Le Monde report examines NATO allies’ use of Palantir AI in military operations, including a territorial-defence simulation in Latvia."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-11-26T16:33:14.166715+00:00",
-   "input_fingerprint": "sha256:f67e18f96d5862ab57beee95f4ca57df5acabf556da5fba755aafc200419c08f",
-   "last_success_at": "2026-11-26T16:33:14.166715+00:00",
+   "source_checked_at": "2026-11-26T18:01:24.093329+00:00",
+   "input_fingerprint": "sha256:fcc68690399a79185b91b4d0733c72270cd45409eb8686ce56aeed1c9e6fff4c",
+   "last_success_at": "2026-11-26T18:01:24.093329+00:00",
    "error": "Source check failed: The Guardian World",
-   "candidate_count": 478,
-   "new_count": 7
+   "candidate_count": 481,
+   "new_count": 6
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG’s 2-2 draw with Roma was judged disappointing both in performance and result, and it cost them the top spot in the Champions League league-phase table.",
+     "text": "PSG drew 2–2 with Roma at the Parc des Princes in their Champions League match; CulturePSG’s report provides the match notes.",
      "sources": [
       {
-       "key": "dc54d9d519350543",
-       "title": "15 pensées rapides sur PSG/Roma (2-2)",
-       "url": "https://www.culturepsg.com/news/match/15-pensees-rapides-sur-psg-roma-2-2/61686",
-       "source": "CulturePSG",
-       "via": null
-      },
-      {
-       "key": "dc1b8d91ebf7e669",
-       "title": "Le PSG perd une place au classement, mais pourrait vite la récupérer",
-       "url": "https://www.culturepsg.com/news/europe/le-psg-perd-une-place-au-classement-mais-pourrait-vite-la-recuperer/61682",
+       "key": "9202f9bcbe083919",
+       "title": "PSG/Roma (2-2), les notes vues du stade",
+       "url": "https://www.culturepsg.com/news/match/psg-roma-2-2-les-notes-vues-du-stade/61676",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "Opta still rates PSG as a contender to win the Champions League, despite placing three teams ahead of them.",
+     "text": "France face South Africa, with Uini Atonio warning of a shortage of tighthead props ahead of the test.",
      "sources": [
       {
-       "key": "170565708ad98f34",
-       "title": "Opta reste optimiste pour le PSG en Champions League",
-       "url": "https://www.culturepsg.com/news/europe/opta-reste-optimiste-pour-le-psg-en-champions-league/61689",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Désiré Doué attended PSG-Roma and is due to travel to Qatar shortly; CulturePSG reports the club will handle his situation similarly to Kvaratskhelia’s.",
-     "sources": [
-      {
-       "key": "e98697e134228a17",
-       "title": "Le PSG va la jouer comme avec Kvara pour Doué",
-       "url": "https://www.culturepsg.com/news/infirmerie/le-psg-va-la-jouer-comme-avec-kvara-pour-doue/61687",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Lucas Chevalier, who stayed at PSG hoping to reclaim the starting goalkeeper role, has yet to play this season and has reconsidered his immediate future.",
-     "sources": [
-      {
-       "key": "045d4adb9c369752",
-       "title": "Chevalier a changé d'avis pour son futur proche",
-       "url": "https://www.culturepsg.com/news/mercato/chevalier-a-change-d-avis-pour-son-futur-proche/61685",
-       "source": "CulturePSG",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "France’s XV selection for the South Africa match is taking shape, with Attissogbe on the wing and Ramos at fullback according to a regional report.",
-     "sources": [
-      {
-       "key": "7f5184eafdb10ed7",
-       "title": "XV de France : le Palois Attissogbe à l’aile, Ramos à l’arrière, quelle compo face à l’Afrique du Sud - La République des Pyrénées",
-       "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPbEJPckZjXy0wQVVZeWg2RFlqR2JlcVRYQ3dkTzVsNVZtZko1Y0Y2RUpLWkxUT0dRbDgyN1NTWDdjTWNGZFo0RDZXc2pEbHZfZ0VrZ2xnV2ZRaTk4RV9CSmVWbTNlT2NjRk5LNDR5RFdHd0Y3VTEzd1hUWEs1NEhIU3NhWExkcDRJekpYNzZoUnFzVDJnNThCZUlIVUdHSDlHOFUyX1l2NmdXNm5vZjFwSm5oQ2lRMC1SaGdmbEdkOFowcEY3WUkxWmFsMHN6QjM4S3dWODdtelp4RnQ5MXdiXzk0LTBJcjkzb0k2S3cxbW9EUzhQOEF5NG00aTlSbVBRdHdtcnFjNkgxQQ?oc=5",
-       "source": "La République des Pyrénées",
+       "key": "0429551f0f3f281c",
+       "title": "XV de France : Uini Atonio alerte sur la pénurie de piliers droits avant l’Afrique du Sud - Sport.fr",
+       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPeFVVX1RrZExhblJjbG5zYXBTd1ViSm5ITTFEVkNaUUp3eUNGclZmNjlHajJnLWxrWHNNQmN2T1dDMG15SDBjdkFJMmxtQzdBQ0dWT0NfWDhfdjhuZGx2Y2tCN1NMUzZCT0NZeHg0akFDOTZqdnZjQnNrdXFJN1FPdHFvQS0xcXpFLVgwNll2d3EwZ0dIVFJna1V6VmNlV3FycFg5YWw1eXF6UjcyQ3VRNU9HX2RnNHhVTE9SaEFGRlpfX21z?oc=5",
+       "source": "Sport.fr",
        "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "A France victory in the Nations Championship final would make the team world No. 1, according to the item’s headline.",
+     "sources": [
+      {
+       "key": "323f5011e658d2fa",
+       "title": "Finale : les Bleus n° 1 mondiaux en cas de victoire - Quinze Ovalie",
+       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPYlV5amZaYUxWZnl4cDVOVnZVSnY0c0VTb1ZCb29fY0oyRi1vVjVscUR1Y08yNTZURm5EMXlPZE8wQV9iWVZ4T3F4aXlMTHo4VE1BVWhMNVk3cXZrRFZoU0ZTZFNmcGNBU1ZnOTV4bG0wNGdkektacWluV1ZqNWFNalJB?oc=5",
+       "source": "Quinze Ovalie",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "PSG’s next Jordan Wings shirt is expected in January 2027, with new images bringing the design into sharper focus.",
+     "sources": [
+      {
+       "key": "5aca1d556b92f1d4",
+       "title": "Le nouveau maillot Jordan Wings du PSG se précise",
+       "url": "https://www.culturepsg.com/news/club/le-nouveau-maillot-jordan-wings-du-psg-se-precise/61688",
+       "source": "CulturePSG",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/match/15-pensees-rapides-sur-psg-roma-2-2/61686",
+     "url": "https://www.culturepsg.com/news/match/psg-roma-2-2-les-notes-vues-du-stade/61676",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-26T12:57:00+00:00",
+     "published": "2026-11-25T22:05:35+00:00",
      "new": true,
-     "key": "dc54d9d519350543",
-     "title": "PSG-Roma: 15 quick takeaways from the 2-2 draw",
-     "summary": "CulturePSG reviews PSG’s disappointing 2-2 draw with Roma and the team’s performance."
+     "key": "9202f9bcbe083919",
+     "title": "PSG–Roma (2–2): Match ratings from the stadium",
+     "summary": "PSG and Roma shared the points in a 2–2 Champions League draw at the Parc des Princes."
     },
     {
-     "url": "https://www.culturepsg.com/news/europe/opta-reste-optimiste-pour-le-psg-en-champions-league/61689",
+     "url": "https://www.culturepsg.com/news/club/le-nouveau-maillot-jordan-wings-du-psg-se-precise/61688",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-26T16:07:00+00:00",
+     "published": "2026-11-26T14:18:02+00:00",
      "new": true,
-     "key": "170565708ad98f34",
-     "title": "Opta remains optimistic about PSG’s Champions League chances",
-     "summary": "Opta still places PSG among the contenders despite ranking three teams ahead of them."
+     "key": "5aca1d556b92f1d4",
+     "title": "PSG’s new Jordan Wings shirt takes shape",
+     "summary": "New images offer a clearer look at PSG’s Jordan Wings shirt, expected in January 2027."
     },
     {
-     "url": "https://www.culturepsg.com/news/infirmerie/le-psg-va-la-jouer-comme-avec-kvara-pour-doue/61687",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-26T13:56:00+00:00",
-     "new": true,
-     "key": "e98697e134228a17",
-     "title": "PSG to handle Doué’s situation like Kvaratskhelia’s",
-     "summary": "Désiré Doué attended PSG-Roma and is due to travel to Qatar shortly."
-    },
-    {
-     "url": "https://www.culturepsg.com/news/mercato/chevalier-a-change-d-avis-pour-son-futur-proche/61685",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-26T12:39:57+00:00",
-     "new": true,
-     "key": "045d4adb9c369752",
-     "title": "Chevalier has changed his mind about his near-term future",
-     "summary": "The PSG goalkeeper has not played this season after staying to try to regain the number-one spot."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPbEJPckZjXy0wQVVZeWg2RFlqR2JlcVRYQ3dkTzVsNVZtZko1Y0Y2RUpLWkxUT0dRbDgyN1NTWDdjTWNGZFo0RDZXc2pEbHZfZ0VrZ2xnV2ZRaTk4RV9CSmVWbTNlT2NjRk5LNDR5RFdHd0Y3VTEzd1hUWEs1NEhIU3NhWExkcDRJekpYNzZoUnFzVDJnNThCZUlIVUdHSDlHOFUyX1l2NmdXNm5vZjFwSm5oQ2lRMC1SaGdmbEdkOFowcEY3WUkxWmFsMHN6QjM4S3dWODdtelp4RnQ5MXdiXzk0LTBJcjkzb0k2S3cxbW9EUzhQOEF5NG00aTlSbVBRdHdtcnFjNkgxQQ?oc=5",
-     "source": "La République des Pyrénées",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPeFVVX1RrZExhblJjbG5zYXBTd1ViSm5ITTFEVkNaUUp3eUNGclZmNjlHajJnLWxrWHNNQmN2T1dDMG15SDBjdkFJMmxtQzdBQ0dWT0NfWDhfdjhuZGx2Y2tCN1NMUzZCT0NZeHg0akFDOTZqdnZjQnNrdXFJN1FPdHFvQS0xcXpFLVgwNll2d3EwZ0dIVFJna1V6VmNlV3FycFg5YWw1eXF6UjcyQ3VRNU9HX2RnNHhVTE9SaEFGRlpfX21z?oc=5",
+     "source": "Sport.fr",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-26T15:48:16+00:00",
+     "published": "2026-11-26T17:13:29+00:00",
      "new": true,
-     "key": "7f5184eafdb10ed7",
-     "title": "France lineup taking shape for South Africa match",
-     "summary": "A report says Attissogbe is set for the wing and Ramos for fullback against South Africa."
+     "key": "0429551f0f3f281c",
+     "title": "Atonio warns of France’s tighthead-prop shortage",
+     "summary": "Uini Atonio raised concerns about a shortage of tighthead props ahead of France’s match against South Africa."
     },
     {
-     "url": "https://www.hltv.org/news/46068/matchups-set-for-final-day-of-stage-1",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-11-26T16:15:00+00:00",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPYlV5amZaYUxWZnl4cDVOVnZVSnY0c0VTb1ZCb29fY0oyRi1vVjVscUR1Y08yNTZURm5EMXlPZE8wQV9iWVZ4T3F4aXlMTHo4VE1BVWhMNVk3cXZrRFZoU0ZTZFNmcGNBU1ZnOTV4bG0wNGdkektacWluV1ZqNWFNalJB?oc=5",
+     "source": "Quinze Ovalie",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-26T17:30:15+00:00",
      "new": true,
-     "key": "163dc965a46d7b3d",
-     "title": "Stage 1’s final-day matchups are set",
-     "summary": "Six teams will compete for the final three places in Stage 2."
+     "key": "323f5011e658d2fa",
+     "title": "France could become world No. 1 with final victory",
+     "summary": "France would rise to world No. 1 if they win the Nations Championship final."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-26T16:33:14.166715+00:00",
-   "input_fingerprint": "sha256:c286aaa0e2329607799db81484b50c3f480ba7072c8b38812e8bb02fb4d1c58b",
-   "last_success_at": "2026-11-26T16:33:14.166715+00:00",
-   "candidate_count": 406,
-   "new_count": 6
+   "state": "degraded",
+   "source_checked_at": "2026-11-26T18:01:24.093329+00:00",
+   "input_fingerprint": "sha256:5b955de9613b9b4d3b117033f442f50b446bb7649a9da7892e68b2cb24efb53f",
+   "last_success_at": "2026-11-26T18:01:24.093329+00:00",
+   "error": "Source check failed: Team: PSG, Team: Champions League",
+   "candidate_count": 236,
+   "new_count": 4
   },
   "finance": {
    "briefing": [
     {
-     "text": "Pablo Hernández de Cos is set to succeed Christine Lagarde as ECB president after the Dutch government dropped support for rival Klaas Knot.",
+     "text": "European equities rebounded as technology and bank shares recovered and tariff concerns eased, in line with the strong gains across your equity holdings.",
      "sources": [
       {
-       "key": "6fce9372b8c917ec",
-       "title": "Pablo Hernández de Cos wins race for ECB presidency",
-       "url": "https://www.ft.com/content/88a0691a-6ce8-4c97-abf4-7aee0351fd51?syn-25a6b1a6=1",
+       "key": "e9da2d64946267f2",
+       "title": "European stocks rally as tech, bank stocks rebound, tariff fears ease - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWDAyOS03ZTA0ZzRTRmR6d2diZDJ5X0V0ejhjSlg1MzhMaTlCNU1LNTBCYVlJS2VhVV9USmNxYnNGYk9CaTdYckN1NVBZLWNKQm9BYXB5SEpNYVMyN3hzbFRjaExPY3piakNDakM1Qm1NSDJ1MFJLZzF3NGN5TFVCYThrYmNzZFhyVzN1bVBhaXh6a2t4cUxNQzBGUnpWVVFxb1l2cFR5WE1UZ0tvUEpDcw?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The incoming ECB president, Pablo Hernández de Cos, is viewed as a consensus-builder; his leadership style will matter as the bank navigates its next policy challenges.",
+     "sources": [
+      {
+       "key": "5064aafa9cfe8991",
+       "title": "Pablo Hernández de Cos: the ‘consensus-builder’ taking over the ECB",
+       "url": "https://www.ft.com/content/1fda901a-222a-4b3e-8e20-ea80c3fbf1d2?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "Central-bank signals remain hawkish: the FT reports Fed officials are poised to raise rates despite market turmoil, while ECB officials saw a case for more tightening as the inflation outlook worsened.",
+     "text": "Bank of England governor Andrew Bailey warned that advances in mathematics from unreleased AI models have raised concerns about encryption and the security of financial data.",
      "sources": [
       {
-       "key": "73fe8543ba2b07dc",
-       "title": "Hawkish Fed poised to raise rates despite stock market turmoil",
-       "url": "https://www.ft.com/content/3890f725-66dd-4613-8a60-d9e3ea38d25a?syn-25a6b1a6=1",
+       "key": "e854f7a6b156abdc",
+       "title": "Andrew Bailey says unreleased AI models have raised encryption concerns",
+       "url": "https://www.ft.com/content/450920b9-82b8-4a66-960b-5740aa7f94ae?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
-      },
-      {
-       "key": "8f5ffa4f4cbe9768",
-       "title": "ECB Officials Saw More Tightening With Inflation Outlook Worse - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNU3dSOF9DeDY0YlZLTEJ5a2VKUzNwTmo1ckxEejlvYmhsUEFtZm9EblczRjZOcThyUEJqWGhzMDlYblZEc3JxRW9FbVF6VzZUdnpwekJBNWc4NEY1ZmdxTldsNnJfVWFQVE85MnpjMmx1VTh4VFhJSG5mU3J5ODJ5YTJJd1B2VlFpbXFaZXEwSmdRQmZLRWFJeHJXancyS1hNdVdOSURtNVNZaGhRQ2VGRlc1UQ?oc=5",
-       "source": "Bloomberg",
-       "via": "Google News"
       }
      ]
     },
     {
-     "text": "A French-risk watch for European financials: the FT says British and European banks have taken on substantial exposure to France, though the candidate provides no scale or detail.",
+     "text": "Iranian strikes on Kuwait killed two Italians, bringing the conflict closer to Italy and underscoring the potential for geopolitical risk to affect markets.",
      "sources": [
       {
-       "key": "f56b88db33a6b495",
-       "title": "British and European banks have taken on a lot of France risk",
-       "url": "https://www.ft.com/content/022fcf0c-9a7a-4bf0-b853-4de8b2ba88b9",
-       "source": "FT Markets",
+       "key": "25bf36ef95bcdc07",
+       "title": "Two Italians killed in Iranian strike on Kuwait",
+       "url": "https://www.ft.com/content/e5f3128d-5f8b-416c-90d1-2549175cb091?syn-25a6b1a6=1",
+       "source": "FT",
        "via": null
-      }
-     ]
-    },
-    {
-     "text": "Altria is exploring a potential takeover of Imperial Brands, a sizeable cross-border deal to watch if talks advance.",
-     "sources": [
-      {
-       "key": "7d26369c755ed459",
-       "title": "Altria Studies Deal for Cigarette Maker Imperial Brands - Bloomberg",
-       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNnpaSDNPSU9JejNYWjd3aEJqeU1VOHFvYTlOUWdYX3M1UDdCektEeGt1Ri1ObnBjVnJRenYzS0RjU2V5RWstTjlVX0thdHFFRlQxbzJPZ3JHVG1rajRtNlVrWmVTYWcwM1ItbFZrRzFjY01HQ3IxT0NTdVFfeEpkT3FNUG5lZzdSNUVoU0MwOG12c3pVMmZPY2FOODZDR0NlNkdoYWx1Y2VuQQ?oc=5",
-       "source": "Bloomberg",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "The DRC has reinstated a cobalt export embargo in an effort to stabilise a market in crisis, with potential implications for a key battery-material supply chain.",
-     "sources": [
-      {
-       "key": "e8b846cad057a6d1",
-       "title": "La République démocratique du Congo remet en place un embargo sur le cobalt pour stabiliser un marché en crise - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOSnVIWjdPUEZrZDhwcDZ6MW9Gd2huOWVVWHhobkJERzJ4TW0wS25HQWhvVm5KR2V6UER0Wk9XWVo5aXJlcnhnLV9UUGxuRHVBMi1mWFlMc3JlRzZ0V29DbnBlaUdlbVF1bWtSVE5GSVBmbEZQRmZ4bFR3U3M4QVVsNnBWbHNLaW9xLXFfSTl6SElEOFBPQzJBaW01M1FiNXpUb0lYTEJZdkJaWFFpcEliOGxQaWx6b1Z3d0dERlc3MkR6Q0ZfYlF3UEtfRThTMWFtdFFoVkhERUVIWi1nVDhqd3pYN2RZaEVTaEpuRG9hWWhtckE0MUQ5M2p2MEt2OENreUdYWVl0aWU?oc=5",
-       "source": "Les Echos",
-       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/88a0691a-6ce8-4c97-abf4-7aee0351fd51?syn-25a6b1a6=1",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWDAyOS03ZTA0ZzRTRmR6d2diZDJ5X0V0ejhjSlg1MzhMaTlCNU1LNTBCYVlJS2VhVV9USmNxYnNGYk9CaTdYckN1NVBZLWNKQm9BYXB5SEpNYVMyN3hzbFRjaExPY3piakNDakM1Qm1NSDJ1MFJLZzF3NGN5TFVCYThrYmNzZFhyVzN1bVBhaXh6a2t4cUxNQzBGUnpWVVFxb1l2cFR5WE1UZ0tvUEpDcw?oc=5",
+     "source": "Reuters",
+     "feed_name": "Reuters Business (via Google News)",
+     "via": "Google News",
+     "published": "2026-11-26T12:19:30+00:00",
+     "new": true,
+     "key": "e9da2d64946267f2",
+     "title": "European stocks rally as tech, banks rebound and tariff fears ease",
+     "summary": "European shares rose as technology and bank stocks rebounded and tariff concerns eased."
+    },
+    {
+     "url": "https://www.ft.com/content/1fda901a-222a-4b3e-8e20-ea80c3fbf1d2?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-26T14:44:13+00:00",
+     "published": "2026-11-26T16:02:36+00:00",
      "new": true,
-     "key": "6fce9372b8c917ec",
-     "title": "Pablo Hernández de Cos wins race for ECB presidency",
-     "summary": "Hernández de Cos is set to succeed Christine Lagarde after the Dutch government withdrew support for rival candidate Klaas Knot."
+     "key": "5064aafa9cfe8991",
+     "title": "Pablo Hernández de Cos: the consensus-builder taking over the ECB",
+     "summary": "The Spanish economist is seen as a skilled diplomat with academic rigour."
     },
     {
-     "url": "https://www.ft.com/content/3890f725-66dd-4613-8a60-d9e3ea38d25a?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/450920b9-82b8-4a66-960b-5740aa7f94ae?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-26T14:58:45+00:00",
+     "published": "2026-11-26T17:13:40+00:00",
      "new": true,
-     "key": "73fe8543ba2b07dc",
-     "title": "Hawkish Fed poised to raise rates despite stock market turmoil",
-     "summary": "Fed officials remain focused on inflation and are poised to raise rates despite tech-led market turmoil."
+     "key": "e854f7a6b156abdc",
+     "title": "Bailey warns unreleased AI models raise encryption concerns",
+     "summary": "Andrew Bailey said mathematical breakthroughs have raised fears about the security of data across financial systems."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNU3dSOF9DeDY0YlZLTEJ5a2VKUzNwTmo1ckxEejlvYmhsUEFtZm9EblczRjZOcThyUEJqWGhzMDlYblZEc3JxRW9FbVF6VzZUdnpwekJBNWc4NEY1ZmdxTldsNnJfVWFQVE85MnpjMmx1VTh4VFhJSG5mU3J5ODJ5YTJJd1B2VlFpbXFaZXEwSmdRQmZLRWFJeHJXancyS1hNdVdOSURtNVNZaGhRQ2VGRlc1UQ?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-26T13:09:36+00:00",
-     "new": true,
-     "key": "8f5ffa4f4cbe9768",
-     "title": "ECB officials saw more tightening with inflation outlook worse",
-     "summary": "ECB officials saw a case for further tightening as the inflation outlook deteriorated."
-    },
-    {
-     "url": "https://www.ft.com/content/022fcf0c-9a7a-4bf0-b853-4de8b2ba88b9",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
+     "url": "https://www.ft.com/content/e5f3128d-5f8b-416c-90d1-2549175cb091?syn-25a6b1a6=1",
+     "source": "FT",
+     "feed_name": "FT",
      "via": null,
-     "published": "2026-11-26T13:32:02+00:00",
+     "published": "2026-11-26T16:57:26+00:00",
      "new": true,
-     "key": "f56b88db33a6b495",
-     "title": "British and European banks have taken on a lot of France risk",
-     "summary": "The FT flags substantial French exposure among British and European banks."
+     "key": "25bf36ef95bcdc07",
+     "title": "Two Italians killed in Iranian strike on Kuwait",
+     "summary": "Two Italians were killed in an Iranian attack on Kuwait, the first reported deaths from the latest US-Iran exchanges."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNnpaSDNPSU9JejNYWjd3aEJqeU1VOHFvYTlOUWdYX3M1UDdCektEeGt1Ri1ObnBjVnJRenYzS0RjU2V5RWstTjlVX0thdHFFRlQxbzJPZ3JHVG1rajRtNlVrWmVTYWcwM1ItbFZrRzFjY01HQ3IxT0NTdVFfeEpkT3FNUG5lZzdSNUVoU0MwOG12c3pVMmZPY2FOODZDR0NlNkdoYWx1Y2VuQQ?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-26T15:35:05+00:00",
+     "url": "https://www.cnbc.com/2026/11/26/semiconductor-chips-are-the-new-oil-heres-why.html",
+     "source": "CNBC Markets",
+     "feed_name": "CNBC Markets",
+     "via": null,
+     "published": "2026-11-26T17:52:15+00:00",
      "new": true,
-     "key": "7d26369c755ed459",
-     "title": "Altria studies deal for Imperial Brands",
-     "summary": "Altria is studying a potential deal for cigarette maker Imperial Brands."
+     "key": "37c53964f6b585bb",
+     "title": "Semiconductor chips overtake oil and gas exports",
+     "summary": "Semiconductor exports overtook oil and gas for the first time in 2026 as AI demand boosted chip sales."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOSnVIWjdPUEZrZDhwcDZ6MW9Gd2huOWVVWHhobkJERzJ4TW0wS25HQWhvVm5KR2V6UER0Wk9XWVo5aXJlcnhnLV9UUGxuRHVBMi1mWFlMc3JlRzZ0V29DbnBlaUdlbVF1bWtSVE5GSVBmbEZQRmZ4bFR3U3M4QVVsNnBWbHNLaW9xLXFfSTl6SElEOFBPQzJBaW01M1FiNXpUb0lYTEJZdkJaWFFpcEliOGxQaWx6b1Z3d0dERlc3MkR6Q0ZfYlF3UEtfRThTMWFtdFFoVkhERUVIWi1nVDhqd3pYN2RZaEVTaEpuRG9hWWhtckE0MUQ5M2p2MEt2OENreUdYWVl0aWU?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
-     "via": "Google News",
-     "published": "2026-11-26T16:25:47+00:00",
+     "url": "https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge",
+     "source": "CoinDesk",
+     "feed_name": "CoinDesk",
+     "via": null,
+     "published": "2026-11-26T14:05:58+00:00",
      "new": true,
-     "key": "e8b846cad057a6d1",
-     "title": "DRC reinstates cobalt embargo to stabilise a market in crisis",
-     "summary": "The Democratic Republic of Congo has reinstated a cobalt embargo in an effort to stabilise the market."
+     "key": "b908de63b7dcb1c9",
+     "title": "Spain gives anti-money-laundering unit power to freeze crypto accounts",
+     "summary": "Spain empowered its anti-money-laundering unit to freeze crypto accounts without a judge's request."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWVpxOWliaXNJc2F3RlhTekRtdndDQ2htZjlmb1Q0NFdUSHFvQ2NMS3ZiMWl0bTVoV0RrejRIX0FjcFJVa1FmMzZkWmZwVWlkS2Q2eHhHWEVHU3puV0JrX0tEUlU1VUhvWnBkeWd3WS16UTI0bDZxQ2RsNjExbGZwN3hNeTN0Sl9CblhxTjZTMndrLUx0dXRPNksxZkpKZXF4YzFsV21yb3U0YmlhUnZuSg?oc=5",
-     "source": "Bloomberg",
-     "feed_name": "Bloomberg (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-26T13:10:32+00:00",
+     "url": "https://www.coindesk.com/tech/2026/11/26/standard-chartered-s-zodia-custody-suffers-data-breach-exposing-client-information",
+     "source": "CoinDesk",
+     "feed_name": "CoinDesk",
+     "via": null,
+     "published": "2026-11-26T12:38:51+00:00",
      "new": true,
-     "key": "5c167ffd2c52dde0",
-     "title": "Turkey traders see slower rate-cut pace as reserves shrink",
-     "summary": "Turkish traders expect a slower pace of rate cuts as the country’s reserves decline."
+     "key": "81c108513da7fbd2",
+     "title": "Standard Chartered crypto custodian Zodia suffers data breach",
+     "summary": "A breach exposed contact information for clients and employees, while Zodia said no unauthorised transactions occurred."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-26T16:33:14.166715+00:00",
-   "input_fingerprint": "sha256:ed2cff22c180da20ad5c4fb5b3e5b36d627d19595c2e6a9f1362b473deb3f2e2",
-   "last_success_at": "2026-11-26T16:33:14.166715+00:00",
+   "state": "degraded",
+   "source_checked_at": "2026-11-26T18:01:24.093329+00:00",
+   "input_fingerprint": "sha256:a5c0ebde813b88f550bf94ce52b65cc0c9886f824104a6f6a3fd9a8b28675548",
+   "last_success_at": "2026-11-26T18:01:24.093329+00:00",
+   "error": "Source check failed: FT (via Google News), Bloomberg (via Google News), Les Echos Finance",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 645.4,
-     "change_pct": 1.26,
+     "price": 645.2,
+     "change_pct": 1.22,
      "currency": "CHF",
      "as_of": "2026-11-25T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1243,8 +1187,8 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 712.72,
-     "change_pct": 3.29,
+     "price": 712.14,
+     "change_pct": 3.2,
      "currency": "EUR",
      "as_of": "2026-11-25T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1254,8 +1198,8 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 110.74,
-     "change_pct": 2.59,
+     "price": 110.68,
+     "change_pct": 2.54,
      "currency": "EUR",
      "as_of": "2026-11-25T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1265,8 +1209,8 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 278.75,
-     "change_pct": 3.2,
+     "price": 278.3,
+     "change_pct": 3.04,
      "currency": "EUR",
      "as_of": "2026-11-25T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1276,8 +1220,8 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 315.85,
-     "change_pct": 2.02,
+     "price": 315.35,
+     "change_pct": 1.86,
      "currency": "EUR",
      "as_of": "2026-11-25T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1298,8 +1242,8 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 47.87,
-     "change_pct": 3.92,
+     "price": 47.81,
+     "change_pct": 3.78,
      "currency": "EUR",
      "as_of": "2026-11-25T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1309,8 +1253,8 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 63.21,
-     "change_pct": 3.36,
+     "price": 63.13,
+     "change_pct": 3.24,
      "currency": "EUR",
      "as_of": "2026-11-25T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1320,8 +1264,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 60395.52,
-     "change_pct": 0.03,
+     "price": 60478.5,
+     "change_pct": 0.17,
      "currency": "USD",
      "as_of": "2026-11-26T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1331,8 +1275,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1684.94,
-     "change_pct": -0.34,
+     "price": 1693.28,
+     "change_pct": 0.15,
      "currency": "USD",
      "as_of": "2026-11-26T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1340,20 +1284,20 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 309,
+   "candidate_count": 173,
    "new_count": 7
   },
   "media": {
    "briefing": "",
    "items": [
     {
-     "title": "😍 Cette LDC devient dingue...",
+     "title": "😍 Cette LDC devient sympa...",
      "url": "https://www.youtube.com/watch?v=ikCKrG86gNY",
      "source": "Wiloo",
      "kind": "video",
      "published": "2026-11-26T16:16:09+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "1c2d758c6b20df0e"
     },
     {
@@ -1489,10 +1433,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-26T16:33:14.166715+00:00",
+   "source_checked_at": "2026-11-26T18:01:24.093329+00:00",
    "candidate_count": 14,
-   "new_count": 1
+   "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-26T12:00:00Z"
+ "scheduled_slot": "2026-11-26T18:00:00.000Z"
 }
