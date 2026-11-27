@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261127T060122184541Z",
- "generated_at": "2026-11-27T06:01:22.184541+00:00",
- "generated_local": "Fri 27 Nov 2026, 07:01",
- "source_checked_at": "2026-11-27T06:01:22.184541+00:00",
+ "edition_id": "ed-20261127T120123948593Z",
+ "generated_at": "2026-11-27T12:01:23.948593+00:00",
+ "generated_local": "Fri 27 Nov 2026, 13:01",
+ "source_checked_at": "2026-11-27T12:01:23.948593+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-27T06:01:22.184541+00:00"
+  "run-2026-11-27T12:01:23.948593+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-27T06:01:22.184541+00:00"
+  "completed_at": "2026-11-27T12:01:23.948593+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 31,
+   "item_count": 35,
    "reason": null,
    "failure": null,
-   "parsed_count": 31,
+   "parsed_count": 35,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -138,23 +138,28 @@
   {
    "name": "Topic: AI",
    "section": "news",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Topic: insurance industry",
    "section": "news",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 85,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 85,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -174,19 +179,14 @@
   {
    "name": "Topic: reinsurance",
    "section": "news",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 100,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Topic: European Central Bank",
@@ -204,10 +204,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 109,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 109,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -216,10 +216,10 @@
    "name": "Team: PSG",
    "section": "sport",
    "status": "ok",
-   "item_count": 108,
+   "item_count": 106,
    "reason": null,
    "failure": null,
-   "parsed_count": 108,
+   "parsed_count": 106,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -228,10 +228,10 @@
    "name": "Team: équipe de France football",
    "section": "sport",
    "status": "ok",
-   "item_count": 100,
+   "item_count": 102,
    "reason": null,
    "failure": null,
-   "parsed_count": 100,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -251,28 +251,23 @@
   {
    "name": "Team: Champions League",
    "section": "sport",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 105,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 105,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Team: Team Vitality Counter-Strike",
    "section": "sport",
    "status": "ok",
-   "item_count": 47,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 47,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -437,10 +432,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 9,
+   "item_count": 10,
    "reason": null,
    "failure": null,
-   "parsed_count": 9,
+   "parsed_count": 10,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -472,14 +467,19 @@
   {
    "name": "Reuters Business (via Google News)",
    "section": "finance",
-   "status": "ok",
-   "item_count": 100,
-   "reason": null,
-   "failure": null,
-   "parsed_count": 100,
+   "status": "unavailable",
+   "item_count": 0,
+   "reason": "HTTP 429",
+   "failure": "http",
+   "parsed_count": 0,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": "refreshed"
+   "cache": null,
+   "diagnostic": {
+    "status_code": 429,
+    "content_type": "text/html; charset=UTF-8",
+    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
+   }
   },
   {
    "name": "Bloomberg (via Google News)",
@@ -556,14 +556,14 @@
   {
    "name": "Crypto Currently",
    "section": "media",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "RetryError",
-   "failure": "transport",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 15,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 15,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null
+   "cache": "refreshed"
   },
   {
    "name": "VisualPolitik EN",
@@ -704,7 +704,7 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.002151,
+  "est_cost_usd": 0.002067,
   "est_month_usd": 0.19,
   "forecast_month_usd": 0.19,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
@@ -714,60 +714,60 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 7303,
+    "latency_ms": 6435,
     "unknown": false,
     "provider_request_ids": [
-     "resp_09c9fd090070494f016b091cb8d76487d2a559d774c9c63f09"
+     "resp_07e5138dab8e7bd0016b097119def887d2ad2b16b31b299af2"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3355,
-    "output_tokens": 745,
-    "reasoning_tokens": 181
+    "cache_write_tokens": 3583,
+    "output_tokens": 523,
+    "reasoning_tokens": 0
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 4765,
+    "latency_ms": 5328,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0b146a56ec162d50016b091cbf65d087d29fdb4f2905c29875"
+     "resp_0d12decae272b40e016b09711fd06087d28601ca1b3526eef0"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3782,
-    "output_tokens": 535,
-    "reasoning_tokens": 228
+    "cache_write_tokens": 3578,
+    "output_tokens": 560,
+    "reasoning_tokens": 169
    },
    {
     "section": "finance",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 3984,
+    "latency_ms": 4477,
     "unknown": false,
     "provider_request_ids": [
-     "resp_083929c5de65ea8f016b091cc428d887d29a505ae8aa77ac67"
+     "resp_0403889a36cd1020016b09712522e887d2a1518c30ac826029"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3149,
-    "output_tokens": 449,
+    "cache_write_tokens": 3381,
+    "output_tokens": 413,
     "reasoning_tokens": 0
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10286,
-  "output_tokens": 1729,
-  "reasoning_tokens": 409,
+  "cache_write_tokens": 10542,
+  "output_tokens": 1496,
+  "reasoning_tokens": 169,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 107,
-   "attempts": 321,
-   "known_cost_usd": 0.239633,
+   "recorded_runs": 108,
+   "attempts": 324,
+   "known_cost_usd": 0.2417,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -776,67 +776,67 @@
   "news": {
    "briefing": [
     {
-     "text": "EU leaders have agreed on Spain’s Pablo Hernández de Cos to succeed Christine Lagarde as ECB president, putting a former central-bank governor in line for the role.",
+     "text": "EU leaders have agreed on Pablo Hernández de Cos as the next ECB president, making the succession a key central-bank story; he is reported to favor tokenized bank deposits over stablecoins.",
      "sources": [
       {
-       "key": "f3001f0686807e10",
-       "title": "Pablo Hernández de Cos, Spain's consensus technocrat to head ECB - Euronews.com",
-       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdmttalJiaFZla3Ixei0yVi1nTldfQlQ4MkFEN3I3S0FMNUJkUzJsV2E1bTYzbUpMby03VmtVSlhuNmJDVl93UWV0cDhDOFpLc0t4SjdlWWNnMG0tUDZyWkhNeE40UFBtMXhWdG5kQU0tOHdVdUphTkU2R25uMmozQnNmc1dNejNUdzh1WVR3SDJWTjByWXlTTE1Bc3BlNms?oc=5",
-       "source": "Euronews.com",
+       "key": "be5d02b34cc36c85",
+       "title": "Spanish central banker Pablo Hernández de Cos nominated as next ECB president - FinTech Futures",
+       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNaThyWkgxN19xWEZseHlFQWNlam1uaXVjTEFMOXV0VXhwT1VuM1piOEpFQ0w4M29MbVplRnB3bzNEOHFmLVdRUmJmcy1Wejh0LUliWXZoWElJNXplSFVHdS1hYWlQd1hzRXVTbC1KdF9aTWVsM0dqNnN3MWpTWmdVYmZTUlphMFJTRlBFTGlDZWRjUVlENWlveHJmeEloRHFBcE1RVnJscw?oc=5",
+       "source": "FinTech Futures",
+       "via": "Google News"
+      },
+      {
+       "key": "a4143681afad9c45",
+       "title": "Next ECB chief favors tokenized bank deposits over stablecoins and bitcoin - CoinDesk",
+       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOR0M5MlBpRUxVeWJOZS1pWko4dnNBNlo2UHZmSjdLQ0gwUlc0SHo5ZDl5YVZBYWNqTE9FQTJtU0FDZnFVMGxRWGdNRmVISEFXbklLUTE2NzdsNFRWRGxxcnRUUjJRX1VZSU1zRlZDRDJpTDlwZl9HeTJPeWF4M0I0dTRrMnhPVlVabFV5WnJ1cnl3UXE5bUVGbjhZV0dxZG1OZnp6Tm1SQ0ZLU3JaTk5XTnFoUTJMQU5k?oc=5",
+       "source": "CoinDesk",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s budget talks with EU partners may be delayed by domestic electoral deadlines, complicating negotiations over the bloc’s next long-term budget.",
+     "text": "Japan Post Insurance plans to transfer longevity risk on about ¥3 trillion of annuity reserves to SCOR, a significant European reinsurance transaction.",
      "sources": [
       {
-       "key": "0ea3fce5332d335b",
-       "title": "Les discussions sur le budget de l’Union européenne menacées par les échéances électorales françaises",
-       "url": "https://www.lemonde.fr/international/article/2026/11/27/les-discussions-sur-le-budget-de-l-union-europeenne-menacees-par-les-echeances-electorales-francaises_6815793_3210.html",
+       "key": "aee1435aca38a703",
+       "title": "Japan Post Insurance to pass longevity risk on about ¥3tn of annuity reserves to SCOR - Tokyo Brief",
+       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQTZkOXBOUkRfZXJ0eTdJSEwtTEs4ZU9RSGlCR3U1SDJPMWdwaHVya055dFBqS21hdzZEZ3FDR05rQmJzRm9Vc0dua1gyTERCMWdoUndJYXJhbXJzd09mT1VONEo4MFBLQnplaENPR3dSZm5fd0VMV19veEppRHJlcW13QzV2T1NGOEpqMHdjRXBXaVRMV0R3eF9pUQ?oc=5",
+       "source": "Tokyo Brief",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Reuters reports that Lagarde’s departure is likely to widen the ECB’s gender gap, adding a governance dimension to the leadership transition.",
+     "sources": [
+      {
+       "key": "6bb025fa3a91d15e",
+       "title": "ECB's gender gap set to widen further after Lagarde exit - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObHBmZjRYeUZlR3A0bEVNMXMyN01KOEFTdGlfdVVON3kwRkJMY000NWYzU0E2U1FldGVsRDNPTTAxcDZZMmxfS0tRRHNUMTQ1WDdOV0VyLXlGOUpNZVBhYnlIeUpKeV9xaVBZcWNGT3lVQ1BkejZiZXlaR3ZNNFRBSUNVLWZyUnFUZkREMjh0dUhPY1JsLVpSY1pQcGJ5OXRSTzZxenRKcFJvNm5uNjBWZ0FhV1AtSFFJTnc?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "The UK has taken several employment-ministry services offline after declaring a cyber incident; officials are investigating and working to restore them.",
+     "sources": [
+      {
+       "key": "b7f61147483fff10",
+       "title": "Royaume-Uni : le ministère du travail déclare un « cyberincident » et met plusieurs de ses services hors ligne",
+       "url": "https://www.lemonde.fr/pixels/article/2026/11/27/royaume-uni-le-ministere-du-travail-declare-un-cyberincident-et-met-plusieurs-de-ses-services-hors-ligne_6815850_4408996.html",
        "source": "Le Monde",
        "via": null
       }
      ]
     },
     {
-     "text": "AI-linked chip demand is reshaping Asian market signals: South Korean exports are forecast to post their fastest growth in decades, while foreign investors are on track for a record exodus from Taiwanese shares amid an AI-related rout.",
+     "text": "Uganda says it will withdraw troops from a town in eastern DR Congo amid a diplomatic dispute, despite their role supporting Congolese forces against militants.",
      "sources": [
       {
-       "key": "aac47d16444189b5",
-       "title": "South Korea November exports seen posting fastest growth in over 50 years on AI chip surge - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTkp1LWozY2ZReDhYRHNMVDFCYXFRd0p5UXFrbnltSC0weTB2TUdpaXZpSlYyUXJMbzJDMmRTbU15ajBYU2pTMEpNT2wzT2dlRy1TQzRaZXRQaERGMVlIamV0NWxPVnU1U2t1UzRHZ1ZLUUIzYVVWSWpjb2xvdVZNY1c1SmVfem03dF9kMGZqMnZkZUFCaGFJdWtkVDBEM290NXdpaFlwS0NybmV0Nmp4dTY3N1hlZlRhTmRnYmE4SG1GZ0Vfb05JMnZTaWFDUQ?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      },
-      {
-       "key": "eb856a7af2d26049",
-       "title": "Foreign Funds on Pace for Record Taiwan Stock Exodus in AI Rout - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdThzMzcyOW44dDh5TEFSZTVueXdqQWxOSUUyYmU2NW5lNmNrbnVhQ2pvZGFVc3BKNE5jVkQ2RlZZM3lOV2JOYThIREFiZFlsM1VwQUZNMkQzV2t2NGVmc3FmU0VTMS1PbF9LbUY1NUxPdmkyUFpKWFJZNDlIZWdBY0ZKcU1haUJ2RW5HLTdyQlU3Sl9taTRFT1I2MElfQXItOGNzazZZdUZLY2xPOHYwdnNOVHA?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Singapore is in talks with the US to preserve access to AI chips, highlighting the geopolitical stakes around advanced-chip supply.",
-     "sources": [
-      {
-       "key": "af4c5468c80f680a",
-       "title": "Singapore Talking to US to Keep AI Chip Access, Deputy PM Says - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOTF6RUh5d1BiSVM4cDdTQUxicmQ2alpjS2l0V2hQWWUwbGlTalB3dlByQXhkV0hRd0FsSnduSkVHY0J1VFByMFFvWTN6SV9nT1NNYUloME9TLXV1d05Yb3dGSi1sQ19sRTg0eXJhemxPM2xIYWpwaDduTlFhd2daVWpnOWt4SmJEenU3ZkRnd0Y5MV9lN0tQS1FBazYwb21GSGJpNWswd1M2WFRza1Q3cC1R?oc=5",
-       "source": "Bloomberg.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A major storm has caused widespread US power outages and disrupted flights, with severe weather affecting both coasts.",
-     "sources": [
-      {
-       "key": "94d2e60bc99c64ce",
-       "title": "Major Thanksgiving storm brings flooding, flight delays across US",
-       "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss",
+       "key": "9c744befbf70e004",
+       "title": "Uganda to withdraw troops from DR Congo town amid diplomatic row",
+       "url": "https://www.bbc.co.uk/news/articles/cq4gnj2ldkyzo?at_medium=RSS&at_campaign=rss",
        "source": "BBC World",
        "via": null
       }
@@ -845,188 +845,161 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdmttalJiaFZla3Ixei0yVi1nTldfQlQ4MkFEN3I3S0FMNUJkUzJsV2E1bTYzbUpMby03VmtVSlhuNmJDVl93UWV0cDhDOFpLc0t4SjdlWWNnMG0tUDZyWkhNeE40UFBtMXhWdG5kQU0tOHdVdUphTkU2R25uMmozQnNmc1dNejNUdzh1WVR3SDJWTjByWXlTTE1Bc3BlNms?oc=5",
-     "source": "Euronews.com",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNaThyWkgxN19xWEZseHlFQWNlam1uaXVjTEFMOXV0VXhwT1VuM1piOEpFQ0w4M29MbVplRnB3bzNEOHFmLVdRUmJmcy1Wejh0LUliWXZoWElJNXplSFVHdS1hYWlQd1hzRXVTbC1KdF9aTWVsM0dqNnN3MWpTWmdVYmZTUlphMFJTRlBFTGlDZWRjUVlENWlveHJmeEloRHFBcE1RVnJscw?oc=5",
+     "source": "FinTech Futures",
      "feed_name": "Topic: European Central Bank",
      "via": "Google News",
-     "published": "2026-11-27T05:00:52+00:00",
+     "published": "2026-11-27T11:33:01+00:00",
      "new": true,
-     "key": "f3001f0686807e10",
-     "title": "Pablo Hernández de Cos set to head the ECB",
-     "summary": "Euronews reports that EU leaders agreed on Spain’s former central-bank governor as the next ECB president."
+     "key": "be5d02b34cc36c85",
+     "title": "Pablo Hernández de Cos nominated as next ECB president",
+     "summary": "The Spanish central banker has been nominated to succeed Christine Lagarde as ECB president."
     },
     {
-     "url": "https://www.lemonde.fr/international/article/2026/11/27/les-discussions-sur-le-budget-de-l-union-europeenne-menacees-par-les-echeances-electorales-francaises_6815793_3210.html",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQTZkOXBOUkRfZXJ0eTdJSEwtTEs4ZU9RSGlCR3U1SDJPMWdwaHVya055dFBqS21hdzZEZ3FDR05rQmJzRm9Vc0dua1gyTERCMWdoUndJYXJhbXJzd09mT1VONEo4MFBLQnplaENPR3dSZm5fd0VMV19veEppRHJlcW13QzV2T1NGOEpqMHdjRXBXaVRMV0R3eF9pUQ?oc=5",
+     "source": "Tokyo Brief",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-11-27T10:29:27+00:00",
+     "new": true,
+     "key": "aee1435aca38a703",
+     "title": "Japan Post Insurance to transfer ¥3tn of longevity risk to SCOR",
+     "summary": "Japan Post Insurance plans to pass longevity risk on about ¥3 trillion of annuity reserves to SCOR."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObHBmZjRYeUZlR3A0bEVNMXMyN01KOEFTdGlfdVVON3kwRkJMY000NWYzU0E2U1FldGVsRDNPTTAxcDZZMmxfS0tRRHNUMTQ1WDdOV0VyLXlGOUpNZVBhYnlIeUpKeV9xaVBZcWNGT3lVQ1BkejZiZXlaR3ZNNFRBSUNVLWZyUnFUZkREMjh0dUhPY1JsLVpSY1pQcGJ5OXRSTzZxenRKcFJvNm5uNjBWZ0FhV1AtSFFJTnc?oc=5",
+     "source": "Reuters",
+     "feed_name": "Topic: European Central Bank",
+     "via": "Google News",
+     "published": "2026-11-27T11:31:29+00:00",
+     "new": true,
+     "key": "6bb025fa3a91d15e",
+     "title": "ECB gender gap set to widen after Lagarde exit",
+     "summary": "Reuters reports that the ECB’s gender imbalance is expected to worsen after Lagarde leaves."
+    },
+    {
+     "url": "https://www.lemonde.fr/pixels/article/2026/11/27/royaume-uni-le-ministere-du-travail-declare-un-cyberincident-et-met-plusieurs-de-ses-services-hors-ligne_6815850_4408996.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-11-27T04:29:31+00:00",
+     "published": "2026-11-27T11:05:46+00:00",
      "new": true,
-     "key": "0ea3fce5332d335b",
-     "title": "French election deadlines threaten EU budget talks",
-     "summary": "France’s electoral timetable could delay discussions on the EU’s next long-term budget."
+     "key": "b7f61147483fff10",
+     "title": "UK ministry declares cyber incident and takes services offline",
+     "summary": "The UK work ministry is investigating a cyber incident that disrupted several services."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTkp1LWozY2ZReDhYRHNMVDFCYXFRd0p5UXFrbnltSC0weTB2TUdpaXZpSlYyUXJMbzJDMmRTbU15ajBYU2pTMEpNT2wzT2dlRy1TQzRaZXRQaERGMVlIamV0NWxPVnU1U2t1UzRHZ1ZLUUIzYVVWSWpjb2xvdVZNY1c1SmVfem03dF9kMGZqMnZkZUFCaGFJdWtkVDBEM290NXdpaFlwS0NybmV0Nmp4dTY3N1hlZlRhTmRnYmE4SG1GZ0Vfb05JMnZTaWFDUQ?oc=5",
-     "source": "Reuters",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-27T05:03:00+00:00",
-     "new": true,
-     "key": "aac47d16444189b5",
-     "title": "South Korean exports seen surging on AI chip demand",
-     "summary": "Reuters reports that November exports are forecast to post their fastest growth in more than 50 years, driven by AI chips."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdThzMzcyOW44dDh5TEFSZTVueXdqQWxOSUUyYmU2NW5lNmNrbnVhQ2pvZGFVc3BKNE5jVkQ2RlZZM3lOV2JOYThIREFiZFlsM1VwQUZNMkQzV2t2NGVmc3FmU0VTMS1PbF9LbUY1NUxPdmkyUFpKWFJZNDlIZWdBY0ZKcU1haUJ2RW5HLTdyQlU3Sl9taTRFT1I2MElfQXItOGNzazZZdUZLY2xPOHYwdnNOVHA?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-27T03:53:00+00:00",
-     "new": true,
-     "key": "eb856a7af2d26049",
-     "title": "Foreign funds set for record Taiwan stock exodus amid AI rout",
-     "summary": "Bloomberg says foreign investors are on pace for a record withdrawal from Taiwanese equities during an AI-related market rout."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOTF6RUh5d1BiSVM4cDdTQUxicmQ2alpjS2l0V2hQWWUwbGlTalB3dlByQXhkV0hRd0FsSnduSkVHY0J1VFByMFFvWTN6SV9nT1NNYUloME9TLXV1d05Yb3dGSi1sQ19sRTg0eXJhemxPM2xIYWpwaDduTlFhd2daVWpnOWt4SmJEenU3ZkRnd0Y5MV9lN0tQS1FBazYwb21GSGJpNWswd1M2WFRza1Q3cC1R?oc=5",
-     "source": "Bloomberg.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-27T05:00:00+00:00",
-     "new": true,
-     "key": "af4c5468c80f680a",
-     "title": "Singapore seeks to preserve US AI chip access",
-     "summary": "Singapore is talking with the US about maintaining access to AI chips, its deputy prime minister said."
-    },
-    {
-     "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss",
+     "url": "https://www.bbc.co.uk/news/articles/cq4gnj2ldkyzo?at_medium=RSS&at_campaign=rss",
      "source": "BBC World",
      "feed_name": "BBC World",
      "via": null,
-     "published": "2026-11-27T05:15:26+00:00",
+     "published": "2026-11-27T10:39:31+00:00",
      "new": true,
-     "key": "94d2e60bc99c64ce",
-     "title": "US Thanksgiving storm brings flooding and flight disruption",
-     "summary": "Storms on both US coasts brought flooding, flight delays and power outages affecting nearly one million customers."
+     "key": "9c744befbf70e004",
+     "title": "Uganda to withdraw troops from DR Congo town amid diplomatic row",
+     "summary": "Uganda plans to withdraw troops supporting Congolese forces against an Islamist militant group in the east of the country."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQRXVJYTZQS21pelB4NVVReDUxRnhpaVlBcDZ6bUdrem41YndfMzF3YmJvTmJVdk5aOTItZWttVFBaaUphTlNYQllqeVlVb1BQc3hkMjdPblZwVmI3ZXY2dEhJMFhVd3pBczk1X3hMajhrUElHWEVKMEpwVG95dzd3UGl2c0g?oc=5",
-     "source": "Financial Times",
-     "feed_name": "Topic: AI",
+     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNODBYbk40ejFxQ3ZOamxJZTRCR254N0dsejhnUDE4ZW5IWGpXMGdkclVJREctdVZ4XzFsODJQOUNPTC1IeWFZdG1IQU16VG9hLXBOdE82UW5OQjEzSGhublZzVDNsRlhaMW43UU83dVdHMm5tRVdrRE9mSENoN090YmU3TnBGUGtKNUZyNUpoanNzLUFNcGtzT0Y3MnJ5NWZlcGhTcmlmdjVTNlJrX0plM2VLWjBvanlXMUN3MzBhMk1ucm1XVFNOR09pR3RJUHYtT3FvUF8wREVnbDg?oc=5",
+     "source": "EU Reporter",
+     "feed_name": "Topic: European Central Bank",
      "via": "Google News",
-     "published": "2026-11-27T05:02:04+00:00",
+     "published": "2026-11-27T10:27:56+00:00",
      "new": true,
-     "key": "fe7009315c694d0f",
-     "title": "AI data-centre boom pressures US defence sector",
-     "summary": "The Financial Times reports that growth in AI data centres is adding pressure to the already-stressed US defence sector."
+     "key": "915fd198e349be40",
+     "title": "EU leaders agree on next ECB president but remain divided on budget",
+     "summary": "EU leaders agreed on the next ECB president while remaining far apart on the bloc’s budget."
     },
     {
-     "url": "https://www.lemonde.fr/international/article/2026/11/27/au-bresil-lula-nomme-un-banquier-au-ministere-des-finances-pour-tenter-de-rassurer-les-marches_6815796_3210.html",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaDhlTU1ROUFCTEJIaVZmOXI4OFY3M21rRU1xcW1ubU1oWERwMTgwSm96dFpZNy1QV2hkNm9qZ0pZX01xR0E4Wmg1ZE50UjhrR05DT0x5bFJlWU95bnNNZXdrdHRwSHNtUmtwZGNUb1gwdUVaWHk0eVlFTWFGdVJvNU1XMlYzRHZiTUxra01XdmpUcmZYUmFrY2d2VWRidWJVYThobjB1WGpJdw?oc=5",
+     "source": "Artemis.bm",
+     "feed_name": "Topic: reinsurance",
+     "via": "Google News",
+     "published": "2026-11-27T11:34:12+00:00",
+     "new": true,
+     "key": "07d32b2ee55c8fd7",
+     "title": "SCOR and Japan Post Insurance approve reinsurance partnership",
+     "summary": "Boards at SCOR and Japan Post Insurance approved a partnership involving a reinsurance vehicle."
+    },
+    {
+     "url": "https://www.lemonde.fr/international/article/2026/11/27/espagne-le-navire-naufrage-au-large-d-ibiza-va-etre-remorque-annonce-le-premier-ministre-pedro-sanchez_6815846_3210.html",
      "source": "Le Monde",
      "feed_name": "Le Monde",
      "via": null,
-     "published": "2026-11-27T04:59:52+00:00",
+     "published": "2026-11-27T10:57:11+00:00",
      "new": true,
-     "key": "e1af13fd9319b68c",
-     "title": "Brazil’s Lula names banker to finance ministry",
-     "summary": "Lula has appointed banker Luiz Carlos Trabuco as finance minister, with the appointment taking effect in January."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQX2xaa0RXNmt0OU45d1YxRDRQaFpDbVlJc190MzBlOGdCTHB0ekVEMVV2QXpGZ2liSWdJSTRRc0J4X1JRbXNjd2M5eU5aQ0lJVmZmdk9IYnNyUEZuQmt3UDB5a01vYjBrQ0JJZXZLWjdibzJ4eTc0OGpSVkc1cHVKX0VWalU?oc=5",
-     "source": "Financial Times",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-27T05:00:04+00:00",
-     "new": true,
-     "key": "d2200e430e3b64ba",
-     "title": "Automation gathers pace in the oil industry",
-     "summary": "The Financial Times reports that automation in the oil industry is displacing roughnecks."
+     "key": "d7b81b6e69517a2c",
+     "title": "Spain says wrecked ship off Ibiza will be towed",
+     "summary": "Spain’s prime minister said the sunken vessel off Ibiza would be towed, with no fuel leak reported."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-11-27T06:01:22.184541+00:00",
-   "input_fingerprint": "sha256:fd9221d60e662e89750207afb8224072ae15229d6723147058b02f02ed7acc48",
-   "last_success_at": "2026-11-27T06:01:22.184541+00:00",
-   "error": "Source check failed: Reuters (via Google News), The Guardian World, Topic: reinsurance",
-   "candidate_count": 309,
-   "new_count": 9
+   "source_checked_at": "2026-11-27T12:01:23.948593+00:00",
+   "input_fingerprint": "sha256:bc5870edad53874425bdcb4509d2942da4e074968b951adfafe64ce361e4185c",
+   "last_success_at": "2026-11-27T12:01:23.948593+00:00",
+   "error": "Source check failed: Reuters (via Google News), The Guardian World, Topic: AI",
+   "candidate_count": 293,
+   "new_count": 8
   },
   "sport": {
    "briefing": [
     {
-     "text": "PSG were held 2–2 by Roma in the Champions League; CulturePSG describes the performance and result as disappointing, despite goals from Dembélé and Zabarnyi.",
+     "text": "PSG head into Saturday’s Lorient match with at least five players unavailable, and further absences are possible.",
      "sources": [
       {
-       "key": "dc54d9d519350543",
-       "title": "15 pensées rapides sur PSG/Roma (2-2)",
-       "url": "https://www.culturepsg.com/news/match/15-pensees-rapides-sur-psg-roma-2-2/61686",
-       "source": "CulturePSG",
-       "via": null
-      },
-      {
-       "key": "cdd732a43a0be903",
-       "title": "PSG/Roma (2-1), le but de Dembélé en video",
-       "url": "https://www.culturepsg.com/news/match/psg-roma-2-1-le-but-de-dembele-en-video/61674",
-       "source": "CulturePSG",
-       "via": null
-      },
-      {
-       "key": "0a8b4284169adefc",
-       "title": "PSG/Roma (1-1), le but de Zabarnyi en video",
-       "url": "https://www.culturepsg.com/news/match/psg-roma-1-1-le-but-de-zabarnyi-en-video/61673",
+       "key": "ffeda3ff9cbe4710",
+       "title": "Déjà 5 absents pour PSG/Lorient, probablement plus",
+       "url": "https://www.culturepsg.com/news/match/deja-5-absents-pour-psg-lorient-probablement-plus/61692",
        "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "France face South Africa in a highly anticipated rugby international; coverage highlights the rivalry and questions surrounding South Africa’s approach.",
+     "text": "Thomas Ramos returns at full-back for France’s final against South Africa; the announced XV also includes a Bordeaux-heavy front row.",
      "sources": [
       {
-       "key": "05d2bbad6ff64039",
-       "title": "Championnat des nations, France – Afrique du Sud : à quelle heure et sur quelle chaîne suivre la finale tant attendue entre les deux meilleures équipes du monde - Midi Libre",
-       "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxNVFZ6dlpkOXpWcVc4TElYMElIVndVSWFxTHNRZG45ZklBamdMOW52bU1BOWFTRkJDWExFSW9mQTkzalVtOGNBN1hoRzNObVpaRFMwQUY2ZEVNZGJJUi1sem5VM0V4azBlN0FNbkR1TkRRTzVRNTQzNGV4OTVWNVpVU3Nvd0ZZaUM2WGxPWUt3ZjFqQWs1SENQUDRNSnJGSjN0dWxOZVFXMXh4RG9hZEJldnVuYm5VWUFsRmx1VW4tZTFVVkxNczJZV01oTW5iSmxJVmRHWnNhSU9OSTNYYTZyVWdiY1Joc3hOWk1kVWRmS2ZpaVdxdlJZc1NzWmtnNEZBbzZjbHJhZkZGV1ZzdS1WWXJzblR5U0JEaUI4ZmxrWnkzODMt?oc=5",
-       "source": "Midi Libre",
-       "via": "Google News"
-      },
-      {
-       "key": "d86b13ffd21207dd",
-       "title": "France - Afrique du Sud. « Qu’en tire-t-on de positif ? » Rassie Erasmus, une méthode à l’épreuve des premiers doutes - Sud Ouest",
-       "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOMXpCVG1XUS03OWFmSkVNcW84SkZ0TDZfZmpXREdPakllWEFvSkJZU252ZlZNd3dEc3p3Y1g5THljYlNsaFNDWmpUalJ0VzNqYnFvQWpycmtfZDhLTkJKYjJOSHlEV256dTBDelU2a2pGWHJfcFF3WHl1b0hUUlVKMkdJNjUxWHpsUmpXWFp5UGN6YmFBYWR4Q1VVWG4zYmhJeTRJcjVKMWc1OEE0bDZ5RTBON3lsRElnMmZSWGFNeF9CWUsweFJMRW9jRkEtc0RqX2NGMHVLbWNNM0dsbEJXTnRvUjVTb0Vfb2kwUUZCU2FvcTloYzAyVWw3N3U5dw?oc=5",
-       "source": "Sud Ouest",
-       "via": "Google News"
-      },
-      {
-       "key": "13c62e35a1a714c5",
-       "title": "Les chocs entre du du Toit et Danty, la rivalité Galthié-Erasmus... Anatomie d’une rivalité électrique - Rugbyrama",
-       "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOUlY1WkliVDlOUmdLcHpqT3V2Nnc3MEhWMEJFd2ZqanUzQmY0TngxSjVjM01mTVFHTlpoSWZMaXJjSXQ3RGllUGdjZURTSl9wRTlEdUZIMnlsTm5KdTNpdDdFaVptVERTU1lRdDV3cXNObTQ1SkRXNk8tSFJoSDZ0N05ianExdkprMWpnT0o4QlBSX0F1ampKb1pzN3FyVmIxeWZ1RVYzWHI5eVpwQS1ldGRwUFdlekhrNkFoSDI5MEZESVlZcEJWVUM5bFNyRHdzM0xXcUJYRUl0clRzdmk0YUhoZnNldmJEeEdXZWZUdTBGR1JSSHp5b3JFM2gwcHY5U0dFZVFXVHBnWUhEWmlud3hGczFIeklfS0xHWnN3?oc=5",
-       "source": "Rugbyrama",
+       "key": "e1caf971f7938ebb",
+       "title": "Championnat des Nations : La composition contre l’Afrique du Sud - Fédération Française de Rugby - FFR",
+       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTG9aN21XZThWZnROUk9MTWxkZEdWR0N4cGRNcmQ1Qkg3b1BLN2JIWFk0dy1hY3RvTm53RS1nQ2podGI5VGdVbXJYRWhWWjhuUVJ1MDZndEFHZXFNRi1MOXNqU1ljc05qRThYZ3NMaDJ2c3hfZ1laOHgwYXdrWEs1ZWVwQ2l0TVB2VzBqVzRlRS1CdGZNM0FudmZBT25XdVhCZ2ZYT3VMTWQ0UQ?oc=5",
+       "source": "Fédération Française de Rugby - FFR",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "France’s women play Venezuela in a friendly as they prepare for next year’s World Cup in Brazil.",
+     "text": "PSG remain in contention for a top-three place in the UEFA coefficient ranking despite drawing with Roma in the Champions League.",
      "sources": [
       {
-       "key": "fe8a5ce95af11bf3",
-       "title": "Deux amicaux pour les Bleues en novembre, pas le plan A, mais un avant-goût de Coupe du monde",
-       "url": "https://www.lequipe.fr/Football/Actualites/Deux-amicaux-pour-les-bleues-en-novembre-pas-le-plan-a-mais-un-avant-gout-de-coupe-du-monde/1746433#at_medium=RSS_feeds",
-       "source": "L'Équipe",
+       "key": "0fb2d601f71985c2",
+       "title": "Le PSG toujours en course pour le podium au coefficient UEFA",
+       "url": "https://www.culturepsg.com/news/europe/le-psg-toujours-en-course-pour-le-podium-au-coefficient-uefa/61695",
+       "source": "CulturePSG",
        "via": null
       }
      ]
     },
     {
-     "text": "French clubs gained ground on Portugal in the UEFA coefficient race after a week with three French wins in Europe.",
+     "text": "PSG will learn on Monday which Coupe de France opponent they face in their final match of 2026.",
      "sources": [
       {
-       "key": "4e472880fc42e365",
-       "title": "Avec trois victoires durant cette semaine européenne, la France reprend un peu ses distances avec le Portugal",
-       "url": "https://www.lequipe.fr/Football/Actualites/Avec-trois-victoires-durant-cette-semaine-europeenne-la-france-reprend-un-peu-ses-distances-avec-le-portugal/1746523#at_medium=RSS_feeds",
-       "source": "L'Équipe",
+       "key": "dbe995692362d816",
+       "title": "Le PSG fixé lundi sur son dernier match de 2026",
+       "url": "https://www.culturepsg.com/news/coupes/le-psg-fixe-lundi-sur-son-dernier-match-de-2026/61697",
+       "source": "CulturePSG",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "A reported long-term extension for goalkeeper Matvey Safonov may not be imminent, contrary to earlier reports.",
+     "sources": [
+      {
+       "key": "667237d7e97b2100",
+       "title": "Petite surprise pour la prolongation de Safonov",
+       "url": "https://www.culturepsg.com/news/club/petite-surprise-pour-la-prolongation-de-safonov/61691",
+       "source": "CulturePSG",
        "via": null
       }
      ]
@@ -1034,239 +1007,228 @@
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/match/psg-roma-2-1-le-but-de-dembele-en-video/61674",
+     "url": "https://www.culturepsg.com/news/match/deja-5-absents-pour-psg-lorient-probablement-plus/61692",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-25T21:23:00+00:00",
+     "published": "2026-11-27T09:37:00+00:00",
      "new": true,
-     "key": "cdd732a43a0be903",
-     "title": "PSG/Roma (2-1), le but de Dembélé en video",
-     "summary": "Dans le cadre de la 5e journée de la Champions League 2026/2027, le PSG vient de marquer un deuxième but contre l'AS Roma par l'intermédiaire d'Ousmane Dembélé, sur pénalty quelques secondes après son entrée en jeu. Voici ce but de Dembélé contre la Roma en video :"
+     "key": "ffeda3ff9cbe4710",
+     "title": "At least five PSG absentees for Lorient, with more possible",
+     "summary": "PSG already have five players ruled out for Saturday’s Ligue 1 match against Lorient, with further absences possible."
     },
     {
-     "url": "https://www.culturepsg.com/news/match/psg-roma-1-1-le-but-de-zabarnyi-en-video/61673",
+     "url": "https://www.culturepsg.com/news/europe/le-psg-toujours-en-course-pour-le-podium-au-coefficient-uefa/61695",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-25T20:39:00+00:00",
+     "published": "2026-11-27T10:39:00+00:00",
      "new": true,
-     "key": "0a8b4284169adefc",
-     "title": "PSG/Roma (1-1), le but de Zabarnyi en video",
-     "summary": "Dans le cadre de la 5e journée de la Champions League 2026/2027, le PSG vient de marquer un premier but contre l'AS Roma par l'intermédiaire d'Ilya Zabarnyi, trouvé sur un corner de Senny Mayulu. Voici ce but de Zabarnyi contre la Roma en video :"
+     "key": "0fb2d601f71985c2",
+     "title": "PSG remain in contention for top-three UEFA coefficient ranking",
+     "summary": "Despite drawing with Roma, PSG remain in the running for a top-three place in the UEFA coefficient ranking."
     },
     {
-     "url": "https://www.culturepsg.com/news/match/15-pensees-rapides-sur-psg-roma-2-2/61686",
-     "source": "CulturePSG",
-     "feed_name": "CulturePSG",
-     "via": null,
-     "published": "2026-11-26T12:57:00+00:00",
-     "new": false,
-     "key": "dc54d9d519350543",
-     "title": "15 quick thoughts on PSG–Roma",
-     "summary": "CulturePSG calls PSG’s 2–2 draw with Roma disappointing in both performance and result."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxNVFZ6dlpkOXpWcVc4TElYMElIVndVSWFxTHNRZG45ZklBamdMOW52bU1BOWFTRkJDWExFSW9mQTkzalVtOGNBN1hoRzNObVpaRFMwQUY2ZEVNZGJJUi1sem5VM0V4azBlN0FNbkR1TkRRTzVRNTQzNGV4OTVWNVpVU3Nvd0ZZaUM2WGxPWUt3ZjFqQWs1SENQUDRNSnJGSjN0dWxOZVFXMXh4RG9hZEJldnVuYm5VWUFsRmx1VW4tZTFVVkxNczJZV01oTW5iSmxJVmRHWnNhSU9OSTNYYTZyVWdiY1Joc3hOWk1kVWRmS2ZpaVdxdlJZc1NzWmtnNEZBbzZjbHJhZkZGV1ZzdS1WWXJzblR5U0JEaUI4ZmxrWnkzODMt?oc=5",
-     "source": "Midi Libre",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTG9aN21XZThWZnROUk9MTWxkZEdWR0N4cGRNcmQ1Qkg3b1BLN2JIWFk0dy1hY3RvTm53RS1nQ2podGI5VGdVbXJYRWhWWjhuUVJ1MDZndEFHZXFNRi1MOXNqU1ljc05qRThYZ3NMaDJ2c3hfZ1laOHgwYXdrWEs1ZWVwQ2l0TVB2VzBqVzRlRS1CdGZNM0FudmZBT25XdVhCZ2ZYT3VMTWQ0UQ?oc=5",
+     "source": "Fédération Française de Rugby - FFR",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-27T05:31:00+00:00",
+     "published": "2026-11-27T11:56:41+00:00",
      "new": true,
-     "key": "05d2bbad6ff64039",
-     "title": "France–South Africa: a major rugby final",
-     "summary": "France and South Africa meet in a highly anticipated international rugby final."
+     "key": "e1caf971f7938ebb",
+     "title": "France name team for South Africa final",
+     "summary": "Thomas Ramos returns to the starting XV for France’s final against South Africa."
     },
     {
-     "url": "https://www.lequipe.fr/Football/Actualites/Deux-amicaux-pour-les-bleues-en-novembre-pas-le-plan-a-mais-un-avant-gout-de-coupe-du-monde/1746433#at_medium=RSS_feeds",
-     "source": "L'Équipe",
-     "feed_name": "L'Équipe",
+     "url": "https://www.culturepsg.com/news/coupes/le-psg-fixe-lundi-sur-son-dernier-match-de-2026/61697",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-27T05:25:00+00:00",
+     "published": "2026-11-27T11:40:57+00:00",
      "new": true,
-     "key": "fe8a5ce95af11bf3",
-     "title": "Two friendlies to prepare France’s women for the World Cup",
-     "summary": "France’s women face Venezuela and Morocco as preparation for the World Cup in Brazil."
+     "key": "dbe995692362d816",
+     "title": "PSG to learn final 2026 opponent on Monday",
+     "summary": "PSG will learn on Monday who they face in the Coupe de France round of 64, their final match of 2026."
     },
     {
-     "url": "https://www.lequipe.fr/Football/Actualites/Avec-trois-victoires-durant-cette-semaine-europeenne-la-france-reprend-un-peu-ses-distances-avec-le-portugal/1746523#at_medium=RSS_feeds",
-     "source": "L'Équipe",
-     "feed_name": "L'Équipe",
+     "url": "https://www.culturepsg.com/news/club/petite-surprise-pour-la-prolongation-de-safonov/61691",
+     "source": "CulturePSG",
+     "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-26T23:35:04+00:00",
+     "published": "2026-11-27T08:35:48+00:00",
      "new": true,
-     "key": "4e472880fc42e365",
-     "title": "France edges ahead of Portugal in the UEFA coefficient race",
-     "summary": "Three French wins in European competition helped France regain some distance from Portugal in the coefficient race."
+     "key": "667237d7e97b2100",
+     "title": "Safonov extension may not be imminent",
+     "summary": "A reported extension for Matvey Safonov may not be imminent, despite earlier reports of a deal through 2032."
     }
    ],
    "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-27T06:01:22.184541+00:00",
-   "input_fingerprint": "sha256:878e0b4e57dc6e5db71a848b16dac0858dfc0786e3449aa148c776db47ce855e",
-   "last_success_at": "2026-11-27T06:01:22.184541+00:00",
-   "error": "Source check failed: Team: Champions League",
-   "candidate_count": 293,
+   "state": "healthy",
+   "source_checked_at": "2026-11-27T12:01:23.948593+00:00",
+   "input_fingerprint": "sha256:439d754373c18ea421e36e1844b5bfaf50abf3e56ef2eb6931a25d4ac7315e50",
+   "last_success_at": "2026-11-27T12:01:23.948593+00:00",
+   "candidate_count": 321,
    "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "The AI-led tech trade is suffering its sharpest monthly setback in four years as volatility rises and investors reassess future earnings; that matters against your US and global equity exposure.",
+     "text": "Chinese equities surged after Beijing signalled stronger market support, while the rebound also lifted broader risk appetite across global markets.",
      "sources": [
       {
-       "key": "2d9a12e5436fc7c4",
-       "title": "Tech stocks set for worst month in four years as volatility surges",
-       "url": "https://www.ft.com/content/b80e6259-dca8-4da3-962d-402106a3cd81?syn-25a6b1a6=1",
+       "key": "408cd74b10ed61a1",
+       "title": "Chinese shares soar after Beijing signals more support",
+       "url": "https://www.ft.com/content/fedc6392-ad25-43e4-9d9f-20216cbf331e?syn-25a6b1a6=1",
+       "source": "FT",
+       "via": null
+      },
+      {
+       "key": "8bbc9533b19113ab",
+       "title": "China’s Cabinet Stresses Market Support in Rare Midday Statement - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQak5CQ2hzYk9WT0pEN2JpTjdqdU81V2pWSkxEVmdVcy11NDhqX0RfRngwU3ZXczl6dXFkZXg3aEpPakM2ZTY4QXNJVlpiVEJ2MUs0bUF0MzVJUXd3dWtvWFJna2U2aVhYbTNmM3o1UmZBaGxZRzVCS0JwS1FMYVlUSmltWE1GTkkwdmhxMG5xYi1sNDBDLURIVExoODFYVVhHZkdaa1VyUnFTLTNw?oc=5",
+       "source": "Bloomberg.com",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "France’s third-quarter GDP contracted 0.2%, a sharper decline than the initial estimate, adding a weak domestic signal for investors.",
+     "sources": [
+      {
+       "key": "dc90e61895306a14",
+       "title": "French economy shrinks 0.2% in third quarter",
+       "url": "https://www.ft.com/content/5325ace3-d69a-4686-acb6-2f06de6afd11?syn-25a6b1a6=1",
        "source": "FT",
        "via": null
       }
      ]
     },
     {
-     "text": "Oil is on track for a weekly gain after supply fears and attacks in the Middle East put markets on edge, reversing a three-week losing streak.",
+     "text": "Indonesia’s market-integrity concerns have escalated: authorities arrested three people over alleged manipulation after MSCI threatened to downgrade the country’s market status.",
      "sources": [
       {
-       "key": "43b76e3c03bb2e8c",
-       "title": "Oil Set for Weekly Gain as Mideast Attacks Keep Market on Edge - Bloomberg.com",
-       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeEF4d0tiR3NCTXlCaXhVNFZFY0lNMFdMQ1NWTDBIcnZESE1WNmdST1Q1TmYwV181RVdkUTNNSndGUVRqeHdzdDg1RUNZX2YxV3JNZk9xSmVaaDBWTGRkRnZXbHRNb0JCdWpySEVzMjl3d2VDcjNKWTJiMVljbWxEODBRTGpnUVpTQ1E1TnJMekotS0IxWlpHZjFTcS1vdw?oc=5",
+       "key": "497185c4a44bd54d",
+       "title": "Indonesia arrests three over alleged ‘deep fried’ market manipulation",
+       "url": "https://www.ft.com/content/50626b00-6d7b-47ac-b1f2-4b150ff9417e?syn-25a6b1a6=1",
+       "source": "FT Markets",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "US equity futures pointed higher as risk appetite returned after the holiday, with AI-related stocks leading the premarket rebound.",
+     "sources": [
+      {
+       "key": "2cb1f12658376b6f",
+       "title": "US Stocks Set to Bounce as Risk Appetite Returns After Holiday - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWkJ0R2dQX1BpbGtNRlNncDF1aTdiMW9zNlJpQ2VXQXhvQV9aYkt5bE1HdXQ5cF9fYlNlNGFha1BDZkNOeDJrS2RkVk5UbmZaeW16N3RWZ19jUmhVYk5TLVY2ZUI3dkVVbUNhRkJMZXRMSVpuZks2SzAybFJPTGVhOXk0dFhWYTBadDlBamstd2FYaWlNUjd1VkpRRGpUdVEtaWJ2Z3d2SGNQTFpocjNLRTNoZw?oc=5",
        "source": "Bloomberg.com",
        "via": "Google News"
       },
       {
-       "key": "9fc258c69d0eede3",
-       "title": "Oil on track to snap 3-week losing streak over supply fears - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTzVQVzE5aGdzbGVhNEUtVl94M0V3RjN5Rks4UDU0U0plazFDcjFnUTBMMHBvdk9BRzFaVHljSXk1ZFdzSjlRTVRXNGZ0cnRyUWRRbFJaRjBsVWNFbDZqSnQ0cHo0TW5fRDlwMWlKWDI3V2ROcnlXczVET1RqSXR6UGtZSTZ0OTQtY1YwaG1yYTRwQnZ6TW43azNGNTFqMmpkNFhtbVJwRnVkVERhR1NnSlFIMzExZw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "China’s household deleveraging is widening: a three-year mortgage decline is now spreading to consumer loans, while industrial profits show a still-uneven recovery.",
-     "sources": [
-      {
-       "key": "5384a4da409b9c8b",
-       "title": "Chinese households shed billions in consumer debt",
-       "url": "https://www.ft.com/content/8c5e0298-58f0-47e9-a843-513178d9fa2e?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      },
-      {
-       "key": "981f89e58ed8fdc3",
-       "title": "China's industrial profit growth fastest in five months as recovery remains uneven - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYXpmLS1vbkF6ZV9ZNmNyaUpnUGVQTGx6RHRFSXNGX0NhWGhxQ0tET29xdFhjSi15VWloX1lscXVRZ3dKM0g2MVBwU3ppVkVKNE1KWmhNZDV2Y2dwUWt4MTV3YzBGdUhRYTBDVjg4cEgxam9yX3F2OGpIMXJNV2V1amg5bU43MzFoUFlKNFV1OUFUZDRfUnVhank3V2VVRHQ0?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "Fed officials face competing pressures from inflation, AI and the challenge of communicating policy guidance, leaving the rate outlook a key market uncertainty.",
-     "sources": [
-      {
-       "key": "aeba84282c685bba",
-       "title": "Is the Fed ready for its next fight?",
-       "url": "https://www.ft.com/content/71ffa69f-2a07-44e4-8305-ae5548b89828?syn-25a6b1a6=1",
-       "source": "FT",
+       "key": "1c75fb617e685292",
+       "title": "Live news: Bitcoin rebounds above $61,000 as AI stocks lead premarket gains",
+       "url": "https://www.coindesk.com/tech/2026/11/27/live-news-bitcoin-rebounds-above-usd61-000-as-ai-stocks-lead-premarket-gains",
+       "source": "CoinDesk",
        "via": null
       }
      ]
     },
     {
-     "text": "The IAEA is working with Russia and Ukraine on a ceasefire to repair the power link at the Zaporizhzhia nuclear plant, a continuing geopolitical and energy-security risk.",
+     "text": "Bitcoin rebounded above $61,000 alongside the broader risk recovery, though the move remains a market-sentiment story rather than a distinct crypto catalyst.",
      "sources": [
       {
-       "key": "5c50898b0b0760b2",
-       "title": "IAEA working with Russia, Ukraine on ceasefire to repair power link at Zaporizhzhia nuclear plant - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQXlld0FmMFoxdUVjNlhmNURVMmZwLXJNcXZrVkhEQWxOLS14ajJFb2VQZzBOOUZKM1Z1VGwzLURERG9lUWdGczh0bTZGTGJqdC00Nk9tYjZLR21iN1ZRbEtmTHhnRFAzV3lYRzVRN2txb3h0TUxoeENQbmNTeHlmN1AtNnBnTE1rYTRnYmxxTXNBUkh1WTdZVHpBN3h2XzNYMXlUaWVLRmlOR051bTIwbE9BWVhJRjRHSWxVd0pXQy1tdnc?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
+       "key": "3784e54368040810",
+       "title": "Bitcoin tops $61,000 as Nasdaq futures extend Wednesday’s rebound",
+       "url": "https://www.coindesk.com/markets/2026/11/27/bitcoin-tops-usd61-000-as-nasdaq-futures-extend-wednesday-s-rebound",
+       "source": "CoinDesk",
+       "via": null
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.ft.com/content/b80e6259-dca8-4da3-962d-402106a3cd81?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/fedc6392-ad25-43e4-9d9f-20216cbf331e?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-27T05:00:22+00:00",
+     "published": "2026-11-27T08:32:35+00:00",
      "new": true,
-     "key": "2d9a12e5436fc7c4",
-     "title": "Tech stocks face worst month in four years as volatility surges",
-     "summary": "The AI-led tech trade has been eclipsed by volatility as investors struggle to value future earnings."
+     "key": "408cd74b10ed61a1",
+     "title": "Chinese shares surge after Beijing signals more support",
+     "summary": "The CSI 300 posted its biggest one-day rise in two years after Beijing signalled further support for markets."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTzVQVzE5aGdzbGVhNEUtVl94M0V3RjN5Rks4UDU0U0plazFDcjFnUTBMMHBvdk9BRzFaVHljSXk1ZFdzSjlRTVRXNGZ0cnRyUWRRbFJaRjBsVWNFbDZqSnQ0cHo0TW5fRDlwMWlKWDI3V2ROcnlXczVET1RqSXR6UGtZSTZ0OTQtY1YwaG1yYTRwQnZ6TW43azNGNTFqMmpkNFhtbVJwRnVkVERhR1NnSlFIMzExZw?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-27T01:55:00+00:00",
-     "new": true,
-     "key": "9fc258c69d0eede3",
-     "title": "Oil on track to snap three-week losing streak over supply fears",
-     "summary": "Oil is set for a weekly gain as supply fears and Middle East attacks keep markets on edge."
-    },
-    {
-     "url": "https://www.ft.com/content/8c5e0298-58f0-47e9-a843-513178d9fa2e?syn-25a6b1a6=1",
+     "url": "https://www.ft.com/content/5325ace3-d69a-4686-acb6-2f06de6afd11?syn-25a6b1a6=1",
      "source": "FT",
      "feed_name": "FT",
      "via": null,
-     "published": "2026-11-27T05:00:04+00:00",
+     "published": "2026-11-27T11:38:30+00:00",
      "new": true,
-     "key": "5384a4da409b9c8b",
-     "title": "China’s household debt decline spreads beyond mortgages",
-     "summary": "A three-year decline in Chinese mortgages is now spreading to consumer loans."
+     "key": "dc90e61895306a14",
+     "title": "French economy shrinks 0.2% in third quarter",
+     "summary": "France’s third-quarter GDP fell 0.2%, a worse result than initially estimated."
     },
     {
-     "url": "https://www.ft.com/content/71ffa69f-2a07-44e4-8305-ae5548b89828?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
+     "url": "https://www.ft.com/content/50626b00-6d7b-47ac-b1f2-4b150ff9417e?syn-25a6b1a6=1",
+     "source": "FT Markets",
+     "feed_name": "FT Markets",
      "via": null,
-     "published": "2026-11-27T05:00:13+00:00",
+     "published": "2026-11-27T10:54:42+00:00",
      "new": true,
-     "key": "aeba84282c685bba",
-     "title": "The Fed’s next fight",
-     "summary": "Fed officials face a three-way challenge involving inflation, AI and policy guidance."
+     "key": "497185c4a44bd54d",
+     "title": "Indonesia arrests three over alleged market manipulation",
+     "summary": "Three people were arrested over alleged manipulation as MSCI weighs downgrading Indonesia’s market status."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYXpmLS1vbkF6ZV9ZNmNyaUpnUGVQTGx6RHRFSXNGX0NhWGhxQ0tET29xdFhjSi15VWloX1lscXVRZ3dKM0g2MVBwU3ppVkVKNE1KWmhNZDV2Y2dwUWt4MTV3YzBGdUhRYTBDVjg4cEgxam9yX3F2OGpIMXJNV2V1amg5bU43MzFoUFlKNFV1OUFUZDRfUnVhank3V2VVRHQ0?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWkJ0R2dQX1BpbGtNRlNncDF1aTdiMW9zNlJpQ2VXQXhvQV9aYkt5bE1HdXQ5cF9fYlNlNGFha1BDZkNOeDJrS2RkVk5UbmZaeW16N3RWZ19jUmhVYk5TLVY2ZUI3dkVVbUNhRkJMZXRMSVpuZks2SzAybFJPTGVhOXk0dFhWYTBadDlBamstd2FYaWlNUjd1VkpRRGpUdVEtaWJ2Z3d2SGNQTFpocjNLRTNoZw?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-27T01:36:00+00:00",
+     "published": "2026-11-27T08:29:15+00:00",
      "new": true,
-     "key": "981f89e58ed8fdc3",
-     "title": "China industrial profit growth fastest in five months",
-     "summary": "Industrial profit growth accelerated to its fastest pace in five months, but China’s recovery remains uneven."
+     "key": "2cb1f12658376b6f",
+     "title": "US stocks set to rebound as risk appetite returns",
+     "summary": "US stock futures pointed higher after the Thanksgiving break as investors returned to risk assets."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQXlld0FmMFoxdUVjNlhmNURVMmZwLXJNcXZrVkhEQWxOLS14ajJFb2VQZzBOOUZKM1Z1VGwzLURERG9lUWdGczh0bTZGTGJqdC00Nk9tYjZLR21iN1ZRbEtmTHhnRFAzV3lYRzVRN2txb3h0TUxoeENQbmNTeHlmN1AtNnBnTE1rYTRnYmxxTXNBUkh1WTdZVHpBN3h2XzNYMXlUaWVLRmlOR051bTIwbE9BWVhJRjRHSWxVd0pXQy1tdnc?oc=5",
-     "source": "Reuters",
-     "feed_name": "Reuters Business (via Google News)",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQak5CQ2hzYk9WT0pEN2JpTjdqdU81V2pWSkxEVmdVcy11NDhqX0RfRngwU3ZXczl6dXFkZXg3aEpPakM2ZTY4QXNJVlpiVEJ2MUs0bUF0MzVJUXd3dWtvWFJna2U2aVhYbTNmM3o1UmZBaGxZRzVCS0JwS1FMYVlUSmltWE1GTkkwdmhxMG5xYi1sNDBDLURIVExoODFYVVhHZkdaa1VyUnFTLTNw?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-27T00:29:00+00:00",
+     "published": "2026-11-27T09:38:40+00:00",
      "new": true,
-     "key": "5c50898b0b0760b2",
-     "title": "IAEA seeks ceasefire to repair Zaporizhzhia power link",
-     "summary": "The IAEA is working with Russia and Ukraine on a ceasefire to repair a power link at the nuclear plant."
+     "key": "8bbc9533b19113ab",
+     "title": "China’s cabinet stresses market support",
+     "summary": "China’s cabinet made a rare midday statement emphasising support for markets."
+    },
+    {
+     "url": "https://www.coindesk.com/tech/2026/11/27/live-news-bitcoin-rebounds-above-usd61-000-as-ai-stocks-lead-premarket-gains",
+     "source": "CoinDesk",
+     "feed_name": "CoinDesk",
+     "via": null,
+     "published": "2026-11-27T11:34:37+00:00",
+     "new": true,
+     "key": "1c75fb617e685292",
+     "title": "Bitcoin rebounds as AI stocks lead premarket gains",
+     "summary": "Bitcoin rose above $61,000 as Nasdaq futures climbed and AI cloud stocks gained."
     }
    ],
    "reviewed_count": 35,
-   "state": "healthy",
-   "source_checked_at": "2026-11-27T06:01:22.184541+00:00",
-   "input_fingerprint": "sha256:253327b6ad670930ca4f29acc4d3f4860815377911403772f99a7e0e5d0e53b6",
-   "last_success_at": "2026-11-27T06:01:22.184541+00:00",
+   "state": "degraded",
+   "source_checked_at": "2026-11-27T12:01:23.948593+00:00",
+   "input_fingerprint": "sha256:cae50c00129a1e140720c0f15e2c61064e1ad216efc267e84d89fd12282fbeac",
+   "last_success_at": "2026-11-27T12:01:23.948593+00:00",
+   "error": "Source check failed: Reuters Business (via Google News)",
    "tickers": [
     {
      "symbol": "ZURN.SW",
      "label": "Zurich Insurance",
-     "price": 645.2,
-     "change_pct": 1.22,
+     "price": 647.2,
+     "change_pct": 0.31,
      "currency": "CHF",
-     "as_of": "2026-11-25T23:00:00+00:00",
+     "as_of": "2026-11-26T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1274,10 +1236,10 @@
     {
      "symbol": "SXR8.DE",
      "label": "S&P 500 (iShares Core)",
-     "price": 690.04,
-     "change_pct": -2.15,
+     "price": 718.92,
+     "change_pct": 0.95,
      "currency": "EUR",
-     "as_of": "2026-11-24T23:00:00+00:00",
+     "as_of": "2026-11-26T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1285,10 +1247,10 @@
     {
      "symbol": "XDEW.DE",
      "label": "S&P 500 Equal Weight (Xtrackers)",
-     "price": 107.94,
-     "change_pct": -0.5,
+     "price": 111.1,
+     "change_pct": 0.38,
      "currency": "EUR",
-     "as_of": "2026-11-24T23:00:00+00:00",
+     "as_of": "2026-11-26T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1296,10 +1258,10 @@
     {
      "symbol": "SPYY.DE",
      "label": "MSCI ACWI (SPDR)",
-     "price": 270.1,
-     "change_pct": -1.98,
+     "price": 281.5,
+     "change_pct": 1.15,
      "currency": "EUR",
-     "as_of": "2026-11-24T23:00:00+00:00",
+     "as_of": "2026-11-26T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1307,10 +1269,10 @@
     {
      "symbol": "MEUD.PA",
      "label": "Stoxx Europe 600 (Amundi)",
-     "price": 309.6,
-     "change_pct": -1.05,
+     "price": 317.9,
+     "change_pct": 0.81,
      "currency": "EUR",
-     "as_of": "2026-11-24T23:00:00+00:00",
+     "as_of": "2026-11-26T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1318,10 +1280,10 @@
     {
      "symbol": "AYEM.DE",
      "label": "MSCI EM IMI (iShares)",
-     "price": 7.88,
-     "change_pct": -3.31,
+     "price": 8.37,
+     "change_pct": 1.97,
      "currency": "EUR",
-     "as_of": "2026-11-24T23:00:00+00:00",
+     "as_of": "2026-11-26T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1329,10 +1291,10 @@
     {
      "symbol": "GRID.DE",
      "label": "Smart Grid (First Trust)",
-     "price": 46.06,
-     "change_pct": -2.66,
+     "price": 48.75,
+     "change_pct": 1.98,
      "currency": "EUR",
-     "as_of": "2026-11-24T23:00:00+00:00",
+     "as_of": "2026-11-26T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1340,10 +1302,10 @@
     {
      "symbol": "PPFB.DE",
      "label": "PPFB",
-     "price": 61.15,
-     "change_pct": -3.04,
+     "price": 64.97,
+     "change_pct": 2.92,
      "currency": "EUR",
-     "as_of": "2026-11-24T23:00:00+00:00",
+     "as_of": "2026-11-26T23:00:00+00:00",
      "comparison_basis": "prior_daily_close",
      "session": "regular",
      "quote_source": "yfinance"
@@ -1351,8 +1313,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 61738.64,
-     "change_pct": 2.25,
+     "price": 61529.99,
+     "change_pct": 1.71,
      "currency": "USD",
      "as_of": "2026-11-27T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1362,8 +1324,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1740.56,
-     "change_pct": 2.94,
+     "price": 1719.02,
+     "change_pct": 1.85,
      "currency": "USD",
      "as_of": "2026-11-27T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1371,7 +1333,7 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 255,
+   "candidate_count": 202,
    "new_count": 6
   },
   "media": {
@@ -1416,6 +1378,16 @@
      "duration_s": null,
      "new": false,
      "key": "0c2d1963a843d13a"
+    },
+    {
+     "title": "The Bitcoin Bottom",
+     "url": "https://www.youtube.com/watch?v=Nk9U3kcq8pE",
+     "source": "Crypto Currently",
+     "kind": "video",
+     "published": "2026-11-25T19:24:43+00:00",
+     "duration_s": null,
+     "new": false,
+     "key": "6c0713d0d647f833"
     },
     {
      "title": "I've Been Keeping This A Secret",
@@ -1490,10 +1462,10 @@
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-27T06:01:22.184541+00:00",
-   "candidate_count": 11,
+   "source_checked_at": "2026-11-27T12:01:23.948593+00:00",
+   "candidate_count": 12,
    "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-27T06:00:00.000Z"
+ "scheduled_slot": "2026-11-27T12:00:00.000Z"
 }
