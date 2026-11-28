@@ -1,9 +1,9 @@
 {
  "schema_version": 2,
- "edition_id": "ed-20261128T151254286145Z",
- "generated_at": "2026-11-28T15:12:54.286145+00:00",
- "generated_local": "Sat 28 Nov 2026, 16:12",
- "source_checked_at": "2026-11-28T15:12:54.286145+00:00",
+ "edition_id": "ed-20261128T180120851448Z",
+ "generated_at": "2026-11-28T18:01:20.851448+00:00",
+ "generated_local": "Sat 28 Nov 2026, 19:01",
+ "source_checked_at": "2026-11-28T18:01:20.851448+00:00",
  "timezone": "Europe/Rome",
  "schedule": {
   "timezone": "Europe/Rome",
@@ -17,14 +17,14 @@
  },
  "trigger": "scheduled",
  "request_ids": [
-  "run-2026-11-28T15:12:54.286145+00:00"
+  "run-2026-11-28T18:01:20.851448+00:00"
  ],
  "quality": {
   "overall": "degraded"
  },
  "refresh": {
   "outcome": "generated",
-  "completed_at": "2026-11-28T15:12:54.286145+00:00"
+  "completed_at": "2026-11-28T18:01:20.851448+00:00"
  },
  "mode": "llm",
  "model": "gpt-6-luna",
@@ -33,10 +33,10 @@
    "name": "BBC World",
    "section": "news",
    "status": "ok",
-   "item_count": 24,
+   "item_count": 26,
    "reason": null,
    "failure": null,
-   "parsed_count": 24,
+   "parsed_count": 26,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -134,10 +134,10 @@
    "name": "Topic: AI",
    "section": "news",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 104,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 104,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -158,10 +158,10 @@
    "name": "Topic: Zurich Insurance",
    "section": "news",
    "status": "ok",
-   "item_count": 53,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 53,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -194,10 +194,10 @@
    "name": "Topic: Milano",
    "section": "news",
    "status": "ok",
-   "item_count": 111,
+   "item_count": 110,
    "reason": null,
    "failure": null,
-   "parsed_count": 111,
+   "parsed_count": 110,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -205,19 +205,14 @@
   {
    "name": "Team: PSG",
    "section": "sport",
-   "status": "unavailable",
-   "item_count": 0,
-   "reason": "HTTP 429",
-   "failure": "http",
-   "parsed_count": 0,
+   "status": "ok",
+   "item_count": 102,
+   "reason": null,
+   "failure": null,
+   "parsed_count": 102,
    "dropped_future": 0,
    "dropped_freshness": 0,
-   "cache": null,
-   "diagnostic": {
-    "status_code": 429,
-    "content_type": "text/html; charset=UTF-8",
-    "body_prefix": "<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/><title>Sorry...</title><style> body { font-family: verdana, arial, sans-serif; b"
-   }
+   "cache": "refreshed"
   },
   {
    "name": "Team: équipe de France football",
@@ -235,10 +230,10 @@
    "name": "Team: XV de France rugby",
    "section": "sport",
    "status": "ok",
-   "item_count": 102,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 102,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -247,10 +242,10 @@
    "name": "Team: Champions League",
    "section": "sport",
    "status": "ok",
-   "item_count": 105,
+   "item_count": 100,
    "reason": null,
    "failure": null,
-   "parsed_count": 105,
+   "parsed_count": 100,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -427,10 +422,10 @@
    "name": "FT",
    "section": "finance",
    "status": "ok",
-   "item_count": 12,
+   "item_count": 10,
    "reason": null,
    "failure": null,
-   "parsed_count": 12,
+   "parsed_count": 10,
    "dropped_future": 0,
    "dropped_freshness": 0,
    "cache": "refreshed"
@@ -694,7 +689,7 @@
   "attempts": 3,
   "unknown": false,
   "unreported_cost": false,
-  "est_cost_usd": 0.001956,
+  "est_cost_usd": 0.001955,
   "est_month_usd": 0.18,
   "forecast_month_usd": 0.18,
   "forecast_basis": "3 editions/day x 30, labelled forecast",
@@ -704,31 +699,31 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 4098,
+    "latency_ms": 5887,
     "unknown": false,
     "provider_request_ids": [
-     "resp_0f6e6bfd6eb9fd44016b0aef82458887d0802d63610bd3fe98"
+     "resp_04ce11ac319cf77b016b0b16f6fbac87d2b96ff1aa2563def2"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3447,
-    "output_tokens": 315,
-    "reasoning_tokens": 0
+    "cache_write_tokens": 3475,
+    "output_tokens": 525,
+    "reasoning_tokens": 146
    },
    {
     "section": "sport",
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 4168,
+    "latency_ms": 3450,
     "unknown": false,
     "provider_request_ids": [
-     "resp_06d0139b2a25334f016b0aef86482487d0837ee9d6f79d2f73"
+     "resp_0100aecd1fa0eca1016b0b16fc0d9087d2a1b0c660d1ba619b"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3565,
-    "output_tokens": 329,
+    "cache_write_tokens": 3480,
+    "output_tokens": 317,
     "reasoning_tokens": 0
    },
    {
@@ -736,28 +731,28 @@
     "provider": "openai",
     "model": "gpt-6-luna",
     "attempts": 1,
-    "latency_ms": 5331,
+    "latency_ms": 4413,
     "unknown": false,
     "provider_request_ids": [
-     "resp_06fbc43d792e1cd6016b0aef8a0c4487d0b5ee7fe948e5e673"
+     "resp_07835e7dff238b56016b0b16ff776c87d287915e87837019c0"
     ],
     "input_tokens": 3,
     "cached_input_tokens": 0,
-    "cache_write_tokens": 3354,
-    "output_tokens": 675,
-    "reasoning_tokens": 213
+    "cache_write_tokens": 3404,
+    "output_tokens": 477,
+    "reasoning_tokens": 227
    }
   ],
   "input_tokens": 9,
   "cached_input_tokens": 0,
-  "cache_write_tokens": 10366,
+  "cache_write_tokens": 10359,
   "output_tokens": 1319,
-  "reasoning_tokens": 213,
+  "reasoning_tokens": 373,
   "recorded_month_to_date": {
    "month_utc": "2026-11",
-   "recorded_runs": 115,
-   "attempts": 345,
-   "known_cost_usd": 0.256469,
+   "recorded_runs": 116,
+   "attempts": 348,
+   "known_cost_usd": 0.258424,
    "unknown_cost_runs": 0,
    "coverage": "committed runs only; token-priced lower bound, not an invoice"
   }
@@ -766,43 +761,60 @@
   "news": {
    "briefing": [
     {
-     "text": "Germany’s courts are facing a surge of AI-generated lawsuits, raising questions about how generative tools are affecting judicial workloads and legal processes.",
+     "text": "Myanmar’s military has carried out air strikes on a wedding venue and a school, with dozens reported killed across the country in recent days.",
      "sources": [
       {
-       "key": "ea3667697bebb6d4",
-       "title": "AI-generated lawsuits flood German courts - DW.com",
-       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9sakE4T1QzLUhic2pIZHdrMWNxM0ctTnEtQTVaejFPWVU5MTZOc0Q3akhwbERQcUc3TDNoRTlrdy1FQW5GOGk0SUtrN055NDlFWnRnbXRiNWxoNEJTOU1VQS1xLUZUSjduREY5dFpKRTEyWHhpa2theGJsQXNWS03SAX9BVV95cUxPLVNHeEpuMjJ5MUZ5UW9oOEJxN0dCb0ZiRUVDeVk2UmpxWVRkQzBjOC04RHJzek1XMk9sMmRUbnBpSWZJd0d5NzB2T0dGaDBOdlNHN2VTdWpsTTlCMlJtcG1pWDFVdm9LczhleG9XVWJkQTJCMjFJS3dOeHk4cjdJ?oc=5",
-       "source": "DW.com",
-       "via": "Google News"
-      }
-     ]
-    },
-    {
-     "text": "A blast at an explosives depot near a school in Afghanistan killed students and injured many more, according to reports; the cause was described as carelessness by an interior ministry spokesman.",
-     "sources": [
-      {
-       "key": "25ace31b13713c15",
-       "title": "Afghanistan school blast kills 7 students, injures up to 99 - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcVRKa09nUTkyZHR6Tnp6aTFwNzFYOHd0WGRtWjFEU2Z4RmFvRzVETWJwbEF4WHROdnpCVU9NMVBYYUJtbVU5NzVqNEVkaEVhNUtmMHFrbFE0cW5OQmdXYkpiV0JvbGoteXRYamR6Mjl0clR1cmp2elB5LU9IOUFjZzcwSXFjTXVxcy1XbmJHdGQwbjZMREhfNzRwS29Jck8zbURsQkdoTXMtZw?oc=5",
-       "source": "Reuters",
-       "via": "Google News"
-      },
-      {
-       "key": "a7161e8354243ff4",
-       "title": "Afghanistan explosion kills 10 students and injures more than 100, official says",
-       "url": "https://www.bbc.co.uk/news/articles/ckp80jyz6dl8o?at_medium=RSS&at_campaign=rss",
+       "key": "2156ceea8d77dcdc",
+       "title": "Dozens killed in Myanmar military strikes on wedding venue and school",
+       "url": "https://www.bbc.co.uk/news/articles/cm752q30q5leo?at_medium=RSS&at_campaign=rss",
        "source": "BBC World",
        "via": null
       }
      ]
     },
     {
-     "text": "A court rejected Argentina’s attempt to stop planned UK-linked oil and gas exploration near the Falklands, leaving the project set to proceed.",
+     "text": "MSF condemned an Israeli drone strike that killed two of its staff outside a Gaza clinic.",
      "sources": [
       {
-       "key": "fc05050f37599fa4",
-       "title": "Argentina's bid to stop UK oil activity near Falklands rejected by international court - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNc3hjQTNoX2pxajBibUllQTZYdlRMUE5YUWt6bUpZZGxEOHdWRGxQcUV2cWJENHhzNVJUWmlWZWI2NHlJMG55SkZkaGl1c1hVbHhubHBsRkxlMWxHblJqdERKUHlxTTlJMmVOR0lhYzU5OHQweF9HMkp4a0s2R2tjUTR1bUZvRFl2djFINVIwd2hTRUdqdmRTUGZPOWpLdTVFMm4zS0RqaVo3U2xWN1YzSDg4TVgwLW92Y19tdVBhTW9tQQ?oc=5",
+       "key": "960bb3b9779ffa7e",
+       "title": "MSF charity condemns Israeli drone strike that killed two staff outside Gaza clinic - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSlN6bWNCajEzSzJDU0o3Qk5qQnJiS3Zxb2VaUnFjM05vM0hkZ2E3NnJNeXlVdEVVMkNwdGRXcmRaTGF3bHI4emRsaVhaTHVtV3dmNDJlWUFGY1YzTTFxNlNkaFViN1FYdlo3WVM4SUJlaTZkc1AyVE9MdmZkMDdYeE1wR3RzRXFzeTVvY0lrczh4N1ZGXzM4NWR2MmF6NkRYeDBWNEtMOEswT3BxU2dxYllRcmM?oc=5",
+       "source": "Reuters",
+       "via": "Google News"
+      }
+     ]
+    },
+    {
+     "text": "Israel’s Netanyahu has offered rival Gadi Eisenkot the first turn as prime minister in a proposed rotating unity government, after elections produced no outright majority.",
+     "sources": [
+      {
+       "key": "1911d0922e5a55d1",
+       "title": "Israël : Benyamin Nétanyahou propose à son rival, Gadi Eisenkot, d’être le premier à occuper le poste de premier ministre en cas d’accord sur un cabinet à direction alternée",
+       "url": "https://www.lemonde.fr/international/article/2026/11/28/israel-benyamin-netanyahou-propose-a-son-rival-gadi-eisenkot-d-etre-le-premier-a-exercer-le-poste-de-premier-ministre-en-cas-d-accord-sur-un-cabinet-a-direction-alternee_6816132_3210.html",
+       "source": "Le Monde",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Argentina failed to block planned oil and gas exploration near the Falkland Islands by a UK-Israeli joint venture, reviving tensions over its sovereignty claim.",
+     "sources": [
+      {
+       "key": "7f3a66d555c5cb5b",
+       "title": "Argentina's bid to stop Falklands oil drilling rejected",
+       "url": "https://www.bbc.co.uk/news/articles/c84gnq3qq9rno?at_medium=RSS&at_campaign=rss",
+       "source": "BBC World",
+       "via": null
+      }
+     ]
+    },
+    {
+     "text": "Student-led protests against Albania’s government turned violent, Reuters reports.",
+     "sources": [
+      {
+       "key": "a25945807f5f8872",
+       "title": "Student-led protest against government turns violent in Albania - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbWR1RkhnZFQ4bkwtc0RrcGR1aE9Vbjd4LW1DMFNYN2RDbk81a3lkZ3lLWnl3d05BV2RLQjAtc1JwOTBoS09iVTA2RG1RR1RFczZVOFcyOFdHaTZsTkhCSW94SnNuQkFpcC1TbEhJMzFma2k0X2dad3FQZ1NaT3BRNkF3Q296Tm96SVU0?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
@@ -811,94 +823,101 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9sakE4T1QzLUhic2pIZHdrMWNxM0ctTnEtQTVaejFPWVU5MTZOc0Q3akhwbERQcUc3TDNoRTlrdy1FQW5GOGk0SUtrN055NDlFWnRnbXRiNWxoNEJTOU1VQS1xLUZUSjduREY5dFpKRTEyWHhpa2theGJsQXNWS03SAX9BVV95cUxPLVNHeEpuMjJ5MUZ5UW9oOEJxN0dCb0ZiRUVDeVk2UmpxWVRkQzBjOC04RHJzek1XMk9sMmRUbnBpSWZJd0d5NzB2T0dGaDBOdlNHN2VTdWpsTTlCMlJtcG1pWDFVdm9LczhleG9XVWJkQTJCMjFJS3dOeHk4cjdJ?oc=5",
-     "source": "DW.com",
-     "feed_name": "Topic: AI",
-     "via": "Google News",
-     "published": "2026-11-28T14:14:59+00:00",
+     "url": "https://www.bbc.co.uk/news/articles/cm752q30q5leo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
+     "via": null,
+     "published": "2026-11-28T16:53:20+00:00",
      "new": true,
-     "key": "ea3667697bebb6d4",
-     "title": "AI-generated lawsuits flood German courts",
-     "summary": "German courts are seeing a flood of lawsuits generated with AI tools."
+     "key": "2156ceea8d77dcdc",
+     "title": "Dozens killed in Myanmar military strikes on wedding venue and school",
+     "summary": "Myanmar’s military strikes have killed dozens of civilians across the country in recent days."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcVRKa09nUTkyZHR6Tnp6aTFwNzFYOHd0WGRtWjFEU2Z4RmFvRzVETWJwbEF4WHROdnpCVU9NMVBYYUJtbVU5NzVqNEVkaEVhNUtmMHFrbFE0cW5OQmdXYkpiV0JvbGoteXRYamR6Mjl0clR1cmp2elB5LU9IOUFjZzcwSXFjTXVxcy1XbmJHdGQwbjZMREhfNzRwS29Jck8zbURsQkdoTXMtZw?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSlN6bWNCajEzSzJDU0o3Qk5qQnJiS3Zxb2VaUnFjM05vM0hkZ2E3NnJNeXlVdEVVMkNwdGRXcmRaTGF3bHI4emRsaVhaTHVtV3dmNDJlWUFGY1YzTTFxNlNkaFViN1FYdlo3WVM4SUJlaTZkc1AyVE9MdmZkMDdYeE1wR3RzRXFzeTVvY0lrczh4N1ZGXzM4NWR2MmF6NkRYeDBWNEtMOEswT3BxU2dxYllRcmM?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-11-28T14:25:38+00:00",
+     "published": "2026-11-28T17:02:37+00:00",
      "new": true,
-     "key": "25ace31b13713c15",
-     "title": "Afghanistan school blast kills students and injures dozens",
-     "summary": "An explosion near a school in Afghanistan killed students and injured many others."
+     "key": "960bb3b9779ffa7e",
+     "title": "MSF condemns Israeli drone strike that killed two staff outside Gaza clinic",
+     "summary": "MSF condemned an Israeli drone strike that killed two of its staff outside a Gaza clinic."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNc3hjQTNoX2pxajBibUllQTZYdlRMUE5YUWt6bUpZZGxEOHdWRGxQcUV2cWJENHhzNVJUWmlWZWI2NHlJMG55SkZkaGl1c1hVbHhubHBsRkxlMWxHblJqdERKUHlxTTlJMmVOR0lhYzU5OHQweF9HMkp4a0s2R2tjUTR1bUZvRFl2djFINVIwd2hTRUdqdmRTUGZPOWpLdTVFMm4zS0RqaVo3U2xWN1YzSDg4TVgwLW92Y19tdVBhTW9tQQ?oc=5",
+     "url": "https://www.lemonde.fr/international/article/2026/11/28/israel-benyamin-netanyahou-propose-a-son-rival-gadi-eisenkot-d-etre-le-premier-a-exercer-le-poste-de-premier-ministre-en-cas-d-accord-sur-un-cabinet-a-direction-alternee_6816132_3210.html",
+     "source": "Le Monde",
+     "feed_name": "Le Monde",
+     "via": null,
+     "published": "2026-11-28T17:21:55+00:00",
+     "new": true,
+     "key": "1911d0922e5a55d1",
+     "title": "Netanyahu offers Eisenkot first turn as prime minister in proposed rotating government",
+     "summary": "Netanyahu offered rival Gadi Eisenkot the first turn as prime minister in a proposed rotating unity government."
+    },
+    {
+     "url": "https://www.bbc.co.uk/news/articles/c84gnq3qq9rno?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "feed_name": "BBC World",
+     "via": null,
+     "published": "2026-11-28T17:11:37+00:00",
+     "new": true,
+     "key": "7f3a66d555c5cb5b",
+     "title": "Argentina’s bid to stop Falklands oil drilling rejected",
+     "summary": "Argentina failed to block a joint venture by UK-Israeli companies from exploring for oil and gas near the Falklands."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbWR1RkhnZFQ4bkwtc0RrcGR1aE9Vbjd4LW1DMFNYN2RDbk81a3lkZ3lLWnl3d05BV2RLQjAtc1JwOTBoS09iVTA2RG1RR1RFczZVOFcyOFdHaTZsTkhCSW94SnNuQkFpcC1TbEhJMzFma2k0X2dad3FQZ1NaT3BRNkF3Q296Tm96SVU0?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters (via Google News)",
      "via": "Google News",
-     "published": "2026-11-28T13:24:07+00:00",
+     "published": "2026-11-28T16:48:01+00:00",
      "new": true,
-     "key": "fc05050f37599fa4",
-     "title": "Court rejects Argentina’s bid to block Falklands oil activity",
-     "summary": "An international court rejected Argentina’s bid to halt UK-linked oil and gas exploration near the Falklands."
-    },
-    {
-     "url": "https://www.lemonde.fr/international/article/2026/11/28/en-albanie-des-milliers-de-personnes-manifestent-contre-le-pouvoir-de-nouveaux-heurts-avec-la-police-a-tirana_6816115_3210.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-28T14:46:10+00:00",
-     "new": true,
-     "key": "17d28a2d37f35f28",
-     "title": "Protests against Albania’s government turn violent in Tirana",
-     "summary": "Police used tear gas and water cannons as protesters attacked official buildings in Tirana."
-    },
-    {
-     "url": "https://www.lemonde.fr/politique/article/2026/11/28/fuites-de-beauvau-vers-le-rn-ambroise-de-rancourt-le-missi-dominici-de-marine-le-pen-aupres-des-grands-patrons-et-de-la-haute-fonction-publique_6816116_823448.html",
-     "source": "Le Monde",
-     "feed_name": "Le Monde",
-     "via": null,
-     "published": "2026-11-28T14:52:22+00:00",
-     "new": true,
-     "key": "ac91025b4c9a0d95",
-     "title": "French investigation examines alleged leaks from Beauvau to the RN",
-     "summary": "An investigation into exchanges between an official and a former prefect has led to a search."
+     "key": "a25945807f5f8872",
+     "title": "Student-led protest against government turns violent in Albania",
+     "summary": "A student-led protest against Albania’s government turned violent."
     }
    ],
    "reviewed_count": 35,
    "state": "degraded",
-   "source_checked_at": "2026-11-28T15:12:54.286145+00:00",
-   "input_fingerprint": "sha256:fb200b38c2045089523d26123866a65cf651bbccda5a318127671c461e60f0f2",
-   "last_success_at": "2026-11-28T15:12:54.286145+00:00",
+   "source_checked_at": "2026-11-28T18:01:20.851448+00:00",
+   "input_fingerprint": "sha256:30acc2ed469a1b164a249191ae67a8421d5a26edeffce9ef666f011a10ee47b3",
+   "last_success_at": "2026-11-28T18:01:20.851448+00:00",
    "error": "Source check failed: The Guardian World",
-   "candidate_count": 350,
+   "candidate_count": 364,
    "new_count": 5
   },
   "sport": {
    "briefing": [
     {
-     "text": "France face South Africa in the Nations Championship final, with Maxime Lucu saying the XV de France are playing for a trophy and a place in history.",
+     "text": "France face South Africa in the Nations Championship final; coverage highlights the challenge of containing the Springboks’ powerful scrum.",
      "sources": [
       {
-       "key": "e7988c11c90c3046",
-       "title": "Une première place mondiale en récompense ? Les Bleus ont deux grandes raisons de jouer pour l'histoire - Rugbyrama",
-       "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNWEhyOU9EdFJKUzdTYzZueThQa09tdnZ0WXNiYUtUTXBfRUYzSURXX0xxTXVkYWhDLTVJNlVCWUxNS042QXNJTUYzM1NTeWI3WVFFVDlHYjUyMmxnUm1DVUJpRnAwVjRvSHV5UFdKSDhKN0xDNG5MdmpRWUhDaEN1ZTZKa1g4UGY1NGUxZDVjUkJ5MGhJVGFxZS1wQVZIYUFjMXJnZlFGampDUHB2VFJ4cDByNXdYajRvSFJlUHB5YzY0Wkd6dG15ajdzemZ0Wnh6RUJDaG1SUVVVdzJSbjN2cUpmSkRGMUhTeXZmandNb3F6b3lnNENGMk9EMFdHV2haWWpCbUNLRkwyY1ZaMTFtSnlvalk?oc=5",
-       "source": "Rugbyrama",
+       "key": "da9fed4269c13ecb",
+       "title": "« Si on peut avoir un petit coup de pouce des supporters anglais… » : sous un temps très britannique, les Bleus préparent leur finale à côté de Twickenham - Sud Ouest",
+       "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxOMkdZZ0M0eUM2ZURiWFZocUZKZnJzNnF6bkRISW1NREd1RUZPYjlRQlpMeGNMYTNtcGtSWHNCM3gyMXJoNFo0X2daVnRZR3IxakhDS1ZDVGgtWkRnYVdpOHlsVkJ3VFFiN19wb0Foa1hzeC1CTnR5NkVZbFRoejFRMHU0aVF4TjJ2eWZuTGlweU1obExGZlVYMmxQLVNRRG96TzBiaVBKdW94dmZ3bF9Xa210MTVuV3hpWVdqSEg2VU4zb0ROb2pPZktubFdZNlNRaDBnVFFIb3Z6MHJ6R0QtWmJlTW51WlBma3dGNDFwbmt0WmFrb2FmR1dvY1ZoS2FFMVhFZTdJVWNRQ3YyWDlwa2M1UTktVVpzUVNhdktsamYtZkxUcnNoMWc4RW54ZkhFWmc?oc=5",
+       "source": "Sud Ouest",
        "via": "Google News"
       },
       {
-       "key": "e23707db40949a63",
-       "title": "\"Nous sommes venus chercher un trophée \" : Lucu lance la finale contre les Springboks - Rugbyrama",
-       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNSnR3cHRCTVJmU1d6elF0QVZpeXhYd0JKSlV4aEdpMW5OVlNHZy1zMDBrMlM5c2htUWcybTJWNmZTXzU3dkFPSWZ4cEs5OVpZck9zb3ZZWUM5TjZVQVl2ZjlYRDdLcmhxamYtc0hCUXlIWFBuUHBOWThHZjY1SmVjWWJqZWdRdXlKVUR2NXBzNXhWUHpGeWlGaVg1SHoxS2hzV2xQX01sQXNJNTlDQkwtMzhneTkwckxmMXZ4eGJBNG95Z2FJODFVV3JrV2hQT21HbmJuY0J6YXlRSzQzS2JrM21uLXB0RnZoYlhMMHpHVm9vVElxZHh6OUtWYU9mb2dIV202Wno4NWdMRUw4MFlHQVlwQQ?oc=5",
-       "source": "Rugbyrama",
+       "key": "36bc16dcb7284a92",
+       "title": "Décryptage : comment les Bleus peuvent s'en sortir face à la toute-puissante mêlée des Boks - L'Équipe",
+       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQeDFPMFNCSjJfOUQ5NF9rRHVpc0JZaVpLeDRaSU9sY2hxRUhHV09SSkVyNnZHOHN0bEhCSkFiWU55Zm9kQ21OeWdIM1poeVptejdVZnBaTmFZZHBtR0JCZkFMaHMyZ1lMZlpnTkp0S052RVVxRzROQ21VRU13YVpWYlJac2FYeDNDa0ljb0NwN0Fkd250bGpIRElGWDNwRzlFQnRxU1Z3NHdWbjE5dTBzOVZKMTFKZ0cxWi1DRWJFU2RLMExSVm42aTV4QW8zZzA?oc=5",
+       "source": "L'Équipe",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "PSG host Lorient in Ligue 1 on Saturday; Nuno Mendes is being rested, while a young player has been included in the squad.",
+     "text": "PSG host Lorient in Ligue 1 this evening. Nuno Mendes is being rested, while Luis Enrique has named a 21-man squad including a young player.",
      "sources": [
+      {
+       "key": "ca251b4f107e62b3",
+       "title": "Comment regarder PSG/Lorient à la TV ou en streaming",
+       "url": "https://www.culturepsg.com/news/match/comment-regarder-psg-lorient-a-la-tv-ou-en-streaming/61703",
+       "source": "CulturePSG",
+       "via": null
+      },
       {
        "key": "1333d7f2dfb714b5",
        "title": "Le groupe pour PSG/Lorient sans Mendes mais avec un jeune",
@@ -909,58 +928,62 @@
      ]
     },
     {
-     "text": "At the PGL Major in Singapore, Astralis beat NAVI to reach the 2-0 pool, while PARIVISION were pushed toward elimination by FlyQuest.",
+     "text": "France’s rugby depth is in focus ahead of the final, with one report pointing to the player pool behind the national side.",
      "sources": [
       {
-       "key": "1a50a4710c535463",
-       "title": "Astralis defeat NAVI to enter 2-0 pool",
-       "url": "https://www.hltv.org/news/46087/astralis-defeat-navi-to-enter-2-0-pool",
-       "source": "HLTV",
-       "via": null
-      },
-      {
-       "key": "3055dbc6e3d277b1",
-       "title": "FlyQuest send PARIVISION to the elimination zone in Singapore",
-       "url": "https://www.hltv.org/news/46089/flyquest-send-parivision-to-the-elimination-zone-in-singapore",
-       "source": "HLTV",
-       "via": null
+       "key": "233fb2eaf968fd74",
+       "title": "France-Afrique du Sud : « On peut être fier de ce système français », pourquoi un tel réservoir de joueurs chez les Bleus - Le Parisien",
+       "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPTk93T0s4M1BNNVE2OEY4dVBhb2FLY1RIczZKWDNVZElCbU9xYmhDOTRlWHlmZE5IMkJCNmF6aGUyLWZnVVl1MG90Vk53OGFhSDN3dmVCYllvUVN2VENPOUUzdWxVTnBfQTZpU0tVejZCbjc1RFBIVnhrVUdWMVJvanhnZTBrVWxKYk14OEJhSUdFQ0l3Yy11bDRmaUJPLUVxcmVmRzJuTk9XUUNQN0FOT21WaTFfUFJJY051VjJXeXFEcC1ZWXJ5V0FnMGFqLUQzeGF3Q3RUbmRQcUZrWEZRXzYzRURsUnFKNTFTUjBGaFBUOGJfNUd4c2RvclBKVmlaRDhGTS1oQmg5VHJfTi14b3FFcnNPazJJOElNbDhjVWZCdnJsbDNTNU5GakdwY2xIeGc?oc=5",
+       "source": "Le Parisien",
+       "via": "Google News"
       }
      ]
     }
    ],
    "items": [
     {
-     "url": "https://www.culturepsg.com/news/match/le-bon-plan-black-friday-pour-regarder-psg-lorient-moins-cher/61702",
+     "url": "https://www.culturepsg.com/news/match/comment-regarder-psg-lorient-a-la-tv-ou-en-streaming/61703",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-28T12:00:00+00:00",
+     "published": "2026-11-28T09:00:00+00:00",
      "new": true,
-     "key": "07ac21863fb24f62",
-     "title": "Le bon plan Black Friday pour regarder PSG/Lorient moins cher",
-     "summary": "Ligue 1+ casse ses prix à l'occasion du Black Friday. Voici comment profiter de ce bon plan avant le match PSG/Lorient de ce samedi."
+     "key": "ca251b4f107e62b3",
+     "title": "How to watch PSG–Lorient",
+     "summary": "PSG host Lorient in Ligue 1 this evening, with broadcast and streaming details provided."
     },
     {
-     "url": "https://www.culturepsg.com/news/match/y-avait-penalty-sur-mika-des-images-inedites-de-psg-roma-diffusees/61709",
+     "url": "https://www.culturepsg.com/news/match/comment-regarder-psg-lorient-a-l-etranger/61704",
      "source": "CulturePSG",
      "feed_name": "CulturePSG",
      "via": null,
-     "published": "2026-11-28T09:22:00+00:00",
+     "published": "2026-11-28T09:05:00+00:00",
      "new": true,
-     "key": "f70db1a6cda11f79",
-     "title": "« Y avait penalty sur Mika », des images inédites de PSG/Roma diffusées",
-     "summary": "Comme après chaque match de Champions League, Canal+ a diffusé quelques images inédites de PSG/Roma et on y voit, notamment, Achraf Hakimi en train de reprocher à l'arbitre M. Nyberg son arbitrage en cours de rencontre. Le gros respect entre Luis Enrique et Gian Piero Gasperini est aussi visible."
+     "key": "2a6d0d79dc0f2be0",
+     "title": "Comment regarder PSG/Lorient à l'étranger",
+     "summary": "Le match PSG/Lorient de ce samedi (20h45 en France) comptant pour la 12e journée de Ligue 1 sera diffusé sur de nombreuses chaînes à l'étranger. Voici la liste complète."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNWEhyOU9EdFJKUzdTYzZueThQa09tdnZ0WXNiYUtUTXBfRUYzSURXX0xxTXVkYWhDLTVJNlVCWUxNS042QXNJTUYzM1NTeWI3WVFFVDlHYjUyMmxnUm1DVUJpRnAwVjRvSHV5UFdKSDhKN0xDNG5MdmpRWUhDaEN1ZTZKa1g4UGY1NGUxZDVjUkJ5MGhJVGFxZS1wQVZIYUFjMXJnZlFGampDUHB2VFJ4cDByNXdYajRvSFJlUHB5YzY0Wkd6dG15ajdzemZ0Wnh6RUJDaG1SUVVVdzJSbjN2cUpmSkRGMUhTeXZmandNb3F6b3lnNENGMk9EMFdHV2haWWpCbUNLRkwyY1ZaMTFtSnlvalk?oc=5",
-     "source": "Rugbyrama",
+     "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxOMkdZZ0M0eUM2ZURiWFZocUZKZnJzNnF6bkRISW1NREd1RUZPYjlRQlpMeGNMYTNtcGtSWHNCM3gyMXJoNFo0X2daVnRZR3IxakhDS1ZDVGgtWkRnYVdpOHlsVkJ3VFFiN19wb0Foa1hzeC1CTnR5NkVZbFRoejFRMHU0aVF4TjJ2eWZuTGlweU1obExGZlVYMmxQLVNRRG96TzBiaVBKdW94dmZ3bF9Xa210MTVuV3hpWVdqSEg2VU4zb0ROb2pPZktubFdZNlNRaDBnVFFIb3Z6MHJ6R0QtWmJlTW51WlBma3dGNDFwbmt0WmFrb2FmR1dvY1ZoS2FFMVhFZTdJVWNRQ3YyWDlwa2M1UTktVVpzUVNhdktsamYtZkxUcnNoMWc4RW54ZkhFWmc?oc=5",
+     "source": "Sud Ouest",
      "feed_name": "Team: XV de France rugby",
      "via": "Google News",
-     "published": "2026-11-28T13:48:00+00:00",
+     "published": "2026-11-28T17:28:03+00:00",
      "new": true,
-     "key": "e7988c11c90c3046",
-     "title": "France could secure world No. 1 ranking and make history against South Africa",
-     "summary": "France have two major incentives in the final against South Africa, including the prospect of reaching the top of the world rankings."
+     "key": "da9fed4269c13ecb",
+     "title": "France prepare for Nations Championship final against South Africa",
+     "summary": "France prepare near Twickenham for the Nations Championship final against South Africa."
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQeDFPMFNCSjJfOUQ5NF9rRHVpc0JZaVpLeDRaSU9sY2hxRUhHV09SSkVyNnZHOHN0bEhCSkFiWU55Zm9kQ21OeWdIM1poeVptejdVZnBaTmFZZHBtR0JCZkFMaHMyZ1lMZlpnTkp0S052RVVxRzROQ21VRU13YVpWYlJac2FYeDNDa0ljb0NwN0Fkd250bGpIRElGWDNwRzlFQnRxU1Z3NHdWbjE5dTBzOVZKMTFKZ0cxWi1DRWJFU2RLMExSVm42aTV4QW8zZzA?oc=5",
+     "source": "L'Équipe",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-28T17:04:00+00:00",
+     "new": true,
+     "key": "36bc16dcb7284a92",
+     "title": "How France can counter South Africa’s dominant scrum",
+     "summary": "L’Équipe examines how France might withstand South Africa’s powerful scrum in the final."
     },
     {
      "url": "https://www.culturepsg.com/news/match/le-groupe-pour-psg-lorient-sans-mendes-mais-avec-un-jeune/61706",
@@ -970,105 +993,62 @@
      "published": "2026-11-28T11:44:00+00:00",
      "new": false,
      "key": "1333d7f2dfb714b5",
-     "title": "PSG squad for Lorient: Nuno Mendes rested, young player included",
-     "summary": "Nuno Mendes is being rested for PSG's Ligue 1 match against Lorient, while Luis Enrique selected 21 players."
+     "title": "PSG squad for Lorient: Mendes rested, youngster included",
+     "summary": "Nuno Mendes is rested as Luis Enrique names 21 players for the Ligue 1 match against Lorient."
     },
     {
-     "url": "https://www.hltv.org/news/46087/astralis-defeat-navi-to-enter-2-0-pool",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-11-28T13:43:00+00:00",
+     "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPTk93T0s4M1BNNVE2OEY4dVBhb2FLY1RIczZKWDNVZElCbU9xYmhDOTRlWHlmZE5IMkJCNmF6aGUyLWZnVVl1MG90Vk53OGFhSDN3dmVCYllvUVN2VENPOUUzdWxVTnBfQTZpU0tVejZCbjc1RFBIVnhrVUdWMVJvanhnZTBrVWxKYk14OEJhSUdFQ0l3Yy11bDRmaUJPLUVxcmVmRzJuTk9XUUNQN0FOT21WaTFfUFJJY051VjJXeXFEcC1ZWXJ5V0FnMGFqLUQzeGF3Q3RUbmRQcUZrWEZRXzYzRURsUnFKNTFTUjBGaFBUOGJfNUd4c2RvclBKVmlaRDhGTS1oQmg5VHJfTi14b3FFcnNPazJJOElNbDhjVWZCdnJsbDNTNU5GakdwY2xIeGc?oc=5",
+     "source": "Le Parisien",
+     "feed_name": "Team: XV de France rugby",
+     "via": "Google News",
+     "published": "2026-11-28T17:07:05+00:00",
      "new": true,
-     "key": "1a50a4710c535463",
-     "title": "Astralis beat NAVI to reach PGL Major 2-0 pool",
-     "summary": "Astralis defeated NAVI after the latter nearly recovered from a 2-10 deficit."
-    },
-    {
-     "url": "https://www.hltv.org/news/46089/flyquest-send-parivision-to-the-elimination-zone-in-singapore",
-     "source": "HLTV",
-     "feed_name": "HLTV",
-     "via": null,
-     "published": "2026-11-28T14:59:00+00:00",
-     "new": true,
-     "key": "3055dbc6e3d277b1",
-     "title": "FlyQuest send PARIVISION toward elimination at Singapore Major",
-     "summary": "FlyQuest beat PARIVISION, leaving Jame's team with a difficult path to continue at the PGL Major."
+     "key": "233fb2eaf968fd74",
+     "title": "France’s rugby player pool ahead of South Africa final",
+     "summary": "Le Parisien reports on the depth of players available to France ahead of the final."
     }
    ],
    "reviewed_count": 35,
-   "state": "degraded",
-   "source_checked_at": "2026-11-28T15:12:54.286145+00:00",
-   "input_fingerprint": "sha256:de1d2eb5562494de34ff3632c6ba7fbcd6c6b876b922ae48f46bd3f6af0e846c",
-   "last_success_at": "2026-11-28T15:12:54.286145+00:00",
-   "error": "Source check failed: Team: PSG",
-   "candidate_count": 243,
+   "state": "healthy",
+   "source_checked_at": "2026-11-28T18:01:20.851448+00:00",
+   "input_fingerprint": "sha256:341f5108a975cd8d9a6b49ae48a17c951d1c7b2046814767cbcda4c9afe57411",
+   "last_success_at": "2026-11-28T18:01:20.851448+00:00",
+   "candidate_count": 369,
    "new_count": 5
   },
   "finance": {
    "briefing": [
     {
-     "text": "French sovereign debt appears to have found some breathing room in markets, though the available report gives no detail on the drivers or scale.",
+     "text": "Lower fuel prices are offering relief to consumers and easing inflation pressure, potentially giving central banks more room; the article provides no details on the scale or market reaction.",
      "sources": [
       {
-       "key": "ac5bc9d1527dd230",
-       "title": "Sur les marchés, la dette française reprend son souffle - Les Echos",
-       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYS1ZR3ZxZDgwbFBsNzRqRjBOWDI2RmpKbHBaTzV0Sm5WT2FpbWpHajRjX3p5YXgxRjd0MFNaLXAzS1Q0SHZoRWdfS0FyR2xITDJ1TEtSYW1malR4SndkYUZHdG9PQnJJUzlMNURfc08wOXZPc3JNSnZkekZGOWk5Z1h4MUtzZ0VZc0pZWGh0NklVNVdlaldzdzgzcktQNndENjEya0xhVGt4UEJfRkZhaXdLbU9ELXN2?oc=5",
-       "source": "Les Echos",
+       "key": "0194a926f409ae29",
+       "title": "Plunging Fuel Prices Bring Relief for Drivers and Central Banks - Bloomberg.com",
+       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSFF0a1JMSzd6S0h6Ull2bUUxSmlfTW5NTnp3UnFrRmN2V3ItUnk5NTFuWWtHNlJwMVNMN3NmQkFLVUlqN2pTUmNrY1B6X0p3NkZIcGx3SVhHWV9vV1pnVUsxdEFfeGJJTUotMm4tTDVXUnVKNjNvdVduVF9rUjc1Mjl2TThOaGlPUlZtMXZSOXZsZFU3dHNySF83ZXo0NGpneGlwZWZPbW5sMkRla1FoQlluNW8?oc=5",
+       "source": "Bloomberg.com",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "A right-wing mayor is gaining ground in France’s presidential race with calls for spending cuts, adding a new contender to the political landscape.",
+     "text": "US online spending rose 11% on Black Friday to a record $13.1bn, a positive signal for consumer demand, though one day’s sales are not a full read on the economy.",
      "sources": [
       {
-       "key": "a42919f6405b94ee",
-       "title": "The outsider from Cannes shaking up France’s presidential race",
-       "url": "https://www.ft.com/content/7f3900c2-bce6-495e-a6c4-e1133a3c46e9?syn-25a6b1a6=1",
-       "source": "FT",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "A UN-backed court rejected Argentina’s bid to stop offshore oil drilling near the Falkland Islands, keeping the dispute tied to emerging energy development.",
-     "sources": [
-      {
-       "key": "2b055c684cd8a8cc",
-       "title": "Argentina loses bid to halt Falklands oil drilling",
-       "url": "https://www.ft.com/content/b9308f74-c823-4144-83ce-7229836bbe59?syn-25a6b1a6=1",
-       "source": "FT Markets",
-       "via": null
-      }
-     ]
-    },
-    {
-     "text": "Geopolitical risks remain elevated: an Israeli strike killed two MSF workers in Gaza, while Russia said it downed a large overnight wave of Ukrainian drones.",
-     "sources": [
-      {
-       "key": "c48ed133bb91bf48",
-       "title": "Israeli strike kills two Médecins Sans Frontières workers in Gaza - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZUltQ3R6UVl2dENiV01RUTg4amhMNlFUM2JraFZzazV4elZaSFRpUVJfZHVDcEhNTzdRZDU1SDNxNUxMTFJsRmJuMjhMQnRybE1icUdYX3ZhOTdoeklBVzhyNFZ5elVtMGtpTVZsNmgtNndWRV83OWQ1YmdmWU5SRm9ZSWM?oc=5",
-       "source": "Financial Times",
-       "via": "Google News"
-      },
-      {
-       "key": "fe9a231f2ab9c7fc",
-       "title": "Russia says it downed 1,246 Ukrainian drones overnight - Reuters",
-       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVUhoaFdkUkNnYk9wZHlFSGtuU1pyVFFULU1LdEJpNXRJbTZveWdTWWtzSWdfVlVtZlBWLXlYYkQ3LXlDLTBHN3JtbHNVcnFRem1LT25YQm9vRHJDTG9yQXhXWlBTRVpIb0VWN1ZQd0pwSXJITUtNQnpiTks5eVpYek43Z0UwUGRLeDduWlp3TXZvR1ZWVll2UnlROE9Na1M1YTFHendLaFdnTjYzVDlHVGE5MU5UMWM?oc=5",
+       "key": "9a938e7f1e43f5bd",
+       "title": "US Black Friday online spend rises 11% to a new high of $13.1 billion - Reuters",
+       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNNTJIWUpidWRfdHdlYTBGRHFseHBGSm9rQnVTNzBfSGhZQnBnUFJFRVE2TDlCM3JSNEpieHJISnBhNDVsODZxYTktRjRrLVc1OFB1VnhWd0h4UktMa0JwSzBQdGlsUFU1RnRJWFdXMVJUWnBxcVdkdjltS1kyajFpSHE3RkhCZFM4aVlIQkJBVGFWWU9jblFFUXB1bGg3UlZ6SU85VTh2R09KWGNKWnBfZ3BjdnZXZ0FXdWx5UUZsSVBwUzNvSVFGaTZvZURqTnVIWGow?oc=5",
        "source": "Reuters",
        "via": "Google News"
       }
      ]
     },
     {
-     "text": "UK pension scheme surpluses are growing, bringing the question of how members might benefit back into focus.",
+     "text": "A cyberattack hit the UK Department for Work and Pensions, a reminder of operational and cyber risks facing large public institutions.",
      "sources": [
       {
-       "key": "eb6398c0cfdcbb2e",
-       "title": "Millions of pension scheme members eye growing UK plan surpluses - Financial Times",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVG1tODZjVDdnNFRfNUwxQXpuVjVUUE52bUsxSDhLUnBISFR3QTJ2TE50ajhCVVZMR2xRNlJETG80OVVVM3NQcjJWWm5IVFZ1X3drbGlZazRGcnJyczFVMnF5S3ZEY01QX1VsbGdpdk56UndVZU9Gd1p1aXVuMU1DQ3l1eWc?oc=5",
+       "key": "82242e154b71e7b1",
+       "title": "UK Department for Work and Pensions hit by cyber attack - Financial Times",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOd2tmUkUwZlpmeFlNdGFsWDVhRzR0MkEzOUwxSzlpRDVBYzNlTm94UUk5R0JtcGc4emJJMzZxVGEzU05HcDBuOHJsSG53SHBWNDhnWnhnemM3TTVIMER5ZFJsc2lpbDZkT0xXTEtOYTJ4ZGQ1UlFlUGNjRUtFbldqclA3dGY?oc=5",
        "source": "Financial Times",
        "via": "Google News"
       }
@@ -1077,88 +1057,44 @@
    ],
    "items": [
     {
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYS1ZR3ZxZDgwbFBsNzRqRjBOWDI2RmpKbHBaTzV0Sm5WT2FpbWpHajRjX3p5YXgxRjd0MFNaLXAzS1Q0SHZoRWdfS0FyR2xITDJ1TEtSYW1malR4SndkYUZHdG9PQnJJUzlMNURfc08wOXZPc3JNSnZkekZGOWk5Z1h4MUtzZ0VZc0pZWGh0NklVNVdlaldzdzgzcktQNndENjEya0xhVGt4UEJfRkZhaXdLbU9ELXN2?oc=5",
-     "source": "Les Echos",
-     "feed_name": "Les Echos Finance",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSFF0a1JMSzd6S0h6Ull2bUUxSmlfTW5NTnp3UnFrRmN2V3ItUnk5NTFuWWtHNlJwMVNMN3NmQkFLVUlqN2pTUmNrY1B6X0p3NkZIcGx3SVhHWV9vV1pnVUsxdEFfeGJJTUotMm4tTDVXUnVKNjNvdVduVF9rUjc1Mjl2TThOaGlPUlZtMXZSOXZsZFU3dHNySF83ZXo0NGpneGlwZWZPbW5sMkRla1FoQlluNW8?oc=5",
+     "source": "Bloomberg.com",
+     "feed_name": "Bloomberg (via Google News)",
      "via": "Google News",
-     "published": "2026-11-28T14:00:09+00:00",
+     "published": "2026-11-28T10:00:00+00:00",
      "new": true,
-     "key": "ac5bc9d1527dd230",
-     "title": "French debt markets catch their breath",
-     "summary": "French sovereign debt markets have regained some breathing room, though the report does not specify the reasons."
+     "key": "0194a926f409ae29",
+     "title": "Plunging fuel prices bring relief for drivers and central banks",
+     "summary": "Falling fuel prices are easing pressure on household budgets and central banks."
     },
     {
-     "url": "https://www.ft.com/content/7f3900c2-bce6-495e-a6c4-e1133a3c46e9?syn-25a6b1a6=1",
-     "source": "FT",
-     "feed_name": "FT",
-     "via": null,
-     "published": "2026-11-28T12:00:03+00:00",
-     "new": true,
-     "key": "a42919f6405b94ee",
-     "title": "David Lisnard gains ground in France’s presidential race",
-     "summary": "The right-wing mayor has gained in polls with attacks on state spending and promises of radical cuts."
-    },
-    {
-     "url": "https://www.ft.com/content/b9308f74-c823-4144-83ce-7229836bbe59?syn-25a6b1a6=1",
-     "source": "FT Markets",
-     "feed_name": "FT Markets",
-     "via": null,
-     "published": "2026-11-28T14:07:00+00:00",
-     "new": true,
-     "key": "2b055c684cd8a8cc",
-     "title": "Argentina loses bid to halt Falklands oil drilling",
-     "summary": "A UN-backed court rejected Javier Milei’s attempt to stop offshore oil development near the Falkland Islands."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZUltQ3R6UVl2dENiV01RUTg4amhMNlFUM2JraFZzazV4elZaSFRpUVJfZHVDcEhNTzdRZDU1SDNxNUxMTFJsRmJuMjhMQnRybE1icUdYX3ZhOTdoeklBVzhyNFZ5elVtMGtpTVZsNmgtNndWRV83OWQ1YmdmWU5SRm9ZSWM?oc=5",
-     "source": "Financial Times",
-     "feed_name": "FT (via Google News)",
-     "via": "Google News",
-     "published": "2026-11-28T10:14:12+00:00",
-     "new": true,
-     "key": "c48ed133bb91bf48",
-     "title": "Israeli strike kills two MSF workers in Gaza",
-     "summary": "An Israeli strike killed two Médecins Sans Frontières workers in Gaza."
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVUhoaFdkUkNnYk9wZHlFSGtuU1pyVFFULU1LdEJpNXRJbTZveWdTWWtzSWdfVlVtZlBWLXlYYkQ3LXlDLTBHN3JtbHNVcnFRem1LT25YQm9vRHJDTG9yQXhXWlBTRVpIb0VWN1ZQd0pwSXJITUtNQnpiTks5eVpYek43Z0UwUGRLeDduWlp3TXZvR1ZWVll2UnlROE9Na1M1YTFHendLaFdnTjYzVDlHVGE5MU5UMWM?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNNTJIWUpidWRfdHdlYTBGRHFseHBGSm9rQnVTNzBfSGhZQnBnUFJFRVE2TDlCM3JSNEpieHJISnBhNDVsODZxYTktRjRrLVc1OFB1VnhWd0h4UktMa0JwSzBQdGlsUFU1RnRJWFdXMVJUWnBxcVdkdjltS1kyajFpSHE3RkhCZFM4aVlIQkJBVGFWWU9jblFFUXB1bGg3UlZ6SU85VTh2R09KWGNKWnBfZ3BjdnZXZ0FXdWx5UUZsSVBwUzNvSVFGaTZvZURqTnVIWGow?oc=5",
      "source": "Reuters",
      "feed_name": "Reuters Business (via Google News)",
      "via": "Google News",
-     "published": "2026-11-28T07:25:00+00:00",
+     "published": "2026-11-28T15:52:00+00:00",
      "new": true,
-     "key": "fe9a231f2ab9c7fc",
-     "title": "Russia says it downed 1,246 Ukrainian drones overnight",
-     "summary": "Russia said it downed 1,246 Ukrainian drones overnight."
+     "key": "9a938e7f1e43f5bd",
+     "title": "US Black Friday online spending hits a record",
+     "summary": "US online Black Friday spending rose 11% to a record $13.1 billion."
     },
     {
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVG1tODZjVDdnNFRfNUwxQXpuVjVUUE52bUsxSDhLUnBISFR3QTJ2TE50ajhCVVZMR2xRNlJETG80OVVVM3NQcjJWWm5IVFZ1X3drbGlZazRGcnJyczFVMnF5S3ZEY01QX1VsbGdpdk56UndVZU9Gd1p1aXVuMU1DQ3l1eWc?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOd2tmUkUwZlpmeFlNdGFsWDVhRzR0MkEzOUwxSzlpRDVBYzNlTm94UUk5R0JtcGc4emJJMzZxVGEzU05HcDBuOHJsSG53SHBWNDhnWnhnemM3TTVIMER5ZFJsc2lpbDZkT0xXTEtOYTJ4ZGQ1UlFlUGNjRUtFbldqclA3dGY?oc=5",
      "source": "Financial Times",
      "feed_name": "FT (via Google News)",
      "via": "Google News",
-     "published": "2026-11-28T05:02:57+00:00",
+     "published": "2026-11-28T17:33:49+00:00",
      "new": true,
-     "key": "eb6398c0cfdcbb2e",
-     "title": "UK pension members look to growing scheme surpluses",
-     "summary": "Millions of UK pension scheme members are watching growing surpluses and potential benefits."
-    },
-    {
-     "url": "https://www.coindesk.com/markets/2026/11/28/trump-linked-crypto-token-wlfi-plunges-over-50",
-     "source": "CoinDesk",
-     "feed_name": "CoinDesk",
-     "via": null,
-     "published": "2026-11-28T09:32:51+00:00",
-     "new": true,
-     "key": "fd476c4483d74752",
-     "title": "Trump-linked crypto token plunges to record lows",
-     "summary": "World Liberty Financial’s token fell 50% to record lows as blockchain trackers flagged a large ether outflow from a linked wallet."
+     "key": "82242e154b71e7b1",
+     "title": "UK Department for Work and Pensions hit by cyberattack",
+     "summary": "The UK Department for Work and Pensions was hit by a cyberattack."
     }
    ],
    "reviewed_count": 35,
    "state": "healthy",
-   "source_checked_at": "2026-11-28T15:12:54.286145+00:00",
-   "input_fingerprint": "sha256:fc3655e5acc5e048cdeec5206cca0e72cd3545b21354bc64a4df0a5f1ed86a85",
-   "last_success_at": "2026-11-28T15:12:54.286145+00:00",
+   "source_checked_at": "2026-11-28T18:01:20.851448+00:00",
+   "input_fingerprint": "sha256:2fe3d3b0a664603266d78b7f21a4ff2d5ee2a985af75a8a8631764fb3b0c3b4a",
+   "last_success_at": "2026-11-28T18:01:20.851448+00:00",
    "tickers": [
     {
      "symbol": "ZURN.SW",
@@ -1251,8 +1187,8 @@
     {
      "symbol": "BTC-USD",
      "label": "Bitcoin",
-     "price": 59297.08,
-     "change_pct": -0.95,
+     "price": 59335.54,
+     "change_pct": -0.89,
      "currency": "USD",
      "as_of": "2026-11-28T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1262,8 +1198,8 @@
     {
      "symbol": "ETH-USD",
      "label": "Ethereum",
-     "price": 1647.75,
-     "change_pct": -0.8,
+     "price": 1643.96,
+     "change_pct": -1.03,
      "currency": "USD",
      "as_of": "2026-11-28T00:00:00+00:00",
      "comparison_basis": "prior_daily_close",
@@ -1271,8 +1207,8 @@
      "quote_source": "yfinance"
     }
    ],
-   "candidate_count": 200,
-   "new_count": 7
+   "candidate_count": 179,
+   "new_count": 3
   },
   "media": {
    "briefing": "",
@@ -1284,7 +1220,7 @@
      "kind": "video",
      "published": "2026-11-28T13:00:18+00:00",
      "duration_s": null,
-     "new": true,
+     "new": false,
      "key": "6111b2d4fe635d60"
     },
     {
@@ -1386,34 +1322,14 @@
      "duration_s": null,
      "new": false,
      "key": "6d03de60e00e7709"
-    },
-    {
-     "title": "#505 — The Greatest Grift",
-     "url": "https://wakingup.libsyn.com/505-the-greatest-grift",
-     "source": "Making Sense with Sam Harris",
-     "kind": "podcast",
-     "published": "2026-11-25T18:00:00+00:00",
-     "duration_s": 1340,
-     "new": false,
-     "key": "4df18372543941eb"
-    },
-    {
-     "title": "Was $55.7k the Cycle Low?",
-     "url": "https://share.transistor.fm/s/dfbac938",
-     "source": "The DeFi Report",
-     "kind": "podcast",
-     "published": "2026-11-25T16:52:58+00:00",
-     "duration_s": 2728,
-     "new": false,
-     "key": "b44251e0d6fac088"
     }
    ],
    "reviewed_count": 0,
    "state": "skipped",
-   "source_checked_at": "2026-11-28T15:12:54.286145+00:00",
-   "candidate_count": 13,
-   "new_count": 1
+   "source_checked_at": "2026-11-28T18:01:20.851448+00:00",
+   "candidate_count": 11,
+   "new_count": 0
   }
  },
- "scheduled_slot": "2026-11-28T12:00:00Z"
+ "scheduled_slot": "2026-11-28T18:00:00.000Z"
 }
